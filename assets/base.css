@@ -3,6 +3,16 @@
   --alpha-button-border: 1;
   --alpha-link: 0.85;
   --alpha-badge-border: 0.1;
+  --font-heading-family: 'IntroRust';
+}
+
+
+@font-face {
+  font-family: 'IntroRust';
+  font-display: swap;
+  src: url('./IntroRust-Base.woff') format('woff');
+  src: url('./IntroRust-Base.woff2') format('woff2');
+  src: url('./IntroRust-Base.ttf') format('truetype');
 }
 
 .product-card-wrapper .card,
