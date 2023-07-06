@@ -513,17 +513,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.twcss-bg-cyan-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 94 117 / var(--tw-bg-opacity));
-}
-
-.twcss-bg-cyan-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 78 99 / var(--tw-bg-opacity));
-}
-
-.twcss-text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+.twcss-pb-2 {
+  padding-bottom: 0.5rem;
 }
