@@ -132,7 +132,7 @@
         "button_link": "",
         "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
