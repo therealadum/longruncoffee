@@ -16,14 +16,14 @@
           "type": "link_list",
           "settings": {
             "heading": "Community",
-            "menu": "footer"
+            "menu": "community"
           }
         },
         "946faa94-0633-4c7b-af5a-45473653b6fb": {
           "type": "link_list",
           "settings": {
             "heading": "About",
-            "menu": "footer"
+            "menu": "about"
           }
         }
       },
