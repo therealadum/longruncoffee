@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Odstęp między sekcjami szablonu"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Siatka"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Dotyczy obszarów z wieloma kolumnami lub wierszami."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Przestrzeń pozioma"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Przestrzeń pionowa"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Siatka produktów",
       "settings": {
         "products_per_page": {

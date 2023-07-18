@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Espacio entre las secciones de la plantilla"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Cuadrícula"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Afecta a áreas con varias columnas o filas."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Espacio horizontal"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Espacio vertical"
         }
       }
@@ -1437,7 +1437,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Cuadrícula de productos",
       "settings": {
         "products_per_page": {

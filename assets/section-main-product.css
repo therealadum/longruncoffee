@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-.product.grid {
+.product.component-grid {
   gap: 0;
 }
 
@@ -625,7 +625,7 @@ a.product__text {
 }
 
 @media screen and (min-width: 750px) {
-  .grid__item.product__media-item--full {
+  .component-grid__item.product__media-item--full {
     width: 100%;
   }
 

@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "範本區段間的間距"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "網格"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "影響具有多欄或多列的區域。"
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "水平空間"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "垂直空間"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "產品網格",
       "settings": {
         "products_per_page": {

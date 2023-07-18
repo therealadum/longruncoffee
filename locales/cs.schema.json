@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Mezera mezi sekcemi šablony"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Mřížka"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Ovlivňuje oblasti s více sloupci nebo řádky."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Mezera ve vodorovném směru"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Mezera ve svislém směru"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Mřížka produktů",
       "settings": {
         "products_per_page": {

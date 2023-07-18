@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Mellemrum mellem skabelonafsnit"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Gitter"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Påvirker områder med flere kolonner eller rækker."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Lodret afstand"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Vandret afstand"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Produktgitter",
       "settings": {
         "products_per_page": {

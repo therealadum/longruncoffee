@@ -39,7 +39,7 @@ class FacetFiltersForm extends HTMLElement {
       'ProductCountDesktop',
     );
     document
-      .getElementById('ProductGridContainer')
+      .getElementById('Productcomponent-gridContainer')
       .querySelector('.collection')
       .classList.add('loading');
     if (countContainer) {
@@ -71,7 +71,7 @@ class FacetFiltersForm extends HTMLElement {
           { html, url },
         ];
         FacetFiltersForm.renderFilters(html, event);
-        FacetFiltersForm.renderProductGridContainer(html);
+        FacetFiltersForm.renderProductcomponent - gridContainer(html);
         FacetFiltersForm.renderProductCount(html);
         if (typeof initializeScrollAnimationTrigger === 'function')
           initializeScrollAnimationTrigger(html.innerHTML);
@@ -81,195 +81,195 @@ class FacetFiltersForm extends HTMLElement {
   static renderSectionFromCache(filterDataUrl, event) {
     const html = FacetFiltersForm.filterData.find(filterDataUrl).html;
     FacetFiltersForm.renderFilters(html, event);
-    FacetFiltersForm.renderProductGridContainer(html);
+    FacetFiltersForm.renderProductcomponent - gridContainer(html);
     FacetFiltersForm.renderProductCount(html);
     if (typeof initializeScrollAnimationTrigger === 'function')
       initializeScrollAnimationTrigger(html.innerHTML);
   }
 
-  static renderProductGridContainer(html) {
-    document.getElementById('ProductGridContainer').innerHTML = new DOMParser()
-      .parseFromString(html, 'text/html')
-      .getElementById('ProductGridContainer').innerHTML;
+  static renderProductcomponent-gridContainer(html) {
+  document.getElementById('Productcomponent-gridContainer').innerHTML = new DOMParser()
+    .parseFromString(html, 'text/html')
+    .getElementById('Productcomponent-gridContainer').innerHTML;
 
-    document
-      .getElementById('ProductGridContainer')
-      .querySelectorAll('.scroll-trigger')
-      .forEach((element) => {
-        element.classList.add('scroll-trigger--cancel');
-      });
-  }
+  document
+    .getElementById('Productcomponent-gridContainer')
+    .querySelectorAll('.scroll-trigger')
+    .forEach((element) => {
+      element.classList.add('scroll-trigger--cancel');
+    });
+}
 
   static renderProductCount(html) {
-    const count = new DOMParser()
-      .parseFromString(html, 'text/html')
-      .getElementById('ProductCount').innerHTML;
-    const container = document.getElementById('ProductCount');
-    const containerDesktop = document.getElementById('ProductCountDesktop');
-    container.innerHTML = count;
-    container.classList.remove('loading');
-    if (containerDesktop) {
-      containerDesktop.innerHTML = count;
-      containerDesktop.classList.remove('loading');
-    }
+  const count = new DOMParser()
+    .parseFromString(html, 'text/html')
+    .getElementById('ProductCount').innerHTML;
+  const container = document.getElementById('ProductCount');
+  const containerDesktop = document.getElementById('ProductCountDesktop');
+  container.innerHTML = count;
+  container.classList.remove('loading');
+  if (containerDesktop) {
+    containerDesktop.innerHTML = count;
+    containerDesktop.classList.remove('loading');
   }
+}
 
   static renderFilters(html, event) {
-    const parsedHTML = new DOMParser().parseFromString(html, 'text/html');
+  const parsedHTML = new DOMParser().parseFromString(html, 'text/html');
 
-    const facetDetailsElements = parsedHTML.querySelectorAll(
-      '#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter',
+  const facetDetailsElements = parsedHTML.querySelectorAll(
+    '#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter',
+  );
+  const matchesIndex = (element) => {
+    const jsFilter = event ? event.target.closest('.js-filter') : undefined;
+    return jsFilter
+      ? element.dataset.index === jsFilter.dataset.index
+      : false;
+  };
+  const facetsToRender = Array.from(facetDetailsElements).filter(
+    (element) => !matchesIndex(element),
+  );
+  const countsToRender = Array.from(facetDetailsElements).find(matchesIndex);
+
+  facetsToRender.forEach((element) => {
+    document.querySelector(
+      `.js-filter[data-index="${element.dataset.index}"]`,
+    ).innerHTML = element.innerHTML;
+  });
+
+  FacetFiltersForm.renderActiveFacets(parsedHTML);
+  FacetFiltersForm.renderAdditionalElements(parsedHTML);
+
+  if (countsToRender)
+    FacetFiltersForm.renderCounts(
+      countsToRender,
+      event.target.closest('.js-filter'),
     );
-    const matchesIndex = (element) => {
-      const jsFilter = event ? event.target.closest('.js-filter') : undefined;
-      return jsFilter
-        ? element.dataset.index === jsFilter.dataset.index
-        : false;
-    };
-    const facetsToRender = Array.from(facetDetailsElements).filter(
-      (element) => !matchesIndex(element),
-    );
-    const countsToRender = Array.from(facetDetailsElements).find(matchesIndex);
-
-    facetsToRender.forEach((element) => {
-      document.querySelector(
-        `.js-filter[data-index="${element.dataset.index}"]`,
-      ).innerHTML = element.innerHTML;
-    });
-
-    FacetFiltersForm.renderActiveFacets(parsedHTML);
-    FacetFiltersForm.renderAdditionalElements(parsedHTML);
-
-    if (countsToRender)
-      FacetFiltersForm.renderCounts(
-        countsToRender,
-        event.target.closest('.js-filter'),
-      );
-  }
+}
 
   static renderActiveFacets(html) {
-    const activeFacetElementSelectors = [
-      '.active-facets-mobile',
-      '.active-facets-desktop',
-    ];
+  const activeFacetElementSelectors = [
+    '.active-facets-mobile',
+    '.active-facets-desktop',
+  ];
 
-    activeFacetElementSelectors.forEach((selector) => {
-      const activeFacetsElement = html.querySelector(selector);
-      if (!activeFacetsElement) return;
-      document.querySelector(selector).innerHTML =
-        activeFacetsElement.innerHTML;
-    });
+  activeFacetElementSelectors.forEach((selector) => {
+    const activeFacetsElement = html.querySelector(selector);
+    if (!activeFacetsElement) return;
+    document.querySelector(selector).innerHTML =
+      activeFacetsElement.innerHTML;
+  });
 
-    FacetFiltersForm.toggleActiveFacets(false);
-  }
+  FacetFiltersForm.toggleActiveFacets(false);
+}
 
   static renderAdditionalElements(html) {
-    const mobileElementSelectors = [
-      '.mobile-facets__open',
-      '.mobile-facets__count',
-      '.sorting',
-    ];
+  const mobileElementSelectors = [
+    '.mobile-facets__open',
+    '.mobile-facets__count',
+    '.sorting',
+  ];
 
-    mobileElementSelectors.forEach((selector) => {
-      if (!html.querySelector(selector)) return;
-      document.querySelector(selector).innerHTML =
-        html.querySelector(selector).innerHTML;
-    });
+  mobileElementSelectors.forEach((selector) => {
+    if (!html.querySelector(selector)) return;
+    document.querySelector(selector).innerHTML =
+      html.querySelector(selector).innerHTML;
+  });
 
-    document
-      .getElementById('FacetFiltersFormMobile')
-      .closest('menu-drawer')
-      .bindEvents();
-  }
+  document
+    .getElementById('FacetFiltersFormMobile')
+    .closest('menu-drawer')
+    .bindEvents();
+}
 
   static renderCounts(source, target) {
-    const targetElement = target.querySelector('.facets__selected');
-    const sourceElement = source.querySelector('.facets__selected');
+  const targetElement = target.querySelector('.facets__selected');
+  const sourceElement = source.querySelector('.facets__selected');
 
-    const targetElementAccessibility = target.querySelector('.facets__summary');
-    const sourceElementAccessibility = source.querySelector('.facets__summary');
+  const targetElementAccessibility = target.querySelector('.facets__summary');
+  const sourceElementAccessibility = source.querySelector('.facets__summary');
 
-    if (sourceElement && targetElement) {
-      target.querySelector('.facets__selected').outerHTML =
-        source.querySelector('.facets__selected').outerHTML;
-    }
-
-    if (targetElementAccessibility && sourceElementAccessibility) {
-      target.querySelector('.facets__summary').outerHTML =
-        source.querySelector('.facets__summary').outerHTML;
-    }
+  if (sourceElement && targetElement) {
+    target.querySelector('.facets__selected').outerHTML =
+      source.querySelector('.facets__selected').outerHTML;
   }
+
+  if (targetElementAccessibility && sourceElementAccessibility) {
+    target.querySelector('.facets__summary').outerHTML =
+      source.querySelector('.facets__summary').outerHTML;
+  }
+}
 
   static updateURLHash(searchParams) {
-    history.pushState(
-      { searchParams },
-      '',
-      `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`,
-    );
-  }
+  history.pushState(
+    { searchParams },
+    '',
+    `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`,
+  );
+}
 
   static getSections() {
-    return [
-      {
-        section: document.getElementById('product-grid').dataset.id,
-      },
-    ];
-  }
+  return [
+    {
+      section: document.getElementById('product-component-grid').dataset.id,
+    },
+  ];
+}
 
-  createSearchParams(form) {
-    const formData = new FormData(form);
-    return new URLSearchParams(formData).toString();
-  }
+createSearchParams(form) {
+  const formData = new FormData(form);
+  return new URLSearchParams(formData).toString();
+}
 
-  onSubmitForm(searchParams, event) {
-    FacetFiltersForm.renderPage(searchParams, event);
-  }
+onSubmitForm(searchParams, event) {
+  FacetFiltersForm.renderPage(searchParams, event);
+}
 
-  onSubmitHandler(event) {
-    event.preventDefault();
-    const sortFilterForms = document.querySelectorAll(
-      'facet-filters-form form',
+onSubmitHandler(event) {
+  event.preventDefault();
+  const sortFilterForms = document.querySelectorAll(
+    'facet-filters-form form',
+  );
+  if (event.srcElement.className == 'mobile-facets__checkbox') {
+    const searchParams = this.createSearchParams(
+      event.target.closest('form'),
     );
-    if (event.srcElement.className == 'mobile-facets__checkbox') {
-      const searchParams = this.createSearchParams(
-        event.target.closest('form'),
-      );
-      this.onSubmitForm(searchParams, event);
-    } else {
-      const forms = [];
-      const isMobile =
-        event.target.closest('form').id === 'FacetFiltersFormMobile';
+    this.onSubmitForm(searchParams, event);
+  } else {
+    const forms = [];
+    const isMobile =
+      event.target.closest('form').id === 'FacetFiltersFormMobile';
 
-      sortFilterForms.forEach((form) => {
-        if (!isMobile) {
-          if (
-            form.id === 'FacetSortForm' ||
-            form.id === 'FacetFiltersForm' ||
-            form.id === 'FacetSortDrawerForm'
-          ) {
-            const noJsElements = document.querySelectorAll('.no-js-list');
-            noJsElements.forEach((el) => el.remove());
-            forms.push(this.createSearchParams(form));
-          }
-        } else if (form.id === 'FacetFiltersFormMobile') {
+    sortFilterForms.forEach((form) => {
+      if (!isMobile) {
+        if (
+          form.id === 'FacetSortForm' ||
+          form.id === 'FacetFiltersForm' ||
+          form.id === 'FacetSortDrawerForm'
+        ) {
+          const noJsElements = document.querySelectorAll('.no-js-list');
+          noJsElements.forEach((el) => el.remove());
           forms.push(this.createSearchParams(form));
         }
-      });
-      this.onSubmitForm(forms.join('&'), event);
-    }
+      } else if (form.id === 'FacetFiltersFormMobile') {
+        forms.push(this.createSearchParams(form));
+      }
+    });
+    this.onSubmitForm(forms.join('&'), event);
   }
+}
 
-  onActiveFilterClick(event) {
-    event.preventDefault();
-    FacetFiltersForm.toggleActiveFacets();
-    const url =
-      event.currentTarget.href.indexOf('?') == -1
-        ? ''
-        : event.currentTarget.href.slice(
-            event.currentTarget.href.indexOf('?') + 1,
-          );
-    FacetFiltersForm.renderPage(url);
-  }
+onActiveFilterClick(event) {
+  event.preventDefault();
+  FacetFiltersForm.toggleActiveFacets();
+  const url =
+    event.currentTarget.href.indexOf('?') == -1
+      ? ''
+      : event.currentTarget.href.slice(
+        event.currentTarget.href.indexOf('?') + 1,
+      );
+  FacetFiltersForm.renderPage(url);
+}
 }
 
 FacetFiltersForm.filterData = [];

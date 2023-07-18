@@ -57,8 +57,8 @@
 
 <section class='color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}'>
   <div class='page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}'>
-    <div class='featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}'>
-      <div class='grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}'>
+    <div class='featured-product product product--{{ section.settings.media_size }} component-grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}'>
+      <div class='component-grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}'>
         <media-gallery
           id='MediaGallery-{{ section.id }}'
           role='region'
@@ -136,7 +136,7 @@
           {%- endif -%}
         </media-gallery>
       </div>
-      <div class='product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'>
+      <div class='product__info-wrapper component-grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'>
         <product-info
           id='ProductInfo-{{ section.id }}'
           class='product__info-container'
@@ -366,7 +366,7 @@
         </product-info>
       </div>
       {%- if section.settings.media_position == 'right' -%}
-        <div class='grid__item product__media-wrapper small-hide'>
+        <div class='component-grid__item product__media-wrapper small-hide'>
           {%- if section.settings.product != blank -%}
             <media-gallery
               id='MediaGallery-{{ section.id }}-right'

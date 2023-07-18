@@ -12,7 +12,7 @@
   class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}"
   {{ block.shopify_attributes }}
 >
-  <div class="page-width{% if section.settings.show_social and social_icons %} utility-bar__grid{% endif %}">
+  <div class="page-width{% if section.settings.show_social and social_icons %} utility-bar__component-grid{% endif %}">
     {%- if section.settings.show_social and social_icons -%}
       {%- render 'social-icons' -%}
     {%- endif -%}
@@ -59,7 +59,7 @@
             {% render 'icon-caret' %}
           </button>
           <div
-            class="grid grid--1-col slider slider--everywhere"
+            class="component-grid grid--1-col slider slider--everywhere"
             id="Slider-{{ section.id }}"
             aria-live="polite"
             aria-atomic="true"
@@ -68,7 +68,7 @@
           >
             {%- for block in section.blocks -%}
               <div
-                class="slideshow__slide slider__slide grid__item grid--1-col"
+                class="slideshow__slide slider__slide component-grid__item grid--1-col"
                 id="Slide-{{ section.id }}-{{ forloop.index }}"
                 {{ block.shopify_attributes }}
                 role="group"

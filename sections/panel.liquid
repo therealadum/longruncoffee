@@ -15,10 +15,18 @@
 <div class="bg-cyan-50 grid grid-cols-1 lg:grid-cols-2 mt-8">
   <div class="relative border-b border-cyan-200 lg:border-none h-96 lg:h-auto">
     <img
-      src="/home/coffee-club/background.jpeg"
+      src={{ "img-home-coffee-club.jpeg" | asset_img_url }}
+      loading="lazy"
       class="object-cover w-full h-full bg-center"
       alt="trees"
     />
+    <div class="absolute inset-0 flex items-center justify-center">
+      <img
+        src={{ "img-home-boxes.png" | asset_img_url }}
+        class="object-contain w-3/5 lg:w-4/5 h-3/5 lg:h-4/5 bg-center"
+        alt="coffee boxes"
+      />
+    </div>
   </div>
   <div class="relative flex flex-col justify-center space-y-6 lg:space-y-8 px-6 lg:px-24 py-12">
     <h3 class="font-accent text-4xl lg:text-5xl text-cyan-900">

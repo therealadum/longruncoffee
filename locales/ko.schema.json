@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "템플릿 섹션 사이 간격"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "그리드"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "여러 열이나 행이 있는 영역에 영향을 미칩니다."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "수평 영역"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "수직 영역"
         }
       }
@@ -1437,7 +1437,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "제품 그리드",
       "settings": {
         "products_per_page": {

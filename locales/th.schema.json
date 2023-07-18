@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "ช่องว่างระหว่างส่วนเทมเพลต"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "กริด"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "ส่งผลต่อพื้นที่ที่มีหลายคอลัมน์หรือหลายแถว"
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "ช่องว่างแนวนอน"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "ช่องว่างแนวตั้ง"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "กริดสินค้า",
       "settings": {
         "products_per_page": {

@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "模板分区之间的间距"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "网格"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "影响具有多列或行的区域。"
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "水平间距"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "垂直间距"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "产品网格",
       "settings": {
         "products_per_page": {

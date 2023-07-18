@@ -355,16 +355,16 @@
         "spacing_sections": {
           "label": "Space between template sections"
         },
-        "header__grid": {
-          "content": "Grid"
+        "header__component-grid": {
+          "content": "component-grid"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Affects areas with multiple columns or rows."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Horizontal space"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Vertical space"
         }
       }
@@ -1691,7 +1691,7 @@
         "layout": {
           "label": "Desktop layout",
           "options__1": {
-            "label": "Grid"
+            "label": "component-grid"
           },
           "options__2": {
             "label": "Collage"
@@ -1745,8 +1745,8 @@
         }
       }
     },
-    "main-collection-product-grid": {
-      "name": "Product grid",
+    "main-collection-product-component-grid": {
+      "name": "Product component-grid",
       "settings": {
         "products_per_page": {
           "label": "Products per page"
@@ -2946,7 +2946,7 @@
             "label": "Full width"
           },
           "options__2": {
-            "label": "Grid"
+            "label": "component-grid"
           }
         },
         "slide_height": {

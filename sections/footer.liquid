@@ -55,22 +55,22 @@
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
-              assign footer_grid_class = 'grid--3-col-tablet'
+              assign footer_component-grid_class = 'grid--3-col-tablet'
             elsif section.blocks.size > 6
-              assign footer_grid_class = 'grid--4-col-desktop'
+              assign footer_component-grid_class = 'grid--4-col-desktop'
             elsif section.blocks.size > 4
-              assign footer_grid_class = 'grid--3-col-tablet'
+              assign footer_component-grid_class = 'grid--3-col-tablet'
             endif
           -%}
           <div
-            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="footer__blocks-wrapper component-grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_component-grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
           >
             {%- for block in section.blocks -%}
               <div
-                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="footer-block component-grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade

@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Mellanrum mellan mallavsnitt"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Rutnät"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Påverkar områden med flera kolumner eller rader."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Horisontellt utrymme"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Vertikalt utrymme"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Produktrutnät",
       "settings": {
         "products_per_page": {

@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Khoảng cách giữa các mục mẫu"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Lưới"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Ảnh hưởng đến vùng có nhiều cột hoặc hàng."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Không gian ngang"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Không gian dọc"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Lưới sản phẩm",
       "settings": {
         "products_per_page": {

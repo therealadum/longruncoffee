@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Ruimte tussen secties in een template"
         },
-        "header__grid": {
-          "content": "Grid"
+        "header__component-grid": {
+          "content": "component-grid"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Is van invloed op secties met meerdere kolommen of rijen."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Horizontale ruimte"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Verticale ruimte"
         }
       }
@@ -1383,7 +1383,7 @@
         "layout": {
           "label": "Opmaak voor desktop",
           "options__1": {
-            "label": "Grid"
+            "label": "component-grid"
           },
           "options__2": {
             "label": "Collage"
@@ -1437,8 +1437,8 @@
         }
       }
     },
-    "main-collection-product-grid": {
-      "name": "Productgrid",
+    "main-collection-product-component-grid": {
+      "name": "Productcomponent-grid",
       "settings": {
         "products_per_page": {
           "label": "Producten per pagina"
@@ -2718,7 +2718,7 @@
             "label": "Volledige breedte"
           },
           "options__2": {
-            "label": "Grid"
+            "label": "component-grid"
           }
         },
         "slide_height": {

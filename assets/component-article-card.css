@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.article.grid__item {
+.article.component-grid__item {
   padding: 0;
 }
 
@@ -130,12 +130,12 @@
 
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
-  .articles-wrapper.grid {
+  .articles-wrapper.component-grid {
     margin: 0 0 5rem 0;
   }
 
   @media screen and (min-width: 750px) {
-    .articles-wrapper.grid {
+    .articles-wrapper.component-grid {
       margin-bottom: 7rem;
     }
   }

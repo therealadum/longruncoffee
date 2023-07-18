@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Şablon bölümleri arasındaki alan"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Izgara"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Birden fazla sütun veya satır içeren alanları etkiler."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Yatay boşluk"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Dikey boşluk"
         }
       }
@@ -1437,7 +1437,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Ürün ızgarası",
       "settings": {
         "products_per_page": {

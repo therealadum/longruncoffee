@@ -12,17 +12,17 @@
 }
 
 @media screen and (max-width: 749px) {
-  .footer .grid {
+  .footer .component-grid {
     display: block;
   }
 
-  .footer-block.grid__item {
+  .footer-block.component-grid__item {
     padding: 0;
     margin: 4rem 0;
     width: 100%;
   }
 
-  .footer-block.grid__item:first-child {
+  .footer-block.component-grid__item:first-child {
     margin-top: 0;
   }
 
@@ -34,7 +34,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer__content-top .grid {
+  .footer__content-top .component-grid {
     row-gap: 6rem;
     margin-bottom: 0;
   }
@@ -499,17 +499,17 @@
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   @media screen and (max-width: 749px) {
-    .footer .grid {
+    .footer .component-grid {
       margin-left: 0;
     }
   }
 
   @media screen and (min-width: 750px) {
-    .footer__content-top .grid {
+    .footer__content-top .component-grid {
       margin-left: -3rem;
     }
 
-    .footer__content-top .grid__item {
+    .footer__content-top .component-grid__item {
       padding-left: 3rem;
     }
   }

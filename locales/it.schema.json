@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Spazio tra le sezioni del modello"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Griglia"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Incide sulle aree con colonne o righe multiple."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Spazio orizzontale"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Spazio verticale"
         }
       }
@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Griglia prodotti",
       "settings": {
         "products_per_page": {

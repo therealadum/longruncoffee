@@ -173,31 +173,31 @@
       },
       {
         "type": "header",
-        "content": "t:settings_schema.layout.settings.header__grid.content"
+        "content": "t:settings_schema.layout.settings.header__component-grid.content"
       },
       {
         "type": "paragraph",
-        "content": "t:settings_schema.layout.settings.paragraph__grid.content"
+        "content": "t:settings_schema.layout.settings.paragraph__component-grid.content"
       },
       {
         "type": "range",
-        "id": "spacing_grid_horizontal",
+        "id": "spacing_component-grid_horizontal",
         "min": 4,
         "max": 40,
         "step": 4,
         "default": 8,
         "unit": "px",
-        "label": "t:settings_schema.layout.settings.spacing_grid_horizontal.label"
+        "label": "t:settings_schema.layout.settings.spacing_component-grid_horizontal.label"
       },
       {
         "type": "range",
-        "id": "spacing_grid_vertical",
+        "id": "spacing_component-grid_vertical",
         "min": 4,
         "max": 40,
         "step": 4,
         "default": 8,
         "unit": "px",
-        "label": "t:settings_schema.layout.settings.spacing_grid_vertical.label"
+        "label": "t:settings_schema.layout.settings.spacing_component-grid_vertical.label"
       }
     ]
   },

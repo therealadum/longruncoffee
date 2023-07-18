@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 749px) {
-  quick-add-modal .slider .product__media-item.grid__item {
+  quick-add-modal .slider .product__media-item.component-grid__item {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }

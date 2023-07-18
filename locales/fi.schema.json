@@ -115,16 +115,16 @@
         "spacing_sections": {
           "label": "Tila malliosioiden välissä"
         },
-        "header__grid": {
+        "header__component-grid": {
           "content": "Ruudukko"
         },
-        "paragraph__grid": {
+        "paragraph__component-grid": {
           "content": "Vaikuttaa alueisiin, joissa on monta saraketta tai riviä."
         },
-        "spacing_grid_horizontal": {
+        "spacing_component-grid_horizontal": {
           "label": "Vaakasuuntainen tila"
         },
-        "spacing_grid_vertical": {
+        "spacing_component-grid_vertical": {
           "label": "Pystysuuntainen tila"
         }
       }
@@ -1437,7 +1437,7 @@
         }
       }
     },
-    "main-collection-product-grid": {
+    "main-collection-product-component-grid": {
       "name": "Tuoteruudukko",
       "settings": {
         "products_per_page": {

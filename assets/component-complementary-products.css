@@ -48,7 +48,7 @@ product-recommendations:not(.is-accordion) .complementary-products__container {
   }
 }
 
-.complementary-slide.grid__item {
+.complementary-slide.component-grid__item {
   width: 100%;
   padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
   padding-bottom: max(
