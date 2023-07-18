@@ -211,7 +211,7 @@
       }
     },
     "0951ad7a-3617-44e7-964c-bbcbe7f8a49b": {
-      "type": "rich-text",
+      "type": "panel",
       "blocks": {
         "template--19876927668537__0951ad7a-3617-44e7-964c-bbcbe7f8a49b-16896382747a58d187-0": {
           "type": "heading",
