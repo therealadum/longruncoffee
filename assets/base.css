@@ -6,6 +6,9 @@
   --font-heading-family: 'IntroRust';
 }
 
+html {
+  font-size: calc(var(--font-body-scale) * 85%);
+}
 
 @font-face {
   font-family: 'IntroRust';
@@ -894,7 +897,7 @@ summary::-webkit-details-marker {
   letter-spacing: 0.08rem;
 }
 
-/* component-component-grid */
+/* component-grid */
 .component-grid {
   display: flex;
   flex-wrap: wrap;
@@ -3055,12 +3058,12 @@ details-disclosure > details {
     }
   }
 
-  .product-component-grid .component-grid__item {
+  .product-grid .component-grid__item {
     padding-bottom: var(--grid-mobile-vertical-spacing);
   }
 
   @media screen and (min-width: 750px) {
-    .product-component-grid .component-grid__item {
+    .product-grid .component-grid__item {
       padding-bottom: var(--grid-desktop-vertical-spacing);
     }
   }
@@ -3348,7 +3351,7 @@ details-disclosure > details {
     transform: rotate(0.5deg); /* Less intense rotation for collage items. */
   }
 
-  .animate--hover-3d-lift .product-component-grid .component-grid__item:hover,
+  .animate--hover-3d-lift .product-grid .component-grid__item:hover,
   .animate--hover-3d-lift .collection-list .component-grid__item:hover,
   .animate--hover-3d-lift .collage__item:hover,
   .animate--hover-3d-lift .blog-articles .article:hover,
@@ -3356,7 +3359,7 @@ details-disclosure > details {
     z-index: 2; /* Make sure the hovered card is the topmost card. */
   }
 
-  .animate--hover-3d-lift .product-component-grid {
+  .animate--hover-3d-lift .product-grid {
     isolation: isolate; /* Ensure z-index changes here don't negatively effect other UI stacking. */
   }
 

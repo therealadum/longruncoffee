@@ -1437,7 +1437,7 @@
         }
       }
     },
-    "main-collection-product-component-grid": {
+    "main-collection-product-grid": {
       "name": "제품 그리드",
       "settings": {
         "products_per_page": {

@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-component-grid": {
+    "main-collection-product-grid": {
       "name": "產品網格",
       "settings": {
         "products_per_page": {

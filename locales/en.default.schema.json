@@ -1745,7 +1745,7 @@
         }
       }
     },
-    "main-collection-product-component-grid": {
+    "main-collection-product-grid": {
       "name": "Product component-grid",
       "settings": {
         "products_per_page": {

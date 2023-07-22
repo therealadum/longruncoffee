@@ -1437,7 +1437,7 @@
         }
       }
     },
-    "main-collection-product-component-grid": {
+    "main-collection-product-grid": {
       "name": "Tuoteruudukko",
       "settings": {
         "products_per_page": {

@@ -211,7 +211,7 @@ class FacetFiltersForm extends HTMLElement {
   static getSections() {
   return [
     {
-      section: document.getElementById('product-component-grid').dataset.id,
+      section: document.getElementById('product-grid').dataset.id,
     },
   ];
 }

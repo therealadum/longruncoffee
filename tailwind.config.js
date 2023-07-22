@@ -11,8 +11,9 @@ module.exports = {
     './locales/*.json',
   ],
   theme: {
-    color: {
+    colors: {
       black: '#000000',
+      white: '#ffffff',
       cyan: {
         50: '#D8F2F5',
         100: '#C8EDF1',
@@ -50,7 +51,28 @@ module.exports = {
         900: '#102A43',
       },
     },
+    screens: {
+      sm: '32em',
+      md: '48em',
+      lg: '64em',
+      xl: '80em',
+      '2xl': '96em',
+      'sm-max': { max: '48em' },
+      'sm-only': { min: '32em', max: '48em' },
+      'md-only': { min: '48em', max: '64em' },
+      'lg-only': { min: '64em', max: '80em' },
+      'xl-only': { min: '80em', max: '96em' },
+      '2xl-only': { min: '96em' },
+    },
+    fontFamily: {
+      accent: ['"IntroRust"', 'Palatino', 'ui-serif'],
+      base: ['"Montserrat"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+    },
+    boxShadow: {
+      border: 'inset 0px 0px 0px 1px rgb(var(--color-primary) / 0.08)',
+      darkHeader: 'inset 0px -1px 0px 0px rgba(21, 21, 21, 0.4)',
+      lightHeader: 'inset 0px -1px 0px 0px rgba(21, 21, 21, 0.05)',
+    },
   },
   plugins: [],
-  safelist: ['bg-tan-200']
 };

@@ -1434,7 +1434,7 @@
         }
       }
     },
-    "main-collection-product-component-grid": {
+    "main-collection-product-grid": {
       "name": "Mřížka produktů",
       "settings": {
         "products_per_page": {

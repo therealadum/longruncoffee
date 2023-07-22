@@ -39,7 +39,7 @@
 }
 
 @media screen and (max-width: 989px) {
-  .collection .slider--tablet.product-component-grid {
+  .collection .slider--tablet.product-grid {
     scroll-padding-left: 1.5rem;
   }
 }

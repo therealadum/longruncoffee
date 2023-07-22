@@ -21,12 +21,6 @@ h6:empty {
   display: none;
 }
 
-html {
-  font-size: calc(var(--font-body-scale) * 62.5%);
-  box-sizing: border-box;
-  height: 100%;
-}
-
 body {
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
