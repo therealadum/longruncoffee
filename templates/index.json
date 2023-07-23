@@ -2,33 +2,46 @@
   "sections": {
     "home-hero": {
       "type": "home-hero",
-      "blocks": {},
-      "block_order": [],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+      }
+    },
+    "099e48f9-68a6-4cd9-8518-087d902d97e6": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "coffee",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "home-coffee-club-cta": {
       "type": "home-coffee-club-cta",
-      "blocks": {},
-      "block_order": [],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
   "order": [
     "home-hero",
+    "099e48f9-68a6-4cd9-8518-087d902d97e6",
     "home-coffee-club-cta"
   ]
 }
