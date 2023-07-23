@@ -1,7 +1,20 @@
 {
   "sections": {
-    "0951ad7a-3617-44e7-964c-bbcbe7f8a49b": {
-      "type": "home",
+    "home-hero": {
+      "type": "home-hero",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "home-coffee-club-cta": {
+      "type": "home-coffee-club-cta",
       "blocks": {},
       "block_order": [],
       "settings": {
@@ -15,6 +28,7 @@
     }
   },
   "order": [
-    "0951ad7a-3617-44e7-964c-bbcbe7f8a49b"
+    "home-hero",
+    "home-coffee-club-cta"
   ]
 }
