@@ -2,7 +2,8 @@
   "sections": {
     "home-hero": {
       "type": "home-hero",
-      "settings": {}
+      "settings": {
+      }
     },
     "099e48f9-68a6-4cd9-8518-087d902d97e6": {
       "type": "featured-collection",
@@ -24,7 +25,7 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "enable_quick_add": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -34,19 +35,23 @@
     },
     "home-coffee-club-cta": {
       "type": "home-coffee-club-cta",
-      "settings": {}
+      "settings": {
+      }
     },
     "home-reviews": {
       "type": "home-reviews",
-      "settings": {}
+      "settings": {
+      }
     },
     "home-mission-cta": {
       "type": "home-mission-cta",
-      "settings": {}
+      "settings": {
+      }
     },
     "home-founder-quote": {
       "type": "home-founder-quote",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
