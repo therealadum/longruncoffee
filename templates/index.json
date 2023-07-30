@@ -2,6 +2,9 @@
   "sections": {
     "home-hero": {
       "type": "home-hero",
+      "custom_css": [
+        "h3 {font-size: 40px;}"
+      ],
       "settings": {
       }
     },
@@ -39,16 +42,6 @@
     },
     "home-coffee-club-cta": {
       "type": "home-coffee-club-cta",
-      "settings": {
-      }
-    },
-    "home-reviews": {
-      "type": "home-reviews",
-      "settings": {
-      }
-    },
-    "home-mission-cta": {
-      "type": "home-mission-cta",
       "settings": {
       }
     },
@@ -106,12 +99,23 @@
         "color_scheme": "background-2",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 64
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "home-mission-cta": {
+      "type": "home-mission-cta",
+      "settings": {
+      }
+    },
+    "home-reviews": {
+      "type": "home-reviews",
+      "settings": {
       }
     },
     "home-founder-quote": {
       "type": "home-founder-quote",
+      "disabled": true,
       "settings": {
       }
     }
@@ -120,9 +124,9 @@
     "home-hero",
     "57fefd56-ea79-4796-b1c9-2297353cd585",
     "home-coffee-club-cta",
-    "home-reviews",
-    "home-mission-cta",
     "2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c",
+    "home-mission-cta",
+    "home-reviews",
     "home-founder-quote"
   ]
 }
