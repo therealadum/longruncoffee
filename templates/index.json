@@ -8,7 +8,7 @@
     "57fefd56-ea79-4796-b1c9-2297353cd585": {
       "type": "featured-collection",
       "custom_css": [
-        ".price__regular {font-size: 17px;}",
+        ".price__regular {font-size: 16px;}",
         ".hidden {display: none;}"
       ],
       "settings": {
@@ -24,7 +24,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
-        "color_scheme": "",
+        "color_scheme": "accent-2",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
