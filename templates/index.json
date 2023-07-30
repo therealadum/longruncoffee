@@ -51,6 +51,59 @@
       "settings": {
       }
     },
+    "2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Runner Approved",
+            "text": "<h4>250+   5-Star  Reviews<\/h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "Cups Brewed",
+            "text": "<h4>75,000 and counting<\/h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "Miles Fueled",
+            "text": "<h4>3,625,673 since April, 2022<\/h4>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-1",
+        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-2",
+        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-3"
+      ],
+      "settings": {
+        "title": "Long Run Coffee - The Stats",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 48
+      }
+    },
     "home-founder-quote": {
       "type": "home-founder-quote",
       "settings": {
@@ -63,6 +116,7 @@
     "home-coffee-club-cta",
     "home-reviews",
     "home-mission-cta",
+    "2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c",
     "home-founder-quote"
   ]
 }
