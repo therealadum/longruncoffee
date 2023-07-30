@@ -24,7 +24,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
-        "color_scheme": "accent-2",
+        "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -88,17 +88,22 @@
         "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-2",
         "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-3"
       ],
+      "custom_css": [
+        "h2 {font-size: 35px;}",
+        "h3 {font-size: 25px;}",
+        "h4 {font-size: 20px;}"
+      ],
       "settings": {
         "title": "Long Run Coffee - The Stats",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "accent-2",
+        "color_scheme": "background-2",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 44,
