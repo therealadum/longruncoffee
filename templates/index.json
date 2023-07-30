@@ -5,39 +5,12 @@
       "settings": {
       }
     },
-    "099e48f9-68a6-4cd9-8518-087d902d97e6": {
-      "type": "featured-collection",
-      "custom_css": [
-
-      ],
-      "settings": {
-        "title": "Popular",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "coffee",
-        "products_to_show": 10,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": true,
-        "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "57fefd56-ea79-4796-b1c9-2297353cd585": {
       "type": "featured-collection",
+      "custom_css": [
+        ".price__regular {font-size: 17px;}",
+        ".hidden {display: none;}"
+      ],
       "settings": {
         "title": "Popular",
         "heading_size": "h1",
@@ -140,7 +113,6 @@
   },
   "order": [
     "home-hero",
-    "099e48f9-68a6-4cd9-8518-087d902d97e6",
     "57fefd56-ea79-4796-b1c9-2297353cd585",
     "home-coffee-club-cta",
     "home-reviews",
