@@ -6,9 +6,80 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "0b71a524-de14-40d3-8633-f3679f0f42df": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19876927570233__0b71a524-de14-40d3-8633-f3679f0f42df-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/box.png",
+            "title": "Free Shipping",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19876927570233__0b71a524-de14-40d3-8633-f3679f0f42df-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/discount.png",
+            "title": "10% Savings",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19876927570233__0b71a524-de14-40d3-8633-f3679f0f42df-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bonus.png",
+            "title": "Bonus Gear",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "4d8a2fef-ef89-417a-bbc2-ce9f310569d2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/customization.png",
+            "title": "Fully Customizable",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927570233__0b71a524-de14-40d3-8633-f3679f0f42df-column-1",
+        "template--19876927570233__0b71a524-de14-40d3-8633-f3679f0f42df-column-2",
+        "template--19876927570233__0b71a524-de14-40d3-8633-f3679f0f42df-column-3",
+        "4d8a2fef-ef89-417a-bbc2-ce9f310569d2"
+      ],
+      "custom_css": [
+        "h3 {font-size: 20px;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "0b71a524-de14-40d3-8633-f3679f0f42df"
   ]
 }
