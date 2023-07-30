@@ -106,6 +106,7 @@
     },
     "home-founder-quote": {
       "type": "home-founder-quote",
+      "disabled": true,
       "settings": {
       }
     }
