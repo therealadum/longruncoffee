@@ -11,7 +11,9 @@
     "57fefd56-ea79-4796-b1c9-2297353cd585": {
       "type": "featured-collection",
       "custom_css": [
-        ".price__regular {font-size: 16px;}",
+        "h2 {font-size: 40px;}",
+        "h3 {font-size: 17px;}",
+        ".price__regular {font-size: 15px;}",
         ".hidden {display: none;}"
       ],
       "settings": {
@@ -42,6 +44,9 @@
     },
     "home-coffee-club-cta": {
       "type": "home-coffee-club-cta",
+      "custom_css": [
+        "h3 {font-size: 40px;}"
+      ],
       "settings": {
       }
     },
