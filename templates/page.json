@@ -281,12 +281,19 @@
           "settings": {
             "collection": "gear"
           }
+        },
+        "43620bad-5178-4530-a68c-dea3b83294d0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "variety-sets"
+          }
         }
       },
       "block_order": [
         "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-1",
         "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-2",
-        "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-3"
+        "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-3",
+        "43620bad-5178-4530-a68c-dea3b83294d0"
       ],
       "custom_css": [
         "h3 {font-size: 20px;}"
@@ -295,7 +302,7 @@
         "title": "",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "1",
