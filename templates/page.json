@@ -189,12 +189,56 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "a1f9fcf4-df60-4a17-a0c1-856664eb0bd9": {
+      "type": "collection-list",
+      "blocks": {
+        "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "coffee"
+          }
+        },
+        "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "flavored"
+          }
+        },
+        "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gear"
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-1",
+        "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-2",
+        "template--19876927570233__a1f9fcf4-df60-4a17-a0c1-856664eb0bd9-featured_collection-3"
+      ],
+      "custom_css": [
+        "h3 {font-size: 20px;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
     }
   },
   "order": [
     "main",
     "6d2b75a3-a4b9-4030-9732-af1cd23fd631",
     "0b71a524-de14-40d3-8633-f3679f0f42df",
-    "6e127dca-f496-4ca9-8e08-95e06b0ca2fc"
+    "6e127dca-f496-4ca9-8e08-95e06b0ca2fc",
+    "a1f9fcf4-df60-4a17-a0c1-856664eb0bd9"
   ]
 }
