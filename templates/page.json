@@ -24,7 +24,7 @@
         "template--19876927570233__6d2b75a3-a4b9-4030-9732-af1cd23fd631-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h4>Fuel Your Passion & Performance. <\/h4><h4> <\/h4><h4>Get fresh supply delivered to your door, and enjoy Long Run Coffee membership status.<\/h4>"
+            "text": "<h4>Fuel Your Passion & Performance. <\/h4><h4>Get fresh supply delivered to your door, and enjoy Long Run Coffee membership status.<\/h4>"
           }
         },
         "template--19876927570233__6d2b75a3-a4b9-4030-9732-af1cd23fd631-button-1": {
@@ -190,6 +190,77 @@
         "padding_bottom": 0
       }
     },
+    "c0a6a0b8-bb7b-4e05-b3e1-becd9ec500ce": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19876927570233__c0a6a0b8-bb7b-4e05-b3e1-becd9ec500ce-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Copy_of_Copy_of_Marathon_Mock_Up_4.png",
+            "title": "Brand Decal Set",
+            "text": "<h4>January 2023<\/h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19876927570233__c0a6a0b8-bb7b-4e05-b3e1-becd9ec500ce-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Copy_of_Copy_of_Marathon_Mock_Up_2.png",
+            "title": "Spring Seasonal",
+            "text": "<h4>April 2023<\/h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19876927570233__c0a6a0b8-bb7b-4e05-b3e1-becd9ec500ce-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Copy_of_Copy_of_Marathon_Mock_Up_3.png",
+            "title": "Boco x LRC run hat",
+            "text": "<h4>July 2023<\/h4>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "4ba1b249-6af2-4f5c-a341-fd382dde89b6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Copy_of_Copy_of_Marathon_Mock_Up_1.png",
+            "title": "To be announced",
+            "text": "<h4>October 2023<\/h4>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927570233__c0a6a0b8-bb7b-4e05-b3e1-becd9ec500ce-column-1",
+        "template--19876927570233__c0a6a0b8-bb7b-4e05-b3e1-becd9ec500ce-column-2",
+        "template--19876927570233__c0a6a0b8-bb7b-4e05-b3e1-becd9ec500ce-column-3",
+        "4ba1b249-6af2-4f5c-a341-fd382dde89b6"
+      ],
+      "custom_css": [
+        "h3 {font-size: 20px;}",
+        "h4 {font-size: 15px;}"
+      ],
+      "settings": {
+        "title": "Bonus Gear",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
     "a1f9fcf4-df60-4a17-a0c1-856664eb0bd9": {
       "type": "collection-list",
       "blocks": {
@@ -239,6 +310,7 @@
     "6d2b75a3-a4b9-4030-9732-af1cd23fd631",
     "0b71a524-de14-40d3-8633-f3679f0f42df",
     "6e127dca-f496-4ca9-8e08-95e06b0ca2fc",
+    "c0a6a0b8-bb7b-4e05-b3e1-becd9ec500ce",
     "a1f9fcf4-df60-4a17-a0c1-856664eb0bd9"
   ]
 }
