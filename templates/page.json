@@ -136,7 +136,7 @@
           "settings": {
             "heading": "Free Shipping",
             "icon": "box",
-            "row_content": "<p>Always free shipping. No Minimums.<\/p>",
+            "row_content": "<ul><li><h4>Always free shipping<\/h4><\/li><li><h4>No Minimums<\/h4><\/li><li><h4>Hassle and headache free<\/h4><\/li><\/ul>",
             "page": ""
           }
         },
@@ -145,7 +145,7 @@
           "settings": {
             "heading": "10% Savings",
             "icon": "price_tag",
-            "row_content": "<p>Save 10% on entire order, regardless of order frequency or amount.<\/p>",
+            "row_content": "<ul><li><h4>Save 10% on entire order<\/h4><\/li><li><h4>Savings apply to any order frequency or quantity<\/h4><\/li><\/ul>",
             "page": ""
           }
         },
@@ -154,7 +154,7 @@
           "settings": {
             "heading": "Bonus Gear",
             "icon": "lightning_bolt",
-            "row_content": "<p>New bonus gear sent every 3 months. Read on to view previous gear shipments!<\/p>",
+            "row_content": "<ul><li><h4>New bonus gear sent every 3 months<\/h4><\/li><li><h4>Scroll down to see previous bonus gear<\/h4><\/li><\/ul>",
             "page": ""
           }
         },
@@ -163,7 +163,7 @@
           "settings": {
             "heading": "Fully Customizable",
             "icon": "dryer",
-            "row_content": "<p>Customize subscription with any product. Choose your own frequency, and skip shipments any time. <\/p>",
+            "row_content": "<ul><li><h4>Customize subscription with any product.<\/h4><\/li><li><h4>Choose your delivery frequency<\/h4><\/li><li><h4>Taking some recovery time? Skip a delivery any time<\/h4><\/li><\/ul>",
             "page": ""
           }
         }
@@ -173,6 +173,10 @@
         "template--19876927570233__6e127dca-f496-4ca9-8e08-95e06b0ca2fc-collapsible_row-2",
         "template--19876927570233__6e127dca-f496-4ca9-8e08-95e06b0ca2fc-collapsible_row-3",
         "template--19876927570233__6e127dca-f496-4ca9-8e08-95e06b0ca2fc-collapsible_row-4"
+      ],
+      "custom_css": [
+        "h3 {font-size: 20px;}",
+        "h4 {font-size: 15px;}"
       ],
       "settings": {
         "caption": "",
