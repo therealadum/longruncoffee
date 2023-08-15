@@ -1,14 +1,9 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
+    "the-science": {
+      "type": "the-science",
+      "settings": {}
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["the-science"]
 }
