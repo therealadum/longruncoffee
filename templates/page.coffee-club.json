@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "coffee-club": {
+      "type": "coffee-club",
+      "settings": {}
+    }
+  },
+  "order": ["coffee-club"]
+}
