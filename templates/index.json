@@ -50,71 +50,13 @@
       "settings": {
       }
     },
-    "2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Runner Approved",
-            "text": "<h4>250+   5-Star  Reviews<\/h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "Cups Brewed",
-            "text": "<h4>75,000 and counting<\/h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-3": {
-          "type": "column",
-          "settings": {
-            "title": "Miles Fueled",
-            "text": "<h4>3,625,673 since April, 2022<\/h4>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-1",
-        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-2",
-        "template--19876927668537__2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c-column-3"
-      ],
-      "custom_css": [
-        "h2 {font-size: 35px;}",
-        "h3 {font-size: 25px;}",
-        "h4 {font-size: 20px;}"
-      ],
+    "home-reviews": {
+      "type": "home-reviews",
       "settings": {
-        "title": "Long Run Coffee - The Stats",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
       }
     },
     "home-mission-cta": {
       "type": "home-mission-cta",
-      "settings": {
-      }
-    },
-    "home-reviews": {
-      "type": "home-reviews",
       "settings": {
       }
     },
@@ -123,15 +65,20 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "6b1352cb-e207-4d66-9158-7591b506a138": {
+      "type": "home-founder-quote",
+      "settings": {
+      }
     }
   },
   "order": [
     "home-hero",
     "57fefd56-ea79-4796-b1c9-2297353cd585",
     "home-coffee-club-cta",
-    "2dcb1d29-e50c-4a2d-bf46-6eeafcf3ac4c",
-    "home-mission-cta",
     "home-reviews",
-    "home-founder-quote"
+    "home-mission-cta",
+    "home-founder-quote",
+    "6b1352cb-e207-4d66-9158-7591b506a138"
   ]
 }

@@ -2,8 +2,11 @@
   "sections": {
     "mission": {
       "type": "mission",
-      "settings": {}
+      "settings": {
+      }
     }
   },
-  "order": ["mission"]
+  "order": [
+    "mission"
+  ]
 }

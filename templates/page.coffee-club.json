@@ -2,8 +2,11 @@
   "sections": {
     "coffee-club": {
       "type": "coffee-club",
-      "settings": {}
+      "settings": {
+      }
     }
   },
-  "order": ["coffee-club"]
+  "order": [
+    "coffee-club"
+  ]
 }
