@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "forms": {
+      "type": "apps",
+      "blocks": {
+        "7555e19b-9cae-40aa-b042-8bb3cb67cb94": {
+          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "26079"
+          }
+        }
+      },
+      "block_order": [
+        "7555e19b-9cae-40aa-b042-8bb3cb67cb94"
+      ],
+      "settings": {
+      }
+    },
+    "d99feb85-97b8-4d43-8076-9f5cdbc23343": {
+      "type": "main-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "d99feb85-97b8-4d43-8076-9f5cdbc23343",
+    "forms"
+  ]
+}
