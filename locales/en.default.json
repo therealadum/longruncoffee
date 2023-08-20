@@ -486,7 +486,10 @@
       },
       "marketing": {
         "accept_marketing_checkbox_label": "Email me about personalized offers and new products",
-        "accept_sms_checkbox_label": "Text me about personalized offers and new products"
+        "accept_sms_checkbox_label": "Text me about personalized offers and new products",
+        "post_accept_marketing_checkbox_label": "We'll keep you in the loop!",
+        "accept_shop_pay_marketing_checkbox_label": "Sign me up for personalized offers and new products",
+        "sign_up_marketing_checkbox_label": "Sign me up for personalized offers and new products"
       }
     },
     "links": {
