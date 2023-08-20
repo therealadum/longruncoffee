@@ -146,7 +146,13 @@
         }
       },
       "11667715999621601152": {
-        "type": "shopify:\/\/apps\/tiktok-ads-tiktok-pixels\/blocks\/turbo-tiktok\/0f61e244-e2c9-43da-9523-9762c9f7e6bf",
+        "type": "shopify:\/\/apps\/pixeltok-multi-pixel-install\/blocks\/turbo-tiktok\/0f61e244-e2c9-43da-9523-9762c9f7e6bf",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "3667842014806057753": {
+        "type": "shopify:\/\/apps\/one-click-upsell-zipify-ocu\/blocks\/app-embed\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
         "disabled": false,
         "settings": {
         }
