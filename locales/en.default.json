@@ -483,6 +483,10 @@
     "checkout": {
       "general": {
         "autocomplete_powered_by_google": " "
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Email me about personalized offers and new products",
+        "accept_sms_checkbox_label": "Text me about personalized offers and new products"
       }
     },
     "links": {
