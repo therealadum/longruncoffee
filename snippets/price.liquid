@@ -24,10 +24,6 @@
   if settings.currency_code_enabled
     assign money_price = price | money_with_currency
   endif
-
-  if target == product and product.price_varies
-    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
-  endif
 -%}
 
 <div
@@ -48,9 +44,7 @@
     {%- endcomment -%}
     <div class='price__regular'>
       <span class='visually-hidden visually-hidden--inline'>{{ 'products.product.price.regular_price' | t }}</span>
-      <span class='price-item price-item--regular'>
-        {{ money_price }}
-      </span>
+      <span class='price-item price-item--regular'> ${{ money_price }} </span>
     </div>
     <div class='price__sale'>
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
@@ -66,9 +60,7 @@
         </span>
       {%- endunless -%}
       <span class='visually-hidden visually-hidden--inline'>{{ 'products.product.price.sale_price' | t }}</span>
-      <span class='price-item price-item--sale price-item--last'>
-        {{ money_price }}
-      </span>
+      <span class='price-item price-item--sale price-item--last'> ${{ money_price }} </span>
     </div>
     <small class='unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}'>
       <span class='visually-hidden'>{{ 'products.product.price.unit_price' | t }}</span>
