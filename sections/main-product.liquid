@@ -1,3 +1,10 @@
+<style>
+  ul {
+    list-style: disc;
+    padding: 0 2rem;
+  }
+</style>
+
 <section
   id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding"
@@ -59,7 +66,7 @@
     <div class="component-grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'product-media-gallery', variant_images: variant_images %}
     </div>
-    <div class="product__info-wrapper component-grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="product__info-wrapper pt-12 lg:pt-0 component-grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <product-info
         id="ProductInfo-{{ section.id }}"
         data-section="{{ section.id }}"
@@ -81,9 +88,9 @@
               </p>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
-                <h1>{{ product.title | escape }}</h1>
+                <h1 class="text-2xl">{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
-                  <h2 class="h1">
+                  <h2 class="text-2xl">
                     {{ product.title | escape }}
                   </h2>
                 </a>
@@ -156,9 +163,7 @@
               </p>
             {%- when 'description' -%}
               {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                  {{ product.description }}
-                </div>
+                <div class='flex flex-col space-y-4 text-lg text-neutral-700'>{{ product.description }}</div>
               {%- endif -%}
             {%- when 'sku' -%}
               <p
