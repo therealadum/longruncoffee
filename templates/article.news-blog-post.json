@@ -30,7 +30,7 @@
     "5e66a8e9-aacd-4620-8146-215ced6e2c59": {
       "type": "featured-collection",
       "settings": {
-        "title": "Fuel your performance",
+        "title": "Fuel your passion",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -58,12 +58,12 @@
     "d3b0ac57-5524-42de-879f-6a527664d1df": {
       "type": "featured-blog",
       "settings": {
-        "heading": "Read more",
+        "heading": "More News",
         "heading_size": "h1",
-        "blog": "science",
+        "blog": "news",
         "post_limit": 3,
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
         "show_image": true,
         "show_date": true,
         "show_author": false,
