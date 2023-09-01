@@ -4,9 +4,56 @@
       "type": "mission",
       "settings": {
       }
+    },
+    "ff1dae03-77d5-4af0-ac0b-bef927374862": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Get moving",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "coffee",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "e142401f-a2c2-48d9-b1e5-f92284c05dea": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Fuel your passion",
+        "heading_size": "h1",
+        "blog": "fuel-your-passion",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "mission"
+    "mission",
+    "ff1dae03-77d5-4af0-ac0b-bef927374862",
+    "e142401f-a2c2-48d9-b1e5-f92284c05dea"
   ]
 }
