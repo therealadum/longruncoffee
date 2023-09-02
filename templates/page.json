@@ -1,8 +1,47 @@
 {
   "sections": {
     "coming-soon": {
-      "type": "coming-soon"
+      "type": "coming-soon",
+      "settings": {
+      }
+    },
+    "9ae28934-928f-4a51-bfb4-14de2c49646a": {
+      "type": "newsletter",
+      "blocks": {
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Exclusive deals and coffee",
+            "heading_size": "h1"
+          }
+        },
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Access special offers, limited edition coffees, and extra motivation <\/p>"
+          }
+        },
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-heading-1",
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-paragraph-1",
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
-  "order": ["coming-soon"]
+  "order": [
+    "coming-soon",
+    "9ae28934-928f-4a51-bfb4-14de2c49646a"
+  ]
 }
