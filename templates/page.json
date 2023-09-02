@@ -25,23 +25,53 @@
           "type": "email_form",
           "settings": {
           }
+        },
+        "759f7b1e-376e-43a3-8f89-69dd1ee66f7a": {
+          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "disabled": true,
+          "settings": {
+            "form_id": "",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
         }
       },
       "block_order": [
         "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-heading-1",
         "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-paragraph-1",
-        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1"
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1",
+        "759f7b1e-376e-43a3-8f89-69dd1ee66f7a"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "d0d8b155-050e-4a80-ae42-95133a443ed6": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Contact form",
+        "heading_size": "h1",
+        "color_scheme": "background-2",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "coming-soon",
-    "9ae28934-928f-4a51-bfb4-14de2c49646a"
+    "9ae28934-928f-4a51-bfb4-14de2c49646a",
+    "d0d8b155-050e-4a80-ae42-95133a443ed6"
   ]
 }
