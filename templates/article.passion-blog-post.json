@@ -27,6 +27,40 @@
       "settings": {
       }
     },
+    "8c01d1c5-50de-46b2-8de8-950ca0f85a56": {
+      "type": "newsletter",
+      "blocks": {
+        "template--20907932746041__8c01d1c5-50de-46b2-8de8-950ca0f85a56-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join our community",
+            "heading_size": "h1"
+          }
+        },
+        "template--20907932746041__8c01d1c5-50de-46b2-8de8-950ca0f85a56-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Exclusive deals, limited-edition coffee, and motivation delivered to your inbox<\/p>"
+          }
+        },
+        "template--20907932746041__8c01d1c5-50de-46b2-8de8-950ca0f85a56-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20907932746041__8c01d1c5-50de-46b2-8de8-950ca0f85a56-heading-1",
+        "template--20907932746041__8c01d1c5-50de-46b2-8de8-950ca0f85a56-paragraph-1",
+        "template--20907932746041__8c01d1c5-50de-46b2-8de8-950ca0f85a56-email_form-1"
+      ],
+      "settings": {
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "5e66a8e9-aacd-4620-8146-215ced6e2c59": {
       "type": "featured-collection",
       "settings": {
@@ -35,7 +69,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "coffee",
+        "collection": "best-selling",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
@@ -63,7 +97,7 @@
         "blog": "fuel-your-passion",
         "post_limit": 3,
         "columns_desktop": 3,
-        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "color_scheme": "background-2",
         "show_image": true,
         "show_date": true,
         "show_author": false,
@@ -75,6 +109,7 @@
   },
   "order": [
     "main",
+    "8c01d1c5-50de-46b2-8de8-950ca0f85a56",
     "5e66a8e9-aacd-4620-8146-215ced6e2c59",
     "d3b0ac57-5524-42de-879f-6a527664d1df"
   ]
