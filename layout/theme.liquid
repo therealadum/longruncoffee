@@ -315,5 +315,7 @@
       <script src='{{ 'predictive-search.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
   
+{% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
+{% assign oneclickupsellapp = true %}
 </body>
 </html>
