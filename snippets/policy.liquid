@@ -9,6 +9,16 @@
 {% endcomment %}
 
 <style>
+  .shopify-policy__body > div > ul {
+    list-style: disc;
+    padding: 0 2rem;
+    list-style-position: outside;
+  }
+  .shopify-policy__body > div > ol {
+    list-style: decimal;
+    padding: 0 2rem;
+    list-style-position: outside;
+  }
   .shopify-policy__container {
     font-size: calc(var(--font-body-scale) * 85%);
     background-color: white;
@@ -47,8 +57,5 @@
 </style>
 
 <div>
-  <script>
-    console.log({{ content | json }});
-  </script>
   {{ content }}
 </div>
