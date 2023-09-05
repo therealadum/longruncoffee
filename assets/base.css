@@ -3549,3 +3549,10 @@ details-disclosure > details {
 #reviews_8281670254905 > div.spr-pagination > div {
   font-size: 1.1rem;
 }
+
+.prose a {
+  color: #66cdd9;
+  text-decoration: underline;
+  text-decoration-color: #66cdd9;
+  text-decoration-thickness: 2px;
+}

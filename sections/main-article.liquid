@@ -3,6 +3,10 @@
     list-style: disc;
     padding: 0 2rem;
   }
+  ol {
+    list-style: decimal;
+    padding: 0 2rem;
+  }
 </style>
 
 <div class='bg-white px-6 py-12 xl:py-24 lg:px-8'>
@@ -41,7 +45,7 @@
       </figcaption>
     </figure>
     <h1 class='mt-10 text-2xl lg:text-4xl font-bold tracking-tight'>{{ article.title | escape }}</h1>
-    <div class='mt-8 lg:mt-12 flex flex-col space-y-4'>{{ article.content }}</div>
+    <div class='mt-8 lg:mt-12 flex flex-col space-y-4 prose'>{{ article.content }}</div>
   </div>
 </div>
 

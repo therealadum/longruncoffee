@@ -269,7 +269,11 @@
     {% sections 'header-group' %}
 
     <main id='MainContent' class='content-for-layout focus-none' role='main' tabindex='-1'>
-      {{ content_for_layout }}
+      {% if request.path contains 'policies' %}
+        {% render 'policy', content: content_for_layout %}
+      {% else %}
+        {{ content_for_layout }}
+      {% endif %}
     </main>
 
     {% sections 'footer-group' %}
@@ -314,8 +318,8 @@
     {%- if settings.predictive_search_enabled -%}
       <script src='{{ 'predictive-search.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
-  
-{% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
-{% assign oneclickupsellapp = true %}
-</body>
+
+    {% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
+    {% assign oneclickupsellapp = true %}
+  </body>
 </html>
