@@ -13,7 +13,7 @@
         "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Is Long Run Coffee in your veins? <\/p><p>Are you interested in helping more people fuel their passion and their performance?<\/p><p>Join our ambassador program<\/p>",
+            "text": "<p>Is Long Run Coffee in <span style=\"text-decoration:underline\">your<\/span> veins? <\/p><p>Are you interested in helping more people fuel their passion and performance?<\/p><p>Join our community as an ambassador.<\/p>",
             "text_style": "body"
           }
         },

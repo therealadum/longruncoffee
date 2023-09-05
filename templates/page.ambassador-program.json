@@ -6,19 +6,20 @@
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "We're here to help",
+            "heading": "COMING SOON",
             "heading_size": "h1"
           }
         },
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>See if your question has been answered in our FAQ.<\/p><p>If not, contact us with the form below and we will get back to you in a jiffy.<\/p>",
+            "text": "<p>More details about our Ambassador Program are coming soon. <\/p><p>Interested? Drop us a line below and let's chat.<\/p>",
             "text_style": "body"
           }
         },
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-button-1": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "View FAQs",
             "button_link": "shopify:\/\/pages\/faq"
@@ -31,7 +32,7 @@
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Email_Pic_2.png",
+        "image": "shopify:\/\/shop_images\/LRC_Ambassador.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
