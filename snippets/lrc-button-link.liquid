@@ -1,0 +1,14 @@
+{% comment %}
+  Renders button
+
+  Accepts:
+  - link: url
+  - title: string
+{% endcomment %}
+
+<a
+  href='{{link}}'
+  class='flex w-full items-center justify-center border border-transparent bg-cyan-700 px-8 py-4 font-accent text-base text-white hover:bg-cyan-900 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2 focus:ring-offset-gray-50'
+>
+  {{ title }}
+</a>

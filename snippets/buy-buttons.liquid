@@ -69,37 +69,51 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <button
-            id='ProductSubmitButton-{{ section_id }}'
-            type='submit'
-            name='add'
-            class='product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}'
-            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
-              disabled
-            {% endif %}
-          >
-            <span>
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
-              {%- endif -%}
-            </span>
-            <div class='loading-overlay__spinner hidden'>
-              <svg
-                aria-hidden='true'
-                focusable='false'
-                class='spinner'
-                viewBox='0 0 66 66'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-              </svg>
-            </div>
-          </button>
-          {%- if show_dynamic_checkout -%}
-            {{ form | payment_button }}
-          {%- endif -%}
+          <div class='{% if product.selling_plan_groups and product.selling_plan_groups.size > 0%} flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-start lg:space-x-4 {%else%} flex flex-col space-y-4 {%endif%}'>
+            <button
+              id='ProductSubmitButton-{{ section_id }}'
+              type='submit'
+              name='add'
+              class='flex items-center justify-center border border-transparent px-8 py-4 font-accent text-base focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2 focus:ring-offset-gray-50 {% if product.selling_plan_groups and product.selling_plan_groups.size > 0 %} bg-cyan-50 hover:bg-cyan-100 text-cyan-700 lg:w-1/2 {% else %} bg-cyan-700 hover:bg-cyan-900 text-white w-full {% endif %}'
+              {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                disabled
+              {% endif %}
+            >
+              <span>
+                {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- else -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
+              </span>
+              <div class='loading-overlay__spinner hidden ml-2'>
+                <svg
+                  aria-hidden='true'
+                  focusable='false'
+                  class='spinner'
+                  viewBox='0 0 66 66'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                </svg>
+              </div>
+            </button>
+            {%- if product.selling_plan_groups and product.selling_plan_groups.size > 0 -%}
+              <div class='lg:w-1/2 flex flex-col items-center space-y-2'>
+                {%- render 'lrc-button-link', title: 'Subscribe & Save', link: '/apps/subscriptions/bb/nKl4wajj' -%}
+                <span class='text-tan-900 text-base'
+                  >Save $
+                  {{- product.selected_or_first_available_variant.price | times: 0.1 | money_without_currency -}}
+                  /month!</span
+                >
+              </div>
+            {%- endif -%}
+          </div>
+          {% comment %}
+            {%- if show_dynamic_checkout -%}
+              {{ form | payment_button }}
+            {%- endif -%}
+          {% endcomment %}
         </div>
       {%- endform -%}
     </product-form>
