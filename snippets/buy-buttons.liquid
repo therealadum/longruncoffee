@@ -101,11 +101,7 @@
             {%- if product.selling_plan_groups and product.selling_plan_groups.size > 0 -%}
               <div class='lg:w-1/2 flex flex-col items-center space-y-2'>
                 {%- render 'lrc-button-link', title: 'Subscribe & Save', link: '/apps/subscriptions/bb/nKl4wajj' -%}
-                <span class='text-tan-900 text-base'
-                  >Save $
-                  {{- product.selected_or_first_available_variant.price | times: 0.1 | money_without_currency -}}
-                  /month!</span
-                >
+                <span class='text-tan-900 text-base'>Save 10%!</span>
               </div>
             {%- endif -%}
           </div>
