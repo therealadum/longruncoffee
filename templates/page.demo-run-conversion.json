@@ -13,7 +13,7 @@
         "template--21012773011769__2cc32c03-a1fc-4f7a-aafb-c505a402bef7-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our patented electrolyte-infused coffee is specifically formulated to maximize your performance.<\/p><p>The exact right blend of electrolytes + caffeine, consumed with our ultra premium coffee beans.<\/p><h3><strong>TRY IT FREE<\/strong><\/h3><p><strong> <\/strong><\/p><p>Fill out the form below and we will email you a code to try the Demo Run for free. <\/p><p>That's our light, medium, and dark roast coffees shipped right to your door.<\/p>",
+            "text": "<p>Our <strong>patented electrolyte-infused coffee<\/strong> is specifically formulated to maximize your performance.<\/p><p>You already drink coffee. Why not <span style=\"text-decoration:underline\">supercharge it<\/span> with electrolytes? <\/p><p>________________<\/p><h3><strong>TRY IT FREE<\/strong><\/h3><p><strong> <\/strong><\/p><p>Fill out the form below to try our light, medium, and dark roast formulas for free!<\/p>",
             "text_style": "body"
           }
         },
@@ -31,19 +31,70 @@
         "template--21012773011769__2cc32c03-a1fc-4f7a-aafb-c505a402bef7-text-1",
         "template--21012773011769__2cc32c03-a1fc-4f7a-aafb-c505a402bef7-button-1"
       ],
+      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Ultra_6.png",
+        "image": "shopify:\/\/shop_images\/Demo_Run_3.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "content_layout": "overlap",
+        "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "25e9d4fa-99f5-4e72-812f-de12b1cedca1": {
+      "type": "image-banner",
+      "blocks": {
+        "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Fill out the form below to try The Demo Run, on us!<\/strong>",
+            "text_style": "body"
+          }
+        },
+        "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "TRY IT FREE",
+            "heading_size": "h1"
+          }
+        },
+        "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-text-1",
+        "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-heading-1",
+        "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-buttons-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/DemoRun_3.png",
+        "image_2": "shopify:\/\/shop_images\/Ultra_7.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "16941367470aba8df7": {
@@ -164,6 +215,7 @@
   },
   "order": [
     "2cc32c03-a1fc-4f7a-aafb-c505a402bef7",
+    "25e9d4fa-99f5-4e72-812f-de12b1cedca1",
     "16941367470aba8df7",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
