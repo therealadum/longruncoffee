@@ -60,7 +60,7 @@
         "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "TRY IT FREE",
+            "heading": "Try it free",
             "heading_size": "h2"
           }
         },
@@ -83,7 +83,7 @@
         "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-buttons-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Banner_16.png",
+        "image": "shopify:\/\/shop_images\/Banner_20.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
