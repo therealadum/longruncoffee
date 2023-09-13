@@ -10,6 +10,14 @@
 {% endcomment %}
 
 <ul class="list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
+  {%- if settings.social_amazon_link != blank -%}
+    <li class="list-social__item">
+      <a href="{{ settings.social_amazon_link }}" class="link list-social__link">
+        {%- render 'icon-amazon' -%}
+        <span class="visually-hidden">{{ 'general.social.links.amazon' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_facebook_link != blank -%}
     <li class="list-social__item">
       <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
