@@ -1,6 +1,6 @@
 {
   "current": {
-    "logo": "shopify://shop_images/logo.png",
+    "logo": "shopify:\/\/shop_images\/logo.png",
     "logo_width": 90,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -97,11 +97,11 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "social_facebook_link": "",
-    "social_instagram_link": "https://www.instagram.com/longruncoffee",
-    "social_youtube_link": "https://www.youtube.com/@longruncoffee/featured",
-    "social_tiktok_link": "https://www.tiktok.com/@longruncoffee?lang=en",
-    "social_twitter_link": "https://twitter.com/longruncoffee",
-    "social_amazon_link": "https://www.amazon.com/s?k='Long+Run+Coffee'&crid=27QG2NKKVSWH3&sprefix=long+run+coffee+%2Caps%2C85&linkCode=ll2&tag=longruncoffee-20&linkId=710a1f444ba480b49aef14bfbcc8b485&language=en_US&ref_=as_li_ss_tl",
+    "social_instagram_link": "https:\/\/www.instagram.com\/longruncoffee",
+    "social_amazon_link": "https:\/\/www.amazon.com\/s?k=\"Long+Run+Coffee\"&crid=27QG2NKKVSWH3&sprefix=long+run+coffee+%2Caps%2C85&linkCode=ll2&tag=longruncoffee-20&linkId=710a1f444ba480b49aef14bfbcc8b485&language=en_US&ref_=as_li_ss_tl",
+    "social_youtube_link": "https:\/\/www.youtube.com\/@longruncoffee\/featured",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@longruncoffee?lang=en",
+    "social_twitter_link": "https:\/\/twitter.com\/longruncoffee",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -130,27 +130,33 @@
         }
       }
     },
-    "content_for_index": [],
+    "content_for_index": [
+
+    ],
     "blocks": {
       "10436698916776057164": {
-        "type": "shopify://apps/appstle-subscriptions/blocks/appstle-subscription-helper/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+        "type": "shopify:\/\/apps\/appstle-subscriptions\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
         "disabled": false,
-        "settings": {}
+        "settings": {
+        }
       },
       "13768625480086291342": {
-        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "type": "shopify:\/\/apps\/forms\/blocks\/forms\/8744a304-fcb1-4347-b211-bb6b4759a76a",
         "disabled": false,
-        "settings": {}
+        "settings": {
+        }
       },
       "11667715999621601152": {
-        "type": "shopify://apps/pixeltok-multi-pixel-install/blocks/turbo-tiktok/0f61e244-e2c9-43da-9523-9762c9f7e6bf",
+        "type": "shopify:\/\/apps\/pixeltok-multi-pixel-install\/blocks\/turbo-tiktok\/0f61e244-e2c9-43da-9523-9762c9f7e6bf",
         "disabled": false,
-        "settings": {}
+        "settings": {
+        }
       },
       "3667842014806057753": {
-        "type": "shopify://apps/one-click-upsell-zipify-ocu/blocks/app-embed/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+        "type": "shopify:\/\/apps\/one-click-upsell-zipify-ocu\/blocks\/app-embed\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
         "disabled": false,
-        "settings": {}
+        "settings": {
+        }
       }
     },
     "color_schemes": {
