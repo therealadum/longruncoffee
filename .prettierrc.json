@@ -1,12 +1,6 @@
 {
-  "printWidth": 120,
-  "singleQuote": true,
-  "overrides": [
-    {
-      "files": "*.liquid",
-      "options": {
-        "singleQuote": false
-      }
-    }
-  ]
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": false
 }
