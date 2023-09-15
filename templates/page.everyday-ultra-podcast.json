@@ -191,7 +191,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "best-selling",
-        "products_to_show": 5,
+        "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
