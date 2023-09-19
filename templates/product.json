@@ -101,6 +101,40 @@
         "padding_bottom": 28
       }
     },
+    "b2aea5ac-c993-41fa-b6fb-0f28f398b81b": {
+      "type": "newsletter",
+      "blocks": {
+        "template--19876927340857__b2aea5ac-c993-41fa-b6fb-0f28f398b81b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get notified of new flavors and restocks",
+            "heading_size": "h2"
+          }
+        },
+        "template--19876927340857__b2aea5ac-c993-41fa-b6fb-0f28f398b81b-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--19876927340857__b2aea5ac-c993-41fa-b6fb-0f28f398b81b-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927340857__b2aea5ac-c993-41fa-b6fb-0f28f398b81b-heading-1",
+        "template--19876927340857__b2aea5ac-c993-41fa-b6fb-0f28f398b81b-paragraph-1",
+        "template--19876927340857__b2aea5ac-c993-41fa-b6fb-0f28f398b81b-email_form-1"
+      ],
+      "settings": {
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "0e698922-8ed8-423d-886f-c78375d71373": {
       "type": "featured-collection",
       "settings": {
@@ -131,6 +165,7 @@
     },
     "1693874745cc6bc7e5": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -139,6 +174,7 @@
   "order": [
     "main",
     "related-products",
+    "b2aea5ac-c993-41fa-b6fb-0f28f398b81b",
     "0e698922-8ed8-423d-886f-c78375d71373",
     "1693874745cc6bc7e5"
   ]
