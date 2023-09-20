@@ -8,51 +8,6 @@
       "settings": {
       }
     },
-    "19de0fcb-783c-40cf-81be-9ebfe8b8ecc3": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Just released!",
-            "heading_size": "h1"
-          }
-        },
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our Limited Edition <strong>Brown Butter Pumpkin <\/strong>Electrolyte Infused Coffee is available while supplies last!<\/p>",
-            "text_style": "body"
-          }
-        },
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "YES PLEASE!",
-            "button_link": "shopify:\/\/products\/race-season-roast"
-          }
-        }
-      },
-      "block_order": [
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-heading-1",
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1",
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "inverse",
-        "image_behavior": "ambient",
-        "mobile_content_alignment": "center",
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "57fefd56-ea79-4796-b1c9-2297353cd585": {
       "type": "featured-collection",
       "custom_css": [
@@ -85,6 +40,51 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "19de0fcb-783c-40cf-81be-9ebfe8b8ecc3": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Just released!",
+            "heading_size": "h1"
+          }
+        },
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Our Limited Edition <strong>Brown Butter Pumpkin <\/strong>Electrolyte Infused Coffee is available while supplies last!<\/h6>",
+            "text_style": "body"
+          }
+        },
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "YES PLEASE!",
+            "button_link": "shopify:\/\/products\/race-season-roast"
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-heading-1",
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1",
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "home-coffee-club-cta": {
@@ -136,8 +136,8 @@
   },
   "order": [
     "home-hero",
-    "19de0fcb-783c-40cf-81be-9ebfe8b8ecc3",
     "57fefd56-ea79-4796-b1c9-2297353cd585",
+    "19de0fcb-783c-40cf-81be-9ebfe8b8ecc3",
     "home-coffee-club-cta",
     "home-reviews",
     "home-mission-cta",
