@@ -73,6 +73,7 @@
         "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1",
         "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
         "height": "adapt",
@@ -91,7 +92,7 @@
     "home-coffee-club-cta": {
       "type": "home-coffee-club-cta",
       "custom_css": [
-        "h3 {font-size: 40px;}"
+        "h3 {font-size: 35px;}"
       ],
       "settings": {
       }
