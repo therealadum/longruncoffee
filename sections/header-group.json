@@ -48,11 +48,11 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".header__icon--cart {width: 53px !important;}",
-        ".header__icon--menu {width: 10px !important;}",
+        ".header__icon--cart {width: 50px !important;}",
+        ".header__icon--menu {width: 0px !important;}",
         ".header__icon--search {width: 20px !important;}",
         ".header__heading-logo {width: 80px !important;}",
-        "h3{font-size: 20px;}"
+        "h3 {font-size: 20px;}"
       ],
       "settings": {
         "logo_position": "middle-left",
@@ -64,7 +64,7 @@
         "menu_color_scheme": "",
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "mobile_logo_position": "left",
+        "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 0,
         "padding_bottom": 0
