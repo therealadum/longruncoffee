@@ -30,6 +30,7 @@
         "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-text-1",
         "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-button-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
         "height": "adapt",
@@ -57,7 +58,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
