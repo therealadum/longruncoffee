@@ -120,7 +120,7 @@
       "type": "featured-blog",
       "custom_css": [
         "h2 {font-size: 40px;}",
-        "h3 {font-size: 17px;}",
+        "h3 {font-size: 25px;}",
         ".hidden {display: none;}"
       ],
       "settings": {
