@@ -8,14 +8,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Free Shipping Over $69",
+            "text": "Free Shipping $69+",
             "link": "shopify:\/\/collections\/coffee"
           }
         },
         "b2d8484d-b7d0-434a-a97f-b199fb49714d": {
           "type": "announcement",
           "settings": {
-            "text": "Just Released — Race Season Roast",
+            "text": "All New - Brown Butter Pumpkin",
             "link": "shopify:\/\/products\/race-season-roast"
           }
         },
@@ -34,7 +34,8 @@
         "149f07e0-7df4-4232-9510-074fdbeefc61"
       ],
       "custom_css": [
-
+        ".announcement-bar__message {padding: 0px 0 !important; font-size: 15px !important;}",
+        "@media (max-width: 767px) {.announcement-bar__message {font-size: 10px !important; }}"
       ],
       "settings": {
         "color_scheme": "scheme-4195ea24-5d06-4290-9f03-c1b5b16a68f1",
