@@ -55,15 +55,15 @@
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
         "menu_color_scheme": "",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 4,
-        "padding_bottom": 4
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
