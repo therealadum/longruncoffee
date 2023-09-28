@@ -31,6 +31,7 @@
         "template--21012773011769__2cc32c03-a1fc-4f7a-aafb-c505a402bef7-text-1",
         "template--21012773011769__2cc32c03-a1fc-4f7a-aafb-c505a402bef7-button-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Ultra_9.png",
         "height": "small",
@@ -44,6 +45,54 @@
         "mobile_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "f21ed6b7-c1cb-4f0a-aa20-173c5e3800c7": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--21124510023993__f21ed6b7-c1cb-4f0a-aa20-173c5e3800c7-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h6>Ditch depleting coffee, that leaves you <strong>dehydrated<\/strong>, <strong>sluggish<\/strong>, and <strong>feeling heavy<\/strong>. <\/h6><h6><\/h6><h6>Achieve ideal performance, with the most <strong>enjoyable <\/strong>and <strong>sustainable electrolyte routine<\/strong> there is. <br\/><br\/><strong>Try It Free.<\/strong><\/h6>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21124510023993__f21ed6b7-c1cb-4f0a-aa20-173c5e3800c7-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Long_Run_Coffee_electrolyte_infused_coffee.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21124510023993__f21ed6b7-c1cb-4f0a-aa20-173c5e3800c7-column-1",
+        "template--21124510023993__f21ed6b7-c1cb-4f0a-aa20-173c5e3800c7-column-2"
+      ],
+      "custom_css": [
+        "h2 {font-size: 23px;}",
+        "h6 {font-size: 18px;}"
+      ],
+      "settings": {
+        "title": "Welcome MKE Runners",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 32
       }
     },
     "25e9d4fa-99f5-4e72-812f-de12b1cedca1": {
@@ -81,6 +130,7 @@
         "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-heading-1",
         "template--21012773011769__25e9d4fa-99f5-4e72-812f-de12b1cedca1-buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Banner_18.png",
         "image_overlay_opacity": 0,
@@ -213,6 +263,7 @@
   },
   "order": [
     "2cc32c03-a1fc-4f7a-aafb-c505a402bef7",
+    "f21ed6b7-c1cb-4f0a-aa20-173c5e3800c7",
     "25e9d4fa-99f5-4e72-812f-de12b1cedca1",
     "16941367470aba8df7",
     "coming-soon",
