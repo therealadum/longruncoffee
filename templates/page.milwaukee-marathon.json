@@ -159,8 +159,8 @@
             "errors_color": "#dd1d1d",
             "text_alignment": "center",
             "form_alignment": "center",
-            "padding_top": 35,
-            "padding_bottom": 35,
+            "padding_top": 50,
+            "padding_bottom": 50,
             "padding_right": 0,
             "padding_left": 0
           }
@@ -225,6 +225,9 @@
         "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1",
         "759f7b1e-376e-43a3-8f89-69dd1ee66f7a"
       ],
+      "custom_css": [
+        "h2 {font-size: 35px;}"
+      ],
       "settings": {
         "color_scheme": "inverse",
         "full_width": true,
@@ -234,6 +237,9 @@
     },
     "713b7226-cf71-4f89-85c2-f953b6c17b1b": {
       "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 35px;}"
+      ],
       "settings": {
         "title": "Fuel your passion",
         "heading_size": "h1",
