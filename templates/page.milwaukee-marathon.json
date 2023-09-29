@@ -135,7 +135,7 @@
         "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
         "image": "shopify:\/\/shop_images\/Demo_Run_3.png",
-        "image_ratio": "small",
+        "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 24,
         "padding_bottom": 24
