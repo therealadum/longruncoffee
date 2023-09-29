@@ -35,7 +35,7 @@
       ],
       "custom_css": [
         "h2 {font-size: 30px;}",
-        "h5 {font-size: 20px;}"
+        "h5 {font-size: 15px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
