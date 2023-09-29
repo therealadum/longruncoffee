@@ -134,7 +134,7 @@
         "color_scheme": "",
         "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
-        "image": "shopify:\/\/shop_images\/Demo_Run_4.png",
+        "image": "shopify:\/\/shop_images\/Demo_Run_3.png",
         "image_ratio": "small",
         "desktop_layout": "image_second",
         "padding_top": 24,
@@ -192,6 +192,7 @@
         "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1",
         "759f7b1e-376e-43a3-8f89-69dd1ee66f7a"
       ],
+      "disabled": true,
       "custom_css": [
         "h2 {font-size: 35px;}",
         "h6 {font-size: 20px;}"
