@@ -13,7 +13,7 @@
         "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h5>Electrolyte Infused Coffee For Athletes<br\/><br\/>Try it Free.<\/h5>"
+            "text": "<h5>Electrolyte Infused <br\/>Coffee For Athletes<br\/><br\/>Try it Free.<\/h5>"
           }
         },
         "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1": {
@@ -34,8 +34,8 @@
         "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1"
       ],
       "custom_css": [
-        "h2 {font-size: 30px;}",
-        "h5 {font-size: 18px;}"
+        "h2 {font-size: 32px;}",
+        "h5 {font-size: 20px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
