@@ -121,7 +121,7 @@
         "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-4"
       ],
       "custom_css": [
-        "h2 {font-size: 35px;}",
+        "h2 {font-size: 32px;}",
         "h3 {font-size: 20px;}",
         "h6 {font-size: 20px;}"
       ],
@@ -137,8 +137,8 @@
         "image": "shopify:\/\/shop_images\/Demo_Run_5.png",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 24,
-        "padding_bottom": 24
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "coming-soon": {
