@@ -255,6 +255,16 @@
         "padding_bottom": 52
       }
     },
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
+      "type": "home-reviews",
+      "settings": {
+      }
+    },
+    "d5466ac7-0a29-4c38-af12-7e4caee3d53f": {
+      "type": "home-mission-cta",
+      "settings": {
+      }
+    },
     "713b7226-cf71-4f89-85c2-f953b6c17b1b": {
       "type": "featured-collection",
       "custom_css": [
@@ -294,6 +304,8 @@
     "16941367470aba8df7",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
+    "d5466ac7-0a29-4c38-af12-7e4caee3d53f",
     "713b7226-cf71-4f89-85c2-f953b6c17b1b"
   ]
 }
