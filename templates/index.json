@@ -139,6 +139,23 @@
         "padding_top": 36,
         "padding_bottom": 16
       }
+    },
+    "a7b19093-ee1f-4466-9934-44ebc66bfd60": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Recipes",
+        "heading_size": "h1",
+        "blog": "recipes",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "inverse",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -150,6 +167,7 @@
     "home-mission-cta",
     "home-founder-quote",
     "6b1352cb-e207-4d66-9158-7591b506a138",
-    "af701c13-b6f9-4b72-97c3-6f39ce6c4b6e"
+    "af701c13-b6f9-4b72-97c3-6f39ce6c4b6e",
+    "a7b19093-ee1f-4466-9934-44ebc66bfd60"
   ]
 }
