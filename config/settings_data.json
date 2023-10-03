@@ -96,7 +96,8 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
-    "social_facebook_link": "",
+    "brand_headline": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/longruncoffee",
     "social_instagram_link": "https:\/\/www.instagram.com\/longruncoffee",
     "social_amazon_link": "https:\/\/www.amazon.com\/s?k=\"Long+Run+Coffee\"&crid=27QG2NKKVSWH3&sprefix=long+run+coffee+%2Caps%2C85&linkCode=ll2&tag=longruncoffee-20&linkId=710a1f444ba480b49aef14bfbcc8b485&language=en_US&ref_=as_li_ss_tl",
     "social_youtube_link": "https:\/\/www.youtube.com\/@longruncoffee\/featured",
@@ -114,6 +115,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logo_Trim_1.png",
     "checkout_accent_color": "#2ca4b2",
     "checkout_button_color": "#044e54",
     "sections": {
