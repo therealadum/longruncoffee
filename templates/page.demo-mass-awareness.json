@@ -1,0 +1,247 @@
+{
+  "sections": {
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome MKE Runners",
+            "heading_size": "h1"
+          }
+        },
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Electrolyte Infused <br\/>Coffee For Athletes<br\/><br\/>Try it Free.<\/h5>"
+          }
+        },
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-heading-1",
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1",
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "h5 {font-size: 20px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "16941367470aba8df7": {
+      "type": "apps",
+      "blocks": {
+        "17d323cb-553c-456d-acd1-02a83042a100": {
+          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "31137",
+            "text_color": "#044e54",
+            "button_background_color": "#044e54",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#dd1d1d",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "17d323cb-553c-456d-acd1-02a83042a100"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "7f3ffb9d-263c-40c5-8c42-206c33aa50dd": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Easier Running",
+            "icon": "check_mark",
+            "row_content": "<h6>Our electrolyte coffee aids muscle contraction, making the run feel easier. <\/h6>",
+            "page": ""
+          }
+        },
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "No Upset Stomach",
+            "icon": "check_mark",
+            "row_content": "<h6>Our formula is pH basic, meaning it's easier on your stomach than other pre-workouts.<\/h6>",
+            "page": ""
+          }
+        },
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Reduce Sluggishness",
+            "icon": "check_mark",
+            "row_content": "<h6>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.<\/h6>",
+            "page": ""
+          }
+        },
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Effortless Routine",
+            "icon": "check_mark",
+            "row_content": "<h6>The most enjoyable electrolyte routine you can be consistent with.<\/h6>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-1",
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-2",
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-3",
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-4"
+      ],
+      "custom_css": [
+        "h2 {font-size: 28px;}",
+        "h3 {font-size: 20px;}",
+        "h6 {font-size: 20px;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Ditch Dehydrating, Depleting Coffee",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-2",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image": "shopify:\/\/shop_images\/Demo_Run_5.png",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "coming-soon": {
+      "type": "coming-soon",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "9ae28934-928f-4a51-bfb4-14de2c49646a": {
+      "type": "newsletter",
+      "blocks": {
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Exclusive deals and coffee",
+            "heading_size": "h2"
+          }
+        },
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<h6>Access special offers, limited edition coffees, and extra motivation <\/h6>"
+          }
+        },
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "759f7b1e-376e-43a3-8f89-69dd1ee66f7a": {
+          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-heading-1",
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-paragraph-1",
+        "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1",
+        "759f7b1e-376e-43a3-8f89-69dd1ee66f7a"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 35px;}",
+        "h6 {font-size: 20px;}"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "713b7226-cf71-4f89-85c2-f953b6c17b1b": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 35px;}"
+      ],
+      "settings": {
+        "title": "Fuel your passion",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-selling",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897",
+    "16941367470aba8df7",
+    "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
+    "coming-soon",
+    "9ae28934-928f-4a51-bfb4-14de2c49646a",
+    "713b7226-cf71-4f89-85c2-f953b6c17b1b"
+  ]
+}
