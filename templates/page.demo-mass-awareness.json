@@ -7,7 +7,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Easier Running",
-            "icon": "check_mark",
+            "icon": "shoe",
             "row_content": "<h6>Our electrolyte coffee aids muscle contraction, making the run feel easier. <\/h6>",
             "page": ""
           }
@@ -25,7 +25,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Reduce Sluggishness",
-            "icon": "check_mark",
+            "icon": "lightning_bolt",
             "row_content": "<h6>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.<\/h6>",
             "page": ""
           }
@@ -34,7 +34,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Effortless Routine",
-            "icon": "check_mark",
+            "icon": "stopwatch",
             "row_content": "<h6>The most enjoyable electrolyte routine you can be consistent with.<\/h6>",
             "page": ""
           }
@@ -56,9 +56,9 @@
         "heading": "Ditch Dehydrating, Depleting Coffee",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "none",
+        "layout": "row",
         "color_scheme": "background-1",
-        "container_color_scheme": "background-1",
+        "container_color_scheme": "background-2",
         "open_first_collapsible_row": true,
         "image": "shopify:\/\/shop_images\/Demo_Run_5.png",
         "image_ratio": "adapt",
