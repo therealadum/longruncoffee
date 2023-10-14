@@ -24,7 +24,7 @@
         "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-2": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_8.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
             "heading": "Custom & Corporate",
             "heading_size": "h2",
             "subheading": "Order custom coffee for your brand.  Perfect for all races, and corporate partners.",
@@ -46,7 +46,7 @@
       ],
       "settings": {
         "layout": "component-grid",
-        "slide_height": "small",
+        "slide_height": "adapt_image",
         "slider_visual": "numbers",
         "auto_rotate": true,
         "change_slides_speed": 5,
