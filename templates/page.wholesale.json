@@ -1,5 +1,102 @@
 {
   "sections": {
+    "0404072b-ef32-4d53-9763-adccd5fedc35": {
+      "type": "slideshow",
+      "blocks": {
+        "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LRC-Wholesale-pallet-mockup-web.jpg",
+            "heading": "Wholesale Orders",
+            "heading_size": "h2",
+            "subheading": "We work with retailers of all sizes to bring electrolyte infused coffee to your community.",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
+            "heading": "Custom & Corporate",
+            "heading_size": "h2",
+            "subheading": "Order custom coffee for your brand.  Perfect for all races, and corporate partners.",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-1",
+        "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-2"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "ba4f982c-c438-465f-aa94-40b8e1eb2438": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wholesale & Custom",
+            "heading_size": "h2"
+          }
+        },
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/p><p>We have electrolyte infused solutions for:<\/p><ul><li>Retailers<\/li><li>Races<\/li><li>Corporate Events<\/li><\/ul><p>Contact us with the form below, and we'll be in touch withing 24 hours. <\/p>"
+          }
+        },
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-heading-1",
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1",
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
     "2699cd43-b77f-42ee-9b99-659f54b0c25a": {
       "type": "image-with-text",
       "blocks": {
@@ -58,8 +155,8 @@
         "heading": "Get in touch",
         "heading_size": "h1",
         "color_scheme": "background-2",
-        "padding_top": 12,
-        "padding_bottom": 12
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "coming-soon": {
@@ -155,6 +252,8 @@
     }
   },
   "order": [
+    "0404072b-ef32-4d53-9763-adccd5fedc35",
+    "ba4f982c-c438-465f-aa94-40b8e1eb2438",
     "2699cd43-b77f-42ee-9b99-659f54b0c25a",
     "d0d8b155-050e-4a80-ae42-95133a443ed6",
     "coming-soon",
