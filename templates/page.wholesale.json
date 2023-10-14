@@ -50,7 +50,7 @@
         "slider_visual": "counter",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "image_behavior": "none",
+        "image_behavior": "ambient",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
@@ -68,13 +68,13 @@
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/p><p>We have electrolyte infused solutions for:<\/p><ul><li>Retailers<\/li><li>Races<\/li><li>Corporate Events<\/li><\/ul><p>Contact us with the form below, and we'll be in touch withing 24 hours. <\/p>"
+            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/p><p>We have electrolyte infused solutions for:<\/p><h5>- Retailers<\/h5><h5>- Races<\/h5><h5>- Corporate Events<\/h5><p>Contact us with the form below, and we'll be in touch withing 24 hours. <\/p>"
           }
         },
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -95,55 +95,6 @@
         "full_width": true,
         "padding_top": 24,
         "padding_bottom": 24
-      }
-    },
-    "2699cd43-b77f-42ee-9b99-659f54b0c25a": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Wholesale & Custom",
-            "heading_size": "h1"
-          }
-        },
-        "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/p><p>We have electrolyte infused solutions for:<\/p><ul><li>Retailers<\/li><li>Races<\/li><li>Corporate Events<\/li><\/ul><p>Contact us with the form below, and we'll be in touch withing 24 hours. <\/p>",
-            "text_style": "body"
-          }
-        },
-        "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-button-1": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-heading-1",
-        "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-text-1",
-        "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-button-1"
-      ],
-      "custom_css": [
-        "h2 {font-size: 24px;}"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/LRC-Wholesale-pallet-mockup-web.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "d0d8b155-050e-4a80-ae42-95133a443ed6": {
@@ -254,7 +205,6 @@
   "order": [
     "0404072b-ef32-4d53-9763-adccd5fedc35",
     "ba4f982c-c438-465f-aa94-40b8e1eb2438",
-    "2699cd43-b77f-42ee-9b99-659f54b0c25a",
     "d0d8b155-050e-4a80-ae42-95133a443ed6",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
