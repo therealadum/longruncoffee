@@ -48,6 +48,9 @@
     },
     "d0d8b155-050e-4a80-ae42-95133a443ed6": {
       "type": "contact-form",
+      "custom_css": [
+        "h2 {font-size: 35px;}"
+      ],
       "settings": {
         "heading": "Get in touch",
         "heading_size": "h1",
@@ -118,6 +121,9 @@
     },
     "77237581-0be1-446e-a5c5-ceb99d007f3a": {
       "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 25px;}"
+      ],
       "settings": {
         "title": "Fuel your passion",
         "heading_size": "h1",
