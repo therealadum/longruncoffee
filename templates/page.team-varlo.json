@@ -1,5 +1,48 @@
 {
   "sections": {
+    "70b7ce33-a003-451b-9b94-fc0ed7ecd304": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome, Team Varlo!",
+            "heading_size": "h1"
+          }
+        },
+        "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6><strong>We are excited to help you fuel and maximize your performance.<\/strong><\/h6>"
+          }
+        },
+        "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-heading-1",
+        "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-text-1",
+        "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd": {
       "type": "collapsible-content",
       "blocks": {
@@ -52,7 +95,7 @@
         "h6 {font-size: 20px;}"
       ],
       "settings": {
-        "caption": "",
+        "caption": "Our Patent-Protected Formula Maximizes Your Performance",
         "heading": "Ditch Dehydrating, Depleting Coffee",
         "heading_size": "h1",
         "heading_alignment": "center",
@@ -60,11 +103,16 @@
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "open_first_collapsible_row": true,
-        "image": "shopify:\/\/shop_images\/Demo_Run_5.png",
+        "image": "shopify:\/\/shop_images\/Ultra_10.png",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 32,
         "padding_bottom": 32
+      }
+    },
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
+      "type": "home-reviews",
+      "settings": {
       }
     },
     "a65c3df0-3c87-407a-8020-c01a164008c9": {
@@ -115,53 +163,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": false
-      }
-    },
-    "5ba6089b-f4b0-483a-bb71-f0815cd8c897": {
-      "type": "rich-text",
-      "blocks": {
-        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Welcome MKE Runners",
-            "heading_size": "h1"
-          }
-        },
-        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Electrolyte Infused <br\/>Coffee For Athletes<br\/><br\/>Try it Free.<\/h5>"
-          }
-        },
-        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-heading-1",
-        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1",
-        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h2 {font-size: 32px;}",
-        "h5 {font-size: 20px;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-2",
-        "full_width": true,
-        "padding_top": 24,
-        "padding_bottom": 0
       }
     },
     "16941367470aba8df7": {
@@ -255,11 +256,6 @@
         "padding_bottom": 52
       }
     },
-    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
-      "type": "home-reviews",
-      "settings": {
-      }
-    },
     "d5466ac7-0a29-4c38-af12-7e4caee3d53f": {
       "type": "home-mission-cta",
       "settings": {
@@ -295,17 +291,65 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome MKE Runners",
+            "heading_size": "h1"
+          }
+        },
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Electrolyte Infused <br\/>Coffee For Athletes<br\/><br\/>Try it Free.<\/h5>"
+          }
+        },
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-heading-1",
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1",
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "h5 {font-size: 20px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
+    "70b7ce33-a003-451b-9b94-fc0ed7ecd304",
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "a65c3df0-3c87-407a-8020-c01a164008c9",
-    "5ba6089b-f4b0-483a-bb71-f0815cd8c897",
     "16941367470aba8df7",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
-    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "d5466ac7-0a29-4c38-af12-7e4caee3d53f",
-    "713b7226-cf71-4f89-85c2-f953b6c17b1b"
+    "713b7226-cf71-4f89-85c2-f953b6c17b1b",
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897"
   ]
 }
