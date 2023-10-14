@@ -6,14 +6,14 @@
         "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Wholesale & Bulk Orders",
+            "heading": "Wholesale & Custom",
             "heading_size": "h1"
           }
         },
         "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Are you a retailer interested in selling Long Run Coffee in your store?<\/p><p>Are you looking to place a bulk order? <\/p><p>Get in touch with the form below and let's chat!<\/p>",
+            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/p><p>We have electrolyte infused solutions for:<\/p><ul><li>Retailers<\/li><li>Races<\/li><li>Corporate Events<\/li><\/ul><p>Contact us with the form below, and we'll be in touch withing 24 hours. <\/p>",
             "text_style": "body"
           }
         },
@@ -30,6 +30,9 @@
         "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-heading-1",
         "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-text-1",
         "template--20927186141497__2699cd43-b77f-42ee-9b99-659f54b0c25a-button-1"
+      ],
+      "custom_css": [
+        "h2 {font-size: 24px;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/LRC-Wholesale-pallet-mockup-web.jpg",
