@@ -1,5 +1,47 @@
 {
   "sections": {
+    "ba4f982c-c438-465f-aa94-40b8e1eb2438": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wholesale & Custom",
+            "heading_size": "h2"
+          }
+        },
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/p><p><\/p><p>Electrolyte infused solutions for:<\/p><h5><\/h5><h5>- Retailers<\/h5><h5>- Races<\/h5><h5>- Corporate Events<\/h5><p><\/p><p>Contact us with the form below, and we'll be in touch withing 24 hours. <\/p>"
+          }
+        },
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-heading-1",
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1",
+        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "0404072b-ef32-4d53-9763-adccd5fedc35": {
       "type": "slideshow",
       "blocks": {
@@ -53,48 +95,6 @@
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "ba4f982c-c438-465f-aa94-40b8e1eb2438": {
-      "type": "rich-text",
-      "blocks": {
-        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Wholesale & Custom",
-            "heading_size": "h2"
-          }
-        },
-        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/p><p><\/p><p>Electrolyte infused solutions for:<\/p><h5><\/h5><h5>- Retailers<\/h5><h5>- Races<\/h5><h5>- Corporate Events<\/h5><p><\/p><p>Contact us with the form below, and we'll be in touch withing 24 hours. <\/p>"
-          }
-        },
-        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-heading-1",
-        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1",
-        "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1"
-      ],
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "d0d8b155-050e-4a80-ae42-95133a443ed6": {
@@ -203,8 +203,8 @@
     }
   },
   "order": [
-    "0404072b-ef32-4d53-9763-adccd5fedc35",
     "ba4f982c-c438-465f-aa94-40b8e1eb2438",
+    "0404072b-ef32-4d53-9763-adccd5fedc35",
     "d0d8b155-050e-4a80-ae42-95133a443ed6",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
