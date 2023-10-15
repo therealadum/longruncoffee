@@ -68,7 +68,7 @@
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/p><p><\/p><p>Electrolyte infused solutions for:<\/p><h5><\/h5><h5>- Retailers<\/h5><h5>- Races<\/h5><h5>- Corporate Events<\/h5><p><\/p><p>Contact us with the form below, and we'll be in touch withing 24 hours. <\/p>"
+            "text": "<h6>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/h6><p><\/p><p>Electrolyte infused solutions for:<\/p><p>- <strong>Retailers<\/strong><\/p><p>- <strong>Races<\/strong><\/p><p>- <strong>Corporate Events<\/strong><\/p><p><\/p><h6>Contact us with the form below, and we'll be in touch within 24 hours. <\/h6>"
           }
         },
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1": {
@@ -89,8 +89,8 @@
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1"
       ],
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
