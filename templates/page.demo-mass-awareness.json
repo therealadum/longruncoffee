@@ -265,6 +265,23 @@
       "settings": {
       }
     },
+    "bb325e1d-bb70-4871-90ea-eb321c610fe3": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "The Science",
+        "heading_size": "h1",
+        "blog": "science",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "713b7226-cf71-4f89-85c2-f953b6c17b1b": {
       "type": "featured-collection",
       "custom_css": [
@@ -277,7 +294,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "best-selling",
-        "products_to_show": 5,
+        "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
@@ -306,6 +323,7 @@
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
     "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "d5466ac7-0a29-4c38-af12-7e4caee3d53f",
+    "bb325e1d-bb70-4871-90ea-eb321c610fe3",
     "713b7226-cf71-4f89-85c2-f953b6c17b1b"
   ]
 }
