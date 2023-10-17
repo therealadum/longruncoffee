@@ -22,11 +22,6 @@
             "text_style": "subtitle"
           }
         },
-        "67c650e3-4c4b-463d-8d09-035642dba656": {
-          "type": "shopify:\/\/apps\/one-click-upsell-zipify-ocu\/blocks\/on-page\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
-          "settings": {
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -52,6 +47,11 @@
         },
         "description": {
           "type": "description",
+          "settings": {
+          }
+        },
+        "67c650e3-4c4b-463d-8d09-035642dba656": {
+          "type": "shopify:\/\/apps\/one-click-upsell-zipify-ocu\/blocks\/on-page\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
           "settings": {
           }
         },
@@ -82,12 +82,12 @@
         "vendor",
         "title",
         "caption",
-        "67c650e3-4c4b-463d-8d09-035642dba656",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
+        "67c650e3-4c4b-463d-8d09-035642dba656",
         "e6411e1f-7545-40c5-9f40-f78101f03d9c",
         "e13b06d1-3d4a-47c0-9b4e-df8dcea46ad4"
       ],
