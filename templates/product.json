@@ -22,6 +22,11 @@
             "text_style": "subtitle"
           }
         },
+        "67c650e3-4c4b-463d-8d09-035642dba656": {
+          "type": "shopify:\/\/apps\/one-click-upsell-zipify-ocu\/blocks\/on-page\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -77,6 +82,7 @@
         "vendor",
         "title",
         "caption",
+        "67c650e3-4c4b-463d-8d09-035642dba656",
         "price",
         "variant_picker",
         "quantity_selector",
