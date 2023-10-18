@@ -48,11 +48,11 @@
     "header": {
       "type": "header",
       "custom_css": [
+        "h3 {font-size: 20px;}",
         ".header__icon--cart {width: 50px !important;}",
         ".header__icon--menu {width: 0px !important;}",
         ".header__icon--search {width: 20px !important;}",
         ".header__heading-logo {width: 80px !important;}",
-        ".list-menu__item {font-size: 18px !important;}",
         "@media (max-width: 749px) {.menu-drawer__menu-item {font-size: 20px !important; }}"
       ],
       "settings": {
