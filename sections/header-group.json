@@ -52,7 +52,8 @@
         ".header__icon--menu {width: 0px !important;}",
         ".header__icon--search {width: 20px !important;}",
         ".header__heading-logo {width: 80px !important;}",
-        "h3 {font-size: 20px;}"
+        ".list-menu__item {font-size: 18px !important;}",
+        "@media (max-width: 749px) {.menu-drawer__menu-item {font-size: 20px !important; }}"
       ],
       "settings": {
         "logo_position": "middle-left",
@@ -61,7 +62,7 @@
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": false,
         "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
-        "menu_color_scheme": "",
+        "menu_color_scheme": "background-1",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "mobile_logo_position": "center",

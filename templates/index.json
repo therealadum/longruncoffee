@@ -16,8 +16,8 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Easier Running",
-            "icon": "shoe",
-            "row_content": "<p>Our electrolyte coffee aids muscle contraction, making the run feel easier.<\/p>",
+            "icon": "clipboard",
+            "row_content": "<h6>Our electrolyte coffee aids muscle contraction, making the run feel easier.<\/h6>",
             "page": ""
           }
         },
@@ -26,7 +26,7 @@
           "settings": {
             "heading": "No Upset Stomach",
             "icon": "check_mark",
-            "row_content": "<p>Our formula is pH basic, meaning it's easier on your stomach than other pre-workouts.<\/p>",
+            "row_content": "<h6>Our formula is pH basic, meaning it's easier on your stomach than other pre-workouts.<\/h6>",
             "page": ""
           }
         },
@@ -35,7 +35,7 @@
           "settings": {
             "heading": "Reduce Sluggishness",
             "icon": "lightning_bolt",
-            "row_content": "<p>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.<\/p>",
+            "row_content": "<h6>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.<\/h6>",
             "page": ""
           }
         },
@@ -44,7 +44,7 @@
           "settings": {
             "heading": "Effortless Routine",
             "icon": "stopwatch",
-            "row_content": "<p>The most enjoyable electrolyte routine you can be consistent with.<\/p>",
+            "row_content": "<h6>The most enjoyable electrolyte routine you can be consistent with.<\/h6>",
             "page": ""
           }
         }
@@ -55,8 +55,13 @@
         "template--19876927668537__48b2557b-a48d-4912-a99b-5daa46fa2d10-collapsible_row-3",
         "template--19876927668537__48b2557b-a48d-4912-a99b-5daa46fa2d10-collapsible_row-4"
       ],
+      "custom_css": [
+        "h3 {font-size: 20px;}",
+        "h2 {font-size: 30px;}",
+        "h6 {font-size: 20px;}"
+      ],
       "settings": {
-        "caption": "Our Patent-Protected Formula Maximizes Your Performance",
+        "caption": "Patent Protected Formula Maximizes Your Performance",
         "heading": "Ditch Dehydrating, Depleting Coffee",
         "heading_size": "h2",
         "heading_alignment": "center",
