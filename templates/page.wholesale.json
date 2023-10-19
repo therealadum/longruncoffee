@@ -49,10 +49,10 @@
         "slide_height": "adapt_image",
         "slider_visual": "numbers",
         "auto_rotate": true,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
+        "change_slides_speed": 3,
+        "image_behavior": "ambient",
         "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
+        "accessibility_info": "Wholesale and custom orders"
       }
     },
     "ba4f982c-c438-465f-aa94-40b8e1eb2438": {
