@@ -5,7 +5,7 @@
       "custom_css": [
         "h3 {font-size: 24px;}",
         "h1 {font-size: 40px;}",
-        ".text-xl {font-size: 17px;}"
+        ".text-xl {font-size: 16px;}"
       ],
       "settings": {
       }
