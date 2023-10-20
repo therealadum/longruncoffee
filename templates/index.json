@@ -3,9 +3,7 @@
     "home-hero": {
       "type": "home-hero",
       "custom_css": [
-        "h3 {font-size: 24px;}",
-        "h1 {font-size: 40px;}",
-        ".text-xl {font-size: 15px;}"
+
       ],
       "settings": {
       }
@@ -57,10 +55,7 @@
         "template--19876927668537__48b2557b-a48d-4912-a99b-5daa46fa2d10-collapsible_row-4"
       ],
       "custom_css": [
-        "h3 {font-size: 15px;}",
-        ".caption-with-letter-spacing {font-size: 14px;}",
-        "h2 {font-size: 21px;}",
-        "h6 {font-size: 14px;}"
+
       ],
       "settings": {
         "caption": "Patent Protected Formula Maximizes Your Performance",
@@ -163,7 +158,7 @@
     "home-coffee-club-cta": {
       "type": "home-coffee-club-cta",
       "custom_css": [
-        "h3 {font-size: 30px;}"
+
       ],
       "settings": {
       }
@@ -171,7 +166,7 @@
     "home-reviews": {
       "type": "home-reviews",
       "custom_css": [
-        "h3 {font-size: 19px;"
+
       ],
       "settings": {
       }
@@ -179,9 +174,7 @@
     "home-mission-cta": {
       "type": "home-mission-cta",
       "custom_css": [
-        "h4 {font-size: 15px;}",
-        "h3 {font-size: 16px;}",
-        ".article-card__excerpt {display: none !important;}"
+
       ],
       "settings": {
       }
@@ -195,9 +188,7 @@
     "6b1352cb-e207-4d66-9158-7591b506a138": {
       "type": "home-founder-quote",
       "custom_css": [
-        "h4 {font-size: 15px;}",
-        "h2 {font-size: 25px;}",
-        ".article-card__excerpt {display: none !important;}"
+
       ],
       "settings": {
       }
@@ -205,35 +196,33 @@
     "af701c13-b6f9-4b72-97c3-6f39ce6c4b6e": {
       "type": "featured-blog",
       "custom_css": [
-        "h3 {font-size: 12px;}",
-        "h2 {font-size: 25px;}",
-        ".article-card__excerpt {display: none !important;}"
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
       ],
       "settings": {
         "heading": "Latest News",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "blog": "news",
         "post_limit": 4,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "color_scheme": "background-1",
         "show_image": true,
         "show_date": true,
         "show_author": false,
         "show_view_all": true,
         "padding_top": 36,
-        "padding_bottom": 16
+        "padding_bottom": 36
       }
     },
     "a7b19093-ee1f-4466-9934-44ebc66bfd60": {
       "type": "featured-blog",
       "custom_css": [
-        "h3 {font-size: 12px;}",
-        "h2 {font-size: 25px;}",
-        ".article-card__excerpt {display: none !important;}"
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
       ],
       "settings": {
         "heading": "Recipes for runners",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "blog": "recipes",
         "post_limit": 4,
         "columns_desktop": 4,
@@ -242,8 +231,8 @@
         "show_date": true,
         "show_author": false,
         "show_view_all": true,
-        "padding_top": 24,
-        "padding_bottom": 24
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
