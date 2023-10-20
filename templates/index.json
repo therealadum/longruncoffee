@@ -5,7 +5,7 @@
       "custom_css": [
         "h3 {font-size: 24px;}",
         "h1 {font-size: 40px;}",
-        ".text-xl{font-size: 17px;}"
+        ".text-xl {font-size: 17px;}"
       ],
       "settings": {
       }
@@ -57,10 +57,10 @@
         "template--19876927668537__48b2557b-a48d-4912-a99b-5daa46fa2d10-collapsible_row-4"
       ],
       "custom_css": [
-        "h3 {font-size: 14px;}",
-        ".caption-with-letter-spacing {font-size: 12px;}",
-        "h2 {font-size: 20px;}",
-        "h6 {font-size: 12px;}"
+        "h3 {font-size: 15px;}",
+        ".caption-with-letter-spacing {font-size: 14px;}",
+        "h2 {font-size: 21px;}",
+        "h6 {font-size: 14px;}"
       ],
       "settings": {
         "caption": "Patent Protected Formula Maximizes Your Performance",
