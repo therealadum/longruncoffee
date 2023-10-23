@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "d38e1539-2c3d-4b7c-a09d-ea5ca38e288c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Just released!",
+            "heading_size": "h1"
+          }
+        },
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Limited Edition <strong>Brown Butter Pumpkin <\/strong>Electrolyte Infused Coffee is available while supplies last!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "YES PLEASE!",
+            "button_link": "shopify:\/\/products\/race-season-roast"
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-heading-1",
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-text-1",
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "d38e1539-2c3d-4b7c-a09d-ea5ca38e288c",
+    "banner",
+    "product-grid"
+  ]
+}
