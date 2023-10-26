@@ -2,6 +2,10 @@
   "sections": {
     "main": {
       "type": "main-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
       "settings": {
         "layout": "component-grid",
         "show_image": true,
