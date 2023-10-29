@@ -789,71 +789,7 @@
       style="--jc:start"
       class="gS-e5nL9uA relative flex flex-col"
     >
-      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(undefined)" class="gUEj9-1TFD ">
-      
-    {%- unless product -%}
-      <p>Product not found</p>
-    {%- else -%}
-      
-        <a href="{{ product.url }}" title="{{ product.title }}">
-        
-    <div
-      
-        class="  overflow-clip"
-        style=""
-      >
-      <div class="" style="">
-        <h2
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
-          style="--w:100%;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#000000;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:25px;--size-tablet:27px;--size-mobile:24px;--weight:bold;--tt:none;word-break:break-word"
-        >
-        {{ product.title }}
-        </h2>
-      </div>
-    </div>
-        </a>
-      
-    {%- endunless -%}
-  
-      </div>
-      <script
-        id="custom-js-gUEj9-1TFD"
-      >
-        try {
-          //const currentElement = document.getElementsByClassName('gUEj9-1TFD');
-        } catch(err){}
-      </script>
-    
-      
-      
-    <div
-      parentTag="Col" id="gsHRqwCbWu"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-2xl);--mb-mobile:10px;--cg:var(--g-s-2xl);--cg-tablet:var(--g-s-l);--pc:start;--pc-mobile:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gsHRqwCbWu mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
-      style="--jc:start"
-      class="goEyJP86vL relative flex flex-col"
-    >
-      <div style="--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--pt:10px;--pb:10px;--pt-mobile:var(--g-s-s);--pb-mobile:10px" class="gw50Gf4SM6 ">
-      
-    <div
-      class=""
-      style="--ta:left"
-    >
-      <div>
-        {% assign widget = 'badge' %}
-        {% if widget == 'reviews' %}
-          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
-        {% else %}
-          <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-        {% endif %}
-      </div>
-    </div>
-  
-      </div><div style="--mb:0px;--mb-mobile:0px;--pb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--pos:static" class="glNUhd-iN8 ">
+      <div style="--mb:0px;--mb-mobile:0px;--pb-mobile:5px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--pos:static" class="glNUhd-iN8 ">
       
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-tag.js" defer="defer"></script>
   {% liquid 
@@ -902,6 +838,70 @@
 
  </gp-product-tag>
    
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(undefined)" class="gUEj9-1TFD ">
+      
+    {%- unless product -%}
+      <p>Product not found</p>
+    {%- else -%}
+      
+        <a href="{{ product.url }}" title="{{ product.title }}">
+        
+    <div
+      
+        class="  overflow-clip"
+        style=""
+      >
+      <div class="" style="">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
+          style="--w:100%;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#000000;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:25px;--size-tablet:27px;--size-mobile:24px;--weight:bold;--tt:none;word-break:break-word"
+        >
+        {{ product.title }}
+        </h2>
+      </div>
+    </div>
+        </a>
+      
+    {%- endunless -%}
+  
+      </div>
+      <script
+        id="custom-js-gUEj9-1TFD"
+      >
+        try {
+          //const currentElement = document.getElementsByClassName('gUEj9-1TFD');
+        } catch(err){}
+      </script>
+    
+      
+      
+    <div
+      parentTag="Col" id="gsHRqwCbWu"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-2xl);--mb-mobile:10px;--cg:var(--g-s-2xl);--cg-tablet:var(--g-s-l);--pc:start;--pc-mobile:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gsHRqwCbWu mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      label="Block" tag="Col" type="component"
+      style="--jc:start"
+      class="goEyJP86vL relative flex flex-col"
+    >
+      <div style="--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--pt:10px;--pb:10px;--pt-mobile:var(--g-s-s);--pb-mobile:8px" class="gw50Gf4SM6 ">
+      
+    <div
+      class=""
+      style="--ta:left"
+    >
+      <div>
+        {% assign widget = 'badge' %}
+        {% if widget == 'reviews' %}
+          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+        {% else %}
+          <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+        {% endif %}
+      </div>
+    </div>
+  
       </div>
       
       
@@ -934,7 +934,7 @@
         <div
           data-gp-text
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price line-through decoration-g-text-1 text-g-text-1"
-          style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:20px;--size-tablet:19px;--size-mobile:20px;--weight:bold;word-break:break-word"
+          style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:20px;--size-tablet:19px;--size-mobile:15px;--weight:bold;word-break:break-word"
         >
         
                   {% if variant.compare_at_price  %} 
