@@ -1564,7 +1564,7 @@
       assign inventory_quantity = variant.inventory_quantity | default: 0
     -%}
     <gp-product-button
-      gp-data='{"setting":{"actionEffect":"continue-shopping","customURL":{"link":"/cart","target":"_self"},"errorMessage":"Cannot add product to cart","successMessage":"Added!","label":"Add To Cart","outOfStockLabel":"Out of Stock","errorType":"built-in"},"styles":{"errorTypo":{"type":"paragraph-2","custom":{"fontSize":{"desktop":"15px","tablet":"14px","mobile":"12px"},"fontWeight":"400","lineHeight":"180%","fontFamily":"Inter","fontVariants":["100","200","300","regular","500","600","700","800","900"]},"attrs":{"bold":true}},"successTypo":{"type":"paragraph-2","custom":{"fontSize":{"desktop":"15px","tablet":"14px","mobile":"12px"},"fontWeight":"400","lineHeight":"180%","fontFamily":"Inter","fontVariants":["100","200","300","regular","500","600","700","800","900"]},"attrs":{"bold":true}}},"disabled":"{{variant.available}}","variantID":"{{variant.id}}"}'
+      gp-data='{"setting":{"actionEffect":"continue-shopping","customURL":{"link":"/cart","target":"_self"},"errorMessage":"Cannot add product to cart","successMessage":"Added!","label":"Add To Cart","outOfStockLabel":"Out of Stock","errorType":"built-in"},"styles":{"errorTypo":{"type":"paragraph-2","custom":{"fontSize":{"desktop":"15px","tablet":"14px","mobile":"12px"},"fontWeight":"400","lineHeight":"180%","fontFamily":"Inter","fontVariants":["100","200","300","regular","500","600","700","800","900"]},"attrs":{"bold":true}},"successTypo":{"type":"paragraph-2","custom":{"fontSize":{"desktop":"20px","tablet":"14px","mobile":"12px"},"fontWeight":"400","lineHeight":"180%","fontFamily":"Inter","fontVariants":["100","200","300","regular","500","600","700","800","900"]},"attrs":{"bold":true}}},"disabled":"{{variant.available}}","variantID":"{{variant.id}}"}'
     >
         <div
     
@@ -1625,13 +1625,7 @@
           ></path>
         </svg>
 
-    <span
-        class="inline-flex shrink-0 items-center justify-center group-data-[state=loading]:invisible z-9"
-        style="--mr:8px;--w:1em"
-      ><svg style="width: 100% !important; height: 100% !important" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.5625 19.6875C9.5625 19.8958 9.66667 20 9.875 20H25.3125V22.6875H9.3125C8.60417 22.6875 7.97917 22.4167 7.4375 21.875C6.9375 21.3333 6.6875 20.7083 6.6875 20C6.6875 19.5833 6.79167 19.1667 7 18.75L8.8125 15.4375L4 5.3125H1.3125V2.6875H5.6875C6.52083 4.4375 7.35417 6.20833 8.1875 8C8.39583 8.375 8.875 9.375 9.625 11C10.375 12.5833 10.9583 13.8125 11.375 14.6875H20.75C23.875 9.02083 25.5833 5.89583 25.875 5.3125L28.1875 6.625L23.0625 15.9375C22.5625 16.8542 21.7917 17.3125 20.75 17.3125H10.8125L9.625 19.5L9.5625 19.6875ZM20.8125 24.8125C21.3542 24.2708 21.9792 24 22.6875 24C23.3958 24 24 24.2708 24.5 24.8125C25.0417 25.3542 25.3125 25.9792 25.3125 26.6875C25.3125 27.3958 25.0417 28.0208 24.5 28.5625C24 29.0625 23.3958 29.3125 22.6875 29.3125C21.9792 29.3125 21.3542 29.0625 20.8125 28.5625C20.2708 28.0208 20 27.3958 20 26.6875C20 25.9792 20.2708 25.3542 20.8125 24.8125ZM7.4375 24.8125C7.97917 24.2708 8.60417 24 9.3125 24C10.0208 24 10.6458 24.2708 11.1875 24.8125C11.7292 25.3542 12 25.9792 12 26.6875C12 27.3958 11.7292 28.0208 11.1875 28.5625C10.6458 29.0625 10.0208 29.3125 9.3125 29.3125C8.60417 29.3125 7.97917 29.0625 7.4375 28.5625C6.9375 28.0208 6.6875 27.3958 6.6875 26.6875C6.6875 25.9792 6.9375 25.3542 7.4375 24.8125ZM14.6875 12V8H10.6875V5.3125H14.6875V1.3125H17.3125V5.3125H21.3125V8H17.3125V12H14.6875Z" fill="#D6D6D6"/>
-</svg>
-</span>
+    
       <span
         class="truncate group-data-[state=loading]:invisible [&_p]:truncate z-9 "
         style="--tt:default"
@@ -1699,13 +1693,7 @@
           ></path>
         </svg>
 
-    <span
-        class="inline-flex shrink-0 items-center justify-center group-data-[state=loading]:invisible z-9"
-        style="--mr:8px;--w:1em"
-      ><svg style="width: 100% !important; height: 100% !important" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.5625 19.6875C9.5625 19.8958 9.66667 20 9.875 20H25.3125V22.6875H9.3125C8.60417 22.6875 7.97917 22.4167 7.4375 21.875C6.9375 21.3333 6.6875 20.7083 6.6875 20C6.6875 19.5833 6.79167 19.1667 7 18.75L8.8125 15.4375L4 5.3125H1.3125V2.6875H5.6875C6.52083 4.4375 7.35417 6.20833 8.1875 8C8.39583 8.375 8.875 9.375 9.625 11C10.375 12.5833 10.9583 13.8125 11.375 14.6875H20.75C23.875 9.02083 25.5833 5.89583 25.875 5.3125L28.1875 6.625L23.0625 15.9375C22.5625 16.8542 21.7917 17.3125 20.75 17.3125H10.8125L9.625 19.5L9.5625 19.6875ZM20.8125 24.8125C21.3542 24.2708 21.9792 24 22.6875 24C23.3958 24 24 24.2708 24.5 24.8125C25.0417 25.3542 25.3125 25.9792 25.3125 26.6875C25.3125 27.3958 25.0417 28.0208 24.5 28.5625C24 29.0625 23.3958 29.3125 22.6875 29.3125C21.9792 29.3125 21.3542 29.0625 20.8125 28.5625C20.2708 28.0208 20 27.3958 20 26.6875C20 25.9792 20.2708 25.3542 20.8125 24.8125ZM7.4375 24.8125C7.97917 24.2708 8.60417 24 9.3125 24C10.0208 24 10.6458 24.2708 11.1875 24.8125C11.7292 25.3542 12 25.9792 12 26.6875C12 27.3958 11.7292 28.0208 11.1875 28.5625C10.6458 29.0625 10.0208 29.3125 9.3125 29.3125C8.60417 29.3125 7.97917 29.0625 7.4375 28.5625C6.9375 28.0208 6.6875 27.3958 6.6875 26.6875C6.6875 25.9792 6.9375 25.3542 7.4375 24.8125ZM14.6875 12V8H10.6875V5.3125H14.6875V1.3125H17.3125V5.3125H21.3125V8H17.3125V12H14.6875Z" fill="#D6D6D6"/>
-</svg>
-</span>
+    
       <span
         class="truncate group-data-[state=loading]:invisible [&_p]:truncate z-9 "
         style="--tt:default"
