@@ -172,11 +172,11 @@
     
         {%- liquid
           if request.page_type != 'product'
-            assign product = all_products['brand-decal-set']
+            assign product = all_products['race-season-roast']
             if product == empty or product == null
               paginate collections.all.products by 100000
                 for item in collections.all.products 
-                  if item.id == '8281707807033'
+                  if item.id == '8686086095161'
                     assign product = item
                   endif
                 endfor
@@ -806,7 +806,7 @@
         <h2
           data-gp-text
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
-          style="--w:100%;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#000000;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:32px;--size-tablet:27px;--size-mobile:24px;--weight:bold;--tt:none;word-break:break-word"
+          style="--w:100%;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#000000;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:26px;--size-tablet:27px;--size-mobile:24px;--weight:bold;--tt:none;word-break:break-word"
         >
         {{ product.title }}
         </h2>
