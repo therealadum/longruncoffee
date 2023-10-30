@@ -172,11 +172,11 @@
     
         {%- liquid
           if request.page_type != 'product'
-            assign product = all_products['flavor']
+            assign product = all_products['race-season-roast']
             if product == empty or product == null
               paginate collections.all.products by 100000
                 for item in collections.all.products 
-                  if item.id == '8730498302265'
+                  if item.id == '8686086095161'
                     assign product = item
                   endif
                 endfor
@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId = 46953696526649 -%}
+      {%- assign initVariantId =  -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
-      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -985,7 +985,7 @@
     </div>
     </div>
   
-    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--pt:30px;--pb:25px;--pt-mobile:30px;--pb-mobile:25px" class="gu6kVCItFK ">
+    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--pt:30px;--pb:23px;--pt-mobile:30px;--pb-mobile:20px" class="gu6kVCItFK ">
       
     <div
       class="flex justify-center mobile:justify-center"
@@ -1039,7 +1039,7 @@
         <div
           data-gp-text
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:15px;--size-tablet:16px;--size-mobile:13px;--weight:bold;--c:#252525;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:15px;--size-tablet:15px;--size-mobile:13px;--weight:bold;--c:#252525;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         >
         <p>Size &amp; Form</p>
         </div>
@@ -1854,7 +1854,7 @@
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] overflow-hidden"
           style="--w:100%;--ff:var(--g-font-Inter, Inter);--ls:1px;--lh:180%;--size:16px;--size-tablet:16px;--size-mobile:15px;--weight:bold;word-break:break-word"
         >
-        <p>&nbsp; &nbsp; &nbsp; &nbsp; Subscribe &amp; Save</p>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Subscribe &amp; Save</p>
         </span>
       </div>
     </div>
@@ -2112,7 +2112,7 @@
     </div>
     </div>
   
-    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:15px;--pb:17px;--mb-mobile:0px;--pt-mobile:10px;--pb-mobile:15px;--mb-tablet:0px;--pt-tablet:15px;--pb-tablet:20px" class="gOLUlIVcX5 ">
+    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:15px;--pb:17px;--mb-mobile:0px;--pt-mobile:10px;--pb-mobile:13px;--mb-tablet:0px;--pt-tablet:15px;--pb-tablet:20px" class="gOLUlIVcX5 ">
       
     <div
       class="flex justify-center mobile:justify-center"
@@ -2224,7 +2224,7 @@
         </div>
       </gp-product-stock-counter>
   
-      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:11px;--pt:20px;--pb:25px;--mb-mobile:6px;--pt-mobile:15px;--pb-mobile:20px;--mb-tablet:11px;--pt-tablet:20px;--pb-tablet:25px" class="gNhTG2QyTJ ">
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:11px;--pt:20px;--pb:25px;--mb-mobile:0px;--pt-mobile:20px;--pb-mobile:30px;--mb-tablet:11px;--pt-tablet:20px;--pb-tablet:25px" class="gNhTG2QyTJ ">
       
     <div
       class="flex justify-center mobile:justify-center"
@@ -2284,7 +2284,7 @@
         <h1
           data-gp-text
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] text-g-text-2"
-          style="--w:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:20px;--size-tablet:19px;--size-mobile:16px;--weight:bold;word-break:break-word"
+          style="--w:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:20px;--size-tablet:19px;--size-mobile:15px;--weight:bold;word-break:break-word"
         >
         {{ product.title }}
         </h1>
@@ -2340,20 +2340,20 @@
       </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pl:5px;--mb-mobile:8px;--pt-mobile:0px;--pl-mobile:10px;--pb-mobile:15px" class="gD-JvV7OLx ">
       
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-description.js" defer="defer"></script>
-  <gp-product-description class="" gp-data='{"setting":{"color":"#424242","enableViewMoreIcon":true,"hasLineClamp":{"desktop":false},"hasTextShadow":false,"htmlTag":"html","lineClamp":{"desktop":12},"textAlign":{"desktop":"left"},"textShadow":{"type":"shadow-1"},"transform":"default","typo":{"attrs":{"color":"#424242","bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"15px","mobile":"14px","tablet":"15px"},"fontStyle":"normal","fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","letterSpacing":"normal","lineHeight":"150%"},"type":"paragraph-1"},"typography":{"type":"paragraph-1"},"viewLessText":"View less","viewMoreColor":{"hover":"text-2","normal":"#424242"},"viewMoreText":"View more"},"styles":{"color":"#424242","enableViewMoreIcon":true,"hasLineClamp":{"desktop":false},"hasTextShadow":false,"htmlTag":"html","lineClamp":{"desktop":12},"textAlign":{"desktop":"left"},"textShadow":{"type":"shadow-1"},"transform":"default","typo":{"attrs":{"color":"#424242","bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"15px","mobile":"14px","tablet":"15px"},"fontStyle":"normal","fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","letterSpacing":"normal","lineHeight":"150%"},"type":"paragraph-1"},"typography":{"type":"paragraph-1"},"viewLessText":"View less","viewMoreColor":{"hover":"text-2","normal":"#424242"},"viewMoreText":"View more"},"defaultStyle":{"--ta":"left","--c":"#424242","--tt":"default","--fs":"normal","--ff":"var(--g-font-Inter, Inter)","--ls":"normal","--lh":"150%","--size":"15px","--size-tablet":"15px","--size-mobile":"14px","--weight":"bold"},"collapseStyle":{"--ta":"left","--c":"#424242","--tt":"default","--fs":"normal","--ff":"var(--g-font-Inter, Inter)","--ls":"normal","--lh":"150%","--size":"15px","--size-tablet":"15px","--size-mobile":"14px","--weight":"bold","--line-clamp":12}}'>
+  <gp-product-description class="" gp-data='{"setting":{"color":"#424242","enableViewMoreIcon":true,"hasLineClamp":{"desktop":false},"hasTextShadow":false,"htmlTag":"html","lineClamp":{"desktop":12},"textAlign":{"desktop":"left"},"textShadow":{"type":"shadow-1"},"transform":"default","typo":{"attrs":{"color":"#424242","bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"15px","mobile":"13px","tablet":"15px"},"fontStyle":"normal","fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","letterSpacing":"normal","lineHeight":"150%"},"type":"paragraph-1"},"typography":{"type":"paragraph-1"},"viewLessText":"View less","viewMoreColor":{"hover":"text-2","normal":"#424242"},"viewMoreText":"View more"},"styles":{"color":"#424242","enableViewMoreIcon":true,"hasLineClamp":{"desktop":false},"hasTextShadow":false,"htmlTag":"html","lineClamp":{"desktop":12},"textAlign":{"desktop":"left"},"textShadow":{"type":"shadow-1"},"transform":"default","typo":{"attrs":{"color":"#424242","bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"15px","mobile":"13px","tablet":"15px"},"fontStyle":"normal","fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","letterSpacing":"normal","lineHeight":"150%"},"type":"paragraph-1"},"typography":{"type":"paragraph-1"},"viewLessText":"View less","viewMoreColor":{"hover":"text-2","normal":"#424242"},"viewMoreText":"View more"},"defaultStyle":{"--ta":"left","--c":"#424242","--tt":"default","--fs":"normal","--ff":"var(--g-font-Inter, Inter)","--ls":"normal","--lh":"150%","--size":"15px","--size-tablet":"15px","--size-mobile":"13px","--weight":"bold"},"collapseStyle":{"--ta":"left","--c":"#424242","--tt":"default","--fs":"normal","--ff":"var(--g-font-Inter, Inter)","--ls":"normal","--lh":"150%","--size":"15px","--size-tablet":"15px","--size-mobile":"13px","--weight":"bold","--line-clamp":12}}'>
   {%- unless product -%}
     <p>Product not found</p>
   {%- else -%}
     <div
       class="relative p-description-wrapper gp-p-description-text break-words safari:[&_p]:inline safari:[&_p]:after:whitespace-pre data-[browser=safari]:after:content-[' '] data-[browser=safari]:after:absolute data-[browser=safari]:after:left-0 data-[browser=safari]:after:right-0 data-[browser=safari]:after:bottom-0 data-[browser=safari]:after:w-full data-[browser=safari]:after:h-1/2 data-[browser=safari]:after:bg-gradient-to-t data-[browser=safari]:after:from-white"
-      style="--ta:left;--c:#424242;--tt:default;--fs:normal;--ff:var(--g-font-Inter, Inter);--ls:normal;--lh:150%;--size:15px;--size-tablet:15px;--size-mobile:14px;--weight:bold;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset"
+      style="--ta:left;--c:#424242;--tt:default;--fs:normal;--ff:var(--g-font-Inter, Inter);--ls:normal;--lh:150%;--size:15px;--size-tablet:15px;--size-mobile:13px;--weight:bold;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset"
     >
     {{product.description}}
     </div>
     <button
       type="button"
       class="p-description-show-more mt-4 hover:opacity-80 transition-all"
-      style="--tt:default;--fs:normal;--ff:var(--g-font-Inter, Inter);--ls:normal;--lh:150%;--size:15px;--size-tablet:15px;--size-mobile:14px;--weight:bold;--c:#424242;--d:none;--d-mobile:block;--d-tablet:block;display:none"
+      style="--tt:default;--fs:normal;--ff:var(--g-font-Inter, Inter);--ls:normal;--lh:150%;--size:15px;--size-tablet:15px;--size-mobile:13px;--weight:bold;--c:#424242;--d:none;--d-mobile:block;--d-tablet:block;display:none"
     >
     
       View more
