@@ -2166,7 +2166,7 @@
       assign inventory_policy = current_variant.inventory_policy | default: 'deny'
       assign inventory_quantity = current_variant.inventory_quantity | default: 0
 
-      assign check_display = false
+      assign check_display = true
 
       if check_display == true
         assign should_display = true
@@ -2183,7 +2183,7 @@
       endif
     -%}
 
-    <gp-product-stock-counter data-visible="{{ should_display }}" gp-setting='{"displayByDefault":false,"displayProgressBar":false,"scarcityThreshold":5,"remainingQuantity":10,"quantitySource":"auto","template":"Inventory Report: Only %number% Remaining","outOfStockMessage":"Inventory Report: OUT OF STOCK","continueSelling":"Inventory Report: Stock Levels Low","unlimitedQuantityMessage":"Inventory Report: Stock Levels Okay","color":"text-1"}' class="data-[visible=true]:block data-[visible=false]:hidden " style="--ta:left">
+    <gp-product-stock-counter data-visible="{{ should_display }}" gp-setting='{"displayByDefault":true,"displayProgressBar":false,"scarcityThreshold":5,"remainingQuantity":10,"quantitySource":"auto","template":"Inventory Report: Only %number% Remaining","outOfStockMessage":"Inventory Report: OUT OF STOCK","continueSelling":"Inventory Report: Stock Levels Low","unlimitedQuantityMessage":"Inventory Report: Stock Levels Okay","color":"text-1"}' class="data-[visible=true]:block data-[visible=false]:hidden " style="--ta:left">
         <div
           class="inline-block"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--c:var(--g-c-text-1, text-1)"
