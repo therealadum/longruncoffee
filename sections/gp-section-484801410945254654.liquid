@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId = 46827447222585 -%}
+      {%- assign initVariantId =  -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
-      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -2024,7 +2024,7 @@
     >
     <figure
       class="relative inline-block overflow-hidden align-middle pointer-events-none"
-      style="--w:40px;--w-tablet:40px;--w-mobile:35px;border-radius:inherit"
+      style="--w:40px;--w-tablet:40px;--w-mobile:30px;border-radius:inherit"
     >
       <div
         class="pointer-events-auto"
@@ -2073,7 +2073,7 @@
     >
     <figure
       class="relative inline-block overflow-hidden align-middle pointer-events-none"
-      style="--w:40px;--w-tablet:40px;--w-mobile:35px;border-radius:inherit"
+      style="--w:40px;--w-tablet:40px;--w-mobile:30px;border-radius:inherit"
     >
       <div
         class="pointer-events-auto"
@@ -2112,7 +2112,7 @@
     </div>
     </div>
   
-    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:15px;--pb:17px;--mb-mobile:0px;--pt-mobile:10px;--pb-mobile:13px;--mb-tablet:0px;--pt-tablet:15px;--pb-tablet:15px" class="gOLUlIVcX5 ">
+    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:15px;--pb:17px;--mb-mobile:0px;--pt-mobile:10px;--pb-mobile:15px;--mb-tablet:0px;--pt-tablet:15px;--pb-tablet:15px" class="gOLUlIVcX5 ">
       
     <div
       class="flex justify-center mobile:justify-center"
@@ -2156,7 +2156,7 @@
       </div>
     </div>
   
-      </div><div style="--mb:0px;--mb-mobile:0px;--mb-tablet:0px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%" class="gWSEdEXfPy ">
+      </div><div style="--mb:0px;--mb-mobile:0px;--pl-mobile:5px;--mb-tablet:0px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%" class="gWSEdEXfPy ">
       
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-stock-counter.js" defer="defer"></script>
     {%- liquid 
@@ -2166,24 +2166,24 @@
       assign inventory_policy = current_variant.inventory_policy | default: 'deny'
       assign inventory_quantity = current_variant.inventory_quantity | default: 0
 
-      assign check_display = true
+      assign check_display = false
 
       if check_display == true
         assign should_display = true
-      elsif true and inventory_quantity > 0 and inventory_quantity < 12
+      elsif true and inventory_quantity > 0 and inventory_quantity < 5
         assign should_display = true
       else
         assign should_display = false
       endif
 
-      if true and available
+      if false and available
         assign show_progress_bar = true
       else
         assign show_progress_bar = false
       endif
     -%}
 
-    <gp-product-stock-counter data-visible="{{ should_display }}" gp-setting='{"displayByDefault":true,"displayProgressBar":true,"scarcityThreshold":12,"remainingQuantity":10,"quantitySource":"auto","template":"Only %number% Remaining","outOfStockMessage":"OUT OF STOCK","continueSelling":"Restock Coming","unlimitedQuantityMessage":"Stock Levels Okay","color":"text-1"}' class="data-[visible=true]:block data-[visible=false]:hidden " style="--ta:left">
+    <gp-product-stock-counter data-visible="{{ should_display }}" gp-setting='{"displayByDefault":false,"displayProgressBar":false,"scarcityThreshold":5,"remainingQuantity":10,"quantitySource":"auto","template":"Inventory Report: Only %number% Remaining","outOfStockMessage":"Inventory Report: OUT OF STOCK","continueSelling":"Inventory Report: Stock Levels Low","unlimitedQuantityMessage":"Inventory Report: Stock Levels Okay","color":"text-1"}' class="data-[visible=true]:block data-[visible=false]:hidden " style="--ta:left">
         <div
           class="inline-block"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--c:var(--g-c-text-1, text-1)"
@@ -2193,23 +2193,23 @@
             <p
               data-slot-type="message"
               class=""
-              style="--ff:var(--g-font-Inter, Inter);--weight:400;--lh:130%;--size:13px;--size-tablet:12px;--size-mobile:10px;--c:var(--g-c-text-1, text-1);--tt:none"
+              style="--ff:var(--g-font-Inter, Inter);--lh:130%;--size:12px;--size-tablet:11px;--size-mobile:10px;--weight:bold;--c:var(--g-c-text-1, text-1);--tt:none"
             >
             {% if auto == "manual" %}
               {% if available == false or inventory_quantity <= 0 %}
-                OUT OF STOCK
+                Inventory Report: OUT OF STOCK
               {% else %}
-                Only <span class='text-g-text-1'>{{ inventory_quantity }}</span> Remaining
+                Inventory Report: Only <span class='text-g-text-1'>{{ inventory_quantity }}</span> Remaining
               {% endif %}
             {% else %}
               {% if inventory_management != "shopify" and inventory_quantity <= 0%}
-                Stock Levels Okay
+                Inventory Report: Stock Levels Okay
               {% elsif available == false %}
-                OUT OF STOCK
+                Inventory Report: OUT OF STOCK
               {% elsif available and inventory_policy == 'continue' and true and inventory_quantity <= 0 %}
-                Restock Coming
+                Inventory Report: Stock Levels Low
               {% else %}
-                Only <span class='text-g-text-1'>{{ inventory_quantity }}</span> Remaining
+                Inventory Report: Only <span class='text-g-text-1'>{{ inventory_quantity }}</span> Remaining
               {% endif %}
             {% endif %}
             </p>
@@ -2224,7 +2224,7 @@
         </div>
       </gp-product-stock-counter>
   
-      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:11px;--pt:20px;--pb:25px;--mb-mobile:0px;--pt-mobile:20px;--pb-mobile:30px;--mb-tablet:11px;--pt-tablet:20px;--pb-tablet:25px" class="gNhTG2QyTJ ">
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:11px;--pt:20px;--pb:25px;--mb-mobile:0px;--pt-mobile:15px;--pb-mobile:30px;--mb-tablet:11px;--pt-tablet:15px;--pb-tablet:20px" class="gNhTG2QyTJ ">
       
     <div
       class="flex justify-center mobile:justify-center"
