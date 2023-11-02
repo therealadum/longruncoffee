@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId =  -%}
+      {%- assign initVariantId = 46390666920249 -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.selected_or_first_available_variant -%}
-      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -227,7 +227,7 @@
     {
       "id":"g6Q98aOWRo",
       "setting":{"arrow":{"desktop":true,"mobile":true,"tablet":true},"arrowIcon":"<svg height=\"100%\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" className=\"w-6 h-6\"  viewBox=\"0 0 512 512\" fill=\"currentColor\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z\" /></svg>","clickEffect":"none","controlOverContent":{"desktop":false,"mobile":false,"tablet":true},"dot":{"desktop":true,"mobile":true,"tablet":true},"dragToScroll":true,"featureImageVisible":{"desktop":true,"mobile":true,"tablet":true},"galleryVisible":{"desktop":true,"mobile":true,"tablet":true},"hoverEffect":"none","largeViewInPopup":{"desktop":false,"mobile":false,"tablet":false},"loop":{"desktop":true,"mobile":true,"tablet":true},"numberPerRow":{"desktop":4,"mobile":5,"tablet":4},"otherImage":0,"pauseOnHover":true,"showActiveStatus":false,"slidesToShow":{"desktop":5,"mobile":5,"tablet":5},"speed":1,"type":{"desktop":"slider","mobile":"slider","tablet":"slider"},"zoom":"200","zoomType":"default"},
-      "styles":{"align":{"desktop":"flex-start","mobile":"center","tablet":"flex-start"},"aspectHeight":{"desktop":0,"mobile":0,"tablet":0},"aspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"aspectWidth":{"desktop":0,"mobile":0,"tablet":0},"customAspectRadio":{"desktop":{"height":0,"width":0},"mobile":{"height":0,"width":0},"tablet":{"height":0,"width":0}},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"ftAlign":{"desktop":"center","mobile":"center","tablet":"center"},"ftAspectHeight":{"desktop":0,"mobile":0,"tablet":0},"ftAspectRatio":{"desktop":"1","mobile":"3/2","tablet":"1"},"ftAspectWidth":{"desktop":0,"mobile":0,"tablet":0},"ftCustomAspectRadio":{"desktop":{"height":0,"width":0},"mobile":{"height":0,"width":0},"tablet":{"height":0,"width":0}},"ftFullWidth":{"desktop":true,"mobile":true,"tablet":true},"ftLayout":{"desktop":"cover","mobile":"contain","tablet":"cover"},"ftWidth":{"desktop":"100%","mobile":"100%","tablet":"100%"},"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"gallerySpacing":{"desktop":"21px","mobile":"0px"},"layout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"position":{"desktop":"bottom-left","mobile":"bottom-left"},"spacing":{"desktop":"21px","mobile":"40px"},"verticalLayout":{"desktop":false,"mobile":false,"tablet":false},"verticalLayoutRow":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","mobile":"90%","tablet":"100%"}}, 
+      "styles":{"align":{"desktop":"flex-start","mobile":"center","tablet":"flex-start"},"aspectHeight":{"desktop":0,"mobile":0,"tablet":0},"aspectRatio":{"desktop":"1","mobile":"1","tablet":"1"},"aspectWidth":{"desktop":0,"mobile":0,"tablet":0},"customAspectRadio":{"desktop":{"height":0,"width":0},"mobile":{"height":0,"width":0},"tablet":{"height":0,"width":0}},"dotActiveColor":{"desktop":"highlight"},"dotColor":{"desktop":"bg-1"},"ftAlign":{"desktop":"center","mobile":"center","tablet":"center"},"ftAspectHeight":{"desktop":0,"mobile":0,"tablet":0},"ftAspectRatio":{"desktop":"1","mobile":"4/3","tablet":"1"},"ftAspectWidth":{"desktop":0,"mobile":0,"tablet":0},"ftCustomAspectRadio":{"desktop":{"height":0,"width":0},"mobile":{"height":0,"width":0},"tablet":{"height":0,"width":0}},"ftFullWidth":{"desktop":true,"mobile":true,"tablet":true},"ftLayout":{"desktop":"cover","mobile":"contain","tablet":"cover"},"ftWidth":{"desktop":"100%","mobile":"100%","tablet":"100%"},"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"gallerySpacing":{"desktop":"21px","mobile":"0px"},"layout":{"desktop":"cover","mobile":"cover","tablet":"cover"},"position":{"desktop":"bottom-left","mobile":"bottom-left"},"spacing":{"desktop":"21px","mobile":"40px"},"verticalLayout":{"desktop":false,"mobile":false,"tablet":false},"verticalLayoutRow":{"desktop":true,"mobile":true,"tablet":true},"width":{"desktop":"100%","mobile":"90%","tablet":"100%"}}, 
       "product":{{ product | json | escape }}
     }
   '
@@ -245,7 +245,7 @@
   <div role="presentation" 
     media-type="{{product.featured_media.media_type}}"
     class="featured-image-wrapper relative flex w-full overflow-hidden"
-    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:3/2"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:4/3"
   >
   <div class="flex w-full items-start justify-center">
     <div class="featured-image group relative w-full h-full overflow-hidden flex items-center justify-center">
@@ -394,7 +394,7 @@
               {{featureMedia.alt}}
             {%- endif -%}" priority="true"
     sizes="100vw"
-    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:3/2;--objf:cover;--objf-tablet:cover;--objf-mobile:contain;--w:100%"
+    style="--aspect:1;--aspect-tablet:1;--aspect-mobile:4/3;--objf:cover;--objf-tablet:cover;--objf-mobile:contain;--w:100%"
   />
     
     
