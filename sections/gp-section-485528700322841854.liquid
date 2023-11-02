@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId = 47433132245305 -%}
+      {%- assign initVariantId =  -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
-      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -2523,7 +2523,7 @@
     </div>
     </div>
   
-    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:15px;--pb:17px;--mb-mobile:0px;--pt-mobile:30px;--pb-mobile:30px;--mb-tablet:0px;--pt-tablet:15px;--pb-tablet:15px" class="gJ1rt_NhOX ">
+    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:15px;--pb:20px;--mb-mobile:0px;--pt-mobile:30px;--pb-mobile:30px;--mb-tablet:0px;--pt-tablet:15px;--pb-tablet:15px" class="gJ1rt_NhOX ">
       
     <div
       class="flex justify-center mobile:justify-center"
@@ -2592,7 +2592,7 @@
       
     {%- endunless -%}
   
-      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--pt:5px;--pl:5px;--pb:5px;--mb-mobile:0px;--pt-mobile:5px;--pl-mobile:10px;--pb-mobile:5px;--mb-tablet:0px;--pt-tablet:5px;--pl-tablet:5px;--pb-tablet:5px" class="gZZ77EWlgt ">
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--pt:0px;--pl:5px;--pb:5px;--mb-mobile:0px;--pt-mobile:5px;--pl-mobile:10px;--pb-mobile:5px;--mb-tablet:0px;--pt-tablet:5px;--pl-tablet:5px;--pb-tablet:5px" class="gZZ77EWlgt ">
       
     <div
       class="flex justify-start tablet:justify-start mobile:justify-start"
