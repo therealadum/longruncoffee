@@ -233,7 +233,7 @@
 {%- assign gpBkProduct = product -%}
 {%- assign gpBkProducts = products -%}
 {%- liquid
-      assign productHandles = 'flavor,race-season-roast,lrc-best-seller-set,the-pre-run-pb-j,the-post-race-banana,ultramarathon-set,speedwork-set,the-long-run,junk-miles,technical-trail,boco-run-hat,hydro-flask-bottle,flavor-set'| split: ','
+      assign productHandles = 'base-phase-blend-sugar-cookie,race-season-roast,flavor,lrc-best-seller-set,the-pre-run-pb-j,the-post-race-banana,ultramarathon-set,speedwork-set,the-long-run,junk-miles,technical-trail,boco-run-hat,hydro-flask-bottle,flavor-set'| split: ','
       assign products = null
       assign target_collection = null
       assign productSrc = 'PickProduct'
@@ -258,7 +258,7 @@
         endpaginate
       else
         if productSrc == 'PickProduct'
-          if 13 == 0
+          if 14 == 0
             paginate collections.all.products by 100000
               assign products = collections.all.products  | sort : "created_at"  | reverse 
             endpaginate
@@ -2790,7 +2790,7 @@
   
         {%- endif -%}
     {%- endfor -%}
-    {%- if count == 0 and 13 != 0 -%}
+    {%- if count == 0 and 14 != 0 -%}
         <div>No products found!</div>
       {%- endif -%}
     
