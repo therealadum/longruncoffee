@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId =  -%}
+      {%- assign initVariantId = 47433132245305 -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.selected_or_first_available_variant -%}
-      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -789,7 +789,7 @@
       style="--jc:start"
       class="gS-e5nL9uA relative flex flex-col"
     >
-      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--mb-tablet:4px" class="gUEj9-1TFD ">
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:10px;--mb-tablet:4px" class="gUEj9-1TFD ">
       
     {%- unless product -%}
       <p>Product not found</p>
@@ -1813,7 +1813,7 @@
   </gp-product-variants>
   
    
-      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--pt:30px;--pb:20px;--pt-mobile:25px;--pb-mobile:20px" class="gLBSu8V45t ">
+      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--pt:30px;--pb:20px;--pt-mobile:25px;--pb-mobile:15px" class="gLBSu8V45t ">
       
     <div
       class="flex justify-center mobile:justify-center"
@@ -1867,12 +1867,12 @@
         <div
           data-gp-text
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:16px;--size-mobile:14px;--weight:bold;--c:#E59A4E;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:16px;--size-mobile:14px;--weight:bold;--c:#CB7A22;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         >
         <p>Long Run Club Bonus Item</p>
         </div>
       </div>
-    </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:0px;--pb:5px;--mb-mobile:0px;--pt-mobile:20px;--pb-mobile:15px;--mb-tablet:0px;--pt-tablet:15px;--pb-tablet:15px" class="gOLUlIVcX5 ">
+    </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pt:0px;--pb:5px;--mb-mobile:0px;--pt-mobile:0px;--pb-mobile:4px;--mb-tablet:0px;--pt-tablet:15px;--pb-tablet:15px" class="gOLUlIVcX5 ">
       
     <div
       class="flex justify-center mobile:justify-center"
@@ -1926,7 +1926,7 @@
         <div
           data-gp-text
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:14px;--size-tablet:16px;--size-mobile:14px;--weight:bold;--c:#E59A4E;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:14px;--size-tablet:16px;--size-mobile:13px;--weight:bold;--c:#E59A4E;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         >
         <p>All LR Club Members receive the Base Phase Blend automatically with their December shipment.</p>
         </div>
