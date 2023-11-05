@@ -158,7 +158,7 @@
               
     <div
       id="gvfvdebag1"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mt:0px;--pt:50px;--pl:15px;--pb:30px;--pr:15px;--pt-mobile:30px;--pl-mobile:15px;--pb-mobile:20px;--pr-mobile:15px;--pt-tablet:20px;--pl-tablet:15px;--pb-tablet:20px;--pr-tablet:15px;--cg:var(--g-s-2xl);--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:#FFFFFF;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mt:0px;--pt:50px;--pl:15px;--pb:30px;--pr:15px;--pt-mobile:10px;--pl-mobile:15px;--pb-mobile:20px;--pr-mobile:15px;--pt-tablet:20px;--pl-tablet:15px;--pb-tablet:20px;--pr-tablet:15px;--cg:var(--g-s-2xl);--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:#FFFFFF;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         class="gvfvdebag1 mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
     >
     <div
@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId =  -%}
+      {%- assign initVariantId = 47433132245305 -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.selected_or_first_available_variant -%}
-      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -216,7 +216,72 @@
       style="--jc:start"
       class="gttkZo0I66 relative flex flex-col"
     >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:5px;--mb-tablet:4px" class="gUEj9-1TFD ">
       
+    {%- unless product -%}
+      <p>Product not found</p>
+    {%- else -%}
+      
+        <a href="{{ product.url }}" title="{{ product.title }}">
+        
+    <div
+      
+        class="  overflow-clip"
+        style=""
+      >
+      <div class="" style="">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
+          style="--w:100%;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#000000;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:24px;--size-tablet:20px;--size-mobile:20px;--weight:bold;--tt:none;word-break:break-word"
+        >
+        {{ product.title }}
+        </h2>
+      </div>
+    </div>
+        </a>
+      
+    {%- endunless -%}
+  
+      </div>
+      <script
+        id="custom-js-gUEj9-1TFD"
+      >
+        try {
+          //const currentElement = document.getElementsByClassName('gUEj9-1TFD');
+        } catch(err){}
+      </script>
+    
+  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-price.js" defer="defer"></script>
+      <gp-product-price
+        gp-data='{"priceType":"regular","uid":"gTJCYJyQUv","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
+        
+        class=" data-[hidden=true]:hidden"
+        style="--mb:var(--g-s-l);--mb-mobile:20px;--pl-mobile:4px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
+        data-hidden="false"
+      >
+        
+    <div
+      id="p-price-gTJCYJyQUv"
+        class="  overflow-clip"
+        style=""
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price decoration-g-text-1 text-g-text-2"
+          style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:20px;--size-tablet:20px;--size-mobile:19px;--weight:bold;word-break:break-word"
+        >
+        
+                  {% if variant.price %} 
+                    {{ variant.price | money}}
+                  {% endif %}
+                
+        </div>
+      </div>
+    </div>
+      </gp-product-price>
+  
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-images.js" defer="defer"></script>
   {% assign featured_image = product.featured_image %}
   {%- if variant != null and variant.featured_image != null -%}
@@ -231,7 +296,7 @@
       "product":{{ product | json | escape }}
     }
   '
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--mb:26px;--mb-mobile:36px"
+    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--mb:26px;--mb-mobile:15px"
     class=""
   >
     <div
@@ -789,7 +854,7 @@
       style="--jc:start"
       class="gS-e5nL9uA relative flex flex-col"
     >
-      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:5px;--mb-tablet:4px" class="gUEj9-1TFD ">
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:none;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:5px;--mb-tablet:4px" class="geEwrjDbKo ">
       
     {%- unless product -%}
       <p>Product not found</p>
@@ -818,10 +883,10 @@
   
       </div>
       <script
-        id="custom-js-gUEj9-1TFD"
+        id="custom-js-geEwrjDbKo"
       >
         try {
-          //const currentElement = document.getElementsByClassName('gUEj9-1TFD');
+          //const currentElement = document.getElementsByClassName('geEwrjDbKo');
         } catch(err){}
       </script>
     
@@ -843,7 +908,7 @@
         gp-data='{"priceType":"regular","uid":"gJoAOasIH6","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
         
         class=" data-[hidden=true]:hidden"
-        style="--mb:var(--g-s-l);--mb-mobile:var(--g-s-l);--pl-mobile:4px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
+        style="--mb:var(--g-s-l);--mb-mobile:var(--g-s-l);--pl-mobile:4px;--d:block;--d-tablet:block;--d-mobile:none;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
         data-hidden="false"
       >
         
