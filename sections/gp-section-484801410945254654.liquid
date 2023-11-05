@@ -172,11 +172,11 @@
     
         {%- liquid
           if request.page_type != 'product'
-            assign product = all_products['lrc-best-seller-set']
+            assign product = all_products['flavor']
             if product == empty or product == null
               paginate collections.all.products by 100000
                 for item in collections.all.products 
-                  if item.id == '8593810522425'
+                  if item.id == '8730498302265'
                     assign product = item
                   endif
                 endfor
