@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId = 47433132245305 -%}
+      {%- assign initVariantId =  -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
-      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -216,7 +216,7 @@
       style="--jc:start"
       class="gttkZo0I66 relative flex flex-col"
     >
-      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:5px;--mb-tablet:4px" class="gUEj9-1TFD ">
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:none;--d-mobile:block;--d-tablet:none;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:5px;--mb-tablet:4px" class="gUEj9-1TFD ">
       
     {%- unless product -%}
       <p>Product not found</p>
@@ -257,7 +257,7 @@
         gp-data='{"priceType":"regular","uid":"gTJCYJyQUv","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
         
         class=" data-[hidden=true]:hidden"
-        style="--mb:var(--g-s-l);--mb-mobile:20px;--pl-mobile:4px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
+        style="--mb:var(--g-s-l);--mb-mobile:20px;--pl-mobile:4px;--d:none;--d-tablet:none;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%"
         data-hidden="false"
       >
         
