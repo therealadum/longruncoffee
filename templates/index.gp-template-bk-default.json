@@ -76,11 +76,11 @@
     "57fefd56-ea79-4796-b1c9-2297353cd585": {
       "type": "featured-collection",
       "custom_css": [
-        "h2 {font-size: 35px;}",
+        "h2 {font-size: 42px;}",
         ".badge {font-size: 15px;}",
-        ".price__regular {font-size: 13px;}",
-        ".price__sale {font-size: 13px;}",
-        ".price-item {font-size: 13px;}",
+        ".price__regular {font-size: 15px;}",
+        ".price__sale {font-size: 15px;}",
+        ".price-item {font-size: 15px;}",
         ".hidden {display: none;}"
       ],
       "settings": {
