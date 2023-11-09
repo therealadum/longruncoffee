@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId = 47433132245305 -%}
+      {%- assign initVariantId =  -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
-      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -1109,7 +1109,7 @@
       
     <div
       parentTag="Col" id="gLbpPhfoIL"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:none;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:30px;--mb-tablet:30px;--cg:5px;--cg-tablet:5px;--cg-mobile:6px;--pc:start;--pc-mobile:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-tablet:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:none;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:20px;--mb-tablet:30px;--cg:5px;--cg-tablet:5px;--cg-mobile:6px;--pc:start;--pc-mobile:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-tablet:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         class="gLbpPhfoIL mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
     >
     <div
@@ -1269,7 +1269,7 @@
     >
       <div
     
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--mb-tablet:0px;--pb-tablet:3px;--ta:left;--ta-mobile:left"
+    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pb:7px;--mb-mobile:0px;--mb-tablet:0px;--pb-tablet:3px;--ta:left;--ta-mobile:left"
     class=""
   >
     <style>
