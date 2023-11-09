@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId =  -%}
+      {%- assign initVariantId = 47433132245305 -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.selected_or_first_available_variant -%}
-      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -442,7 +442,7 @@
       href="#g6Er67vlEU" target="_self" data-id="gKTX4sk4xJ" aria-label="Reviews"
       data-state="idle"
       class="gKTX4sk4xJ gp-button-base rounded-none max-w-full relative group inline-flex items-center justify-center no-underline transition-colors duration-300 disabled:btn-disabled disabled:opacity-30 disabled:pointer-events-none"
-      style="--hvr-bg:transparent;--bg:transparent;--radius:var(--g-radius-small);--shadow:none;--c:#E59A4E;--w:Auto;--w-tablet:Auto;--w-mobile:Auto;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-mobile:0px;--pr-mobile:0px;--pt-mobile:0px;--pb-mobile:0px;--tt:default;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:16px;--size-tablet:16px;--size-mobile:13px"
+      style="--hvr-bg:transparent;--bg:transparent;--radius:var(--g-radius-small);--shadow:none;--c:#E59A4E;--w:Auto;--w-tablet:Auto;--w-mobile:Auto;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-mobile:0px;--pr-mobile:0px;--pt-mobile:0px;--pb-mobile:0px;--tt:default;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:16px;--size-tablet:16px;--size-mobile:11px"
     >
         <svg
           class="invisible absolute h-5 w-5 animate-spin group-data-[state=loading]:visible"
@@ -1109,7 +1109,7 @@
       
     <div
       parentTag="Col" id="gLbpPhfoIL"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:none;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-tablet:0px;--cg:5px;--cg-tablet:5px;--cg-mobile:6px;--pc:start;--pc-mobile:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-tablet:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:none;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:30px;--mb-tablet:30px;--cg:5px;--cg-tablet:5px;--cg-mobile:6px;--pc:start;--pc-mobile:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-tablet:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         class="gLbpPhfoIL mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
     >
     <div
@@ -1269,7 +1269,7 @@
     >
       <div
     
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--mb-tablet:0px;--ta:left;--ta-mobile:left"
+    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--mb-tablet:0px;--pb-tablet:3px;--ta:left;--ta-mobile:left"
     class=""
   >
     <style>
@@ -1295,7 +1295,7 @@
       href="#g6Er67vlEU" target="_self" data-id="gKXQv9697E" aria-label="Reviews"
       data-state="idle"
       class="gKXQv9697E gp-button-base rounded-none max-w-full relative group inline-flex items-center justify-center no-underline transition-colors duration-300 disabled:btn-disabled disabled:opacity-30 disabled:pointer-events-none"
-      style="--hvr-bg:transparent;--bg:transparent;--radius:var(--g-radius-small);--shadow:none;--c:#E59A4E;--w:Auto;--w-tablet:Auto;--w-mobile:Auto;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:0px;--pr:0px;--pt:0px;--pb:0px;--pl-tablet:0px;--pr-tablet:0px;--pt-tablet:0px;--pb-tablet:0px;--pl-mobile:0px;--pr-mobile:0px;--pt-mobile:0px;--pb-mobile:0px;--tt:default;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:14px;--size-tablet:13px;--size-mobile:13px"
+      style="--hvr-bg:transparent;--bg:transparent;--radius:var(--g-radius-small);--shadow:none;--c:#E59A4E;--w:Auto;--w-tablet:Auto;--w-mobile:Auto;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:0px;--pr:0px;--pt:0px;--pb:0px;--pl-tablet:0px;--pr-tablet:0px;--pt-tablet:0px;--pb-tablet:0px;--pl-mobile:0px;--pr-mobile:0px;--pt-mobile:0px;--pb-mobile:0px;--tt:default;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:12px;--size-tablet:11px;--size-mobile:13px"
     >
         <svg
           class="invisible absolute h-5 w-5 animate-spin group-data-[state=loading]:visible"
@@ -1331,41 +1331,11 @@
     </div>
   
     
-  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-price.js" defer="defer"></script>
-      <gp-product-price
-        gp-data='{"priceType":"regular","uid":"gJoAOasIH6","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
-        
-        class=" data-[hidden=true]:hidden"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:none;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:var(--g-s-l);--pl-mobile:4px"
-        data-hidden="false"
-      >
-        
-    <div
-      id="p-price-gJoAOasIH6"
-        class=" "
-        style=""
-      >
-      <div class="" style="">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price decoration-g-text-1 text-g-text-2"
-          style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:20px;--size-mobile:19px;--weight:bold;word-break:break-word"
-        >
-        
-                  {% if variant.price %} 
-                    {{ variant.price | money}}
-                  {% endif %}
-                
-        </div>
-      </div>
-    </div>
-      </gp-product-price>
-  
       
       
     <div
       parentTag="Col" id="gyc1GwYNf6"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:10px;--mb-tablet:7px;--cg:32px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 6fr) minmax(0, 6fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:10px;--pb:0px;--pr:30px;--mb-mobile:10px;--pr-mobile:15px;--mb-tablet:10px;--pr-tablet:20px;--cg:32px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 6fr) minmax(0, 6fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         class="gyc1GwYNf6 mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
     >
     <div
@@ -1377,7 +1347,7 @@
     <div
       parentTag="Col"
         class="gOXICii6Gt "
-        style="--ta:left;--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:7px;--mb-mobile:0px;--pl-mobile:5px;--mb-tablet:0px"
+        style="--ta:left;--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--pl-mobile:5px;--mb-tablet:0px"
       >
       <div class="flex" style="--jc:left">
         <div
@@ -1400,7 +1370,7 @@
         gp-data='{"priceType":"regular","uid":"gTJCYJyQUv","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
         
         class=" data-[hidden=true]:hidden"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:none;--d-mobile:block;--d-tablet:none;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:0px;--pl-mobile:4px"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--pb:0px;--mb-mobile:0px;--pl-mobile:4px;--pr-mobile:0px;--mb-tablet:0px"
         data-hidden="false"
       >
         
@@ -1413,7 +1383,7 @@
         <div
           data-gp-text
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price decoration-g-text-1 text-g-text-2"
-          style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--ta-mobile:right;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:20px;--size-tablet:20px;--size-mobile:17px;--weight:bold;word-break:break-word"
+          style="--w:100%;--tdc:text-1;--tdt:1;--ta:right;--ta-tablet:right;--ta-mobile:right;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:18px;--size-tablet:15px;--size-mobile:17px;--weight:bold;word-break:break-word"
         >
         
                   {% if variant.price %} 
