@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "gp_section_486897167886189783": {
+      "type": "gp-section-486897167886189783",
+      "settings": {
+      }
+    },
+    "gp_section_486897167953298353": {
+      "type": "gp-section-486897167953298353",
+      "settings": {
+      }
+    },
+    "gp_section_486997345951548631": {
+      "type": "gp-section-486997345951548631",
+      "settings": {
+      }
+    },
+    "gp_section_486902608418571185": {
+      "type": "gp-section-486902608418571185",
+      "settings": {
+      }
+    },
+    "gp_section_486998123541955505": {
+      "type": "gp-section-486998123541955505",
+      "settings": {
+      }
+    },
+    "gp_section_486902608418571479": {
+      "type": "gp-section-486902608418571479",
+      "settings": {
+      }
+    },
+    "gp_section_486902608435348401": {
+      "type": "gp-section-486902608435348401",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "gp_section_486897167886189783",
+    "gp_section_486897167953298353",
+    "gp_section_486997345951548631",
+    "gp_section_486902608418571185",
+    "gp_section_486998123541955505",
+    "gp_section_486902608418571479",
+    "gp_section_486902608435348401"
+  ]
+}

@@ -1,0 +1,455 @@
+
+  
+  
+      <style>
+        @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hjg.woff) format('woff');
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+      </style>
+    
+  <style>
+    .gps-486897167886189783 .pointer-events-none{pointer-events:none}.gps-486897167886189783 .pointer-events-auto{pointer-events:auto}.gps-486897167886189783 .absolute{position:absolute}.gps-486897167886189783 .relative{position:relative}.gps-486897167886189783 .inset-0{inset:0}.gps-486897167886189783 .left-\[var\(--left\)\]{left:var(--left)}.gps-486897167886189783 .top-\[var\(--top\)\]{top:var(--top)}.gps-486897167886189783 .mx-auto{margin-left:auto;margin-right:auto}.gps-486897167886189783 .mb-0{margin-bottom:0}.gps-486897167886189783 .inline-block{display:inline-block}.gps-486897167886189783 .flex{display:flex}.gps-486897167886189783 .grid{display:grid}.gps-486897167886189783 .\!hidden{display:none!important}.gps-486897167886189783 .h-full{height:100%}.gps-486897167886189783 .w-full{width:100%}.gps-486897167886189783 .w-max{width:-moz-max-content;width:max-content}.gps-486897167886189783 .min-w-max{min-width:-moz-max-content;min-width:max-content}.gps-486897167886189783 .\!max-w-max{max-width:-moz-max-content!important;max-width:max-content!important}.gps-486897167886189783 .max-w-full{max-width:100%}.gps-486897167886189783 .flex-1{flex:1 1 0%}.gps-486897167886189783 .flex-col{flex-direction:column}.gps-486897167886189783 .flex-wrap{flex-wrap:wrap}.gps-486897167886189783 .\!content-center{align-content:center!important}.gps-486897167886189783 .items-center{align-items:center}.gps-486897167886189783 .justify-center{justify-content:center}.gps-486897167886189783 .gap-y-0{row-gap:0}.gps-486897167886189783 .self-center{align-self:center}.gps-486897167886189783 .overflow-hidden{overflow:hidden}.gps-486897167886189783 .text-center{text-align:center}.gps-486897167886189783 .align-middle{vertical-align:middle}.gps-486897167886189783 .transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-486897167886189783 .transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-486897167886189783 .transition-transform{transition-duration:.15s;transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-486897167886189783 .duration-200{transition-duration:.2s}.gps-486897167886189783 .duration-300{transition-duration:.3s}.gps-486897167886189783 .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (hover:hover) and (pointer:fine){.gps-486897167886189783 .group\/hero:hover .group-hover\/hero\:bg-\[color\:var\(--hvr-bgc\2c _var\(--bgc\)\)\]{background-color:var(--hvr-bgc,var(--bgc))}.gps-486897167886189783 .group\/hero:hover .group-hover\/hero\:opacity-\[var\(--hvr-op\2c _var\(--op\)\)\]{opacity:var(--hvr-op,var(--op))}}.gps-486897167886189783 .\[\&_\*\]\:max-w-full *{max-width:100%}.gps-486897167886189783 .\[\&_p\]\:inline p{display:inline}.gps-486897167886189783 .\[\&_p\]\:after\:whitespace-pre-wrap p:after{content:var(--tw-content);white-space:pre-wrap}.gps-486897167886189783 .\[\&_p\]\:after\:content-\[\'\\A\'\] p:after{--tw-content:"\A";content:var(--tw-content)}
+  </style>
+  
+      
+      
+            <section
+              class="mx-auto max-w-full"
+              style="--w:100%;--w-tablet:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--w-mobile:100%;--pl:0px;--pl-tablet:var(--g-ct-p, 15px);--pl-mobile:0px;--pr:0px;--pr-tablet:var(--g-ct-p, 15px);--pr-mobile:0px"
+            >
+              
+    <div
+      id="gDIXJ1A6aJ"
+        style="--pt:var(--g-s-2xl);--pb:var(--g-s-2xl);--mb-mobile:0px;--pt-mobile:0px;--pb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gDIXJ1A6aJ mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gQvBN-nQxy relative flex flex-col"
+    >
+      
+    <link rel="preload" href="https://ucarecdn.com/159f5369-05c4-4954-b379-3b3b8f1431f1/-/format/auto/-/preview/3000x3000/-/quality/lighter/Source%20background%20image.jpg" as="image" />
+    <link rel="preload" href="https://ucarecdn.com/159f5369-05c4-4954-b379-3b3b8f1431f1/-/format/auto/-/preview/3000x3000/-/quality/lighter/Source%20background%20image.jpg" as="image" />
+    <link rel="preload" href="https://ucarecdn.com/49834646-3a8e-4635-9f37-80d6582315ec/-/format/auto/" as="image" />
+    <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-hero-banner.js" defer="defer"></script>
+    <gp-hero-banner
+      gp-data='{"background":{"desktop":{"type":"image","color":"bg-2","image":{"src":"https://ucarecdn.com/159f5369-05c4-4954-b379-3b3b8f1431f1/-/format/auto/-/preview/3000x3000/-/quality/lighter/Source%20background%20image.jpg","width":1920,"height":900},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll","video":"https://www.youtube.com/watch?v=cyzh48XRS4M","loop":true,"lazyLoad":false},"mobile":{"type":"image","color":"bg-2","image":{"src":"https://ucarecdn.com/49834646-3a8e-4635-9f37-80d6582315ec/-/format/auto/","width":2813,"height":1312,"backupFileKey":"484137708004836523-1e8a2ba6-446d-4373-8682-13b666dfacae.png"},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll","video":"https://www.youtube.com/watch?v=cyzh48XRS4M","loop":true,"lazyLoad":false},"tablet":{"type":"image","color":"bg-2","image":{"src":"https://ucarecdn.com/159f5369-05c4-4954-b379-3b3b8f1431f1/-/format/auto/-/preview/3000x3000/-/quality/lighter/Source%20background%20image.jpg","width":1920,"height":900},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll","video":"https://www.youtube.com/watch?v=cyzh48XRS4M","loop":true,"lazyLoad":false}},"uid":"g7TIsuqz3f"}'
+      
+      class="g7TIsuqz3f group/hero flex flex-col self-center transition-colors duration-200 ease-in-out w-full"
+      style="--mb:var(--g-s-l);--mt-mobile:0px;--mb-mobile:30px;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--d:flex;--d-tablet:flex;--d-mobile:flex;--h:500px;--h-mobile:210px;--w:100%;--w-tablet:100%;--w-mobile:100%"
+    >
+      <div
+      class="relative flex flex-col overflow-hidden  justify-center"
+        style="--h:500px;--h-mobile:210px"
+      >
+        <div 
+          class="overflow-hidden w-full h-full"
+          style="--pos:absolute;--pos-tablet:absolute;--pos-mobile:absolute;clip:rect(0, auto, auto, 0)">
+          <div
+            aria-label="Background Image"
+            role="banner"
+            class="gp-hero-banner-bg absolute overflow-hidden inset-0 left-[var(--left)] top-[var(--top)] transition-transform flex items-center justify-center"
+            style="--bgc:var(--g-c-bg-2);--bgc-tablet:var(--g-c-bg-2);--bgc-mobile:var(--g-c-bg-2);--bgi:url(https://ucarecdn.com/159f5369-05c4-4954-b379-3b3b8f1431f1/-/format/auto/-/preview/3000x3000/-/quality/lighter/Source%20background%20image.jpg);--bgi-tablet:url(https://ucarecdn.com/159f5369-05c4-4954-b379-3b3b8f1431f1/-/format/auto/-/preview/3000x3000/-/quality/lighter/Source%20background%20image.jpg);--bgi-mobile:url({{ "484137708004836523-1e8a2ba6-446d-4373-8682-13b666dfacae.png" | asset_url }});--bgp:50% 50%;--bgp-tablet:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-tablet:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-tablet:no-repeat;--bgr-mobile:no-repeat;--duration:0.5s;--scale:110%;--top:0;--left:0;--pos:absolute;--bga:scroll;--pos-tablet:absolute;--bga-tablet:scroll;--pos-mobile:absolute;--bga-mobile:scroll"
+          > </div>
+        </div>
+        <div
+          aria-label="Overlay"
+          role="banner"
+          class="absolute inset-0 left-[var(--left)] top-[var(--top)] transition-all duration-300 group-hover/hero:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/hero:opacity-[var(--hvr-op,_var(--op))]"
+          style="--bgc:#121212;--top:0;--left:0;--op:0%"
+        > </div>
+        
+        
+      
+      
+    <div
+      id
+        style="--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%)"
+        class="!content-center mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gMmfA8Ezlg relative flex flex-col"
+    >
+      <div style="--mb:var(--g-s-l);--mt-mobile:130px;--mb-mobile:0px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%" class="ghWXF1Bqw8 ">
+      
+    <gp-countdown-timer
+     class="flex "
+     gp-data='{"behaviour":"standard","dateStandard":"2023-11-18T05:59:00.000Z","timeZone":"UTC+7","timerDaily":{"hours":10,"mins":30,"format":"am"},"timerEverygreen":{"days":0,"hours":3,"mins":0,"endTime":1699831131954,"startTime":1699805052794},"enableDay":true,"dayLabel":"Days","enableHour":true,"hourLabel":"Hours","enableMinute":true,"minuteLabel":"Minutes","enableSecond":true,"secondLabel":"Seconds","enableWeek":false,"weekLabel":"Weeks","redirectUrl":{"link":"#","target":"_self"}}'
+     style="--jc:left;--jc-mobile:center"
+     >
+      <div id="section-countdown" class="flex flex-wrap w-max !hidden" style="gap:15px;--jc:left;--jc-mobile:center">
+           
+          
+    <div
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-mobile:20px;--pr-mobile:20px;--pt-mobile:5px;--pb-mobile:5px;--bs:none;--bw:0px;--bc:transparent;--bg:#FEDBB0"
+    class="flex-1 text-center min-w-max !max-w-max">
+    
+    <div
+      id="day"
+        class=" "
+        style="--mb:0px;--c:var(--g-c-text-2, text-2)"
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-countdown-number"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--ls:0px;--lh:110%;--size:41px;--size-tablet:41px;--size-mobile:17px;--weight:bold;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        00
+        </div>
+      </div>
+    </div>
+    
+    <div
+      
+        class=" "
+        style="--c:var(--g-c-text-1, text-1)"
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:90%;--size:16px;--size-tablet:16px;--size-mobile:10px;--weight:bold;--c:var(--g-c-text-1, text-1);word-break:break-word"
+        >
+        Days
+        </div>
+      </div>
+    </div>
+    </div>
+    
+          
+    <div
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-mobile:20px;--pr-mobile:20px;--pt-mobile:5px;--pb-mobile:5px;--bs:none;--bw:0px;--bc:transparent;--bg:#FEDBB0"
+    class="flex-1 text-center min-w-max !max-w-max">
+    
+    <div
+      id="hour"
+        class=" "
+        style="--mb:0px;--c:var(--g-c-text-2, text-2)"
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-countdown-number"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--ls:0px;--lh:110%;--size:41px;--size-tablet:41px;--size-mobile:17px;--weight:bold;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        00
+        </div>
+      </div>
+    </div>
+    
+    <div
+      
+        class=" "
+        style="--c:var(--g-c-text-1, text-1)"
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:90%;--size:16px;--size-tablet:16px;--size-mobile:10px;--weight:bold;--c:var(--g-c-text-1, text-1);word-break:break-word"
+        >
+        Hours
+        </div>
+      </div>
+    </div>
+    </div>
+    
+          
+    <div
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-mobile:20px;--pr-mobile:20px;--pt-mobile:5px;--pb-mobile:5px;--bs:none;--bw:0px;--bc:transparent;--bg:#FEDBB0"
+    class="flex-1 text-center min-w-max !max-w-max">
+    
+    <div
+      id="minute"
+        class=" "
+        style="--mb:0px;--c:var(--g-c-text-2, text-2)"
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-countdown-number"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--ls:0px;--lh:110%;--size:41px;--size-tablet:41px;--size-mobile:17px;--weight:bold;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        00
+        </div>
+      </div>
+    </div>
+    
+    <div
+      
+        class=" "
+        style="--c:var(--g-c-text-1, text-1)"
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:90%;--size:16px;--size-tablet:16px;--size-mobile:10px;--weight:bold;--c:var(--g-c-text-1, text-1);word-break:break-word"
+        >
+        Minutes
+        </div>
+      </div>
+    </div>
+    </div>
+    
+          
+    <div
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-mobile:20px;--pr-mobile:20px;--pt-mobile:5px;--pb-mobile:5px;--bs:none;--bw:0px;--bc:transparent;--bg:#FEDBB0"
+    class="flex-1 text-center min-w-max !max-w-max">
+    
+    <div
+      id="second"
+        class=" "
+        style="--mb:0px;--c:var(--g-c-text-2, text-2)"
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-countdown-number"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--ls:0px;--lh:110%;--size:41px;--size-tablet:41px;--size-mobile:17px;--weight:bold;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        00
+        </div>
+      </div>
+    </div>
+    
+    <div
+      
+        class=" "
+        style="--c:var(--g-c-text-1, text-1)"
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:90%;--size:16px;--size-tablet:16px;--size-mobile:10px;--weight:bold;--c:var(--g-c-text-1, text-1);word-break:break-word"
+        >
+        Seconds
+        </div>
+      </div>
+    </div>
+    </div>
+    
+      </div>
+     </gp-countdown-timer>
+     <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-countdown.js" defer="defer"></script>
+  
+      </div>
+    </div>
+    </div>
+  
+    
+      </div>
+    </gp-hero-banner>
+  <div
+    
+    role="presentation"
+    class="group/image grXandvN2Q"
+    style="--mb:var(--g-s-l);--mb-mobile:15px;--d:none;--d-tablet:none;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--ta:center"
+    >
+    <figure
+      class="relative inline-block overflow-hidden align-middle pointer-events-none"
+      style="--shadow:none;--h:auto;--h-tablet:auto;--h-mobile:auto;border-radius:inherit"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="inline-block w-full h-full max-w-full flex gp_lazyload"
+    data-src="{{ "484137708004836523-7af65c11-ead3-4e9b-bc48-ed28649416ce.png" | asset_url }}" data-srcset="{{ '484137708004836523-7af65c11-ead3-4e9b-bc48-ed28649416ce.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-7af65c11-ead3-4e9b-bc48-ed28649416ce.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-7af65c11-ead3-4e9b-bc48-ed28649416ce.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="6250" height="1176" alt="Alt image" priority
+    sizes="100vw"
+    style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%"
+  />
+      </div>
+    </figure>
+  </div><div
+    
+    role="presentation"
+    class="group/image gs_3yJEox_"
+    style="--mb:var(--g-s-l);--mb-mobile:30px;--d:block;--d-tablet:block;--d-mobile:none;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--ta:center"
+    >
+    <figure
+      class="relative inline-block overflow-hidden align-middle pointer-events-none"
+      style="--shadow:none;--h:auto;--h-tablet:auto;--h-mobile:auto;border-radius:inherit"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="inline-block w-full h-full max-w-full flex gp_lazyload"
+    data-src="{{ "484137708004836523-d65eda27-b9d8-4d03-9b3b-99f3ba982eb0.png" | asset_url }}" data-srcset="{{ '484137708004836523-d65eda27-b9d8-4d03-9b3b-99f3ba982eb0.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-d65eda27-b9d8-4d03-9b3b-99f3ba982eb0.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-d65eda27-b9d8-4d03-9b3b-99f3ba982eb0.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="2000" height="353" alt="Alt image" priority
+    sizes="100vw"
+    style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%"
+  />
+      </div>
+    </figure>
+  </div>
+    </div>
+    </div>
+  
+            </section>
+          
+    
+{% schema %}
+  {
+    
+    "name": "Section 1",
+    "tag": "section",
+    "class": "gps-486897167886189783 gps gpsi",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Section design by GemPages. [Click here to start design](https://builder.gempages.net/instant/hyperlink/edit?type=section&section_id=486897167886189783&template_id=486894481803576535)"
+      }
+    ],
+    "blocks": [{"type": "@app"}]
+  }
+{% endschema %}
