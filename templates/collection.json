@@ -67,7 +67,7 @@
         "template--19876927439161__3ab34290-2132-42cd-b9fa-c0d18501dae0-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bundles & Save up to 30% + Free Shipping<\/p>"
+            "text": "<p>Bundle & Save up to 30% + Free Shipping<\/p>"
           }
         },
         "template--19876927439161__3ab34290-2132-42cd-b9fa-c0d18501dae0-button-1": {
@@ -87,13 +87,17 @@
         "template--19876927439161__3ab34290-2132-42cd-b9fa-c0d18501dae0-text-1",
         "template--19876927439161__3ab34290-2132-42cd-b9fa-c0d18501dae0-button-1"
       ],
+      "custom_css": [
+        "h2 {font-size: 22px;}",
+        "h6 {font-size: 20px;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "product-grid": {
