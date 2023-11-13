@@ -172,11 +172,11 @@
     
         {%- liquid
           if request.page_type != 'product'
-            assign product = all_products['lrc-flavor-set']
+            assign product = all_products['sugar-cookie-the-long-run-2-pack']
             if product == empty or product == null
               paginate collections.all.products by 100000
                 for item in collections.all.products 
-                  if item.id == '8933329109305'
+                  if item.id == '8933389041977'
                     assign product = item
                   endif
                 endfor
@@ -187,7 +187,7 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId = 47501061423417 -%}
+      {%- assign initVariantId = 47501466304825 -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
       {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
       {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
@@ -1330,237 +1330,14 @@
     </div>
     </div>
   
-    
-      
-      
-    <div
-      parentTag="Col" id="gT15pFFXQC"
-        style="--mb:var(--g-s-l);--d:grid;--d-tablet:grid;--d-mobile:grid;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--cg:32px;--pc:start;--gtc:minmax(0, 7fr) minmax(0, 5fr);--gtc-mobile:minmax(0, 7fr) minmax(0, 5fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gT15pFFXQC mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      tag="Col" label="Block" type="component"
-      style="--jc:center;--jc-tablet:center"
-      class="gQL9wWL_Vk relative flex flex-col"
-    >
-      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mt-mobile:0px;--mb-mobile:0px;--pl-mobile:5px;--mb-tablet:0px" class="gWSEdEXfPy ">
-      
-  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-stock-counter.js" defer="defer"></script>
-    {%- liquid 
-      assign current_variant = variant
-      assign available = current_variant.available | default: false
-      assign inventory_management = current_variant.inventory_management | default: nil
-      assign inventory_policy = current_variant.inventory_policy | default: 'deny'
-      assign inventory_quantity = current_variant.inventory_quantity | default: 0
-
-      assign check_display = true
-
-      if check_display == true
-        assign should_display = true
-      elsif true and inventory_quantity > 0 and inventory_quantity < 5
-        assign should_display = true
-      else
-        assign should_display = false
-      endif
-
-      if false and available
-        assign show_progress_bar = true
-      else
-        assign show_progress_bar = false
-      endif
-    -%}
-
-    <gp-product-stock-counter data-visible="{{ should_display }}" gp-setting='{"displayByDefault":true,"displayProgressBar":false,"scarcityThreshold":5,"remainingQuantity":10,"quantitySource":"auto","template":"Inventory Report: Only %number% Remaining","outOfStockMessage":"Inventory Report: OUT OF STOCK","continueSelling":"Inventory Report: Stock Levels Low","unlimitedQuantityMessage":"Inventory Report: Stock Levels Okay","color":"text-1"}' class="data-[visible=true]:block data-[visible=false]:hidden " style="--ta:left;--ta-mobile:center">
-        <div
-          class="inline-block"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--c:var(--g-c-text-1, text-1)"
-        >
-          <div class="flex items-baseline">
-            
-            <p
-              data-slot-type="message"
-              class=""
-              style="--ff:var(--g-font-Inter, Inter);--lh:130%;--size:13px;--size-tablet:11px;--size-mobile:10px;--weight:bold;--c:var(--g-c-text-1, text-1);--tt:none;--tdl:underline"
-            >
-            {% if auto == "manual" %}
-              {% if available == false or inventory_quantity <= 0 %}
-                Inventory Report: OUT OF STOCK
-              {% else %}
-                Inventory Report: Only <span class='text-g-text-1'>{{ inventory_quantity }}</span> Remaining
-              {% endif %}
-            {% else %}
-              {% if inventory_management != "shopify" and inventory_quantity <= 0%}
-                Inventory Report: Stock Levels Okay
-              {% elsif available == false %}
-                Inventory Report: OUT OF STOCK
-              {% elsif available and inventory_policy == 'continue' and true and inventory_quantity <= 0 %}
-                Inventory Report: Stock Levels Low
-              {% else %}
-                Inventory Report: Only <span class='text-g-text-1'>{{ inventory_quantity }}</span> Remaining
-              {% endif %}
-            {% endif %}
-            </p>
-          </div>
-          
-          <div
-          data-slot-type="progress-bar"
-          data-visible="{{ show_progress_bar }}"
-            style="--h:5px;--h-tablet:5px;--h-mobile:5px;--bg:linear-gradient(90deg, #eee 50%, transparent 50%);--bgc:#FCB25A;--bgp:21% center"
-            class="relative mt-2 w-full -scale-100 data-[visible=true]:block data-[visible=false]:hidden rounded-md !bg-[length:200%]"
-          ></div>
-        </div>
-      </gp-product-stock-counter>
-  
-      </div>
-    </div><div
-      tag="Col" label="Block" type="component"
-      style="--jc:center;--jc-tablet:center"
-      class="gzBw0mPOEU relative flex flex-col"
-    >
-      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pos:static;--radius:var(--g-radius-none);--mb:0px;--pb:0px;--mb-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mb-tablet:0px;--pb-tablet:0px" class="glNUhd-iN8 ">
-      
-  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-tag.js" defer="defer"></script>
-  {% liquid 
-    assign price = variant.price | times: 1.0
-    assign salePrice = variant.compare_at_price | times: 1.0
-    assign priceSave = salePrice | minus: price
-    if salePrice == null or price == null
-      assign pricePercentage = 'Bundle &amp; Save ' | append: '0%' | append: ' '
-    else 
-         assign salePercent = priceSave | divided_by: salePrice | times: 100  | round
-                assign pricePercentage = 'Bundle &amp; Save ' | append: salePercent | append: '%' | append: ' '
-              
-    endif
-  %}
-
-   <gp-product-tag
-    data-disabled="{%- if priceSave > 0 -%} false {%- else -%} true {%- endif -%}"
-    gp-data='{"setting":{"customContent":{"prefix":"Bundle &amp; Save","suffix":"","unit":"percentage"}}, "id": "glNUhd-iN8", "locale": "{{shop.locale}}", "currency": "{{shop.currency}}", "moneyFormat": "{{ shop.money_format | replace: '"', '\"' | escape }}"}'
-    class="block data-[disabled=true]:hidden "
-    style="--ta:right;--ta-tablet:right;--ta-mobile:right"
-  >
- 
-     <div class="inline-flex flex-wrap items-end gap-3">
-       <div
-         class="inline-block"
-         style="--bs:none;--bw:0px;--bc:transparent;--bg:#1BC5D2;--bblr:20px;--bbrr:20px;--btlr:20px;--btrr:20px;--pl:10px;--pr:10px;--pt:0px;--pb:0px;--pl-tablet:10px;--pr-tablet:10px;--pt-tablet:0px;--pb-tablet:0px;--pl-mobile:10px;--pr-mobile:10px;--pt-mobile:0px;--pb-mobile:0px"
-       >
-         
-    <div
-      id="p-tag-glNUhd-iN8"
-        class=" "
-        style=""
-      >
-      <div class="" style="">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
-          style="--w:100%;--ta:right;--ta-tablet:right;--ta-mobile:right;--ff:var(--g-font-Inter, Inter);--lh:150%;--size:12px;--size-tablet:12px;--size-mobile:12px;--weight:bold;--c:#FFFFFF;word-break:break-word"
-        >
-        {{pricePercentage}}
-        </div>
-      </div>
-    </div>
-       </div>
-     </div>
-
- </gp-product-tag>
-   
-      </div>
-      
-      
-    <div
-      parentTag="Col" id="gPEk-OF_qw"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--mb-tablet:0px;--cg:0px;--cg-mobile:5px;--pc:end;--pc-tablet:end;--pc-mobile:end;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gPEk-OF_qw mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
-      style="--jc:center;--jc-tablet:center;--jc-mobile:center"
-      class="g0m2BIscW0 relative flex flex-col"
-    >
-      
-  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-price.js" defer="defer"></script>
-      <gp-product-price
-        gp-data='{"priceType":"compare","uid":"gxDeY4PzxV","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
-        
-        class=" data-[hidden=true]:hidden"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px"
-        data-hidden="{% if variant.compare_at_price > variant.price and variant.compare_at_price >= 0 %}false{% else %}true{% endif %}"
-      >
-        
-    <div
-      id="p-price-gxDeY4PzxV"
-        class=" "
-        style=""
-      >
-      <div class="" style="">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price line-through decoration-g-text-1 text-g-text-1"
-          style="--w:100%;--tdc:text-1;--tdt:1px;--ta:right;--ta-mobile:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:15px;--size-tablet:12px;--size-mobile:13px;--weight:bold;word-break:break-word"
-        >
-        
-                  {% if variant.compare_at_price  %} 
-                    {{ variant.compare_at_price | money}}
-                  {% endif %}
-                
-        </div>
-      </div>
-    </div>
-      </gp-product-price>
-  
-    </div><div
-      label="Block" tag="Col" type="component"
-      style="--jc:center;--jc-tablet:center;--jc-mobile:center"
-      class="gaYakmSxqb relative flex flex-col"
-    >
-      
-  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-price.js" defer="defer"></script>
-      <gp-product-price
-        gp-data='{"priceType":"regular","uid":"ggx95IAGD_","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
-        
-        class=" data-[hidden=true]:hidden"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pl:var(--g-s-s);--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pl-mobile:0px;--pr-mobile:0px;--mb-tablet:0px;--pl-tablet:5px"
-        data-hidden="false"
-      >
-        
-    <div
-      id="p-price-ggx95IAGD_"
-        class=" "
-        style=""
-      >
-      <div class="" style="">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price decoration-g-text-1 text-g-text-2"
-          style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--ta-mobile:left;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:18px;--size-tablet:15px;--size-mobile:17px;--weight:bold;word-break:break-word"
-        >
-        
-                  {% if variant.price %} 
-                    {{ variant.price | money}}
-                  {% endif %}
-                
-        </div>
-      </div>
-    </div>
-      </gp-product-price>
-  
-    </div>
-    </div>
-  
-    
-    </div>
-    </div>
-  
-    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:20px;--mb-mobile:0px;--pl-mobile:5px;--pb-mobile:20px" class="gnLuXueCAn ">
+    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:20px;--mb-mobile:20px;--pl-mobile:5px;--pb-mobile:20px" class="gnLuXueCAn ">
       
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-variantV2.js" defer="defer"></script>
   <gp-product-variants
     class=""
     has-pre-selected="true"
     gp-data='{
-      "setting":{"blankText":"Please select an option","column":{"desktop":1},"combineFullWidth":{"desktop":true},"combineHeight":"45px","combineWidth":{"desktop":"400px"},"hasPreSelected":true,"label":true,"layout":{"desktop":"vertical","mobile":"vertical"},"optionAlign":{"desktop":"left"},"optionType":"singleOption","price":true,"showAsSwatches":true,"soldOutMark":true,"variantPresets":[{"optionName":"base","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"45px","spacing":"16px","width":{}}}},{"optionName":"Size","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"35px","spacing":"15px","width":{"desktop":"30%","mobile":"30%","tablet":"30%"}}}},{"hide":false,"optionName":"Form","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"200px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"35px","spacing":"15px","width":{"desktop":"45%","mobile":"170px","tablet":"200px"}}}},{"hide":true,"optionName":"Style","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"35px","spacing":"16px","width":{"desktop":"30%","mobile":"%","tablet":"%"}}}},{"optionName":"Speedwork Set (Form)","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"30px","spacing":"15px","width":{"desktop":"30%","tablet":"px","mobile":"30%"}}}},{"optionName":"LRC x ALWRLD Top (Style)","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"30px","spacing":"15px","width":{"desktop":"30%","tablet":"px","mobile":"40%"}}}},{"optionName":"LRC x ALWRLD Top (Size)","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"30px","spacing":"15px","width":{"desktop":"15%","tablet":"px","mobile":"15%"}}}}]},
+      "setting":{"blankText":"Please select an option","column":{"desktop":1},"combineFullWidth":{"desktop":true},"combineHeight":"45px","combineWidth":{"desktop":"400px"},"hasPreSelected":true,"label":true,"layout":{"desktop":"vertical","mobile":"vertical"},"optionAlign":{"desktop":"left"},"optionType":"singleOption","price":true,"showAsSwatches":true,"soldOutMark":true,"variantPresets":[{"optionName":"base","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"45px","spacing":"16px","width":{}}}},{"optionName":"Size","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"35px","spacing":"15px","width":{"desktop":"30%","mobile":"30%","tablet":"30%"}}}},{"hide":false,"optionName":"Form","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"200px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"35px","spacing":"15px","width":{"desktop":"45%","mobile":"170px","tablet":"200px"}}}},{"hide":true,"optionName":"Style","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"35px","spacing":"16px","width":{"desktop":"30%","mobile":"%","tablet":"%"}}}},{"optionName":"Speedwork Set (Form)","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"30px","spacing":"15px","width":{"desktop":"30%","tablet":"px","mobile":"30%"}}}},{"optionName":"LRC x ALWRLD Top (Style)","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"30px","spacing":"15px","width":{"desktop":"30%","tablet":"px","mobile":"40%"}}}},{"optionName":"LRC x ALWRLD Top (Size)","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"30px","spacing":"15px","width":{"desktop":"15%","tablet":"px","mobile":"15%"}}}},{"optionName":"The Long Run - Dark Roast (Form)","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"30px","spacing":"15px","width":{"mobile":"40%","tablet":"px"}}}}]},
       "styles":{"align":{"desktop":"left","mobile":"left"},"dropdownItemWidth":{"desktop":"fill","mobile":"fill","tablet":"fill"},"fixedDropdownWidth":{"desktop":"240px"},"fullWidth":{"desktop":true,"mobile":true},"labelColor":"text-2","labelGap":"0px","labelTypo":{"attrs":{"bold":true,"color":"text-1"},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"12px","mobile":"12px","tablet":"14px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","letterSpacing":"0px","lineHeight":"180%"},"type":"paragraph-2"},"marginBottom":{"desktop":"25px","mobile":"25px"},"optionBgColor":{"active":"#094E54","hover":"#094E54","normal":"#257A84"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"1","color":"#5E6060","isCustom":true,"width":"1px 1px 1px 1px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"#5E6060","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"#5E6060","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"active":{"bblr":"30px","bbrr":"30px","btlr":"30px","btrr":"30px","radiusType":"custom"},"hover":{"bblr":"30px","bbrr":"30px","btlr":"30px","btrr":"30px","radiusType":"custom"},"normal":{"bblr":"30px","bbrr":"30px","btlr":"30px","btrr":"30px","radiusType":"custom"}},"optionShadow":{"normal":{"angle":90,"blur":"12px","color":"rgba(0, 0, 0, 0.20)","distance":"4px","spread":"0px","type":"shadow-1"}},"optionSpacing":"30px","optionTextColor":{"active":"#F0F4F8","hover":"#F0F4F8","normal":"#FFFFFF"},"optionTypo":{"attrs":{"bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"12px","mobile":"12px","tablet":"14px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","letterSpacing":"0px","lineHeight":"180%"},"type":"paragraph-2"},"swatchAutoWidth":{"desktop":true},"swatchHeight":{"desktop":"45px"},"swatchItemWidth":{"desktop":"auto"},"swatchSpacing":"var(--g-s-m)","swatchWidth":{"desktop":"80px"},"width":{"desktop":"400px"}}, 
       "variants":{{product.variants | json | escape}},
       "optionsWithValues": {{product.options_with_values | json | escape}},
@@ -2041,7 +1818,230 @@
   </gp-product-variants>
   
    
-      </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--pt:30px;--pb:30px;--pt-mobile:25px;--pb-mobile:20px" class="gLBSu8V45t ">
+      </div>
+      
+      
+    <div
+      parentTag="Col" id="gT15pFFXQC"
+        style="--mb:var(--g-s-l);--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--cg:32px;--pc:start;--gtc:minmax(0, 7fr) minmax(0, 5fr);--gtc-mobile:minmax(0, 7fr) minmax(0, 5fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gT15pFFXQC mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:center;--jc-tablet:center"
+      class="gQL9wWL_Vk relative flex flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mt-mobile:0px;--mb-mobile:0px;--pl-mobile:5px;--mb-tablet:0px" class="gWSEdEXfPy ">
+      
+  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-stock-counter.js" defer="defer"></script>
+    {%- liquid 
+      assign current_variant = variant
+      assign available = current_variant.available | default: false
+      assign inventory_management = current_variant.inventory_management | default: nil
+      assign inventory_policy = current_variant.inventory_policy | default: 'deny'
+      assign inventory_quantity = current_variant.inventory_quantity | default: 0
+
+      assign check_display = true
+
+      if check_display == true
+        assign should_display = true
+      elsif true and inventory_quantity > 0 and inventory_quantity < 5
+        assign should_display = true
+      else
+        assign should_display = false
+      endif
+
+      if false and available
+        assign show_progress_bar = true
+      else
+        assign show_progress_bar = false
+      endif
+    -%}
+
+    <gp-product-stock-counter data-visible="{{ should_display }}" gp-setting='{"displayByDefault":true,"displayProgressBar":false,"scarcityThreshold":5,"remainingQuantity":10,"quantitySource":"auto","template":"Inventory Report: Only %number% Remaining","outOfStockMessage":"Inventory Report: OUT OF STOCK","continueSelling":"Inventory Report: Stock Levels Low","unlimitedQuantityMessage":"Inventory Report: Stock Levels Okay","color":"text-1"}' class="data-[visible=true]:block data-[visible=false]:hidden " style="--ta:left;--ta-mobile:center">
+        <div
+          class="inline-block"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--c:var(--g-c-text-1, text-1)"
+        >
+          <div class="flex items-baseline">
+            
+            <p
+              data-slot-type="message"
+              class=""
+              style="--ff:var(--g-font-Inter, Inter);--lh:130%;--size:13px;--size-tablet:11px;--size-mobile:10px;--weight:bold;--c:var(--g-c-text-1, text-1);--tt:none;--tdl:underline"
+            >
+            {% if auto == "manual" %}
+              {% if available == false or inventory_quantity <= 0 %}
+                Inventory Report: OUT OF STOCK
+              {% else %}
+                Inventory Report: Only <span class='text-g-text-1'>{{ inventory_quantity }}</span> Remaining
+              {% endif %}
+            {% else %}
+              {% if inventory_management != "shopify" and inventory_quantity <= 0%}
+                Inventory Report: Stock Levels Okay
+              {% elsif available == false %}
+                Inventory Report: OUT OF STOCK
+              {% elsif available and inventory_policy == 'continue' and true and inventory_quantity <= 0 %}
+                Inventory Report: Stock Levels Low
+              {% else %}
+                Inventory Report: Only <span class='text-g-text-1'>{{ inventory_quantity }}</span> Remaining
+              {% endif %}
+            {% endif %}
+            </p>
+          </div>
+          
+          <div
+          data-slot-type="progress-bar"
+          data-visible="{{ show_progress_bar }}"
+            style="--h:5px;--h-tablet:5px;--h-mobile:5px;--bg:linear-gradient(90deg, #eee 50%, transparent 50%);--bgc:#FCB25A;--bgp:21% center"
+            class="relative mt-2 w-full -scale-100 data-[visible=true]:block data-[visible=false]:hidden rounded-md !bg-[length:200%]"
+          ></div>
+        </div>
+      </gp-product-stock-counter>
+  
+      </div>
+    </div><div
+      tag="Col" label="Block" type="component"
+      style="--jc:center;--jc-tablet:center"
+      class="gzBw0mPOEU relative flex flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pos:static;--radius:var(--g-radius-none);--mb:0px;--pb:0px;--mb-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mb-tablet:0px;--pb-tablet:0px" class="glNUhd-iN8 ">
+      
+  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-tag.js" defer="defer"></script>
+  {% liquid 
+    assign price = variant.price | times: 1.0
+    assign salePrice = variant.compare_at_price | times: 1.0
+    assign priceSave = salePrice | minus: price
+    if salePrice == null or price == null
+      assign pricePercentage = 'Bundle &amp; Save ' | append: '0%' | append: ' '
+    else 
+         assign salePercent = priceSave | divided_by: salePrice | times: 100  | round
+                assign pricePercentage = 'Bundle &amp; Save ' | append: salePercent | append: '%' | append: ' '
+              
+    endif
+  %}
+
+   <gp-product-tag
+    data-disabled="{%- if priceSave > 0 -%} false {%- else -%} true {%- endif -%}"
+    gp-data='{"setting":{"customContent":{"prefix":"Bundle &amp; Save","suffix":"","unit":"percentage"}}, "id": "glNUhd-iN8", "locale": "{{shop.locale}}", "currency": "{{shop.currency}}", "moneyFormat": "{{ shop.money_format | replace: '"', '\"' | escape }}"}'
+    class="block data-[disabled=true]:hidden "
+    style="--ta:right;--ta-tablet:right;--ta-mobile:right"
+  >
+ 
+     <div class="inline-flex flex-wrap items-end gap-3">
+       <div
+         class="inline-block"
+         style="--bs:none;--bw:0px;--bc:transparent;--bg:#1BC5D2;--bblr:20px;--bbrr:20px;--btlr:20px;--btrr:20px;--pl:10px;--pr:10px;--pt:0px;--pb:0px;--pl-tablet:10px;--pr-tablet:10px;--pt-tablet:0px;--pb-tablet:0px;--pl-mobile:10px;--pr-mobile:10px;--pt-mobile:0px;--pb-mobile:0px"
+       >
+         
+    <div
+      id="p-tag-glNUhd-iN8"
+        class=" "
+        style=""
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A']"
+          style="--w:100%;--ta:right;--ta-tablet:right;--ta-mobile:right;--ff:var(--g-font-Inter, Inter);--lh:150%;--size:12px;--size-tablet:12px;--size-mobile:12px;--weight:bold;--c:#FFFFFF;word-break:break-word"
+        >
+        {{pricePercentage}}
+        </div>
+      </div>
+    </div>
+       </div>
+     </div>
+
+ </gp-product-tag>
+   
+      </div>
+      
+      
+    <div
+      parentTag="Col" id="gPEk-OF_qw"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--mb-tablet:0px;--cg:0px;--cg-mobile:5px;--pc:end;--pc-tablet:end;--pc-mobile:end;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gPEk-OF_qw mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      label="Block" tag="Col" type="component"
+      style="--jc:center;--jc-tablet:center;--jc-mobile:center"
+      class="g0m2BIscW0 relative flex flex-col"
+    >
+      
+  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-price.js" defer="defer"></script>
+      <gp-product-price
+        gp-data='{"priceType":"compare","uid":"gxDeY4PzxV","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
+        
+        class=" data-[hidden=true]:hidden"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px"
+        data-hidden="{% if variant.compare_at_price > variant.price and variant.compare_at_price >= 0 %}false{% else %}true{% endif %}"
+      >
+        
+    <div
+      id="p-price-gxDeY4PzxV"
+        class=" "
+        style=""
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price line-through decoration-g-text-1 text-g-text-1"
+          style="--w:100%;--tdc:text-1;--tdt:1px;--ta:right;--ta-mobile:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:15px;--size-tablet:12px;--size-mobile:13px;--weight:bold;word-break:break-word"
+        >
+        
+                  {% if variant.compare_at_price  %} 
+                    {{ variant.compare_at_price | money}}
+                  {% endif %}
+                
+        </div>
+      </div>
+    </div>
+      </gp-product-price>
+  
+    </div><div
+      label="Block" tag="Col" type="component"
+      style="--jc:center;--jc-tablet:center;--jc-mobile:center"
+      class="gaYakmSxqb relative flex flex-col"
+    >
+      
+  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-price.js" defer="defer"></script>
+      <gp-product-price
+        gp-data='{"priceType":"regular","uid":"ggx95IAGD_","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
+        
+        class=" data-[hidden=true]:hidden"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--pl:var(--g-s-s);--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pl-mobile:0px;--pr-mobile:0px;--mb-tablet:0px;--pl-tablet:5px"
+        data-hidden="false"
+      >
+        
+    <div
+      id="p-price-ggx95IAGD_"
+        class=" "
+        style=""
+      >
+      <div class="" style="">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price decoration-g-text-1 text-g-text-2"
+          style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--ta-mobile:left;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:18px;--size-tablet:15px;--size-mobile:17px;--weight:bold;word-break:break-word"
+        >
+        
+                  {% if variant.price %} 
+                    {{ variant.price | money}}
+                  {% endif %}
+                
+        </div>
+      </div>
+    </div>
+      </gp-product-price>
+  
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--pt:30px;--pb:30px;--pt-mobile:25px;--pb-mobile:20px" class="gLBSu8V45t ">
       
     <div
       class="flex justify-center mobile:justify-center"
