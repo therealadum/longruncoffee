@@ -89,7 +89,7 @@
       ],
       "custom_css": [
         "h2 {font-size: 22px;}",
-        "h6 {font-size: 20px;}"
+        " {font-size: 17px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
