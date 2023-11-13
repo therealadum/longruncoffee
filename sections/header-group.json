@@ -57,7 +57,7 @@
       ],
       "settings": {
         "logo_position": "middle-left",
-        "menu": "main-menu",
+        "menu": "black-friday",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": false,
