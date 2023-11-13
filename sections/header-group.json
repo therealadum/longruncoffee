@@ -8,14 +8,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Free Shipping $69+",
-            "link": "shopify:\/\/collections\/coffee"
+            "text": "Bundles Week - Save up to 30%",
+            "link": "shopify:\/\/pages\/untitled-nov-11-16-22-03"
           }
         },
         "b2d8484d-b7d0-434a-a97f-b199fb49714d": {
           "type": "announcement",
           "settings": {
-            "text": "100% Money Back Guarantee",
+            "text": "Free Shipping on Bundles",
             "link": "shopify:\/\/collections\/coffee"
           }
         },
