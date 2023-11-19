@@ -155,6 +155,8 @@
               "
             >
               {%- for product in collection.products -%}
+{% if product.handle contains "docapp-free-gift-" %}{% continue %}{% endif %}
+
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
