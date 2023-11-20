@@ -21,6 +21,9 @@
     },
     "b3f7863a-00ab-42fd-8e02-2cb806797f13": {
       "type": "featured-collection",
+      "custom_css": [
+
+      ],
       "settings": {
         "title": "Is this what you're searching for?",
         "heading_size": "h2",
@@ -49,6 +52,10 @@
     },
     "adf37cbe-14f3-40bb-ad17-16ce908cd684": {
       "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
       "settings": {
         "heading": "Latest News",
         "heading_size": "h1",
