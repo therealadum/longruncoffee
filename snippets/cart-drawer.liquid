@@ -7,6 +7,20 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
+
+// Send an AJAX request to the Shopify API to retrieve the latest cart information
+fetch('/cart.js')
+.then((response) => response.json())
+.then((cart) => {
+// Update the cart drawer with the latest cart information
+updateCartDrawer(cart);
+});
+
+function updateCartDrawer(cart) {
+// Update the cart drawer with the latest cart information
+}
+
+
 <style>
   .drawer {
     visibility: hidden;
