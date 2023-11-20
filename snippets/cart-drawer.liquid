@@ -18,6 +18,7 @@
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
+ 
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
@@ -27,6 +28,17 @@
       aria-label="{{ 'sections.cart.title' | t }}"
       tabindex="-1"
     >
+
+fetch('/cart.js')
+.then((response) => response.json())
+.then((cart) => {
+updateCartDrawer(cart);
+});
+
+function updateCartDrawer(cart) {
+}
+
+      
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
@@ -81,6 +93,7 @@
           class="cart__contents cart-drawer__form"
           method="post"
         >
+          
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
