@@ -248,8 +248,8 @@
       }
     },
     "404": {
-      "title": "We misplaced it. ",
-      "subtext": "Ope, there's nothing here"
+      "title": "Ope, there's nothing here",
+      "subtext": "Try searching again, or click below to get back on track"
     }
   },
   "sections": {
