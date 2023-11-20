@@ -29,14 +29,7 @@
       tabindex="-1"
     >
 
-fetch('/cart.js')
-.then((response) => response.json())
-.then((cart) => {
-updateCartDrawer(cart);
-});
 
-function updateCartDrawer(cart) {
-}
 
       
       {%- if cart == empty -%}
