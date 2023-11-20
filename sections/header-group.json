@@ -35,7 +35,7 @@
       ],
       "custom_css": [
         ".announcement-bar__message {padding: 0px 0 !important; font-size: 15px !important;}",
-        "@media (max-width: 767px) {.announcement-bar__message {font-size: 10px !important; }}"
+        "@media (max-width: 767px) {.announcement-bar__message {font-size: 12px !important; }}"
       ],
       "settings": {
         "color_scheme": "scheme-4195ea24-5d06-4290-9f03-c1b5b16a68f1",
@@ -50,7 +50,7 @@
       "custom_css": [
         "h3 {font-size: 20px;}",
         ".header__heading-logo {width: 80px !important;}",
-        "@media (max-width: 749px) {.menu-drawer__menu-item {font-size: 20px !important; } .header__icon--cart {width: 50px !important; } .header__icon--menu {width: 0px !important; } .header__icon--search {width: 20px !important; } .header__icon--account {width: 20px !important; } .header__icon--cart {width: 50px !important;}.header__icon--menu {width: 0px !important;}.header__icon--search {width: 20px !important;}.header__icon--account {width: 20px !important;}}"
+        "@media (max-width: 749px) {.menu-drawer__menu-item {font-size: 20px !important; } .header__icon--cart {width: 50px !important; } .header__icon--menu {width: 0px !important; } .header__icon--search {width: 20px !important; } .header__icon--account {width: 20px !important; } .header__icon--cart {width: 50px !important; } .header__icon--menu {width: 0px !important; } .header__icon--search {width: 20px !important; } .header__icon--account {width: 20px !important; }}"
       ],
       "settings": {
         "logo_position": "middle-left",
