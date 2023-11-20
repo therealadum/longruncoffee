@@ -248,8 +248,8 @@
       }
     },
     "404": {
-      "title": "Page not found",
-      "subtext": "404"
+      "title": "We misplaced it. ",
+      "subtext": "Ope, there's nothing here"
     }
   },
   "sections": {
