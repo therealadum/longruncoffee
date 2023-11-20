@@ -5,10 +5,12 @@
       "settings": {
         "columns_desktop": 4,
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_filtering": true,
+        "filter_type": "horizontal",
         "enable_sorting": true,
         "article_show_date": true,
         "article_show_author": false,
@@ -16,9 +18,56 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "b3f7863a-00ab-42fd-8e02-2cb806797f13": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Is this what you're searching for?",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "coffee",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "adf37cbe-14f3-40bb-ad17-16ce908cd684": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Latest News",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-2",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "b3f7863a-00ab-42fd-8e02-2cb806797f13",
+    "adf37cbe-14f3-40bb-ad17-16ce908cd684"
   ]
 }
