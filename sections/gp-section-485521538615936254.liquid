@@ -2162,7 +2162,7 @@
       assign inventory_quantity = variant.inventory_quantity | default: 0
     -%}
     <gp-product-button
-      gp-data='{"setting":{"actionEffect":"continue-shopping","errorMessage":"Cannot add product to cart","successMessage":"Ready To Run!","label":"Add To Cart","outOfStockLabel":"Out of Stock","errorType":"built-in","customURL":{"link":"/cart","target":"_self"}},"styles":{"errorTypo":{"attrs":{"bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"15px","mobile":"12px","tablet":"14px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-2"},"successTypo":{"attrs":{"bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"20px","mobile":"15px","tablet":"14px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-2"}},"disabled":"{{variant.available}}","variantID":"{{variant.id}}","totalVariant":"{{product.variants.size}}"}'
+      gp-data='{"setting":{"actionEffect":"open-cart-drawer","errorMessage":"Cannot add product to cart","successMessage":"Ready To Run!","label":"Add To Cart","outOfStockLabel":"Out of Stock","errorType":"built-in","customURL":{"link":"/cart","target":"_self"}},"styles":{"errorTypo":{"attrs":{"bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"15px","mobile":"12px","tablet":"14px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-2"},"successTypo":{"attrs":{"bold":true},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"20px","mobile":"15px","tablet":"14px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-2"}},"disabled":"{{variant.available}}","variantID":"{{variant.id}}","totalVariant":"{{product.variants.size}}"}'
     >
         <div
     
@@ -2197,7 +2197,7 @@
     }
   </style>
     <button
-      type="button" data-id="gQfS9XRtkB" aria-label="Add To Cart"
+      type="submit" data-id="gQfS9XRtkB" aria-label="Add To Cart"
       data-state="idle"
       class="gQfS9XRtkB gp-button-base rounded-none max-w-full relative group inline-flex items-center justify-center no-underline transition-colors duration-300 disabled:btn-disabled disabled:opacity-30 disabled:pointer-events-none text-g-text-3 gp-button-atc"
       style="--hvr-bg:#CB7A22;--bg:#E69948;--bblr:30px;--bbrr:30px;--btlr:30px;--btrr:30px;--shadow:none;--c:var(--g-c-text-3, text-3);--w:100%;--w-tablet:100%;--w-mobile:100%;--h:35px;--h-tablet:35px;--h-mobile:35px;--pl:24px;--pr:24px;--pt:0px;--pb:0px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:0px;--pb-mobile:0px;--tt:default;--ff:var(--g-font-Inter, Inter);--ls:0px;--lh:180%;--size:16px;--size-tablet:16px;--size-mobile:15px;--weight:bold"
