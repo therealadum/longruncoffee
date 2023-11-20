@@ -34,7 +34,7 @@
         "149f07e0-7df4-4232-9510-074fdbeefc61"
       ],
       "custom_css": [
-        ".announcement-bar__message {padding: 0px 0 !important; font-size: 15px !important;}",
+        ".announcement-bar__message {padding: 0px 0 !important; font-size: 16px !important;}",
         "@media (max-width: 767px) {.announcement-bar__message {font-size: 12px !important; }}"
       ],
       "settings": {
