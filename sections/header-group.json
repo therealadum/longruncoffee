@@ -49,11 +49,8 @@
       "type": "header",
       "custom_css": [
         "h3 {font-size: 20px;}",
-        ".header__icon--cart {width: 50px !important;}",
-        ".header__icon--menu {width: 0px !important;}",
-        ".header__icon--search {width: 20px !important;}",
         ".header__heading-logo {width: 80px !important;}",
-        "@media (max-width: 749px) {.menu-drawer__menu-item {font-size: 20px !important; }}"
+        "@media (max-width: 749px) {.menu-drawer__menu-item {font-size: 20px !important; } .header__icon--cart {width: 50px !important; } .header__icon--menu {width: 0px !important; } .header__icon--search {width: 20px !important; } .header__icon--account {width: 20px !important; } .header__icon--cart {width: 50px !important;}.header__icon--menu {width: 0px !important;}.header__icon--search {width: 20px !important;}.header__icon--account {width: 20px !important;}}"
       ],
       "settings": {
         "logo_position": "middle-left",
