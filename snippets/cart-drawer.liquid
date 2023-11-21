@@ -7,10 +7,6 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
-
-
-
-
 <style>
   .drawer {
     visibility: hidden;
@@ -18,7 +14,6 @@
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
- 
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
@@ -28,11 +23,6 @@
       aria-label="{{ 'sections.cart.title' | t }}"
       tabindex="-1"
     >
-
-
-      
-
-      
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
@@ -87,7 +77,6 @@
           class="cart__contents cart-drawer__form"
           method="post"
         >
-          
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
@@ -162,14 +151,12 @@
                               </strong>
                             </div>
                           {%- else -%}
-                         
-                            {% comment %} 
-                            CHRIS 11/21/2023: COMMENTING THIS OUT TO REMOVE THE PRICE SHOWING UP TWICE IN THE CART
-                            <div class="product-option">
-                              {{ item.original_price | money }}
-                            </div>
-                            {% endcomment %} 
-                            
+                            {% comment %}
+                              CHRIS 11/21/2023: COMMENTING THIS OUT TO REMOVE THE PRICE SHOWING UP TWICE IN THE CART
+                              <div class="product-option">
+                                {{ item.original_price | money }}
+                              </div>
+                            {% endcomment %}
                           {%- endif -%}
 
                           {%- if item.product.has_only_default_variant == false
@@ -213,7 +200,9 @@
                               {%- endfor -%}
                             </dl>
 
-                            <p class="product-option" font-size: 12px !important>{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                            <p class="product-option" font-size: 12px !important>
+                              {{ item.selling_plan_allocation.selling_plan.name }}
+                            </p>
                           {%- endif -%}
 
                           <ul
@@ -453,20 +442,20 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
-      const ua = window.navigator.userAgent;
-      const msie = ua.indexOf('MSIE ');
-      const trident = ua.indexOf('Trident/');
+      const ua = window.navigator.userAgent
+      const msie = ua.indexOf('MSIE ')
+      const trident = ua.indexOf('Trident/')
 
-      return msie > 0 || trident > 0;
+      return msie > 0 || trident > 0
     }
 
-    if (!isIE()) return;
-    const cartSubmitInput = document.createElement('input');
-    cartSubmitInput.setAttribute('name', 'checkout');
-    cartSubmitInput.setAttribute('type', 'hidden');
-    document.querySelector('#cart').appendChild(cartSubmitInput);
+    if (!isIE()) return
+    const cartSubmitInput = document.createElement('input')
+    cartSubmitInput.setAttribute('name', 'checkout')
+    cartSubmitInput.setAttribute('type', 'hidden')
+    document.querySelector('#cart').appendChild(cartSubmitInput)
     document.querySelector('#checkout').addEventListener('click', function (event) {
-      document.querySelector('#cart').submit();
-    });
-  });
+      document.querySelector('#cart').submit()
+    })
+  })
 </script>

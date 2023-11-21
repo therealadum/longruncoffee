@@ -57,3 +57,12 @@
     --screen-height-dynamic: 100dvh;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  #CartDrawer-Item-1 > td.cart-item__details > a {
+    font-size: 14px !important;
+  }
+  #CartDrawer-Item-1 > td.cart-item__details > dl > div {
+    font-size: 14px !important;
+  }
+}
