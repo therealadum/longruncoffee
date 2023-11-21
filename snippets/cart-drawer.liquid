@@ -164,7 +164,7 @@
                           {%- else -%}
                          
                             {% comment %} 
-                            COMMENTING THIS OUT TO REMOVE THE PRICE SHOWING UP TWICE IN THE CART
+                            CHRIS 11/21/2023: COMMENTING THIS OUT TO REMOVE THE PRICE SHOWING UP TWICE IN THE CART
                             <div class="product-option">
                               {{ item.original_price | money }}
                             </div>
@@ -213,7 +213,7 @@
                               {%- endfor -%}
                             </dl>
 
-                            <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                            <p class="product-option" font-size: 12px !important>{{ item.selling_plan_allocation.selling_plan.name }}</p>
                           {%- endif -%}
 
                           <ul
