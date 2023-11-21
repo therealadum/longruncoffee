@@ -81,10 +81,10 @@
       
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId =  -%}
+      {%- assign initVariantId = 45115787608377 -%}
       {%- assign product_form_id = 'product-form-' | append: "gEmFrmB19k" -%}
-      {%- assign variant = product.selected_or_first_available_variant -%}
-      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
