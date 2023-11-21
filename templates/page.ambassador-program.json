@@ -13,7 +13,7 @@
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>More details about our Ambassador Program are coming soon. <\/p><p>Interested? Drop us a line below and let's chat.<\/p>",
+            "text": "<p>More details about our Ambassador Program are coming soon. <\/p><p><a href=\"https:\/\/longruncoffee.com\/community\/ambassador\/signup\" title=\"https:\/\/longruncoffee.com\/community\/ambassador\/signup\">Interested<\/a>? Drop us a line below and let's chat.<\/p>",
             "text_style": "body"
           }
         },
@@ -107,6 +107,9 @@
         "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-paragraph-1",
         "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1",
         "759f7b1e-376e-43a3-8f89-69dd1ee66f7a"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}"
       ],
       "settings": {
         "color_scheme": "inverse",
