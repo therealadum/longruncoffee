@@ -114,7 +114,7 @@
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
-    "cart_drawer_collection": "best-selling",
+    "cart_drawer_collection": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/Logo_Trim_1.png",
     "checkout_accent_color": "#2ca4b2",
     "checkout_button_color": "#044e54",
