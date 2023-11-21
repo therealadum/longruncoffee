@@ -881,6 +881,22 @@
       </div>
     </div>
   
+      </div><div style="--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%" class="gbdHlx60W- ">
+      
+    <div
+      class=""
+      style="--ta:left"
+    >
+      <div>
+        {% assign widget = 'reviews' %}
+        {% if widget == 'reviews' %}
+          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+        {% else %}
+          <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+        {% endif %}
+      </div>
+    </div>
+  
       </div>
     </div>
     </div>
