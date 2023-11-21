@@ -321,7 +321,7 @@
       {% when 'image' %}
         
       
-    {% assign src = featureMedia.src | img_url: '1024x1024' %}
+    {% assign src = featureMedia.src %}
     
     <img
     id="{%- if featureMedia != null -%}
@@ -330,22 +330,14 @@
     draggable="false"
     class="w-full featured-image-only !rounded-none w-full transition-opacity {{shouldHidden}} gp_lazyload"
     data-src="{%- if src != null -%}
-              {{src}}
+              {{src | img_url: '768x768'}} 768w,{{src | img_url: '1024x1024'}} 1024w,{{src | img_url: '1440x1440'}} 1440w
             {%- else -%}
               {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
             {%- endif -%}" data-srcset="{%- if src != null -%}
-              {{src}}
+              {{src | img_url: '768x768'}} 768w,{{src | img_url: '1024x1024'}} 1024w,{{src | img_url: '1440x1440'}} 1440w
             {%- else -%}
               {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
-            {%- endif -%} 768w,{%- if src != null -%}
-              {{src}}
-            {%- else -%}
-              {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
-            {%- endif -%} 1024w,{%- if src != null -%}
-              {{src}}
-            {%- else -%}
-              {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
-            {%- endif -%} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{featureMedia.width}}" height="{{featureMedia.height}}" alt="{{featureMedia.alt}}" priority
+            {%- endif -%}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{featureMedia.width}}" height="{{featureMedia.height}}" alt="{{featureMedia.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;--w:100%"
   />
@@ -532,7 +524,7 @@
     
     draggable="false"
     class="!rounded-none gp_lazyload"
-    data-src="{{media.preview_image | product_img_url: '1024x1024'}}" data-srcset="{{media.preview_image | product_img_url: '1024x1024'}} 768w,{{media.preview_image | product_img_url: '1024x1024'}} 1024w,{{media.preview_image | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
+    data-src="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" data-srcset="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;width:100%;height:100%;--w:100%"
   />
@@ -606,7 +598,7 @@
     
     draggable="false"
     class="!rounded-none gp_lazyload"
-    data-src="{{media.preview_image | product_img_url: '1024x1024'}}" data-srcset="{{media.preview_image | product_img_url: '1024x1024'}} 768w,{{media.preview_image | product_img_url: '1024x1024'}} 1024w,{{media.preview_image | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
+    data-src="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" data-srcset="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;width:100%;height:100%;--w:100%"
   />
@@ -766,7 +758,7 @@
     
     draggable="false"
     class="!rounded-none gp_lazyload"
-    data-src="{{media.preview_image | product_img_url: '1024x1024'}}" data-srcset="{{media.preview_image | product_img_url: '1024x1024'}} 768w,{{media.preview_image | product_img_url: '1024x1024'}} 1024w,{{media.preview_image | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
+    data-src="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" data-srcset="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;width:100%;height:100%;--w:100%"
   />
@@ -919,7 +911,7 @@
     
     draggable="false"
     class="!rounded-none gp_lazyload"
-    data-src="{{media.preview_image | product_img_url: '1024x1024'}}" data-srcset="{{media.preview_image | product_img_url: '1024x1024'}} 768w,{{media.preview_image | product_img_url: '1024x1024'}} 1024w,{{media.preview_image | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
+    data-src="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" data-srcset="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;width:100%;height:100%;--w:100%"
   />
@@ -1231,7 +1223,6 @@
           </button>
       
         <input
-          pattern="[0-9]"
           type="text"
           name="product-quantity"  
           {% if available == false %} disabled {% endif %}
@@ -1341,7 +1332,6 @@
           </button>
       
         <input
-          pattern="[0-9]"
           type="text"
           name="product-quantity"  
           {% if available == false %} disabled {% endif %}
