@@ -24,6 +24,11 @@
         "title",
         "content"
       ],
+      "custom_css": [
+        "h1 {font-size: 38px;}",
+        "h2 {font-size: 32px;}",
+        "h3 {font-size: 28px;}"
+      ],
       "settings": {
       }
     },
