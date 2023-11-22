@@ -78,7 +78,7 @@
       {%-if variant == empty or variant == null -%}
         {%- assign variant = product.selected_or_first_available_variant -%}
       {%- endif -%}
-      <gp-product class="" gp-context='{"productId": {{ product.id }}, "isSyncProduct": "false", "variantSelected": {{ variant | json | escape }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
+      <gp-product class="" gp-context='{"productId": {{ product.id }}, "isSyncProduct": "true", "variantSelected": {{ variant | json | escape }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
         gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1}'>
         {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
           <input type="hidden" name="id" value="{{ variant.id }}" />
