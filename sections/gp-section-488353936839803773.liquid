@@ -29,16 +29,16 @@
         {%- liquid
           if request.page_type == 'product'
             if 'static' == 'static'
-              if '8933377769785' == 'latest'
+              if '8281658229049' == 'latest'
                 paginate collections.all.products by 100000
                   assign product = collections.all.products | sort: 'created_at' | reverse | first
                 endpaginate
               else
-                assign product = all_products['sugar-cookie-dark-roast-hydro-flask']
+                assign product = all_products['the-long-run']
                 if product == empty or product == null
                   paginate collections.all.products by 100000
                     for item in collections.all.products 
-                      if item.id == '8933377769785'
+                      if item.id == '8281658229049'
                         assign product = item
                       endif
                     endfor
@@ -47,16 +47,16 @@
               endif
             endif
           else
-            if '8933377769785' == 'latest'
+            if '8281658229049' == 'latest'
               paginate collections.all.products by 100000
                 assign product = collections.all.products | sort: 'created_at'| reverse | first
               endpaginate
             else
-              assign product = all_products['sugar-cookie-dark-roast-hydro-flask']
+              assign product = all_products['the-long-run']
               if product == empty or product == null
                 paginate collections.all.products by 100000
                   for item in collections.all.products 
-                    if item.id == '8933377769785'
+                    if item.id == '8281658229049'
                       assign product = item
                     endif
                   endfor
