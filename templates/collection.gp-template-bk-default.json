@@ -48,14 +48,66 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "custom_css": [
+        "h1 {font-size: 35px;}"
+      ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "background-1"
       }
     },
+    "6cf0681f-6907-4599-808a-e71801658fb2": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Black Friday is here",
+            "heading_size": "h2"
+          }
+        },
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Save 10% on Orders Under $49<\/h6><h6>Save 20% on Orders $49+<\/h6><h6><span style=\"text-decoration:underline\">Extra<\/span> 10% savings on all gear<\/h6>"
+          }
+        },
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-heading-1",
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-text-1",
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1"
+      ],
+      "custom_css": [
+        "h2 {font-size: 20px;}",
+        "h6 {font-size: 18px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "custom_css": [
+
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
@@ -77,6 +129,7 @@
   "order": [
     "d38e1539-2c3d-4b7c-a09d-ea5ca38e288c",
     "banner",
+    "6cf0681f-6907-4599-808a-e71801658fb2",
     "product-grid"
   ]
 }
