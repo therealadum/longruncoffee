@@ -8,8 +8,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "100% Money Back Guarantee",
-            "link": "shopify:\/\/collections\/coffee"
+            "text": "Black Friday is Live",
+            "link": "shopify:\/\/pages\/bfcm-tiers"
           }
         },
         "b2d8484d-b7d0-434a-a97f-b199fb49714d": {
@@ -54,7 +54,7 @@
       ],
       "settings": {
         "logo_position": "middle-left",
-        "menu": "main-menu",
+        "menu": "black-friday",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": false,
