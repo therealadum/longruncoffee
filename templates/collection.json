@@ -91,7 +91,7 @@
         "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1"
       ],
       "custom_css": [
-        "h2 {font-size: 30px;}",
+        "h2 {font-size: 25px;}",
         "h6 {font-size: 20px;}"
       ],
       "settings": {
