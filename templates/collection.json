@@ -49,7 +49,7 @@
     "banner": {
       "type": "main-collection-banner",
       "custom_css": [
-        "h1 {font-size: 40px;}"
+        "h1 {font-size: 35px;}"
       ],
       "settings": {
         "show_collection_description": true,
