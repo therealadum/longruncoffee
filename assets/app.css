@@ -714,6 +714,10 @@ video {
   z-index: 90;
 }
 
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
 .\!m-0 {
   margin: 0px !important;
 }
@@ -978,6 +982,10 @@ video {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-14 {
@@ -1251,6 +1259,10 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
@@ -1369,6 +1381,12 @@ video {
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
 .space-y-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1385,6 +1403,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1525,6 +1549,10 @@ video {
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .border-\[\#D6D6D6\] {
@@ -2326,6 +2354,11 @@ video {
   .cart-item > td.cart-item__details > dl > div {
     font-size: 14px !important;
   }
+
+  .new-cart-remove-button > .icon-remove {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
 }
 
 .placeholder\:text-tan-800::-moz-placeholder {
@@ -2376,6 +2409,10 @@ video {
 .hover\:text-tan-900:hover {
   --tw-text-opacity: 1;
   color: rgb(204 121 20 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:opacity-80:hover {
@@ -2638,8 +2675,16 @@ video {
 }
 
 @media (min-width: 48em) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:scroll-px-8 {

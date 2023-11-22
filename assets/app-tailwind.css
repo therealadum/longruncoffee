@@ -65,4 +65,8 @@
   .cart-item > td.cart-item__details > dl > div {
     font-size: 14px !important;
   }
+  .new-cart-remove-button > .icon-remove {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
 }
