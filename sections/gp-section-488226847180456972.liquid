@@ -14,7 +14,7 @@
               
     <div
       id="guHS6q8Y_I"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:none;--d-mobile:grid;--d-tablet:none;--op:100%;--bblr:20px;--bbrr:20px;--btlr:20px;--btrr:20px;--pt:var(--g-s-2xl);--pb:var(--g-s-2xl);--pt-mobile:10px;--pb-mobile:10px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgc-mobile:#F8F8F8;--bgi:url();--bgi-mobile:url();--bgp:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-mobile:no-repeat;--bga:scroll;--bga-mobile:scroll"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:none;--d-mobile:grid;--d-tablet:none;--op:100%;--bblr:20px;--bbrr:20px;--btlr:20px;--btrr:20px;--pt:var(--g-s-2xl);--pb:var(--g-s-2xl);--pt-mobile:10px;--pb-mobile:10px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgc-mobile:#F8F8F8;--bgi:url();--bgi-mobile:url();--bgp:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-mobile:no-repeat;--bga:scroll;--bga-mobile:scroll"
         class="guHS6q8Y_I mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
     >
     <div
@@ -78,7 +78,7 @@
       {%-if variant == empty or variant == null -%}
         {%- assign variant = product.selected_or_first_available_variant -%}
       {%- endif -%}
-      <gp-product class="" gp-context='{"productId": {{ product.id }}, "isSyncProduct": "true", "variantSelected": {{ variant | json | escape }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
+      <gp-product class="" gp-context='{"productId": {{ product.id }}, "isSyncProduct": "false", "variantSelected": {{ variant | json | escape }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
         gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1}'>
         {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
           <input type="hidden" name="id" value="{{ variant.id }}" />
