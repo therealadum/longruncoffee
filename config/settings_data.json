@@ -181,7 +181,7 @@
       },
       "11242429557760608184": {
         "type": "shopify:\/\/apps\/referrly-affiliate-marketing\/blocks\/main-app-embed\/75b5ccd5-af90-4f81-ab89-2c28499171fd",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       }
