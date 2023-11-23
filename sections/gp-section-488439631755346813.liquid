@@ -1314,17 +1314,17 @@
     assign salePrice = variant.compare_at_price | times: 1.0
     assign priceSave = salePrice | minus: price
     if salePrice == null or price == null
-      assign pricePercentage = 'Bundle &amp; Save ' | append: '0%' | append: ' '
+      assign pricePercentage = 'Save an Extra ' | append: '0%' | append: ' '
     else 
          assign salePercent = priceSave | divided_by: salePrice | times: 100  | round
-                assign pricePercentage = 'Bundle &amp; Save ' | append: salePercent | append: '%' | append: ' '
+                assign pricePercentage = 'Save an Extra ' | append: salePercent | append: '%' | append: ' '
               
     endif
   %}
 
    <gp-product-tag
     data-disabled="{%- if priceSave > 0 -%} false {%- else -%} true {%- endif -%}"
-    gp-data='{"setting":{"customContent":{"prefix":"Bundle &amp; Save","suffix":"","unit":"percentage"}}, "id": "g38b7NdHwD", "locale": "{{shop.locale}}", "currency": "{{shop.currency}}", "moneyFormat": "{{ shop.money_format | replace: '"', '\"' | escape }}"}'
+    gp-data='{"setting":{"customContent":{"prefix":"Save an Extra","suffix":"","unit":"percentage"}}, "id": "g38b7NdHwD", "locale": "{{shop.locale}}", "currency": "{{shop.currency}}", "moneyFormat": "{{ shop.money_format | replace: '"', '\"' | escape }}"}'
     class="block data-[disabled=true]:hidden "
     style="--ta:left;--ta-mobile:left"
   >
@@ -2442,17 +2442,17 @@
     assign salePrice = variant.compare_at_price | times: 1.0
     assign priceSave = salePrice | minus: price
     if salePrice == null or price == null
-      assign pricePercentage = 'Bundle &amp; Save ' | append: '0%' | append: ' '
+      assign pricePercentage = 'Save an Extra ' | append: '0%' | append: ' '
     else 
          assign salePercent = priceSave | divided_by: salePrice | times: 100  | round
-                assign pricePercentage = 'Bundle &amp; Save ' | append: salePercent | append: '%' | append: ' '
+                assign pricePercentage = 'Save an Extra ' | append: salePercent | append: '%' | append: ' '
               
     endif
   %}
 
    <gp-product-tag
     data-disabled="{%- if priceSave > 0 -%} false {%- else -%} true {%- endif -%}"
-    gp-data='{"setting":{"customContent":{"prefix":"Bundle &amp; Save","suffix":"","unit":"percentage"}}, "id": "g38b7NdHwD", "locale": "{{shop.locale}}", "currency": "{{shop.currency}}", "moneyFormat": "{{ shop.money_format | replace: '"', '\"' | escape }}"}'
+    gp-data='{"setting":{"customContent":{"prefix":"Save an Extra","suffix":"","unit":"percentage"}}, "id": "g38b7NdHwD", "locale": "{{shop.locale}}", "currency": "{{shop.currency}}", "moneyFormat": "{{ shop.money_format | replace: '"', '\"' | escape }}"}'
     class="block data-[disabled=true]:hidden "
     style="--ta:left;--ta-mobile:left"
   >
