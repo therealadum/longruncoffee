@@ -187,10 +187,10 @@
         
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId = 45520643227961 -%}
+      {%- assign initVariantId =  -%}
       {%- assign product_form_id = 'product-form-' | append: "gxq3BK-yW_" -%}
-      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
-      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
@@ -1331,23 +1331,23 @@
     </div>
     </div>
   
-    <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--mb:20px;--mt-mobile:10px;--mb-mobile:10px;--mt-tablet:0px;--mb-tablet:15px" class="gBCzgz7G6Z ">
+    <div style="--mb:var(--g-s-l);--mt-mobile:10px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%" class="gfqjvwt4H_ ">
       
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-description.js" defer="defer"></script>
-  <gp-product-description class="" gp-data='{"setting":{"color":"text-1","enableViewMoreIcon":true,"hasLineClamp":{"desktop":true,"mobile":false},"htmlTag":"html","lineClamp":{"desktop":12,"tablet":10,"mobile":10},"showMoreColor":"text-1","textAlign":{"desktop":"left"},"typo":{"attrs":{"color":"text-1"},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"13px","mobile":"10px","tablet":"13px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-1"},"viewLessText":"Show less","viewMoreText":"Show more"},"styles":{"color":"text-1","enableViewMoreIcon":true,"hasLineClamp":{"desktop":true,"mobile":false},"htmlTag":"html","lineClamp":{"desktop":12,"tablet":10,"mobile":10},"showMoreColor":"text-1","textAlign":{"desktop":"left"},"typo":{"attrs":{"color":"text-1"},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"13px","mobile":"10px","tablet":"13px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-1"},"viewLessText":"Show less","viewMoreText":"Show more"},"defaultStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--ff":"var(--g-font-Inter, Inter)","--weight":"400","--lh":"180%","--size":"13px","--size-tablet":"13px","--size-mobile":"10px"},"collapseStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--ff":"var(--g-font-Inter, Inter)","--weight":"400","--lh":"180%","--size":"13px","--size-tablet":"13px","--size-mobile":"10px","--line-clamp":12,"--line-clamp-tablet":10,"--line-clamp-mobile":10}}'>
+  <gp-product-description class="" gp-data='{"setting":{"htmlTag":"html","hasLineClamp":{"desktop":true,"mobile":false},"lineClamp":{"desktop":12,"mobile":10},"viewMoreText":"Show more","viewLessText":"Show less","enableViewMoreIcon":true,"typo":{"type":"heading-3","attrs":{"color":"text-1"},"custom":{"fontSize":{"desktop":"52px","tablet":"52px","mobile":"45px"},"fontWeight":"400","lineHeight":"130%","fontFamily":"Assistant"}},"textAlign":{"desktop":"left"},"color":"text-1","showMoreColor":"text-1"},"styles":{"htmlTag":"html","hasLineClamp":{"desktop":true,"mobile":false},"lineClamp":{"desktop":12,"mobile":10},"viewMoreText":"Show more","viewLessText":"Show less","enableViewMoreIcon":true,"typo":{"type":"heading-3","attrs":{"color":"text-1"},"custom":{"fontSize":{"desktop":"52px","tablet":"52px","mobile":"45px"},"fontWeight":"400","lineHeight":"130%","fontFamily":"Assistant"}},"textAlign":{"desktop":"left"},"color":"text-1","showMoreColor":"text-1"},"defaultStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--ff":"var(--g-font-Assistant, Assistant)","--weight":"400","--lh":"130%","--size":"52px","--size-tablet":"52px","--size-mobile":"45px"},"collapseStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--ff":"var(--g-font-Assistant, Assistant)","--weight":"400","--lh":"130%","--size":"52px","--size-tablet":"52px","--size-mobile":"45px","--line-clamp":12,"--line-clamp-mobile":10}}'>
   {%- unless product -%}
     <p>Product not found</p>
   {%- else -%}
     <div
       class="relative p-description-wrapper gp-p-description-text break-words safari:[&_p]:inline safari:[&_p]:after:whitespace-pre text-g-text-1 data-[browser=safari]:after:content-[' '] data-[browser=safari]:after:absolute data-[browser=safari]:after:left-0 data-[browser=safari]:after:right-0 data-[browser=safari]:after:bottom-0 data-[browser=safari]:after:w-full data-[browser=safari]:after:h-1/2 data-[browser=safari]:after:bg-gradient-to-t data-[browser=safari]:after:from-white"
-      style="--ta:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:13px;--size-tablet:13px;--size-mobile:10px;--line-clamp:12;--line-clamp-tablet:10;--line-clamp-mobile:10"
+      style="--ta:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Assistant, Assistant);--weight:400;--lh:130%;--size:52px;--size-tablet:52px;--size-mobile:45px;--line-clamp:12;--line-clamp-mobile:10"
     >
     {{product.description}}
     </div>
     <button
       type="button"
       class="p-description-show-more text-g-text-1 mt-4 hover:opacity-80 transition-all"
-      style="--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:13px;--size-tablet:13px;--size-mobile:10px;--c:var(--g-c-text-1, text-1);--d:block;--d-mobile:none;--d-tablet:block;display:none"
+      style="--ff:var(--g-font-Assistant, Assistant);--weight:400;--lh:130%;--size:52px;--size-tablet:52px;--size-mobile:45px;--c:var(--g-c-text-1, text-1);--d:block;--d-mobile:none;--d-tablet:block;display:none"
     >
     
       Show more
@@ -2754,7 +2754,7 @@
         <div
           data-gp-text
           class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:center;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:1;--c:#4D4D4D;--fs:normal;--ff:var(--g-font-Inter, Inter);--weight:700;--ls:0px;--lh:150%;--size:13px;--size-tablet:11px;--size-mobile:12px;word-break:break-word"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:center;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:#4D4D4D;--fs:normal;--ff:var(--g-font-Inter, Inter);--weight:700;--ls:0px;--lh:150%;--size:13px;--size-tablet:11px;--size-mobile:12px;word-break:break-word"
         >
         <p>Save 10% Under $49</p><p>Save 20% on Orders $49+</p><p><strong><u>Extra</u></strong> 10% on all Gear</p>
         </div>
