@@ -172,11 +172,11 @@
     
         {%- liquid
           if request.page_type != 'product'
-            assign product = all_products['sugar-cookie-dark-roast-hydro-flask']
+            assign product = all_products['alwrld']
             if product == empty or product == null
               paginate collections.all.products by 100000
                 for item in collections.all.products 
-                  if item.id == '8933377769785'
+                  if item.id == '8281948619065'
                     assign product = item
                   endif
                 endfor
@@ -1334,20 +1334,20 @@
     <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:0px;--mb:20px;--mt-mobile:10px;--mb-mobile:10px;--mt-tablet:0px;--mb-tablet:15px" class="gBCzgz7G6Z ">
       
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-product-description.js" defer="defer"></script>
-  <gp-product-description class="" gp-data='{"setting":{"color":"text-1","enableViewMoreIcon":true,"hasLineClamp":{"desktop":true},"htmlTag":"html","lineClamp":{"desktop":12,"tablet":10},"showMoreColor":"text-1","textAlign":{"desktop":"left"},"typo":{"attrs":{"color":"text-1"},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"13px","mobile":"13px","tablet":"13px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-1"},"viewLessText":"Show less","viewMoreText":"Show more"},"styles":{"color":"text-1","enableViewMoreIcon":true,"hasLineClamp":{"desktop":true},"htmlTag":"html","lineClamp":{"desktop":12,"tablet":10},"showMoreColor":"text-1","textAlign":{"desktop":"left"},"typo":{"attrs":{"color":"text-1"},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"13px","mobile":"13px","tablet":"13px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-1"},"viewLessText":"Show less","viewMoreText":"Show more"},"defaultStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--ff":"var(--g-font-Inter, Inter)","--weight":"400","--lh":"180%","--size":"13px","--size-tablet":"13px","--size-mobile":"13px"},"collapseStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--ff":"var(--g-font-Inter, Inter)","--weight":"400","--lh":"180%","--size":"13px","--size-tablet":"13px","--size-mobile":"13px","--line-clamp":12,"--line-clamp-tablet":10}}'>
+  <gp-product-description class="" gp-data='{"setting":{"color":"text-1","enableViewMoreIcon":true,"hasLineClamp":{"desktop":true},"htmlTag":"html","lineClamp":{"desktop":12,"tablet":10,"mobile":10},"showMoreColor":"text-1","textAlign":{"desktop":"left"},"typo":{"attrs":{"color":"text-1"},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"13px","mobile":"11px","tablet":"13px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-1"},"viewLessText":"Show less","viewMoreText":"Show more"},"styles":{"color":"text-1","enableViewMoreIcon":true,"hasLineClamp":{"desktop":true},"htmlTag":"html","lineClamp":{"desktop":12,"tablet":10,"mobile":10},"showMoreColor":"text-1","textAlign":{"desktop":"left"},"typo":{"attrs":{"color":"text-1"},"custom":{"fontFamily":"Inter","fontSize":{"desktop":"13px","mobile":"11px","tablet":"13px"},"fontVariants":["100","200","300","regular","500","600","700","800","900"],"fontWeight":"400","lineHeight":"180%"},"type":"paragraph-1"},"viewLessText":"Show less","viewMoreText":"Show more"},"defaultStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--ff":"var(--g-font-Inter, Inter)","--weight":"400","--lh":"180%","--size":"13px","--size-tablet":"13px","--size-mobile":"11px"},"collapseStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--ff":"var(--g-font-Inter, Inter)","--weight":"400","--lh":"180%","--size":"13px","--size-tablet":"13px","--size-mobile":"11px","--line-clamp":12,"--line-clamp-tablet":10,"--line-clamp-mobile":10}}'>
   {%- unless product -%}
     <p>Product not found</p>
   {%- else -%}
     <div
       class="relative p-description-wrapper gp-p-description-text break-words safari:[&_p]:inline safari:[&_p]:after:whitespace-pre text-g-text-1 data-[browser=safari]:after:content-[' '] data-[browser=safari]:after:absolute data-[browser=safari]:after:left-0 data-[browser=safari]:after:right-0 data-[browser=safari]:after:bottom-0 data-[browser=safari]:after:w-full data-[browser=safari]:after:h-1/2 data-[browser=safari]:after:bg-gradient-to-t data-[browser=safari]:after:from-white"
-      style="--ta:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:13px;--size-tablet:13px;--size-mobile:13px;--line-clamp:12;--line-clamp-tablet:10"
+      style="--ta:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:13px;--size-tablet:13px;--size-mobile:11px;--line-clamp:12;--line-clamp-tablet:10;--line-clamp-mobile:10"
     >
     {{product.description}}
     </div>
     <button
       type="button"
       class="p-description-show-more text-g-text-1 mt-4 hover:opacity-80 transition-all"
-      style="--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:13px;--size-tablet:13px;--size-mobile:13px;--c:var(--g-c-text-1, text-1);--d:block;--d-mobile:block;--d-tablet:block;display:none"
+      style="--ff:var(--g-font-Inter, Inter);--weight:400;--lh:180%;--size:13px;--size-tablet:13px;--size-mobile:11px;--c:var(--g-c-text-1, text-1);--d:block;--d-mobile:block;--d-tablet:block;display:none"
     >
     
       Show more
