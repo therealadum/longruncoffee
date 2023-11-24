@@ -93,11 +93,12 @@
       {%- endif -%}
       <gp-product class="" gp-context='{"productId": {{ product.id }}, "isSyncProduct": "true", "variantSelected": {{ variant | json | escape }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
         gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1}'>
-        {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
-          <input type="hidden" name="id" value="{{ variant.id }}" />
-          <input type="hidden" name="quantity" value="{{ quantity }}" />
-          <button type="submit" onclick="return false;" style="display:none;"></button>
-          
+        <product-form class="product-form">
+          {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
+            <input type="hidden" name="id" value="{{ variant.id }}" />
+            <input type="hidden" name="quantity" value="{{ quantity }}" />
+            <button type="submit" onclick="return false;" style="display:none;"></button>
+            
       
       
     <div
@@ -899,7 +900,8 @@
     </div>
   
     
-        {%- endform -%}
+          {%- endform -%}
+        </product-form>
       </gp-product>
       {%- assign product = gpBkProduct -%}
     {% else %}
