@@ -1,0 +1,673 @@
+
+  
+  
+      <style>
+        @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hjg.woff) format('woff');
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+      </style>
+    
+  <style>
+    .gps-485854940183397260 .-rotate-90,.gps-485854940183397260 .rotate-180,.gps-485854940183397260 .rotate-90{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1}.gps-485854940183397260 .g-s-medium{padding:8px 24px}.gps-485854940183397260 .relative{position:relative}.gps-485854940183397260 .mx-auto{margin-left:auto;margin-right:auto}.gps-485854940183397260 .mb-0{margin-bottom:0}.gps-485854940183397260 .flex{display:flex}.gps-485854940183397260 .inline-flex{display:inline-flex}.gps-485854940183397260 .grid{display:grid}.gps-485854940183397260 .hidden{display:none}.gps-485854940183397260 .w-full{width:100%}.gps-485854940183397260 .max-w-full{max-width:100%}.gps-485854940183397260 .-rotate-90{--tw-rotate:-90deg}.gps-485854940183397260 .-rotate-90,.gps-485854940183397260 .rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-485854940183397260 .rotate-180{--tw-rotate:180deg}.gps-485854940183397260 .rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-485854940183397260 .cursor-pointer{cursor:pointer}.gps-485854940183397260 .flex-col{flex-direction:column}.gps-485854940183397260 .items-center{align-items:center}.gps-485854940183397260 .justify-center{justify-content:center}.gps-485854940183397260 .gap-y-0{row-gap:0}.gps-485854940183397260 .overflow-hidden{overflow:hidden}.gps-485854940183397260 .overflow-clip{overflow:clip}.gps-485854940183397260 .border{border-width:1px}.gps-485854940183397260 .transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-485854940183397260 .transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-485854940183397260 .duration-200{transition-duration:.2s}.gps-485854940183397260 .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-485854940183397260 .\[\&\>svg\]\:h-auto>svg{height:auto}.gps-485854940183397260 .\[\&\>svg\]\:w-full>svg{width:100%}.gps-485854940183397260 .\[\&_\*\]\:max-w-full *{max-width:100%}.gps-485854940183397260 .\[\&_p\]\:inline p{display:inline}.gps-485854940183397260 .\[\&_p\]\:after\:whitespace-pre-wrap p:after{content:var(--tw-content);white-space:pre-wrap}.gps-485854940183397260 .\[\&_p\]\:after\:content-\[\'\\A\'\] p:after{--tw-content:"\A";content:var(--tw-content)}
+  </style>
+  
+      
+      
+            <section
+              class="mx-auto max-w-full"
+              style="--w:calc(var(--g-ct-w, 1200px) + 2 * var(--g-ct-p, 15px));--w-tablet:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--w-mobile:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--pl:var(--g-ct-p, 15px);--pl-tablet:var(--g-ct-p, 15px);--pl-mobile:var(--g-ct-p, 15px);--pr:var(--g-ct-p, 15px);--pr-tablet:var(--g-ct-p, 15px);--pr-mobile:var(--g-ct-p, 15px)"
+            >
+              
+    <div
+      id="gwYuw83ISo"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--pt:50px;--pb:30px;--pt-mobile:50px;--pb-mobile:30px;--pt-tablet:50px;--pb-tablet:30px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gwYuw83ISo mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      label="Block" tag="Col" type="component"
+      style="--jc:start"
+      class="gtdvjcyGj3 relative flex flex-col"
+    >
+      
+    <div
+      parentTag="Col"
+        class="gkujRpGPmh "
+        style="--ta:left;--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-tablet:7px"
+      >
+      <div class="flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--ta-tablet:center;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:27px;--size-tablet:25px;--size-mobile:21px;--weight:bold;--c:var(--g-c-text-1, text-1);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        >
+        <p>Long Run Club FAQs</p>
+        </div>
+      </div>
+    </div><div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px" class="gS04LChPE4 ">
+      
+    <gp-accordion
+     uid="gS04LChPE4"
+      class="flex w-full flex-col "
+      style="--gg:20px;--gg-tablet:20px;--gg-mobile:15px"
+      gp-data='{"setting":{"iconSvg":"<svg width=\"17\" height=\"16\" viewBox=\"0 0 17 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M5.64645 2.64645C5.84171 2.45118 6.15829 2.45118 6.35355 2.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L6.35355 13.3536C6.15829 13.5488 5.84171 13.5488 5.64645 13.3536C5.45118 13.1583 5.45118 12.8417 5.64645 12.6464L10.2929 8L5.64645 3.35355C5.45118 3.15829 5.45118 2.84171 5.64645 2.64645Z\" fill=\"currentColor\"/>\n                  </svg>","isIconPlus":false,"activeKey":1,"expanded":true,"expandItem":false,"iconPosition":"right","iconGlobalSize":{"desktop":{"gap":"16px","height":"16px","width":"16px"}},"layoutHeader":"text-only","expandedMode":"multiple","configIconSize":16,"parentUid":"gS04LChPE4","childListNumber":[]},"styles":{"bgColor":{"normal":"#D9E2EC"},"color":{"active":"#121212","hover":"#121212","normal":"#121212"},"headerBorder":{"active":{"border":"solid","borderType":"style-1","borderWidth":"0","color":"#121212","isCustom":true,"position":"bottom","width":"0px 0px 0px 0px"},"hover":{"border":"solid","borderType":"style-1","borderWidth":"0","color":"#121212","isCustom":true,"position":"bottom","width":"0px 0px 0px 0px"},"normal":{"border":"solid","borderType":"style-1","borderWidth":"0","color":"transparent","isCustom":true,"position":"bottom","width":"0px 0px 0px 0px"}},"fullWidth":{"desktop":true},"width":{"desktop":"1170px"},"itemHeaderSpacing":{"type":"medium"},"textColor":{"active":"#121212","hover":"#121212","normal":"#121212"},"iconColor":{"active":"#121212","hover":"#121212","normal":"#121212"},"contentSizePadding":{"desktop":{"gap":"20px","padding":{"bottom":"8px","left":"24px","right":"24px","top":"8px","type":"medium"}},"mobile":{"gap":"15px","padding":{"bottom":"8px","left":"24px","right":"24px","top":"8px","type":"medium"}},"tablet":{"gap":"20px","padding":{"bottom":"8px","left":"24px","right":"24px","top":"8px","type":"medium"}}},"headerContentPadding":{"desktop":{"padding":{"bottom":"8px","left":"24px","right":"24px","top":"8px","type":"medium"}},"mobile":{"padding":{"bottom":"8px","left":"24px","right":"24px","top":"8px","type":"medium"}},"tablet":{"padding":{"bottom":"8px","left":"24px","right":"24px","top":"8px","type":"medium"}}},"widthHeightSize":{"desktop":{"width":"100%"},"mobile":{"width":"100%"},"tablet":{"width":"100%"}}},"uid":"gS04LChPE4"}'
+    >
+    <div class="hidden rotate-90 -rotate-90 rotate-180"></div>
+    <div
+                class="flex"
+                style="--jc:left"
+              >
+                
+  <div class="overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 0px 0px;--bc:#121212;--bblr:15px;--bbrr:15px;--btlr:15px;--btrr:15px">
+    <div
+      data-index="0"
+      class="gS04LChPE4 gp-accordion-item overflow-hidden"
+    >
+      <div
+        aria-hidden
+        data-index="0"
+        class="gS04LChPE4 gp-accordion-item-gS04LChPE4-0 flex items-center gp-accordion-item_header cursor-pointer"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#D9E2EC;--hvr-c:#121212;--c:#121212;--bs:solid;--hvr-bs:solid;--bw:0px 0px 0px 0px;--hvr-bw:0px 0px 0px 0px;--bc:transparent;--hvr-bc:#121212"
+      >
+       <style class="accordion-style">.gp-accordion-item-gS04LChPE4-0:hover { 
+              .gp-collapsible-icon { 
+                  color: #121212 
+              }
+
+              .gp-icon { 
+                  color: #121212 
+              }
+          }</style>
+        <div class="inline-flex">
+        <span
+            style="--hvr-c:#121212;--c:#121212;width:16px;height:16px"
+            data-index="0"
+            class="gS04LChPE4 gp-accordion-item_icon gp-collapsible-icon rotate-90 inline-flex items-center justify-center overflow-hidden transition-all duration-200 [&>svg]:h-auto [&>svg]:w-full"
+          ><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.64645 2.64645C5.84171 2.45118 6.15829 2.45118 6.35355 2.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L6.35355 13.3536C6.15829 13.5488 5.84171 13.5488 5.64645 13.3536C5.45118 13.1583 5.45118 12.8417 5.64645 12.6464L10.2929 8L5.64645 3.35355C5.45118 3.15829 5.45118 2.84171 5.64645 2.64645Z" fill="currentColor"/>
+                  </svg></span>
+          
+        </div>
+      <div class="flex items-center w-full" style="--gg:16px">
+        
+        
+    <div
+      
+        class=" "
+        style=""
+      >
+      <div class="" style="">
+        <span
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] overflow-hidden"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:18px;--size-tablet:16px;--size-mobile:14px;--weight:bold;word-break:break-word"
+        >
+        <p>What is the Long Run Club?</p>
+        </span>
+      </div>
+    </div>
+        
+      </div>
+      </div>
+      <div
+        uid="gSrAuKQnBt"
+        data-index="0"
+        class="gS04LChPE4 gp-accordion-item_body hidden g-s-medium"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px"
+      >
+        <div
+      tag="Col" type="component"
+      style="--ai:normal;--jc:normal;--o:0"
+      class="ggrqqTiAO0 relative flex flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)" class="gEPw1HqFve ">
+      
+    <div
+      parentTag="Col"
+        class="gEPw1HqFve "
+        style="--ta:left"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:130%;--size:18px;--size-tablet:16px;--size-mobile:15px;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        <p>The Long Run Club is a monthly subscription for you to get your favorite LRC items each month on repeat. Members save on coffee &amp; shipping, plus enjoy bonus perks.</p>
+        </h2>
+      </div>
+    </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  
+              </div>
+            <div
+                class="flex"
+                style="--jc:left"
+              >
+                
+  <div class="overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 0px 0px;--bc:#121212;--bblr:15px;--bbrr:15px;--btlr:15px;--btrr:15px">
+    <div
+      data-index="1"
+      class="gS04LChPE4 gp-accordion-item overflow-hidden"
+    >
+      <div
+        aria-hidden
+        data-index="1"
+        class="gS04LChPE4 gp-accordion-item-gS04LChPE4-1 flex items-center gp-accordion-item_header cursor-pointer"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#D9E2EC;--hvr-c:#121212;--c:#121212;--bs:solid;--hvr-bs:solid;--bw:0px 0px 0px 0px;--hvr-bw:0px 0px 0px 0px;--bc:transparent;--hvr-bc:#121212"
+      >
+       <style class="accordion-style">.gp-accordion-item-gS04LChPE4-1:hover { 
+              .gp-collapsible-icon { 
+                  color: #121212 
+              }
+
+              .gp-icon { 
+                  color: #121212 
+              }
+          }</style>
+        <div class="inline-flex">
+        <span
+            style="--hvr-c:#121212;--c:#121212;width:16px;height:16px"
+            data-index="1"
+            class="gS04LChPE4 gp-accordion-item_icon gp-collapsible-icon rotate-90 inline-flex items-center justify-center overflow-hidden transition-all duration-200 [&>svg]:h-auto [&>svg]:w-full"
+          ><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.64645 2.64645C5.84171 2.45118 6.15829 2.45118 6.35355 2.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L6.35355 13.3536C6.15829 13.5488 5.84171 13.5488 5.64645 13.3536C5.45118 13.1583 5.45118 12.8417 5.64645 12.6464L10.2929 8L5.64645 3.35355C5.45118 3.15829 5.45118 2.84171 5.64645 2.64645Z" fill="currentColor"/>
+                  </svg></span>
+          
+        </div>
+      <div class="flex items-center w-full" style="--gg:16px">
+        
+        
+    <div
+      
+        class=" "
+        style=""
+      >
+      <div class="" style="">
+        <span
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] overflow-hidden"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:18px;--size-tablet:16px;--size-mobile:14px;--weight:bold;word-break:break-word"
+        >
+        <p>Why should I subscribe?</p>
+        </span>
+      </div>
+    </div>
+        
+      </div>
+      </div>
+      <div
+        uid="gM61jnp_Vb"
+        data-index="1"
+        class="gS04LChPE4 gp-accordion-item_body hidden g-s-medium"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px"
+      >
+        <div
+      label="Block" tag="Col" type="component"
+      style=""
+      class="gbfR8qIatH relative flex flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)" class="gmAosSups9 ">
+      
+    <div
+      parentTag="Col"
+        class="gmAosSups9 "
+        style="--ta:left"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:130%;--size:18px;--size-tablet:16px;--size-mobile:15px;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        <p>When you subscribe to the Long Run Club, you unlock savings, shipping benefits, free bonus coffees &amp; gear, and gain access to the membership store.&nbsp;</p><p>&nbsp;</p><p>Plus you can apply your plan's benefits to all orders and items in the LRC store, not just subscription shipments.</p>
+        </h2>
+      </div>
+    </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  
+              </div>
+            <div
+                class="flex"
+                style="--jc:left"
+              >
+                
+  <div class="overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 0px 0px;--bc:#121212;--bblr:15px;--bbrr:15px;--btlr:15px;--btrr:15px">
+    <div
+      data-index="2"
+      class="gS04LChPE4 gp-accordion-item overflow-hidden"
+    >
+      <div
+        aria-hidden
+        data-index="2"
+        class="gS04LChPE4 gp-accordion-item-gS04LChPE4-2 flex items-center gp-accordion-item_header cursor-pointer"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#D9E2EC;--hvr-c:#121212;--c:#121212;--bs:solid;--hvr-bs:solid;--bw:0px 0px 0px 0px;--hvr-bw:0px 0px 0px 0px;--bc:transparent;--hvr-bc:#121212"
+      >
+       <style class="accordion-style">.gp-accordion-item-gS04LChPE4-2:hover { 
+              .gp-collapsible-icon { 
+                  color: #121212 
+              }
+
+              .gp-icon { 
+                  color: #121212 
+              }
+          }</style>
+        <div class="inline-flex">
+        <span
+            style="--hvr-c:#121212;--c:#121212;width:16px;height:16px"
+            data-index="2"
+            class="gS04LChPE4 gp-accordion-item_icon gp-collapsible-icon rotate-90 inline-flex items-center justify-center overflow-hidden transition-all duration-200 [&>svg]:h-auto [&>svg]:w-full"
+          ><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.64645 2.64645C5.84171 2.45118 6.15829 2.45118 6.35355 2.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L6.35355 13.3536C6.15829 13.5488 5.84171 13.5488 5.64645 13.3536C5.45118 13.1583 5.45118 12.8417 5.64645 12.6464L10.2929 8L5.64645 3.35355C5.45118 3.15829 5.45118 2.84171 5.64645 2.64645Z" fill="currentColor"/>
+                  </svg></span>
+          
+        </div>
+      <div class="flex items-center w-full" style="--gg:16px">
+        
+        
+    <div
+      
+        class=" "
+        style=""
+      >
+      <div class="" style="">
+        <span
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] overflow-hidden"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:18px;--size-tablet:16px;--size-mobile:14px;--weight:bold;word-break:break-word"
+        >
+        <p>How do I get the free seasonal coffees?&nbsp;</p>
+        </span>
+      </div>
+    </div>
+        
+      </div>
+      </div>
+      <div
+        uid="g1FZiIIEY5"
+        data-index="2"
+        class="gS04LChPE4 gp-accordion-item_body hidden g-s-medium"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px"
+      >
+        <div
+      label="Block" tag="Col" type="component"
+      style=""
+      class="gufhxNaSKF relative flex flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)" class="glHk818gi5 ">
+      
+    <div
+      parentTag="Col"
+        class="glHk818gi5 "
+        style="--ta:left"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:130%;--size:18px;--size-tablet:16px;--size-mobile:15px;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        <p>Every three shipments, your account will automatically be credited with a free bag. There is nothing for you to do! We make it easy for you.</p>
+        </h2>
+      </div>
+    </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  
+              </div>
+            <div
+                class="flex"
+                style="--jc:left"
+              >
+                
+  <div class="overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 0px 0px;--bc:#121212;--bblr:15px;--bbrr:15px;--btlr:15px;--btrr:15px">
+    <div
+      data-index="3"
+      class="gS04LChPE4 gp-accordion-item overflow-hidden"
+    >
+      <div
+        aria-hidden
+        data-index="3"
+        class="gS04LChPE4 gp-accordion-item-gS04LChPE4-3 flex items-center gp-accordion-item_header cursor-pointer"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#D9E2EC;--hvr-c:#121212;--c:#121212;--bs:solid;--hvr-bs:solid;--bw:0px 0px 0px 0px;--hvr-bw:0px 0px 0px 0px;--bc:transparent;--hvr-bc:#121212"
+      >
+       <style class="accordion-style">.gp-accordion-item-gS04LChPE4-3:hover { 
+              .gp-collapsible-icon { 
+                  color: #121212 
+              }
+
+              .gp-icon { 
+                  color: #121212 
+              }
+          }</style>
+        <div class="inline-flex">
+        <span
+            style="--hvr-c:#121212;--c:#121212;width:16px;height:16px"
+            data-index="3"
+            class="gS04LChPE4 gp-accordion-item_icon gp-collapsible-icon rotate-90 inline-flex items-center justify-center overflow-hidden transition-all duration-200 [&>svg]:h-auto [&>svg]:w-full"
+          ><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.64645 2.64645C5.84171 2.45118 6.15829 2.45118 6.35355 2.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L6.35355 13.3536C6.15829 13.5488 5.84171 13.5488 5.64645 13.3536C5.45118 13.1583 5.45118 12.8417 5.64645 12.6464L10.2929 8L5.64645 3.35355C5.45118 3.15829 5.45118 2.84171 5.64645 2.64645Z" fill="currentColor"/>
+                  </svg></span>
+          
+        </div>
+      <div class="flex items-center w-full" style="--gg:16px">
+        
+        
+    <div
+      
+        class=" "
+        style=""
+      >
+      <div class="" style="">
+        <span
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] overflow-hidden"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:18px;--size-tablet:16px;--size-mobile:14px;--weight:bold;word-break:break-word"
+        >
+        <p>How fast is shipping?</p>
+        </span>
+      </div>
+    </div>
+        
+      </div>
+      </div>
+      <div
+        uid="gA6RkL6UFV"
+        data-index="3"
+        class="gS04LChPE4 gp-accordion-item_body hidden g-s-medium"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px"
+      >
+        <div
+      tag="Col" type="component"
+      style="--ai:normal;--jc:normal;--o:0"
+      class="gVM0E_6PJR relative flex flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)" class="gIlcOZng4Q ">
+      
+    <div
+      parentTag="Col"
+        class="gIlcOZng4Q "
+        style="--ta:left"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:130%;--size:18px;--size-tablet:16px;--size-mobile:15px;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        <p>We use priority mail 2-day shipping for our club members.</p>
+        </h2>
+      </div>
+    </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  
+              </div>
+            <div
+                class="flex"
+                style="--jc:left"
+              >
+                
+  <div class="overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--bs:solid;--bw:0px 0px 0px 0px;--bc:#121212;--bblr:15px;--bbrr:15px;--btlr:15px;--btrr:15px">
+    <div
+      data-index="4"
+      class="gS04LChPE4 gp-accordion-item overflow-hidden"
+    >
+      <div
+        aria-hidden
+        data-index="4"
+        class="gS04LChPE4 gp-accordion-item-gS04LChPE4-4 flex items-center gp-accordion-item_header cursor-pointer"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#D9E2EC;--hvr-c:#121212;--c:#121212;--bs:solid;--hvr-bs:solid;--bw:0px 0px 0px 0px;--hvr-bw:0px 0px 0px 0px;--bc:transparent;--hvr-bc:#121212"
+      >
+       <style class="accordion-style">.gp-accordion-item-gS04LChPE4-4:hover { 
+              .gp-collapsible-icon { 
+                  color: #121212 
+              }
+
+              .gp-icon { 
+                  color: #121212 
+              }
+          }</style>
+        <div class="inline-flex">
+        <span
+            style="--hvr-c:#121212;--c:#121212;width:16px;height:16px"
+            data-index="4"
+            class="gS04LChPE4 gp-accordion-item_icon gp-collapsible-icon rotate-90 inline-flex items-center justify-center overflow-hidden transition-all duration-200 [&>svg]:h-auto [&>svg]:w-full"
+          ><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.64645 2.64645C5.84171 2.45118 6.15829 2.45118 6.35355 2.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L6.35355 13.3536C6.15829 13.5488 5.84171 13.5488 5.64645 13.3536C5.45118 13.1583 5.45118 12.8417 5.64645 12.6464L10.2929 8L5.64645 3.35355C5.45118 3.15829 5.45118 2.84171 5.64645 2.64645Z" fill="currentColor"/>
+                  </svg></span>
+          
+        </div>
+      <div class="flex items-center w-full" style="--gg:16px">
+        
+        
+    <div
+      
+        class=" "
+        style=""
+      >
+      <div class="" style="">
+        <span
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] overflow-hidden"
+          style="--w:100%;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:18px;--size-tablet:16px;--size-mobile:14px;--weight:bold;word-break:break-word"
+        >
+        <p>What other benefits are there?</p>
+        </span>
+      </div>
+    </div>
+        
+      </div>
+      </div>
+      <div
+        uid="gliXvt38kP"
+        data-index="4"
+        class="gS04LChPE4 gp-accordion-item_body hidden g-s-medium"
+        style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px"
+      >
+        <div
+      label="Block" tag="Col" type="component"
+      style=""
+      class="gv06xgnnLE relative flex flex-col"
+    >
+      <div style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l)" class="gsaYUmkJPz ">
+      
+    <div
+      parentTag="Col"
+        class="gsaYUmkJPz "
+        style="--ta:left"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ff:var(--g-font-Inter, Inter);--weight:400;--lh:130%;--size:18px;--size-tablet:16px;--size-mobile:15px;--c:var(--g-c-text-2, text-2);word-break:break-word"
+        >
+        <p>Long Run Coffee is actively investing in the wellbeing of our athletes. In 2024, we're launching a Club Member Store with exclusive coffees, new flavors, special gear, &amp; other unique supplements.&nbsp;</p><p>&nbsp;</p><p>And yes - your plan benefits will apply to all club store items.</p><p>&nbsp;</p><p>If you have any product requests, please contact us at info@longruncoffee.com.</p>
+        </h2>
+      </div>
+    </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  
+              </div>
+            
+    </gp-accordion>
+    <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-accordion.js" defer="defer"></script>
+  
+      </div>
+    </div>
+    </div>
+  
+            </section>
+          
+    
+{% schema %}
+  {
+    
+    "name": "Section 11",
+    "tag": "section",
+    "class": "gps-485854940183397260 gps gpsi",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Section design by GemPages. [Click here to start design](https://builder.gempages.net/instant/hyperlink/edit?type=section&section_id=485854940183397260&template_id=485854940049179532)"
+      }
+    ],
+    "blocks": [{"type": "@app"}]
+  }
+{% endschema %}
