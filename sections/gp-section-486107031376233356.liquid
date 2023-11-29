@@ -220,11 +220,12 @@
       {%- endif -%}
       <gp-product class="" gp-context='{"productId": {{ product.id }}, "isSyncProduct": "true", "variantSelected": {{ variant | json | escape }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
         gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1}'>
-        {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
-          <input type="hidden" name="id" value="{{ variant.id }}" />
-          <input type="hidden" name="quantity" value="{{ quantity }}" />
-          <button type="submit" onclick="return false;" style="display:none;"></button>
-          
+        <product-form class="product-form">
+          {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
+            <input type="hidden" name="id" value="{{ variant.id }}" />
+            <input type="hidden" name="quantity" value="{{ quantity }}" />
+            <button type="submit" onclick="return false;" style="display:none;"></button>
+            
       
       
     <div
@@ -312,7 +313,7 @@
       grid-index="{{forloop.index}}"
       
       id="{{section.id}}-{{imageID}}"
-      style="outline-color:var(--g-c-brand, brand);--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1"
+      style="outline-color:var(--g-c-brand, brand)"
       class="gem-slider-item w-full gem-slider-item-gi-m5hc7LT-{{section.id}}-{{product.id}} group flex w-full items-center justify-center overflow-hidden outline-1 -outline-offset-1 gp-image-item gp-ft-image-item data-[outline=active]:outline undefined"
     >
       
@@ -321,7 +322,7 @@
       {% when 'image' %}
         
       
-    {% assign src = featureMedia.src | img_url: '1024x1024' %}
+    {% assign src = featureMedia.src %}
     
     <img
     id="{%- if featureMedia != null -%}
@@ -330,24 +331,16 @@
     draggable="false"
     class="w-full featured-image-only !rounded-none w-full transition-opacity {{shouldHidden}} gp_lazyload"
     data-src="{%- if src != null -%}
-              {{src}}
+              {{src | img_url: '768x768'}} 768w,{{src | img_url: '1024x1024'}} 1024w,{{src | img_url: '1440x1440'}} 1440w
             {%- else -%}
               {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
             {%- endif -%}" data-srcset="{%- if src != null -%}
-              {{src}}
+              {{src | img_url: '768x768'}} 768w,{{src | img_url: '1024x1024'}} 1024w,{{src | img_url: '1440x1440'}} 1440w
             {%- else -%}
               {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
-            {%- endif -%} 768w,{%- if src != null -%}
-              {{src}}
-            {%- else -%}
-              {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
-            {%- endif -%} 1024w,{%- if src != null -%}
-              {{src}}
-            {%- else -%}
-              {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
-            {%- endif -%} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{featureMedia.width}}" height="{{featureMedia.height}}" alt="{{featureMedia.alt}}" priority
+            {%- endif -%}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{featureMedia.width}}" height="{{featureMedia.height}}" alt="{{featureMedia.alt}}" priority
     sizes="100vw"
-    style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;--w:100%"
+    style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;--h:100%;--h-mobile:100%;--h-tablet:100%;--w:100%"
   />
       
       
@@ -420,7 +413,7 @@
           <img
     id="noImageError"
     draggable="false"
-    class="w-full featured-image-only !rounded-none gp_lazyload"
+    class="w-full featured-image-only h-full !rounded-none gp_lazyload"
     data-src="{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}" data-srcset="{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }} 768w,{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }} 1024w,{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="480" height="480" alt="no image" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;height:100%;--w:100%"
@@ -532,7 +525,7 @@
     
     draggable="false"
     class="!rounded-none gp_lazyload"
-    data-src="{{media.preview_image | product_img_url: '1024x1024'}}" data-srcset="{{media.preview_image | product_img_url: '1024x1024'}} 768w,{{media.preview_image | product_img_url: '1024x1024'}} 1024w,{{media.preview_image | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
+    data-src="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" data-srcset="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;width:100%;height:100%;--w:100%"
   />
@@ -606,7 +599,7 @@
     
     draggable="false"
     class="!rounded-none gp_lazyload"
-    data-src="{{media.preview_image | product_img_url: '1024x1024'}}" data-srcset="{{media.preview_image | product_img_url: '1024x1024'}} 768w,{{media.preview_image | product_img_url: '1024x1024'}} 1024w,{{media.preview_image | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
+    data-src="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" data-srcset="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;width:100%;height:100%;--w:100%"
   />
@@ -766,7 +759,7 @@
     
     draggable="false"
     class="!rounded-none gp_lazyload"
-    data-src="{{media.preview_image | product_img_url: '1024x1024'}}" data-srcset="{{media.preview_image | product_img_url: '1024x1024'}} 768w,{{media.preview_image | product_img_url: '1024x1024'}} 1024w,{{media.preview_image | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
+    data-src="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" data-srcset="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;width:100%;height:100%;--w:100%"
   />
@@ -919,7 +912,7 @@
     
     draggable="false"
     class="!rounded-none gp_lazyload"
-    data-src="{{media.preview_image | product_img_url: '1024x1024'}}" data-srcset="{{media.preview_image | product_img_url: '1024x1024'}} 768w,{{media.preview_image | product_img_url: '1024x1024'}} 1024w,{{media.preview_image | product_img_url: '1024x1024'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
+    data-src="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" data-srcset="{{media.preview_image | img_url: '768x768'}} 768w,{{media.preview_image | img_url: '1024x1024'}} 1024w,{{media.preview_image | img_url: '1440x1440'}} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="{{media.width}}" height="{{media.height}}" alt="{{media.alt}}" priority
     sizes="100vw"
     style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;width:100%;height:100%;--w:100%"
   />
@@ -1077,7 +1070,7 @@
       <div class="" style="">
         <div
           data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price decoration-g-text-1 text-g-text-2"
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price money decoration-g-text-1 text-g-text-2"
           style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--c:var(--g-c-text-2, text-2);--fs:normal;--ff:var(--g-font-Assistant, Assistant);--weight:400;--ls:0.6px;--lh:20px;--size:15px;--size-tablet:15px;--size-mobile:15px;word-break:break-word"
         >
         
@@ -1231,7 +1224,6 @@
           </button>
       
         <input
-          pattern="[0-9]"
           type="text"
           name="product-quantity"  
           {% if available == false %} disabled {% endif %}
@@ -1326,7 +1318,6 @@
           </button>
       
         <input
-          pattern="[0-9]"
           type="text"
           name="product-quantity"  
           {% if available == false %} disabled {% endif %}
@@ -1535,7 +1526,8 @@
     </div>
   
     
-        {%- endform -%}
+          {%- endform -%}
+        </product-form>
       </gp-product>
       {%- assign product = gpBkProduct -%}
     {% else %}
