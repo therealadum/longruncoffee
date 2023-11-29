@@ -199,11 +199,12 @@
       {%- endif -%}
       <gp-product class="" gp-context='{"productId": {{ product.id }}, "isSyncProduct": "false", "variantSelected": {{ variant | json | escape }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
         gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1}'>
-        {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
-          <input type="hidden" name="id" value="{{ variant.id }}" />
-          <input type="hidden" name="quantity" value="{{ quantity }}" />
-          <button type="submit" onclick="return false;" style="display:none;"></button>
-          
+        <product-form class="product-form">
+          {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
+            <input type="hidden" name="id" value="{{ variant.id }}" />
+            <input type="hidden" name="quantity" value="{{ quantity }}" />
+            <button type="submit" onclick="return false;" style="display:none;"></button>
+            
       
       
     <div
@@ -1444,7 +1445,7 @@
       <div class="" style="">
         <div
           data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price line-through decoration-g-text-1 text-g-text-1"
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price gp-product-compare-price line-through decoration-g-text-1 text-g-text-1"
           style="--w:100%;--tdc:text-1;--tdt:1px;--ta:right;--ta-mobile:left;--c:var(--g-c-text-1, text-1);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:15px;--size-tablet:12px;--size-mobile:13px;--weight:bold;word-break:break-word"
         >
         
@@ -1480,7 +1481,7 @@
       <div class="" style="">
         <div
           data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price decoration-g-text-1 text-g-text-2"
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-price gp-money decoration-g-text-1 text-g-text-2"
           style="--w:100%;--tdc:text-1;--tdt:1;--ta:left;--ta-mobile:left;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Inter, Inter);--lh:130%;--size:18px;--size-tablet:15px;--size-mobile:17px;--weight:bold;word-break:break-word"
         >
         
@@ -2312,7 +2313,7 @@
     class="inline-block w-full h-full max-w-full flex gp_lazyload"
     data-src="{{ "484137708004836523-13d03290-98d4-4bd0-9e21-5913f55796de.png" | asset_url }}" data-srcset="{{ '484137708004836523-13d03290-98d4-4bd0-9e21-5913f55796de.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-13d03290-98d4-4bd0-9e21-5913f55796de.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-13d03290-98d4-4bd0-9e21-5913f55796de.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="3500" height="3500" alt="Alt Image" priority
     sizes="100vw"
-    style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%"
+    style="--aspect:3500/3500;--aspect-tablet:3500/3500;--aspect-mobile:3500/3500;--objf:cover;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%"
   />
       </div>
     </figure>
@@ -2357,7 +2358,7 @@
     class="inline-block w-full h-full max-w-full flex gp_lazyload"
     data-src="{{ "484137708004836523-1f590010-8cf4-42f8-b3dc-1bf54b219ecc.png" | asset_url }}" data-srcset="{{ '484137708004836523-1f590010-8cf4-42f8-b3dc-1bf54b219ecc.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-1f590010-8cf4-42f8-b3dc-1bf54b219ecc.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-1f590010-8cf4-42f8-b3dc-1bf54b219ecc.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="3500" height="3500" alt="Alt Image" priority
     sizes="100vw"
-    style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%"
+    style="--aspect:3500/3500;--aspect-tablet:3500/3500;--aspect-mobile:3500/3500;--objf:cover;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%"
   />
       </div>
     </figure>
@@ -2486,7 +2487,7 @@
           data-slot-type="progress-bar"
           data-visible="{{ show_progress_bar }}"
             style="--h:5px;--h-tablet:5px;--h-mobile:5px;--bg:linear-gradient(90deg, #eee 50%, transparent 50%);--bgc:#FCB25A;--bgp:21% center"
-            class="relative mt-2 w-full -scale-100 data-[visible=true]:block data-[visible=false]:hidden rounded-md !bg-[length:200%]"
+            class="relative mt-2 w-full -scale-100 data-[visible=true]:block data-[visible=false]:hidden !bg-[length:200%] rounded-md "
           ></div>
         </div>
       </gp-product-stock-counter>
@@ -2656,7 +2657,8 @@
     </div>
   
     
-        {%- endform -%}
+          {%- endform -%}
+        </product-form>
       </gp-product>
       {%- assign product = gpBkProduct -%}
     {% else %}
