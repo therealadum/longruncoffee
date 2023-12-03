@@ -1112,7 +1112,7 @@
     class=""
     has-pre-selected="true"
     gp-data='{
-      "setting":{"blankText":"Please select an option","column":{"desktop":1},"combineFullWidth":{"desktop":true},"combineHeight":"40px","combineWidth":{"desktop":"400px"},"hasPreSelected":true,"label":true,"layout":{"desktop":"vertical"},"optionAlign":{"desktop":"left"},"optionType":"groupOption","price":true,"showAsSwatches":true,"soldOutMark":true,"variantPresets":[{"optionName":"base","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{"desktop":"auto","mobile":"auto","tablet":"auto"}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"45px","spacing":"16px","width":{"desktop":"auto","mobile":"auto","tablet":"auto"}}}}]},
+      "setting":{"blankText":"Please select an option","column":{"desktop":1},"combineFullWidth":{"desktop":true},"combineHeight":"40px","combineWidth":{"desktop":"400px"},"hasPreSelected":true,"label":true,"layout":{"desktop":"vertical"},"optionAlign":{"desktop":"left"},"optionType":"groupOption","price":true,"showAsSwatches":true,"soldOutMark":true,"soldOutStyle":"Line","variantPresets":[{"optionName":"base","optionType":"rectangle_list","presets":{"color":{"height":"45px","spacing":"16px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}},"dropdown":{"fullWidth":{"desktop":true,"mobile":true,"tablet":true},"height":"45px","width":{"desktop":"auto","mobile":"auto","tablet":"auto"}},"image":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"image_shopify":{"height":"64px","spacing":"16px","width":{"desktop":"64px","mobile":"64px","tablet":"64px"}},"rectangle_list":{"height":"45px","spacing":"16px","width":{"desktop":"auto","mobile":"auto","tablet":"auto"}}}}]},
       "styles":{"align":{"desktop":"left"},"dropdownItemWidth":{"desktop":"fill","mobile":"fill","tablet":"fill"},"fixedDropdownWidth":{"desktop":"240px"},"fullWidth":{"desktop":true},"labelColor":"text-2","labelGap":"8px","labelTypo":{"attrs":{"bold":true,"color":"text-1"},"type":"paragraph-2"},"marginBottom":{"desktop":"var(--g-s-xl)","mobile":"var(--g-s-xl)"},"optionBgColor":{"active":"bg-3","hover":"bg-3","normal":"bg-3"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"line-2","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"active":{"radiusType":"none"},"hover":{"radiusType":"none"},"normal":{"bblr":"4px","bbrr":"4px","btlr":"4px","btrr":"4px","radiusType":"custom"}},"optionShadow":{"normal":{"angle":90,"blur":"12px","color":"rgba(0, 0, 0, 0.20)","distance":"4px","spread":"0px","type":"shadow-1"}},"optionSpacing":"30px","optionTextColor":{"active":"text-2","hover":"text-2","normal":"text-2"},"optionTypo":{"type":"paragraph-2"},"swatchAutoWidth":{"desktop":true},"swatchHeight":{"desktop":"40px"},"swatchItemWidth":{"desktop":"auto"},"swatchSpacing":"var(--g-s-m)","swatchWidth":{"desktop":"80px"},"width":{"desktop":"400px"}}, 
       "variants":{{product.variants | json | escape}},
       "optionsWithValues": {{product.options_with_values | json | escape}},
@@ -1149,27 +1149,15 @@
   >
   
   {%- for variantItem in variants -%}
-      {%- if variantItem.available == false -%} 
-              {%- if variantItem.id == variant.id -%}
-                    <option origin-price="{{variantItem.price}}" disabled selected value="{{variantItem.id}}" key="{{variantItem.id}}">
-                    {{variantItem.title}} - {{variantItem.price | money}} 
-                    </option>
-              {% else %}
-                    <option origin-price="{{variantItem.price}}" disabled value="{{variantItem.id}}" key="{{variantItem.id}}">
-                    {{variantItem.title}} - {{variantItem.price | money}}
-                    </option>
-              {%- endif -%}
-            {%- else -%} 
-            {%- if variantItem.id == variant.id -%}
+      {%- if variantItem.id == variant.id -%}
                 <option origin-price="{{variantItem.price}}" selected value="{{variantItem.id}}" key="{{variantItem.id}}">
-                {{variantItem.title}} - {{variantItem.price | money}} 
-                </option>
-            {% else %}
-                <option origin-price="{{variantItem.price}}" value="{{variantItem.id}}" key="{{variantItem.id}}">
                 {{variantItem.title}} - {{variantItem.price | money}}
                 </option>
-            {%- endif -%}
-            {%- endif -%}
+              {% else %}
+                  <option origin-price="{{variantItem.price}}" value="{{variantItem.id}}" key="{{variantItem.id}}">
+                  {{variantItem.title}} - {{variantItem.price | money}}
+                  </option>
+              {%- endif -%}
        
       {%- endfor -%}
     
