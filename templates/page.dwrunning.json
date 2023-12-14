@@ -1,5 +1,44 @@
 {
   "sections": {
+    "ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d": {
+      "type": "image-banner",
+      "blocks": {
+        "template--21832976466233__ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome, DWRUNNING!",
+            "heading_size": "h1"
+          }
+        },
+        "template--21832976466233__ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "We are excited to help you fuel and maximize your performance.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--21832976466233__ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d-heading-1",
+        "template--21832976466233__ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d-text-1"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {h2 {font-size: 32px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/DWRunning.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "70b7ce33-a003-451b-9b94-fc0ed7ecd304": {
       "type": "rich-text",
       "blocks": {
@@ -34,6 +73,7 @@
         "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-text-1",
         "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-button-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -90,9 +130,8 @@
         "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-4"
       ],
       "custom_css": [
-        "h2 {font-size: 28px;}",
-        "h3 {font-size: 20px;}",
-        "h6 {font-size: 20px;}"
+        "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
+        "@media (min-width: 961px) {h2 {font-size: 42px; }}"
       ],
       "settings": {
         "caption": "Our Patent-Protected Formula Maximizes Your Performance",
@@ -108,11 +147,6 @@
         "desktop_layout": "image_second",
         "padding_top": 32,
         "padding_bottom": 32
-      }
-    },
-    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
-      "type": "home-reviews",
-      "settings": {
       }
     },
     "a65c3df0-3c87-407a-8020-c01a164008c9": {
@@ -198,6 +232,7 @@
     },
     "3e71e8c6-89c6-4532-b594-abb09f5ed529": {
       "type": "rich-text",
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -205,6 +240,11 @@
         "full_width": true,
         "padding_top": 16,
         "padding_bottom": 0
+      }
+    },
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
+      "type": "home-reviews",
+      "settings": {
       }
     },
     "coming-soon": {
@@ -376,13 +416,14 @@
     }
   },
   "order": [
+    "ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d",
     "70b7ce33-a003-451b-9b94-fc0ed7ecd304",
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
-    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "a65c3df0-3c87-407a-8020-c01a164008c9",
     "54c8a8be-5983-4ee5-97d4-2bce80b4a690",
     "170257478754fc67d6",
     "3e71e8c6-89c6-4532-b594-abb09f5ed529",
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
     "d5466ac7-0a29-4c38-af12-7e4caee3d53f",
