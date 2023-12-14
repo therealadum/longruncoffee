@@ -6,7 +6,7 @@
         "template--21832976466233__ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome, DWRUNNING!",
+            "heading": "Welcome, Fitness Sports runners!",
             "heading_size": "h1"
           }
         },
@@ -22,6 +22,7 @@
         "template--21832976466233__ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d-heading-1",
         "template--21832976466233__ffdb8c9a-aa6e-45ab-8dc0-fca74cdb683d-text-1"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 960px) {h2 {font-size: 32px; }}"
       ],
@@ -45,7 +46,7 @@
         "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome, DWRUNNING!",
+            "heading": "Welcome, Fitness Sports Runners!",
             "heading_size": "h1"
           }
         },
@@ -73,7 +74,9 @@
         "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-text-1",
         "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-button-1"
       ],
-      "disabled": true,
+      "custom_css": [
+        "@media (max-width: 960px) {h2 {font-size: 32px; }}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -207,7 +210,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 16,
-        "padding_bottom": 0
+        "padding_bottom": 16
       }
     },
     "170257478754fc67d6": {
@@ -216,7 +219,7 @@
         "ad23dda1-28f4-42c3-a97e-29902cb19353": {
           "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
           "settings": {
-            "formId": "RZnzGz"
+            "formId": "V6jhzP"
           }
         }
       },
