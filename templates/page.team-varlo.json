@@ -1,5 +1,44 @@
 {
   "sections": {
+    "03e2fb43-4281-4f8e-8839-a8d2a7a0c75b": {
+      "type": "image-banner",
+      "blocks": {
+        "template--21478857212217__03e2fb43-4281-4f8e-8839-a8d2a7a0c75b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome, Team Varlo!",
+            "heading_size": "h1"
+          }
+        },
+        "template--21478857212217__03e2fb43-4281-4f8e-8839-a8d2a7a0c75b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "We are excited to help you fuel and maximize your performance.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--21478857212217__03e2fb43-4281-4f8e-8839-a8d2a7a0c75b-heading-1",
+        "template--21478857212217__03e2fb43-4281-4f8e-8839-a8d2a7a0c75b-text-1"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {h2 {font-size: 32px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Team_Varlo_Hero_Banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "70b7ce33-a003-451b-9b94-fc0ed7ecd304": {
       "type": "rich-text",
       "blocks": {
@@ -34,6 +73,7 @@
         "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-text-1",
         "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-button-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -90,9 +130,8 @@
         "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-4"
       ],
       "custom_css": [
-        "h2 {font-size: 28px;}",
-        "h3 {font-size: 20px;}",
-        "h6 {font-size: 20px;}"
+        "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
+        "@media (min-width: 961px) {h2 {font-size: 42px; }}"
       ],
       "settings": {
         "caption": "Our Patent-Protected Formula Maximizes Your Performance",
@@ -108,11 +147,6 @@
         "desktop_layout": "image_second",
         "padding_top": 32,
         "padding_bottom": 32
-      }
-    },
-    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
-      "type": "home-reviews",
-      "settings": {
       }
     },
     "a65c3df0-3c87-407a-8020-c01a164008c9": {
@@ -165,6 +199,37 @@
         "show_text_below": false
       }
     },
+    "f385b0f8-ffeb-4b18-8f6a-92095a676dd1": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "170257478754fc67d6": {
+      "type": "apps",
+      "blocks": {
+        "ad23dda1-28f4-42c3-a97e-29902cb19353": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "XKDJMC"
+          }
+        }
+      },
+      "block_order": [
+        "ad23dda1-28f4-42c3-a97e-29902cb19353"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "16941367470aba8df7": {
       "type": "apps",
       "blocks": {
@@ -189,8 +254,14 @@
       "block_order": [
         "17d323cb-553c-456d-acd1-02a83042a100"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
+      }
+    },
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
+      "type": "home-reviews",
+      "settings": {
       }
     },
     "coming-soon": {
@@ -359,40 +430,22 @@
         "padding_top": 24,
         "padding_bottom": 0
       }
-    },
-    "170257478754fc67d6": {
-      "type": "apps",
-      "blocks": {
-        "ad23dda1-28f4-42c3-a97e-29902cb19353": {
-          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
-          "settings": {
-            "formId": "RZnzGz"
-          }
-        }
-      },
-      "block_order": [
-        "ad23dda1-28f4-42c3-a97e-29902cb19353"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
+    "03e2fb43-4281-4f8e-8839-a8d2a7a0c75b",
     "70b7ce33-a003-451b-9b94-fc0ed7ecd304",
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
-    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "a65c3df0-3c87-407a-8020-c01a164008c9",
+    "f385b0f8-ffeb-4b18-8f6a-92095a676dd1",
+    "170257478754fc67d6",
     "16941367470aba8df7",
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
     "d5466ac7-0a29-4c38-af12-7e4caee3d53f",
     "accf1238-351b-4e82-a2fb-ed65fbb5d239",
     "713b7226-cf71-4f89-85c2-f953b6c17b1b",
-    "5ba6089b-f4b0-483a-bb71-f0815cd8c897",
-    "170257478754fc67d6"
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897"
   ]
 }
