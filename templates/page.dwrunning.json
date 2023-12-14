@@ -6,7 +6,7 @@
         "template--21478857212217__70b7ce33-a003-451b-9b94-fc0ed7ecd304-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome, Team Varlo!",
+            "heading": "Welcome, DWRUNNING!",
             "heading_size": "h1"
           }
         },
@@ -165,32 +165,46 @@
         "show_text_below": false
       }
     },
-    "16941367470aba8df7": {
+    "54c8a8be-5983-4ee5-97d4-2bce80b4a690": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "170257478754fc67d6": {
       "type": "apps",
       "blocks": {
-        "17d323cb-553c-456d-acd1-02a83042a100": {
-          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "ad23dda1-28f4-42c3-a97e-29902cb19353": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
           "settings": {
-            "form_id": "38653",
-            "text_color": "#044e54",
-            "button_background_color": "#044e54",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#dd1d1d",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 50,
-            "padding_bottom": 50,
-            "padding_right": 0,
-            "padding_left": 0
+            "formId": "RZnzGz"
           }
         }
       },
       "block_order": [
-        "17d323cb-553c-456d-acd1-02a83042a100"
+        "ad23dda1-28f4-42c3-a97e-29902cb19353"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "3e71e8c6-89c6-4532-b594-abb09f5ed529": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 0
       }
     },
     "coming-soon": {
@@ -263,6 +277,10 @@
     },
     "accf1238-351b-4e82-a2fb-ed65fbb5d239": {
       "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
       "settings": {
         "heading": "The Science",
         "heading_size": "h1",
@@ -355,26 +373,6 @@
         "padding_top": 24,
         "padding_bottom": 0
       }
-    },
-    "170257478754fc67d6": {
-      "type": "apps",
-      "blocks": {
-        "ad23dda1-28f4-42c3-a97e-29902cb19353": {
-          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
-          "settings": {
-            "formId": "RZnzGz"
-          }
-        }
-      },
-      "block_order": [
-        "ad23dda1-28f4-42c3-a97e-29902cb19353"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -382,13 +380,14 @@
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
     "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "a65c3df0-3c87-407a-8020-c01a164008c9",
-    "16941367470aba8df7",
+    "54c8a8be-5983-4ee5-97d4-2bce80b4a690",
+    "170257478754fc67d6",
+    "3e71e8c6-89c6-4532-b594-abb09f5ed529",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
     "d5466ac7-0a29-4c38-af12-7e4caee3d53f",
     "accf1238-351b-4e82-a2fb-ed65fbb5d239",
     "713b7226-cf71-4f89-85c2-f953b6c17b1b",
-    "5ba6089b-f4b0-483a-bb71-f0815cd8c897",
-    "170257478754fc67d6"
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897"
   ]
 }

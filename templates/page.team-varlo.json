@@ -263,6 +263,10 @@
     },
     "accf1238-351b-4e82-a2fb-ed65fbb5d239": {
       "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
       "settings": {
         "heading": "The Science",
         "heading_size": "h1",
@@ -368,6 +372,9 @@
       },
       "block_order": [
         "ad23dda1-28f4-42c3-a97e-29902cb19353"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "include_margins": true
