@@ -55,7 +55,8 @@
         "template--19876927668537__48b2557b-a48d-4912-a99b-5daa46fa2d10-collapsible_row-4"
       ],
       "custom_css": [
-
+        "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
+        "@media (min-width: 961px) {h2 {font-size: 42px; }}"
       ],
       "settings": {
         "caption": "Patent Protected Formula Maximizes Your Performance",
