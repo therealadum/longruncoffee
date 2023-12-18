@@ -35,7 +35,7 @@
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
         "color_scheme": "accent-2",
-        "image_behavior": "none",
+        "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "padding_top": 16,
         "padding_bottom": 16
