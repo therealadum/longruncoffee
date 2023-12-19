@@ -6,7 +6,7 @@
         "template--21854966251833__b8e29671-f7b3-482e-8737-32f65390c740-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Team Sponsorships",
+            "heading": "Team Partnerships",
             "heading_size": "h2"
           }
         },
@@ -50,7 +50,7 @@
             "image": "shopify:\/\/shop_images\/DWRunning_Logo.jpg",
             "title": "DWRunning",
             "text": "",
-            "link_label": "",
+            "link_label": "Team Page",
             "link": "https:\/\/dwrunning.com"
           }
         },
@@ -60,7 +60,7 @@
             "image": "shopify:\/\/shop_images\/Team_Varlo_Logo.jpg",
             "title": "Team Varlo",
             "text": "",
-            "link_label": "",
+            "link_label": "Team Page",
             "link": "https:\/\/varlosports.com\/pages\/team-varlo"
           }
         },
