@@ -51,7 +51,7 @@
             "title": "DWRunning",
             "text": "",
             "link_label": "Team Page",
-            "link": "https:\/\/dwrunning.com"
+            "link": "shopify:\/\/pages\/dwrunning"
           }
         },
         "template--21854966251833__c56df9ef-adbc-4dae-beb1-0f51ec96b564-column-3": {
@@ -61,7 +61,7 @@
             "title": "Team Varlo",
             "text": "",
             "link_label": "Team Page",
-            "link": "https:\/\/varlosports.com\/pages\/team-varlo"
+            "link": "shopify:\/\/pages\/team-varlo"
           }
         },
         "template--21854966251833__c56df9ef-adbc-4dae-beb1-0f51ec96b564-column-2": {
@@ -70,8 +70,8 @@
             "image": "shopify:\/\/shop_images\/Fitness_Sports_Elite_Logo.png",
             "title": "Fitness Sports",
             "text": "",
-            "link_label": "",
-            "link": "https:\/\/fitnesssports.com\/"
+            "link_label": "Team Page",
+            "link": "shopify:\/\/pages\/fitness-sports"
           }
         },
         "3ca0c095-c2a8-40d6-8336-8090196cee8e": {
