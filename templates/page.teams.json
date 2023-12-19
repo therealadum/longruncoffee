@@ -31,7 +31,7 @@
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
         "color_scheme": "accent-2",
@@ -41,63 +41,75 @@
         "padding_bottom": 16
       }
     },
-    "0404072b-ef32-4d53-9763-adccd5fedc35": {
-      "type": "slideshow",
+    "c56df9ef-adbc-4dae-beb1-0f51ec96b564": {
+      "type": "multicolumn",
       "blocks": {
-        "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-1": {
-          "type": "slide",
+        "template--21854966251833__c56df9ef-adbc-4dae-beb1-0f51ec96b564-column-1": {
+          "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LRC-Wholesale-pallet-mockup-web.jpg",
-            "heading": "Wholesale Orders",
-            "heading_size": "h2",
-            "subheading": "We work with retailers of all sizes to bring electrolyte infused coffee to your community.",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
+            "image": "shopify:\/\/shop_images\/DWRunning_Logo.jpg",
+            "title": "DWRunning",
+            "text": "",
+            "link_label": "",
+            "link": "https:\/\/dwrunning.com"
           }
         },
-        "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-2": {
-          "type": "slide",
+        "template--21854966251833__c56df9ef-adbc-4dae-beb1-0f51ec96b564-column-3": {
+          "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
-            "heading": "Custom & Corporate",
-            "heading_size": "h2",
-            "subheading": "Order custom coffee for your brand.  Perfect for races and corporate partners.",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
+            "image": "shopify:\/\/shop_images\/Team_Varlo_Logo.jpg",
+            "title": "Team Varlo",
+            "text": "",
+            "link_label": "",
+            "link": "https:\/\/varlosports.com\/pages\/team-varlo"
+          }
+        },
+        "template--21854966251833__c56df9ef-adbc-4dae-beb1-0f51ec96b564-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fitness_Sports_Elite_Logo.png",
+            "title": "Fitness Sports",
+            "text": "",
+            "link_label": "",
+            "link": "https:\/\/fitnesssports.com\/"
+          }
+        },
+        "3ca0c095-c2a8-40d6-8336-8090196cee8e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Team_Running.jpg",
+            "title": "Your Team",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-1",
-        "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-2"
+        "template--21854966251833__c56df9ef-adbc-4dae-beb1-0f51ec96b564-column-1",
+        "template--21854966251833__c56df9ef-adbc-4dae-beb1-0f51ec96b564-column-3",
+        "template--21854966251833__c56df9ef-adbc-4dae-beb1-0f51ec96b564-column-2",
+        "3ca0c095-c2a8-40d6-8336-8090196cee8e"
       ],
       "custom_css": [
         "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
         "@media (min-width: 961px) {h2 {font-size: 42px; } h6 {font-size: 22px; }}"
       ],
       "settings": {
-        "layout": "component-grid",
-        "slide_height": "adapt_image",
-        "slider_visual": "numbers",
-        "auto_rotate": true,
-        "change_slides_speed": 3,
-        "image_behavior": "ambient",
-        "show_text_below": true,
-        "accessibility_info": "Wholesale and custom orders"
+        "title": "Proudly Sponsoring",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "ba4f982c-c438-465f-aa94-40b8e1eb2438": {
@@ -106,14 +118,14 @@
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Wholesale & Custom",
+            "heading": "Want your team fueled by Long run coffee?",
             "heading_size": "h2"
           }
         },
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h6>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/h6><p><\/p><p>Electrolyte infused solutions for:<\/p><p>- <strong>Retailers<\/strong><\/p><p>- <strong>Races<\/strong><\/p><p>- <strong>Corporate Events<\/strong><\/p><p><\/p><h6>Contact us with the form below, and we'll be in touch within 24 hours. <\/h6>"
+            "text": ""
           }
         },
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1": {
@@ -138,21 +150,102 @@
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 64,
+        "padding_bottom": 0
       }
     },
     "d0d8b155-050e-4a80-ae42-95133a443ed6": {
       "type": "contact-form",
       "custom_css": [
-        "h2 {font-size: 35px;}"
+        "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h4 {font-size: 18px; } h5 {font-size: 18px; } h6 {font-size: 18px; } p {font:size: 12px; } }",
+        "@media (min-width: 961px) {h2 {font-size: 36px; } h6 {font-size: 22px; }}"
       ],
       "settings": {
         "heading": "Get in touch",
         "heading_size": "h2",
-        "color_scheme": "background-2",
+        "color_scheme": "inverse",
         "padding_top": 32,
         "padding_bottom": 32
+      }
+    },
+    "16ba811e-5810-499e-a8a8-d0c024d64ad5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--21854966251833__16ba811e-5810-499e-a8a8-d0c024d64ad5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Become an ambassador",
+            "heading_size": "h1"
+          }
+        },
+        "template--21854966251833__16ba811e-5810-499e-a8a8-d0c024d64ad5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Want to rep Long Run Coffee as an individual?<\/p><p>Join our ambassador program to earn commissions, get early access to new products, and more. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--21854966251833__16ba811e-5810-499e-a8a8-d0c024d64ad5-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "CHECK IT OUT",
+            "button_link": "shopify:\/\/pages\/ambassador-program"
+          }
+        }
+      },
+      "block_order": [
+        "template--21854966251833__16ba811e-5810-499e-a8a8-d0c024d64ad5-heading-1",
+        "template--21854966251833__16ba811e-5810-499e-a8a8-d0c024d64ad5-text-1",
+        "template--21854966251833__16ba811e-5810-499e-a8a8-d0c024d64ad5-button-1"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
+        "@media (min-width: 961px) {h2 {font-size: 42px; } h6 {font-size: 20px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/LRC_Ambassador.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "color_scheme": "accent-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "77237581-0be1-446e-a5c5-ceb99d007f3a": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 32px;}"
+      ],
+      "settings": {
+        "title": "Fuel your passion",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "coffee",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "coming-soon": {
@@ -214,46 +307,16 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "77237581-0be1-446e-a5c5-ceb99d007f3a": {
-      "type": "featured-collection",
-      "custom_css": [
-        "h2 {font-size: 25px;}"
-      ],
-      "settings": {
-        "title": "Fuel your passion",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "coffee",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "b8e29671-f7b3-482e-8737-32f65390c740",
-    "0404072b-ef32-4d53-9763-adccd5fedc35",
+    "c56df9ef-adbc-4dae-beb1-0f51ec96b564",
     "ba4f982c-c438-465f-aa94-40b8e1eb2438",
     "d0d8b155-050e-4a80-ae42-95133a443ed6",
+    "16ba811e-5810-499e-a8a8-d0c024d64ad5",
+    "77237581-0be1-446e-a5c5-ceb99d007f3a",
     "coming-soon",
-    "9ae28934-928f-4a51-bfb4-14de2c49646a",
-    "77237581-0be1-446e-a5c5-ceb99d007f3a"
+    "9ae28934-928f-4a51-bfb4-14de2c49646a"
   ]
 }
