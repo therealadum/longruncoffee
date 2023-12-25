@@ -185,10 +185,16 @@
         "settings": {
           "button_color": "#202a36",
           "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_left",
           "button_vertical_position": "lowest",
-          "button_text": "chat_with_us",
           "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
+        }
+      },
+      "826009465879322885": {
+        "type": "shopify:\/\/apps\/recomsale-affiliate-marketing\/blocks\/app\/689432f1-f205-49e7-a1de-1b016449398f",
+        "disabled": false,
+        "settings": {
         }
       }
     },
