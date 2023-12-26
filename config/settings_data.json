@@ -185,15 +185,15 @@
         "settings": {
         }
       },
-      "15079184273603081885": {
-        "type": "shopify:\/\/apps\/essential-shipping-bar\/blocks\/app_embed\/4125375e-37c8-4137-949d-c4e1a3aac572",
-        "disabled": true,
+      "7280966411886983154": {
+        "type": "shopify:\/\/apps\/monk\/blocks\/app-embed\/e949adb6-87ca-4b97-8f31-0e51bf507f2d",
+        "disabled": false,
         "settings": {
         }
       },
-      "7280966411886983154": {
-        "type": "shopify:\/\/apps\/monk\/blocks\/app-embed\/e949adb6-87ca-4b97-8f31-0e51bf507f2d",
-        "disabled": true,
+      "15079184273603081885": {
+        "type": "shopify:\/\/apps\/essential-shipping-bar\/blocks\/app_embed\/4125375e-37c8-4137-949d-c4e1a3aac572",
+        "disabled": false,
         "settings": {
         }
       }
