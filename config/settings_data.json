@@ -173,12 +173,6 @@
         "settings": {
         }
       },
-      "7280966411886983154": {
-        "type": "shopify:\/\/apps\/monk\/blocks\/app-embed\/e949adb6-87ca-4b97-8f31-0e51bf507f2d",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "15683396631634586217": {
         "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": true,
@@ -194,6 +188,12 @@
       "826009465879322885": {
         "type": "shopify:\/\/apps\/recomsale-affiliate-marketing\/blocks\/app\/689432f1-f205-49e7-a1de-1b016449398f",
         "disabled": false,
+        "settings": {
+        }
+      },
+      "7280966411886983154": {
+        "type": "shopify:\/\/apps\/monk\/blocks\/app-embed\/e949adb6-87ca-4b97-8f31-0e51bf507f2d",
+        "disabled": true,
         "settings": {
         }
       }
