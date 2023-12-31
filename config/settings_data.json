@@ -193,7 +193,7 @@
       },
       "826009465879322885": {
         "type": "shopify:\/\/apps\/recomsale-affiliate-marketing\/blocks\/app\/689432f1-f205-49e7-a1de-1b016449398f",
-        "disabled": true,
+        "disabled": false,
         "settings": {
         }
       }
