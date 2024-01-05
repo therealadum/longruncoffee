@@ -273,10 +273,6 @@
     </script>
   {% render 'gp-head' %}
 
-<script id="docapp-cart">window.docappCart = {{ cart | json }}; window.docappCart.currency = "{{ 0 | money_with_currency | slice: -3, 3 }}"; window.docappCart.shop_currency = "{{ shop.currency }}";</script>
-<script id="docapp-free-item-speedup">
-(() => { if (!document.documentElement.innerHTML.includes('\\/shop' + '\\/js' + '\\/free-gift-cart-upsell-pro.min.js') || window.freeGiftCartUpsellProAppLoaded) return; let script = document.createElement('script'); script.src = "https://d2fk970j0emtue.cloudfront.net/shop/js/free-gift-cart-upsell-pro.min.js?shop=longruncoffee.myshopify.com"; document.getElementById('docapp-free-item-speedup').after(script); })();
-</script>
 </head>
 
   <body class='gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}'>{% if request.path contains 'policies' %}
