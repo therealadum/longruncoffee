@@ -497,7 +497,7 @@
       }
 
       if (!isIE()) return;
-      const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
+      const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id" data-productid="{{ product.id }}"]');
       const noScriptInputWrapper = document.createElement('div');
       const variantSwitcher =
         document.querySelector('variant-radios[data-section="{{ section.id }}"]') ||
