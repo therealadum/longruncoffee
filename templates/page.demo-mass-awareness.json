@@ -1,5 +1,22 @@
 {
   "sections": {
+    "17025828188f504f1f": {
+      "type": "apps",
+      "blocks": {
+        "f56f02fb-405f-4e54-bc52-db7076a29dba": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "QSwKPL"
+          }
+        }
+      },
+      "block_order": [
+        "f56f02fb-405f-4e54-bc52-db7076a29dba"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd": {
       "type": "collapsible-content",
       "blocks": {
@@ -48,7 +65,7 @@
       ],
       "custom_css": [
         "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
-        "@media (min-width: 961px) {h2 {font-size: 42px; } h6 {font-size: 20px}}"
+        "@media (min-width: 961px) {h2 {font-size: 42px; } h6 {font-size: 20px; }}"
       ],
       "settings": {
         "caption": "",
@@ -102,6 +119,7 @@
         "template--21411083452729__a65c3df0-3c87-407a-8020-c01a164008c9-text-1",
         "template--21411083452729__a65c3df0-3c87-407a-8020-c01a164008c9-buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Long_Run_Coffee_electrolyte_infused_coffee.jpg",
         "image_overlay_opacity": 0,
@@ -129,23 +147,6 @@
         "full_width": true,
         "padding_top": 32,
         "padding_bottom": 0
-      }
-    },
-    "17025828188f504f1f": {
-      "type": "apps",
-      "blocks": {
-        "f56f02fb-405f-4e54-bc52-db7076a29dba": {
-          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
-          "settings": {
-            "formId": "QSwKPL"
-          }
-        }
-      },
-      "block_order": [
-        "f56f02fb-405f-4e54-bc52-db7076a29dba"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "16941367470aba8df7": {
@@ -304,10 +305,10 @@
     }
   },
   "order": [
+    "17025828188f504f1f",
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
     "a65c3df0-3c87-407a-8020-c01a164008c9",
     "5ba6089b-f4b0-483a-bb71-f0815cd8c897",
-    "17025828188f504f1f",
     "16941367470aba8df7",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
