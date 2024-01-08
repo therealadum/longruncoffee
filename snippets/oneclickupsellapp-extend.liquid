@@ -2,7 +2,7 @@
 {% assign api = shop.metafields.zipifyoneclickupsell | size %}}{%- unless api == 0 -%}
 <script>((o,c,u)=>{o[c]=o[c]||{},o[u]=o[u]||{},o[c].OCU=o[c].OCU||{api:o[u]}})(window,'Zipify','OCUApi');</script>
 <script>
-Zipify.OCU.api.customUpdateCart = () => {
+OCUApi.customUpdateCart = () => {
   // new Promise(function(resolve) { resolve({ data: Zipify.OCU.lqd.cart}); })
   const res = Zipify.OCU.api.axios.get('/cart.js');
   console.log('ocu cart response');
