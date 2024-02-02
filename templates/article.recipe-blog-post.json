@@ -57,6 +57,10 @@
         "template--20907922096441__ce13f80d-b0cb-4356-a842-74b92e5c747a-paragraph-1",
         "template--20907922096441__ce13f80d-b0cb-4356-a842-74b92e5c747a-email_form-1"
       ],
+      "custom_css": [
+        "p {font-size: 20px;}",
+        "h2 {font-size: 32px;}"
+      ],
       "settings": {
         "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
         "full_width": true,
