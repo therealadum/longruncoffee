@@ -141,6 +141,27 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_WBPykW": {
+      "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
+      "settings": {
+        "heading": "Athlete Stories",
+        "heading_size": "h1",
+        "blog": "athlete-stories",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "coming-soon": {
       "type": "coming-soon",
       "disabled": true,
@@ -173,7 +194,7 @@
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "",
+        "color_scheme": "accent-2",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -193,6 +214,7 @@
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
     "a6b289dd-3db1-48f4-a338-f99b5dac67e6",
     "eefa3ee9-8bec-4024-8a6e-c98f4e445dfd",
+    "featured_blog_WBPykW",
     "coming-soon",
     "d0d8b155-050e-4a80-ae42-95133a443ed6",
     "713b7226-cf71-4f89-85c2-f953b6c17b1b"
