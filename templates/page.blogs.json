@@ -8,7 +8,7 @@
       ],
       "settings": {
         "heading": "Fuel Your Passion",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "blog": "fuel-your-passion",
         "post_limit": 4,
         "columns_desktop": 4,
@@ -29,7 +29,7 @@
       ],
       "settings": {
         "heading": "The Science",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "blog": "science",
         "post_limit": 4,
         "columns_desktop": 4,
