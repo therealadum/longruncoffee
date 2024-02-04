@@ -8,7 +8,7 @@
       ],
       "settings": {
         "heading": "Fuel Your Passion",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "blog": "fuel-your-passion",
         "post_limit": 4,
         "columns_desktop": 4,
@@ -182,7 +182,7 @@
     "713b7226-cf71-4f89-85c2-f953b6c17b1b": {
       "type": "featured-collection",
       "settings": {
-        "title": "fuel your passion",
+        "title": "The Goods",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
