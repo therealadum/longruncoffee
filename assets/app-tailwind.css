@@ -1,5 +1,14 @@
 @tailwind base;
 @tailwind components;
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
 @tailwind utilities;
 
 @keyframes fadeInAnimation {
@@ -69,4 +78,97 @@
     width: 1rem !important;
     height: 1rem !important;
   }
+}
+body {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.w-onethird {
+  @apply w-1/3;
+}
+
+.w-twothird {
+  @apply w-2/3;
+}
+
+.drawer__inner.subscriptions {
+  @apply w-[100vw] max-w-none md:w-[40rem];
+  height: 100%;
+  max-height: -webkit-fill-available;
+}
+
+.nothidden {
+  display: block !important;
+}
+
+.h-fill {
+  /* equivalent to 100dvh in major browsers */
+  min-height: calc(
+    100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0)
+  );
+}
+
+.max-h-fill {
+  max-height: calc(
+    100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0)
+  );
+}
+
+@supports (-webkit-touch-callout: none) {
+  .h-fill {
+    /* for ios safari 15, safe-area-inset-bottom is 0, so a special fix apply here */
+    min-height: -webkit-fill-available;
+  }
+  .max-h-fill {
+    max-height: -webkit-fill-available;
+  }
+}
+
+.needsclick.kl-private-reset-css-Xuajs1 {
+  z-index: 20 !important;
+}
+
+button.needsclick.kl-private-reset-css-Xuajs1 {
+  z-index: 30 !important;
+}
+
+sticky-header {
+  z-index: 50;
+}
+
+/* reviews */
+div.spr-container {
+  @apply border-none;
+}
+span.spr-summary-actions-togglereviews {
+  @apply text-neutral-700 text-base;
+}
+a.spr-summary-actions-newreview {
+  @apply text-cyan-700 text-base;
+}
+span.spr-summary-actions-togglereviews {
+  @apply text-neutral-700 text-base;
+}
+.spr-icon.spr-icon-star {
+  @apply text-tan-600;
+}
+h2#spr-header-title {
+  @apply text-cyan-700 font-accent text-xl !important;
+}
+
+#shopify-section-template--21630579638585__related-products > div {
+  background-color: transparent;
+  z-index: 10;
+  position: relative;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -1,45 +1,56 @@
 <!doctype html>
-<html class='no-js' lang='{{ request.locale.iso_code }}'>
-
+<html class="no-js" lang="{{ request.locale.iso_code }}">
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "jd2ybj007n");
-</script>
-  
+    (function (c, l, a, r, i, t, y) {
+      c[a] =
+        c[a] ||
+        function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', 'jd2ybj007n');
+  </script>
+
   <style>
-  @font-face {
-  font-family: IntroRust;
-  src: url(https://cdn.shopify.com/s/files/1/0761/6924/9081/t/3/assets/IntroRust-Base.ttf);
-  }
-  
+    @font-face {
+      font-family: IntroRust;
+      src: url(https://cdn.shopify.com/s/files/1/0761/6924/9081/t/3/assets/IntroRust-Base.ttf);
+    }
   </style>
   <head>
-    
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PKP7F33B');</script>
-<!-- End Google Tag Manager -->
-    
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width,initial-scale=1'>
-    <meta name='theme-color' content=''>
-    <link rel='canonical' href='{{ canonical_url }}'>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PKP7F33B');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
-      <link rel='icon' type='image/png' href='{{ settings.favicon | image_url: width: 32, height: 32 }}'>
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- else -%}
-      <link rel='icon' type='image/ico' href='{{ "favicon.ico" | asset_img_url }}'>
+      <link rel="icon" type="image/ico" href="{{ "favicon.ico" | asset_img_url }}">
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link rel='preconnect' href='https://fonts.shopifycdn.com' crossorigin>
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
     <title>
@@ -50,16 +61,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </title>
 
     {% if page_description %}
-      <meta name='description' content='{{ page_description | escape }}'>
+      <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
     {% render 'meta-tags' %}
 
-    <script src='{{ 'constants.js' | asset_url }}' defer='defer'></script>
-    <script src='{{ 'pubsub.js' | asset_url }}' defer='defer'></script>
-    <script src='{{ 'global.js' | asset_url }}' defer='defer'></script>
+    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
-      <script src='{{ 'animations.js' | asset_url }}' defer='defer'></script>
+      <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
     {{ content_for_header }}
@@ -259,17 +270,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
-      <link rel='preload' as='font' href='{{ settings.type_body_font | font_url }}' type='font/woff2' crossorigin>
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
     {%- unless settings.type_header_font.system? -%}
-      <link rel='preload' as='font' href='{{ settings.type_header_font | font_url }}' type='font/woff2' crossorigin>
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
 
     {%- if settings.predictive_search_enabled -%}
       <link
-        rel='stylesheet'
-        href='{{ 'component-predictive-search.css' | asset_url }}'
-        media='print'
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
         onload="this.media='all'"
       >
     {%- endif -%}
@@ -280,25 +291,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  {% render 'gp-head' %}
+    {% render 'gp-head' %}
+  </head>
 
-</head>
-
-  <body class='gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}'>
-    <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKP7F33B"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PKP7F33B"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     {% sections 'header-group' %}
 
-    <main id='MainContent' class='content-for-layout focus-none' role='main' tabindex='-1'>
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {% if request.path contains 'policies' %}
         {% render 'policy', content: content_for_layout %}
       {% else %}
@@ -306,11 +319,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       {% endif %}
     </main>
 
-    
-
     <ul hidden>
-      <li id='a11y-refresh-page-message'>{{ 'accessibility.refresh_page' | t }}</li>
-      <li id='a11y-new-window-message'>{{ 'accessibility.link_messages.new_window' | t }}</li>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
     <script>
@@ -346,9 +357,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 
     {%- if settings.predictive_search_enabled -%}
-      <script src='{{ 'predictive-search.js' | asset_url }}' defer='defer'></script>
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-          </body>
-  {%- capture ocu_extend -%}{% render 'oneclickupsellapp-extend' %}{%- endcapture -%}{%- unless ocu_extend contains 'Liquid error' -%}{{ ocu_extend }}{%- endunless -%}
+  </body>
+  {%- capture ocu_extend -%}{% render 'oneclickupsellapp-extend' %}{%- endcapture -%}
+  {%- unless ocu_extend contains 'Liquid error' -%}{{ ocu_extend }}{%- endunless -%}
 </html>

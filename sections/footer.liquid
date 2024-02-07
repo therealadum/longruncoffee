@@ -233,27 +233,27 @@
     {%- endif -%}
 {% endcomment %}
 
-<footer class='bg-cyan-700' aria-labelledby='footer-heading'>
-  <h2 id='footer-heading' class='sr-only'>Footer</h2>
-  <div class='mx-auto px-6 py-8 lg:px-8 max-w-[85rem]'>
-    <div class='xl:grid xl:grid-cols-3 xl:gap-8'>
-      <div class='grid grid-cols-1 lg:grid-cols-{{ block_count | at_most: 4 }} gap-8 xl:col-span-2'>
+<footer class="bg-cyan-700" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="mx-auto px-6 py-8 lg:px-8 max-w-[85rem]">
+    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-{{ block_count | at_most: 4 }} gap-8 xl:col-span-2">
         {%- for block in section.blocks -%}
           <div>
             {%- if block.settings.heading != blank -%}
-              <h2 class='font-accent text-tan-100 text-center lg:text-left'>{{- block.settings.heading -}}</h2>
+              <h2 class="font-accent text-tan-100 text-center lg:text-left">{{- block.settings.heading -}}</h2>
             {%- endif -%}
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
               {%- when 'link_list' -%}
                 {%- if block.settings.menu != blank -%}
-                  <ul role='list' class='mt-6 space-y-4'>
+                  <ul role="list" class="mt-6 space-y-4">
                     {%- for link in block.settings.menu.links -%}
-                      <li class='flex justify-center lg:justify-normal'>
+                      <li class="flex justify-center lg:justify-normal">
                         <a
-                          href='{{ link.url }}'
-                          class='text-tan-50 text-[1.25rem] underline-offset-4 hover:text-tan-200{% if link.active %} underline{% endif %}'
+                          href="{{ link.url }}"
+                          class="text-tan-50 text-[1.25rem] underline-offset-4 hover:text-tan-200{% if link.active %} underline{% endif %}"
                         >
                           {{ link.title -}}
                         </a>
@@ -265,41 +265,41 @@
           </div>
         {%- endfor -%}
       </div>
-      <div class='mt-12 border-t border-tan-50 pt-12 lg:pt-0 lg:border-t-0 xl:mt-0'>
-        <h3 class='font-accent text-tan-100'>{{ section.settings.newsletter_heading }}</h3>
-        <p class='mt-2 text-tan-50 text-[1.25rem]'>Subscribe for all the goodies.</p>
+      <div class="mt-12 border-t border-tan-50 pt-12 lg:pt-0 lg:border-t-0 xl:mt-0">
+        <h3 class="font-accent text-tan-100">{{ section.settings.newsletter_heading }}</h3>
+        <p class="mt-2 text-tan-50 text-[1.25rem]">Subscribe for all the goodies.</p>
         <div>
           {%- form 'customer', id: 'ContactFooter', class: 'mt-6 sm:flex sm:max-w-md' -%}
             {%- if section.settings.newsletter_heading != blank -%}
-              <label for='email-address' class='sr-only'> {{ 'newsletter.label' | t }}</label>
+              <label for="email-address" class="sr-only"> {{ 'newsletter.label' | t }}</label>
             {%- endif -%}
-            <input type='hidden' name='contact[tags]' value='newsletter'>
+            <input type="hidden" name="contact[tags]" value="newsletter">
             <input
-              id='NewsletterForm--{{ section.id }}'
-              type='email'
-              name='contact[email]'
-              class='w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-2 text-[1.25rem] text-tan-900 shadow-sm ring-1 ring-inset ring-tan-100 placeholder:text-tan-800 focus:ring-2 focus:ring-inset focus:ring-tan-100 sm:w-64 sm:text-sm sm:leading-6 xl:w-full'
-              value='{{ form.email }}'
-              aria-required='true'
-              autocorrect='off'
-              autocapitalize='off'
-              autocomplete='email'
+              id="NewsletterForm--{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              class="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-2 text-[1.25rem] text-tan-900 shadow-sm ring-1 ring-inset ring-tan-100 placeholder:text-tan-800 focus:ring-2 focus:ring-inset focus:ring-tan-100 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
+              value="{{ form.email }}"
+              aria-required="true"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
               {% if form.errors %}
                 autofocus
-                aria-invalid='true'
-                aria-describedby='ContactFooter-error'
+                aria-invalid="true"
+                aria-describedby="ContactFooter-error"
               {% elsif form.posted_successfully? %}
-                aria-describedby='ContactFooter-success'
+                aria-describedby="ContactFooter-success"
               {% endif %}
-              placeholder='{{ 'newsletter.label' | t }}'
+              placeholder="{{ 'newsletter.label' | t }}"
               required
             >
             <button
-              type='submit'
-              class='flex mt-2 sm:mt-0 w-full sm:w-auto sm:ml-4 items-center text-[1.25rem] justify-center rounded-md bg-tan-50 px-3 py-2 font-accent text-tan-800 hover:text-tan-900 shadow-sm hover:bg-tan-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tan-100'
-              name='commit'
-              id='Subscribe'
-              aria-label='{{ 'newsletter.button_label' | t }}'
+              type="submit"
+              class="flex mt-2 sm:mt-0 w-full sm:w-auto sm:ml-4 items-center text-[1.25rem] justify-center rounded-md bg-tan-50 px-3 py-2 font-accent text-tan-800 hover:text-tan-900 shadow-sm hover:bg-tan-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tan-100"
+              name="commit"
+              id="Subscribe"
+              aria-label="{{ 'newsletter.button_label' | t }}"
             >
               Subscribe
             </button>
@@ -307,8 +307,10 @@
         </div>
       </div>
     </div>
-    <div class='mt-12 border-t border-tan-50 pt-12 sm:mt-20 flex flex-col space-y-4 md:space-y-0 md:flex-row items-center md:justify-between lg:mt-24'>
-      <p class='sm:text-xs leading-5 text-tan-50'>&copy; 2023 Long Run Coffee, LLC. All rights reserved.</p>
+    <div class="mt-12 border-t border-tan-50 pt-12 sm:mt-20 flex flex-col space-y-4 md:space-y-0 md:flex-row items-center md:justify-between lg:mt-24">
+      <p id="v2-subscription-container-open" class="cursor-pointer sm:text-xs leading-5 text-tan-50">
+        &copy; 2023 Long Run Coffee, LLC. All rights reserved.
+      </p>
       {%- render 'social-icons' -%}
     </div>
   </div>

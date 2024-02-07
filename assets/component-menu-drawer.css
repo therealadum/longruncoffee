@@ -4,7 +4,7 @@
 
 .js menu-drawer > details > summary::before,
 .js menu-drawer > details[open]:not(.menu-opening) > summary::before {
-  content: '';
+  content: "";
   position: absolute;
   cursor: default;
   width: 100%;
@@ -18,13 +18,16 @@
   opacity: 0;
   visibility: hidden;
   z-index: 2;
-  transition: opacity 0s, visibility 0s;
+  transition:
+    opacity 0s,
+    visibility 0s;
 }
 
 menu-drawer > details[open] > summary::before {
   visibility: visible;
   opacity: 1;
-  transition: opacity var(--duration-default) ease,
+  transition:
+    opacity var(--duration-default) ease,
     visibility var(--duration-default) ease;
 }
 
@@ -55,7 +58,8 @@ menu-drawer > details[open] > summary::before {
 
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
-  transition: transform var(--duration-default) ease,
+  transition:
+    transform var(--duration-default) ease,
     visibility var(--duration-default) ease;
 }
 
@@ -97,7 +101,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__navigation {
-  padding: 3rem 0;
+  padding: 0rem 0rem 3rem 0rem;
 }
 
 .menu-drawer__inner-submenu {
@@ -190,7 +194,6 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__close-button {
-  margin-top: 1.5rem;
   padding: 1.2rem 2.6rem 1.2rem 3rem;
   text-decoration: none;
   display: flex;
@@ -223,7 +226,9 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 @media screen and (max-width: 749px) {
-  .header--has-account:where(:not(.header--has-social):not(.header--has-localizations))
+  .header--has-account:where(
+      :not(.header--has-social):not(.header--has-localizations)
+    )
     .menu-drawer__utility-links {
     padding: 2rem;
   }

@@ -20,6 +20,9 @@
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
+            <div class="bg-cyan-50 h-10 flex items-center justify-center">
+              <span class="text-center font-accent text-lg text-cyan-700">1% to mental health</span>
+            </div>
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
                 <li>
@@ -39,6 +42,9 @@
                         tabindex="-1"
                       >
                         <div class="menu-drawer__inner-submenu">
+                          <div class="bg-cyan-50 h-10 flex items-center justify-center">
+                            <span class="text-center font-accent text-lg text-cyan-700">1% to mental health</span>
+                          </div>
                           <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
                             {% render 'icon-arrow' %}
                             {{ link.title | escape }}

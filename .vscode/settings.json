@@ -1,5 +1,5 @@
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "[javascript]": {
     "editor.formatOnSave": true
   },
@@ -7,6 +7,8 @@
     "editor.formatOnSave": true
   },
   "[liquid]": {
-    "editor.formatOnSave": true
-  }
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Shopify.theme-check-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
