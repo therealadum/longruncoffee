@@ -48,7 +48,7 @@
     <div class='mt-8 lg:mt-12 flex flex-col space-y-4 prose'>{{ article.content }}</div>
   </div>
 </div>
-
+{% comment %}
               {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div
@@ -234,7 +234,7 @@
     </div>
   {%- endif -%}
 </article>
-
+{% endcomment %}
 
 <script type='application/ld+json'>
   {
