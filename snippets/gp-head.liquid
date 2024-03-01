@@ -25,8 +25,8 @@
 
     {% if isV7GpTemplate or isThemeSection %}
       
-        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-lazyload.v2.js" async></script>
-        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-global.js" defer></script>
+        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-lazyload.v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" async></script>
+        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-global.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer></script>
         
       {{ 'gp-global.css' | asset_url | stylesheet_tag }}
       {{ 'gp-style.css' | asset_url | stylesheet_tag }}
