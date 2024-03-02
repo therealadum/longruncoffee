@@ -288,6 +288,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
       {{ 'accessibility.skip_to_text' | t }}
     </a>
+    <script>
+      let url = window.location.href;
+      if (url.includes('/collections/all')) {
+        location.href = '/pages/shop';
+      }
+      if (url.includes('/collections')) {
+        location.href = '/pages/shop';
+      }
+</script>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKP7F33B"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -348,15 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {%- if settings.predictive_search_enabled -%}
       <script src='{{ 'predictive-search.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
-<script>
-      let url = window.location.href;
-      if (url.includes('/collections/all')) {
-        location.href = '/pages/shop';
-      }
-      if (url.includes('/collections')) {
-        location.href = '/pages/shop';
-      }
-</script>
+
           {% render 'automizely-recommendations' %}</body>
   {%- capture ocu_extend -%}{% render 'oneclickupsellapp-extend' %}{%- endcapture -%}{%- unless ocu_extend contains 'Liquid error' -%}{{ ocu_extend }}{%- endunless -%}
 </html>
