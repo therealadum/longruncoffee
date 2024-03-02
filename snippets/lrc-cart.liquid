@@ -930,6 +930,25 @@
         }
     }
 
+    Zipify.OCU.api.callbackBeforeRedirect = (dispatcher, event) => {
+        return new Promise(async (resolve) => {
+            try {
+                if (dispatcher.destination === 'checkout') {
+                    await checkout();
+                    return resolve({});
+                }
+    
+                const { response, type } = event.detail;
+                if (!(type === 'Upgrade' && response.accepted)) return resolve({});
+    
+                dispatcher._upsellAppInstance().hide();
+                setTimeout(() => Zipify.OCU.api.store.set('submitted', false));
+            } catch (e) {
+                resolve({});
+            }
+        });
+    };
+
     return <div className={`relative transition-all ${isOpen === true ? 'z-50' : 'delay-500 -z-10'}`} aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
         {
             isOpen ? <div className="fixed inset-0 -z-10 bg-slate-900/20 cursor-pointer" /> : null
@@ -1250,7 +1269,7 @@
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                         <button type="button" onClick={() => setIsOpen(false)} className="rounded-md bg-white p-3 text-sm font-accent text-neutral-700 shadow-sm ring-1 ring-inset ring-neutral-300 hover:ring-neutral-400">Back to Shop</button>
-                        <button disabled={cartState.items.length && !plan || !cart.items.length && cartState.items.length && !plan} onClick={checkout} type="submit" className={`ml-4 inline-flex justify-center rounded-md p-3 text-sm font-accent border ${cartState.items.length && !plan || !cart.items.length && cartState.items.length && !plan ? 'cursor-not-allowed has-tooltip border-neutral-600 bg-neutral-100 text-neutral-400 hover:border-neutral-700 hover:text-neutral-500 hover:bg-neutral-200' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200'}`}>
+                        <button disabled={cartState.items.length && !plan || !cart.items.length && cartState.items.length && !plan} onClick={checkout} type="submit" id="checkout-button" className={`ml-4 inline-flex justify-center rounded-md p-3 text-sm font-accent border ${cartState.items.length && !plan || !cart.items.length && cartState.items.length && !plan ? 'cursor-not-allowed has-tooltip border-neutral-600 bg-neutral-100 text-neutral-400 hover:border-neutral-700 hover:text-neutral-500 hover:bg-neutral-200' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200'}`}>
                             {
                                 loadingCheckout ? <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />

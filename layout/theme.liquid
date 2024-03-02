@@ -24,6 +24,10 @@
   <head>
     <!-- Google Tag Manager -->
     <script>
+      ((o, c, u) => {
+        (o[c] = o[c] || {}), (o[u] = o[u] || {}), (o[c].OCU = o[c].OCU || { api: o[u] });
+      })(window, 'Zipify', 'OCUApi');
+      Zipify.OCU.api.customCheckoutButton = '#checkout-button';
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -399,7 +403,6 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% render 'oneclickupsellapp-extend', oneclickupsellapp: true %}
     {% render 'automizely-recommendations' %}
   </body>
 </html>
