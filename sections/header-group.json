@@ -15,23 +15,14 @@
         "b2d8484d-b7d0-434a-a97f-b199fb49714d": {
           "type": "announcement",
           "settings": {
-            "text": "100% Money Back Guarantee",
-            "link": "shopify:\/\/collections\/coffee"
-          }
-        },
-        "149f07e0-7df4-4232-9510-074fdbeefc61": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "Welcome to our store",
+            "text": "1% donated to mental health",
             "link": ""
           }
         }
       },
       "block_order": [
         "announcement-bar-0",
-        "b2d8484d-b7d0-434a-a97f-b199fb49714d",
-        "149f07e0-7df4-4232-9510-074fdbeefc61"
+        "b2d8484d-b7d0-434a-a97f-b199fb49714d"
       ],
       "custom_css": [
         ".announcement-bar__message {padding: 0px 0 !important; font-size: 16px !important;}",
