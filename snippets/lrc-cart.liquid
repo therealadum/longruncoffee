@@ -944,6 +944,7 @@
                 dispatcher._upsellAppInstance().hide();
                 setTimeout(() => Zipify.OCU.api.store.set('submitted', false));
             } catch (e) {
+                await checkout();
                 resolve({});
             }
         });

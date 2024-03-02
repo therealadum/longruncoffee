@@ -279,6 +279,16 @@
       }
     }, [setAmountUntilFreeShipping]);
 
+    Zipify.OCU.api.customAddToCartEventHandler = () => {
+      setIsLoading(true);
+      document.dispatchEvent(new CustomEvent('buy_button', { detail: {
+        available: product.available,
+        variantId: variantID,
+        isSubscription: productForm.isSubscription,
+        quantity: productForm.quantity
+      } }))
+    }
+
     return product ? <div className="relative bg-cyan-50 bg-opacity-20">
       <div className="flex flex-col p-4 lg:py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
@@ -1300,15 +1310,7 @@
             </div>
             <div className="lg:pt-1">
               <button
-                  onClick={() => {
-                    setIsLoading(true);
-                    document.dispatchEvent(new CustomEvent('buy_button', { detail: {
-                      available: product.available,
-                      variantId: variantID,
-                      isSubscription: productForm.isSubscription,
-                      quantity: productForm.quantity
-                    } }))
-                  }}
+                  id="add-to-cart"
                   disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && !product.available) || isLoading}
                   className={`rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && !product.available ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
                 >
