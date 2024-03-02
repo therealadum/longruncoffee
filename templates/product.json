@@ -160,22 +160,6 @@
         "padding_bottom": 52
       }
     },
-    "17093999844598d023": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_iFiJeK": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_iFiJeK"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "0e698922-8ed8-423d-886f-c78375d71373": {
       "type": "featured-collection",
       "settings": {
@@ -186,11 +170,11 @@
         "description_style": "body",
         "collection": "coffee",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -211,6 +195,22 @@
         "include_margins": true
       }
     },
+    "17093999844598d023": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_iFiJeK": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_iFiJeK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "3e4ec809-784d-4120-a4a6-cced1ff5c986": {
       "type": "custom-liquid",
       "settings": {
@@ -225,9 +225,9 @@
     "main",
     "related-products",
     "b2aea5ac-c993-41fa-b6fb-0f28f398b81b",
-    "17093999844598d023",
     "0e698922-8ed8-423d-886f-c78375d71373",
     "1693874745cc6bc7e5",
+    "17093999844598d023",
     "3e4ec809-784d-4120-a4a6-cced1ff5c986"
   ]
 }
