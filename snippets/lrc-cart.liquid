@@ -96,6 +96,16 @@
     return plan;
   }
 
+  function isCartOnlyGiftItems(items) {
+    let foundNonGiftItem = false;
+    items.forEach(item => {
+        if (item.product_type !== "Gift") {
+            foundNonGiftItem = true;
+        }
+    });
+    return !foundNonGiftItem;
+  }
+
   function diffPlans(plan, nextPlan) {
     const unique = [];
     if (!plan) {
@@ -162,7 +172,7 @@
                 isEditing: true
             })
         }
-    }, [setState, setCartState, cartState, state])
+    }, [setState, setCartState, cartState, state, item])
 
     return <div
         className="flex flex-col space-y-2 group relative"
@@ -246,7 +256,7 @@
             setLoading(false);
             console.error('Error:', error);
         });
-    }, [setLoading, setCart]);
+    }, [setLoading, setCart, item]);
 
     return <div
         className="flex flex-col space-y-2 group relative"
@@ -1165,79 +1175,81 @@
                                 </div>
                             </div> : null
                         }
-                        <div className="flex flex-col space-y-4">
-                            {
-                                cartState.items.length && cart.items.length ? <div className="flex items-center space-x-2">
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">One-Time</h4>
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                </div> : null
-                            }
-                            <div className="grid grid-cols-3 gap-3">
+                        {
+                            isCartOnlyGiftItems(cart.items) ? null : <div className="flex flex-col space-y-4">
                                 {
-                                  cart.items.map((item, i) => <CartItem key={i} item={item} setCart={setCart} />)
+                                    cartState.items.length && cart.items.length ? <div className="flex items-center space-x-2">
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                            <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">One-Time</h4>
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                    </div> : null
+                                }
+                                <div className="grid grid-cols-3 gap-3">
+                                {
+                                    cart.items.map((item, i) => <CartItem key={i} item={item} setCart={setCart} />)
+                                }
+                                </div>
+                                {
+                                    potentialSavings > 0 ? <div className="flex items-center justify-center">
+                                        <button disabled={loadingUpgrade} onClick={async () => {
+                                            setLoadingUpgrade(true);
+                                            const keys = Object.keys(cartProductSubscribable);
+                                            const newItems = [...cartState.items];
+                                            const vo = {};
+    
+                                            for (let i = 0; i < keys.length; i++) {
+                                                if (cartProductSubscribable[keys[i]]) {
+                                                    const item = cartProductSubscribable[keys[i]]
+                                                    let existingItemIndex = null;
+                                                    for (let j = 0; j < newItems.length; j++) {
+                                                        if (newItems[j].variantID == item.variantID) {
+                                                            existingItemIndex = j;
+                                                        }
+                                                    }
+                                                    if (existingItemIndex !== null) {
+                                                        newItems[existingItemIndex].quantity += item.quantity;
+                                                    } else {
+                                                        newItems.push({
+                                                            ...item,
+                                                            quantity: item.quantity
+                                                        })
+                                                    }
+                                                    vo[item.variantID] = 0;
+                                                }
+                                            }
+                                            fetch(window.Shopify.routes.root + 'cart/update.js', {
+                                                method: 'POST',
+                                                headers: {
+                                                    'Content-Type': 'application/json',
+                                                },
+                                                body: JSON.stringify({
+                                                    updates: vo
+                                                })
+                                            })
+                                            .then(async response => {
+                                                const newCart = await getCart();
+                                                setCartState({
+                                                    ...cartState,
+                                                    items: newItems
+                                                })
+                                                setCart(newCart);
+                                                setLoadingUpgrade(false);
+                                            })
+                                            .catch((error) => {
+                                                console.error('Error:', error);
+                                            });
+                                        }} className="inline-flex items-center rounded-md bg-tan-100 px-2 py-1 text-xs font-semibold text-tan-700 ring-1 ring-inset ring-tan-600/40 relative">
+                                            <span>Save ${(potentialSavings / 100).toFixed(2)} with subscribe and save!</span>
+                                            <svg viewBox="0 0 512.001 512.001" className="text-tan-700 absolute -right-3 -bottom-3 w-5 h-5 z-10">
+                                                <path fill="currentColor" d="M429.742,319.31L82.49,0l-0.231,471.744l105.375-100.826l61.89,141.083l96.559-42.358l-61.89-141.083L429.742,319.31z
+                                                    M306.563,454.222l-41.62,18.259l-67.066-152.879l-85.589,81.894l0.164-333.193l245.264,225.529l-118.219,7.512L306.563,454.222z"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div> : null
                                 }
                             </div>
-                            {
-                                potentialSavings > 0 ? <div className="flex items-center justify-center">
-                                    <button disabled={loadingUpgrade} onClick={async () => {
-                                        setLoadingUpgrade(true);
-                                        const keys = Object.keys(cartProductSubscribable);
-                                        const newItems = [...cartState.items];
-                                        const vo = {};
-
-                                        for (let i = 0; i < keys.length; i++) {
-                                            if (cartProductSubscribable[keys[i]]) {
-                                                const item = cartProductSubscribable[keys[i]]
-                                                let existingItemIndex = null;
-                                                for (let j = 0; j < newItems.length; j++) {
-                                                    if (newItems[j].variantID == item.variantID) {
-                                                        existingItemIndex = j;
-                                                    }
-                                                }
-                                                if (existingItemIndex !== null) {
-                                                    newItems[existingItemIndex].quantity += item.quantity;
-                                                } else {
-                                                    newItems.push({
-                                                        ...item,
-                                                        quantity: item.quantity
-                                                    })
-                                                }
-                                                vo[item.variantID] = 0;
-                                            }
-                                        }
-                                        fetch(window.Shopify.routes.root + 'cart/update.js', {
-                                            method: 'POST',
-                                            headers: {
-                                                'Content-Type': 'application/json',
-                                            },
-                                            body: JSON.stringify({
-                                                updates: vo
-                                            })
-                                        })
-                                        .then(async response => {
-                                            const newCart = await getCart();
-                                            setCartState({
-                                                ...cartState,
-                                                items: newItems
-                                            })
-                                            setCart(newCart);
-                                            setLoadingUpgrade(false);
-                                        })
-                                        .catch((error) => {
-                                            console.error('Error:', error);
-                                        });
-                                    }} className="inline-flex items-center rounded-md bg-tan-100 px-2 py-1 text-xs font-semibold text-tan-700 ring-1 ring-inset ring-tan-600/40 relative">
-                                        <span>Save ${(potentialSavings / 100).toFixed(2)} with subscribe and save!</span>
-                                        <svg viewBox="0 0 512.001 512.001" className="text-tan-700 absolute -right-3 -bottom-3 w-5 h-5 z-10">
-                                            <path fill="currentColor" d="M429.742,319.31L82.49,0l-0.231,471.744l105.375-100.826l61.89,141.083l96.559-42.358l-61.89-141.083L429.742,319.31z
-                                                M306.563,454.222l-41.62,18.259l-67.066-152.879l-85.589,81.894l0.164-333.193l245.264,225.529l-118.219,7.512L306.563,454.222z"
-                                            />
-                                        </svg>
-                                    </button>
-                                </div> : null
-                            }
-                        </div>
+                        }
                         {
                             (cartState.items.length || cart.items.length) && upsellItems.filter(item => {
                                 let found = false;
