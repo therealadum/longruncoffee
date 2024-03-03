@@ -1004,11 +1004,11 @@
         });
     };
 
-    return <div className={`relative transition-all ${isOpen === true ? 'z-50' : 'delay-500 -z-10'}`} aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    return <div className={`relative ${isOpen === true ? 'z-50' : '-z-10'}`} aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
         {
             isOpen ? <div className="fixed inset-0 -z-10 bg-slate-900/20 cursor-pointer" /> : null
         }
-        <div className={`fixed z-10 inset-0 transition-all overflow-hidden`}>
+        <div className={`fixed z-10 inset-0 overflow-hidden`}>
           <div className="absolute inset-0 overflow-hidden">
             <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
               <div className={`pointer-events-auto z-20 w-screen max-w-md ${isOpen ? 'transform transition ease-in-out duration-500 sm:duration-700 translate-x-0' : 'transform transition ease-in-out duration-500 sm:duration-700 translate-x-full'}`}>
