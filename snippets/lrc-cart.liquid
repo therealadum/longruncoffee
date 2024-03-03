@@ -280,97 +280,119 @@
       </div>
   }
 
-  function CartQuantityAdjuster({quantity, setCart, variantID}) {
+  function CartItem({item, setCart}) {
     const [cartQuantityState, setCartQuantityState] = React.useState({
         isEditing: false,
-        editQuantity: quantity,
+        editQuantity: item.quantity,
         loading: false
     });
 
     React.useEffect(() => {
-        if (quantity !== cartQuantityState.editQuantity && cartQuantityState.isEditing === false) {
+        if (item.quantity !== cartQuantityState.editQuantity && cartQuantityState.isEditing === false) {
             setCartQuantityState({
                 ...cartQuantityState,
-                editQuantity: quantity
+                editQuantity: item.quantity
             });
         }
-    }, [quantity, setCartQuantityState, cartQuantityState.editQuantity]);
+    }, [item.quantity, setCartQuantityState, cartQuantityState.editQuantity]);
 
-    return <div className="absolute top-2 left-0 right-0 flex items-stretch space-x-2">
-        {
-            cartQuantityState.isEditing ? <div className="flex-1 shadow-md z-10 rounded-full bg-neutral-50 flex items-center justify-center p-1">
-                <button onClick={() => {
-                    if (cartQuantityState.editQuantity > 0) {
-                        setCartQuantityState({
-                            ...cartQuantityState,
-                            editQuantity: cartQuantityState.editQuantity - 1
-                        })
-                    }
-                }} className="px-2 flex items-center justify-center text-base">
-                    <span>-</span>
-                </button>
-                <span className="flex-1 text-cyan-700 text-base text-center">{cartQuantityState.editQuantity}</span>
-                <button onClick={() => setCartQuantityState({
-                        ...cartQuantityState,
-                        editQuantity: cartQuantityState.editQuantity + 1
-                    })} className="px-2 flex items-center justify-center text-base">
-                    <span>+</span>
-                </button>
-            </div>: null
-        }
-        <button disabled={cartQuantityState.loading} onClick={() => {
-            if (cartQuantityState.isEditing) {
+    const onClick = React.useCallback(() => {
+        if (cartQuantityState.isEditing) {
+            setCartQuantityState({
+                ...cartQuantityState,
+                loading: true
+            })
+            const vo = {};
+            vo[item.variant_id] = cartQuantityState.editQuantity;
+            fetch(window.Shopify.routes.root + 'cart/update.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    updates: vo
+                })
+            })
+            .then(async response => {
+                const newCart = await getCart();
                 setCartQuantityState({
                     ...cartQuantityState,
-                    loading: true
-                })
-                const vo = {};
-                vo[variantID] = cartQuantityState.editQuantity;
-                fetch(window.Shopify.routes.root + 'cart/update.js', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        updates: vo
-                    })
-                })
-                .then(async response => {
-                    const newCart = await getCart();
-                    setCartQuantityState({
-                        ...cartQuantityState,
-                        loading: false,
-                        isEditing: false
-                    });
-                    setCart(newCart);
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
+                    loading: false,
+                    isEditing: false
                 });
-            } else {
-                setCartQuantityState({
-                    ...cartQuantityState,
-                    isEditing: true
-                })
-            }
-        }} className={`ml-auto shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center ${cartQuantityState.loading ? 'cursor-not-allowed' : ''}`}>
+                setCart(newCart);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        } else {
+            setCartQuantityState({
+                ...cartQuantityState,
+                isEditing: true
+            })
+        }
+    }, [cartQuantityState, setCartQuantityState, setCart])
+
+    return <div
+            key={item.id}
+            className="flex flex-col space-y-2 group relative"
+        >
+            {item.product_type != "Gift" ? 
+                <div className="absolute top-2 left-0 right-0 flex items-stretch space-x-2">
+                    {
+                        cartQuantityState.isEditing ? <div className="flex-1 shadow-md z-10 rounded-full bg-neutral-50 flex items-center justify-center p-1">
+                            <button onClick={() => {
+                                if (cartQuantityState.editQuantity > 0) {
+                                    setCartQuantityState({
+                                        ...cartQuantityState,
+                                        editQuantity: cartQuantityState.editQuantity - 1
+                                    })
+                                }
+                            }} className="px-2 flex items-center justify-center text-base">
+                                <span>-</span>
+                            </button>
+                            <span className="flex-1 text-cyan-700 text-base text-center">{cartQuantityState.editQuantity}</span>
+                            <button onClick={() => setCartQuantityState({
+                                    ...cartQuantityState,
+                                    editQuantity: cartQuantityState.editQuantity + 1
+                                })} className="px-2 flex items-center justify-center text-base">
+                                <span>+</span>
+                            </button>
+                        </div>: null
+                    }
+                    <button disabled={cartQuantityState.loading} onClick={onClick} className={`ml-auto shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center ${cartQuantityState.loading ? 'cursor-not-allowed' : ''}`}>
+                        {
+                            cartQuantityState.isEditing ? cartQuantityState.loading ? <svg className="animate-spin h-4 w-4 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                              </svg> : <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="w-4 h-4 text-cyan-400"
+                            >
+                                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+                            </svg> : <span className="flex items-end self-center"><span className="text-sm">{cartQuantityState.editQuantity}</span><span className="text-xs">x</span></span>
+                        }
+                    </button>
+                </div>
+            : null}
+            <img
+                src={item.featured_image.url}
+                loading="lazy"
+                className="w-full h-32 object-contain cursor-pointer"
+                onClick={onClick}
+            />
             {
-                cartQuantityState.isEditing ? cartQuantityState.loading ? <svg className="animate-spin h-4 w-4 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                  </svg> : <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4 text-cyan-400"
-                >
-                    <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
-                </svg> : <span className="flex items-end self-center"><span className="text-sm">{cartQuantityState.editQuantity}</span><span className="text-xs">x</span></span>
+                item.variant_options.filter(opt => opt !== "Default Title").length > 0 ? <h6 className="font-base text-xs text-cyan-800 text-center">
+                    {item.variant_options.join(', ')}
+                </h6> : null
             }
-        </button>
+            <h5 className="font-base text-sm text-cyan-800 font-[700] text-center leading-[16px] tracking-tight">
+                <a href={item.url}>{item.product_title}</a>
+            </h5>
     </div>
   }
-
   function getTotalSubscriptionItemsFromCartState(cartState) {
     let total = 0;
     for (let i = 0; i < cartState.items.length; i++) {
@@ -1085,11 +1107,8 @@
                                 </div>
                                 <div className="grid grid-cols-3 gap-3">
                                     {
-                                      cartState.recommendations.map((item, i) => <div
-                                        key={i}
-                                        className="flex flex-col space-y-2 group relative"
-                                      >
-                                        <button onClick={() => {
+                                      cartState.recommendations.map((item, i) => {
+                                        const onClick = () => {
                                             // if already in subscriptions, add quantity - otherwise add new item
                                             let existingItemIndex = null;
                                             for (let j = 0; j < cartState.items.length; j++) {
@@ -1113,28 +1132,35 @@
                                                     }]
                                                 })
                                             }
-                                        }} className="absolute right-0 top-2 shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="currentColor"
-                                                className="w-4 h-4 text-cyan-400"
-                                            >
-                                                <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <img
-                                          src={item.product.featured_image}
-                                          loading="lazy"
-                                          className="w-full h-32 object-contain"
-                                        />
-                                        <h6 className="font-base text-xs text-cyan-800 text-center">
-                                          {item.variant.option1}, {item.variant.option2}
-                                        </h6>
-                                        <h5 className="font-base text-sm text-cyan-800 font-[700] text-center leading-[16px] tracking-tight">
-                                          <a href={item.product.url}>{item.product.title}</a>
-                                        </h5>
-                                      </div>)
+                                        }
+                                        return <div
+                                            key={i}
+                                            className="flex flex-col space-y-2 group relative"
+                                        >
+                                            <button onClick={onClick} className="absolute right-0 top-2 shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    className="w-4 h-4 text-cyan-400"
+                                                >
+                                                    <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
+                                                </svg>
+                                            </button>
+                                            <img
+                                                src={item.product.featured_image}
+                                                loading="lazy"
+                                                className="w-full h-32 object-contain cursor-pointer"
+                                                onClick={onClick}
+                                            />
+                                            <h6 className="font-base text-xs text-cyan-800 text-center">
+                                                {item.variant.option1}, {item.variant.option2}
+                                            </h6>
+                                            <h5 className="font-base text-sm text-cyan-800 font-[700] text-center leading-[16px] tracking-tight">
+                                                <a href={item.product.url}>{item.product.title}</a>
+                                            </h5>
+                                        </div>
+                                      })
                                     }
                                 </div>
                             </div> : null
@@ -1149,27 +1175,7 @@
                             }
                             <div className="grid grid-cols-3 gap-3">
                                 {
-                                  cart.items.map((item, i) => {
-                                    return <div
-                                            key={item.id}
-                                            className="flex flex-col space-y-2 group relative"
-                                        >
-                                            {item.product_type != "Gift" ? <CartQuantityAdjuster variantID={item.variant_id} quantity={item.quantity} setCart={setCart} /> : null}
-                                            <img
-                                                src={item.featured_image.url}
-                                                loading="lazy"
-                                                className="w-full h-32 object-contain"
-                                            />
-                                            {
-                                                item.variant_options.filter(opt => opt !== "Default Title").length > 0 ? <h6 className="font-base text-xs text-cyan-800 text-center">
-                                                    {item.variant_options.join(', ')}
-                                                </h6> : null
-                                            }
-                                            <h5 className="font-base text-sm text-cyan-800 font-[700] text-center leading-[16px] tracking-tight">
-                                                <a href={item.url}>{item.product_title}</a>
-                                            </h5>
-                                    </div>
-                                  })
+                                  cart.items.map((item, i) => <CartItem key={i} item={item} setCart={setCart} />)
                                 }
                             </div>
                             {
