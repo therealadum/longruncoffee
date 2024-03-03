@@ -25,30 +25,32 @@
     const focusedBenefit = benefits[activeBenefit];
 
     return (
-      <div className="lg:px-16 py-12 lg:py-32 z-10 relative lg:transform lg:translate-y-20 max-w-7xl mx-auto">
-        <div className="hidden lg:grid grid-cols-3 gap-12 z-10">
-          <div>
-            <h2 className="font-accent text-cyan-800 text-5xl mb-12">Benefits</h2>
-            <div className="flex flex-col space-y-8 items-start">
-              {benefits.map((b, i) => (
-                <button
-                  key={b.title}
-                  onClick={() => setActiveBenefit(i)}
-                  className={`text-base hover:text-cyan-700 text-left ${
-                    i === activeBenefit ? 'text-cyan-700 font-medium underline' : 'text-neutral-700'
-                  }`}
-                >
-                  {b.title}
-                </button>
+      <div className="lg:px-16 py-12 lg:py-32 z-10 relative lg:transform lg:-translate-y-20 max-w-7xl mx-auto">
+        <div className="hidden lg:block">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto flex space-x-8 items-start">
+              {benefits.map((benefit, i) => (
+                <article key={i} className="flex flex-col items-start justify-between">
+                  <div className="relative w-full">
+                    <img
+                      src={benefit.img}
+                      alt=""
+                      className="aspect-square w-full rounded-2xl bg-cyan-100 object-cover"
+                    />
+                    <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-cyan-900/10" />
+                  </div>
+                  <div className="max-w-xl">
+                    <div className="group relative">
+                      <h3 className="mt-4 text-lg font-semibold leading-6 text-cyan-900 group-hover:text-cyan-600">
+                        {benefit.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-6 text-neutral-600">{benefit.description}</p>
+                    </div>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
-          {
-            focusedBenefit ? <img src={focusedBenefit.img} className="transform -translate-y-12 w-full object-fill shadow-md aspect-square rounded-md overflow-hidden" /> : null
-          }
-          {
-            focusedBenefit ? <p className="font-base text-lg leading-[2.5rem] text-cyan-700 text-right pl-8">{focusedBenefit.description}</p> : null
-          }
         </div>
         <div className="flex flex-col lg:hidden">
           <h2 className="font-accent text-cyan-700 text-3xl mb-8 pl-8">Benefits</h2>
