@@ -51,6 +51,34 @@
     }
   };
 
+  function checkoutStatus(cartState, cart, plan) {
+    console.log(cartState, cart, plan)
+    if (cartState.items.length && !plan) {
+        console.log('SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT');
+        return 'SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT';
+    } else if (cartState.items.length && plan) {
+        console.log('OKAY');
+        return 'OKAY';
+    } else if (cart.items.length) {
+        let onlyContainsGifts = true;
+        cart.items.forEach(item => {
+            if (item.product_type !== 'Gift') {
+                onlyContainsGifts = false;
+            }
+        })
+        if (!onlyContainsGifts) {
+            console.log('OKAY');
+            return 'OKAY';
+        } else {
+            console.log('ONLY_CONTAINS_GIFTS');
+            return 'ONLY_CONTAINS_GIFTS';
+        }
+    } else {
+        console.log('NOTHING_TO_CHECKOUT');
+        return 'NOTHING_TO_CHECKOUT';
+    }
+  }
+
   async function getCart() {
     try {
         const response = await fetch(window.Shopify.routes.root + 'cart.js');
@@ -1294,7 +1322,7 @@
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                         <button type="button" onClick={() => setIsOpen(false)} className="rounded-md bg-white p-3 text-sm font-accent text-neutral-700 shadow-sm ring-1 ring-inset ring-neutral-300 hover:ring-neutral-400">Back to Shop</button>
-                        <button disabled={cartState.items.length && !plan || !cart.items.length && cartState.items.length && !plan || cartSubtotal == 0} onClick={checkout} type="submit" id="checkout-button" className={`ml-4 inline-flex justify-center rounded-md p-3 text-sm font-accent border ${cartState.items.length && !plan || !cart.items.length && cartState.items.length && !plan || cartSubtotal == 0 ? 'cursor-not-allowed has-tooltip border-neutral-600 bg-neutral-100 text-neutral-400 hover:border-neutral-700 hover:text-neutral-500 hover:bg-neutral-200' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200'}`}>
+                        <button disabled={checkoutStatus(cartState, cart, plan) !== 'OKAY'} onClick={checkout} type="submit" id="checkout-button" className={`ml-4 inline-flex justify-center rounded-md p-3 text-sm font-accent border ${checkoutStatus(cartState, cart, plan) !== 'OKAY' ? 'cursor-not-allowed has-tooltip border-neutral-600 bg-neutral-100 text-neutral-400 hover:border-neutral-700 hover:text-neutral-500 hover:bg-neutral-200' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200'}`}>
                             {
                                 loadingCheckout ? <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
@@ -1302,7 +1330,7 @@
                                 </svg> : "Checkout"
                             }
                             {
-                                cartState.items.length && !plan || !cart.items.length && cartState.items.length && !plan ? <span class='tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center'>Subscribe & Save requires a 2 bag minumum</span> : null
+                                checkoutStatus(cartState, cart, plan) === 'SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT' ? <span class='tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center'>Subscribe & Save requires a 2 bag minumum</span> : null
                             }
                         </button>
                     </div>
