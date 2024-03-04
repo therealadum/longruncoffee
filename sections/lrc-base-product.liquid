@@ -1,17 +1,9 @@
-{{ 'jquery.min.js' | asset_url | script_tag }}
-{{ 'cart.min.js' | asset_url | script_tag }}
-
 <div id="lrc-base-product" class="z-0 relative"></div>
 
 <script
   type="text/babel"
 >
   const referenceString = 'v2-subscription-items';
-  CartJS.init({{ cart | json }}, {
-    "moneyFormat": "{{ shop.money_format }}",
-    "moneyWithCurrencyFormat": "{{ shop.money_with_currency_format }}"
-  });
-
   const plans = {
     base: {
       display_name: "base",
@@ -70,7 +62,7 @@
   }
 
   function calculateCurrentDiscountInformation() {
-    const {items} = CartJS.getAttribute(referenceString) ? JSON.parse(CartJS.getAttribute(referenceString)) : {
+    const {items} = localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)) : {
       items: [],
     };
     let plan = null;

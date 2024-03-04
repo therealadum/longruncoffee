@@ -1,6 +1,3 @@
-{{ 'jquery.min.js' | asset_url | script_tag }}
-{{ 'cart.min.js' | asset_url | script_tag }}
-
 <div id="lrc-cart"></div>
 
 <script
@@ -12,10 +9,6 @@
   });
 
   const referenceString = 'v2-subscription-items';
-  CartJS.init({{ cart | json }}, {
-    "moneyFormat": "{{ shop.money_format }}",
-    "moneyWithCurrencyFormat": "{{ shop.money_with_currency_format }}"
-  });
 
   function isRechargeAvailableOnProduct(product) {
     let available = false;
@@ -434,7 +427,7 @@
   }
   
   function LRCCart() {
-    const [cartState, innerSetCartState] = React.useState(CartJS.getAttribute(referenceString) ? JSON.parse(CartJS.getAttribute(referenceString)) : {
+    const [cartState, innerSetCartState] = React.useState(localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)) : {
       items: [],
       recommendations: []
     });
@@ -463,7 +456,7 @@
     const setCartState = React.useCallback((newCartState) => {
         const s = { ...newCartState };
         delete s.cart;
-        CartJS.setAttribute(referenceString, JSON.stringify(newCartState))
+        localStorage.setItem(referenceString, JSON.stringify(newCartState))
         innerSetCartState(newCartState)
     }, [cartState]);
 
@@ -476,52 +469,52 @@
     }, [isOpen, setIsOpen]);
 
     React.useEffect(() => {
-        const handler = function(event) {
+        const handler = async function(event) {
             const { variantId, isSubscription, quantity, available } = event.detail
-            const url = $(location).attr('href').split('/')
+            const url = window.location.href.split('/')
             const product_hash = url[url.length - 1]
 
             if (isSubscription) {
                 if (variantId && product_hash) {
-                    jQuery.getJSON(window.Shopify.routes.root + `products/${product_hash}.js`, function (product) {
-                        let variant;
-                        for (let j = 0; j < product.variants.length; j++) {
-                            if (product.variants[j].id == variantId) {
-                                variant = product.variants[j];
-                            }
+                    const data = await fetch(window.Shopify.routes.root + `products/${product_hash}.js`);
+                    const product = await data.json();
+                    let variant;
+                    for (let j = 0; j < product.variants.length; j++) {
+                        if (product.variants[j].id == variantId) {
+                            variant = product.variants[j];
                         }
-                        const item = {
-                            product,
-                            variantID: variantId,
-                            variant,
-                            quantity: 1
+                    }
+                    const item = {
+                        product,
+                        variantID: variantId,
+                        variant,
+                        quantity: 1
+                    }
+                    // if already in subscriptions, add quantity - otherwise add new item
+                    let existingItemIndex = null;
+                    for (let j = 0; j < cartState.items.length; j++) {
+                        if (cartState.items[j].variantID === item.variantID) {
+                            existingItemIndex = j;
                         }
-                        // if already in subscriptions, add quantity - otherwise add new item
-                        let existingItemIndex = null;
-                        for (let j = 0; j < cartState.items.length; j++) {
-                            if (cartState.items[j].variantID === item.variantID) {
-                                existingItemIndex = j;
-                            }
-                        }
-                        if (existingItemIndex !== null) {
-                            const newItems = [...cartState.items];
-                            newItems[existingItemIndex].quantity += 1;
-                            setCartState({
-                                ...cartState,
-                                items: newItems
-                            })
-                        } else {
-                            setCartState({
-                                ...cartState,
-                                items: [...cartState.items, {
-                                    ...item,
-                                    quantity: 1
-                                }]
-                            })
-                        }
-                        setIsOpen(true);
-                        document.dispatchEvent(new CustomEvent('buy_button_complete'))
-                    })
+                    }
+                    if (existingItemIndex !== null) {
+                        const newItems = [...cartState.items];
+                        newItems[existingItemIndex].quantity += 1;
+                        setCartState({
+                            ...cartState,
+                            items: newItems
+                        })
+                    } else {
+                        setCartState({
+                            ...cartState,
+                            items: [...cartState.items, {
+                                ...item,
+                                quantity: 1
+                            }]
+                        })
+                    }
+                    setIsOpen(true);
+                    document.dispatchEvent(new CustomEvent('buy_button_complete'))
                 } else {
                     console.log('not found.');
                     document.dispatchEvent(new CustomEvent('buy_button_complete'));
@@ -571,44 +564,44 @@
               preferredItemStyle = items[0].variant.options[1];
             }
   
-            const deferredHandlers = items.map((item) => new Promise((resolve, reject) => {
-              jQuery.getJSON(window.Shopify.routes.root + `recommendations/products.json?product_id=${item.product.id}`, function(response) {
+            const deferredHandlers = items.map((item) => new Promise(async (resolve, reject) => {
+                const data = await fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${item.product.id}`);
+                const response = await data.json();
                 const list = response.products.filter(p => isRechargeAvailableOnProduct(p)).map(p => {
-                  let selectedVariant = p.variants[0];
-                  for (let i = 0; i < p.variants.length; i++) {
-                    if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
-                      selectedVariant = p.variants[i];
-                    }
-                  }
-                  return {
-                    product: p,
-                    variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
-                    variantID: selectedVariant.id,
-                    variant: selectedVariant
-                  }
-                });
-                resolve(list);
-              })
-            }))
-
-            const additionalHandlers = [8281669206329, 8281667764537, 8281658229049].map((item) => new Promise((resolve, reject) => {
-                jQuery.getJSON(window.Shopify.routes.root + `recommendations/products.json?product_id=${item}`, function(response) {
-                  const list = response.products.filter(p => isRechargeAvailableOnProduct(p)).map(p => {
                     let selectedVariant = p.variants[0];
                     for (let i = 0; i < p.variants.length; i++) {
-                      if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
-                        selectedVariant = p.variants[i];
-                      }
+                        if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
+                            selectedVariant = p.variants[i];
+                        }
                     }
                     return {
-                      product: p,
-                      variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
-                      variantID: selectedVariant.id,
-                      variant: selectedVariant
+                        product: p,
+                        variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
+                        variantID: selectedVariant.id,
+                        variant: selectedVariant
                     }
-                  });
-                  resolve(list);
-                })
+                });
+                resolve(list);
+            }))
+
+            const additionalHandlers = [8281669206329, 8281667764537, 8281658229049].map((item) => new Promise(async (resolve, reject) => {
+                const data = await fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${item}`);
+                const response = await data.json();
+                const list = response.products.filter(p => isRechargeAvailableOnProduct(p)).map(p => {
+                    let selectedVariant = p.variants[0];
+                    for (let i = 0; i < p.variants.length; i++) {
+                        if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
+                        selectedVariant = p.variants[i];
+                        }
+                    }
+                    return {
+                        product: p,
+                        variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
+                        variantID: selectedVariant.id,
+                        variant: selectedVariant
+                    }
+                });
+                resolve(list);
             }))
 
             Promise.all([...deferredHandlers, ...additionalHandlers]).then(res => {
@@ -640,24 +633,24 @@
           } else {
             let preferredItemSize = '1 lbs';
             let preferredItemStyle = 'Fresh Ground';
-            const deferredHandlers = [8281669206329, 8281667764537, 8281658229049].map((item) => new Promise((resolve, reject) => {
-              jQuery.getJSON(window.Shopify.routes.root + `recommendations/products.json?product_id=${item}`, function(response) {
+            const deferredHandlers = [8281669206329, 8281667764537, 8281658229049].map((item) => new Promise(async (resolve, reject) => {
+                const data = await fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${item}`);
+                const response = await data.json();
                 const list = response.products.filter(p => p.selling_plan_groups.length).map(p => {
-                  let selectedVariant = p.variants[0];
-                  for (let i = 0; i < p.variants.length; i++) {
-                    if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
-                      selectedVariant = p.variants[i];
+                    let selectedVariant = p.variants[0];
+                    for (let i = 0; i < p.variants.length; i++) {
+                        if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
+                            selectedVariant = p.variants[i];
+                        }
                     }
-                  }
-                  return {
-                    product: p,
-                    variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
-                    variantID: selectedVariant.id,
-                    variant: selectedVariant
-                  }
+                    return {
+                        product: p,
+                        variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
+                        variantID: selectedVariant.id,
+                        variant: selectedVariant
+                    }
                 });
                 resolve(list);
-              })
             }))
             Promise.all(deferredHandlers).then(res => {
               let recommendations = [];
@@ -983,11 +976,6 @@
                 const cartItems = await recharge.bundle.getDynamicBundleItems(bundle, bundleProductData.handle);
                 const cartData = { items: cartItems };
 
-                await CartJS.setAttribute(referenceString, JSON.stringify({
-                    items: [],
-                    recommendations: []
-                }))
-
                 await fetch(window.Shopify.routes.root + 'cart/add.js', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -1166,7 +1154,7 @@
                                             }
                                         }
                                         return <div
-                                            key={i}
+                                            key={item.variant.id}
                                             className="flex flex-col space-y-2 group relative"
                                         >
                                             <button onClick={onClick} className="absolute right-0 top-2 shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center">
@@ -1208,7 +1196,7 @@
                                 }
                                 <div className="grid grid-cols-3 gap-3">
                                 {
-                                    cart.items.map((item, i) => <CartItem key={i} item={item} setCart={setCart} />)
+                                    cart.items.map((item, i) => <CartItem key={item.variant_id} item={item} setCart={setCart} />)
                                 }
                                 </div>
                                 {
