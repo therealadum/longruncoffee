@@ -52,12 +52,9 @@
   };
 
   function checkoutStatus(cartState, cart, plan) {
-    console.log(cartState, cart, plan)
     if (cartState.items.length && !plan) {
-        console.log('SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT');
         return 'SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT';
     } else if (cartState.items.length && plan) {
-        console.log('OKAY');
         return 'OKAY';
     } else if (cart.items.length) {
         let onlyContainsGifts = true;
@@ -67,14 +64,11 @@
             }
         })
         if (!onlyContainsGifts) {
-            console.log('OKAY');
             return 'OKAY';
         } else {
-            console.log('ONLY_CONTAINS_GIFTS');
             return 'ONLY_CONTAINS_GIFTS';
         }
     } else {
-        console.log('NOTHING_TO_CHECKOUT');
         return 'NOTHING_TO_CHECKOUT';
     }
   }
@@ -998,7 +992,7 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(cartData),
-                }).catch(e => console.log(e));
+                })
 
                 setCartState({
                     ...cartState,
