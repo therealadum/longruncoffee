@@ -28,6 +28,30 @@
     }
   };
 
+  function useIsMobile() {
+    const [windowSize, setWindowSize] = React.useState({
+        width: 0,
+        height: 0,
+    });
+
+    const handleSize = () => {
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+    }
+
+    React.useLayoutEffect(() => {
+        handleSize();
+        window.addEventListener('resize', handleSize);
+        return () => {
+            window.removeEventListener('resize', handleSize);
+        }
+    }, []);
+
+    return windowSize.width < 500
+  }
+
   function isRechargeAvailableOnProduct(product) {
     let available = false;
     for (let i = 0; i < product.selling_plan_groups.length; i++) {
@@ -281,6 +305,8 @@
       } }))
     }
 
+    const isMobile = useIsMobile();
+
     return product ? <div className="relative bg-cyan-50 bg-opacity-20">
       <div className="flex flex-col p-4 lg:py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
@@ -294,14 +320,14 @@
               <div className="h-[20rem] lg:h-[32rem] w-full z-10 mx-auto">
                 {
                   product.images && product.images.length ? hoveredImageIndex !== null ? <img
-                    src={`https://${product.images[hoveredImageIndex]}`}
+                    src={`https://${product.images[hoveredImageIndex]}${isMobile ? '&width=450' : '&width=650'}`}
                     loading="lazy"
                     width="400"
                     height="400"
                     alt="Featured product image"
                     className="w-full h-full object-contain"
                   /> : <img
-                    src={`https://${product.images[activeImageIndex]}`}
+                    src={`https://${product.images[activeImageIndex]}${isMobile ? '&width=450' : '&width=650'}`}
                     loading="lazy"
                     width="400"
                     height="400"
@@ -322,7 +348,7 @@
                     >
                       <div className={`border relative rounded group-hover:border-cyan-600 ${i === activeImageIndex ? "border-cyan-600" : "border-white"}`}>
                         <img
-                          src={media}
+                          src={`${media}&width=50`}
                           loading="lazy"
                           width="100"
                           height="100"

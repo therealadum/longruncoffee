@@ -231,7 +231,7 @@
             </button>
         </div>
         <img
-            src={item.product.featured_image}
+            src={`${item.product.featured_image}&width=150`}
             loading="lazy"
             className="w-full h-32 object-contain cursor-pointer"
             onClick={onClick}
@@ -291,7 +291,7 @@
             }
         </button>
         <img
-          src={item.images[0].src}
+          src={`${item.images[0].src}&width=150`}
           loading="lazy"
           onClick={onClick}
           className="w-full h-32 object-contain cursor-pointer"
@@ -403,7 +403,7 @@
                 </div>
             : null}
             <img
-                src={item.featured_image.url}
+                src={`${item.featured_image.url}&width=150`}
                 loading="lazy"
                 className="w-full h-32 object-contain cursor-pointer"
                 onClick={onClick}
@@ -1168,7 +1168,7 @@
                                                 </svg>
                                             </button>
                                             <img
-                                                src={item.product.featured_image}
+                                                src={`${item.product.featured_image}&width=150`}
                                                 loading="lazy"
                                                 className="w-full h-32 object-contain cursor-pointer"
                                                 onClick={onClick}
