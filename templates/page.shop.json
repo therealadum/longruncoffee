@@ -15,7 +15,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "coffee",
-        "products_to_show": 10,
+        "products_to_show": 6,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
@@ -28,10 +28,10 @@
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "e14a5f92-c55b-434f-9aed-06f64ebe111d": {
@@ -43,7 +43,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "flavored",
-        "products_to_show": 10,
+        "products_to_show": 6,
         "columns_desktop": 4,
         "full_width": true,
         "show_view_all": true,
@@ -56,10 +56,10 @@
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "9ae28934-928f-4a51-bfb4-14de2c49646a": {
@@ -124,7 +124,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "traditional-roasts",
-        "products_to_show": 10,
+        "products_to_show": 6,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
@@ -137,10 +137,10 @@
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "64b69423-6fac-4a4d-ab96-a6931843333d": {
@@ -165,10 +165,10 @@
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "58345eea-dca9-4c71-a732-a264de54788d": {
@@ -180,7 +180,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "best-selling",
-        "products_to_show": 10,
+        "products_to_show": 6,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
@@ -193,10 +193,10 @@
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "d0d8b155-050e-4a80-ae42-95133a443ed6": {
