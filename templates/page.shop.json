@@ -8,6 +8,13 @@
     },
     "713b7226-cf71-4f89-85c2-f953b6c17b1b": {
       "type": "featured-collection",
+      "custom_css": [
+        ".badge--bottom-left {font-size: 12px;}",
+        ".rating-star {font-size: 12px;}",
+        ".rating-count {font-size: 11px;}",
+        ".price {font-size: 14px;}",
+        ".price-item {font-size: 14px;}"
+      ],
       "settings": {
         "title": "All Coffee",
         "heading_size": "h2",
@@ -36,6 +43,13 @@
     },
     "e14a5f92-c55b-434f-9aed-06f64ebe111d": {
       "type": "featured-collection",
+      "custom_css": [
+        ".badge--bottom-left {font-size: 12px;}",
+        ".rating-star {font-size: 12px;}",
+        ".rating-count {font-size: 11px;}",
+        ".price {font-size: 14px;}",
+        ".price-item {font-size: 14px;}"
+      ],
       "settings": {
         "title": "Flavored Coffees",
         "heading_size": "h2",
@@ -43,13 +57,13 @@
         "show_description": false,
         "description_style": "body",
         "collection": "flavored",
-        "products_to_show": 6,
+        "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": true,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
-        "color_scheme": "accent-2",
+        "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -117,6 +131,13 @@
     },
     "eff4c676-36d0-4c11-8ee6-a7b9ad2535fa": {
       "type": "featured-collection",
+      "custom_css": [
+        ".badge--bottom-left {font-size: 12px;}",
+        ".rating-star {font-size: 12px;}",
+        ".rating-count {font-size: 11px;}",
+        ".price {font-size: 14px;}",
+        ".price-item {font-size: 14px;}"
+      ],
       "settings": {
         "title": "Traditional Roasts",
         "heading_size": "h2",
@@ -145,6 +166,13 @@
     },
     "64b69423-6fac-4a4d-ab96-a6931843333d": {
       "type": "featured-collection",
+      "custom_css": [
+        ".badge--bottom-left {font-size: 12px;}",
+        ".rating-star {font-size: 12px;}",
+        ".rating-count {font-size: 11px;}",
+        ".price {font-size: 14px;}",
+        ".price-item {font-size: 14px;}"
+      ],
       "settings": {
         "title": "Gear",
         "heading_size": "h2",
@@ -173,6 +201,13 @@
     },
     "58345eea-dca9-4c71-a732-a264de54788d": {
       "type": "featured-collection",
+      "custom_css": [
+        ".badge--bottom-left {font-size: 12px;}",
+        ".rating-star {font-size: 12px;}",
+        ".rating-count {font-size: 11px;}",
+        ".price {font-size: 14px;}",
+        ".price-item {font-size: 14px;}"
+      ],
       "settings": {
         "title": "Best Sellers",
         "heading_size": "h2",
