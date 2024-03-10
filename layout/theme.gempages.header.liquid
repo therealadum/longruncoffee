@@ -24,6 +24,10 @@
   <head>
     <!-- Google Tag Manager -->
     <script>
+      ((o, c, u) => {
+        (o[c] = o[c] || {}), (o[u] = o[u] || {}), (o[c].OCU = o[c].OCU || { api: o[u] });
+      })(window, 'Zipify', 'OCUApi');
+      Zipify.OCU.api.customCheckoutButton = '#checkout-button';
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -65,6 +69,19 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+
+    <script crossorigin type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <script crossorigin type="text/javascript" src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script
+      crossorigin
+      type="text/javascript"
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://static.rechargecdn.com/assets/storefront/recharge-client-1.16.3.min.js"></script>
+    <script
+      src="https://js.sentry-cdn.com/cac5fa3e67bc4ec512a2fb6fe18303d4.min.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -292,12 +309,38 @@
       }
     </script>
     {% render 'gp-head' %}
+
+    <script id="docapp-cart">
+      window.docappCart = {{ cart | json }}; window.docappCart.currency = "{{ 0 | money_with_currency | slice: -3, 3 }}"; window.docappCart.shop_currency = "{{ shop.currency }}";
+    </script>
+    <script id="docapp-free-item-speedup">
+      (() => {
+        if (
+          !document.documentElement.innerHTML.includes('\\/shop' + '\\/js' + '\\/free-gift-cart-upsell-pro.min.js') ||
+          window.freeGiftCartUpsellProAppLoaded
+        )
+          return;
+        let script = document.createElement('script');
+        script.src =
+          'https://d2fk970j0emtue.cloudfront.net/shop/js/free-gift-cart-upsell-pro.min.js?shop=longruncoffee.myshopify.com';
+        document.getElementById('docapp-free-item-speedup').after(script);
+      })();
+    </script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
+    <script>
+      let url = window.location.href;
+      if (url.endsWith('/collections/all')) {
+        location.href = '/pages/shop';
+      }
+      if (url.endsWith('/collections')) {
+        location.href = '/pages/shop';
+      }
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -319,10 +362,14 @@
       {% endif %}
     </main>
 
+    
+
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
+
+    
 
     <script>
       window.shopUrl = '{{ request.origin }}';
@@ -359,7 +406,7 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    
   </body>
-  {%- capture ocu_extend -%}{% render 'oneclickupsellapp-extend' %}{%- endcapture -%}
-  {%- unless ocu_extend contains 'Liquid error' -%}{{ ocu_extend }}{%- endunless -%}
 </html>
