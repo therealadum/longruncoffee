@@ -2,7 +2,7 @@
   
   
   <style>
-    .gps-488223199679480701 .pointer-events-none{pointer-events:none}.gps-488223199679480701 .pointer-events-auto{pointer-events:auto}.gps-488223199679480701 .relative{position:relative}.gps-488223199679480701 .mx-auto{margin-left:auto;margin-right:auto}.gps-488223199679480701 .mb-0{margin-bottom:0}.gps-488223199679480701 .inline-block{display:inline-block}.gps-488223199679480701 .flex{display:flex}.gps-488223199679480701 .grid{display:grid}.gps-488223199679480701 .h-full{height:100%}.gps-488223199679480701 .w-full{width:100%}.gps-488223199679480701 .max-w-full{max-width:100%}.gps-488223199679480701 .flex-col{flex-direction:column}.gps-488223199679480701 .gap-y-0{row-gap:0}.gps-488223199679480701 .overflow-hidden{overflow:hidden}.gps-488223199679480701 .align-middle{vertical-align:middle}.gps-488223199679480701 .transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488223199679480701 .duration-200{transition-duration:.2s}.gps-488223199679480701 .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488223199679480701 .\[\&_\*\]\:max-w-full *{max-width:100%}
+    .gps-488223199679480701 .pointer-events-auto{pointer-events:auto}.gps-488223199679480701 .relative{position:relative}.gps-488223199679480701 .mx-auto{margin-left:auto;margin-right:auto}.gps-488223199679480701 .mb-0{margin-bottom:0}.gps-488223199679480701 .block{display:block}.gps-488223199679480701 .\!inline{display:inline!important}.gps-488223199679480701 .flex{display:flex}.gps-488223199679480701 .grid{display:grid}.gps-488223199679480701 .hidden{display:none}.gps-488223199679480701 .h-\[28px\]{height:28px}.gps-488223199679480701 .h-\[56px\]{height:56px}.gps-488223199679480701 .h-full{height:100%}.gps-488223199679480701 .w-full{width:100%}.gps-488223199679480701 .max-w-full{max-width:100%}.gps-488223199679480701 .flex-col{flex-direction:column}.gps-488223199679480701 .items-center{align-items:center}.gps-488223199679480701 .justify-center{justify-content:center}.gps-488223199679480701 .gap-2{gap:8px}.gps-488223199679480701 .gap-y-0{row-gap:0}.gps-488223199679480701 .overflow-hidden{overflow:hidden}.gps-488223199679480701 .whitespace-nowrap{white-space:nowrap}.gps-488223199679480701 .border{border-width:1px}.gps-488223199679480701 .border-\[\#D6D6D6\]{--tw-border-opacity:1;border-color:rgb(214 214 214/var(--tw-border-opacity))}.gps-488223199679480701 .bg-\[\#f4f4f4\]{--tw-bg-opacity:1;background-color:rgb(244 244 244/var(--tw-bg-opacity))}.gps-488223199679480701 .text-\[14px\]{font-size:14px}.gps-488223199679480701 .font-semibold{font-weight:600}.gps-488223199679480701 .leading-\[24px\]{line-height:24px}.gps-488223199679480701 .text-\[\#212121\]{--tw-text-opacity:1;color:rgb(33 33 33/var(--tw-text-opacity))}.gps-488223199679480701 .transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488223199679480701 .duration-200{transition-duration:.2s}.gps-488223199679480701 .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488223199679480701 .\[\&_\*\]\:max-w-full *{max-width:100%}
   </style>
   
       
@@ -22,30 +22,62 @@
       style="--jc:start"
       class="goZ9rwtKkH relative flex flex-col"
     >
+      <div style="--mb:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]" class="ga1tyO_jwF ">
+      
+    {% assign app_blocks = section.blocks | where: "type", "@app" %}
+    {% if app_blocks[0] %}
       <div
+        class="third-party-slot flex w-full items-center "
+        style=""
+      >
+        {% for block in app_blocks %}
+          {% if block.type == '@app' and forloop.index0 == 0 %}
+            {% render block %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% elsif content_for_header contains "Shopify.designMode" or content_for_header contains "previewBarInjector.init();" %}
+      <div
+        class="third-party-slot bg-[#f4f4f4] border border-[#D6D6D6] flex h-[56px] w-full items-center justify-center border-box "
+        style=""
+      >
+        <div
+          class="h-[28px] overflow-hidden whitespace-nowrap flex justify-center items-center gap-2"
+          style="flex-flow:row wrap"
+        >
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.6475 5.16194C19.6416 5.1148 19.6197 5.0713 19.5857 5.03911C19.5516 5.00692 19.5076 4.9881 19.4614 4.98597C19.3835 4.98597 17.8469 4.95397 17.8469 4.95397C17.8469 4.95397 16.5588 3.67419 16.4342 3.5311C16.3104 3.40312 16.0619 3.43512 15.9684 3.46711L15.3166 3.67508C15.2361 3.40491 15.1323 3.14259 15.0067 2.89121C14.5566 1.99536 13.8727 1.51544 13.0659 1.51544C13.0044 1.51544 12.9577 1.51544 12.8954 1.53144C12.8642 1.49945 12.8486 1.46745 12.8175 1.45145C12.4608 1.06752 12.0107 0.875552 11.467 0.891549C10.4282 0.923543 9.38772 1.70741 8.53419 3.08318C7.94467 4.05901 7.49453 5.27392 7.3543 6.21776C6.15969 6.6017 5.32087 6.87365 5.29057 6.87365C4.68461 7.06562 4.66903 7.08161 4.59199 7.67351C4.56082 8.12144 2.97754 20.7415 2.97754 20.7415L16.2636 23.1091L22.022 21.6374C22.0064 21.6374 19.6631 5.27392 19.6475 5.16194ZM14.6492 3.89904C14.3062 4.00572 13.9648 4.11772 13.6251 4.23498C13.6251 3.69108 13.5472 2.92321 13.3143 2.28331C14.1064 2.41129 14.4942 3.33914 14.6492 3.89904ZM12.9265 4.44206C12.2279 4.66602 11.4679 4.90598 10.707 5.14594C10.9243 4.29808 11.3277 3.46623 11.8245 2.90632C12.033 2.66965 12.2863 2.47913 12.569 2.34641C12.8806 2.9712 12.9421 3.85105 12.9265 4.44206ZM11.4982 1.61143C11.7466 1.61143 11.9483 1.65942 12.1197 1.7874C11.8127 1.95192 11.5387 2.17444 11.3121 2.44329C10.6455 3.17916 10.1331 4.31408 9.93135 5.4179C9.29423 5.62586 8.67356 5.81783 8.11521 5.9938C8.48744 4.25009 9.89933 1.65942 11.4982 1.61143Z" fill="#95BF47"/>
+            <path d="M19.4652 4.94733C19.3856 4.94733 17.816 4.91527 17.816 4.91527C17.816 4.91527 16.4986 3.63266 16.3721 3.48837C16.3266 3.43975 16.264 3.41098 16.1978 3.4082V23.1096L22.0833 21.6346L19.6714 5.12369C19.6404 5.01147 19.5448 4.94733 19.4652 4.94733Z" fill="#5E8E3E"/>
+            <path d="M13.5575 8.51577L12.8029 10.8908C12.8029 10.8908 11.9602 10.5663 10.9599 10.6253C9.48595 10.6991 9.48595 11.4809 9.48595 11.6727C9.57404 12.7348 12.89 12.9709 13.0828 15.4631C13.2238 17.4251 11.8545 18.7675 9.85396 18.8708C7.46778 18.9733 6.15137 17.7939 6.15137 17.7939L6.66032 15.9794C6.66032 15.9794 7.99435 16.8203 9.0465 16.7613C9.73162 16.7318 9.9949 16.245 9.95967 15.9204C9.85396 14.5337 7.15165 14.6223 6.97645 12.3365C6.83551 10.4188 8.32712 8.48626 11.6265 8.30924C12.9076 8.23548 13.5575 8.51577 13.5575 8.51577Z" fill="white"/>
+          </svg>
+          <div class="text-[14px] text-[#212121] font-semibold leading-[24px]">Shopify App</div>
+        </div>
+      </div>
+    {% else %}
+      <div class="hidden"></div>  
+    {% endif %}
+  
+      </div><div
     
     role="presentation"
     class="group/image gVJyvJo6Tl"
     style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--ta:center"
     >
-    <figure
-      class="relative inline-block overflow-hidden align-middle pointer-events-none"
-      style="--shadow:none;--h:auto;--h-tablet:auto;--h-mobile:auto;border-radius:inherit"
-    >
       <div
         class="pointer-events-auto h-full"
         
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
       >
         <img
     quality="70" title
     draggable="false"
-    class="inline-block w-full h-full max-w-full flex gp_lazyload"
-    data-src="{{ "484137708004836523-2327ac55-4bb4-421c-ac6f-c8320858ccc3.png" | asset_url }}" data-srcset="{{ '484137708004836523-2327ac55-4bb4-421c-ac6f-c8320858ccc3.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-2327ac55-4bb4-421c-ac6f-c8320858ccc3.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-2327ac55-4bb4-421c-ac6f-c8320858ccc3.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="3500" height="117" alt="Alt image" priority
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "484137708004836523-2327ac55-4bb4-421c-ac6f-c8320858ccc3.png" | asset_url }}" data-srcset="{{ '484137708004836523-2327ac55-4bb4-421c-ac6f-c8320858ccc3.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-2327ac55-4bb4-421c-ac6f-c8320858ccc3.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-2327ac55-4bb4-421c-ac6f-c8320858ccc3.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="3500" height="117" alt="Alt image" priority base-src
     sizes="100vw"
-    style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);--w:100%"
+    style="--aspect:3500/117;--aspect-tablet:3500/117;--aspect-mobile:3500/117;--objf:cover;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
   />
       </div>
-    </figure>
   </div>
     </div>
     </div>
@@ -56,13 +88,13 @@
 {% schema %}
   {
     
-    "name": "Section 3",
+    "name": "Section 4",
     "tag": "section",
     "class": "gps-488223199679480701 gps gpsi",
     "settings": [
       {
         "type": "paragraph",
-        "content": "Section design by GemPages. [Click here to start design](https://builder.gempages.net/instant/hyperlink/edit?type=section&section_id=488223199679480701&template_id=487646738010604413)"
+        "content": "Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=487646738010604413&sectionId=488223199679480701)"
       }
     ],
     "blocks": [{"type": "@app"}]
