@@ -13,7 +13,7 @@
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>See if your question has been answered in our FAQ.<\/p><p>If not, contact us with the form below and we will get back to you in a jiffy.<\/p>",
+            "text": "<p>See if your question has been answered in our FAQ.<\/p><p>If not, contact us below and we will get back to you in a jiffy.<\/p>",
             "text_style": "body"
           }
         },
@@ -30,6 +30,9 @@
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-text-1",
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-button-1"
       ],
+      "custom_css": [
+        "h2 {font-size: 36px;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Email_Pic_2.png",
         "height": "adapt",
@@ -45,8 +48,29 @@
         "padding_bottom": 36
       }
     },
+    "171017884565b9560d": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_UDVxyp": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "TG7w26"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_UDVxyp"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "d0d8b155-050e-4a80-ae42-95133a443ed6": {
       "type": "contact-form",
+      "custom_css": [
+        "h2 {font-size: 36px;}",
+        "p {font-size: 12px;}"
+      ],
       "settings": {
         "heading": "Get in touch",
         "heading_size": "h1",
@@ -145,6 +169,7 @@
   },
   "order": [
     "77990eb0-2559-470f-be36-9072020dc37c",
+    "171017884565b9560d",
     "d0d8b155-050e-4a80-ae42-95133a443ed6",
     "coming-soon",
     "9ae28934-928f-4a51-bfb4-14de2c49646a",
