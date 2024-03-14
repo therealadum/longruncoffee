@@ -118,7 +118,7 @@
     "cart_drawer_collection": "latest-products",
     "checkout_logo_image": "shopify:\/\/shop_images\/Logo_Trim_1.png",
     "checkout_accent_color": "#2ca4b2",
-    "checkout_button_color": "#044e54",
+    "checkout_button_color": "#eb962d",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -283,13 +283,13 @@
       },
       "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633": {
         "settings": {
-          "background": "#fff",
+          "background": "#ffffff",
           "background_gradient": "",
           "text": "#044e54",
           "button": "#feead1",
           "button_label": "#df8619",
           "secondary_button_label": "#df8619",
-          "shadow": "#fff"
+          "shadow": "#ffffff"
         }
       },
       "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c": {
