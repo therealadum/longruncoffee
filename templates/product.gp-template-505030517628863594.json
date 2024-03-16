@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "gp_section_505030517696037994": {
+      "type": "gp-section-505030517696037994",
+      "settings": {
+      }
+    },
+    "gp_section_505030517712749674": {
+      "type": "gp-section-505030517712749674",
+      "settings": {
+      }
+    },
+    "gp_section_505030517729526890": {
+      "type": "gp-section-505030517729526890",
+      "settings": {
+      }
+    },
+    "gp_section_505030517679195242": {
+      "type": "gp-section-505030517679195242",
+      "settings": {
+      }
+    },
+    "gp_section_505030517712880746": {
+      "type": "gp-section-505030517712880746",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "gp_section_505030517696037994",
+    "gp_section_505030517712749674",
+    "gp_section_505030517729526890",
+    "gp_section_505030517679195242",
+    "gp_section_505030517712880746"
+  ]
+}
