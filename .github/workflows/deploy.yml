@@ -5,14 +5,14 @@ on:
 name: Deploy site changes
 jobs:
   slackNotification:
-    name: Slack Notification
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Shopify
-        uses: pgrimaud/action-shopify@master
+        uses: bravetheskies/shopify-rapid-deploy-action@v1
         env:
-          SHOPIFY_PASSWORD: ${{ secrets.SHOPIFY_PASSWORD }}
+          SHOPIFY_APP_API_PASSWORD: ${{ secrets.SHOPIFY_PASSWORD }}
           SHOPIFY_STORE_URL: ${{ secrets.SHOPIFY_STORE_URL }}
           SHOPIFY_THEME_ID: ${{ secrets.SHOPIFY_THEME_ID }}
           THEME_PATH: ${{ secrets.THEME_PATH }}
