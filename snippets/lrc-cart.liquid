@@ -3,6 +3,14 @@
 <script
   type="text/babel"
 >
+    (async () => {
+        while (typeof klaviyo === 'undefined') {
+            console.log('waiting for klaviyo');
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+        }
+        klaviyo.identify({}).then((d) => console.log(d));
+    })();
+
   recharge.init({
     storeIdentifier: 'longruncoffee.myshopify.com',
     storefrontAccessToken: 'strfnt_554c548c9ee33e7dfb04ba981797a8e49a71423f554234f212fbc4de1cb26d63',
@@ -111,7 +119,10 @@
     return plan;
   }
 
-  function isCartOnlyGiftItems(items) {
+  function isCartOnlyGiftItems(items, subscriptionItems) {
+    if (subscriptionItems > 0) {
+        return false;
+    }
     let foundNonGiftItem = false;
     items.forEach(item => {
         if (item.product_type !== "Gift") {
@@ -468,6 +479,61 @@
         }
     }, [isOpen, setIsOpen]);
 
+    // listen to subscription additions / removals
+    // if any subscribables, add bonus coffee to cart
+    React.useEffect(() => {
+        let foundBonusCoffee = false;
+        cart.items.forEach(item => {
+            if (item.id === 48244318142777) {
+                foundBonusCoffee = true;
+            }
+        })
+        let subscriptionItemsInCart = false;
+        cart.items.forEach(item => {
+            if (item.selling_plan_allocation && item.selling_plan_allocation.selling_plan) {
+                subscriptionItemsInCart = true;
+            }
+        })
+        if (totalSubscriptionItems > 0 || subscriptionItemsInCart) {
+            // check if bonus coffee is in cart
+            // if not, add it
+            if (!foundBonusCoffee) {
+                fetch(window.Shopify.routes.root + 'cart/add.js', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        items: [{
+                            'id': 48244318142777,
+                            quantity: 1
+                        }]
+                    })
+                }).then(async () => {
+                    const newCart = await getCart();
+                    setCart(newCart);
+                })
+            }
+        } else if (!subscriptionItemsInCart) {
+            if (foundBonusCoffee) {
+                fetch(window.Shopify.routes.root + 'cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        updates: {
+                            '48244318142777': 0
+                        }
+                    })
+                }).then(async () => {
+                    const newCart = await getCart();
+                    setCart(newCart);
+                })
+            }
+        }
+    }, [totalSubscriptionItems, setCart, cart])
+
     React.useEffect(() => {
         const handler = async function(event) {
             const { variantId, isSubscription, quantity, available } = event.detail
@@ -478,6 +544,7 @@
                 if (variantId && product_hash) {
                     const data = await fetch(window.Shopify.routes.root + `products/${product_hash}.js`);
                     const product = await data.json();
+
                     let variant;
                     for (let j = 0; j < product.variants.length; j++) {
                         if (product.variants[j].id == variantId) {
@@ -490,6 +557,18 @@
                         variant,
                         quantity: 1
                     }
+
+                    if (await klaviyo.isIdentified()) {
+                        // report to klayvio
+                        klaviyo.track({
+                            event: 'add_subscription_item_to_cart',
+                            properties: {
+                                'product_id' : product.id,
+                                'variant_id': variantId
+                            }
+                        })
+                    }
+
                     // if already in subscriptions, add quantity - otherwise add new item
                     let existingItemIndex = null;
                     for (let j = 0; j < cartState.items.length; j++) {
@@ -982,6 +1061,9 @@
                     body: JSON.stringify(cartData),
                 })
 
+                const newCart = await getCart();
+                setCart(newCart);
+
                 setCartState({
                     ...cartState,
                     items: []
@@ -1186,7 +1268,7 @@
                             </div> : null
                         }
                         {
-                            isCartOnlyGiftItems(cart.items) ? null : <div className="flex flex-col space-y-4">
+                            isCartOnlyGiftItems(cart.items, totalSubscriptionItems) ? null : <div className="flex flex-col space-y-4">
                                 {
                                     cartState.items.length && cart.items.length ? <div className="flex items-center space-x-2">
                                         <div className="flex-1 h-1 rounded bg-cyan-700" />
