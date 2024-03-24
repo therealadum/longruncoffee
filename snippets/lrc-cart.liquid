@@ -498,16 +498,15 @@
             // check if bonus coffee is in cart
             // if not, add it
             if (!foundBonusCoffee) {
-                fetch(window.Shopify.routes.root + 'cart/add.js', {
+                fetch(window.Shopify.routes.root + 'cart/update.js', {
                     method: 'POST',
                     headers: {
                     'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        items: [{
-                            'id': 48244318142777,
-                            quantity: 1
-                        }]
+                        updates: {
+                            '48244318142777': 1
+                        }
                     })
                 }).then(async () => {
                     const newCart = await getCart();

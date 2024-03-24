@@ -1130,10 +1130,6 @@ select {
   margin-left: auto;
 }
 
-.mr-\[12px\] {
-  margin-right: 12px;
-}
-
 .mt-0 {
   margin-top: 0px;
 }
@@ -1796,10 +1792,6 @@ select {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.\!content-center {
-  align-content: center !important;
 }
 
 .items-start {

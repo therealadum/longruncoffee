@@ -2,11 +2,13 @@
   "sections": {
     "lrc-base-product": {
       "type": "lrc-base-product",
-      "blocks": {}
+      "settings": {
+      }
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
-      "blocks": {}
+      "settings": {
+      }
     },
     "related-products": {
       "type": "related-products",
@@ -29,11 +31,13 @@
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
-      "blocks": {}
+      "settings": {
+      }
     },
     "lrc-coffee-benefits-comparison": {
       "type": "lrc-coffee-benefits-comparison",
-      "blocks": {}
+      "settings": {
+      }
     }
   },
   "order": [
