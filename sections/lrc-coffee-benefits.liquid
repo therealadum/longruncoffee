@@ -7,18 +7,21 @@
     const benefits = [
       {
         title: 'Train Harder, with Ease',
-        img: "{{ "benefit-shot-1.webp" | asset_url }}",
-        description: "Regular electrolyte supplements are abrasive on your stomach, preventing comfortable training. Our patent protected formula is pH basic, and stomach friendly.",
+        img: 'https://cdn.shopify.com/s/files/1/0761/6924/9081/files/benefit-shot-1.jpg?v=1711743849',
+        description:
+          'Regular electrolyte supplements are abrasive on your stomach, preventing comfortable training. Our patent protected formula is pH basic, and stomach friendly.',
       },
       {
         title: 'Feel Light on Your Feet',
-        img: "{{ "benefit-shot-2.webp" | asset_url }}",
-        description: "Our electrolyte & caffeine formula allows for highly bioavailable hydration & energy. This naturally leads to a faster runner’s high, and more enjoyable run.",
+        img: 'https://cdn.shopify.com/s/files/1/0761/6924/9081/files/benefit-shot-2.jpg?v=1711743849',
+        description:
+          'Our electrolyte & caffeine formula allows for highly bioavailable hydration & energy. This naturally leads to a faster runner’s high, and more enjoyable run.',
       },
       {
         title: 'Enjoy Reduced Fatigue',
-        img: "{{ "benefit-shot-3.webp" | asset_url }}",
-        description: "Long Run Coffee blocks adenosine uptake in the brain, preventing tiredness & fatigue.  Plus the added sodium bicarbonate slows lactic acid buildup in muscles.",
+        img: 'https://cdn.shopify.com/s/files/1/0761/6924/9081/files/benefit-shot-3.jpg?v=1711743849',
+        description:
+          'Long Run Coffee blocks adenosine uptake in the brain, preventing tiredness & fatigue.  Plus the added sodium bicarbonate slows lactic acid buildup in muscles.',
       },
     ];
     const [activeBenefit, setActiveBenefit] = React.useState(0);
@@ -55,15 +58,18 @@
         <div className="flex flex-col lg:hidden">
           <h2 className="font-accent text-cyan-700 text-3xl mb-8 pl-8">Benefits</h2>
           <div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-14 scrollbar-hide">
-            {
-              benefits.map(b => (
-                <div key={b.title} class="snap-center shrink-0 first:pl-8 last:pr-8">
-                  <img class="shrink-0 w-[calc(100vw-72px)] h-[calc(100vw-72px)] rounded-lg shadow-lg bg-white object-fill" src={b.img} />
-                  <h4 className="font-accent w-[calc(100vw-72px)] text-wrap text-cyan-700 text-xl mt-4">{b.title}</h4>
-                  <p className="font-base w-[calc(100vw-72px)] text-wrap text-neutral-600 text-base mt-1">{b.description}</p>
-                </div>
-              ))
-            }
+            {benefits.map((b) => (
+              <div key={b.title} class="snap-center shrink-0 first:pl-8 last:pr-8">
+                <img
+                  class="shrink-0 w-[calc(100vw-72px)] h-[calc(100vw-72px)] rounded-lg shadow-lg bg-white object-fill"
+                  src={b.img}
+                />
+                <h4 className="font-accent w-[calc(100vw-72px)] text-wrap text-cyan-700 text-xl mt-4">{b.title}</h4>
+                <p className="font-base w-[calc(100vw-72px)] text-wrap text-neutral-600 text-base mt-1">
+                  {b.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

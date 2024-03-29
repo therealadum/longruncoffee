@@ -1,748 +1,917 @@
+<style>
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjg.woff)
+      format('woff');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hjg.woff)
+      format('woff');
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek-ext */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301,
+      U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+      U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek-ext */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301,
+      U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+      U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+</style>
 
-  
-  
-      <style>
-        @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjg.woff) format('woff');
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hjg.woff) format('woff');
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+<style>
+  .gps-488486792677294973 .g-subheading-1 {
+    font-family: var(--g-sh1-ff);
+    font-size: var(--g-sh1-size);
+    font-style: var(--g-sh1-fs);
+    font-weight: var(--g-sh1-weight);
+    letter-spacing: var(--g-sh1-ls);
+    line-height: var(--g-sh1-lh);
+  }
+  .gps-488486792677294973 .pointer-events-auto {
+    pointer-events: auto;
+  }
+  .gps-488486792677294973 .invisible {
+    visibility: hidden;
+  }
+  .gps-488486792677294973 .absolute {
+    position: absolute;
+  }
+  .gps-488486792677294973 .relative {
+    position: relative;
+  }
+  .gps-488486792677294973 .z-1 {
+    z-index: 1;
+  }
+  .gps-488486792677294973 .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gps-488486792677294973 .mb-0 {
+    margin-bottom: 0;
+  }
+  .gps-488486792677294973 .\!inline {
+    display: inline !important;
+  }
+  .gps-488486792677294973 .flex {
+    display: flex;
+  }
+  .gps-488486792677294973 .inline-flex {
+    display: inline-flex;
+  }
+  .gps-488486792677294973 .grid {
+    display: grid;
+  }
+  .gps-488486792677294973 .h-5 {
+    height: 20px;
+  }
+  .gps-488486792677294973 .h-full {
+    height: 100%;
+  }
+  .gps-488486792677294973 .w-5 {
+    width: 20px;
+  }
+  .gps-488486792677294973 .w-full {
+    width: 100%;
+  }
+  .gps-488486792677294973 .max-w-full {
+    max-width: 100%;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .gps-488486792677294973 .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+  .gps-488486792677294973 .flex-col {
+    flex-direction: column;
+  }
+  .gps-488486792677294973 .items-center {
+    align-items: center;
+  }
+  .gps-488486792677294973 .justify-center {
+    justify-content: center;
+  }
+  .gps-488486792677294973 .gap-y-0 {
+    row-gap: 0;
+  }
+  .gps-488486792677294973 .overflow-hidden {
+    overflow: hidden;
+  }
+  .gps-488486792677294973 .break-words {
+    overflow-wrap: break-word;
+  }
+  .gps-488486792677294973 .rounded-none {
+    border-radius: 0;
+  }
+  .gps-488486792677294973 .text-g-text-3 {
+    color: var(--g-c-text-3);
+  }
+  .gps-488486792677294973 .no-underline {
+    text-decoration-line: none;
+  }
+  .gps-488486792677294973 .opacity-25 {
+    opacity: 0.25;
+  }
+  .gps-488486792677294973 .opacity-75 {
+    opacity: 0.75;
+  }
+  .gps-488486792677294973 .transition-colors {
+    transition-duration: 0.15s;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .gps-488486792677294973 .duration-200 {
+    transition-duration: 0.2s;
+  }
+  .gps-488486792677294973 .duration-300 {
+    transition-duration: 0.3s;
+  }
+  .gps-488486792677294973 .ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .gps-488486792677294973 .disabled\:btn-disabled:disabled {
+    cursor: default;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .gps-488486792677294973 .hover\:bg-g-highlight:hover {
+      background-color: var(--g-c-highlight);
+    }
+  }
+  .gps-488486792677294973 .disabled\:pointer-events-none:disabled {
+    pointer-events: none;
+  }
+  .gps-488486792677294973 .disabled\:opacity-30:disabled {
+    opacity: 0.3;
+  }
+  .gps-488486792677294973 .group[data-state='loading'] .group-data-\[state\=loading\]\:visible {
+    visibility: visible;
+  }
+  .gps-488486792677294973 .group[data-state='loading'] .group-data-\[state\=loading\]\:invisible {
+    visibility: hidden;
+  }
+  .gps-488486792677294973 .\[\&_\*\]\:max-w-full * {
+    max-width: 100%;
+  }
+  .gps-488486792677294973 .\[\&_p\]\:inline p {
+    display: inline;
+  }
+  .gps-488486792677294973 .\[\&_p\]\:whitespace-pre-line p {
+    white-space: pre-line;
+  }
+  .gps-488486792677294973 .\[\&_p\]\:after\:whitespace-pre-wrap p:after {
+    content: var(--tw-content);
+    white-space: pre-wrap;
+  }
+  .gps-488486792677294973 .\[\&_p\]\:after\:content-\[\'\\A\'\] p:after {
+    --tw-content: '\A';
+    content: var(--tw-content);
+  }
+</style>
 
-      </style>
-    
-  <style>
-    .gps-488486792677294973 .g-subheading-1{font-family:var(--g-sh1-ff);font-size:var(--g-sh1-size);font-style:var(--g-sh1-fs);font-weight:var(--g-sh1-weight);letter-spacing:var(--g-sh1-ls);line-height:var(--g-sh1-lh)}.gps-488486792677294973 .pointer-events-auto{pointer-events:auto}.gps-488486792677294973 .invisible{visibility:hidden}.gps-488486792677294973 .absolute{position:absolute}.gps-488486792677294973 .relative{position:relative}.gps-488486792677294973 .z-1{z-index:1}.gps-488486792677294973 .mx-auto{margin-left:auto;margin-right:auto}.gps-488486792677294973 .mb-0{margin-bottom:0}.gps-488486792677294973 .\!inline{display:inline!important}.gps-488486792677294973 .flex{display:flex}.gps-488486792677294973 .inline-flex{display:inline-flex}.gps-488486792677294973 .grid{display:grid}.gps-488486792677294973 .h-5{height:20px}.gps-488486792677294973 .h-full{height:100%}.gps-488486792677294973 .w-5{width:20px}.gps-488486792677294973 .w-full{width:100%}.gps-488486792677294973 .max-w-full{max-width:100%}@keyframes spin{to{transform:rotate(1turn)}}.gps-488486792677294973 .animate-spin{animation:spin 1s linear infinite}.gps-488486792677294973 .flex-col{flex-direction:column}.gps-488486792677294973 .items-center{align-items:center}.gps-488486792677294973 .justify-center{justify-content:center}.gps-488486792677294973 .gap-y-0{row-gap:0}.gps-488486792677294973 .overflow-hidden{overflow:hidden}.gps-488486792677294973 .break-words{overflow-wrap:break-word}.gps-488486792677294973 .rounded-none{border-radius:0}.gps-488486792677294973 .text-g-text-3{color:var(--g-c-text-3)}.gps-488486792677294973 .no-underline{text-decoration-line:none}.gps-488486792677294973 .opacity-25{opacity:.25}.gps-488486792677294973 .opacity-75{opacity:.75}.gps-488486792677294973 .transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488486792677294973 .duration-200{transition-duration:.2s}.gps-488486792677294973 .duration-300{transition-duration:.3s}.gps-488486792677294973 .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488486792677294973 .disabled\:btn-disabled:disabled{cursor:default}@media (hover:hover) and (pointer:fine){.gps-488486792677294973 .hover\:bg-g-highlight:hover{background-color:var(--g-c-highlight)}}.gps-488486792677294973 .disabled\:pointer-events-none:disabled{pointer-events:none}.gps-488486792677294973 .disabled\:opacity-30:disabled{opacity:.3}.gps-488486792677294973 .group[data-state=loading] .group-data-\[state\=loading\]\:visible{visibility:visible}.gps-488486792677294973 .group[data-state=loading] .group-data-\[state\=loading\]\:invisible{visibility:hidden}.gps-488486792677294973 .\[\&_\*\]\:max-w-full *{max-width:100%}.gps-488486792677294973 .\[\&_p\]\:inline p{display:inline}.gps-488486792677294973 .\[\&_p\]\:whitespace-pre-line p{white-space:pre-line}.gps-488486792677294973 .\[\&_p\]\:after\:whitespace-pre-wrap p:after{content:var(--tw-content);white-space:pre-wrap}.gps-488486792677294973 .\[\&_p\]\:after\:content-\[\'\\A\'\] p:after{--tw-content:"\A";content:var(--tw-content)}
-  </style>
-  
-      
-      
-            <section
-              class="mx-auto max-w-full"
-              style="--w:calc(90% + 2 * var(--g-ct-p, 15px));--w-tablet:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--w-mobile:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--pl:var(--g-ct-p, 15px);--pl-tablet:var(--g-ct-p, 15px);--pl-mobile:var(--g-ct-p, 15px);--pr:var(--g-ct-p, 15px);--pr-tablet:var(--g-ct-p, 15px);--pr-mobile:var(--g-ct-p, 15px)"
-            >
-              
+<section
+  class="mx-auto max-w-full"
+  style="--w:calc(90% + 2 * var(--g-ct-p, 15px));--w-tablet:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--w-mobile:calc(var(--g-ct-w, 100%) + 2 * var(--g-ct-p, 15px));--pl:var(--g-ct-p, 15px);--pl-tablet:var(--g-ct-p, 15px);--pl-mobile:var(--g-ct-p, 15px);--pr:var(--g-ct-p, 15px);--pr-tablet:var(--g-ct-p, 15px);--pr-mobile:var(--g-ct-p, 15px)"
+>
+  <div
+    id="i2l265d1bf57e"
+    style="--b:solid;--bc:#C4C4C4;--bw:1px 1px 1px 1px;--d:grid;--d-mobile:grid;--d-tablet:grid;--bblr:10px;--bbrr:10px;--btlr:10px;--btrr:10px;--mt:0px;--ml:auto;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:20px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:auto;--mb-tablet:40px;--mr-tablet:auto;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:#F9F9FB;--bgc-tablet:#F8FAFB;--bgc-mobile:#FEFDFF"
+    class="i2l265d1bf57e mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+  >
     <div
-      id="i2l265d1bf57e"
-        style="--b:solid;--bc:#C4C4C4;--bw:1px 1px 1px 1px;--d:grid;--d-mobile:grid;--d-tablet:grid;--bblr:10px;--bbrr:10px;--btlr:10px;--btrr:10px;--mt:0px;--ml:auto;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:20px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:auto;--mb-tablet:40px;--mr-tablet:auto;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:#F9F9FB;--bgc-tablet:#F8FAFB;--bgc-mobile:#FEFDFF"
-        class="i2l265d1bf57e mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
+      label="Block"
+      tag="Col"
+      type="component"
       style="--jc:start"
       class="c-i2l4293e7cd2f relative flex flex-col"
     >
-      
-      
-      
-    <div
-      parentTag="Col" id="g4s2cfnlHe"
+      <div
+        parentTag="Col"
+        id="g4s2cfnlHe"
         style="--b:solid;--bc:#121212;--bw:0px 0px 0px 0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:20px;--bbrr:20px;--btlr:20px;--btrr:20px;--mb:0px;--cg:32px;--cg-tablet:10px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         class="g4s2cfnlHe mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
-      style="--jc:start"
-      class="geiHPyiZwz relative flex flex-col"
-    >
-      
-    <div
-      parentTag="Col"
-        class="i2lfbde94a88f "
-        style="--ta:left;--mt:15px;--ml:0px;--mb:20px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:15px;--mr-tablet:0px;--pt-tablet:15px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
       >
-      <div class="flex" style="--jc:left">
         <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--ta-tablet:center;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:36px;--size-tablet:24px;--size-mobile:23px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+          label="Block"
+          tag="Col"
+          type="component"
+          style="--jc:start"
+          class="geiHPyiZwz relative flex flex-col"
         >
-        <p>AMBASSADOR BENEFITS</p>
-        </div>
-      </div>
-    </div><div style="" class="i2la8f3dc3113 ">
-      
-    
-      
-      
-    <div
-      uid="i2la8f3dc3113"
-       style="--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:20px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:20px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:15px;--pb-mobile:0px;--pr-mobile:5px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:20px;--pb-tablet:0px;--pr-tablet:20px;--ta:center;--bgc:transparent;--bgc-mobile:#FEFDFF;--bgi:url();--bgi-mobile:url();--bgp:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-mobile:no-repeat;--bga:scroll;--bga-mobile:scroll">
-     
-     <ul
-        class="inline-flex flex-col"
-        style="--rg:40px;--rg-tablet:20px;--rg-mobile:35px"
-        >
-        
-    <li
-      class="flex w-full items-center gp-icon-list-item"
-      style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
-    >
-    <div
-      
-      style="--ai:normal;--jc:normal;--o:0"
-      class="gNaDFOZVL_ relative flex flex-col"
-    >
-      <div
-    
-    role="presentation"
-    class="group/image glMTnGan4Q"
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:0px;--ta:center"
-    >
-      <div
-        class="pointer-events-auto h-full"
-        
-        class="h-full w-full"
-        style="--shadow:none;border-radius:inherit;--ta:center"
-      >
-        <img
-    quality="70" title
-    draggable="false"
-    class="!inline h-full max-w-full flex gp_lazyload"
-    data-src="{{ "484137708004836523-a275fa55-a35f-4b7c-b8b1-d4bf1ec84761.png" | asset_url }}" data-srcset="{{ '484137708004836523-a275fa55-a35f-4b7c-b8b1-d4bf1ec84761.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-a275fa55-a35f-4b7c-b8b1-d4bf1ec84761.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-a275fa55-a35f-4b7c-b8b1-d4bf1ec84761.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="6250" height="6250" alt="Alt image" priority base-src
-    sizes="100vw"
-    style="--aspect:6250/6250;--aspect-tablet:6250/6250;--aspect-mobile:6250/6250;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
-  />
-      </div>
-  </div>
-    </div><div
-      
-      style="--ai:normal;--jc:normal;--o:0"
-      class="gErYBsayTy relative flex flex-col w-full"
-    >
-      
-    <div
-      parentTag="Col"
-        class="i2le43d428ae8 "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>GIVE 10% — GET 20%</p>
-        </div>
-      </div>
-    </div>
-    <div
-      parentTag="Col"
-        class="i2l9c0f073ac2 "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>Your personal affiliate link and code gives others 10% off their orders and you get 20% commission in store credit every time your link/code is used.</p>
-        </div>
-      </div>
-    </div>
-    </div>
-  </li>
-    <li
-      class="flex w-full items-center gp-icon-list-item"
-      style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
-    >
-    <div
-      
-      style=""
-      class="c-i2l4588c64034 relative flex flex-col"
-    >
-      <div
-    
-    role="presentation"
-    class="group/image gPfokZgMc7"
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:16px;--mb-mobile:0px;--ta:center"
-    >
-      <div
-        class="pointer-events-auto h-full"
-        
-        class="h-full w-full"
-        style="--shadow:none;border-radius:inherit;--ta:center"
-      >
-        <img
-    quality="70" title
-    draggable="false"
-    class="!inline h-full max-w-full flex gp_lazyload"
-    data-src="{{ "484137708004836523-ca7ff0e4-f593-4b15-8607-268a0b03f99e.png" | asset_url }}" data-srcset="{{ '484137708004836523-ca7ff0e4-f593-4b15-8607-268a0b03f99e.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-ca7ff0e4-f593-4b15-8607-268a0b03f99e.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-ca7ff0e4-f593-4b15-8607-268a0b03f99e.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="6250" height="6250" alt="Alt image" priority base-src
-    sizes="100vw"
-    style="--aspect:6250/6250;--aspect-tablet:6250/6250;--aspect-mobile:6250/6250;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
-  />
-      </div>
-  </div>
-    </div><div
-      
-      style=""
-      class="c-sp-i2l62a964a7e3 relative flex flex-col"
-    >
-      
-      
-      
-    <div
-      parentTag="Col" id="sp-i2l62a964a7e3"
-        style="--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="sp-i2l62a964a7e3 mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
-      style="--jc:start"
-      class="i2l62a964a7e3 relative flex flex-col"
-    >
-      
-    <div
-      parentTag="Col"
-        class="i2leaf9c20d40 "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>GET A PERSONAL 30% OFF CODE</p>
-        </div>
-      </div>
-    </div>
-    <div
-      parentTag="Col"
-        class="i2lcaf04636d8 "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>Stock up on LRC gear and coffee out of the gate with 30% off everything you order.&nbsp;</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  
-    
-    </div>
-  </li>
-    <li
-      class="flex w-full items-center gp-icon-list-item"
-      style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
-    >
-    <div
-      
-      style=""
-      class="c-i2l463858d762 relative flex flex-col"
-    >
-      <div
-    
-    role="presentation"
-    class="group/image gXunSZeHEM"
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:16px;--mb-mobile:0px;--ta:center"
-    >
-      <div
-        class="pointer-events-auto h-full"
-        
-        class="h-full w-full"
-        style="--shadow:none;border-radius:inherit;--ta:center"
-      >
-        <img
-    quality="70" title
-    draggable="false"
-    class="!inline h-full max-w-full flex gp_lazyload"
-    data-src="{{ "484137708004836523-76004250-e467-4f41-accf-ac4d8107c783.png" | asset_url }}" data-srcset="{{ '484137708004836523-76004250-e467-4f41-accf-ac4d8107c783.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-76004250-e467-4f41-accf-ac4d8107c783.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-76004250-e467-4f41-accf-ac4d8107c783.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="6250" height="6250" alt="Alt image" priority base-src
-    sizes="100vw"
-    style="--aspect:6250/6250;--aspect-tablet:6250/6250;--aspect-mobile:6250/6250;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
-  />
-      </div>
-  </div>
-    </div><div
-      
-      style=""
-      class="c-sp-i2lf9bda0d6bb relative flex flex-col"
-    >
-      
-      
-      
-    <div
-      parentTag="Col" id="sp-i2lf9bda0d6bb"
-        style="--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="sp-i2lf9bda0d6bb mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
-      style="--jc:start"
-      class="i2lf9bda0d6bb relative flex flex-col"
-    >
-      
-    <div
-      parentTag="Col"
-        class="i2lee401ee7f4 "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>First dibs on new products and limited releases</p>
-        </div>
-      </div>
-    </div>
-    <div
-      parentTag="Col"
-        class="gvyyWXcO_h "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>Early access to new products, including limited release coffees and gear.</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  
-    
-    </div>
-  </li>
-    <li
-      class="flex w-full items-center gp-icon-list-item"
-      style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
-    >
-    <div
-      
-      style=""
-      class="c-i2l1b2b08d844 relative flex flex-col"
-    >
-      <div
-    
-    role="presentation"
-    class="group/image g37QzbXtgH"
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:0px;--ta:center"
-    >
-      <div
-        class="pointer-events-auto h-full"
-        
-        class="h-full w-full"
-        style="--shadow:none;border-radius:inherit;--ta:center"
-      >
-        <img
-    quality="70" title
-    draggable="false"
-    class="!inline h-full max-w-full flex gp_lazyload"
-    data-src="{{ "484137708004836523-7b6114f1-29c8-4d2f-ad0d-642dd2f89f97.png" | asset_url }}" data-srcset="{{ '484137708004836523-7b6114f1-29c8-4d2f-ad0d-642dd2f89f97.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-7b6114f1-29c8-4d2f-ad0d-642dd2f89f97.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-7b6114f1-29c8-4d2f-ad0d-642dd2f89f97.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="6250" height="6250" alt="Alt image" priority base-src
-    sizes="100vw"
-    style="--aspect:6250/6250;--aspect-tablet:6250/6250;--aspect-mobile:6250/6250;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
-  />
-      </div>
-  </div>
-    </div><div
-      
-      style=""
-      class="c-sp-i2l218c4d7cc3 relative flex flex-col"
-    >
-      
-      
-      
-    <div
-      parentTag="Col" id="sp-i2l218c4d7cc3"
-        style="--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="sp-i2l218c4d7cc3 mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
-      style="--jc:start"
-      class="i2l218c4d7cc3 relative flex flex-col"
-    >
-      
-    <div
-      parentTag="Col"
-        class="gRjMgeZ9qR "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>SPecial gifts and bonus product</p>
-        </div>
-      </div>
-    </div>
-    <div
-      parentTag="Col"
-        class="gX8C2a74Gz "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>Top performing ambassadors are sent special gifts and bonus product.</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  
-    
-    </div>
-  </li>
-    <li
-      class="flex w-full items-center gp-icon-list-item"
-      style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
-    >
-    <div
-      
-      style="--ai:normal;--jc:normal;--o:0"
-      class="gzAj6FmllN relative flex flex-col"
-    >
-      <div
-    
-    role="presentation"
-    class="group/image g0KjOx4tuS"
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:0px;--ta:center"
-    >
-      <div
-        class="pointer-events-auto h-full"
-        
-        class="h-full w-full"
-        style="--shadow:none;border-radius:inherit;--ta:center"
-      >
-        <img
-    quality="70" title
-    draggable="false"
-    class="!inline h-full max-w-full flex gp_lazyload"
-    data-src="{{ "484137708004836523-ef073e73-a19c-4a70-9d8a-42ef74a0a283.png" | asset_url }}" data-srcset="{{ '484137708004836523-ef073e73-a19c-4a70-9d8a-42ef74a0a283.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-ef073e73-a19c-4a70-9d8a-42ef74a0a283.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-ef073e73-a19c-4a70-9d8a-42ef74a0a283.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="1000" height="1000" alt="Alt image" priority base-src
-    sizes="100vw"
-    style="--aspect:1000/1000;--aspect-tablet:1000/1000;--aspect-mobile:1000/1000;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
-  />
-      </div>
-  </div>
-    </div><div
-      
-      style="--ai:normal;--jc:normal;--o:0"
-      class="gEypUQ0kfd relative flex flex-col w-full"
-    >
-      
-      
-      
-    <div
-      parentTag="Col" id="gYcPoRFhNn"
-        style="--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gYcPoRFhNn mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
-      style="--jc:start"
-      class="gc4L-NOwF- relative flex flex-col"
-    >
-      
-    <div
-      parentTag="Col"
-        class="gtnwd-2JZI "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>get your story featured</p>
-        </div>
-      </div>
-    </div>
-    <div
-      parentTag="Col"
-        class="gHxo6VVatD "
-        style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
-      >
-      <div class="flex" style="--jc:left">
-        <div
-          data-gp-text
-          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        >
-        <p>You have a unique story and we would like to share it! We regularly feature ambassadors on our website, social media, and in newsletters.</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  
-    
-    </div>
-  </li>
-      </ul>
-  </div>
-  
-      </div>
-  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-button.js" defer="defer"></script>
-  <gp-button gp-data='{"setting":{"btnLink":{"link":"https://longruncoffee.com/community/ambassador/signup","target":"_self"},"disabled":false,"htmlType":"button","iconAlign":"left","iconSvg":"<svg style=\"width: 100%; height: 100%\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\"> <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z\" /></svg>","iconVisible":false,"label":"SIGN UP"}}' style="">
-  <div
-    
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:16px;--mb:16px;--mt-mobile:0px;--mb-mobile:0px;--pt-mobile:16px;--pb-mobile:16px;--ta:center"
-    class=""
-  >
-    <style>
-    .gYQ5Rp4w7X.gp-button-base::before {
-      content: "";
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      pointer-events: none;
-      border-style: solid;
-  border-width: 0px 0px 0px 0px;
-  border-color: #121212;
-  
-      
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      
-    }
+          <div
+            parentTag="Col"
+            class="i2lfbde94a88f "
+            style="--ta:left;--mt:15px;--ml:0px;--mb:20px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:15px;--mr-tablet:0px;--pt-tablet:15px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
+          >
+            <div class="flex" style="--jc:left">
+              <div
+                data-gp-text
+                class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:center;--ta-tablet:center;--ta-mobile:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:36px;--size-tablet:24px;--size-mobile:23px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+              >
+                <p>AMBASSADOR BENEFITS</p>
+              </div>
+            </div>
+          </div>
+          <div style="" class="i2la8f3dc3113 ">
+            <div
+              uid="i2la8f3dc3113"
+              style="--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:20px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:20px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:15px;--pb-mobile:0px;--pr-mobile:5px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:20px;--pb-tablet:0px;--pr-tablet:20px;--ta:center;--bgc:transparent;--bgc-mobile:#FEFDFF;--bgi:url();--bgi-mobile:url();--bgp:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-mobile:no-repeat;--bga:scroll;--bga-mobile:scroll"
+            >
+              <ul
+                class="inline-flex flex-col"
+                style="--rg:40px;--rg-tablet:20px;--rg-mobile:35px"
+              >
+                <li
+                  class="flex w-full items-center gp-icon-list-item"
+                  style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
+                >
+                  <div
+                    style="--ai:normal;--jc:normal;--o:0"
+                    class="gNaDFOZVL_ relative flex flex-col"
+                  >
+                    <div
+                      role="presentation"
+                      class="group/image glMTnGan4Q"
+                      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:0px;--ta:center"
+                    >
+                      <div
+                        class="pointer-events-auto h-full"
 
-    .gYQ5Rp4w7X:hover::before {
-      
-      
-    }
-  </style>
-    <a
-      href="https://longruncoffee.com/community/ambassador/signup" target="_self" data-id="gYQ5Rp4w7X" aria-label="SIGN UP"
-      data-state="idle"
-      class="gYQ5Rp4w7X gp-button-base rounded-none max-w-full relative group inline-flex items-center justify-center no-underline transition-colors duration-300 disabled:btn-disabled disabled:opacity-30 disabled:pointer-events-none hover:bg-g-highlight text-g-text-3 g-subheading-1"
-      style="--hvr-bg:var(--g-c-highlight, highlight);--bg:#DD8525;--bblr:4px;--bbrr:4px;--btlr:4px;--btrr:4px;--shadow:none;--c:var(--g-c-text-3, text-3);--w:50%;--w-tablet:50%;--w-mobile:50%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--tt:default;--weight:bold"
-    >
-        <svg
-          class="invisible absolute h-5 w-5 animate-spin group-data-[state=loading]:visible"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <circle
-            class="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            stroke-width="4"
-          ></circle>
-          <path
-            class="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          ></path>
-        </svg>
+                        class="h-full w-full"
+                        style="--shadow:none;border-radius:inherit;--ta:center"
+                      >
+                        <img
+                          quality="70"
+                          title
+                          draggable="false"
+                          class="!inline h-full max-w-full flex gp_lazyload"
+                          data-src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-a275fa55-a35f-4b7c-b8b1-d4bf1ec84761.png?v=1711743773"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+                          width="6250"
+                          height="6250"
+                          alt="Alt image"
+                          priority
+                          base-src
+                          sizes="100vw"
+                          style="--aspect:6250/6250;--aspect-tablet:6250/6250;--aspect-mobile:6250/6250;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="--ai:normal;--jc:normal;--o:0"
+                    class="gErYBsayTy relative flex flex-col w-full"
+                  >
+                    <div
+                      parentTag="Col"
+                      class="i2le43d428ae8 "
+                      style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
+                    >
+                      <div class="flex" style="--jc:left">
+                        <div
+                          data-gp-text
+                          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                        >
+                          <p>GIVE 10% — GET 20%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      parentTag="Col"
+                      class="i2l9c0f073ac2 "
+                      style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+                    >
+                      <div class="flex" style="--jc:left">
+                        <div
+                          data-gp-text
+                          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                        >
+                          <p>
+                            Your personal affiliate link and code gives others 10% off their orders and you get 20%
+                            commission in store credit every time your link/code is used.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="flex w-full items-center gp-icon-list-item"
+                  style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
+                >
+                  <div
+                    style=""
+                    class="c-i2l4588c64034 relative flex flex-col"
+                  >
+                    <div
+                      role="presentation"
+                      class="group/image gPfokZgMc7"
+                      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:16px;--mb-mobile:0px;--ta:center"
+                    >
+                      <div
+                        class="pointer-events-auto h-full"
 
-    
-      <span
-        class="break-words group-data-[state=loading]:invisible [&_p]:whitespace-pre-line z-1 h-full flex items-center overflow-hidden "
-        style="--tt:default"
-      >
-        SIGN UP
-      </span>
-    </a>
-  </div>
-  </gp-button>
-  
-    </div><div
-      label="Block" tag="Col" type="component"
-      style="--jc:start"
-      class="gETeT-jIez relative flex flex-col"
-    >
-      <div
-    
-    role="presentation"
-    class="group/image i2l352136fb98"
-    style="--b:solid;--bc:#C4C4C4;--bw:0px 0px 0px 0px;--bblr:10px;--bbrr:10px;--btlr:10px;--btrr:10px;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--ta:left;--ta-tablet:center"
-    >
-      <div
-        class="pointer-events-auto h-full"
-        
-        class="h-full w-full"
-        style="border-radius:inherit;--ta:left;--ta-tablet:center"
-      >
-        <img
-    quality="70" title="Long Run Coffee Ambassador Program"
-    draggable="false"
-    class="!inline h-full max-w-full flex gp_lazyload"
-    data-src="{{ "484137708004836523-ab153e15-76c6-4c76-99ee-f43eba75711e.png" | asset_url }}" data-srcset="{{ '484137708004836523-ab153e15-76c6-4c76-99ee-f43eba75711e.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-ab153e15-76c6-4c76-99ee-f43eba75711e.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-ab153e15-76c6-4c76-99ee-f43eba75711e.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="2750" height="2750" alt="Long Run Coffee Ambassador Program" priority base-src
-    sizes="100vw"
-    style="--aspect:2750/2750;--aspect-tablet:2750/2750;--aspect-mobile:2750/2750;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--h:650px;--h-tablet:550px;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;border-radius:inherit"
-  />
+                        class="h-full w-full"
+                        style="--shadow:none;border-radius:inherit;--ta:center"
+                      >
+                        <img
+                          quality="70"
+                          title
+                          draggable="false"
+                          class="!inline h-full max-w-full flex gp_lazyload"
+                          data-src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-ca7ff0e4-f593-4b15-8607-268a0b03f99e.png?v=1711743774"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+                          width="6250"
+                          height="6250"
+                          alt="Alt image"
+                          priority
+                          base-src
+                          sizes="100vw"
+                          style="--aspect:6250/6250;--aspect-tablet:6250/6250;--aspect-mobile:6250/6250;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style=""
+                    class="c-sp-i2l62a964a7e3 relative flex flex-col"
+                  >
+                    <div
+                      parentTag="Col"
+                      id="sp-i2l62a964a7e3"
+                      style="--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                      class="sp-i2l62a964a7e3 mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+                    >
+                      <div
+                        label="Block"
+                        tag="Col"
+                        type="component"
+                        style="--jc:start"
+                        class="i2l62a964a7e3 relative flex flex-col"
+                      >
+                        <div
+                          parentTag="Col"
+                          class="i2leaf9c20d40 "
+                          style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
+                        >
+                          <div class="flex" style="--jc:left">
+                            <div
+                              data-gp-text
+                              class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                            >
+                              <p>GET A PERSONAL 30% OFF CODE</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          parentTag="Col"
+                          class="i2lcaf04636d8 "
+                          style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+                        >
+                          <div class="flex" style="--jc:left">
+                            <div
+                              data-gp-text
+                              class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                            >
+                              <p>
+                                Stock up on LRC gear and coffee out of the gate with 30% off everything you order.&nbsp;
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="flex w-full items-center gp-icon-list-item"
+                  style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
+                >
+                  <div
+                    style=""
+                    class="c-i2l463858d762 relative flex flex-col"
+                  >
+                    <div
+                      role="presentation"
+                      class="group/image gXunSZeHEM"
+                      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:16px;--mb-mobile:0px;--ta:center"
+                    >
+                      <div
+                        class="pointer-events-auto h-full"
+
+                        class="h-full w-full"
+                        style="--shadow:none;border-radius:inherit;--ta:center"
+                      >
+                        <img
+                          quality="70"
+                          title
+                          draggable="false"
+                          class="!inline h-full max-w-full flex gp_lazyload"
+                          data-src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-76004250-e467-4f41-accf-ac4d8107c783.png?v=1711743771"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+                          width="6250"
+                          height="6250"
+                          alt="Alt image"
+                          priority
+                          base-src
+                          sizes="100vw"
+                          style="--aspect:6250/6250;--aspect-tablet:6250/6250;--aspect-mobile:6250/6250;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style=""
+                    class="c-sp-i2lf9bda0d6bb relative flex flex-col"
+                  >
+                    <div
+                      parentTag="Col"
+                      id="sp-i2lf9bda0d6bb"
+                      style="--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                      class="sp-i2lf9bda0d6bb mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+                    >
+                      <div
+                        label="Block"
+                        tag="Col"
+                        type="component"
+                        style="--jc:start"
+                        class="i2lf9bda0d6bb relative flex flex-col"
+                      >
+                        <div
+                          parentTag="Col"
+                          class="i2lee401ee7f4 "
+                          style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
+                        >
+                          <div class="flex" style="--jc:left">
+                            <div
+                              data-gp-text
+                              class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                            >
+                              <p>First dibs on new products and limited releases</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          parentTag="Col"
+                          class="gvyyWXcO_h "
+                          style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+                        >
+                          <div class="flex" style="--jc:left">
+                            <div
+                              data-gp-text
+                              class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                            >
+                              <p>Early access to new products, including limited release coffees and gear.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="flex w-full items-center gp-icon-list-item"
+                  style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
+                >
+                  <div
+                    style=""
+                    class="c-i2l1b2b08d844 relative flex flex-col"
+                  >
+                    <div
+                      role="presentation"
+                      class="group/image g37QzbXtgH"
+                      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:0px;--ta:center"
+                    >
+                      <div
+                        class="pointer-events-auto h-full"
+
+                        class="h-full w-full"
+                        style="--shadow:none;border-radius:inherit;--ta:center"
+                      >
+                        <img
+                          quality="70"
+                          title
+                          draggable="false"
+                          class="!inline h-full max-w-full flex gp_lazyload"
+                          data-src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-7b6114f1-29c8-4d2f-ad0d-642dd2f89f97.png?v=1711743772"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+                          width="6250"
+                          height="6250"
+                          alt="Alt image"
+                          priority
+                          base-src
+                          sizes="100vw"
+                          style="--aspect:6250/6250;--aspect-tablet:6250/6250;--aspect-mobile:6250/6250;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style=""
+                    class="c-sp-i2l218c4d7cc3 relative flex flex-col"
+                  >
+                    <div
+                      parentTag="Col"
+                      id="sp-i2l218c4d7cc3"
+                      style="--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                      class="sp-i2l218c4d7cc3 mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+                    >
+                      <div
+                        label="Block"
+                        tag="Col"
+                        type="component"
+                        style="--jc:start"
+                        class="i2l218c4d7cc3 relative flex flex-col"
+                      >
+                        <div
+                          parentTag="Col"
+                          class="gRjMgeZ9qR "
+                          style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
+                        >
+                          <div class="flex" style="--jc:left">
+                            <div
+                              data-gp-text
+                              class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                            >
+                              <p>SPecial gifts and bonus product</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          parentTag="Col"
+                          class="gX8C2a74Gz "
+                          style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+                        >
+                          <div class="flex" style="--jc:left">
+                            <div
+                              data-gp-text
+                              class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                            >
+                              <p>Top performing ambassadors are sent special gifts and bonus product.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="flex w-full items-center gp-icon-list-item"
+                  style="--cg:25px;--cg-tablet:25px;--cg-mobile:15px"
+                >
+                  <div
+                    style="--ai:normal;--jc:normal;--o:0"
+                    class="gzAj6FmllN relative flex flex-col"
+                  >
+                    <div
+                      role="presentation"
+                      class="group/image g0KjOx4tuS"
+                      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:0px;--ta:center"
+                    >
+                      <div
+                        class="pointer-events-auto h-full"
+
+                        class="h-full w-full"
+                        style="--shadow:none;border-radius:inherit;--ta:center"
+                      >
+                        <img
+                          quality="70"
+                          title
+                          draggable="false"
+                          class="!inline h-full max-w-full flex gp_lazyload"
+                          data-src="{{ "484137708004836523-ef073e73-a19c-4a70-9d8a-42ef74a0a283.png" | asset_url }}"
+                          data-srcset="{{ '484137708004836523-ef073e73-a19c-4a70-9d8a-42ef74a0a283.png' | asset_img_url: '768x768' }} 768w, {{ '484137708004836523-ef073e73-a19c-4a70-9d8a-42ef74a0a283.png' | asset_img_url: '1024x1024' }} 1024w, {{ '484137708004836523-ef073e73-a19c-4a70-9d8a-42ef74a0a283.png' | asset_img_url: 'master' }} 1440w"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+                          width="1000"
+                          height="1000"
+                          alt="Alt image"
+                          priority
+                          base-src
+                          sizes="100vw"
+                          style="--aspect:1000/1000;--aspect-tablet:1000/1000;--aspect-mobile:1000/1000;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:35px;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="--ai:normal;--jc:normal;--o:0"
+                    class="gEypUQ0kfd relative flex flex-col w-full"
+                  >
+                    <div
+                      parentTag="Col"
+                      id="gYcPoRFhNn"
+                      style="--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                      class="gYcPoRFhNn mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+                    >
+                      <div
+                        label="Block"
+                        tag="Col"
+                        type="component"
+                        style="--jc:start"
+                        class="gc4L-NOwF- relative flex flex-col"
+                      >
+                        <div
+                          parentTag="Col"
+                          class="gtnwd-2JZI "
+                          style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px"
+                        >
+                          <div class="flex" style="--jc:left">
+                            <div
+                              data-gp-text
+                              class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:130%;--size:19px;--size-tablet:16px;--size-mobile:15px;--weight:bold;--c:#122942;--tt:uppercase;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                            >
+                              <p>get your story featured</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          parentTag="Col"
+                          class="gHxo6VVatD "
+                          style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+                        >
+                          <div class="flex" style="--jc:left">
+                            <div
+                              data-gp-text
+                              class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+                              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Inter, Inter);--lh:180%;--size:16px;--size-tablet:13px;--size-mobile:13px;--weight:bold;--c:rgb(78, 77, 78);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+                            >
+                              <p>
+                                You have a unique story and we would like to share it! We regularly feature ambassadors
+                                on our website, social media, and in newsletters.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-button.js" defer="defer"></script>
+          <gp-button
+            gp-data='{"setting":{"btnLink":{"link":"https://longruncoffee.com/community/ambassador/signup","target":"_self"},"disabled":false,"htmlType":"button","iconAlign":"left","iconSvg":"<svg style=\"width: 100%; height: 100%\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\"> <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z\" /></svg>","iconVisible":false,"label":"SIGN UP"}}'
+            style=""
+          >
+            <div
+              style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mt:16px;--mb:16px;--mt-mobile:0px;--mb-mobile:0px;--pt-mobile:16px;--pb-mobile:16px;--ta:center"
+              class=""
+            >
+              <style>
+                .gYQ5Rp4w7X.gp-button-base::before {
+                  content: '';
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  pointer-events: none;
+                  border-style: solid;
+                  border-width: 0px 0px 0px 0px;
+                  border-color: #121212;
+
+                  border-bottom-left-radius: 4px;
+                  border-bottom-right-radius: 4px;
+                  border-top-left-radius: 4px;
+                  border-top-right-radius: 4px;
+                }
+
+                .gYQ5Rp4w7X:hover::before {
+                }
+              </style>
+              <a
+                href="https://longruncoffee.com/community/ambassador/signup"
+                target="_self"
+                data-id="gYQ5Rp4w7X"
+                aria-label="SIGN UP"
+                data-state="idle"
+                class="gYQ5Rp4w7X gp-button-base rounded-none max-w-full relative group inline-flex items-center justify-center no-underline transition-colors duration-300 disabled:btn-disabled disabled:opacity-30 disabled:pointer-events-none hover:bg-g-highlight text-g-text-3 g-subheading-1"
+                style="--hvr-bg:var(--g-c-highlight, highlight);--bg:#DD8525;--bblr:4px;--bbrr:4px;--btlr:4px;--btrr:4px;--shadow:none;--c:var(--g-c-text-3, text-3);--w:50%;--w-tablet:50%;--w-mobile:50%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--tt:default;--weight:bold"
+              >
+                <svg
+                  class="invisible absolute h-5 w-5 animate-spin group-data-[state=loading]:visible"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+
+                <span
+                  class="break-words group-data-[state=loading]:invisible [&_p]:whitespace-pre-line z-1 h-full flex items-center overflow-hidden "
+                  style="--tt:default"
+                >
+                  SIGN UP
+                </span>
+              </a>
+            </div>
+          </gp-button>
+        </div>
+        <div
+          label="Block"
+          tag="Col"
+          type="component"
+          style="--jc:start"
+          class="gETeT-jIez relative flex flex-col"
+        >
+          <div
+            role="presentation"
+            class="group/image i2l352136fb98"
+            style="--b:solid;--bc:#C4C4C4;--bw:0px 0px 0px 0px;--bblr:10px;--bbrr:10px;--btlr:10px;--btrr:10px;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-tablet:0px;--ml-tablet:0px;--mb-tablet:0px;--mr-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--ta:left;--ta-tablet:center"
+          >
+            <div
+              class="pointer-events-auto h-full"
+
+              class="h-full w-full"
+              style="border-radius:inherit;--ta:left;--ta-tablet:center"
+            >
+              <img
+                quality="70"
+                title="Long Run Coffee Ambassador Program"
+                draggable="false"
+                class="!inline h-full max-w-full flex gp_lazyload"
+                data-src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-ab153e15-76c6-4c76-99ee-f43eba75711e.png?v=1711667586"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+                width="2750"
+                height="2750"
+                alt="Long Run Coffee Ambassador Program"
+                priority
+                base-src
+                sizes="100vw"
+                style="--aspect:2750/2750;--aspect-tablet:2750/2750;--aspect-mobile:2750/2750;--objf:cover;--objf-tablet:cover;--objf-mobile:cover;--h:650px;--h-tablet:550px;--h-mobile:auto;--bs:none;--bw:0px;--bc:transparent;border-radius:inherit"
+              >
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
-    </div>
-    </div>
-  
-    
-    </div>
-    </div>
-  
-            </section>
-          
-    
+</section>
+
 {% schema %}
-  {
-    
-    "name": "Section 2",
-    "tag": "section",
-    "class": "gps-488486792677294973 gps gpsi",
-    "settings": [
-      {
-        "type": "paragraph",
-        "content": "Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=488486792308196221&sectionId=488486792677294973)"
-      }
-    ],
-    "blocks": [{"type": "@app"}]
-  }
+{
+  "name": "Section 2",
+  "tag": "section",
+  "class": "gps-488486792677294973 gps gpsi",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=488486792308196221&sectionId=488486792677294973)"
+    }
+  ],
+  "blocks": [{ "type": "@app" }]
+}
 {% endschema %}

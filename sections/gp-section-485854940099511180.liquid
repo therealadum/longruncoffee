@@ -1,292 +1,493 @@
+<style>
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXw.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXw.woff) format('woff');
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301,
+      U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+      U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301,
+      U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+      U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+</style>
 
-  
-  
-      <style>
-        @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXw.woff) format('woff');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXw.woff) format('woff');
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+<style>
+  .gps-485854940099511180 .invisible {
+    visibility: hidden;
+  }
+  .gps-485854940099511180 .absolute {
+    position: absolute;
+  }
+  .gps-485854940099511180 .relative {
+    position: relative;
+  }
+  .gps-485854940099511180 .inset-0 {
+    inset: 0;
+  }
+  .gps-485854940099511180 .left-\[var\(--left\)\] {
+    left: var(--left);
+  }
+  .gps-485854940099511180 .top-\[var\(--top\)\] {
+    top: var(--top);
+  }
+  .gps-485854940099511180 .z-1 {
+    z-index: 1;
+  }
+  .gps-485854940099511180 .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gps-485854940099511180 .mb-0 {
+    margin-bottom: 0;
+  }
+  .gps-485854940099511180 .flex {
+    display: flex;
+  }
+  .gps-485854940099511180 .inline-flex {
+    display: inline-flex;
+  }
+  .gps-485854940099511180 .grid {
+    display: grid;
+  }
+  .gps-485854940099511180 .h-5 {
+    height: 20px;
+  }
+  .gps-485854940099511180 .h-full {
+    height: 100%;
+  }
+  .gps-485854940099511180 .w-5 {
+    width: 20px;
+  }
+  .gps-485854940099511180 .w-full {
+    width: 100%;
+  }
+  .gps-485854940099511180 .max-w-full {
+    max-width: 100%;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .gps-485854940099511180 .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+  .gps-485854940099511180 .flex-col {
+    flex-direction: column;
+  }
+  .gps-485854940099511180 .items-center {
+    align-items: center;
+  }
+  .gps-485854940099511180 .\!justify-center {
+    justify-content: center !important;
+  }
+  .gps-485854940099511180 .justify-center {
+    justify-content: center;
+  }
+  .gps-485854940099511180 .gap-y-0 {
+    row-gap: 0;
+  }
+  .gps-485854940099511180 .self-center {
+    align-self: center;
+  }
+  .gps-485854940099511180 .overflow-hidden {
+    overflow: hidden;
+  }
+  .gps-485854940099511180 .break-words {
+    overflow-wrap: break-word;
+  }
+  .gps-485854940099511180 .rounded-none {
+    border-radius: 0;
+  }
+  .gps-485854940099511180 .bg-clip-content {
+    background-clip: content-box;
+  }
+  .gps-485854940099511180 .no-underline {
+    text-decoration-line: none;
+  }
+  .gps-485854940099511180 .opacity-25 {
+    opacity: 0.25;
+  }
+  .gps-485854940099511180 .opacity-75 {
+    opacity: 0.75;
+  }
+  .gps-485854940099511180 .transition-all {
+    transition-duration: 0.15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .gps-485854940099511180 .transition-colors {
+    transition-duration: 0.15s;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .gps-485854940099511180 .transition-transform {
+    transition-duration: 0.15s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .gps-485854940099511180 .duration-200 {
+    transition-duration: 0.2s;
+  }
+  .gps-485854940099511180 .duration-300 {
+    transition-duration: 0.3s;
+  }
+  .gps-485854940099511180 .ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .gps-485854940099511180 .disabled\:btn-disabled:disabled {
+    cursor: default;
+  }
+  .gps-485854940099511180 .disabled\:pointer-events-none:disabled {
+    pointer-events: none;
+  }
+  .gps-485854940099511180 .disabled\:opacity-30:disabled {
+    opacity: 0.3;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .gps-485854940099511180 .group\/hero:hover .group-hover\/hero\:bg-\[color\:var\(--hvr-bgc\2c _var\(--bgc\)\)\] {
+      background-color: var(--hvr-bgc, var(--bgc));
+    }
+    .gps-485854940099511180 .group\/hero:hover .group-hover\/hero\:opacity-\[var\(--hvr-op\2c _var\(--op\)\)\] {
+      opacity: var(--hvr-op, var(--op));
+    }
+  }
+  .gps-485854940099511180 .group[data-state='loading'] .group-data-\[state\=loading\]\:visible {
+    visibility: visible;
+  }
+  .gps-485854940099511180 .group[data-state='loading'] .group-data-\[state\=loading\]\:invisible {
+    visibility: hidden;
+  }
+  @media (max-width: 1023px) {
+    .gps-485854940099511180 .tablet\:relative {
+      position: relative;
+    }
+    .gps-485854940099511180 .tablet\:\!content-stretch {
+      align-content: stretch !important;
+    }
+    .gps-485854940099511180 .tablet\:\!justify-center {
+      justify-content: center !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .gps-485854940099511180 .mobile\:relative {
+      position: relative;
+    }
+    .gps-485854940099511180 .mobile\:\!content-stretch {
+      align-content: stretch !important;
+    }
+    .gps-485854940099511180 .mobile\:\!justify-center {
+      justify-content: center !important;
+    }
+  }
+  @media (max-width: 1023px) {
+    .gps-485854940099511180 .tablet\:\[\&\>\*\]\:\!justify-center > * {
+      justify-content: center !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .gps-485854940099511180 .mobile\:\[\&\>\*\]\:\!justify-center > * {
+      justify-content: center !important;
+    }
+  }
+  .gps-485854940099511180 .\[\&_\*\]\:max-w-full * {
+    max-width: 100%;
+  }
+  .gps-485854940099511180 .\[\&_p\]\:whitespace-pre-line p {
+    white-space: pre-line;
+  }
+</style>
 
-      </style>
-    
-  <style>
-    .gps-485854940099511180 .invisible{visibility:hidden}.gps-485854940099511180 .absolute{position:absolute}.gps-485854940099511180 .relative{position:relative}.gps-485854940099511180 .inset-0{inset:0}.gps-485854940099511180 .left-\[var\(--left\)\]{left:var(--left)}.gps-485854940099511180 .top-\[var\(--top\)\]{top:var(--top)}.gps-485854940099511180 .z-1{z-index:1}.gps-485854940099511180 .mx-auto{margin-left:auto;margin-right:auto}.gps-485854940099511180 .mb-0{margin-bottom:0}.gps-485854940099511180 .flex{display:flex}.gps-485854940099511180 .inline-flex{display:inline-flex}.gps-485854940099511180 .grid{display:grid}.gps-485854940099511180 .h-5{height:20px}.gps-485854940099511180 .h-full{height:100%}.gps-485854940099511180 .w-5{width:20px}.gps-485854940099511180 .w-full{width:100%}.gps-485854940099511180 .max-w-full{max-width:100%}@keyframes spin{to{transform:rotate(1turn)}}.gps-485854940099511180 .animate-spin{animation:spin 1s linear infinite}.gps-485854940099511180 .flex-col{flex-direction:column}.gps-485854940099511180 .items-center{align-items:center}.gps-485854940099511180 .\!justify-center{justify-content:center!important}.gps-485854940099511180 .justify-center{justify-content:center}.gps-485854940099511180 .gap-y-0{row-gap:0}.gps-485854940099511180 .self-center{align-self:center}.gps-485854940099511180 .overflow-hidden{overflow:hidden}.gps-485854940099511180 .break-words{overflow-wrap:break-word}.gps-485854940099511180 .rounded-none{border-radius:0}.gps-485854940099511180 .bg-clip-content{background-clip:content-box}.gps-485854940099511180 .no-underline{text-decoration-line:none}.gps-485854940099511180 .opacity-25{opacity:.25}.gps-485854940099511180 .opacity-75{opacity:.75}.gps-485854940099511180 .transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-485854940099511180 .transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-485854940099511180 .transition-transform{transition-duration:.15s;transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-485854940099511180 .duration-200{transition-duration:.2s}.gps-485854940099511180 .duration-300{transition-duration:.3s}.gps-485854940099511180 .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-485854940099511180 .disabled\:btn-disabled:disabled{cursor:default}.gps-485854940099511180 .disabled\:pointer-events-none:disabled{pointer-events:none}.gps-485854940099511180 .disabled\:opacity-30:disabled{opacity:.3}@media (hover:hover) and (pointer:fine){.gps-485854940099511180 .group\/hero:hover .group-hover\/hero\:bg-\[color\:var\(--hvr-bgc\2c _var\(--bgc\)\)\]{background-color:var(--hvr-bgc,var(--bgc))}.gps-485854940099511180 .group\/hero:hover .group-hover\/hero\:opacity-\[var\(--hvr-op\2c _var\(--op\)\)\]{opacity:var(--hvr-op,var(--op))}}.gps-485854940099511180 .group[data-state=loading] .group-data-\[state\=loading\]\:visible{visibility:visible}.gps-485854940099511180 .group[data-state=loading] .group-data-\[state\=loading\]\:invisible{visibility:hidden}@media (max-width:1023px){.gps-485854940099511180 .tablet\:relative{position:relative}.gps-485854940099511180 .tablet\:\!content-stretch{align-content:stretch!important}.gps-485854940099511180 .tablet\:\!justify-center{justify-content:center!important}}@media (max-width:767px){.gps-485854940099511180 .mobile\:relative{position:relative}.gps-485854940099511180 .mobile\:\!content-stretch{align-content:stretch!important}.gps-485854940099511180 .mobile\:\!justify-center{justify-content:center!important}}@media (max-width:1023px){.gps-485854940099511180 .tablet\:\[\&\>\*\]\:\!justify-center>*{justify-content:center!important}}@media (max-width:767px){.gps-485854940099511180 .mobile\:\[\&\>\*\]\:\!justify-center>*{justify-content:center!important}}.gps-485854940099511180 .\[\&_\*\]\:max-w-full *{max-width:100%}.gps-485854940099511180 .\[\&_p\]\:whitespace-pre-line p{white-space:pre-line}
-  </style>
-  
-      
-      
-            <section
-              class="mx-auto max-w-full"
-              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px"
-            >
-              
+<section
+  class="mx-auto max-w-full"
+  style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px"
+>
+  <div
+    id="gAulGu3QRQ"
+    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:none;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--pt:0px;--pb:20px;--pt-mobile:20px;--pb-mobile:20px;--pt-tablet:0px;--pb-tablet:10px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+    class="gAulGu3QRQ mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+  >
     <div
-      id="gAulGu3QRQ"
-        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:none;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--pt:0px;--pb:20px;--pt-mobile:20px;--pb-mobile:20px;--pt-tablet:0px;--pb-tablet:10px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gAulGu3QRQ mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
+      label="Block"
+      tag="Col"
+      type="component"
       style="--jc:start"
       class="gGmNQ9deRR relative flex flex-col"
     >
-      
-    <link rel="preload" href="https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/" as="image" />
-    <link rel="preload" href="https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/" as="image" />
-    <link rel="preload" href="https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/" as="image" />
-    <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-hero-banner.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
-    <gp-hero-banner
-      gp-data='{"background":{"desktop":{"attachment":"scroll","color":"bg-2","image":{"backupFileKey":"484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png","height":824,"src":"https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/","width":3500},"lazyLoad":false,"loop":true,"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"image","video":"https://www.youtube.com/watch?v=ktsFdCND3wM"},"tablet":{"attachment":"scroll","color":"bg-2","image":{"backupFileKey":"484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png","height":824,"src":"https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/","width":3500},"lazyLoad":false,"loop":true,"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"image","video":"https://www.youtube.com/watch?v=ktsFdCND3wM"},"mobile":{"attachment":"scroll","color":"bg-2","image":{"backupFileKey":"484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png","height":824,"src":"https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/","width":3500},"lazyLoad":false,"loop":true,"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"image","video":"https://www.youtube.com/watch?v=ktsFdCND3wM"}},"uid":"gr4V1cWWnl","enableParallax":false,"speedParallax":0.6}'
-      
-      class="gr4V1cWWnl group/hero flex flex-col self-center transition-colors duration-200 ease-in-out w-full"
-      style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:flex;--d-mobile:flex;--d-tablet:flex;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--h:500px;--h-tablet:300px;--h-mobile:300px;--w:100%;--w-tablet:100%;--w-mobile:100%"
-    >
-      <div
-      class="relative flex flex-col items-center overflow-hidden !justify-center tablet:!justify-center mobile:!justify-center"
-        style="--h:500px;--h-tablet:300px;--h-mobile:300px"
-      >
-        <div class="absolute w-full h-full">
-          <div
-            class="overflow-hidden w-full h-full"
-            style="--pos:absolute;--pos-tablet:absolute;--pos-mobile:absolute;clip-path:inset(0 0)">
-            <div
-              aria-label="Background Image"
-              role="banner"
-              class="gp-hero-banner-bg absolute inset-0 left-[var(--left)] top-[var(--top)] transition-transform flex items-center justify-center bg-clip-content"
-              style="--bgc:var(--g-c-bg-2);--bgc-tablet:var(--g-c-bg-2);--bgc-mobile:var(--g-c-bg-2);--bgi:url({{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_url }});--bgi-tablet:url({{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_url }});--bgi-mobile:url({{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_url }});--bgp:50% 50%;--bgp-tablet:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-tablet:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-tablet:no-repeat;--bgr-mobile:no-repeat;--duration:0.5s;--scale:110%;--top:0;--left:0;--w:100%;--h:100%;--pos:absolute;--bga:scroll;--w-tablet:100%;--h-tablet:100%;--pos-tablet:absolute;--bga-tablet:scroll;--w-mobile:100%;--h-mobile:100%;--pos-mobile:absolute;--bga-mobile:scroll"
-            > </div>
-          </div>
-          <div
-          aria-label="Overlay"
-          role="banner"
-          class="absolute inset-0 left-[var(--left)] top-[var(--top)] transition-all duration-300 group-hover/hero:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/hero:opacity-[var(--hvr-op,_var(--op))]"
-          style="--bgc:#121212;--top:0;--left:0;--op:0%"
-        > </div>
-        </div>
-        
-        
-      
-      
-    <div
-      id
-        style="--cg:32px;--pc:center;--pc-tablet:center;--pc-mobile:center;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 1200px);--w-mobile:var(--g-ct-w, 1200px)"
-        class="gp-hero-banner-row z-1 w-full tablet:relative mobile:relative tablet:[&>*>*]:!justify-undefined mobile:[&>*>*]:!justify-undefined tablet:!content-stretch tablet:[&>*]:!justify-center mobile:!content-stretch mobile:[&>*]:!justify-center mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
-    >
-    <div
-      label="Block" tag="Col" type="component"
-      style="--jc:start"
-      class="g6u4OmZVvj relative flex flex-col"
-    >
-      
-  <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-button.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
-  <gp-button gp-data='{"setting":{"btnLink":{"link":"https://longruncoffee.com/collections/subscribe-save","target":"_self"},"disabled":false,"htmlType":"button","iconAlign":"left","iconSvg":"<svg style=\"width: 100%; height: 100%\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\"> <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z\" /></svg>","iconVisible":false,"label":"Build My Subscription"}}' style="">
-  <div
-    
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:none;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--pt:350px;--mb-mobile:27px;--pt-mobile:0px;--mb-tablet:0px;--pt-tablet:220px;--ta:center"
-    class=""
-  >
-    <style>
-    .gd1i6iIA0q.gp-button-base::before {
-      content: "";
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      pointer-events: none;
-      border-style: solid;
-  border-width: 3px 3px 3px 3px;
-  border-color: #DF8619;
-  
-      
-      border-bottom-left-radius: 7px;
-      border-bottom-right-radius: 7px;
-      border-top-left-radius: 7px;
-      border-top-right-radius: 7px;
-      
-    }
+      <link rel="preload" href="https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/" as="image">
+      <link rel="preload" href="https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/" as="image">
+      <link rel="preload" href="https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/" as="image">
+      <script
+        src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-hero-banner.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}"
+        defer="defer"
+      ></script>
+      <gp-hero-banner
+        gp-data='{"background":{"desktop":{"attachment":"scroll","color":"bg-2","image":{"backupFileKey":"484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png","height":824,"src":"https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/","width":3500},"lazyLoad":false,"loop":true,"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"image","video":"https://www.youtube.com/watch?v=ktsFdCND3wM"},"tablet":{"attachment":"scroll","color":"bg-2","image":{"backupFileKey":"484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png","height":824,"src":"https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/","width":3500},"lazyLoad":false,"loop":true,"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"image","video":"https://www.youtube.com/watch?v=ktsFdCND3wM"},"mobile":{"attachment":"scroll","color":"bg-2","image":{"backupFileKey":"484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png","height":824,"src":"https://ucarecdn.com/17f5ee6b-29ba-41c5-8e74-e78827d48474/","width":3500},"lazyLoad":false,"loop":true,"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"image","video":"https://www.youtube.com/watch?v=ktsFdCND3wM"}},"uid":"gr4V1cWWnl","enableParallax":false,"speedParallax":0.6}'
 
-    .gd1i6iIA0q:hover::before {
-      
-      
-    }
-  </style>
-    <a
-      href="https://longruncoffee.com/collections/subscribe-save" target="_self" data-id="gd1i6iIA0q" aria-label="Build My Subscription"
-      data-state="idle"
-      class="gd1i6iIA0q gp-button-base rounded-none max-w-full relative group inline-flex items-center justify-center no-underline transition-colors duration-300 disabled:btn-disabled disabled:opacity-30 disabled:pointer-events-none"
-      style="--hvr-bg:#CB7A22;--bg:#FEEAD1;--bblr:7px;--bbrr:7px;--btlr:7px;--btrr:7px;--shadow:none;--hvr-c:#FFFFFF;--c:#DF8619;--w:500px;--w-tablet:400px;--w-mobile:70%;--h:50px;--h-tablet:40px;--h-mobile:40px;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--tt:default;--ff:var(--g-font-Montserrat, 'Montserrat');--lh:180%;--size:18px;--size-tablet:17px;--size-mobile:15px;--weight:bold"
-    >
-        <svg
-          class="invisible absolute h-5 w-5 animate-spin group-data-[state=loading]:visible"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
+        class="gr4V1cWWnl group/hero flex flex-col self-center transition-colors duration-200 ease-in-out w-full"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:flex;--d-mobile:flex;--d-tablet:flex;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--h:500px;--h-tablet:300px;--h-mobile:300px;--w:100%;--w-tablet:100%;--w-mobile:100%"
+      >
+        <div
+          class="relative flex flex-col items-center overflow-hidden !justify-center tablet:!justify-center mobile:!justify-center"
+          style="--h:500px;--h-tablet:300px;--h-mobile:300px"
         >
-          <circle
-            class="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            stroke-width="4"
-          ></circle>
-          <path
-            class="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          ></path>
-        </svg>
+          <div class="absolute w-full h-full">
+            <div
+              class="overflow-hidden w-full h-full"
+              style="--pos:absolute;--pos-tablet:absolute;--pos-mobile:absolute;clip-path:inset(0 0)"
+            >
+              <div
+                aria-label="Background Image"
+                role="banner"
+                class="gp-hero-banner-bg absolute inset-0 left-[var(--left)] top-[var(--top)] transition-transform flex items-center justify-center bg-clip-content"
+                style="--bgc:var(--g-c-bg-2);--bgc-tablet:var(--g-c-bg-2);--bgc-mobile:var(--g-c-bg-2);--bgi:url(https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552);--bgi-tablet:url(https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552);--bgi-mobile:url(https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552);--bgp:50% 50%;--bgp-tablet:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-tablet:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-tablet:no-repeat;--bgr-mobile:no-repeat;--duration:0.5s;--scale:110%;--top:0;--left:0;--w:100%;--h:100%;--pos:absolute;--bga:scroll;--w-tablet:100%;--h-tablet:100%;--pos-tablet:absolute;--bga-tablet:scroll;--w-mobile:100%;--h-mobile:100%;--pos-mobile:absolute;--bga-mobile:scroll"
+              ></div>
+            </div>
+            <div
+              aria-label="Overlay"
+              role="banner"
+              class="absolute inset-0 left-[var(--left)] top-[var(--top)] transition-all duration-300 group-hover/hero:bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/hero:opacity-[var(--hvr-op,_var(--op))]"
+              style="--bgc:#121212;--top:0;--left:0;--op:0%"
+            ></div>
+          </div>
 
-    
-      <span
-        class="break-words group-data-[state=loading]:invisible [&_p]:whitespace-pre-line z-1 h-full flex items-center overflow-hidden "
-        style="--tt:default"
-      >
-        Build My Subscription
-      </span>
-    </a>
+          <div
+            id
+            style="--cg:32px;--pc:center;--pc-tablet:center;--pc-mobile:center;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 1200px);--w-mobile:var(--g-ct-w, 1200px)"
+            class="gp-hero-banner-row z-1 w-full tablet:relative mobile:relative tablet:[&>*>*]:!justify-undefined mobile:[&>*>*]:!justify-undefined tablet:!content-stretch tablet:[&>*]:!justify-center mobile:!content-stretch mobile:[&>*]:!justify-center mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+          >
+            <div
+              label="Block"
+              tag="Col"
+              type="component"
+              style="--jc:start"
+              class="g6u4OmZVvj relative flex flex-col"
+            >
+              <script
+                src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-button.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}"
+                defer="defer"
+              ></script>
+              <gp-button
+                gp-data='{"setting":{"btnLink":{"link":"https://longruncoffee.com/collections/subscribe-save","target":"_self"},"disabled":false,"htmlType":"button","iconAlign":"left","iconSvg":"<svg style=\"width: 100%; height: 100%\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\"> <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M115.584 494.176c-12.352 6.336 -26.368 -4.768 -23.872 -18.944l26.56 -151.36L5.536 216.48c-10.528 -10.048 -5.056 -28.416 9.056 -30.4l156.736 -22.272L241.216 25.344c6.304 -12.48 23.36 -12.48 29.664 0l69.888 138.464 156.736 22.272c14.112 1.984 19.584 20.352 9.024 30.4l-112.704 107.392 26.56 151.36c2.496 14.176 -11.52 25.28 -23.872 18.944L256 421.984l-140.448 72.192z\" /></svg>","iconVisible":false,"label":"Build My Subscription"}}'
+                style=""
+              >
+                <div
+                  style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:none;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--pt:350px;--mb-mobile:27px;--pt-mobile:0px;--mb-tablet:0px;--pt-tablet:220px;--ta:center"
+                  class=""
+                >
+                  <style>
+                    .gd1i6iIA0q.gp-button-base::before {
+                      content: '';
+                      height: 100%;
+                      width: 100%;
+                      position: absolute;
+                      pointer-events: none;
+                      border-style: solid;
+                      border-width: 3px 3px 3px 3px;
+                      border-color: #df8619;
+
+                      border-bottom-left-radius: 7px;
+                      border-bottom-right-radius: 7px;
+                      border-top-left-radius: 7px;
+                      border-top-right-radius: 7px;
+                    }
+
+                    .gd1i6iIA0q:hover::before {
+                    }
+                  </style>
+                  <a
+                    href="https://longruncoffee.com/collections/subscribe-save"
+                    target="_self"
+                    data-id="gd1i6iIA0q"
+                    aria-label="Build My Subscription"
+                    data-state="idle"
+                    class="gd1i6iIA0q gp-button-base rounded-none max-w-full relative group inline-flex items-center justify-center no-underline transition-colors duration-300 disabled:btn-disabled disabled:opacity-30 disabled:pointer-events-none"
+                    style="--hvr-bg:#CB7A22;--bg:#FEEAD1;--bblr:7px;--bbrr:7px;--btlr:7px;--btrr:7px;--shadow:none;--hvr-c:#FFFFFF;--c:#DF8619;--w:500px;--w-tablet:400px;--w-mobile:70%;--h:50px;--h-tablet:40px;--h-mobile:40px;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-tablet:24px;--pr-tablet:24px;--pt-tablet:8px;--pb-tablet:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--tt:default;--ff:var(--g-font-Montserrat, 'Montserrat');--lh:180%;--size:18px;--size-tablet:17px;--size-mobile:15px;--weight:bold"
+                  >
+                    <svg
+                      class="invisible absolute h-5 w-5 animate-spin group-data-[state=loading]:visible"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        class="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                      ></circle>
+                      <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+
+                    <span
+                      class="break-words group-data-[state=loading]:invisible [&_p]:whitespace-pre-line z-1 h-full flex items-center overflow-hidden "
+                      style="--tt:default"
+                    >
+                      Build My Subscription
+                    </span>
+                  </a>
+                </div>
+              </gp-button>
+            </div>
+          </div>
+
+          <picture style="border-radius: inherit" class="w-full">
+            <link
+              rel="preload"
+              href="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552"
+              as="image"
+            >
+            <link
+              rel="preload"
+              href="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552"
+              as="image"
+            >
+            <link
+              rel="preload"
+              href="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552"
+              as="image"
+            >
+            <source
+              media="(max-width: 767px)"
+              data-srcSet="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+            >
+            <source
+              media="(max-width: 1023px)"
+              data-srcSet="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+            >
+            <img
+              class="gp_lazyload"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
+              data-src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png?v=1711667552"
+              alt=""
+              style="--aspect:3500/824;--aspect-tablet:3500/824;--aspect-mobile:3500/824;--d:none;--d-tablet:none;--d-mobile:none;--h:500px;--h-tablet:300px;--h-mobile:300px;--w:100%;--w-tablet:100%;--w-mobile:100%;--op:0;--z:-1"
+            >
+          </picture>
+        </div>
+      </gp-hero-banner>
+    </div>
   </div>
-  </gp-button>
-  
-    </div>
-    </div>
-  
-    
-        <picture style="border-radius: inherit" class="w-full">
-    <link rel="preload" href="{{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_img_url: 'master' }}" as="image" />
-    <link rel="preload" href="{{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_img_url: 'master' }}" as="image" />
-    <link rel="preload" href="{{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_img_url: 'master' }}" as="image" />
-    <source media="(max-width: 767px)" data-srcSet="{{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_img_url: 'master' }}" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" />
-    <source media="(max-width: 1023px)" data-srcSet="{{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_img_url: 'master' }}" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" />
-    <img
-      
-      class="gp_lazyload"
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII="
-      data-src="{{ "484137708004836523-68177149-e11e-4ba8-903e-5a263c518ab8.png" | asset_img_url: 'master' }}"
-      alt=""
-      style="--aspect:3500/824;--aspect-tablet:3500/824;--aspect-mobile:3500/824;--d:none;--d-tablet:none;--d-mobile:none;--h:500px;--h-tablet:300px;--h-mobile:300px;--w:100%;--w-tablet:100%;--w-mobile:100%;--op:0;--z:-1"
-    />
-  </picture>
-      </div>
-    </gp-hero-banner>
-  
-    </div>
-    </div>
-  
-            </section>
-          
-    
+</section>
+
 {% schema %}
-  {
-    
-    "name": "Section 1",
-    "tag": "section",
-    "class": "gps-485854940099511180 gps gpsi",
-    "settings": [
-      {
-        "type": "paragraph",
-        "content": "Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=485854940049179532&sectionId=485854940099511180)"
-      }
-    ],
-    "blocks": [{"type": "@app"}]
-  }
+{
+  "name": "Section 1",
+  "tag": "section",
+  "class": "gps-485854940099511180 gps gpsi",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=485854940049179532&sectionId=485854940099511180)"
+    }
+  ],
+  "blocks": [{ "type": "@app" }]
+}
 {% endschema %}
