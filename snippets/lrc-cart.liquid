@@ -559,13 +559,10 @@
 
                     if (await klaviyo.isIdentified()) {
                         // report to klayvio
-                        klaviyo.track({
-                            event: 'add_subscription_item_to_cart',
-                            properties: {
-                                'product_id' : product.id,
-                                'variant_id': variantId
-                            }
-                        })
+                        klaviyo.push(['track', 'add_subscription_item_to_cart', {
+                            'product_id' : product.id,
+                            'variant_id': variantId
+                        }]);
                     }
 
                     // if already in subscriptions, add quantity - otherwise add new item

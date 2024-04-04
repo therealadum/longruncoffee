@@ -190,6 +190,11 @@
     const [activeImageIndex, setActiveImageIndex] = React.useState(0);
     const [hoveredImageIndex, setHoveredImageIndex] = React.useState(null);
 
+    const variantQuantityMap = {};
+    {% for variant in product.variants %}
+      variantQuantityMap[{{ variant.id }}] = {{ variant.inventory_quantity }};
+    {% endfor %}
+
     React.useEffect(() => {
       let mounted = true
       const func = async () => {
@@ -1245,17 +1250,17 @@
                   }
                 </div>
               </button>
-              <button onClick={() => setProductForm({
+              <button disabled={variantQuantityMap[variantID] == 0} onClick={() => setProductForm({
                 ...productForm,
                 isSubscription: false
               })} className="flex items-center space-x-2">
                 <div className="w-5 h-5 lg:w-6 lg:h-6 rounded-full border border-cyan-700 flex items-center justify-center">
                   {!productForm.isSubscription ? <div className="h-2 w-2 lg:w-3 lg:h-3 rounded-full bg-cyan-400" /> : null}
                 </div>
-                <h4 className={`flex-1 text-left font-accent text-xl lg:text-2xl tracking-tight ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>One-Time Purchase</h4>
+                <h4 className={`text-left flex-1 font-accent text-xl lg:text-2xl tracking-tight ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"} ${variantQuantityMap[variantID] == 0 ? 'line-through' : ''}`}>One-Time Purchase</h4>
                 <div className="text-sm flex space-x-1 font-base">
                 {
-                  variant && variant.compare_at_price && variant.compare_at_price !== variant.price && product.available ? <React.Fragment><span className={`line-through ${!productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>${(variant.compare_at_price * productForm.quantity / 100).toFixed(2)}</span><span className={`font-medium ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>${(variant.price * productForm.quantity / 100).toFixed(2)}</span></React.Fragment> : <span className={`font-medium text-sm ${productForm.isSubscription ? "text-neutral-300" : "text-neutral-500"}`}>${(variantCost * productForm.quantity / 100).toFixed(2)}</span>
+                  variantQuantityMap[variantID] > 0 ? (variant && variant.compare_at_price && variant.compare_at_price !== variant.price && !(product.available || variantQuantityMap[variantID] > 0) ? <React.Fragment><span className={`line-through ${!productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>${(variant.compare_at_price * productForm.quantity / 100).toFixed(2)}</span><span className={`font-medium ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>${(variant.price * productForm.quantity / 100).toFixed(2)}</span></React.Fragment> : <span className={`font-medium text-sm ${productForm.isSubscription ? "text-neutral-300" : "text-neutral-500"}`}>${(variantCost * productForm.quantity / 100).toFixed(2)}</span>) : <span className="text-neutral-300">sold out</span>
                 }
                 </div>
               </button>
@@ -1327,8 +1332,8 @@
                       quantity: productForm.quantity
                     } }))
                   }}
-                  disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && !product.available) || isLoading}
-                  className={`rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && !product.available ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
+                  disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0)) || isLoading}
+                  className={`rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
                 >
                   {isLoading ? <svg className="animate-spin h-4 w-4 text-tan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />

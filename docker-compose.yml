@@ -1,34 +1,26 @@
 version: "3.8"
 services:
   test-runner:
-    container_name: test-runner
     image: test-runner:latest
-    command: yarn test
     networks:
-      - default
-      - proxy
+      - shared
+    depends_on:
+      - shopify
 
   shopify:
-    image: hieuhidro/shopify:themekit-1.3.1
+    image: shopify:latest
     volumes:
       - ./:/shopify
-      - ./config:/root/.config/shopify/config
-      - ./.cache:/root/.cache
     environment:
-      - THEMEKIT_PASSWORD=[Your theme password (https://apps.shopify.com/theme-access)]
-      - THEMEKIT_THEME_ID=[Your theme ID]
-      - THEMEKIT_STORE=[Your Store URL]
-      - SHOPIFY_CLI_DEVICE_AUTH=[1|0]
-      - "THEMEKIT_IGNORE_FILES=*.gif:*.jpg:config/settings_data.json"
+      - SHOPIFY_CLI_THEME_TOKEN=shptka_ecb40f5d0a2702f1ce8d5d6b0d21fe77
+      - SHOPIFY_FLAG_STORE=longruncoffee.myshopify.com
+      - SHOPIFY_FLAG_HOST=0.0.0.0
+      - SHOPIFY_CLI_TTY=0
     ports:
-      - "3456:3456"
-      - "9292:9292"
-      - "8081:8081"
-    # For nginx-proxy
+      - 9292:9292
     networks:
-      - default
-      - proxy
+      - shared
 
 networks:
-  proxy:
+  shared:
     external: true

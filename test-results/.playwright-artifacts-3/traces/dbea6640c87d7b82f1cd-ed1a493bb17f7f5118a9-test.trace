@@ -1,0 +1,31 @@
+
+{"type":"before","callId":"hook@1","wallTime":1712018587237,"startTime":111.076,"class":"Test","method":"step","apiName":"Before Hooks","params":{},"stack":[]}
+{"type":"before","callId":"fixture@2","parentId":"hook@1","wallTime":1712018587242,"startTime":115.428,"class":"Test","method":"step","apiName":"fixture: browser","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@3","parentId":"fixture@2","wallTime":1712018587243,"startTime":117.088,"class":"Test","method":"step","apiName":"browserType.launch","params":{"handleSIGINT":"false","headless":"true","tracesDir":"/Users/ashurson/code/longruncoffee/test-results/.playwright-artifacts-3/traces","ignoreDefaultArgs":"undefined","ignoreAllDefaultArgs":"false","env":"undefined"},"stack":[]}
+{"type":"after","callId":"pw:api@3","endTime":339.949,"attachments":[]}
+{"type":"after","callId":"fixture@2","endTime":343.952,"attachments":[]}
+{"type":"before","callId":"fixture@4","parentId":"hook@1","wallTime":1712018587471,"startTime":344.666,"class":"Test","method":"step","apiName":"fixture: context","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@5","parentId":"fixture@4","wallTime":1712018587475,"startTime":348.705,"class":"Test","method":"step","apiName":"browser.newContext","params":{"acceptDownloads":"accept","bypassCSP":"false","colorScheme":"light","hasTouch":"false","ignoreHTTPSErrors":"false","isMobile":"false","javaScriptEnabled":"true","locale":"en-US","offline":"false","viewport":"Object","serviceWorkers":"allow","noDefaultViewport":"false","extraHTTPHeaders":"undefined","storageState":"undefined","recordHar":"undefined","reducedMotion":"undefined","forcedColors":"undefined"},"stack":[]}
+{"type":"after","callId":"pw:api@5","endTime":356.135,"attachments":[]}
+{"type":"after","callId":"fixture@4","endTime":361.016,"attachments":[]}
+{"type":"before","callId":"fixture@6","parentId":"hook@1","wallTime":1712018587491,"startTime":364.056,"class":"Test","method":"step","apiName":"fixture: page","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@7","parentId":"fixture@6","wallTime":1712018587495,"startTime":368.564,"class":"Test","method":"step","apiName":"browserContext.newPage","params":{},"stack":[]}
+{"type":"after","callId":"pw:api@7","endTime":417.913,"attachments":[]}
+{"type":"after","callId":"fixture@6","endTime":418.097,"attachments":[]}
+{"type":"after","callId":"hook@1","endTime":418.165,"attachments":[]}
+{"type":"before","callId":"pw:api@8","wallTime":1712018587545,"startTime":418.934,"class":"Test","method":"step","apiName":"page.goto","params":{"url":"http://127.0.0.1:9292","waitUntil":"load"},"stack":[{"file":"/Users/ashurson/code/longruncoffee/tests/checkout.spec.ts","line":7,"column":14}]}
+{"type":"after","callId":"pw:api@8","endTime":3670.517,"attachments":[]}
+{"type":"before","callId":"pw:api@9","wallTime":1712018590799,"startTime":3673.182,"class":"Test","method":"step","apiName":"locator.click","params":{"selector":"internal:testid=[data-testid=\"home-hero-shop-button\"s]","strict":"true"},"stack":[{"file":"/Users/ashurson/code/longruncoffee/tests/checkout.spec.ts","line":8,"column":51}]}
+{"type":"error","message":"\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m","stack":[]}
+{"type":"before","callId":"hook@10","wallTime":1712018617466,"startTime":30339.803,"class":"Test","method":"step","apiName":"After Hooks","params":{},"stack":[]}
+{"type":"before","callId":"fixture@11","parentId":"hook@10","wallTime":1712018617468,"startTime":30341.195,"class":"Test","method":"step","apiName":"fixture: page","params":{},"stack":[]}
+{"type":"after","callId":"fixture@11","endTime":30341.595,"attachments":[]}
+{"type":"before","callId":"fixture@12","parentId":"hook@10","wallTime":1712018617469,"startTime":30342.165,"class":"Test","method":"step","apiName":"fixture: context","params":{},"stack":[]}
+{"type":"after","callId":"fixture@12","endTime":30342.279,"attachments":[]}
+{"type":"after","callId":"pw:api@9","endTime":30915.484,"attachments":[],"error":{"name":"","message":"Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByTestId('home-hero-shop-button')\u001b[22m\n","stack":"Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByTestId('home-hero-shop-button')\u001b[22m\n\n    at /Users/ashurson/code/longruncoffee/tests/checkout.spec.ts:8:51"}}
+{"type":"error","message":"Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for getByTestId('home-hero-shop-button')\u001b[22m\n","stack":[{"file":"/Users/ashurson/code/longruncoffee/tests/checkout.spec.ts","line":8,"column":51}]}
+{"type":"before","callId":"fixture@13","parentId":"hook@10","wallTime":1712018618046,"startTime":30919.591,"class":"Test","method":"step","apiName":"fixture: browser","params":{},"stack":[]}
+{"type":"after","callId":"fixture@13","endTime":30956.229,"attachments":[]}
+{"type":"after","callId":"hook@10","endTime":30956.498,"attachments":[]}
+{"type":"before","callId":"attach@14","wallTime":1712018618695,"startTime":31568.553,"class":"Test","method":"step","apiName":"attach \"trace\"","params":{},"stack":[]}
+{"type":"after","callId":"attach@14","endTime":31568.677,"attachments":[]}

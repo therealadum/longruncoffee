@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx playwright test",
     "prepare": "husky install",
-    "format": "npx tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch"
+    "format": "npx tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch",
+    "dev": "earthly +build && docker-compose up -d"
   },
   "license": "UNLICENSED",
   "devDependencies": {

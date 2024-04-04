@@ -1,0 +1,1 @@
+{"metadata":{"event_sent_at_ms":1712018589577},"events":[{"schema_id":"trekkie_metrics/2.0","payload":{"metric_name":"serverSideCookieNotSet__shopify_y"},"metadata":{"event_created_at_ms":1712018589577}}]}
