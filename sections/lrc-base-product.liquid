@@ -302,6 +302,12 @@
 
     const isMobile = useIsMobile();
 
+    if (product) {
+      console.log(product.available, variantQuantityMap[variantID]);
+    }
+    if (variantQuantityMap && variantID) {
+      console.log(variantQuantityMap[variantID]);
+    }
     return product ? <div className="relative bg-cyan-50 bg-opacity-20">
       <div className="flex flex-col p-4 lg:py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
@@ -1232,7 +1238,7 @@
               }
             </div>
             <div className="flex flex-col space-y-3 pt-2 lg:pt-0">
-              <button disabled={!isRechargeAvailableOnProduct(product)} onClick={() => {
+              <button data-testid="lrc-select-subscription-checkout" disabled={!isRechargeAvailableOnProduct(product)} onClick={() => {
                 if (isRechargeAvailableOnProduct(product)) {
                   setProductForm({
                     ...productForm,
@@ -1250,10 +1256,10 @@
                   }
                 </div>
               </button>
-              <button disabled={variantQuantityMap[variantID] == 0} onClick={() => setProductForm({
+              <button data-testid="lrc-select-one-time-checkout" disabled={!product.available || !(variantQuantityMap[variantID] > 0)} onClick={() => setProductForm({
                 ...productForm,
                 isSubscription: false
-              })} className="flex items-center space-x-2">
+              })} className={`flex items-center space-x-2 ${(!product.available || !(variantQuantityMap[variantID] > 0)) ? 'cursor-not-allowed' : ''}`}>
                 <div className="w-5 h-5 lg:w-6 lg:h-6 rounded-full border border-cyan-700 flex items-center justify-center">
                   {!productForm.isSubscription ? <div className="h-2 w-2 lg:w-3 lg:h-3 rounded-full bg-cyan-400" /> : null}
                 </div>
@@ -1281,7 +1287,7 @@
                       <span className="text-cyan-800 text-base">{p}</span>
                     </div>)
                   }
-                  </div>) : <div className="grid grid-cols-3 gap-x-2">
+                  </div>) : <div data-testid="lrc-one-time-purchase-quantity-selector" className="grid grid-cols-3 gap-x-2">
                     <button
                       onClick={() => setProductForm({
                         ...productForm,
@@ -1323,6 +1329,7 @@
             </div>
             <div className="lg:pt-1">
               <button
+                  data-testid="lrc-add-to-cart-button"
                   onClick={() =>  {
                     setIsLoading(true);
                     document.dispatchEvent(new CustomEvent('buy_button', { detail: {

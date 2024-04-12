@@ -12,4 +12,5 @@ declare global {
 
 export default {
   HOME_URL: config.HOME_URL ?? "",
+  OUT_OF_STOCK_PRODUCT_PAGE: config.OUT_OF_STOCK_PRODUCT_PAGE ?? "",
 };

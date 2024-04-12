@@ -1,1 +1,2 @@
-HOME_URL="http://127.0.0.1:9292"
+HOME_URL="http://127.0.0.1:9292?preview_theme_id=166580551993"
+OUT_OF_STOCK_PRODUCT_PAGE="http://127.0.0.1:9292/products/out-n-back-medium-dark-blend?preview_theme_id=166580551993"

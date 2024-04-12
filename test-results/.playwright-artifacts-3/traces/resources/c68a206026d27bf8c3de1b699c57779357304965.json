@@ -1,1 +1,0 @@
-{"query":"query GetUserProfile {\n  userProfile {\n    commonSettings {\n      content {\n        automizely_brand {\n          hidden\n        }\n      }\n    }\n  }\n}"}
