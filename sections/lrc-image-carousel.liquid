@@ -4,39 +4,21 @@
   type="text/babel"
 >
   function LRCImageCarousel() {
-    const benefits = [
-      {
-        title: 'Train Harder, with Ease',
-        img: 'https://cdn.shopify.com/s/files/1/0761/6924/9081/files/benefit-shot-1.jpg?v=1711743849',
-        description:
-          'Regular electrolyte supplements are abrasive on your stomach, preventing comfortable training. Our patent protected formula is pH basic, and stomach friendly.',
-      },
-      {
-        title: 'Feel Light on Your Feet',
-        img: 'https://cdn.shopify.com/s/files/1/0761/6924/9081/files/benefit-shot-2.jpg?v=1711743849',
-        description:
-          'Our electrolyte & caffeine formula allows for highly bioavailable hydration & energy. This naturally leads to a faster runner’s high, and more enjoyable run.',
-      },
-      {
-        title: 'Enjoy Reduced Fatigue',
-        img: 'https://cdn.shopify.com/s/files/1/0761/6924/9081/files/benefit-shot-3.jpg?v=1711743849',
-        description:
-          'Long Run Coffee blocks adenosine uptake in the brain, preventing tiredness & fatigue.  Plus the added sodium bicarbonate slows lactic acid buildup in muscles.',
-      },
-    ];
-    const [activeBenefit, setActiveBenefit] = React.useState(0);
-    const focusedBenefit = benefits[activeBenefit];
+    const images = [];
+    const [activeImage, setActiveImage] = React.useState(0);
 
     {% for block in section.blocks %}
-        console.log({{ block | json }})
+        images.push(block.settings.image)
     {%  endfor %}
+
+    console.log(images)
 
     return (
       <div className="lg:px-16 py-12 lg:py-32 z-10 relative lg:transform lg:-translate-y-20 max-w-7xl mx-auto">
         <div className="hidden lg:block">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto flex space-x-8 items-start">
-              {benefits.map((benefit, i) => (
+              {% comment %} {benefits.map((benefit, i) => (
                 <article key={i} className="flex flex-col items-start justify-between">
                   <div className="relative w-full">
                     <img
@@ -55,14 +37,14 @@
                     </div>
                   </div>
                 </article>
-              ))}
+              ))} {% endcomment %}
             </div>
           </div>
         </div>
         <div className="flex flex-col lg:hidden">
           <h2 className="font-accent text-cyan-700 text-3xl mb-8 pl-8">Benefits</h2>
           <div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-14 scrollbar-hide">
-            {benefits.map((b) => (
+            {% comment %} {benefits.map((b) => (
               <div key={b.title} class="snap-center shrink-0 first:pl-8 last:pr-8">
                 <img
                   class="shrink-0 w-[calc(100vw-72px)] h-[calc(100vw-72px)] rounded-lg shadow-lg bg-white object-fill"
@@ -73,7 +55,7 @@
                   {b.description}
                 </p>
               </div>
-            ))}
+            ))} {% endcomment %}
           </div>
         </div>
       </div>
@@ -88,6 +70,19 @@
   "name": "lrc-image-carousel",
   "tag": "section",
   "class": "section",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "type": "text",

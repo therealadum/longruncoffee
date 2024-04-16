@@ -3,8 +3,8 @@
     "lrc-hero-image": {
       "type": "lrc-hero-image",
       "settings": {
-        "image": "shopify://shop_images/Banner_18.png",
-        "title": "Electrolyte infused coffee for athletes"
+        "title": "Electrolyte infused coffee for athletes",
+        "image": "shopify:\/\/shop_images\/Banner_18.png"
       }
     },
     "lrc-klaviyo-form": {
@@ -14,8 +14,40 @@
       }
     },
     "lrc-image-carousel": {
-      "type": "lrc-image-carousel"
+      "type": "lrc-image-carousel",
+      "blocks": {
+        "image_P9tBmM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lrc-packages.png"
+          }
+        },
+        "image_m4MAQz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lrc-packages.png"
+          }
+        },
+        "image_8gydnR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lrc-packages.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_P9tBmM",
+        "image_m4MAQz",
+        "image_8gydnR"
+      ],
+      "settings": {
+        "carousel_title": ""
+      }
     }
   },
-  "order": ["lrc-hero-image", "lrc-klaviyo-form", "lrc-image-carousel"]
+  "order": [
+    "lrc-hero-image",
+    "lrc-klaviyo-form",
+    "lrc-image-carousel"
+  ]
 }
