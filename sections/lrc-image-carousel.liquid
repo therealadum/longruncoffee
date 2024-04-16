@@ -8,7 +8,7 @@
     const [activeImage, setActiveImage] = React.useState(0);
 
     {% for block in section.blocks %}
-        images.push({{ block.settings.image }})
+        images.push({{ block.settings.image | json }})
     {%  endfor %}
 
     console.log(images)
