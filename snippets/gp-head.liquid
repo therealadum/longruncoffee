@@ -1,4 +1,7 @@
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://d2ls1pfffhvy22.cloudfront.net">
     {%-liquid
       assign gpTemplateSuffix = template.suffix
       assign arrSplitSuffix = gpTemplateSuffix | split: "-"
@@ -15,11 +18,11 @@
       if gpShopMeta and gpShopMeta['index-default'] and request.page_type == 'index'
         assign isV7GpTemplate = true
       endif
-       if gpShopMeta and gpShopMeta['collection-default'] and request.page_type == 'collection'
+      if gpShopMeta and gpShopMeta['collection-default'] and request.page_type == 'collection'
         assign isV7GpTemplate = true
       endif
       if isPreview
-       assign isV7GpTemplate = true
+        assign isV7GpTemplate = true
       endif
     %}
 
@@ -35,10 +38,9 @@
     %}
 
     {% if isV7GpNotThemeSection or isNotV7GpButThemeSection %}
-      
-        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-lazyload.v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" async></script>
-        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-global.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer></script>
-        
+      {{ 'gp-global.css' | asset_url | preload_tag: as: 'style' }}
+      {{ 'gp-style.css' | asset_url | preload_tag: as: 'style' }}
+
       {{ 'gp-global.css' | asset_url | stylesheet_tag }}
       {{ 'gp-style.css' | asset_url | stylesheet_tag }}
     {% endif %}
@@ -81,5 +83,12 @@
       {% assign isGpTemplate = true %}
       {% render 'gp-rich-snippets', GEMPAGES: GEMPAGES, isGpTemplate: isGpTemplate %}
       {% render 'gp-header-custom-code', GEMPAGES: GEMPAGES, isGpTemplate: isGpTemplate %}
+    {% endif %}
+
+    {% if isV7GpNotThemeSection or isNotV7GpButThemeSection %}
+      
+        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-lazyload.v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer></script>
+        <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-global.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer></script>
+        
     {% endif %}
   
