@@ -6,7 +6,16 @@
         "image": "shopify://shop_images/Banner_18.png",
         "title": "Electrolyte infused coffee for athletes"
       }
+    },
+    "lrc-klaviyo-form": {
+      "type": "lrc-klaviyo-form",
+      "settings": {
+        "form_id": "klaviyo-form-U3VZ9D"
+      }
+    },
+    "lrc-image-carousel": {
+      "type": "lrc-image-carousel"
     }
   },
-  "order": ["lrc-hero-image"]
+  "order": ["lrc-hero-image", "lrc-klaviyo-form", "lrc-image-carousel"]
 }

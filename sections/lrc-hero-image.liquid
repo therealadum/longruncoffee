@@ -1,5 +1,18 @@
-<div>{{ section.settings.title }}</div>
-<img src="{{ section.settings.image | image_url: width: 500}}" width="500" height="500">
+<div class="w-full bg-white flex justify-center">
+  <div class="w-full max-w-3xl relative">
+    <div class="absolute inset-0 flex items-center justify-center p-4 pb-48">
+      <p class="text-center text-neutral-700 text-2xl font-accent leading-[1.6rem] lg:text-4xl lg:leading-[2.25rem]">
+        {{ section.settings.title }}
+      </p>
+    </div>
+    <img
+      src="{{ section.settings.image | image_url: width: 500}}"
+      width="500"
+      height="500"
+      class="w-full aspect-[4/3] object-cover"
+    >
+  </div>
+</div>
 {% schema %}
 {
   "name": "lrc-hero-image",
