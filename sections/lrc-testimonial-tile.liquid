@@ -1,0 +1,83 @@
+<div id="lrc-testimonial-tile"></div>
+
+<script
+  type="text/babel"
+>
+  function LRCTestimonialTile() {
+    const images = [];
+
+    {% for block in section.blocks %}
+        {% if block.type == "image" %}
+          images.push({{ block.settings.image | json }})
+        {% endif %}
+    {%  endfor %}
+
+    const containerStyle = {
+      paddingTop: "{{ section.settings.padding-top }}"
+    }
+
+    return (
+      <div className="flex flex-col bg-gradient-to-r from-cyan-050 to-cyan-200 p-12" style={containerStyle}>
+        <h2 className="font-accent text-2xl text-center text-neutral-900">{{ section.settings.title }}</h2>
+
+        {% for block in section.blocks %}
+          {% if block.type == "@app" %}
+            {% render block %}
+          {% endif %}
+        {%  endfor %}
+
+      </div>
+    );
+  }
+  ReactDOM.render(<LRCTestimonialTile />, document.getElementById('lrc-testimonial-tile'));
+</script>
+
+{% schema %}
+{
+  "name": "lrc-testimonial-tile",
+  "tag": "section",
+  "class": "section",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Trusted by Runners"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Scroll To Text",
+      "default": "Start for $3"
+    },
+    {
+      "type": "text",
+      "id": "cta_scroll_to_id",
+      "label": "Scroll To ID",
+      "default": "lrc-klaviyo-form"
+    },
+    {
+      "type": "text",
+      "id": "padding-top",
+      "label": "Top Padding",
+      "default": "8rem"
+    }
+  ]
+}
+{% endschema %}
