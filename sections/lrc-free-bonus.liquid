@@ -1,0 +1,120 @@
+<div id="lrc-free-bonus"></div>
+
+<script
+  type="text/babel"
+>
+  const formatNumber = (num) => {
+    return num < 10 ? `0${num}` : `${num}`;
+  };
+
+  const DAYS_IN_MS = 1000 * 60 * 60 * 24;
+  const HOURS_IN_MS = 1000 * 60 * 60;
+  const MIN_IN_MS = 1000 * 60;
+  const SEC_IN_MS = 1000;
+
+  const getTimeDiff = (diffInMSec) => {
+    let diff = diffInMSec;
+    const days = Math.floor(diff / DAYS_IN_MS); // Give the remaining days
+    diff -= days * DAYS_IN_MS; // Subtract passed days
+    const hours = Math.floor(diff / HOURS_IN_MS); // Give remaining hours
+    diff -= hours * HOURS_IN_MS; // Subtract hours
+    const minutes = Math.floor(diff / MIN_IN_MS); // Give remaining minutes
+    diff -= minutes * MIN_IN_MS; // Subtract minutes
+    const seconds = Math.floor(diff / SEC_IN_MS); // Give remaining seconds
+    return {
+      days: formatNumber(days), // Format everything into the return type
+      hours: formatNumber(hours),
+      minutes: formatNumber(minutes),
+      seconds: formatNumber(seconds),
+    };
+  };
+
+  const useTimer = (targetTime) => {
+    const [timeLeft, setTimeLeft] = React.useState(targetTime - Date.now());
+
+    React.useEffect(() => {
+      const id = setTimeout(() => {
+        // We can set conditions here like timeLeft > 0
+        setTimeLeft((prev) => prev - 1000);
+      }, 1000);
+
+      return () => {
+        clearTimeout(id);
+      };
+    });
+
+    return getTimeDiff(timeLeft);
+  };
+
+  function LRCFreeBonus() {
+    const today = new Date();
+    today.setDate(today.getDate() + 1);
+    const { days, hours, minutes, seconds } = useTimer(today);
+    const products = [
+      {
+        name: 'Free Flavor Sample',
+        description: 'Included banana bread flavor sample. Ships today.',
+        imageSrc: 'https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Pot_Packs.png?v=1714356109',
+        imageAlt: 'Banana flavor sample package',
+      },
+      {
+        name: 'Free LRC x BOCO Run Hat',
+        description: 'Complimentary run hat included with your second order.',
+        imageSrc: 'https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Regular_Hat_2.png?v=1714356108',
+        imageAlt: 'BOCO Run Hat',
+      },
+    ];
+    return (
+      <div className="flex flex-col space-y-4 py-6">
+        <div className="flex flex-col space-y-2 px-4 max-w-xs text-center mx-auto">
+          <h3 className="font-accent text-cyan-500">Free Bonuses</h3>
+          <p className="text-base text-neutral-800">Order today and we'll toss in a little something extra.</p>
+        </div>
+        <div className="px-8 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8">
+          {products.map((product, i) => (
+            <div key={i} className="group relative">
+              <div className="h-56 w-full overflow-hidden rounded-md bg-white group-hover:opacity-75 lg:h-72 xl:h-80">
+                <img
+                  src={product.imageSrc}
+                  alt={product.imageAlt}
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+              <h3 className="mt-4 text-sm text-neutral-900">{product.name}</h3>
+              <p className="mt-1 text-sm text-neutral-500">{product.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="px-8 pt-4 grid grid-cols-4 gap-6">
+          <div className="rounded-md bg-cyan-50 py-4 flex flex-col">
+            <p className="font-accent text-3xl text-center text-cyan-700">{days}</p>
+            <p className="font-medium text-sm text-center text-cyan-600">Days</p>
+          </div>
+          <div className="rounded-md bg-cyan-50 py-4 flex flex-col">
+            <p className="font-accent text-3xl text-center text-cyan-700">{hours}</p>
+            <p className="font-medium text-sm text-center text-cyan-600">Hours</p>
+          </div>
+          <div className="rounded-md bg-cyan-50 py-4 flex flex-col">
+            <p className="font-accent text-3xl text-center text-cyan-700">{minutes}</p>
+            <p className="font-medium text-sm text-center text-cyan-600">Minutes</p>
+          </div>
+          <div className="rounded-md bg-cyan-50 py-4 flex flex-col">
+            <p className="font-accent text-3xl text-center text-cyan-700">{seconds}</p>
+            <p className="font-medium text-sm text-center text-cyan-600">Seconds</p>
+          </div>
+        </div>
+        <div className="flex w-full pt-4 px-8 justify-center">
+          <button
+            onClick={() => {
+              document.getElementById('lrc-klaviyo-form').scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="rounded text-base w-full lg:w-1/3 items-center justify-center text-center py-3 px-4 font-accent border border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer"
+          >
+            Start for $3
+          </button>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.render(<LRCFreeBonus />, document.getElementById('lrc-free-bonus'));
+</script>

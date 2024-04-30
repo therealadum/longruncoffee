@@ -1,0 +1,147 @@
+{
+  "sections": {
+    "lrc-hero-image": {
+      "type": "lrc-hero-image",
+      "settings": {
+        "title": "Electrolyte infused coffee for athletes",
+        "image": "shopify://shop_images/1_1.png"
+      }
+    },
+    "lrc-klaviyo-form": {
+      "type": "lrc-klaviyo-form",
+      "settings": {
+        "form_id": "klaviyo-form-VBWPf8"
+      }
+    },
+    "lrc-image-carousel": {
+      "type": "lrc-image-carousel",
+      "blocks": {
+        "image_68mWJi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kings_Landing_2.png"
+          }
+        },
+        "image_6tHXhk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kings_Landing_3.png"
+          }
+        },
+        "image_JMYVPJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kings_Landing_4.png"
+          }
+        }
+      },
+      "block_order": ["image_68mWJi", "image_6tHXhk", "image_JMYVPJ"],
+      "settings": {
+        "carousel_title": "Feel light on your feet and ready to run in 30 minutes",
+        "carousel_scroll_to_text": "Start for $3",
+        "carousel_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "lrc-accordion-how-it-works": {
+      "type": "lrc-accordion-how-it-works",
+      "settings": {}
+    },
+    "fyp": {
+      "type": "lrc-paragraph-with-header",
+      "settings": {
+        "title": "Fuel Your Passion",
+        "body": "Electrolyte infused so you can build a routine you love and train consistently. With consistency, we build passion."
+      }
+    },
+    "lrc-coffee-benefits-short": {
+      "type": "lrc-coffee-benefits-short",
+      "settings": {
+        "show_cta": true,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "lrc-testimonial-tile": {
+      "type": "lrc-testimonial-tile",
+      "blocks": {
+        "image_P9tBmM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kings_Landing_Logo_1.png"
+          }
+        },
+        "image_m4MAQz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kings_Landing_Logo_2.png"
+          }
+        },
+        "image_8gydnR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kings_Landing_Logo_3.png"
+          }
+        },
+        "image_K3brWw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kings_Landing_Logo_4.png"
+          }
+        },
+        "judge_me_reviews_all_reviews_text_mMMxQ4": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_P9tBmM",
+        "image_m4MAQz",
+        "image_8gydnR",
+        "image_K3brWw",
+        "judge_me_reviews_all_reviews_text_mMMxQ4"
+      ],
+      "settings": {
+        "title": "Trusted by Runners",
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form",
+        "padding-top": "4rem"
+      }
+    },
+    "lrc-free-bonus": {
+      "type": "lrc-free-bonus",
+      "settings": {}
+    },
+    "lrc-coffee-benefits": {
+      "type": "lrc-coffee-benefits",
+      "settings": {
+        "show_cta": true,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "lrc-accordion-sample": {
+      "type": "lrc-accordion-sample",
+      "settings": {}
+    },
+    "passion-guarantee": {
+      "type": "lrc-paragraph-with-header",
+      "settings": {
+        "title": "100% Passion & Performance Guarantee",
+        "body": "- Satisfied or Your Money Back -"
+      }
+    }
+  },
+  "order": [
+    "lrc-hero-image",
+    "lrc-klaviyo-form",
+    "lrc-image-carousel",
+    "lrc-coffee-benefits-short",
+    "lrc-testimonial-tile",
+    "lrc-free-bonus",
+    "lrc-accordion-how-it-works",
+    "fyp",
+    "lrc-coffee-benefits",
+    "lrc-accordion-sample",
+    "passion-guarantee"
+  ]
+}

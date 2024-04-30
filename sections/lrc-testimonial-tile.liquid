@@ -1,4 +1,19 @@
-<div id="lrc-testimonial-tile"></div>
+<div id="lrc-testimonial-tile-container" class="flex flex-col bg-gradient-to-r from-cyan-50 to-cyan-100 p-12 z-10">
+  <h2
+    class="font-accent text-2xl text-center text-neutral-900"
+    style="padding-top: {{ section.settings.padding-top }};"
+  >
+    {{ section.settings.title }}
+  </h2>
+  {% for block in section.blocks %}
+    {% if block.type == '@app' %}
+      <div class="py-4">
+        {% render block %}
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div id="lrc-testimonial-tile"></div>
+</div>
 
 <script
   type="text/babel"
@@ -12,20 +27,23 @@
         {% endif %}
     {%  endfor %}
 
-    const containerStyle = {
-      paddingTop: "{{ section.settings.padding-top }}"
-    }
-
     return (
-      <div className="flex flex-col bg-gradient-to-r from-cyan-050 to-cyan-200 p-12" style={containerStyle}>
-        <h2 className="font-accent text-2xl text-center text-neutral-900">{{ section.settings.title }}</h2>
-
-        {% for block in section.blocks %}
-          {% if block.type == "@app" %}
-            {% render block %}
-          {% endif %}
-        {%  endfor %}
-
+      <div className="flex flex-col">
+        <div className="grid grid-cols-2 gap-4">
+          {images.map((b) => (
+            <div key={b}>
+              <img
+                class="object-fill object-center"
+                src={b}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="flex w-full py-4 lg:py-8 justify-center">
+          <button onClick={() => {
+            document.getElementById({{section.settings.cta_scroll_to_id | json}}).scrollIntoView({ behavior: 'smooth' });
+          }} className="rounded text-base w-full lg:w-1/3 items-center justify-center text-center py-3 px-4 font-accent border border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer">{{ section.settings.cta_text }}</button>
+        </div>
       </div>
     );
   }

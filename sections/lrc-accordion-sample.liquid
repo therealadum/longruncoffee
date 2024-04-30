@@ -1,0 +1,83 @@
+<div id="lrc-accordion-sample" class="z-0 relative"></div>
+
+<script
+  type="text/babel"
+>
+  const AccordionItem = ({ question, answer, isOpen, onClick }) => {
+    const contentHeight = React.useRef();
+    const innerHtml = {
+      __html: answer,
+    };
+    return (
+      <div className="flex-1 flex flex-col py-2">
+        <button className={`flex items-center text-cyan-700`} onClick={onClick}>
+          <p className="font-accent text-2xl text-cyan-700 text-left">{question}</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className={`w-6 h-6 transition-all ml-auto ${isOpen ? 'transform rotate-180' : ''}`}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+
+        <div
+          ref={contentHeight}
+          className="overflow-hidden transition-all"
+          style={
+            isOpen ? { height: contentHeight.current ? contentHeight.current.scrollHeight : '0px' } : { height: '0px' }
+          }
+        >
+          <div
+            className="text-base text-neutral-600 flex flex-col space-y-2 py-3"
+            dangerouslySetInnerHTML={innerHtml}
+          />
+        </div>
+      </div>
+    );
+  };
+
+  function LRCAccordionSample() {
+    const [activeIndex, setActiveIndex] = React.useState(null);
+
+    const handleItemClick = (index) => {
+      setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+    };
+
+    return (
+      <div className="bg-cyan-50 bg-opacity-20 py-4 px-8">
+        <div className="max-w-5xl mx-auto flex flex-col">
+          <AccordionItem
+            question={'How big is the $3 sample?'}
+            answer={`<p>
+              Our samples are 4oz each, and will brew two strong pots of coffee.
+              Some sample orders also come with a bonus flavored coffee sample, which brews one pot.
+            </p>`}
+            isOpen={activeIndex === 'Description'}
+            onClick={() => handleItemClick('Description')}
+          />
+          <div className="h-px my-2 bg-cyan-500 rounded" />
+          <AccordionItem
+            question={'Does it taste salty?'}
+            answer={`<p>
+              Nope! We add electrolytes for performance, and optimize for taste. In fact, the ingredients we add lower the pH of coffee for a smooth and better flavor.
+            </p>`}
+            isOpen={activeIndex === 'Supplement Facts'}
+            onClick={() => handleItemClick('Supplement Facts')}
+          />
+          <div className="h-px my-2 bg-cyan-500 rounded" />
+          <AccordionItem
+            question={'How fast is shipping?'}
+            answer={`<p>You'll have the choice at checkout! Standard (4-5 days) and expedited (2-3 days) options are available.</p>`}
+            isOpen={activeIndex === 'How to User'}
+            onClick={() => handleItemClick('How to User')}
+          />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.render(<LRCAccordionSample />, document.getElementById('lrc-accordion-sample'));
+</script>

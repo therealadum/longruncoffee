@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./config/*.json",
     "./layout/*.liquid",
+    "./blocks/*.liquid",
     "./assets/*.liquid",
     "./sections/*.liquid",
     "./snippets/*.liquid",

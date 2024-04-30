@@ -172,3 +172,20 @@ h2#spr-header-title {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+#lrc-testimonial-tile-container
+  .jdgm-all-reviews-text
+  .jdgm-all-reviews-rating:before {
+  @apply bg-cyan-700;
+}
+
+#lrc-testimonial-tile-container .jdgm-all-reviews-text .jdgm-all-reviews-rating,
+#lrc-testimonial-tile-container
+  .jdgm-all-reviews-text
+  .jdgm-all-reviews-rating
+  .jdgm-star,
+#lrc-testimonial-tile-container
+  .jdgm-all-reviews-text
+  .jdgm-all-reviews-text__text {
+  @apply text-cyan-700;
+}
