@@ -4,7 +4,7 @@
       "type": "lrc-hero-image",
       "settings": {
         "title": "Electrolyte infused coffee for athletes",
-        "image": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/NewAthleteSampleKit_1_2cf42577-e1d3-4dfc-9ad7-7bd15670f4ea.png?v=1708649543"
+        "image": "shopify:\/\/shop_images\/NewAthleteSampleKit_1.png"
       }
     },
     "lrc-klaviyo-form": {
@@ -19,44 +19,37 @@
         "image_68mWJi": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kings_Landing_2.png"
+            "image": "shopify:\/\/shop_images\/Kings_Landing_2.png"
           }
         },
         "image_6tHXhk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kings_Landing_3.png"
+            "image": "shopify:\/\/shop_images\/Kings_Landing_3.png"
           }
         },
         "image_JMYVPJ": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kings_Landing_4.png"
+            "image": "shopify:\/\/shop_images\/Kings_Landing_4.png"
           }
         }
       },
-      "block_order": ["image_68mWJi", "image_6tHXhk", "image_JMYVPJ"],
+      "block_order": [
+        "image_68mWJi",
+        "image_6tHXhk",
+        "image_JMYVPJ"
+      ],
       "settings": {
         "carousel_title": "Feel light on your feet and ready to run in 30 minutes",
         "carousel_scroll_to_text": "Start for $3",
         "carousel_scroll_to_id": "lrc-klaviyo-form"
       }
     },
-    "lrc-accordion-how-it-works": {
-      "type": "lrc-accordion-how-it-works",
-      "settings": {}
-    },
-    "fyp": {
-      "type": "lrc-paragraph-with-header",
-      "settings": {
-        "title": "Fuel Your Passion",
-        "body": "Electrolyte infused so you can build a routine you love and train consistently. With consistency, we build passion."
-      }
-    },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
       "settings": {
-        "show_cta": true,
+        "show_cta": false,
         "cta_text": "Start for $3",
         "cta_scroll_to_id": "lrc-klaviyo-form"
       }
@@ -67,30 +60,31 @@
         "image_P9tBmM": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kings_Landing_Logo_1.png"
+            "image": "shopify:\/\/shop_images\/Kings_Landing_Logo_1.png"
           }
         },
         "image_m4MAQz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kings_Landing_Logo_2.png"
+            "image": "shopify:\/\/shop_images\/Kings_Landing_Logo_2.png"
           }
         },
         "image_8gydnR": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kings_Landing_Logo_3.png"
+            "image": "shopify:\/\/shop_images\/Kings_Landing_Logo_3.png"
           }
         },
         "image_K3brWw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Kings_Landing_Logo_4.png"
+            "image": "shopify:\/\/shop_images\/Kings_Landing_Logo_4.png"
           }
         },
         "judge_me_reviews_all_reviews_text_mMMxQ4": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_text\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -109,19 +103,33 @@
     },
     "lrc-free-bonus": {
       "type": "lrc-free-bonus",
-      "settings": {}
+      "settings": {
+      }
+    },
+    "lrc-accordion-how-it-works": {
+      "type": "lrc-accordion-how-it-works",
+      "settings": {
+      }
+    },
+    "fyp": {
+      "type": "lrc-paragraph-with-header",
+      "settings": {
+        "title": "Fuel Your Passion",
+        "body": "Electrolyte infused so you can build a routine you love and train consistently. With consistency, we build passion."
+      }
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
       "settings": {
-        "show_cta": true,
+        "show_cta": false,
         "cta_text": "Start for $3",
         "cta_scroll_to_id": "lrc-klaviyo-form"
       }
     },
     "lrc-accordion-sample": {
       "type": "lrc-accordion-sample",
-      "settings": {}
+      "settings": {
+      }
     },
     "passion-guarantee": {
       "type": "lrc-paragraph-with-header",
