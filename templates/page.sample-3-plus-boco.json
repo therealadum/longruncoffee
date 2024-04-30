@@ -78,6 +78,13 @@
         "padding-top": "4rem"
       }
     },
+    "passion-guarantee": {
+      "type": "lrc-paragraph-with-header",
+      "settings": {
+        "title": "100% Passion & Performance Guarantee",
+        "body": "- Satisfied or Your Money Back -"
+      }
+    },
     "lrc-image-carousel": {
       "type": "lrc-image-carousel",
       "blocks": {
@@ -113,10 +120,16 @@
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
+      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
         "cta_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "lrc-accordion-sample": {
+      "type": "lrc-accordion-sample",
+      "settings": {
       }
     },
     "fyp": {
@@ -124,18 +137,6 @@
       "settings": {
         "title": "Fuel Your Passion",
         "body": "Electrolyte infused so you can build a routine you love and train consistently. With consistency, we build passion."
-      }
-    },
-    "passion-guarantee": {
-      "type": "lrc-paragraph-with-header",
-      "settings": {
-        "title": "100% Passion & Performance Guarantee",
-        "body": "- Satisfied or Your Money Back -"
-      }
-    },
-    "lrc-accordion-sample": {
-      "type": "lrc-accordion-sample",
-      "settings": {
       }
     }
   },
@@ -146,10 +147,10 @@
     "lrc-free-bonus",
     "lrc-accordion-how-it-works",
     "lrc-testimonial-tile",
+    "passion-guarantee",
     "lrc-image-carousel",
     "lrc-coffee-benefits-short",
-    "fyp",
-    "passion-guarantee",
-    "lrc-accordion-sample"
+    "lrc-accordion-sample",
+    "fyp"
   ]
 }
