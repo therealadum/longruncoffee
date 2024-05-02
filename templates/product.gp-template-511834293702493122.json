@@ -1,4 +1,5 @@
 {
+  "layout": "theme.gempages.blank",
   "sections": {
     "gp_section_511834850722841767": {
       "type": "gp-section-511834850722841767",
@@ -21,11 +22,6 @@
       "settings": {
       }
     },
-    "gp_section_511834293786379202": {
-      "type": "gp-section-511834293786379202",
-      "settings": {
-      }
-    },
     "gp_section_511835291258979266": {
       "type": "gp-section-511835291258979266",
       "settings": {
@@ -36,8 +32,38 @@
       "settings": {
       }
     },
+    "gp_section_511839412464649383": {
+      "type": "gp-section-511839412464649383",
+      "settings": {
+      }
+    },
     "gp_section_511834293819933634": {
       "type": "gp-section-511834293819933634",
+      "settings": {
+      }
+    },
+    "gp_section_511834293786379202": {
+      "type": "gp-section-511834293786379202",
+      "settings": {
+      }
+    },
+    "gp_section_511840327091356610": {
+      "type": "gp-section-511840327091356610",
+      "settings": {
+      }
+    },
+    "gp_section_511841221266637856": {
+      "type": "gp-section-511841221266637856",
+      "settings": {
+      }
+    },
+    "gp_section_511841531359921090": {
+      "type": "gp-section-511841531359921090",
+      "settings": {
+      }
+    },
+    "gp_section_511839927374185639": {
+      "type": "gp-section-511839927374185639",
       "settings": {
       }
     }
@@ -47,10 +73,14 @@
     "gp_section_511835917116245024",
     "gp_section_511836147316425760",
     "gp_section_511834293853488066",
-    "gp_section_511834293786379202",
     "gp_section_511835291258979266",
     "gp_section_511835007690474434",
-    "gp_section_511834293819933634"
-  ],
-  "layout": "theme.gempages.blank"
+    "gp_section_511839412464649383",
+    "gp_section_511834293819933634",
+    "gp_section_511834293786379202",
+    "gp_section_511840327091356610",
+    "gp_section_511841221266637856",
+    "gp_section_511841531359921090",
+    "gp_section_511839927374185639"
+  ]
 }
