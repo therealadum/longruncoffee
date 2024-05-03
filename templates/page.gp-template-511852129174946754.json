@@ -6,13 +6,13 @@
         "section_preload": "true"
       }
     },
-    "gp_section_511852129862878146": {
-      "type": "gp-section-511852129862878146",
+    "gp_section_511852129963475906": {
+      "type": "gp-section-511852129963475906",
       "settings": {
       }
     },
-    "gp_section_511852129963475906": {
-      "type": "gp-section-511852129963475906",
+    "gp_section_511852129862878146": {
+      "type": "gp-section-511852129862878146",
       "settings": {
       }
     },
@@ -74,8 +74,8 @@
   },
   "order": [
     "gp_section_511852129896367042",
-    "gp_section_511852129862878146",
     "gp_section_511852129963475906",
+    "gp_section_511852129862878146",
     "gp_section_511852129695040450",
     "gp_section_511852129611154370",
     "gp_section_511852129997095874",
