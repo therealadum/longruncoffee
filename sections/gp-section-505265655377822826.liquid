@@ -82,7 +82,7 @@
 {%- assign gpBkProduct = product -%}
 {%- assign gpBkProducts = products -%}
 {%- liquid
-      assign productHandles = 'the-long-run,the-pre-run-pb-j,junk-miles,the-post-race-banana,technical-trail,two-week-taper,club-exclusive-lrc-x-boco-run-hat,copy-of-lrc-x-hydro-flask-16oz-bottle'| split: ','
+      assign productHandles = 'the-long-run,the-pre-run-pb-j,junk-miles,the-post-race-banana,technical-trail,two-week-taper,club-exclusive-lrc-x-boco-run-hat,copy-of-lrc-x-hydro-flask-16oz-bottle,run-brunch-maple-bacon,out-n-back-medium-dark-blend'| split: ','
       assign products = null
       assign target_collection = null
       assign productSrc = 'PickProduct'
@@ -115,7 +115,7 @@
             endfor
             assign limit = products.length
           else
-            if 8 == 0
+            if 10 == 0
               paginate collections.all.products by 100000
                 assign products = collections.all.products  | sort : "created_at"  | reverse
               endpaginate
@@ -1354,7 +1354,7 @@
               {%- endform -%}
             </gp-product>
         {% endfor %}
-        {%- if count == 0 and 8 == 0 -%}
+        {%- if count == 0 and 10 == 0 -%}
           <div>{{ "gempages.ProductList.no_products_found" | t }}</div>
         {%- endif -%}
       
