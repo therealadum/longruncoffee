@@ -429,6 +429,34 @@
             </h5>
     </div>
   }
+
+  function BonusItem({title, href, image, header, quantity}) {
+    return <div
+        className="flex flex-col space-y-2 group relative"
+    >
+        {
+            quantity ? <div className="absolute top-2 left-0 right-0 flex items-stretch space-x-2">
+                <div className="ml-auto shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center">
+                    <span className="flex items-end self-center"><span className="text-sm">{quantity}</span><span className="text-xs">x</span></span>
+                </div>
+            </div> : null
+        }
+        <img
+            src={image}
+            loading="lazy"
+            className="w-full h-32 object-contain cursor-pointer"
+        />
+        {
+            header ? <h6 className="font-base text-xs text-cyan-800 text-center">
+                {header}
+            </h6> : null
+        }
+        <h5 className="font-base text-sm text-cyan-800 font-[700] text-center leading-[16px] tracking-tight">
+            <a href={href}>{title}</a>
+        </h5>
+    </div>
+  }
+
   function getTotalSubscriptionItemsFromCartState(cartState) {
     let total = 0;
     for (let i = 0; i < cartState.items.length; i++) {
@@ -440,7 +468,6 @@
   function LRCCart() {
     const [cartState, innerSetCartState] = React.useState(localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)) : {
       items: [],
-      recommendations: []
     });
     const [isOpen, setIsOpen] = React.useState(false);
     const [cart, setCart] = React.useState({{ cart | json }});
@@ -624,143 +651,6 @@
           document.removeEventListener('buy_button', handler)
         }
     }, [setCartState, setIsOpen, setCart]);
-
-    // listen to calculate recommendations
-    React.useEffect(() => {
-        let mounted = true;
-        function fetchRecommendations() {
-          const items = cartState.items;
-          if (items && items.length) {
-            let preferredItemSize = '1 lbs';
-            let preferredItemStyle = 'Fresh Ground';
-  
-            if (items[0] && items[0].variant && items[0].variant.options.length) {
-              preferredItemSize = items[0].variant.options[0];
-              preferredItemStyle = items[0].variant.options[1];
-            }
-  
-            const deferredHandlers = items.map((item) => new Promise(async (resolve, reject) => {
-                const data = await fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${item.product.id}`);
-                const response = await data.json();
-                const list = response.products.filter(p => isRechargeAvailableOnProduct(p)).map(p => {
-                    let selectedVariant = p.variants[0];
-                    for (let i = 0; i < p.variants.length; i++) {
-                        if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
-                            selectedVariant = p.variants[i];
-                        }
-                    }
-                    return {
-                        product: p,
-                        variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
-                        variantID: selectedVariant.id,
-                        variant: selectedVariant
-                    }
-                });
-                resolve(list);
-            }))
-
-            const additionalHandlers = [8281669206329, 8281667764537, 8281658229049].map((item) => new Promise(async (resolve, reject) => {
-                const data = await fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${item}`);
-                const response = await data.json();
-                const list = response.products.filter(p => isRechargeAvailableOnProduct(p)).map(p => {
-                    let selectedVariant = p.variants[0];
-                    for (let i = 0; i < p.variants.length; i++) {
-                        if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
-                        selectedVariant = p.variants[i];
-                        }
-                    }
-                    return {
-                        product: p,
-                        variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
-                        variantID: selectedVariant.id,
-                        variant: selectedVariant
-                    }
-                });
-                resolve(list);
-            }))
-
-            Promise.all([...deferredHandlers, ...additionalHandlers]).then(res => {
-              let recommendations = [];
-              res.forEach(r => {
-                recommendations = recommendations.concat(r)
-              });
-  
-              // unique array
-              let result = [];
-              const map = new Map();
-              for (const item of recommendations) {
-                  if(!map.has(item.variantID)){
-                    map.set(item.variantID, true);
-                    result.push(item);
-                  }
-              }
-              // limit to 6 suggestions
-              if (result.length > 6) {
-                result = result.splice(0, 6);
-              }
-              if (mounted) {
-                setCartState({
-                  ...cartState,
-                  recommendations: result
-                })
-              }
-            })
-          } else {
-            let preferredItemSize = '1 lbs';
-            let preferredItemStyle = 'Fresh Ground';
-            const deferredHandlers = [8281669206329, 8281667764537, 8281658229049].map((item) => new Promise(async (resolve, reject) => {
-                const data = await fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${item}`);
-                const response = await data.json();
-                const list = response.products.filter(p => p.selling_plan_groups.length).map(p => {
-                    let selectedVariant = p.variants[0];
-                    for (let i = 0; i < p.variants.length; i++) {
-                        if (p.variants[i].options[0] === preferredItemSize && p.variants[i].options[1] === preferredItemStyle) {
-                            selectedVariant = p.variants[i];
-                        }
-                    }
-                    return {
-                        product: p,
-                        variant_title: `${selectedVariant.option1}, ${selectedVariant.option2}`,
-                        variantID: selectedVariant.id,
-                        variant: selectedVariant
-                    }
-                });
-                resolve(list);
-            }))
-            Promise.all(deferredHandlers).then(res => {
-              let recommendations = [];
-              res.forEach(r => {
-                recommendations = recommendations.concat(r)
-              });
-  
-              // unique array
-              let result = [];
-              const map = new Map();
-              for (const item of recommendations) {
-                  if(!map.has(item.variantID)){
-                    map.set(item.variantID, true);
-                    result.push(item);
-                  }
-              }
-  
-              // limit to 6 suggestions
-              if (result.length > 6) {
-                result = result.splice(0, 6);
-              }
-              if (mounted) {
-                setCartState({
-                  ...cartState,
-                  recommendations: result
-                })
-              }
-            })
-          }
-        }
-        fetchRecommendations();
-        return () => {
-          mounted = false;
-        }
-    }, [cartState.items.length])
 
     const plan = React.useMemo(() => getPlanFromCartState(totalSubscriptionItems), [totalSubscriptionItems]);
     const nextPlan = React.useMemo(() => getNextPlanFromCartState(totalSubscriptionItems), [totalSubscriptionItems]);
@@ -1182,6 +1072,27 @@
                             </div> : null
                         }
                         {
+                            !isCartOnlyGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
+                                <div className="flex items-center space-x-2">
+                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                    <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Bonus</h4>
+                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                </div>
+                                <div className="grid grid-cols-3 gap-3">
+                                    {
+                                        cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} header="Stickers. Sweet!" />)
+                                    }
+                                    {
+                                        totalSubscriptionItems > 0 ? <React.Fragment>
+                                            <BonusItem key={1} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/boco-run-hat" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" />
+                                            <BonusItem key={2} title="LRC x Hydro Flask 16oz Bottle" href="/products/hydro-flask-bottle" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/AllHF_ac7e7ecf-911a-4d16-966b-572c13a26f49.png?v=1714937742&width=150" />
+                                            <BonusItem key={3} title="Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} />
+                                        </React.Fragment> : null
+                                    }
+                                </div>
+                            </div> : null
+                        }
+                        {
                             cartState.items.length && (!plan || plan.display_name !== nextPlan.display_name) ? <div className="flex flex-col space-y-4">
                                 <div className="flex items-center space-x-2">
                                     <div className="flex-1 h-1 rounded bg-cyan-700" />
@@ -1203,68 +1114,13 @@
                                         </div>)
                                     }
                                 </div>
-                                <div className="grid grid-cols-3 gap-3">
-                                    {
-                                      cartState.recommendations.map((item, i) => {
-                                        const onClick = () => {
-                                            // if already in subscriptions, add quantity - otherwise add new item
-                                            let existingItemIndex = null;
-                                            for (let j = 0; j < cartState.items.length; j++) {
-                                                if (cartState.items[j].variantID === item.variantID) {
-                                                    existingItemIndex = j;
-                                                }
-                                            }
-                                            if (existingItemIndex !== null) {
-                                                const newItems = [...cartState.items];
-                                                newItems[existingItemIndex].quantity += 1;
-                                                setCartState({
-                                                    ...cartState,
-                                                    items: newItems
-                                                })
-                                            } else {
-                                                setCartState({
-                                                    ...cartState,
-                                                    items: [...cartState.items, {
-                                                        ...item,
-                                                        quantity: 1
-                                                    }]
-                                                })
-                                            }
-                                        }
-                                        return <div
-                                            key={item.variant.id}
-                                            className="flex flex-col space-y-2 group relative"
-                                        >
-                                            <button onClick={onClick} className="absolute right-0 top-2 shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    className="w-4 h-4 text-cyan-400"
-                                                >
-                                                    <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
-                                                </svg>
-                                            </button>
-                                            <img
-                                                src={`${item.product.featured_image}&width=150`}
-                                                loading="lazy"
-                                                className="w-full h-32 object-contain cursor-pointer"
-                                                onClick={onClick}
-                                            />
-                                            <h6 className="font-base text-xs text-cyan-800 text-center">
-                                                {item.variant.option1}, {item.variant.option2}
-                                            </h6>
-                                            <h5 className="font-base text-sm text-cyan-800 font-[700] text-center leading-[16px] tracking-tight">
-                                                <a href={item.product.url}>{item.product.title}</a>
-                                            </h5>
-                                        </div>
-                                      })
-                                    }
+                                <div>
+                                    {% render 'lrc-button', link: "/collections/subscribe-save", title: "Get More" %}
                                 </div>
                             </div> : null
                         }
                         {
-                            isCartOnlyGiftItems(cart.items, totalSubscriptionItems) ? null : <div className="flex flex-col space-y-4">
+                            isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.length == 0 ? null : <div className="flex flex-col space-y-4">
                                 {
                                     cartState.items.length && cart.items.length ? <div className="flex items-center space-x-2">
                                         <div className="flex-1 h-1 rounded bg-cyan-700" />
@@ -1274,7 +1130,7 @@
                                 }
                                 <div className="grid grid-cols-3 gap-3">
                                 {
-                                    cart.items.map((item, i) => <CartItem key={item.variant_id} item={item} setCart={setCart} />)
+                                    cart.items.filter(item => item.product_type !== 'Gift').map((item, i) => <CartItem key={item.variant_id} item={item} setCart={setCart} />)
                                 }
                                 </div>
                                 {

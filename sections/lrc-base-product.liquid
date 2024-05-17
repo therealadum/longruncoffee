@@ -302,12 +302,6 @@
 
     const isMobile = useIsMobile();
 
-    if (product) {
-      console.log(product.available, variantQuantityMap[variantID]);
-    }
-    if (variantQuantityMap && variantID) {
-      console.log(variantQuantityMap[variantID]);
-    }
     return product ? <div className="relative bg-cyan-50 bg-opacity-20">
       <div className="flex flex-col p-4 lg:py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
@@ -1256,20 +1250,22 @@
                   }
                 </div>
               </button>
-              <button data-testid="lrc-select-one-time-checkout" disabled={!product.available || !(variantQuantityMap[variantID] > 0)} onClick={() => setProductForm({
-                ...productForm,
-                isSubscription: false
-              })} className={`flex items-center space-x-2 ${(!product.available || !(variantQuantityMap[variantID] > 0)) ? 'cursor-not-allowed' : ''}`}>
-                <div className="w-5 h-5 lg:w-6 lg:h-6 rounded-full border border-cyan-700 flex items-center justify-center">
-                  {!productForm.isSubscription ? <div className="h-2 w-2 lg:w-3 lg:h-3 rounded-full bg-cyan-400" /> : null}
-                </div>
-                <h4 className={`text-left flex-1 font-accent text-xl lg:text-2xl tracking-tight ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"} ${variantQuantityMap[variantID] == 0 ? 'line-through' : ''}`}>One-Time Purchase</h4>
-                <div className="text-sm flex space-x-1 font-base">
-                {
-                  variantQuantityMap[variantID] > 0 ? (variant && variant.compare_at_price && variant.compare_at_price !== variant.price && !(product.available || variantQuantityMap[variantID] > 0) ? <React.Fragment><span className={`line-through ${!productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>${(variant.compare_at_price * productForm.quantity / 100).toFixed(2)}</span><span className={`font-medium ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>${(variant.price * productForm.quantity / 100).toFixed(2)}</span></React.Fragment> : <span className={`font-medium text-sm ${productForm.isSubscription ? "text-neutral-300" : "text-neutral-500"}`}>${(variantCost * productForm.quantity / 100).toFixed(2)}</span>) : <span className="text-neutral-300">sold out</span>
-                }
-                </div>
-              </button>
+              {
+                product && product.tags.indexOf('Members Only') !== -1 ? null : <button data-testid="lrc-select-one-time-checkout" disabled={!product.available || !(variantQuantityMap[variantID] > 0)} onClick={() => setProductForm({
+                  ...productForm,
+                  isSubscription: false
+                })} className={`flex items-center space-x-2 ${(!product.available || !(variantQuantityMap[variantID] > 0)) ? 'cursor-not-allowed' : ''}`}>
+                  <div className="w-5 h-5 lg:w-6 lg:h-6 rounded-full border border-cyan-700 flex items-center justify-center">
+                    {!productForm.isSubscription ? <div className="h-2 w-2 lg:w-3 lg:h-3 rounded-full bg-cyan-400" /> : null}
+                  </div>
+                  <h4 className={`text-left flex-1 font-accent text-xl lg:text-2xl tracking-tight ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"} ${variantQuantityMap[variantID] == 0 ? 'line-through' : ''}`}>One-Time Purchase</h4>
+                  <div className="text-sm flex space-x-1 font-base">
+                  {
+                    variantQuantityMap[variantID] > 0 ? (variant && variant.compare_at_price && variant.compare_at_price !== variant.price && !(product.available || variantQuantityMap[variantID] > 0) ? <React.Fragment><span className={`line-through ${!productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>${(variant.compare_at_price * productForm.quantity / 100).toFixed(2)}</span><span className={`font-medium ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>${(variant.price * productForm.quantity / 100).toFixed(2)}</span></React.Fragment> : <span className={`font-medium text-sm ${productForm.isSubscription ? "text-neutral-300" : "text-neutral-500"}`}>${(variantCost * productForm.quantity / 100).toFixed(2)}</span>) : <span className="text-neutral-300">sold out</span>
+                  }
+                  </div>
+                </button>
+              }
             </div>
             <div className="lg:pt-1">
               {

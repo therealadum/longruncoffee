@@ -1118,10 +1118,6 @@ select {
   display: inline;
 }
 
-.\!flex {
-  display: flex !important;
-}
-
 .flex {
   display: flex;
 }
@@ -1485,10 +1481,6 @@ select {
 
 .flex-none {
   flex: none;
-}
-
-.flex-shrink {
-  flex-shrink: 1;
 }
 
 .flex-shrink-0 {
@@ -2201,6 +2193,11 @@ select {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-20 {
