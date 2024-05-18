@@ -1,243 +1,21 @@
-<style>
-  .gps-488486792811512701 .gp-g-subheading-1 {
-    font-family: var(--g-sh1-ff);
-    font-size: var(--g-sh1-size);
-    font-style: var(--g-sh1-fs);
-    font-weight: var(--g-sh1-weight);
-    letter-spacing: var(--g-sh1-ls);
-    line-height: var(--g-sh1-lh);
-  }
-  .gps-488486792811512701 .gp-invisible {
-    visibility: hidden;
-  }
-  .gps-488486792811512701 .gp-absolute {
-    position: absolute;
-  }
-  .gps-488486792811512701 .gp-relative {
-    position: relative;
-  }
-  .gps-488486792811512701 .gp-inset-0 {
-    inset: 0;
-  }
-  .gps-488486792811512701 .gp-left-\[var\(--left\)\] {
-    left: var(--left);
-  }
-  .gps-488486792811512701 .gp-top-\[var\(--top\)\] {
-    top: var(--top);
-  }
-  .gps-488486792811512701 .gp-z-1 {
-    z-index: 1;
-  }
-  .gps-488486792811512701 .gp-mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .gps-488486792811512701 .gp-mb-0 {
-    margin-bottom: 0;
-  }
-  .gps-488486792811512701 .\!gp-inline {
-    display: inline !important;
-  }
-  .gps-488486792811512701 .gp-flex {
-    display: flex;
-  }
-  .gps-488486792811512701 .gp-inline-flex {
-    display: inline-flex;
-  }
-  .gps-488486792811512701 .gp-grid {
-    display: grid;
-  }
-  .gps-488486792811512701 .\!gp-hidden {
-    display: none !important;
-  }
-  .gps-488486792811512701 .gp-hidden {
-    display: none;
-  }
-  .gps-488486792811512701 .gp-h-5 {
-    height: 20px;
-  }
-  .gps-488486792811512701 .gp-h-full {
-    height: 100%;
-  }
-  .gps-488486792811512701 .gp-w-5 {
-    width: 20px;
-  }
-  .gps-488486792811512701 .gp-w-full {
-    width: 100%;
-  }
-  .gps-488486792811512701 .gp-max-w-full {
-    max-width: 100%;
-  }
-  .gps-488486792811512701 .gp-flex-col {
-    flex-direction: column;
-  }
-  .gps-488486792811512701 .gp-items-center {
-    align-items: center;
-  }
-  .gps-488486792811512701 .\!gp-justify-center {
-    justify-content: center !important;
-  }
-  .gps-488486792811512701 .gp-justify-center {
-    justify-content: center;
-  }
-  .gps-488486792811512701 .gp-gap-y-0 {
-    row-gap: 0;
-  }
-  .gps-488486792811512701 .gp-self-center {
-    align-self: center;
-  }
-  .gps-488486792811512701 .gp-overflow-hidden {
-    overflow: hidden;
-  }
-  .gps-488486792811512701 .gp-break-words {
-    overflow-wrap: break-word;
-  }
-  .gps-488486792811512701 .gp-rounded-none {
-    border-radius: 0;
-  }
-  .gps-488486792811512701 .gp-bg-clip-content {
-    background-clip: content-box;
-  }
-  .gps-488486792811512701 .gp-text-g-text-3 {
-    color: var(--g-c-text-3);
-  }
-  .gps-488486792811512701 .gp-no-underline {
-    text-decoration-line: none;
-  }
-  .gps-488486792811512701 .gp-opacity-25 {
-    opacity: 0.25;
-  }
-  .gps-488486792811512701 .gp-opacity-75 {
-    opacity: 0.75;
-  }
-  .gps-488486792811512701 .gp-transition-all {
-    transition-duration: 0.15s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .gps-488486792811512701 .gp-transition-colors {
-    transition-duration: 0.15s;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .gps-488486792811512701 .gp-transition-transform {
-    transition-duration: 0.15s;
-    transition-property: transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .gps-488486792811512701 .gp-duration-200 {
-    transition-duration: 0.2s;
-  }
-  .gps-488486792811512701 .gp-duration-300 {
-    transition-duration: 0.3s;
-  }
-  .gps-488486792811512701 .gp-ease-in-out {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .gps-488486792811512701 .disabled\:gp-btn-disabled:disabled {
-    cursor: default;
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .gps-488486792811512701 .hover\:gp-bg-g-highlight:hover {
-      background-color: var(--g-c-highlight);
-    }
-  }
-  .gps-488486792811512701 .disabled\:gp-pointer-events-none:disabled {
-    pointer-events: none;
-  }
-  .gps-488486792811512701 .disabled\:gp-opacity-30:disabled {
-    opacity: 0.3;
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .gps-488486792811512701
-      .gp-group\/hero:hover
-      .group-hover\/hero\:gp-bg-\[color\:var\(--hvr-bgc\2c
-      _var\(--bgc\)\)\] {
-      background-color: var(--hvr-bgc, var(--bgc));
-    }
-    .gps-488486792811512701 .gp-group\/hero:hover .group-hover\/hero\:gp-opacity-\[var\(--hvr-op\2c _var\(--op\)\)\] {
-      opacity: var(--hvr-op, var(--op));
-    }
-  }
-  .gps-488486792811512701 .gp-group[data-state='loading'] .group-data-\[state\=loading\]\:gp-visible {
-    visibility: visible;
-  }
-  .gps-488486792811512701 .gp-group[data-state='loading'] .group-data-\[state\=loading\]\:gp-invisible {
-    visibility: hidden;
-  }
-  @keyframes gp-spin {
-    to {
-      transform: rotate(1turn);
-    }
-  }
-  .gps-488486792811512701 .gp-group[data-state='loading'] .group-data-\[state\=loading\]\:gp-animate-spin {
-    animation: gp-spin 1s linear infinite;
-  }
-  @media (max-width: 1023px) {
-    .gps-488486792811512701 .tablet\:gp-relative {
-      position: relative;
-    }
-    .gps-488486792811512701 .tablet\:\!gp-hidden {
-      display: none !important;
-    }
-    .gps-488486792811512701 .tablet\:gp-hidden {
-      display: none;
-    }
-    .gps-488486792811512701 .tablet\:\!gp-content-stretch {
-      align-content: stretch !important;
-    }
-    .gps-488486792811512701 .tablet\:\!gp-justify-center {
-      justify-content: center !important;
-    }
-  }
-  @media (max-width: 767px) {
-    .gps-488486792811512701 .mobile\:gp-relative {
-      position: relative;
-    }
-    .gps-488486792811512701 .mobile\:\!gp-hidden {
-      display: none !important;
-    }
-    .gps-488486792811512701 .mobile\:gp-hidden {
-      display: none;
-    }
-    .gps-488486792811512701 .mobile\:\!gp-content-stretch {
-      align-content: stretch !important;
-    }
-    .gps-488486792811512701 .mobile\:\!gp-justify-center {
-      justify-content: center !important;
-    }
-  }
-  @media (max-width: 1023px) {
-    .gps-488486792811512701 .tablet\:\[\&\>\*\]\:\!gp-justify-center > * {
-      justify-content: center !important;
-    }
-  }
-  @media (max-width: 767px) {
-    .gps-488486792811512701 .mobile\:\[\&\>\*\]\:\!gp-justify-center > * {
-      justify-content: center !important;
-    }
-  }
-  .gps-488486792811512701 .\[\&_\*\]\:gp-max-w-full * {
-    max-width: 100%;
-  }
-  .gps-488486792811512701 .\[\&_p\]\:gp-whitespace-pre-line p {
-    white-space: pre-line;
-  }
-</style>
 
-<section
-  class="gp-mx-auto gp-max-w-full"
-  style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px"
->
-  <div
-    id="gAulGu3QRQ"
-    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--pt:0px;--pb:20px;--pt-mobile:20px;--pb-mobile:20px;--pt-tablet:0px;--pb-tablet:10px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-    class="gAulGu3QRQ gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full"
-  >
+  
+  <style> .gps-488486792811512701 .gp-g-subheading-1{font-family:var(--g-sh1-ff);font-size:var(--g-sh1-size);font-style:var(--g-sh1-fs);font-weight:var(--g-sh1-weight);letter-spacing:var(--g-sh1-ls);line-height:var(--g-sh1-lh)}.gps-488486792811512701 .gp-invisible{visibility:hidden}.gps-488486792811512701 .gp-absolute{position:absolute}.gps-488486792811512701 .gp-relative{position:relative}.gps-488486792811512701 .gp-inset-0{inset:0}.gps-488486792811512701 .gp-left-\[var\(--left\)\]{left:var(--left)}.gps-488486792811512701 .gp-top-\[var\(--top\)\]{top:var(--top)}.gps-488486792811512701 .gp-z-1{z-index:1}.gps-488486792811512701 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-488486792811512701 .gp-mb-0{margin-bottom:0}.gps-488486792811512701 .\!gp-inline{display:inline!important}.gps-488486792811512701 .gp-flex{display:flex}.gps-488486792811512701 .gp-inline-flex{display:inline-flex}.gps-488486792811512701 .gp-grid{display:grid}.gps-488486792811512701 .\!gp-hidden{display:none!important}.gps-488486792811512701 .gp-hidden{display:none}.gps-488486792811512701 .gp-h-5{height:20px}.gps-488486792811512701 .gp-h-full{height:100%}.gps-488486792811512701 .gp-w-5{width:20px}.gps-488486792811512701 .gp-w-full{width:100%}.gps-488486792811512701 .gp-max-w-full{max-width:100%}.gps-488486792811512701 .gp-flex-col{flex-direction:column}.gps-488486792811512701 .gp-items-center{align-items:center}.gps-488486792811512701 .\!gp-justify-center{justify-content:center!important}.gps-488486792811512701 .gp-justify-center{justify-content:center}.gps-488486792811512701 .gp-gap-y-0{row-gap:0}.gps-488486792811512701 .gp-self-center{align-self:center}.gps-488486792811512701 .gp-overflow-hidden{overflow:hidden}.gps-488486792811512701 .gp-break-words{overflow-wrap:break-word}.gps-488486792811512701 .gp-rounded-none{border-radius:0}.gps-488486792811512701 .gp-bg-clip-content{background-clip:content-box}.gps-488486792811512701 .gp-text-g-text-3{color:var(--g-c-text-3)}.gps-488486792811512701 .gp-no-underline{text-decoration-line:none}.gps-488486792811512701 .gp-opacity-25{opacity:.25}.gps-488486792811512701 .gp-opacity-75{opacity:.75}.gps-488486792811512701 .gp-transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488486792811512701 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488486792811512701 .gp-transition-transform{transition-duration:.15s;transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488486792811512701 .gp-duration-200{transition-duration:.2s}.gps-488486792811512701 .gp-duration-300{transition-duration:.3s}.gps-488486792811512701 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-488486792811512701 .disabled\:gp-btn-disabled:disabled{cursor:default}@media (hover:hover) and (pointer:fine){.gps-488486792811512701 .hover\:gp-bg-g-highlight:hover{background-color:var(--g-c-highlight)}}.gps-488486792811512701 .disabled\:gp-pointer-events-none:disabled{pointer-events:none}.gps-488486792811512701 .disabled\:gp-opacity-30:disabled{opacity:.3}@media (hover:hover) and (pointer:fine){.gps-488486792811512701 .gp-group\/hero:hover .group-hover\/hero\:gp-bg-\[color\:var\(--hvr-bgc\2c _var\(--bgc\)\)\]{background-color:var(--hvr-bgc,var(--bgc))}.gps-488486792811512701 .gp-group\/hero:hover .group-hover\/hero\:gp-opacity-\[var\(--hvr-op\2c _var\(--op\)\)\]{opacity:var(--hvr-op,var(--op))}}.gps-488486792811512701 .gp-group[data-state=loading] .group-data-\[state\=loading\]\:gp-visible{visibility:visible}.gps-488486792811512701 .gp-group[data-state=loading] .group-data-\[state\=loading\]\:gp-invisible{visibility:hidden}@keyframes gp-spin{to{transform:rotate(1turn)}}.gps-488486792811512701 .gp-group[data-state=loading] .group-data-\[state\=loading\]\:gp-animate-spin{animation:gp-spin 1s linear infinite}@media (max-width:1023px){.gps-488486792811512701 .tablet\:gp-relative{position:relative}.gps-488486792811512701 .tablet\:\!gp-hidden{display:none!important}.gps-488486792811512701 .tablet\:gp-hidden{display:none}.gps-488486792811512701 .tablet\:\!gp-content-stretch{align-content:stretch!important}.gps-488486792811512701 .tablet\:\!gp-justify-center{justify-content:center!important}}@media (max-width:767px){.gps-488486792811512701 .mobile\:gp-relative{position:relative}.gps-488486792811512701 .mobile\:\!gp-hidden{display:none!important}.gps-488486792811512701 .mobile\:gp-hidden{display:none}.gps-488486792811512701 .mobile\:\!gp-content-stretch{align-content:stretch!important}.gps-488486792811512701 .mobile\:\!gp-justify-center{justify-content:center!important}}@media (max-width:1023px){.gps-488486792811512701 .tablet\:\[\&\>\*\]\:\!gp-justify-center>*{justify-content:center!important}}@media (max-width:767px){.gps-488486792811512701 .mobile\:\[\&\>\*\]\:\!gp-justify-center>*{justify-content:center!important}}.gps-488486792811512701 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}.gps-488486792811512701 .\[\&_p\]\:gp-whitespace-pre-line p{white-space:pre-line} </style>
+  
+      
+      
+            <section
+              class="gp-mx-auto gp-max-w-full"
+              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px"
+            >
+              
     <div
-      label="Block"
-      tag="Col"
-      type="component"
+      id="gAulGu3QRQ"
+        style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--pt:0px;--pb:20px;--pt-mobile:20px;--pb-mobile:20px;--pt-tablet:0px;--pb-tablet:10px;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gAulGu3QRQ gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full"
+    >
+    <div
+      label="Block" tag="Col" type="component"
       style="--jc:start"
       class="gGmNQ9deRR gp-relative gp-flex gp-flex-col"
     >
@@ -301,23 +79,62 @@
             class="gp-overflow-hidden gp-w-full gp-h-full"
             style="--pos:absolute;--pos-tablet:absolute;--pos-mobile:absolute;clip-path:inset(0 0)">
             <div
-              class="gp-overflow-hidden gp-w-full gp-h-full"
-              style="--pos:absolute;--pos-tablet:absolute;--pos-mobile:absolute;clip-path:inset(0 0)"
-            >
-              <div
-                aria-label="Background Image"
-                role="banner"
-                class="gp-hero-banner-bg gp-absolute gp-inset-0 gp-left-[var(--left)] gp-top-[var(--top)] gp-transition-transform gp-flex gp-items-center gp-justify-center gp-bg-clip-content"
-                style="--bgc:var(--g-c-bg-2);--bgc-tablet:var(--g-c-bg-2);--bgc-mobile:var(--g-c-bg-2);--bgi:url({{ "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015" | asset_url }});--bgi-tablet:url({{ "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015" | asset_url }});--bgi-mobile:url({{ "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015" | asset_url }});--bgp:50% 50%;--bgp-tablet:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-tablet:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-tablet:no-repeat;--bgr-mobile:no-repeat;--duration:0.5s;--scale:110%;--top:0;--left:0;--w:100%;--h:100%;--pos:absolute;--bga:scroll;--w-tablet:100%;--h-tablet:100%;--pos-tablet:absolute;--bga-tablet:scroll;--w-mobile:100%;--h-mobile:100%;--pos-mobile:absolute;--bga-mobile:scroll"
-              ></div>
-            </div>
-            <div
-              aria-label="Overlay"
+              aria-label="Background Image"
               role="banner"
               class="gp-hero-banner-bg gp-absolute gp-inset-0 gp-left-[var(--left)] gp-top-[var(--top)] gp-transition-transform gp-flex gp-items-center gp-justify-center gp-bg-clip-content"
               style="--bgc:var(--g-c-bg-2);--bgc-tablet:var(--g-c-bg-2);--bgc-mobile:var(--g-c-bg-2);--bgi:url(https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015);--bgi-tablet:url(https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015);--bgi-mobile:url({{ "484137708004836523-1f0783f8-6f47-4027-9a0d-372219b60bef.jpg" | asset_url }});--bgp:50% 50%;--bgp-tablet:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-tablet:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-tablet:no-repeat;--bgr-mobile:no-repeat;--duration:0.5s;--scale:110%;--top:0;--left:0;--w:100%;--h:100%;--pos:absolute;--bga:scroll;--w-tablet:100%;--h-tablet:100%;--pos-tablet:absolute;--bga-tablet:scroll;--w-mobile:100%;--h-mobile:100%;--pos-mobile:absolute;--bga-mobile:scroll"
             > </div>
           </div>
+          <div
+          aria-label="Overlay"
+          role="banner"
+          class="gp-absolute gp-inset-0 gp-left-[var(--left)] gp-top-[var(--top)] gp-transition-all gp-duration-300 group-hover/hero:gp-bg-[color:var(--hvr-bgc,_var(--bgc))] group-hover/hero:gp-opacity-[var(--hvr-op,_var(--op))]"
+          style="--bgc:#121212;--top:0;--left:0;--op:0%"
+        > </div>
+        </div>
+        
+        
+      
+      
+    <div
+      id
+        style="--cg:32px;--pc:center;--pc-tablet:center;--pc-mobile:center;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 1200px);--w-mobile:var(--g-ct-w, 1200px)"
+        class="gp-hero-banner-row gp-z-1 gp-w-full tablet:gp-relative mobile:gp-relative tablet:[&>*>*]:!gp-justify-undefined mobile:[&>*>*]:!gp-justify-undefined tablet:!gp-content-stretch tablet:[&>*]:!gp-justify-center mobile:!gp-content-stretch mobile:[&>*]:!gp-justify-center gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full"
+    >
+    <div
+      label="Block" tag="Col" type="component"
+      style="--jc:start;--d-mobile:none"
+      class="gC1zLXLedS gp-relative gp-flex gp-flex-col"
+    >
+      
+    </div>
+    </div>
+  
+    
+      </div>
+    </gp-hero-banner>
+    <script src="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-hero-banner.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  <div
+    
+    role="presentation"
+    class="gp-group/image gKQeVdJJX4"
+    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:none;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mb-mobile:0px;--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="gp-h-full gp-w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        
+  {%- liquid
+    assign isFetchPriorityHigh = 'false'
+    
+      assign mediaIndex = 1
+      if forloop
+        assign mediaIndex = forloop.index
+      endif
+      assign sectionPreload = "false"
 
       if section.settings.section_preload == 'true'
         assign sectionPreload = "true"
@@ -334,7 +151,7 @@
       
       draggable="false"
       class="!gp-inline gp-h-full gp-max-w-full gp-flex"
-      src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015" srcset="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015 768w,https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015 1024w,https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015 1440w" width="2000" height="471" alt="Alt image"
+      src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ambassador.avif?v=1716069913" srcset="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ambassador.avif?v=1716069913 768w,https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ambassador.avif?v=1716069913 1024w,https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ambassador.avif?v=1716069913 1440w" width="2000" height="471" alt="Alt image"
       fetchpriority="high"
       sizes="100vw"
       style="--aspect:2000/471;--aspect-tablet:2000/471;--aspect-mobile:2000/471;--objf:cover;--objf-mobile:cover;--h:auto;--h-tablet:auto;--h-mobile:280px;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
@@ -345,185 +162,188 @@
       
       draggable="false"
       class="!gp-inline gp-h-full gp-max-w-full gp-flex gp_lazyload"
-      data-src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015" data-srcset="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015 768w,https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015 1024w,https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-ambassador-program-hero.avif?v=1714951015 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="2000" height="471" alt="Alt image"
+      data-src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ambassador.avif?v=1716069913" data-srcset="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ambassador.avif?v=1716069913 768w,https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ambassador.avif?v=1716069913 1024w,https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ambassador.avif?v=1716069913 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="2000" height="471" alt="Alt image"
       sizes="100vw"
       style="--aspect:2000/471;--aspect-tablet:2000/471;--aspect-mobile:2000/471;--objf:cover;--objf-mobile:cover;--h:auto;--h-tablet:auto;--h-mobile:280px;--bs:none;--bw:0px;--bc:transparent;--radius:var(--g-radius-none);border-radius:inherit"
     />
   {%- endif -%}
   
       </div>
-
-      <div
-        parentTag="Col"
-        id="gOjV2bZrEV"
+  </div>
+      
+      
+    <div
+      parentTag="Col" id="gOjV2bZrEV"
         style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--radius:var(--g-radius-none);--mb:var(--g-s-l);--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:var(--g-s-s);--pt-mobile:16px;--pb-mobile:0px;--cg:32px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 6fr) minmax(0, 6fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
         class="gOjV2bZrEV gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full"
+    >
+    <div
+      label="Block" tag="Col" type="component"
+      style="--jc:start;--jc-mobile:start"
+      class="gfrGvSRJrc gp-relative gp-flex gp-flex-col"
+    >
+      
+  <gp-button style="">
+  <div
+    
+    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--pl-mobile:var(--g-s-s);--ml-tablet:16px;--mb-tablet:0px;--ta:left"
+    class=""
+  >
+    <style>
+    .gWbqVzsjUD.gp-button-base::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      pointer-events: none;
+      border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: #121212;
+  
+      
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      
+    }
+
+    .gWbqVzsjUD:hover::before {
+      
+      
+    }
+  </style>
+    <a
+      href="https://longruncoffee.com/community/ambassador/signup" target="_self" data-id="gWbqVzsjUD" aria-label="SIGN UP"
+      
+      data-state="idle"
+      class="gWbqVzsjUD gp-button-base gp-rounded-none gp-max-w-full gp-relative gp-group gp-inline-flex gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-300 disabled:gp-btn-disabled disabled:gp-opacity-30 disabled:gp-pointer-events-none hover:gp-bg-g-highlight gp-text-g-text-3 gp-g-subheading-1"
+      style="--hvr-bg:var(--g-c-highlight, highlight);--bg:#DD8525;--bblr:4px;--bbrr:4px;--btlr:4px;--btrr:4px;--shadow:none;--c:var(--g-c-text-3, text-3);--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--tt:default;--weight:bold"
+    >
+        <svg
+          class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="gp-opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="gp-opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+
+    
+      <span
+        class="gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-z-1 gp-h-full gp-flex gp-items-center gp-overflow-hidden "
+        style="--tt:default"
       >
-        <div
-          label="Block"
-          tag="Col"
-          type="component"
-          style="--jc:start;--jc-mobile:start"
-          class="gfrGvSRJrc gp-relative gp-flex gp-flex-col"
-        >
-          <gp-button style="">
-            <div
-              style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:0px;--pl-mobile:var(--g-s-s);--ml-tablet:16px;--mb-tablet:0px;--ta:left"
-              class=""
-            >
-              <style>
-                .gWbqVzsjUD.gp-button-base::before {
-                  content: '';
-                  height: 100%;
-                  width: 100%;
-                  position: absolute;
-                  pointer-events: none;
-                  border-style: solid;
-                  border-width: 0px 0px 0px 0px;
-                  border-color: #121212;
-
-                  border-bottom-left-radius: 4px;
-                  border-bottom-right-radius: 4px;
-                  border-top-left-radius: 4px;
-                  border-top-right-radius: 4px;
-                }
-
-                .gWbqVzsjUD:hover::before {
-                }
-              </style>
-              <a
-                href="https://longruncoffee.com/community/ambassador/signup"
-                target="_self"
-                data-id="gWbqVzsjUD"
-                aria-label="SIGN UP"
-
-                data-state="idle"
-                class="gWbqVzsjUD gp-button-base gp-rounded-none gp-max-w-full gp-relative gp-group gp-inline-flex gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-300 disabled:gp-btn-disabled disabled:gp-opacity-30 disabled:gp-pointer-events-none hover:gp-bg-g-highlight gp-text-g-text-3 gp-g-subheading-1"
-                style="--hvr-bg:var(--g-c-highlight, highlight);--bg:#DD8525;--bblr:4px;--bbrr:4px;--btlr:4px;--btrr:4px;--shadow:none;--c:var(--g-c-text-3, text-3);--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--tt:default;--weight:bold"
-              >
-                <svg
-                  class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    class="gp-opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    stroke-width="4"
-                  ></circle>
-                  <path
-                    class="gp-opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
-                </svg>
-
-                <span
-                  class="gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-z-1 gp-h-full gp-flex gp-items-center gp-overflow-hidden "
-                  style="--tt:default"
-                >
-                  {{ section.settings.gWbqVzsjUD_label }}
-                </span>
-              </a>
-            </div>
-          </gp-button>
-        </div>
-        <div
-          label="Block"
-          tag="Col"
-          type="component"
-          style="--jc:start;--jc-mobile:start"
-          class="gnJnOWEuzh gp-relative gp-flex gp-flex-col"
-        >
-          <gp-button style="">
-            <div
-              style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:16px;--pr-mobile:8px;--mb-tablet:0px;--mr-tablet:16px;--ta:left;--ta-mobile:center"
-              class=""
-            >
-              <style>
-                .g3OLcox1kB.gp-button-base::before {
-                  content: '';
-                  height: 100%;
-                  width: 100%;
-                  position: absolute;
-                  pointer-events: none;
-                  border-style: solid;
-                  border-width: 0px 0px 0px 0px;
-                  border-color: #121212;
-
-                  border-bottom-left-radius: 4px;
-                  border-bottom-right-radius: 4px;
-                  border-top-left-radius: 4px;
-                  border-top-right-radius: 4px;
-                }
-
-                .g3OLcox1kB:hover::before {
-                }
-              </style>
-              <a
-                href="https://longruncoffee.recomsale.com"
-                target="_self"
-                data-id="g3OLcox1kB"
-                aria-label="SIGN IN"
-
-                data-state="idle"
-                class="g3OLcox1kB gp-button-base gp-rounded-none gp-max-w-full gp-relative gp-group gp-inline-flex gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-300 disabled:gp-btn-disabled disabled:gp-opacity-30 disabled:gp-pointer-events-none hover:gp-bg-g-highlight gp-text-g-text-3 gp-g-subheading-1"
-                style="--hvr-bg:var(--g-c-highlight, highlight);--bg:#32A4B1;--bblr:4px;--bbrr:4px;--btlr:4px;--btrr:4px;--shadow:none;--c:var(--g-c-text-3, text-3);--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--tt:default;--weight:bold"
-              >
-                <svg
-                  class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    class="gp-opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    stroke-width="4"
-                  ></circle>
-                  <path
-                    class="gp-opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
-                </svg>
-
-                <span
-                  class="gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-z-1 gp-h-full gp-flex gp-items-center gp-overflow-hidden "
-                  style="--tt:default"
-                >
-                  {{ section.settings.g3OLcox1kB_label }}
-                </span>
-              </a>
-            </div>
-          </gp-button>
-        </div>
-      </div>
-    </div>
+        {{ section.settings.ggWbqVzsjUD_label }}
+      </span>
+    </a>
   </div>
-</section>
+  </gp-button>
 
-{% schema %}
-{
-  "name": "Section 1",
-  "tag": "section",
-  "class": "gps-488486792811512701 gps gpsi",
-  "settings": [
+    </div><div
+      label="Block" tag="Col" type="component"
+      style="--jc:start;--jc-mobile:start"
+      class="gnJnOWEuzh gp-relative gp-flex gp-flex-col"
+    >
+      
+  <gp-button style="">
+  <div
+    
+    style="--b:solid;--bc:#121212;--bw:0px;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--radius:var(--g-radius-none);--mb:0px;--mb-mobile:16px;--pr-mobile:8px;--mb-tablet:0px;--mr-tablet:16px;--ta:left;--ta-mobile:center"
+    class=""
+  >
+    <style>
+    .g3OLcox1kB.gp-button-base::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      pointer-events: none;
+      border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: #121212;
+  
+      
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      
+    }
+
+    .g3OLcox1kB:hover::before {
+      
+      
+    }
+  </style>
+    <a
+      href="https://longruncoffee.recomsale.com" target="_self" data-id="g3OLcox1kB" aria-label="SIGN IN"
+      
+      data-state="idle"
+      class="g3OLcox1kB gp-button-base gp-rounded-none gp-max-w-full gp-relative gp-group gp-inline-flex gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-300 disabled:gp-btn-disabled disabled:gp-opacity-30 disabled:gp-pointer-events-none hover:gp-bg-g-highlight gp-text-g-text-3 gp-g-subheading-1"
+      style="--hvr-bg:var(--g-c-highlight, highlight);--bg:#32A4B1;--bblr:4px;--bbrr:4px;--btlr:4px;--btrr:4px;--shadow:none;--c:var(--g-c-text-3, text-3);--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:8px;--pb:8px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:8px;--pb-mobile:8px;--tt:default;--weight:bold"
+    >
+        <svg
+          class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="gp-opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="gp-opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+
+    
+      <span
+        class="gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-z-1 gp-h-full gp-flex gp-items-center gp-overflow-hidden "
+        style="--tt:default"
+      >
+        {{ section.settings.gg3OLcox1kB_label }}
+      </span>
+    </a>
+  </div>
+  </gp-button>
+
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+            </section>
+          
+    
+  {% schema %}
     {
-      "type": "paragraph",
-      "content": "Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=488486792308196221&sectionId=488486792811512701)"
-    },
-    { "type": "text", "label": "section_preload", "id": "section_preload", "default": "false" },
-    { "type": "text", "id": "gWbqVzsjUD_label", "label": "gWbqVzsjUD_label", "default": "SIGN UP" },
-    { "type": "text", "id": "g3OLcox1kB_label", "label": "g3OLcox1kB_label", "default": "SIGN IN" }
-  ],
-  "blocks": [{ "type": "@app" }]
-}
-{% endschema %}
+      
+      "name": "Section 1",
+      "tag": "section",
+      "class": "gps-488486792811512701 gps gpsi",
+      "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=488486792308196221&sectionId=488486792811512701)"},{"type":"text","label":"section_preload","id":"section_preload","default":"false"},{"type":"text","id":"ggWbqVzsjUD_label","label":"ggWbqVzsjUD_label","default":"SIGN UP"},{"type":"text","id":"gg3OLcox1kB_label","label":"gg3OLcox1kB_label","default":"SIGN IN"}],
+      "blocks": [{"type": "@app"}]
+    }
+  {% endschema %}
