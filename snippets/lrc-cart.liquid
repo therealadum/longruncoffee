@@ -1207,7 +1207,7 @@
                             </div>
                         }
                         {
-                            isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.length == 0 ? null : upsellItems.filter(item => {
+                            isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || (cart.items.length == 0 && totalSubscriptionItems == 0) ? null : upsellItems.filter(item => {
                                 let found = false;
                                 cart.items.forEach(ca => {
                                     if (ca.product_id == item.id) {
