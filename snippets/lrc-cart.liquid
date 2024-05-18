@@ -39,14 +39,14 @@
     pro: {
       display_name: "Pro",
       bag_min: 3,
-      perk_list: ['20% savings', 'Free shipping', 'Experimental samples', 'Free Hydro Flask'],
+      perk_list: ['20% savings', 'Free shipping', 'Experimental samples', 'Free Yeti Tumbler'],
       discount: 0.2,
       type: 'pro'
     },
     elite: {
       display_name: "Elite",
       bag_min: 4, // or 5 pound bag
-      perk_list: ['25% savings', 'Free shipping', 'Experimental samples', 'Free Hydro Flask', 'Free BOCO hat'],
+      perk_list: ['25% savings', 'Free shipping', 'Experimental samples', 'Free Yeti Tumbler', 'Free BOCO hat'],
       discount: 0.25,
       type: 'elite'
     }
@@ -130,6 +130,16 @@
         }
     });
     return !foundNonGiftItem;
+  }
+
+  function cartContainsGiftItems(items, totalSubscriptionItems) {
+    let found = false;
+    items.forEach(item => {
+        if (item.product_type === 'Gift') {
+            found = true;
+        }
+    })
+    return found || totalSubscriptionItems > 0;
   }
 
   function diffPlans(plan, nextPlan) {
@@ -474,6 +484,8 @@
     const [loadingUpgrade, setLoadingUpgrade] = React.useState(false);
     const [loadingCheckout, setLoadingCheckout] = React.useState(false);
     const totalSubscriptionItems = getTotalSubscriptionItemsFromCartState(cartState);
+
+    console.log(cart)
 
     const [upsellItems, setUpsellItems] = React.useState([]);
     React.useEffect(() => {
@@ -1072,27 +1084,6 @@
                             </div> : null
                         }
                         {
-                            !isCartOnlyGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
-                                <div className="flex items-center space-x-2">
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Bonus</h4>
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                </div>
-                                <div className="grid grid-cols-3 gap-3">
-                                    {
-                                        cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} header="Stickers. Sweet!" />)
-                                    }
-                                    {
-                                        totalSubscriptionItems > 0 ? <React.Fragment>
-                                            <BonusItem key={1} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/boco-run-hat" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" />
-                                            <BonusItem key={2} title="LRC x Hydro Flask 16oz Bottle" href="/products/hydro-flask-bottle" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/AllHF_ac7e7ecf-911a-4d16-966b-572c13a26f49.png?v=1714937742&width=150" />
-                                            <BonusItem key={3} title="Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} />
-                                        </React.Fragment> : null
-                                    }
-                                </div>
-                            </div> : null
-                        }
-                        {
                             cartState.items.length && (!plan || plan.display_name !== nextPlan.display_name) ? <div className="flex flex-col space-y-4">
                                 <div className="flex items-center space-x-2">
                                     <div className="flex-1 h-1 rounded bg-cyan-700" />
@@ -1120,14 +1111,35 @@
                             </div> : null
                         }
                         {
+                            !isCartOnlyGiftItems(cart.items, totalSubscriptionItems) && cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
+                                <div className="flex items-center space-x-2">
+                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                    <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Free Bonus Items</h4>
+                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                </div>
+                                <div className="grid grid-cols-3 gap-3">
+                                    {
+                                        cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} header="Stickers. Sweet!" />)
+                                    }
+                                    {
+                                        totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
+                                    }
+                                    {
+                                        totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/hydro-flask-bottle" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
+                                    }
+                                    {
+                                        totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/boco-run-hat" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
+                                    }
+                                </div>
+                            </div> : null
+                        }
+                        {
                             isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.length == 0 ? null : <div className="flex flex-col space-y-4">
-                                {
-                                    cartState.items.length && cart.items.length ? <div className="flex items-center space-x-2">
-                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                            <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">One-Time</h4>
-                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    </div> : null
-                                }
+                                <div className="flex items-center space-x-2">
+                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">One-Time</h4>
+                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                </div>
                                 <div className="grid grid-cols-3 gap-3">
                                 {
                                     cart.items.filter(item => item.product_type !== 'Gift').map((item, i) => <CartItem key={item.variant_id} item={item} setCart={setCart} />)
@@ -1195,7 +1207,7 @@
                             </div>
                         }
                         {
-                            (cartState.items.length || cart.items.length) && upsellItems.filter(item => {
+                            isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.length == 0 ? null : upsellItems.filter(item => {
                                 let found = false;
                                 cart.items.forEach(ca => {
                                     if (ca.product_id == item.id) {
@@ -1206,7 +1218,7 @@
                               }).length ? <div className="flex flex-col space-y-4">
                                 <div className="flex items-center space-x-2">
                                     <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Long Run Add Ons</h4>
+                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Add Ons</h4>
                                     <div className="flex-1 h-1 rounded bg-cyan-700" />
                                 </div>
                                 <div className="grid grid-cols-3 gap-3">
