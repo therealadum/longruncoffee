@@ -883,10 +883,6 @@ select {
   position: fixed;
 }
 
-.\!absolute {
-  position: absolute !important;
-}
-
 .absolute {
   position: absolute;
 }
@@ -1343,10 +1339,6 @@ select {
   height: 1px;
 }
 
-.\!min-h-full {
-  min-height: 100% !important;
-}
-
 .min-h-0 {
   min-height: 0px;
 }
@@ -1731,10 +1723,6 @@ select {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
-.\!flex-row {
-  flex-direction: row !important;
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -1745,10 +1733,6 @@ select {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.\!flex-nowrap {
-  flex-wrap: nowrap !important;
 }
 
 .\!content-stretch {
@@ -4605,10 +4589,6 @@ h2#spr-header-title {
 
 .\[\&\>svg\]\:h-auto > svg {
   height: auto;
-}
-
-.\[\&\>svg\]\:h-full > svg {
-  height: 100%;
 }
 
 .\[\&\>svg\]\:\!w-6 > svg {

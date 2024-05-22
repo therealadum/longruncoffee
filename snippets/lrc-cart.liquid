@@ -451,11 +451,13 @@
                 </div>
             </div> : null
         }
-        <img
-            src={image}
-            loading="lazy"
-            className="w-full h-32 object-contain cursor-pointer"
-        />
+        <a href={href}>
+            <img
+                src={image}
+                loading="lazy"
+                className="w-full h-32 object-contain"
+            />
+        </a>
         {
             header ? <h6 className="font-base text-xs text-cyan-800 text-center">
                 {header}
@@ -1125,10 +1127,10 @@
                                         totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
                                     }
                                     {
-                                        totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/hydro-flask-bottle" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
+                                        totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
                                     }
                                     {
-                                        totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/boco-run-hat" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
+                                        totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/club-exclusive-lrc-x-boco-run-hat-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
                                     }
                                     {
                                         totalSubscriptionItems > 0 && new Date() < new Date("May 24, 2024 12:00:00") ? <BonusItem key={4} title="Limited Offer - 1 Free Bag of Run Brunch" href="/blogs/news/run-brunch-is-here" header="Flavor selected post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/gempages_484137708004836523-f35452c1-f0c8-4d53-a53d-8d78405d9b8d.png?v=1715978716" /> : null
