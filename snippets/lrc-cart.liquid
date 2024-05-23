@@ -247,7 +247,7 @@
                         className="w-4 h-4 text-cyan-400"
                     >
                         <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
-                    </svg> : <span className="flex items-end self-center"><span className="text-sm">{state.editQuantity}</span><span className="text-xs">x</span></span>
+                    </svg> : <span className="flex items-end self-center"><span className="text-sm" data-testid={`cart-subscription-quantity-${item.variant.id}`}>{state.editQuantity}</span><span className="text-xs">x</span></span>
                 }
             </button>
         </div>
@@ -595,14 +595,15 @@
                         product,
                         variantID: variantId,
                         variant,
-                        quantity: 1
+                        quantity
                     }
 
                     if (await klaviyo.isIdentified()) {
                         // report to klayvio
                         klaviyo.push(['track', 'add_subscription_item_to_cart', {
                             'product_id' : product.id,
-                            'variant_id': variantId
+                            'variant_id': variantId,
+                            'quantity': quantity
                         }]);
                     }
 
@@ -625,7 +626,7 @@
                             ...cartState,
                             items: [...cartState.items, {
                                 ...item,
-                                quantity: 1
+                                quantity
                             }]
                         })
                     }
@@ -996,7 +997,7 @@
         });
     };
 
-    return <div className={`relative ${isOpen === true ? 'z-50' : '-z-10'}`} aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    return <div data-testid="lrc-cart" className={`relative ${isOpen === true ? 'z-50' : '-z-10'}`} aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
         {
             isOpen ? <div className="fixed inset-0 -z-10 bg-slate-900/20 cursor-pointer" /> : null
         }
