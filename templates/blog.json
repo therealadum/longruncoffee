@@ -9,7 +9,7 @@
       "settings": {
         "layout": "component-grid",
         "show_image": true,
-        "image_height": "compact",
+        "image_height": "160px",
         "show_date": true,
         "show_author": false,
         "padding_top": 36,
