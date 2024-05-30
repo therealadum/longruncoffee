@@ -33,14 +33,8 @@
       >
         
   {%- liquid
-    assign mediaIndex = 1
-    if forloop
-      assign mediaIndex = forloop.index
-    endif
     assign isFetchPriorityHigh = 'false'
-    if section.index == 1 and 'false' == 'true' and mediaIndex == 1
-      assign isFetchPriorityHigh = 'true'
-    endif
+    
   -%}
   {%- if isFetchPriorityHigh == 'true' -%}
     <img
@@ -79,12 +73,7 @@
       "name": "Section 5",
       "tag": "section",
       "class": "gps-488223199679480701 gps gpsi",
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=487646738010604413&sectionId=488223199679480701)"
-        }
-      ],
+      "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/bold/app/shopify/edit?pageType=GP_STATIC&editorId=487646738010604413&sectionId=488223199679480701)"},{"type":"text","label":"section_preload","id":"section_preload","default":"false"}],
       "blocks": [{"type": "@app"}]
     }
   {% endschema %}
