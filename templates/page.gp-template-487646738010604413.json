@@ -3,47 +3,76 @@
     "gp_section_488219233226851340": {
       "type": "gp-section-488219233226851340",
       "settings": {
-        "section_preload": "true"
+        "section_preload": "true",
+        "ggB0LPpmzDO_label": "Original Roasts",
+        "gg7wD3pIrLC_label": "Flavored Roasts"
       }
     },
     "gp_section_488221199600452620": {
       "type": "gp-section-488221199600452620",
       "settings": {
+        "section_preload": "false",
+        "gg4bIj3HCq6_label": "Original Roasts",
+        "ggTkMdc6O4E_label": "Flavored Roasts"
       }
     },
     "gp_section_504260315018429319": {
       "type": "gp-section-504260315018429319",
       "settings": {
+        "section_preload": "false"
+      }
+    },
+    "1717031157d20f663a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_homepage_jCih9Y": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_homepage_jCih9Y"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "gp_section_504274081412023175": {
       "type": "gp-section-504274081412023175",
       "settings": {
+        "section_preload": "false"
       }
     },
     "gp_section_488223199679480701": {
       "type": "gp-section-488223199679480701",
       "settings": {
+        "section_preload": "false"
       }
     },
     "gp_section_488226464139838333": {
       "type": "gp-section-488226464139838333",
       "settings": {
+        "section_preload": "false"
       }
     },
     "gp_section_488228003466183692": {
       "type": "gp-section-488228003466183692",
       "settings": {
+        "section_preload": "false"
       }
     },
     "gp_section_488224660119356428": {
       "type": "gp-section-488224660119356428",
       "settings": {
+        "section_preload": "false"
       }
     },
     "gp_section_504259848930591623": {
       "type": "gp-section-504259848930591623",
       "settings": {
+        "section_preload": "false"
       }
     }
   },
@@ -51,6 +80,7 @@
     "gp_section_488219233226851340",
     "gp_section_488221199600452620",
     "gp_section_504260315018429319",
+    "1717031157d20f663a",
     "gp_section_504274081412023175",
     "gp_section_488223199679480701",
     "gp_section_488226464139838333",
