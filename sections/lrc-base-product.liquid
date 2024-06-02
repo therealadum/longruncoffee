@@ -309,8 +309,8 @@
             quantity: productForm.quantity
           } }))
         }}
-        disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0)) || isLoading}
-        className={`shadow-lg shadow-tan-900/50 rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
+        disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] <= 0)) || isLoading}
+        className={`shadow-lg shadow-tan-900/50 rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] <= 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
       >
         {isLoading ? <svg className="animate-spin h-4 w-4 text-tan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
@@ -448,8 +448,8 @@
                 quantity: productForm.quantity
               } }))
             }}
-            disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0)) || isLoading}
-            className={`rounded-full text-base flex items-center w-40 justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
+            disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] <= 0)) || isLoading}
+            className={`rounded-full text-base flex items-center w-40 justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] <= 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
           >
             {isLoading ? <svg className="animate-spin h-4 w-4 text-tan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
@@ -1634,7 +1634,7 @@
                       <div className="w-5 h-5 lg:w-6 lg:h-6 rounded-full border border-cyan-700 flex items-center justify-center">
                         {!productForm.isSubscription ? <div className="h-2 w-2 lg:w-3 lg:h-3 rounded-full bg-cyan-400" /> : null}
                       </div>
-                      <h4 className={`text-left flex-1 font-accent text-xl lg:text-2xl tracking-tight ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"} ${variantQuantityMap[variantID] == 0 ? 'line-through' : ''}`}>One-Time Purchase</h4>
+                      <h4 className={`text-left flex-1 font-accent text-xl lg:text-2xl tracking-tight ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"} ${variantQuantityMap[variantID] <= 0 ? 'line-through' : ''}`}>One-Time Purchase</h4>
                       <div className="text-sm flex space-x-1 font-base">
                       {
                         variantQuantityMap[variantID] > 0
@@ -1724,6 +1724,10 @@
                   <button
                       data-testid="lrc-add-to-cart-button"
                       onClick={() =>  {
+                        console.log(`product.available: ${product.available}`);
+                        console.log(`productForm.isSubscription: ${productForm.isSubscription}`);
+                        console.log(`variantQuantityMap[variantID]: ${variantQuantityMap[variantID]}`);
+
                         setIsLoading(true);
                         document.dispatchEvent(new CustomEvent('buy_button', { detail: {
                           available: product.available,
@@ -1732,8 +1736,8 @@
                           quantity: productForm.quantity
                         } }))
                       }}
-                      disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0)) || isLoading}
-                      className={`rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
+                      disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] <= 0)) || isLoading}
+                      className={`rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] <= 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
                     >
                       {isLoading ? <svg className="animate-spin h-4 w-4 text-tan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
