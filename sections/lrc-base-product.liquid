@@ -1,4 +1,4 @@
-<div id="lrc-base-product" class="z-0 relative"></div>
+<div id="lrc-base-product" class="z-30 relative"></div>
 
 <script
   type="text/babel"
@@ -50,6 +50,94 @@
     }, []);
 
     return windowSize.width < 500
+  }
+
+  function getProductCosts(variant, quantity, subscriptionItems) {
+    if (!variant || !quantity) {
+      return {
+        subscribe_and_save_total_cost: 0,
+        subscribe_and_save_discounted_cost: 0,
+        one_time_total_cost: 0,
+        one_time_compare_at_cost: 0,
+      }
+    }
+
+    let qty = 0;
+    subscriptionItems.forEach(item => qty += item.quantity)
+    qty += quantity;
+
+    // get tier
+    let plan = plans.base;
+    if (qty >= plans.elite.bag_min) {
+      plan = plans.elite;
+    } else if (qty >= plans.pro.bag_min) {
+      plan = plans.pro;
+    }
+
+    return {
+      subscribe_and_save_total_cost: ((variant.price * quantity) / 100).toFixed(2),
+      subscribe_and_save_discounted_cost: ((variant.price * quantity * (1-plan.discount)) / 100).toFixed(2),
+      one_time_total_cost: ((variant.price * quantity) / 100).toFixed(2),
+      one_time_compare_at_cost: variant.compare_at_price ? ((variant.compare_at_price * quantity) / 100).toFixed(2) : ((variant.price * quantity) / 100).toFixed(2)
+    }
+  }
+
+  function useProductCosts(variant, quantity) {
+    const [subscriptionItems, setSubscriptionItems] = React.useState(localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)).items : []);
+
+    React.useEffect(() => {
+      const handler = (data) => {
+        setSubscriptionItems(localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)).items : [])
+      }
+      document.addEventListener('subscription_changed', handler);
+      return () => {
+        document.removeEventListener('subscription_changed', handler);
+      }
+    }, [setSubscriptionItems])
+
+    if (!variant || !quantity) {
+      return {
+        subscribe_and_save_total_cost: 0,
+        subscribe_and_save_discounted_cost: 0,
+        one_time_total_cost: 0,
+        one_time_compare_at_cost: 0,
+      }
+    }
+
+    let qty = 0;
+    subscriptionItems.forEach(item => qty += item.quantity)
+    qty += quantity;
+
+    // get tier
+    let plan = plans.base;
+    if (qty >= plans.elite.bag_min) {
+      plan = plans.elite;
+    } else if (qty >= plans.pro.bag_min) {
+      plan = plans.pro;
+    }
+
+    return {
+      subscribe_and_save_total_cost: ((variant.price * quantity) / 100).toFixed(2),
+      subscribe_and_save_discounted_cost: ((variant.price * quantity * (1-plan.discount)) / 100).toFixed(2),
+      one_time_total_cost: ((variant.price * quantity) / 100).toFixed(2),
+      one_time_compare_at_cost: variant.compare_at_price ? ((variant.compare_at_price * quantity) / 100).toFixed(2) : ((variant.price * quantity) / 100).toFixed(2)
+    }
+  }
+
+  function getServingCostSize(sizeString) {
+    let denominator = 1;
+    switch (sizeString) {
+      case "12 oz":
+        denominator = 30;
+        break;
+      case "1 lbs":
+        denominator = 40;
+        break;
+      case "5 lbs":
+        denominator = 200;
+        break;
+    }
+    return denominator;
   }
 
   function isRechargeAvailableOnProduct(product) {
@@ -140,6 +228,232 @@
         ({{ product.metafields.reviews.rating_count | default: 4 }})
       </span>
     </div>
+  }
+
+  const useScreenSize = () => {
+    const [screenSize, setScreenSize] = React.useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  
+    React.useEffect(() => {
+      const handleResize = () => {
+        setScreenSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
+    return screenSize;
+  };
+
+  function OnScrollBuyButton({ product, variantID, productForm, setProductForm, variantQuantityMap, variant, variantCost, discountInformation }) {
+    const [scrollPosition, setScrollPosition] = React.useState(0);
+    const [isLoading, setIsLoading] = React.useState(false);
+    const { width } = useScreenSize();
+    const productCosts = useProductCosts(variant, productForm.quantity)
+
+    const [isSelectingDelivery, setIsSelectingDelivery] = React.useState(false);
+    const [isSelectingQuantity, setIsSelectingQuantity] = React.useState(false);
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    React.useEffect(() => {
+      const handler = () => {
+        setIsLoading(false);
+      };
+      document.addEventListener('buy_button_complete', handler);
+      return () => {
+        document.removeEventListener('buy_button_complete', handler);
+      }
+    }, [setIsLoading])
+
+    React.useEffect(() => {
+      const handler = () => {
+        setIsLoading(true);
+      };
+      document.addEventListener('buy_button_retry', handler);
+      return () => {
+        document.removeEventListener('buy_button_retry', handler);
+      }
+    }, [setIsLoading])
+
+    // mobile -- desktop
+    return scrollPosition > 1300 && width < 700 ? <div className="fixed z-30 bottom-0 left-0 right-0 p-4 flex">
+      <button
+        data-testid="lrc-on-scroll-add-to-cart-button"
+        onClick={() =>  {
+          setIsLoading(true);
+          document.dispatchEvent(new CustomEvent('buy_button', { detail: {
+            available: product.available,
+            variantId: variantID,
+            isSubscription: productForm.isSubscription,
+            quantity: productForm.quantity
+          } }))
+        }}
+        disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0)) || isLoading}
+        className={`shadow-lg shadow-tan-900/50 rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
+      >
+        {isLoading ? <svg className="animate-spin h-4 w-4 text-tan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+        </svg> : productForm.isSubscription ? `Add to Bag - $${productCosts.subscribe_and_save_discounted_cost}` : product.available ? `Add to Cart - $${productCosts.one_time_total_cost}` : 'Out of Stock'}
+      </button>
+    </div> : scrollPosition > 860 && width >= 700 ? <div className="fixed z-30 bottom-8 left-8 right-8 flex">
+      <div className="w-full shadow-lg shadow-cyan-900/50 rounded-full border border-cyan-900/50 bg-white flex items-center space-x-4 p-4">
+        <img
+          src={`https://${product.images[0]}?width=150`}
+          loading="lazy"
+          width="150"
+          height="150"
+          className="ml-4 w-16 h-16 object-contain"
+          alt="Product image"
+        />
+        <div className="flex flex-col space-y-2">
+          <h4 className="font-accent text-xl lg:text-2xl text-cyan-700 tracking-tight">{product.title}</h4>
+          <ReviewSummary />
+        </div>
+        <div className="flex-1 justify-end flex space-x-8">
+          <div className="hidden lg:flex items-center relative w-32 border rounded-md bg-white border-cyan-500 group hover:border-cyan-600 ">
+            <span onClick={() => setIsSelectingQuantity(!isSelectingQuantity)} className="w-full text-base font-accent rounded p-3 ml-1 mb-0.5 cursor-pointer text-cyan-600 group-hover:text-cyan-700">{productForm.quantity}</span>
+            <span className="absolute bg-white text-sm z-10 -bottom-2 left-2 px-1">Quantity</span>
+            {
+              isSelectingQuantity
+                ? <div className="z-20 py-1 rounded-md bg-white border border-cyan-600 absolute -top-2 left-0 right-0 w-full -translate-y-full flex flex-col">
+                    <span onClick={() => {
+                      setProductForm({
+                        ...productForm,
+                        quantity: 1
+                      })
+                      setIsSelectingQuantity(false)
+                    }} className="text-base font-accent rounded p-3 ml-1 cursor-pointer text-cyan-600 hover:text-cyan-700">1</span>
+                    <div className="w-full h-px bg-cyan-50" />
+                    <span onClick={() => {
+                      setProductForm({
+                        ...productForm,
+                        quantity: 2
+                      })
+                      setIsSelectingQuantity(false)
+                    }} className="text-base font-accent rounded p-3 ml-1 cursor-pointer text-cyan-600 hover:text-cyan-700">2</span>
+                    <div className="w-full h-px bg-cyan-50" />
+                    <span onClick={() => {
+                      setProductForm({
+                        ...productForm,
+                        quantity: 3
+                      })
+                      setIsSelectingQuantity(false)
+                    }} className="text-base font-accent rounded p-3 ml-1 cursor-pointer text-cyan-600 hover:text-cyan-700">3</span>
+                </div>
+              : null
+            }
+          </div>
+          {
+            isRechargeAvailableOnProduct(product)
+              ? <div className="hidden lg:flex items-center relative w-48 border rounded-md bg-white border-cyan-500 group hover:border-cyan-600 ">
+                  <span onClick={() => setIsSelectingDelivery(!isSelectingDelivery)} className="w-full text-base font-accent rounded p-3 mb-0.5 cursor-pointer text-cyan-600 group-hover:text-cyan-700">{productForm.isSubscription ? 'Ship every 30 days' : 'One-time order'}</span>
+                  <span className="absolute bg-white text-sm z-10 -bottom-2 left-2 px-1">Delivery</span>
+                  {
+                    isSelectingDelivery
+                      ? <div className="z-20 py-1 rounded-md bg-white border border-cyan-600 absolute -top-2 left-0 right-0 w-full -translate-y-full flex flex-col">
+                          <span onClick={() => {
+                            setProductForm({
+                              ...productForm,
+                              isSubscription: true
+                            })
+                            setIsSelectingDelivery(false)
+                          }} className="text-base font-accent rounded p-3 cursor-pointer text-cyan-600 hover:text-cyan-700">Ship every 30 days</span>
+                          <div className="w-full h-px bg-cyan-50" />
+                          <span onClick={() => {
+                            setProductForm({
+                              ...productForm,
+                              isSubscription: false
+                            })
+                            setIsSelectingDelivery(false)
+                          }} className="text-base font-accent rounded p-3 cursor-pointer text-cyan-600 hover:text-cyan-700">One-time order</span>
+                        </div>
+                      : null
+                  }
+                </div>
+              : null
+          }
+          <div className="flex flex-col justify-center w-48 items-end">
+            <div className="flex items-center space-x-2">
+              {
+                !productForm.isSubscription ? 
+                  (variantQuantityMap[variantID] > 0 ? (productCosts.one_time_compare_at_cost != productCosts.one_time_total_cost
+                  ? 
+                  <React.Fragment>
+                    <span className={`line-through ${!productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>
+                      ${productCosts.one_time_compare_at_cost}
+                    </span>
+                    <span className={`font-medium text-right ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>
+                      ${productCosts.one_time_total_cost}
+                    </span>
+                  </React.Fragment>
+                    : 
+                  <span className={`font-medium text-right w-full ${productForm.isSubscription ? "text-neutral-300" : "text-neutral-500"}`}>
+                    ${productCosts.one_time_total_cost}</span>
+                  )
+                  : <span className="text-neutral-300">sold out</span>)
+                : !isRechargeAvailableOnProduct(product) ? 
+                  <span className="text-neutral-300">unavailable</span>
+                  : 
+                  <React.Fragment>
+                    <span className={`line-through ${productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>
+                      ${productCosts.subscribe_and_save_total_cost}
+                    </span>
+                    <span className={`font-medium ${productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>
+                      ${productCosts.subscribe_and_save_discounted_cost}
+                    </span>
+                  </React.Fragment>
+              }
+            </div>
+            {
+              product.tags.indexOf('All Coffee') !== -1
+                ? <span className="text-base w-full text-right">${((productForm.isSubscription ? productCosts.subscribe_and_save_discounted_cost : productCosts.one_time_total_cost) / (getServingCostSize(variant.option1) * productForm.quantity)).toFixed(2)} / serving</span>
+                : null
+            }
+          </div>
+          <button
+            data-testid="lrc-on-scroll-add-to-cart-button"
+            onClick={() =>  {
+              setIsLoading(true);
+              document.dispatchEvent(new CustomEvent('buy_button', { detail: {
+                available: product.available,
+                variantId: variantID,
+                isSubscription: productForm.isSubscription,
+                quantity: productForm.quantity
+              } }))
+            }}
+            disabled={productForm.isSubscription && !isRechargeAvailableOnProduct(product) || (!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0)) || isLoading}
+            className={`rounded-full text-base flex items-center w-40 justify-center text-center py-3 px-4 font-accent border ${!productForm.isSubscription && (!product.available || variantQuantityMap[variantID] == 0) ? 'border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer'}`}
+          >
+            {isLoading ? <svg className="animate-spin h-4 w-4 text-tan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+            </svg> : productForm.isSubscription ? "Add to Bag" : product.available ? "Add to Cart" : 'Out of Stock'}
+          </button>
+        </div>
+      </div>
+    </div> : null
   }
 
   function Tags() {
@@ -275,20 +589,32 @@
       return () => {
         document.removeEventListener('buy_button_complete', handler);
       }
-    }, [isLoading, setIsLoading])
+    }, [setIsLoading])
 
+    React.useEffect(() => {
+      const handler = () => {
+        setIsLoading(true);
+      };
+      document.addEventListener('buy_button_retry', handler);
+      return () => {
+        document.removeEventListener('buy_button_retry', handler);
+      }
+    }, [setIsLoading])
+
+    const [subscriptionItems, setSubscriptionItems] = React.useState(localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)).items : []);
     React.useEffect(() => {
       const handler = (data) => {
         setDiscountInformation({
           discount: data.detail.newDiscount,
           nextPlan: data.detail.nextPlan
         })
+        setSubscriptionItems(localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)).items : [])
       }
       document.addEventListener('subscription_changed', handler);
       return () => {
         document.removeEventListener('subscription_changed', handler);
       }
-    }, [discountInformation, setDiscountInformation]);
+    }, [discountInformation, setDiscountInformation, setSubscriptionItems]);
 
     const [amountUntilFreeShipping, setAmountUntilFreeShipping] = React.useState(5900);
     React.useEffect(() => {
@@ -302,8 +628,10 @@
     }, [setAmountUntilFreeShipping]);
 
     const isMobile = useIsMobile();
+    const productCosts = useProductCosts(variant, productForm.quantity)
 
-    return product ? <div className="relative bg-cyan-50 bg-opacity-20">
+    return product ? <div className="relative bg-cyan-50 bg-opacity-20 z-30">
+      <OnScrollBuyButton product={product} variantID={variantID} productForm={productForm} setProductForm={setProductForm} variantQuantityMap={variantQuantityMap} variant={variant} variantCost={variantCost} discountInformation={discountInformation}/>
       <div className="flex flex-col p-4 lg:py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           <div className="flex flex-col space-y-4">
@@ -391,6 +719,29 @@
                           if (product && product.tags && product.tags.includes('All Coffee')) {
                             switch(option.name) {
                               case "Size":
+                                let optionVariant = null;
+                                for (let i = 0; i < product.variants.length; i++) {
+                                  let foundMatch = true;
+                                  const productFormOptionKeyValues = Object.keys(productForm.options).map(k => {
+                                    if (k == option.name) {
+                                      return v;
+                                    } else {
+                                      return productForm.options[k];
+                                    }
+                                  });
+                                  for (let j = 0; j < productFormOptionKeyValues.length; j++) {
+                                    // can just substring match on object.keys values because we
+                                    // should have all unique options
+                                    if (!product.variants[i].options.includes(productFormOptionKeyValues[j])) {
+                                      foundMatch = false;
+                                      break;
+                                    }
+                                  }
+                                  if (foundMatch) {
+                                    optionVariant = product.variants[i];
+                                  }
+                                }
+                                const optionCosts = getProductCosts(optionVariant, productForm.quantity, subscriptionItems)
                                 return <button
                                   data-testid={`product-page-option-${option.name}-${v}`}
                                   key={v}
@@ -405,7 +756,7 @@
                                   className={`text-base font-accent border-[0.5px] rounded p-3 relative flex flex-col justify-center items-center ${productForm.options[option.name] === v ? "bg-cyan-200/90 border-cyan-600 text-cyan-700" : "border-cyan-500 text-cyan-600 hover:bg-cyan-100 hover:border-cyan-600 hover:text-cyan-700"}`}
                                 >
                                   <span className="text-lg font-accent">{v}</span>
-                                  <span className="text-sm -mt-1">{calculateServingCost(productForm.isSubscription ? discountInformation.discount : 0, product, v)}</span>
+                                  <span className="text-sm -mt-1">${((productForm.isSubscription ? optionCosts.subscribe_and_save_discounted_cost : optionCosts.one_time_total_cost) / (getServingCostSize(v) * productForm.quantity)).toFixed(2)} / serving</span>
                                 </button>
                                 case "Form":
                                   return <button
@@ -1255,7 +1606,18 @@
                     <h4 className={`text-left flex-1 font-accent text-xl lg:text-2xl tracking-tight ${productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"} ${!isRechargeAvailableOnProduct(product) ? 'line-through' : ''}`}>Subscribe & Save</h4>
                     <div className="text-sm flex space-x-1 font-base">
                       {
-                        !isRechargeAvailableOnProduct(product) ? <span className="text-neutral-300">unavailable</span> : <React.Fragment><span className={`line-through ${productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>${(variantCost / 100).toFixed(2)}</span><span className={`font-medium ${productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>${((variantCost * (1-discountInformation.discount)) / 100).toFixed(2)}</span></React.Fragment>
+                        !isRechargeAvailableOnProduct(product)
+                        ?
+                          <span className="text-neutral-300">unavailable</span>
+                        : 
+                          <React.Fragment>
+                            <span className={`line-through ${productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>
+                              ${productCosts.subscribe_and_save_total_cost}
+                            </span>
+                            <span className={`font-medium ${productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>
+                              ${productCosts.subscribe_and_save_discounted_cost}
+                            </span>
+                          </React.Fragment>
                       }
                     </div>
                   </button>
@@ -1270,7 +1632,24 @@
                       <h4 className={`text-left flex-1 font-accent text-xl lg:text-2xl tracking-tight ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"} ${variantQuantityMap[variantID] == 0 ? 'line-through' : ''}`}>One-Time Purchase</h4>
                       <div className="text-sm flex space-x-1 font-base">
                       {
-                        variantQuantityMap[variantID] > 0 ? (variant && variant.compare_at_price && variant.compare_at_price !== variant.price && !(product.available || variantQuantityMap[variantID] > 0) ? <React.Fragment><span className={`line-through ${!productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>${(variant.compare_at_price * productForm.quantity / 100).toFixed(2)}</span><span className={`font-medium ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>${(variant.price * productForm.quantity / 100).toFixed(2)}</span></React.Fragment> : <span className={`font-medium text-sm ${productForm.isSubscription ? "text-neutral-300" : "text-neutral-500"}`}>${(variantCost * productForm.quantity / 100).toFixed(2)}</span>) : <span className="text-neutral-300">sold out</span>
+                        variantQuantityMap[variantID] > 0
+                          ? 
+                            (productCosts.one_time_compare_at_cost != productCosts.one_time_total_cost 
+                              ? 
+                                <React.Fragment>
+                                  <span className={`line-through ${!productForm.isSubscription ? "text-neutral-500" : "text-neutral-300"}`}>
+                                    ${productCosts.one_time_compare_at_cost}
+                                  </span>
+                                  <span className={`font-medium ${!productForm.isSubscription ? "text-cyan-700" : "text-neutral-300"}`}>
+                                    ${productCosts.one_time_total_cost}
+                                  </span>
+                                </React.Fragment>
+                              : 
+                                <span className={`font-medium text-sm ${productForm.isSubscription ? "text-neutral-300" : "text-neutral-500"}`}>
+                                  ${productCosts.one_time_total_cost}</span>
+                            )
+                          :
+                            <span className="text-neutral-300">sold out</span>
                       }
                       </div>
                     </button>

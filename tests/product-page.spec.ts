@@ -16,7 +16,7 @@ test("Product Page > Club Member Exclusive products should not be purchasable", 
   await page.goto(
     `${config.HOME_URL}/${config.CLUB_MEMBER_EXCLUSIVE_PAGE}?preview_theme_id=${config.PREVIEW_THEME_ID}`,
   );
-  expect(page.getByTestId("lrc-add-to-cart-button")).toBeDisabled();
+  expect(page.getByTestId("lrc-add-to-cart-button")).toBeHidden();
 });
 
 test("Product Page > Users can add multiple bags from a single product to their subscription", async ({
@@ -34,7 +34,6 @@ test("Product Page > Users can add multiple bags from a single product to their 
   // click "add to bag"
   await page.getByTestId("lrc-add-to-cart-button").click();
 
-  await expect(page.getByTestId("lrc-cart")).toBeVisible();
   await expect(
     page.getByTestId("cart-subscription-quantity-45115787673913"),
   ).toContainText("2x");

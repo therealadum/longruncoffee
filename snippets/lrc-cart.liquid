@@ -487,8 +487,6 @@
     const [loadingCheckout, setLoadingCheckout] = React.useState(false);
     const totalSubscriptionItems = getTotalSubscriptionItemsFromCartState(cartState);
 
-    console.log(cart)
-
     const [upsellItems, setUpsellItems] = React.useState([]);
     React.useEffect(() => {
         let mounted = true;
@@ -574,98 +572,112 @@
         }
     }, [totalSubscriptionItems, setCart, cart]) */
 
+    const [error, setError] = React.useState(null)
     React.useEffect(() => {
         const handler = async function(event) {
             const { variantId, isSubscription, quantity, available } = event.detail
-            const url = window.location.href.split('/')
-            const product_hash = url[url.length - 1]
+            try {
+                const url = window.location.href.split('/')
+                const product_hash = url[url.length - 1]
 
-            if (isSubscription) {
-                if (variantId && product_hash) {
-                    const data = await fetch(window.Shopify.routes.root + `products/${product_hash}.js`);
-                    const product = await data.json();
+                if (isSubscription) {
+                    if (variantId && product_hash) {
+                        const data = await fetch(window.Shopify.routes.root + `products/${product_hash}.js`);
+                        const product = await data.json();
 
-                    let variant;
-                    for (let j = 0; j < product.variants.length; j++) {
-                        if (product.variants[j].id == variantId) {
-                            variant = product.variants[j];
+                        let variant;
+                        for (let j = 0; j < product.variants.length; j++) {
+                            if (product.variants[j].id == variantId) {
+                                variant = product.variants[j];
+                            }
                         }
-                    }
-                    const item = {
-                        product,
-                        variantID: variantId,
-                        variant,
-                        quantity
-                    }
-
-                    if (await klaviyo.isIdentified()) {
-                        // report to klayvio
-                        klaviyo.push(['track', 'add_subscription_item_to_cart', {
-                            'product_id' : product.id,
-                            'variant_id': variantId,
-                            'quantity': quantity
-                        }]);
-                    }
-
-                    // if already in subscriptions, add quantity - otherwise add new item
-                    let existingItemIndex = null;
-                    for (let j = 0; j < cartState.items.length; j++) {
-                        if (cartState.items[j].variantID === item.variantID) {
-                            existingItemIndex = j;
+                        const item = {
+                            product,
+                            variantID: variantId,
+                            variant,
+                            quantity
                         }
-                    }
-                    if (existingItemIndex !== null) {
-                        const newItems = [...cartState.items];
-                        newItems[existingItemIndex].quantity += 1;
-                        setCartState({
-                            ...cartState,
-                            items: newItems
-                        })
+
+                        if (await klaviyo.isIdentified()) {
+                            // report to klayvio
+                            klaviyo.push(['track', 'add_subscription_item_to_cart', {
+                                'product_id' : product.id,
+                                'variant_id': variantId,
+                                'quantity': quantity
+                            }]);
+                        }
+
+                        // if already in subscriptions, add quantity - otherwise add new item
+                        let existingItemIndex = null;
+                        for (let j = 0; j < cartState.items.length; j++) {
+                            if (cartState.items[j].variantID === item.variantID) {
+                                existingItemIndex = j;
+                            }
+                        }
+                        if (existingItemIndex !== null) {
+                            const newItems = [...cartState.items];
+                            newItems[existingItemIndex].quantity += quantity;
+                            setCartState({
+                                ...cartState,
+                                items: newItems
+                            })
+                        } else {
+                            setCartState({
+                                ...cartState,
+                                items: [...cartState.items, {
+                                    ...item,
+                                    quantity
+                                }]
+                            })
+                        }
+                        setIsOpen(true);
+                        document.dispatchEvent(new CustomEvent('buy_button_complete'))
                     } else {
-                        setCartState({
-                            ...cartState,
-                            items: [...cartState.items, {
-                                ...item,
+                        console.log('not found.');
+                        document.dispatchEvent(new CustomEvent('buy_button_complete'));
+                    }
+                } else if (available) {
+                    fetch(window.Shopify.routes.root + 'cart/add.js', {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            items: [{
+                                'id': variantId,
                                 quantity
                             }]
                         })
-                    }
-                    setIsOpen(true);
-                    document.dispatchEvent(new CustomEvent('buy_button_complete'))
-                } else {
-                    console.log('not found.');
-                    document.dispatchEvent(new CustomEvent('buy_button_complete'));
-                }
-            } else if (available) {
-                fetch(window.Shopify.routes.root + 'cart/add.js', {
-                    method: 'POST',
-                    headers: {
-                    'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        items: [{
-                            'id': variantId,
-                            quantity
-                        }]
                     })
-                })
-                .then(async response => {
-                    const newCart = await getCart();
-                    setCart(newCart);
-                    setIsOpen(true);
+                    .then(async response => {
+                        const newCart = await getCart();
+                        setCart(newCart);
+                        setIsOpen(true);
+                        document.dispatchEvent(new CustomEvent('buy_button_complete'));
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        document.dispatchEvent(new CustomEvent('buy_button_complete'));
+                    });
+                }
+            } catch (e) {
+                console.error(e);
+                if (!error) {
                     document.dispatchEvent(new CustomEvent('buy_button_complete'));
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    document.dispatchEvent(new CustomEvent('buy_button_complete'));
-                });
+                    setError({
+                        msg: e,
+                        callback: () => document.dispatchEvent(new CustomEvent('buy_button', {
+                            detail: { variantId, isSubscription, quantity, available }
+                        }))
+                    })
+                }
             }
         };
         document.addEventListener('buy_button', handler);
         return () => {
           document.removeEventListener('buy_button', handler)
         }
-    }, [setCartState, setIsOpen, setCart]);
+    }, [setCartState, setIsOpen, setCart, setError]);
 
     const plan = React.useMemo(() => getPlanFromCartState(totalSubscriptionItems), [totalSubscriptionItems]);
     const nextPlan = React.useMemo(() => getNextPlanFromCartState(totalSubscriptionItems), [totalSubscriptionItems]);
@@ -997,284 +1009,318 @@
         });
     };
 
-    return <div data-testid="lrc-cart" className={`relative ${isOpen === true ? 'z-50' : '-z-10'}`} aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    return <React.Fragment>
         {
-            isOpen ? <div className="fixed inset-0 -z-10 bg-slate-900/20 cursor-pointer" /> : null
-        }
-        <div className={`fixed z-10 inset-0 overflow-hidden`}>
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-              <div className={`pointer-events-auto z-20 w-screen max-w-md ${isOpen ? 'transform transition ease-in-out duration-500 sm:duration-700 translate-x-0' : 'transform transition ease-in-out duration-500 sm:duration-700 translate-x-full'}`}>
-                <div className="flex h-full flex-col divide-y divide-neutral-200 bg-white shadow-xl">
-                  <div className="flex min-h-0 flex-1 flex-col overflow-y-auto pb-6">
-                    <div className="px-4 sm:px-6 bg-cyan-700 py-4">
-                      <div className="flex items-center justify-between">
-                        <h2 className="font-accent text-white text-2xl lg:text-4xl" id="slide-over-title">Your Cart</h2>
-                        <div className="ml-3 flex h-7 items-center">
-                          <button onClick={() => setIsOpen(false)} type="button" className="relative rounded-md text-white hover:text-cyan-50 focus:outline-none focus:ring-2 focus:ring-cyan-100">
-                            <span className="absolute -inset-2.5"></span>
-                            <span className="sr-only">Close panel</span>
-                            <svg className="h-6 w-6 lg:h-10 lg:w-10" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                          </button>
+            error ? <div class="relative z-[1000]" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity ease-in duration-300 "></div>
+                <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6 ease-in duration-200">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-tan-100 sm:mx-0 sm:h-10 sm:w-10">
+                        <svg class="h-6 w-6 text-tan-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                        </svg>
                         </div>
-                      </div>
+                        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                        <h3 class="text-lg font-accent text-tan-900" id="modal-title">Oops! An error occured</h3>
+                        <div class="mt-2">
+                            <p class="text-base text-neutral-500">We couldn't add your items to the cart. You can either cancel, or try adding them again. Make sure your device has a good internet connection. If this persists, please contact support.</p>
+                        </div>
+                        </div>
                     </div>
-                    <div className="relative mt-8 flex-1 px-4 sm:px-6 flex flex-col space-y-8">
-                        {
-                            cart.items.length || cartState.items.length || loadingCheckout ? <div className="flex flex-col space-y-4">
-                                <div className="flex w-full h-1.5 bg-neutral-200 rounded-full overflow-hidden" role="progressbar" aria-valuenow={totalSubscriptionItems > 1 ? 100 : Math.round(cartSubtotal*100/5900)} aria-valuemin="0" aria-valuemax="100">
-                                    <div style={shippingStyle} className={`flex flex-col transition-all delay-200 justify-center rounded-full overflow-hidden bg-cyan-700 text-xs text-white text-center whitespace-nowrap transition duration-500`} />
-                                </div>
-                                <h4 className="px-4 font-accent text-lg text-center text-cyan-700 leading-[1.25rem]">{
-                                    (cartSubtotal >= 5900 || totalSubscriptionItems > 1) ? "Congratulations! You've unlocked free shipping." : `You're only $${((5900 - cartSubtotal) / 100).toFixed(2)} away from free shipping!`
-                                }</h4>
-                            </div> : <div className="flex flex-col pt-20 lg:pt-40 max-w-xs self-center">
-                                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" className="self-center h-40 w-40 text-cyan-700"><path fill="currentColor" d="m51.36 21.21c.03-.37.04-.74.04-1.11a13.285 13.285 0 0 0 -4.23-9.62c-4.25-4.26-9.4-5.32-15.3-3.15l-2.87-2.88a8.389 8.389 0 0 0 -11.85 0l-1.95 1.95a8.383 8.383 0 0 0 0 11.85l1 1c-1.64 1.86-2.71 3.26-3.01 3.68-.02.01-.02.02-.03.03-.04.05-.06.08-.07.09-.03.05-.06.09-.09.14-1.94 2.73 3.9 9.82 7.77 13.69 3.35 3.35 9.11 8.17 12.37 8.17a2.152 2.152 0 0 0 1.46-.49c.02-.02.06-.05.12-.1 1.58-1.16 15.75-11.95 16.64-23.25zm-36.78 3.15a.855.855 0 0 1 .37-.01l.32.05c.04.01.08.02.13.03a.689.689 0 0 0 .08.03.944.944 0 0 0 .09.03l.08.02a1.28 1.28 0 0 0 .17.05c.08.04.17.07.27.11 2.44.98 6.13 3.76 9.63 7.26s6.28 7.19 7.27 9.64l.08.22c.01.02.01.04.02.06l.03.09c0 .01.01.01.01.02s.01.03.02.05a.857.857 0 0 1 .03.13c.01.02.01.04.02.06a1.209 1.209 0 0 1 .05.18.371.371 0 0 0 .02.09v.01c.01.06.02.12.03.2a.969.969 0 0 1 0 .36c-.9.36-5.42-1.88-11.12-7.57-5.75-5.76-7.98-10.32-7.6-11.11zm20.54 17.26h-.01v-.01c-.01-.03-.02-.06-.03-.1a1.209 1.209 0 0 0 -.05-.18l-.03-.06v-.01a.031.031 0 0 0 -.01-.02c-.01-.03-.02-.09-.03-.12-.04-.1-.08-.21-.12-.3-1.09-2.71-3.97-6.56-7.71-10.3s-7.59-6.62-10.29-7.7c-.11-.05-.22-.09-.37-.15a.254.254 0 0 1 -.07-.02c-.01-.01-.01-.01-.02-.01h-.01a.06.06 0 0 0 -.04-.01l-.01-.01a.647.647 0 0 0 -.13-.04.539.539 0 0 0 -.1-.03c-.02 0-.04-.01-.06-.01.59-.73 1.37-1.65 2.29-2.66a1.007 1.007 0 0 0 -.03-1.38l-1.68-1.67a6.4 6.4 0 0 1 0-9.02l1.95-1.95a6.4 6.4 0 0 1 9.02 0l3.24 3.25a1 1 0 0 0 1.16.31 14.7 14.7 0 0 1 5.51-1.16 11.414 11.414 0 0 1 8.27 3.63 11.322 11.322 0 0 1 3.61 9.16c-.67 8.59-10.27 17.31-14.25 20.57z"/><path fill="currentColor" d="m26.75 6.7a5.215 5.215 0 0 0 -7.35 0l-1.95 1.95a5.2 5.2 0 0 0 0 7.35l1.63 1.62a.96.96 0 0 0 .7.29.982.982 0 0 0 .71-.29 41.864 41.864 0 0 1 8.61-6.78 1.012 1.012 0 0 0 .21-1.58zm-6.96 8.81-.92-.93a3.136 3.136 0 0 1 -.94-2.26 3.17 3.17 0 0 1 .94-2.26l1.94-1.94a3.187 3.187 0 0 1 4.52 0l1.66 1.65a44.523 44.523 0 0 0 -7.2 5.74z"/><path fill="currentColor" d="m32.24 46.53c-.49.72-4.8 7.06-4.8 9.85a5.625 5.625 0 0 0 11.25 0c0-2.79-4.31-9.13-4.8-9.85a1.043 1.043 0 0 0 -1.65 0z"/></svg>
-                                <h4 className="text-xl font-accent text-center text-cyan-700 mt-4">It's a little empty around here.</h4>
-                                <p className="text-base text-center text-neutral-700 mt-1">Looks like you haven't added any items to your cart yet</p>
+                    <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+                        <button onClick={() => {
+                            document.dispatchEvent(new CustomEvent('buy_button_retry'))
+                            error.callback()
+                            setError(null)
+                        }} type="button" class="inline-flex w-full justify-center rounded-md bg-cyan-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 sm:ml-3 sm:w-auto">Retry</button>
+                        <button onClick={() => setError(null)} type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div> : null
+        }
+        <div data-testid="lrc-cart-container" className={`relative ${isOpen === true ? 'z-[100]' : '-z-10'}`} aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+            {
+                isOpen ? <div className="fixed inset-0 -z-10 bg-slate-900/20 cursor-pointer" /> : null
+            }
+            <div className={`fixed z-10 inset-0 overflow-hidden`}>
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                <div className={`pointer-events-auto z-20 w-screen max-w-md ${isOpen ? 'transform transition ease-in-out duration-500 sm:duration-700 translate-x-0' : 'transform transition ease-in-out duration-500 sm:duration-700 translate-x-full'}`}>
+                    <div className="flex h-full flex-col divide-y divide-neutral-200 bg-white shadow-xl">
+                    <div className="flex min-h-0 flex-1 flex-col overflow-y-auto pb-6">
+                        <div className="px-4 sm:px-6 bg-cyan-700 py-4">
+                        <div className="flex items-center justify-between">
+                            <h2 className="font-accent text-white text-2xl lg:text-4xl" id="slide-over-title">Your Cart</h2>
+                            <div className="ml-3 flex h-7 items-center">
+                            <button onClick={() => setIsOpen(false)} type="button" className="relative rounded-md text-white hover:text-cyan-50 focus:outline-none focus:ring-2 focus:ring-cyan-100">
+                                <span className="absolute -inset-2.5"></span>
+                                <span className="sr-only">Close panel</span>
+                                <svg className="h-6 w-6 lg:h-10 lg:w-10" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
                             </div>
-                        }
-                        {
-                            cartState.items.length ? <div className="flex flex-col space-y-4">
-                                <div className="flex items-center space-x-2">
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Long Run Club</h4>
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
+                        </div>
+                        </div>
+                        <div className="relative mt-8 flex-1 px-4 sm:px-6 flex flex-col space-y-8">
+                            {
+                                cart.items.filter(item => item.product_type !== 'Gift').length || cartState.items.length || loadingCheckout ? <div className="flex flex-col space-y-4">
+                                    <div className="flex w-full h-1.5 bg-neutral-200 rounded-full overflow-hidden" role="progressbar" aria-valuenow={totalSubscriptionItems > 1 ? 100 : Math.round(cartSubtotal*100/5900)} aria-valuemin="0" aria-valuemax="100">
+                                        <div style={shippingStyle} className={`flex flex-col transition-all delay-200 justify-center rounded-full overflow-hidden bg-cyan-700 text-xs text-white text-center whitespace-nowrap transition duration-500`} />
+                                    </div>
+                                    <h4 className="px-4 font-accent text-lg text-center text-cyan-700 leading-[1.25rem]">{
+                                        (cartSubtotal >= 5900 || totalSubscriptionItems > 1) ? "Congratulations! You've unlocked free shipping." : `You're only $${((5900 - cartSubtotal) / 100).toFixed(2)} away from free shipping!`
+                                    }</h4>
+                                </div> : <div className="flex flex-col pt-20 lg:pt-40 max-w-xs self-center">
+                                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" className="self-center h-40 w-40 text-cyan-700"><path fill="currentColor" d="m51.36 21.21c.03-.37.04-.74.04-1.11a13.285 13.285 0 0 0 -4.23-9.62c-4.25-4.26-9.4-5.32-15.3-3.15l-2.87-2.88a8.389 8.389 0 0 0 -11.85 0l-1.95 1.95a8.383 8.383 0 0 0 0 11.85l1 1c-1.64 1.86-2.71 3.26-3.01 3.68-.02.01-.02.02-.03.03-.04.05-.06.08-.07.09-.03.05-.06.09-.09.14-1.94 2.73 3.9 9.82 7.77 13.69 3.35 3.35 9.11 8.17 12.37 8.17a2.152 2.152 0 0 0 1.46-.49c.02-.02.06-.05.12-.1 1.58-1.16 15.75-11.95 16.64-23.25zm-36.78 3.15a.855.855 0 0 1 .37-.01l.32.05c.04.01.08.02.13.03a.689.689 0 0 0 .08.03.944.944 0 0 0 .09.03l.08.02a1.28 1.28 0 0 0 .17.05c.08.04.17.07.27.11 2.44.98 6.13 3.76 9.63 7.26s6.28 7.19 7.27 9.64l.08.22c.01.02.01.04.02.06l.03.09c0 .01.01.01.01.02s.01.03.02.05a.857.857 0 0 1 .03.13c.01.02.01.04.02.06a1.209 1.209 0 0 1 .05.18.371.371 0 0 0 .02.09v.01c.01.06.02.12.03.2a.969.969 0 0 1 0 .36c-.9.36-5.42-1.88-11.12-7.57-5.75-5.76-7.98-10.32-7.6-11.11zm20.54 17.26h-.01v-.01c-.01-.03-.02-.06-.03-.1a1.209 1.209 0 0 0 -.05-.18l-.03-.06v-.01a.031.031 0 0 0 -.01-.02c-.01-.03-.02-.09-.03-.12-.04-.1-.08-.21-.12-.3-1.09-2.71-3.97-6.56-7.71-10.3s-7.59-6.62-10.29-7.7c-.11-.05-.22-.09-.37-.15a.254.254 0 0 1 -.07-.02c-.01-.01-.01-.01-.02-.01h-.01a.06.06 0 0 0 -.04-.01l-.01-.01a.647.647 0 0 0 -.13-.04.539.539 0 0 0 -.1-.03c-.02 0-.04-.01-.06-.01.59-.73 1.37-1.65 2.29-2.66a1.007 1.007 0 0 0 -.03-1.38l-1.68-1.67a6.4 6.4 0 0 1 0-9.02l1.95-1.95a6.4 6.4 0 0 1 9.02 0l3.24 3.25a1 1 0 0 0 1.16.31 14.7 14.7 0 0 1 5.51-1.16 11.414 11.414 0 0 1 8.27 3.63 11.322 11.322 0 0 1 3.61 9.16c-.67 8.59-10.27 17.31-14.25 20.57z"/><path fill="currentColor" d="m26.75 6.7a5.215 5.215 0 0 0 -7.35 0l-1.95 1.95a5.2 5.2 0 0 0 0 7.35l1.63 1.62a.96.96 0 0 0 .7.29.982.982 0 0 0 .71-.29 41.864 41.864 0 0 1 8.61-6.78 1.012 1.012 0 0 0 .21-1.58zm-6.96 8.81-.92-.93a3.136 3.136 0 0 1 -.94-2.26 3.17 3.17 0 0 1 .94-2.26l1.94-1.94a3.187 3.187 0 0 1 4.52 0l1.66 1.65a44.523 44.523 0 0 0 -7.2 5.74z"/><path fill="currentColor" d="m32.24 46.53c-.49.72-4.8 7.06-4.8 9.85a5.625 5.625 0 0 0 11.25 0c0-2.79-4.31-9.13-4.8-9.85a1.043 1.043 0 0 0 -1.65 0z"/></svg>
+                                    <h4 className="text-xl font-accent text-center text-cyan-700 mt-4">It's a little empty around here.</h4>
+                                    <p className="text-base text-center text-neutral-700 mt-1">Looks like you haven't added any items to your cart yet</p>
                                 </div>
-                                <div className="flex flex-col space-y-2">
-                                    {% comment %} progress bar & tier name {% endcomment %}
-                                    {
-                                        plan ? <div className="flex items-center justify-between">
-                                            <div className="flex w-2/3 rounded-full bg-cyan-50 h-3">
-                                                <div
-                                                className={`bg-cyan-500 rounded-full h-full transition-all delay-200 ${plan.type === "base" ? "w-1/3" : plan.type === "pro" ? "w-2/3" : "w-full"}`}
-                                                ></div>
-                                            </div>
-                                            <div className="flex items-center space-x-1.5">
-                                                <h4 className="text-cyan-800 text-xl font-accent">{plan.display_name}</h4>
-                                                <button onClick={() => window.location.href = '/pages/coffee-club'}>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                    <path d="M8.66667 10.6667H8V8H7.33333M8 5.33333H8.00667M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke="#86D7E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                </svg>
-                                                </button>
-                                            </div>
-                                        </div> : cartState.items.length ? <p className="text-sm text-tan-600 text-center">Add {plans.base.bag_min - totalSubscriptionItems} more bag to be eligible for our {plans.base.display_name} plan!</p> : null
-                                    }
-                                    {% comment %} tier benefits {% endcomment %}
-                                    <div className="grid grid-cols-2 gap-y-1">
+                            }
+                            {
+                                cartState.items.length ? <div className="flex flex-col space-y-4">
+                                    <div className="flex items-center space-x-2">
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Long Run Club</h4>
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                    </div>
+                                    <div className="flex flex-col space-y-2">
+                                        {% comment %} progress bar & tier name {% endcomment %}
                                         {
-                                            plan ? plan.perk_list.map(p => <div key={p} className="flex items-center space-x-2">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    className="w-6 h-6 text-cyan-400"
-                                                >
-                                                    <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
-                                                </svg>
-                                                <span className="text-cyan-800 text-base leading-[1.2rem]">{p}</span>
-                                            </div>) : null
+                                            plan ? <div className="flex items-center justify-between">
+                                                <div className="flex w-2/3 rounded-full bg-cyan-50 h-3">
+                                                    <div
+                                                    className={`bg-cyan-500 rounded-full h-full transition-all delay-200 ${plan.type === "base" ? "w-1/3" : plan.type === "pro" ? "w-2/3" : "w-full"}`}
+                                                    ></div>
+                                                </div>
+                                                <div className="flex items-center space-x-1.5">
+                                                    <h4 className="text-cyan-800 text-xl font-accent">{plan.display_name}</h4>
+                                                    <button onClick={() => window.location.href = '/pages/coffee-club'}>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path d="M8.66667 10.6667H8V8H7.33333M8 5.33333H8.00667M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke="#86D7E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                    </svg>
+                                                    </button>
+                                                </div>
+                                            </div> : cartState.items.length ? <p className="text-sm text-tan-600 text-center">Add {plans.base.bag_min - totalSubscriptionItems} more bag to be eligible for our {plans.base.display_name} plan!</p> : null
                                         }
+                                        {% comment %} tier benefits {% endcomment %}
+                                        <div className="grid grid-cols-2 gap-y-1">
+                                            {
+                                                plan ? plan.perk_list.map(p => <div key={p} className="flex items-center space-x-2">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        fill="currentColor"
+                                                        className="w-6 h-6 text-cyan-400"
+                                                    >
+                                                        <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+                                                    </svg>
+                                                    <span className="text-cyan-800 text-base leading-[1.2rem]">{p}</span>
+                                                </div>) : null
+                                            }
+                                        </div>
+                                        <div className="grid grid-cols-3 gap-3">
+                                            {
+                                            cartState.items.map((item, i) => <SubscriptionItem key={item.variantID} index={i} item={item} cartState={cartState} setCartState={setCartState} />)
+                                            }
+                                        </div>
+                                    </div>
+                                </div> : null
+                            }
+                            {
+                                cartState.items.length && (!plan || plan.display_name !== nextPlan.display_name) ? <div className="flex flex-col space-y-4">
+                                    <div className="flex items-center space-x-2">
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Add {nextPlan.bag_min - totalSubscriptionItems} more and get</h4>
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                    </div>
+                                    <div className="mt-2 grid grid-cols-2 gap-y-1">
+                                        {
+                                            nextPerks.map(p => <div key={p} className="flex items-center space-x-2">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                className="w-6 h-6 text-cyan-400"
+                                            >
+                                                <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
+                                            </svg>
+                                            <span className="text-cyan-800 text-base">{p}</span>
+                                            </div>)
+                                        }
+                                    </div>
+                                    <div>
+                                        {% render 'lrc-button', link: "/collections/subscribe-save", title: "Get More" %}
+                                    </div>
+                                </div> : null
+                            }
+                            {
+                                !isCartOnlyGiftItems(cart.items, totalSubscriptionItems) && cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
+                                    <div className="flex items-center space-x-2">
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Free Bonus Items</h4>
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
                                     </div>
                                     <div className="grid grid-cols-3 gap-3">
                                         {
-                                          cartState.items.map((item, i) => <SubscriptionItem key={item.variantID} index={i} item={item} cartState={cartState} setCartState={setCartState} />)
+                                            cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} />)
+                                        }
+                                        {
+                                            totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
+                                        }
+                                        {
+                                            totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
+                                        }
+                                        {
+                                            totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/club-exclusive-lrc-x-boco-run-hat-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
+                                        }
+                                        {
+                                            totalSubscriptionItems > 0 && new Date() < new Date("May 24, 2024 12:00:00") ? <BonusItem key={4} title="Limited Offer - 1 Free Bag of Run Brunch" href="/blogs/news/run-brunch-is-here" header="Flavor selected post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/gempages_484137708004836523-f35452c1-f0c8-4d53-a53d-8d78405d9b8d.png?v=1715978716" /> : null
                                         }
                                     </div>
-                                </div>
-                            </div> : null
-                        }
-                        {
-                            cartState.items.length && (!plan || plan.display_name !== nextPlan.display_name) ? <div className="flex flex-col space-y-4">
-                                <div className="flex items-center space-x-2">
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Add {nextPlan.bag_min - totalSubscriptionItems} more and get</h4>
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                </div>
-                                <div className="mt-2 grid grid-cols-2 gap-y-1">
+                                </div> : null
+                            }
+                            {
+                                isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.filter(item => item.product_type !== 'Gift').length == 0 ? null : <div className="flex flex-col space-y-4">
+                                    <div className="flex items-center space-x-2">
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                            <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">One-Time</h4>
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-3">
                                     {
-                                        nextPerks.map(p => <div key={p} className="flex items-center space-x-2">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                            className="w-6 h-6 text-cyan-400"
-                                        >
-                                            <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
-                                        </svg>
-                                        <span className="text-cyan-800 text-base">{p}</span>
-                                        </div>)
+                                        cart.items.filter(item => item.product_type !== 'Gift').map((item, i) => <CartItem key={item.variant_id} item={item} setCart={setCart} />)
                                     }
-                                </div>
-                                <div>
-                                    {% render 'lrc-button', link: "/collections/subscribe-save", title: "Get More" %}
-                                </div>
-                            </div> : null
-                        }
-                        {
-                            !isCartOnlyGiftItems(cart.items, totalSubscriptionItems) && cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
-                                <div className="flex items-center space-x-2">
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Free Bonus Items</h4>
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                </div>
-                                <div className="grid grid-cols-3 gap-3">
+                                    </div>
                                     {
-                                        cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} />)
-                                    }
-                                    {
-                                        totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
-                                    }
-                                    {
-                                        totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
-                                    }
-                                    {
-                                        totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/club-exclusive-lrc-x-boco-run-hat-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
-                                    }
-                                    {
-                                        totalSubscriptionItems > 0 && new Date() < new Date("May 24, 2024 12:00:00") ? <BonusItem key={4} title="Limited Offer - 1 Free Bag of Run Brunch" href="/blogs/news/run-brunch-is-here" header="Flavor selected post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/gempages_484137708004836523-f35452c1-f0c8-4d53-a53d-8d78405d9b8d.png?v=1715978716" /> : null
-                                    }
-                                </div>
-                            </div> : null
-                        }
-                        {
-                            isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.length == 0 ? null : <div className="flex flex-col space-y-4">
-                                <div className="flex items-center space-x-2">
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">One-Time</h4>
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                </div>
-                                <div className="grid grid-cols-3 gap-3">
-                                {
-                                    cart.items.filter(item => item.product_type !== 'Gift').map((item, i) => <CartItem key={item.variant_id} item={item} setCart={setCart} />)
-                                }
-                                </div>
-                                {
-                                    potentialSavings > 0 ? <div className="flex items-center justify-center">
-                                        <button disabled={loadingUpgrade} onClick={async () => {
-                                            setLoadingUpgrade(true);
-                                            const keys = Object.keys(cartProductSubscribable);
-                                            const newItems = [...cartState.items];
-                                            const vo = {};
-    
-                                            for (let i = 0; i < keys.length; i++) {
-                                                if (cartProductSubscribable[keys[i]]) {
-                                                    const item = cartProductSubscribable[keys[i]]
-                                                    let existingItemIndex = null;
-                                                    for (let j = 0; j < newItems.length; j++) {
-                                                        if (newItems[j].variantID == item.variantID) {
-                                                            existingItemIndex = j;
+                                        potentialSavings > 0 ? <div className="flex items-center justify-center">
+                                            <button disabled={loadingUpgrade} onClick={async () => {
+                                                setLoadingUpgrade(true);
+                                                const keys = Object.keys(cartProductSubscribable);
+                                                const newItems = [...cartState.items];
+                                                const vo = {};
+        
+                                                for (let i = 0; i < keys.length; i++) {
+                                                    if (cartProductSubscribable[keys[i]]) {
+                                                        const item = cartProductSubscribable[keys[i]]
+                                                        let existingItemIndex = null;
+                                                        for (let j = 0; j < newItems.length; j++) {
+                                                            if (newItems[j].variantID == item.variantID) {
+                                                                existingItemIndex = j;
+                                                            }
                                                         }
+                                                        if (existingItemIndex !== null) {
+                                                            newItems[existingItemIndex].quantity += item.quantity;
+                                                        } else {
+                                                            newItems.push({
+                                                                ...item,
+                                                                quantity: item.quantity
+                                                            })
+                                                        }
+                                                        vo[item.variantID] = 0;
                                                     }
-                                                    if (existingItemIndex !== null) {
-                                                        newItems[existingItemIndex].quantity += item.quantity;
-                                                    } else {
-                                                        newItems.push({
-                                                            ...item,
-                                                            quantity: item.quantity
-                                                        })
-                                                    }
-                                                    vo[item.variantID] = 0;
                                                 }
-                                            }
-                                            fetch(window.Shopify.routes.root + 'cart/update.js', {
-                                                method: 'POST',
-                                                headers: {
-                                                    'Content-Type': 'application/json',
-                                                },
-                                                body: JSON.stringify({
-                                                    updates: vo
+                                                fetch(window.Shopify.routes.root + 'cart/update.js', {
+                                                    method: 'POST',
+                                                    headers: {
+                                                        'Content-Type': 'application/json',
+                                                    },
+                                                    body: JSON.stringify({
+                                                        updates: vo
+                                                    })
                                                 })
-                                            })
-                                            .then(async response => {
-                                                const newCart = await getCart();
-                                                setCartState({
-                                                    ...cartState,
-                                                    items: newItems
+                                                .then(async response => {
+                                                    const newCart = await getCart();
+                                                    setCartState({
+                                                        ...cartState,
+                                                        items: newItems
+                                                    })
+                                                    setCart(newCart);
+                                                    setLoadingUpgrade(false);
                                                 })
-                                                setCart(newCart);
-                                                setLoadingUpgrade(false);
+                                                .catch((error) => {
+                                                    console.error('Error:', error);
+                                                });
+                                            }} className="inline-flex items-center rounded-md bg-tan-100 px-2 py-1 text-xs font-semibold text-tan-700 ring-1 ring-inset ring-tan-600/40 relative">
+                                                <span>Save ${(potentialSavings / 100).toFixed(2)} with subscribe and save!</span>
+                                                <svg viewBox="0 0 512.001 512.001" className="text-tan-700 absolute -right-3 -bottom-3 w-5 h-5 z-10">
+                                                    <path fill="currentColor" d="M429.742,319.31L82.49,0l-0.231,471.744l105.375-100.826l61.89,141.083l96.559-42.358l-61.89-141.083L429.742,319.31z
+                                                        M306.563,454.222l-41.62,18.259l-67.066-152.879l-85.589,81.894l0.164-333.193l245.264,225.529l-118.219,7.512L306.563,454.222z"
+                                                    />
+                                                </svg>
+                                            </button>
+                                        </div> : null
+                                    }
+                                </div>
+                            }
+                            {
+                                isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || (cart.items.length == 0 && totalSubscriptionItems == 0) ? null : upsellItems.filter(item => {
+                                    let found = false;
+                                    cart.items.forEach(ca => {
+                                        if (ca.product_id == item.id) {
+                                            found = true;
+                                        }
+                                    })
+                                    return !found;
+                                }).length ? <div className="flex flex-col space-y-4">
+                                    <div className="flex items-center space-x-2">
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                            <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Add Ons</h4>
+                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-3">
+                                        {
+                                        upsellItems.filter(item => {
+                                            let found = false;
+                                            cart.items.forEach(ca => {
+                                                if (ca.product_id == item.id) {
+                                                    found = true;
+                                                }
                                             })
-                                            .catch((error) => {
-                                                console.error('Error:', error);
-                                            });
-                                        }} className="inline-flex items-center rounded-md bg-tan-100 px-2 py-1 text-xs font-semibold text-tan-700 ring-1 ring-inset ring-tan-600/40 relative">
-                                            <span>Save ${(potentialSavings / 100).toFixed(2)} with subscribe and save!</span>
-                                            <svg viewBox="0 0 512.001 512.001" className="text-tan-700 absolute -right-3 -bottom-3 w-5 h-5 z-10">
-                                                <path fill="currentColor" d="M429.742,319.31L82.49,0l-0.231,471.744l105.375-100.826l61.89,141.083l96.559-42.358l-61.89-141.083L429.742,319.31z
-                                                    M306.563,454.222l-41.62,18.259l-67.066-152.879l-85.589,81.894l0.164-333.193l245.264,225.529l-118.219,7.512L306.563,454.222z"
-                                                />
-                                            </svg>
-                                        </button>
-                                    </div> : null
+                                            return !found;
+                                        }).map((item, i) => <UpsellItem item={item} setCart={setCart} />)
+                                        }
+                                    </div>
+                                </div> : null
+                            }
+                        </div>
+                    </div>
+                    <div className="flex flex-col space-y-2 flex-shrink-0 justify-end px-4 py-4">
+                        <div className="flex items-center">
+                            <h4 className="flex-1 text-lg font-accent text-cyan-700">Subtotal</h4>
+                            {
+                                cartState.items.length ? <React.Fragment>
+                                    <span className={`line-through text-base text-neutral-500`}>${(cartSubtotal / 100).toFixed(2)}</span>
+                                    <span className={`ml-2 text-base font-medium text-cyan-700`}>${(cartSubtotalWithDiscounts / 100).toFixed(2)}</span>
+                                </React.Fragment> : <span className={`font-medium text-base text-cyan-700`}>${(cartSubtotal / 100).toFixed(2)}</span>
+                            }
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                            <button type="button" onClick={() => setIsOpen(false)} className="rounded-md bg-white p-3 text-sm font-accent text-neutral-700 shadow-sm ring-1 ring-inset ring-neutral-300 hover:ring-neutral-400">Back to Shop</button>
+                            <button disabled={checkoutStatus(cartState, cart, plan) !== 'OKAY'} onClick={checkout} type="submit" id="checkout-button" className={`ml-4 inline-flex justify-center rounded-md p-3 text-sm font-accent border ${checkoutStatus(cartState, cart, plan) !== 'OKAY' ? 'cursor-not-allowed has-tooltip border-neutral-600 bg-neutral-100 text-neutral-400 hover:border-neutral-700 hover:text-neutral-500 hover:bg-neutral-200' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200'}`}>
+                                {
+                                    loadingCheckout ? <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                                    </svg> : "Checkout"
                                 }
-                            </div>
-                        }
-                        {
-                            isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || (cart.items.length == 0 && totalSubscriptionItems == 0) ? null : upsellItems.filter(item => {
-                                let found = false;
-                                cart.items.forEach(ca => {
-                                    if (ca.product_id == item.id) {
-                                        found = true;
-                                    }
-                                })
-                                return !found;
-                              }).length ? <div className="flex flex-col space-y-4">
-                                <div className="flex items-center space-x-2">
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Add Ons</h4>
-                                    <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                </div>
-                                <div className="grid grid-cols-3 gap-3">
-                                    {
-                                      upsellItems.filter(item => {
-                                        let found = false;
-                                        cart.items.forEach(ca => {
-                                            if (ca.product_id == item.id) {
-                                                found = true;
-                                            }
-                                        })
-                                        return !found;
-                                      }).map((item, i) => <UpsellItem item={item} setCart={setCart} />)
-                                    }
-                                </div>
-                            </div> : null
-                        }
+                                {
+                                    checkoutStatus(cartState, cart, plan) === 'SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT' ? <span class='tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center'>Subscribe & Save requires a 2 bag minumum</span> : null
+                                }
+                            </button>
+                        </div>
                     </div>
-                  </div>
-                  <div className="flex flex-col space-y-2 flex-shrink-0 justify-end px-4 py-4">
-                    <div className="flex items-center">
-                        <h4 className="flex-1 text-lg font-accent text-cyan-700">Subtotal</h4>
-                        {
-                            cartState.items.length ? <React.Fragment>
-                                <span className={`line-through text-base text-neutral-500`}>${(cartSubtotal / 100).toFixed(2)}</span>
-                                <span className={`ml-2 text-base font-medium text-cyan-700`}>${(cartSubtotalWithDiscounts / 100).toFixed(2)}</span>
-                            </React.Fragment> : <span className={`font-medium text-base text-cyan-700`}>${(cartSubtotal / 100).toFixed(2)}</span>
-                        }
                     </div>
-                    <div className="grid grid-cols-2 gap-2">
-                        <button type="button" onClick={() => setIsOpen(false)} className="rounded-md bg-white p-3 text-sm font-accent text-neutral-700 shadow-sm ring-1 ring-inset ring-neutral-300 hover:ring-neutral-400">Back to Shop</button>
-                        <button disabled={checkoutStatus(cartState, cart, plan) !== 'OKAY'} onClick={checkout} type="submit" id="checkout-button" className={`ml-4 inline-flex justify-center rounded-md p-3 text-sm font-accent border ${checkoutStatus(cartState, cart, plan) !== 'OKAY' ? 'cursor-not-allowed has-tooltip border-neutral-600 bg-neutral-100 text-neutral-400 hover:border-neutral-700 hover:text-neutral-500 hover:bg-neutral-200' : 'border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200'}`}>
-                            {
-                                loadingCheckout ? <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                                </svg> : "Checkout"
-                            }
-                            {
-                                checkoutStatus(cartState, cart, plan) === 'SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT' ? <span class='tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center'>Subscribe & Save requires a 2 bag minumum</span> : null
-                            }
-                        </button>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                </div>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
+    </React.Fragment>
   }
 
   ReactDOM.render(<LRCCart />, document.getElementById('lrc-cart'));
