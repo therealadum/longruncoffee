@@ -125,11 +125,11 @@ body {
 }
 
 .needsclick.kl-private-reset-css-Xuajs1 {
-  z-index: 20 !important;
+  z-index: 50 !important;
 }
 
 button.needsclick.kl-private-reset-css-Xuajs1 {
-  z-index: 30 !important;
+  z-index: 20 !important;
 }
 
 sticky-header {

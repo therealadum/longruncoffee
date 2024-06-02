@@ -368,7 +368,12 @@
           {
             isRechargeAvailableOnProduct(product)
               ? <div className="hidden lg:flex items-center relative w-48 border rounded-md bg-white border-cyan-500 group hover:border-cyan-600 ">
-                  <span onClick={() => setIsSelectingDelivery(!isSelectingDelivery)} className="w-full text-base font-accent rounded p-3 mb-0.5 cursor-pointer text-cyan-600 group-hover:text-cyan-700">{productForm.isSubscription ? 'Ship every 30 days' : 'One-time order'}</span>
+                  <span onClick={() => {
+                    if (!product.available || !(variantQuantityMap[variantID] > 0)) {
+                      return
+                    }
+                    setIsSelectingDelivery(!isSelectingDelivery)
+                  }} className={`w-full text-base font-accent rounded p-3 mb-0.5 text-cyan-600 group-hover:text-cyan-700 ${!product.available || !(variantQuantityMap[variantID] > 0) ? 'cursor-not-allowed' : 'cursor-pointer'}`}>{productForm.isSubscription ? 'Ship every 30 days' : 'One-time order'}</span>
                   <span className="absolute bg-white text-sm z-10 -bottom-2 left-2 px-1">Delivery</span>
                   {
                     isSelectingDelivery
