@@ -2279,11 +2279,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 /* section-header */
 .section-header.shopify-section-group-header-group {
-  z-index: 3;
-}
-
-#shopify-section-sections--22469359731001__header {
-  z-index: 51;
+  z-index: 35;
 }
 
 .shopify-section-header-sticky {
