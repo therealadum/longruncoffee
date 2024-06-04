@@ -2825,7 +2825,6 @@ details[open] > .header__menu-item .icon-caret {
 
 .header__submenu .header__menu-item {
   justify-content: space-between;
-  font-weight: bold;
   padding: 0.8rem 2rem;
 }
 
