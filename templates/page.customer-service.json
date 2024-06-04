@@ -136,7 +136,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "coffee",
-        "products_to_show": 8,
+        "products_to_show": 24,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
