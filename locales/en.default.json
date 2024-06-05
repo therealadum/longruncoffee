@@ -519,7 +519,8 @@
     },
     "ProductList": {
       "product_not_found": "Product Not Found!",
-      "no_products_found": "No products found!"
+      "no_products_found": "No products found!",
+      "no_related_products": "No related products!"
     },
     "ProductTitle": {
       "product_not_found": "Product Not Found"
