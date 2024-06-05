@@ -55,6 +55,10 @@
 .mega-menu__link--level-2 {
   font-weight: bold;
 }
+.mega-menu__link--level-3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 .header--top-center .mega-menu__list {
   display: flex;
