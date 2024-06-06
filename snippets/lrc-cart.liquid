@@ -18,6 +18,143 @@
 
   const referenceString = 'v2-subscription-items';
 
+  function removeAddToCartURLParameters() {
+    if (window.history) {
+        window.history.replaceState({}, document.title, window.location.href.split('?')[0])
+    }
+  }
+
+  function useAddToCartURL(subscriptionState, cart, setCartState, setCart, setIsOpen) {
+    const { items: subscriptionItems } = subscriptionState;
+    const { items: oneTimeItems } = cart;
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    React.useEffect(async () => {
+        let mounted = true;
+        if (params.add_to_cart_variant_id && params.add_to_cart_product_hash) {
+
+            let quantity = 1;
+            if (params.add_to_cart_quantity) {
+                quantity = parseInt(params.add_to_cart_quantity);
+            }
+
+            let subscription = false;
+            if (params.add_to_cart_is_subscription) {
+                subscription = true;
+            }
+
+            let max_add_to_cart = quantity;
+            if (params.add_to_cart_max) {
+                max_add_to_cart = parseInt(params.add_to_cart_max);
+            }
+
+            try {
+                if (params.add_to_cart_variant_id && params.add_to_cart_product_hash) {
+                    const data = await fetch(window.Shopify.routes.root + `products/${params.add_to_cart_product_hash}.js`);
+                    const product = await data.json();
+
+                    // prevent additions if unmounted or product is not available
+                    if (!mounted) {
+                        return;
+                    }
+                    if (!product.available) {
+                        removeAddToCartURLParameters()
+                        return;
+                    }
+                        
+                    if (subscription) {
+                        let variant;
+                        for (let j = 0; j < product.variants.length; j++) {
+                            if (product.variants[j].id == params.add_to_cart_variant_id) {
+                                variant = product.variants[j];
+                            }
+                        }
+                        const item = {
+                            product,
+                            variantID: params.add_to_cart_variant_id,
+                            variant,
+                            quantity
+                        }
+
+                        // if already in subscriptions, add quantity - otherwise add new item
+                        let existingItemIndex = null;
+                        for (let j = 0; j < subscriptionItems.length; j++) {
+                            if (subscriptionItems[j].variantID === item.variantID) {
+                                existingItemIndex = j;
+                            }
+                        }
+
+                        if (await klaviyo.isIdentified()) {
+                            // report to klayvio
+                            klaviyo.push(['track', 'add_subscription_item_to_cart', {
+                                'product_id' : product.id,
+                                'variant_id': params.add_to_cart_variant_id,
+                                'quantity': quantity
+                            }]);
+                        }
+
+                        removeAddToCartURLParameters()
+                        
+                        if (existingItemIndex != null) {
+                            if (max_add_to_cart >= newItems[existingItemIndex].quantity) {
+                                document.dispatchEvent(new CustomEvent('buy_button_complete'))
+                                return;
+                            }
+                            const newItems = [...subscriptionState.items];
+                            newItems[existingItemIndex].quantity += quantity;
+                            setCartState({
+                                ...subscriptionState,
+                                items: newItems
+                            })
+                        } else {
+                            setCartState({
+                                ...subscriptionState,
+                                items: [...subscriptionItems, {
+                                    ...item,
+                                    quantity
+                                }]
+                            })
+                        }
+                        setIsOpen(true);
+                        document.dispatchEvent(new CustomEvent('buy_button_complete'))
+                    } else {
+                        if (!mounted) {
+                            return;
+                        }
+                        removeAddToCartURLParameters();
+                        fetch(window.Shopify.routes.root + 'cart/add.js', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                items: [{
+                                    'id': params.add_to_cart_variant_id,
+                                    quantity
+                                }]
+                            })
+                        })
+                        .then(async response => {
+                            const newCart = await getCart();
+                            setCart(newCart);
+                            setIsOpen(true);
+                            document.dispatchEvent(new CustomEvent('buy_button_complete'));
+                        })
+                    }
+                }
+            } catch (e) {
+                console.error(e);
+                document.dispatchEvent(new CustomEvent('buy_button_complete'));
+            }
+        }
+        return () => {
+            mounted = false;
+        }
+    }, [params.add_to_cart_variant_id, params.add_to_cart_product_hash, params.add_to_cart_is_subscription, params.add_to_cart_quantity])
+  }
+
   function isRechargeAvailableOnProduct(product) {
     let available = false;
     for (let i = 0; i < product.selling_plan_groups.length; i++) {
@@ -509,6 +646,8 @@
         localStorage.setItem(referenceString, JSON.stringify(newCartState))
         innerSetCartState(newCartState)
     }, [cartState]);
+
+    useAddToCartURL(cartState, cart, setCartState, setCart, setIsOpen);
 
     React.useEffect(() => {
         const handler = () => setIsOpen(!isOpen);

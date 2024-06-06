@@ -2286,6 +2286,15 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.\!bg-cyan-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(216 242 245 / var(--tw-bg-opacity)) !important;
+}
+
+.\!bg-cyan-100\/20 {
+  background-color: rgb(200 237 241 / 0.2) !important;
+}
+
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
 }
