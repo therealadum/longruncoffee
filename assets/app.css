@@ -2391,6 +2391,10 @@ select {
   padding: 4px;
 }
 
+.p-\[1px\] {
+  padding: 1px;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;

@@ -498,12 +498,61 @@
     </div>
   }
 
+  function getDefaultOptionValues(product, options) {
+    let defaultVariantIndex = 0;
+    for (let i = 0; i < product.variants.length; i++) {
+      const v = product.variants[i];
+      if (v.options.indexOf('Fresh Ground') !== -1 && v.options.indexOf('1 lbs') !== -1) {
+        defaultVariantIndex = i;
+      }
+    }
+    const d = product.variants[defaultVariantIndex];
+    const keys = options.map(o => o.name)
+    const productFormDefault = {};
+    for (let i = 0; i < keys.length; i++) {
+      productFormDefault[keys[i]] = d.options[i]
+    }
+    return productFormDefault
+  }
+
+  function generateOptionsFromProductVariants(product) {
+    // build option array
+    const optionNames = product.options;
+    const options = {};
+    optionNames.forEach(on => {
+      options[on] = {
+        name: on,
+        values: []
+      };
+    });
+
+    product.variants.forEach(variant => {
+      variant.options.forEach((opt, idx) => {
+        const optionIdx = optionNames[idx];
+        if (options[optionIdx].values.indexOf(opt) == -1) {
+          options[optionIdx].values.push(opt)
+        }
+      })
+    })
+
+    const retArr = [];
+    Object.keys(options).forEach(key => {
+      retArr.push(options[key]);
+    })
+
+    return retArr;
+  }
+
   function LRCBaseProduct() {
-    const [product, setProduct] = React.useState(null);
+    const product = {{  product | json }};
+    const options = generateOptionsFromProductVariants(product);
+
+    console.log(product)
+
     const [productForm, setProductForm] = React.useState({
-      hasSellingPlan: null,
-      options: null,
-      isSubscription: true,
+      hasSellingPlan: isRechargeAvailableOnProduct(product),
+      options: getDefaultOptionValues(product, options), 
+      isSubscription: isRechargeAvailableOnProduct(product),
       quantity: 1
     });
     const [isLoading, setIsLoading] = React.useState(false);
@@ -515,53 +564,10 @@
       variantQuantityMap[{{ variant.id }}] = {{ variant.inventory_quantity }};
     {% endfor %}
 
-    React.useEffect(() => {
-      let mounted = true
-      const func = async () => {
-        const data = await fetch(window.Shopify.routes.root + 'products/{{ product.handle }}.js');
-        const json = await data.json()
-        if (mounted) {
-          if (json.options && json.variants.length) {
-            // select 1lb fresh ground as default
-            let defaultVariantIndex = 0;
-            for (let i = 0; i < json.variants.length; i++) {
-              const v = json.variants[i];
-              if (v.options.indexOf('Fresh Ground') !== -1 && v.options.indexOf('1 lbs') !== -1) {
-                defaultVariantIndex = i;
-              }
-            }
-            const d = json.variants[defaultVariantIndex];
-            const keys = json.options.map(o => o.name)
-            const productFormDefault = {};
-            for (let i = 0; i < keys.length; i++) {
-              productFormDefault[keys[i]] = d.options[i]
-            }
-            setProductForm({
-              ...productForm,
-              options: productFormDefault,
-              hasSellingPlan: isRechargeAvailableOnProduct(json),
-              isSubscription: isRechargeAvailableOnProduct(json)
-            })
-          } else {
-            setProductForm({
-              ...productForm,
-              options: null,
-              hasSellingPlan: isRechargeAvailableOnProduct(json),
-              isSubscription: isRechargeAvailableOnProduct(json)
-            })
-          }
-          setProduct(json)
-        }
-      }
-      func()
-      return () => {
-        mounted = false
-      }
-    }, []);
-
     let variantID = null;
     let variantCost = 0;
     let variant = null;
+
     if (product && product.variants) {
       for (let i = 0; i < product.variants.length; i++) {
         let foundMatch = true;
@@ -711,7 +717,7 @@
             </div>
             <div className={`grid gap-4 ${product.variants.length < 2 ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-1"}`}>
               {
-                product.options.filter((option) => option.values.indexOf('Default Title') === -1).map((option, i) => {
+                options.filter((option) => option.values.indexOf('Default Title') === -1).map((option, i) => {
                   return <div key={i} className="flex flex-col space-y-1.5">
                     <p className={`font-medium text-sm uppercase tracking-wider text-cyan-600`}>{
                       option.name === "Size" && product && product.tags && product.tags.includes('All Coffee') ? "Bag size" : option.name === "Form" ? "Bean Style" : option.name
@@ -1724,10 +1730,6 @@
                   <button
                       data-testid="lrc-add-to-cart-button"
                       onClick={() =>  {
-                        console.log(`product.available: ${product.available}`);
-                        console.log(`productForm.isSubscription: ${productForm.isSubscription}`);
-                        console.log(`variantQuantityMap[variantID]: ${variantQuantityMap[variantID]}`);
-
                         setIsLoading(true);
                         document.dispatchEvent(new CustomEvent('buy_button', { detail: {
                           available: product.available,

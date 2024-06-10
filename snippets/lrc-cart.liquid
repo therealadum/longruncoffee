@@ -34,7 +34,6 @@
     React.useEffect(async () => {
         let mounted = true;
         if (params.add_to_cart_variant_id && params.add_to_cart_product_hash) {
-
             let quantity = 1;
             if (params.add_to_cart_quantity) {
                 quantity = parseInt(params.add_to_cart_quantity);
@@ -49,7 +48,10 @@
             if (params.add_to_cart_max) {
                 max_add_to_cart = parseInt(params.add_to_cart_max);
             }
-
+            console.log("RUNNING ADD TO CART EFFECT")
+            console.log('quantity=',quantity)
+            console.log('subscription=',subscription)
+            console.log('max_add_to_cart=',max_add_to_cart)
             try {
                 if (params.add_to_cart_variant_id && params.add_to_cart_product_hash) {
                     const data = await fetch(window.Shopify.routes.root + `products/${params.add_to_cart_product_hash}.js`);
@@ -98,7 +100,7 @@
                         removeAddToCartURLParameters()
                         
                         if (existingItemIndex != null) {
-                            if (max_add_to_cart >= newItems[existingItemIndex].quantity) {
+                            if (newItems[existingItemIndex].quantity + quantity > max_add_to_cart) {
                                 document.dispatchEvent(new CustomEvent('buy_button_complete'))
                                 return;
                             }
@@ -120,10 +122,19 @@
                         setIsOpen(true);
                         document.dispatchEvent(new CustomEvent('buy_button_complete'))
                     } else {
-                        if (!mounted) {
+                        let existingItemQuantity = 0;
+                        oneTimeItems.forEach(item => {
+                            if (item.variant_id == params.add_to_cart_variant_id) {
+                                existingItemQuantity = item.quantity;
+                            }
+                        });
+                        removeAddToCartURLParameters();
+
+                        if (!mounted || existingItemQuantity + quantity > max_add_to_cart) {
+                            document.dispatchEvent(new CustomEvent('buy_button_complete'))
                             return;
                         }
-                        removeAddToCartURLParameters();
+
                         fetch(window.Shopify.routes.root + 'cart/add.js', {
                             method: 'POST',
                             headers: {
@@ -152,7 +163,7 @@
         return () => {
             mounted = false;
         }
-    }, [params.add_to_cart_variant_id, params.add_to_cart_product_hash, params.add_to_cart_is_subscription, params.add_to_cart_quantity])
+    }, [oneTimeItems.length, subscriptionItems.length, params.add_to_cart_variant_id, params.add_to_cart_product_hash, params.add_to_cart_is_subscription, params.add_to_cart_quantity])
   }
 
   function isRechargeAvailableOnProduct(product) {
@@ -195,17 +206,7 @@
     } else if (cartState.items.length && plan) {
         return 'OKAY';
     } else if (cart.items.length) {
-        let onlyContainsGifts = true;
-        cart.items.forEach(item => {
-            if (item.product_type !== 'Gift') {
-                onlyContainsGifts = false;
-            }
-        })
-        if (!onlyContainsGifts) {
-            return 'OKAY';
-        } else {
-            return 'ONLY_CONTAINS_GIFTS';
-        }
+        return 'OKAY';
     } else {
         return 'NOTHING_TO_CHECKOUT';
     }
@@ -1148,6 +1149,8 @@
         });
     };
 
+    console.log(cart)
+
     return <React.Fragment>
         {
             error ? <div class="relative z-[1000]" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -1207,7 +1210,7 @@
                         </div>
                         <div className="relative mt-8 flex-1 px-4 sm:px-6 flex flex-col space-y-8">
                             {
-                                cart.items.filter(item => item.product_type !== 'Gift').length || cartState.items.length || loadingCheckout ? <div className="flex flex-col space-y-4">
+                                cart.items.length || cartState.items.length || loadingCheckout ? <div className="flex flex-col space-y-4">
                                     <div className="flex w-full h-1.5 bg-neutral-200 rounded-full overflow-hidden" role="progressbar" aria-valuenow={totalSubscriptionItems > 1 ? 100 : Math.round(cartSubtotal*100/5900)} aria-valuemin="0" aria-valuemax="100">
                                         <div style={shippingStyle} className={`flex flex-col transition-all delay-200 justify-center rounded-full overflow-hidden bg-cyan-700 text-xs text-white text-center whitespace-nowrap transition duration-500`} />
                                     </div>
@@ -1298,7 +1301,7 @@
                                 </div> : null
                             }
                             {
-                                !isCartOnlyGiftItems(cart.items, totalSubscriptionItems) && cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
+                                cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
                                     <div className="flex items-center space-x-2">
                                         <div className="flex-1 h-1 rounded bg-cyan-700" />
                                         <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Free Bonus Items</h4>
