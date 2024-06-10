@@ -1,5 +1,44 @@
 {
   "sections": {
+    "image_banner_bJD8y3": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_c8fD73": {
+          "type": "heading",
+          "settings": {
+            "heading": "Long Run Co.",
+            "heading_size": "h0"
+          }
+        },
+        "text_jR8PGt": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Long Run Co. helps athletes fuel, recover, and sleep better. <\/strong>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_c8fD73",
+        "text_jR8PGt"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {h2 {font-size: 32px; } p {font-size: 18px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Copy_of_Marathon_Mock_Up_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "home_hero_xMFhGD": {
       "type": "home-hero",
       "settings": {
@@ -284,6 +323,7 @@
     }
   },
   "order": [
+    "image_banner_bJD8y3",
     "home_hero_xMFhGD",
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
     "featured_collection_b8deL3",
