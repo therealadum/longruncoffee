@@ -641,8 +641,10 @@
     const isMobile = useIsMobile();
     const productCosts = useProductCosts(variant, productForm.quantity)
 
-    return product ? <div className="relative bg-cyan-50 bg-opacity-20 z-30">
-      <OnScrollBuyButton product={product} variantID={variantID} productForm={productForm} setProductForm={setProductForm} variantQuantityMap={variantQuantityMap} variant={variant} variantCost={variantCost} discountInformation={discountInformation}/>
+    return <div className="relative bg-cyan-50 bg-opacity-20 z-30">
+      {
+        product.type !== "Gift" ? <OnScrollBuyButton product={product} variantID={variantID} productForm={productForm} setProductForm={setProductForm} variantQuantityMap={variantQuantityMap} variant={variant} variantCost={variantCost} discountInformation={discountInformation}/> : null
+      }
       <div className="flex flex-col p-4 lg:py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           <div className="flex flex-col space-y-4">
@@ -1601,7 +1603,11 @@
             {
               product.tags.indexOf("Club Member Exclusive") !== -1 ? <div className="bg-neutral-50 w-full h-64 flex items-center justify-center">
                 <p className="font-accent text-lg text-neutral-700">Club Member Exclusive</p>
-              </div> : <React.Fragment>
+              </div> : product.type == 'Gift' ? 
+                <div className="bg-neutral-50 w-full h-64 flex items-center justify-center">
+                  <p className="font-accent text-lg text-neutral-700">Not for Purchase</p>
+                </div>
+              : <React.Fragment>
                 <div className="flex flex-col space-y-3 pt-2 lg:pt-0">
                   <button data-testid="lrc-select-subscription-checkout" disabled={!isRechargeAvailableOnProduct(product)} onClick={() => {
                     if (isRechargeAvailableOnProduct(product)) {
@@ -1792,7 +1798,7 @@
           </div>
         </div>
       </div>
-    </div> : <div>Loading...</div>
+    </div>
   }
 
   ReactDOM.render(<LRCBaseProduct />, document.getElementById('lrc-base-product'))

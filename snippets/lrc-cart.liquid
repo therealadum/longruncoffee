@@ -18,6 +18,114 @@
 
   const referenceString = 'v2-subscription-items';
 
+  function addItems(items) {
+    return fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ items })
+    })
+  }
+
+  function updateItems(updates) {
+    return fetch(window.Shopify.routes.root + 'cart/update.js', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            updates
+        })
+    })
+  }
+
+  const FREE_STICKER_VARIANT_ID = 48056421482809;
+  const FREE_TRAVEL_SET_VARIANT_ID = 49182276747577;
+  function useCartBot(subscriptionState, cart, setCartState, setCart) {
+    const { items: subscriptionItems } = subscriptionState;
+    const { items: oneTimeItems } = cart;
+
+    let cartTotal = 0;
+    subscriptionItems.forEach(product => {
+        cartTotal += product.variant.price;
+    })
+    let free_travel_set_present_in_cart = false;
+    let sticker_present_in_cart = false;
+    let free_boco_in_cart = false;
+    oneTimeItems.forEach(product => {
+        cartTotal += product.price;
+        if (product.id == FREE_STICKER_VARIANT_ID) {
+            sticker_present_in_cart = true;
+        }
+        if (product.id == FREE_TRAVEL_SET_VARIANT_ID) {
+            free_travel_set_present_in_cart = true;
+        }
+        if (product.variant_id == 49364569588025) {
+            free_boco_in_cart = true;
+        }
+    })
+
+    console.log("cart total: ", cartTotal)
+    console.log("sticker present: ", sticker_present_in_cart)
+    console.log("travel set present: ", free_travel_set_present_in_cart)
+
+    React.useEffect(() => {
+        if (cartTotal >= 399) {
+            const items = [];
+            if (!sticker_present_in_cart) {
+                items.push({
+                    id: FREE_STICKER_VARIANT_ID,
+                    quantity: 1
+                })
+            }
+            if (!free_travel_set_present_in_cart && !free_boco_in_cart) {
+                items.push({
+                    id: FREE_TRAVEL_SET_VARIANT_ID,
+                    quantity: 1
+                })
+            }
+            if (free_boco_in_cart) {
+                const vo = {};
+                vo[FREE_TRAVEL_SET_VARIANT_ID] = 0;
+                updateItems(vo)
+                .then(async response => {
+                    addItems(items)
+                    .then(async response => {
+                        const newCart = await getCart();
+                        setCart(newCart);
+                    })
+                })
+                return;
+            }
+            if (!items.length) {
+                return;
+            }
+            addItems(items)
+            .then(async response => {
+                const newCart = await getCart();
+                setCart(newCart);
+            })
+        } else {
+            if (!sticker_present_in_cart && !free_travel_set_present_in_cart) {
+                return;
+            }
+            const vo = {};
+            if (sticker_present_in_cart) {
+                vo[FREE_STICKER_VARIANT_ID] = 0;
+            }
+            if (free_travel_set_present_in_cart) {
+                vo[FREE_TRAVEL_SET_VARIANT_ID] = 0;
+            }
+            updateItems(vo)
+            .then(async response => {
+                const newCart = await getCart();
+                setCart(newCart);
+            })
+        }
+    }, [cartTotal, sticker_present_in_cart, free_travel_set_present_in_cart])
+  }
+
   function removeAddToCartURLParameters() {
     if (window.history) {
         window.history.replaceState({}, document.title, window.location.href.split('?')[0])
@@ -49,11 +157,12 @@
                 max_add_to_cart = parseInt(params.add_to_cart_max);
             }
             console.log("RUNNING ADD TO CART EFFECT")
+            console.log('conditions=',Boolean(params.add_to_cart_variant_id && params.add_to_cart_product_hash))
             console.log('quantity=',quantity)
             console.log('subscription=',subscription)
             console.log('max_add_to_cart=',max_add_to_cart)
             try {
-                if (params.add_to_cart_variant_id && params.add_to_cart_product_hash) {
+                if (Boolean(params.add_to_cart_variant_id && params.add_to_cart_product_hash)) {
                     const data = await fetch(window.Shopify.routes.root + `products/${params.add_to_cart_product_hash}.js`);
                     const product = await data.json();
 
@@ -648,6 +757,7 @@
         innerSetCartState(newCartState)
     }, [cartState]);
 
+    useCartBot(cartState, cart, setCartState, setCart);
     useAddToCartURL(cartState, cart, setCartState, setCart, setIsOpen);
 
     React.useEffect(() => {
@@ -1148,8 +1258,6 @@
             }
         });
     };
-
-    console.log(cart)
 
     return <React.Fragment>
         {
