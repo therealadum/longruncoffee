@@ -66,10 +66,6 @@
         }
     })
 
-    console.log("cart total: ", cartTotal)
-    console.log("sticker present: ", sticker_present_in_cart)
-    console.log("travel set present: ", free_travel_set_present_in_cart)
-
     React.useEffect(() => {
         if (cartTotal >= 399) {
             const items = [];
@@ -156,11 +152,6 @@
             if (params.add_to_cart_max) {
                 max_add_to_cart = parseInt(params.add_to_cart_max);
             }
-            console.log("RUNNING ADD TO CART EFFECT")
-            console.log('conditions=',Boolean(params.add_to_cart_variant_id && params.add_to_cart_product_hash))
-            console.log('quantity=',quantity)
-            console.log('subscription=',subscription)
-            console.log('max_add_to_cart=',max_add_to_cart)
             try {
                 if (Boolean(params.add_to_cart_variant_id && params.add_to_cart_product_hash)) {
                     const data = await fetch(window.Shopify.routes.root + `products/${params.add_to_cart_product_hash}.js`);
