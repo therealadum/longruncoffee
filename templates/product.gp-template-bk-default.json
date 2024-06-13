@@ -2,38 +2,55 @@
   "sections": {
     "lrc-base-product": {
       "type": "lrc-base-product",
-      "settings": {
-      }
+      "settings": {}
     },
-    "lrc-product-description": {
-      "type": "lrc-product-description",
-      "settings": {
-      }
+    "lrc-accordion": {
+      "type": "lrc-accordion",
+      "blocks": {
+        "product-description": {
+          "type": "product-description",
+          "settings": {}
+        },
+        "lrc_accordion_item_2": {
+          "type": "lrc-accordion-image",
+          "settings": {
+            "title": "Supplement Facts",
+            "image": "shopify://shop_images/Supp_Facts.png"
+          }
+        },
+        "lrc_accordion_item_3": {
+          "type": "lrc-accordion-text",
+          "settings": {
+            "title": "How to Use",
+            "body": "LRC can be prepared with any brewing method - so use your favorite! Consume 30-45 mins before your run."
+          }
+        }
+      },
+      "block_order": [
+        "product-description",
+        "lrc_accordion_item_2",
+        "lrc_accordion_item_3"
+      ],
+      "settings": {}
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
-      "settings": {
-      }
+      "settings": {}
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
-      "settings": {
-      }
+      "settings": {}
     },
     "one-click-upsell": {
       "type": "lrc-reviews",
       "blocks": {
         "one-click-upsell": {
-          "type": "shopify:\/\/apps\/one-click-upsell-zipify-ocu\/blocks\/on-page\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
-          "settings": {
-          }
+          "type": "shopify://apps/one-click-upsell-zipify-ocu/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+          "settings": {}
         }
       },
-      "block_order": [
-        "one-click-upsell"
-      ],
-      "settings": {
-      }
+      "block_order": ["one-click-upsell"],
+      "settings": {}
     },
     "0e698922-8ed8-423d-886f-c78375d71373": {
       "type": "featured-collection",
@@ -74,14 +91,11 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_review_widget_iFiJeK": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
-      "block_order": [
-        "judge_me_reviews_review_widget_iFiJeK"
-      ],
+      "block_order": ["judge_me_reviews_review_widget_iFiJeK"],
       "settings": {
         "include_margins": true
       }
@@ -89,7 +103,7 @@
     "3e4ec809-784d-4120-a4a6-cced1ff5c986": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}\/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price\/100,\n      $value: data.total_price\/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price\/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}\/cart\/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='\/cart\/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n<\/script>",
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -98,7 +112,7 @@
   },
   "order": [
     "lrc-base-product",
-    "lrc-product-description",
+    "lrc-accordion",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "one-click-upsell",

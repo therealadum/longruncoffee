@@ -1,0 +1,139 @@
+<div id="lrc-accordion-how-it-works" class="z-0 relative"></div>
+
+<script
+  type="text/babel"
+>
+  const AccordionItem = ({ question, answer=null, isOpen, onClick, image }) => {
+    const contentHeight = React.useRef();
+    const innerHtml = {
+      __html: answer,
+    };
+    return (
+      <div className="flex-1 flex flex-col py-2">
+        <button className={`flex items-center text-cyan-700`} onClick={onClick}>
+          <p className="font-accent text-2xl text-cyan-700">{question}</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className={`w-6 h-6 transition-all ml-auto ${isOpen ? 'transform rotate-180' : ''}`}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+
+        <div
+          ref={contentHeight}
+          className="overflow-hidden transition-all"
+          style={
+            isOpen ? { height: contentHeight.current ? contentHeight.current.scrollHeight : '0px' } : { height: '0px' }
+          }
+        >
+          {
+            answer ? <div
+              className="text-base text-neutral-600 flex flex-col space-y-2 py-3"
+              dangerouslySetInnerHTML={innerHtml}
+            /> : image ?
+            <img
+              src={image}
+              width="500"
+              height="500"
+              className="w-full lg:max-w-[500px] aspect-square object-contain self-center mx-auto"
+            /> : null
+          }
+        </div>
+      </div>
+    );
+  };
+
+  function LRCAccordionHowItWorks() {
+    const [activeIndex, setActiveIndex] = React.useState(null);
+
+    const handleItemClick = (index) => {
+      setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+    };
+
+   return (
+      <div className="bg-cyan-50 bg-opacity-20 p-4">
+        <div className="max-w-5xl mx-auto flex flex-col">
+          {% for block in section.blocks %}
+            {% if block.type == "product-description" %}
+              <AccordionItem
+                question={"Description"}
+                answer="{{ product.description | escape }}"
+                isOpen={activeIndex === "product-description"}
+                onClick={() => handleItemClick("product-description")}
+              />
+            {% elsif block.type == 'lrc-accordion-image' %}
+              <AccordionItem
+                question={"{{ block.settings.title }}"}
+                image="https://{{ block.settings.image | image_url: width: 500 }}"
+                isOpen={activeIndex === "{{ block.settings.title }}"}
+                onClick={() => handleItemClick("{{ block.settings.title }}")}
+              />
+            {% else %}
+              <AccordionItem
+                question={"{{ block.settings.title }}"}
+                answer={`<p>
+                  {{ block.settings.body }}
+                </p>`}
+                isOpen={activeIndex === "{{ block.settings.title }}"}
+                onClick={() => handleItemClick("{{ block.settings.title }}")}
+              />
+            {% endif %}
+            {% unless forloop.last %}
+              <div className="h-px my-2 bg-cyan-500 rounded" />
+            {% endunless %}
+          {% endfor %}
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.render(<LRCAccordionHowItWorks />, document.getElementById('lrc-accordion-how-it-works'));
+</script>
+
+{% schema %}
+{
+  "name": "LRC Accordion",
+  "blocks": [
+    {
+      "name": "Product Description",
+      "type": "product-description"
+    },
+    {
+      "name": "LRC Accordion Text",
+      "type": "lrc-accordion-text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "body",
+          "label": "Body"
+        }
+      ]
+    },
+    {
+      "name": "LRC Accordion Image",
+      "type": "lrc-accordion-image",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

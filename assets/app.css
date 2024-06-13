@@ -4189,6 +4189,10 @@ h2#spr-header-title {
     display: none;
   }
 
+  .lg\:aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
+  }
+
   .lg\:h-10 {
     height: 2.5rem;
   }
@@ -4307,6 +4311,10 @@ h2#spr-header-title {
 
   .lg\:max-w-xl {
     max-width: 36rem;
+  }
+
+  .lg\:max-w-\[500px\] {
+    max-width: 500px;
   }
 
   .lg\:-translate-y-20 {

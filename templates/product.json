@@ -5,19 +5,51 @@
       "settings": {
       }
     },
-    "lrc-product-description": {
-      "type": "lrc-product-description",
+    "lrc-accordion": {
+      "type": "lrc-accordion",
+      "blocks": {
+        "product-description": {
+          "type": "product-description",
+          "settings": {
+          }
+        },
+        "lrc_accordion_item_2": {
+          "type": "lrc-accordion-image",
+          "settings": {
+            "title": "Supplement Facts",
+            "image": "shopify:\/\/shop_images\/Supp_Facts.png"
+          }
+        },
+        "lrc_accordion_item_3": {
+          "type": "lrc-accordion-text",
+          "settings": {
+            "title": "How to Use",
+            "body": "LRC can be prepared with any brewing method - so use your favorite! Consume 30-45 mins before your run."
+          }
+        }
+      },
+      "block_order": [
+        "product-description",
+        "lrc_accordion_item_2",
+        "lrc_accordion_item_3"
+      ],
       "settings": {
       }
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
       "settings": {
+        "show_cta": false,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
       }
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
       "settings": {
+        "show_cta": false,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
       }
     },
     "one-click-upsell": {
@@ -98,7 +130,7 @@
   },
   "order": [
     "lrc-base-product",
-    "lrc-product-description",
+    "lrc-accordion",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "one-click-upsell",
