@@ -9,48 +9,82 @@
 */
 {
   "sections": {
-    "image_banner_bJD8y3": {
-      "type": "image-banner",
+    "image_with_text_adUPRF": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_c8fD73": {
+        "heading_bRDneY": {
           "type": "heading",
           "settings": {
-            "heading": "Long Run Co.",
-            "heading_size": "h0"
+            "heading": "Welcome Amazon customers",
+            "heading_size": "h1"
           }
         },
-        "text_jR8PGt": {
+        "text_GcfTnx": {
           "type": "text",
           "settings": {
-            "text": "<strong>Long Run Co. helps athletes fuel, recover, and sleep better. <\/strong>",
-            "text_style": "subtitle"
+            "text": "<p>Do you have an issue, question, or want to provide feedback on your order?<\/p><p>We're here to help!<\/p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_c8fD73",
-        "text_jR8PGt"
+        "heading_bRDneY",
+        "text_GcfTnx"
       ],
       "custom_css": [
-        "@media (max-width: 960px) {h2 {font-size: 32px; } p {font-size: 18px; }}"
+        "@media screen and (max-width: 960px) {h2 {font-size: 36px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Copy_of_Marathon_Mock_Up_1.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "accent-2",
+        "image": "shopify:\/\/shop_images\/LRC4.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "home_hero_xMFhGD": {
-      "type": "home-hero",
+    "contact_form_nyRdK3": {
+      "type": "contact-form",
       "settings": {
+        "heading": "Get in touch",
+        "heading_size": "h2",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_b8deL3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Popular",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "home-page",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd": {
@@ -119,66 +153,9 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection_b8deL3": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Popular",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "home-page",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "home_coffee_club_cta_U3WrD7": {
       "type": "home-coffee-club-cta",
       "settings": {
-      }
-    },
-    "16941367470aba8df7": {
-      "type": "apps",
-      "blocks": {
-        "17d323cb-553c-456d-acd1-02a83042a100": {
-          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "38653",
-            "text_color": "#044e54",
-            "button_background_color": "#044e54",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#dd1d1d",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 50,
-            "padding_bottom": 50,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "17d323cb-553c-456d-acd1-02a83042a100"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true
       }
     },
     "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
@@ -329,15 +306,53 @@
         "padding_top": 24,
         "padding_bottom": 0
       }
+    },
+    "image_banner_bJD8y3": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_c8fD73": {
+          "type": "heading",
+          "settings": {
+            "heading": "Long Run Co.",
+            "heading_size": "h0"
+          }
+        },
+        "text_jR8PGt": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Long Run Co. helps athletes fuel, recover, and sleep better. <\/strong>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_c8fD73",
+        "text_jR8PGt"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {h2 {font-size: 32px; } p {font-size: 18px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Copy_of_Marathon_Mock_Up_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
-    "image_banner_bJD8y3",
-    "home_hero_xMFhGD",
-    "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
+    "image_with_text_adUPRF",
+    "contact_form_nyRdK3",
     "featured_collection_b8deL3",
+    "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
     "home_coffee_club_cta_U3WrD7",
-    "16941367470aba8df7",
     "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
     "coming-soon",
     "d5466ac7-0a29-4c38-af12-7e4caee3d53f",
@@ -345,6 +360,7 @@
     "featured_blog_M8HqEH",
     "featured_blog_L79Eki",
     "713b7226-cf71-4f89-85c2-f953b6c17b1b",
-    "5ba6089b-f4b0-483a-bb71-f0815cd8c897"
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897",
+    "image_banner_bJD8y3"
   ]
 }
