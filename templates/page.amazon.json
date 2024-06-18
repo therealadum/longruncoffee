@@ -1,0 +1,350 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "image_banner_bJD8y3": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_c8fD73": {
+          "type": "heading",
+          "settings": {
+            "heading": "Long Run Co.",
+            "heading_size": "h0"
+          }
+        },
+        "text_jR8PGt": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Long Run Co. helps athletes fuel, recover, and sleep better. <\/strong>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_c8fD73",
+        "text_jR8PGt"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {h2 {font-size: 32px; } p {font-size: 18px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Copy_of_Marathon_Mock_Up_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "home_hero_xMFhGD": {
+      "type": "home-hero",
+      "settings": {
+      }
+    },
+    "7f3ffb9d-263c-40c5-8c42-206c33aa50dd": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Easier Running",
+            "icon": "shoe",
+            "row_content": "<h6>Our electrolyte coffee aids muscle contraction, making the run feel easier. <\/h6>",
+            "page": ""
+          }
+        },
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "No Upset Stomach",
+            "icon": "check_mark",
+            "row_content": "<h6>Our formula is pH basic, meaning it's easier on your stomach than regular coffee and other pre-workouts.<\/h6>",
+            "page": ""
+          }
+        },
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Reduce Sluggishness",
+            "icon": "lightning_bolt",
+            "row_content": "<h6>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.<\/h6>",
+            "page": ""
+          }
+        },
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Effortless Routine",
+            "icon": "stopwatch",
+            "row_content": "<h6>The most enjoyable electrolyte routine you can be consistent with.<\/h6>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-1",
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-2",
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-3",
+        "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-4"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
+        "@media (min-width: 961px) {h2 {font-size: 42px; } h6 {font-size: 22px; }}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Our Formula Maximizes Your Performance",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": true,
+        "image": "shopify:\/\/shop_images\/Ultra_10.png",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_b8deL3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Popular",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "home-page",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "home_coffee_club_cta_U3WrD7": {
+      "type": "home-coffee-club-cta",
+      "settings": {
+      }
+    },
+    "16941367470aba8df7": {
+      "type": "apps",
+      "blocks": {
+        "17d323cb-553c-456d-acd1-02a83042a100": {
+          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "38653",
+            "text_color": "#044e54",
+            "button_background_color": "#044e54",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#dd1d1d",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "17d323cb-553c-456d-acd1-02a83042a100"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
+      "type": "home-reviews",
+      "settings": {
+      }
+    },
+    "coming-soon": {
+      "type": "coming-soon",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "d5466ac7-0a29-4c38-af12-7e4caee3d53f": {
+      "type": "home-mission-cta",
+      "settings": {
+      }
+    },
+    "accf1238-351b-4e82-a2fb-ed65fbb5d239": {
+      "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
+      "settings": {
+        "heading": "The Science",
+        "heading_size": "h1",
+        "blog": "science",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_M8HqEH": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Fuel Your Passion",
+        "heading_size": "h1",
+        "blog": "fuel-your-passion",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "accent-2",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_L79Eki": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Recipes for Runners",
+        "heading_size": "h1",
+        "blog": "recipes",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "inverse",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "713b7226-cf71-4f89-85c2-f953b6c17b1b": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 35px;}"
+      ],
+      "settings": {
+        "title": "Fuel your passion",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-selling",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome MKE Runners",
+            "heading_size": "h1"
+          }
+        },
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Electrolyte Infused <br\/>Coffee For Athletes<br\/><br\/>Try it Free.<\/h5>"
+          }
+        },
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-heading-1",
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1",
+        "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "h5 {font-size: 20px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner_bJD8y3",
+    "home_hero_xMFhGD",
+    "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
+    "featured_collection_b8deL3",
+    "home_coffee_club_cta_U3WrD7",
+    "16941367470aba8df7",
+    "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636",
+    "coming-soon",
+    "d5466ac7-0a29-4c38-af12-7e4caee3d53f",
+    "accf1238-351b-4e82-a2fb-ed65fbb5d239",
+    "featured_blog_M8HqEH",
+    "featured_blog_L79Eki",
+    "713b7226-cf71-4f89-85c2-f953b6c17b1b",
+    "5ba6089b-f4b0-483a-bb71-f0815cd8c897"
+  ]
+}
