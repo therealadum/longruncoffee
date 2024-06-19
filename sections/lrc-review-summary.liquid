@@ -1,0 +1,70 @@
+<div id="lrc-review-summary" class="z-0 relative"></div>
+
+<script
+  type="text/babel"
+>
+  function LRCReviewSummary() {
+    return <div className="bg-{{ section.settings.background-color }}-50 px-4 py-12 lg:px-0">
+        <div className="mx-auto lg:max-w-6xl items-center flex flex-col">
+            <h3 className="text-4xl lg:text-4xl font-accent text-neutral-900">{{ section.settings.title }}</h3>
+            <div className="mt-2 flex items-center space-x-2">
+                <span className="text-2xl">⭐⭐⭐⭐⭐</span>
+                <span className="text-xl font-semibold text-neutral-700">1.6k+ Reviews</span>
+            </div>
+            <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+                {% for block in section.blocks %}
+                    <div className="p-4 flex items-center justify-center">
+                        <img
+                            src="https://{{ block.settings.image | image_url: width: 500 }}"
+                            className="object-contain w-full aspect-video"
+                          />
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>;
+  }
+  ReactDOM.render(<LRCReviewSummary />, document.getElementById('lrc-review-summary'));
+</script>
+
+{% schema %}
+{
+  "name": "LRC Review Summary",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "radio",
+      "id": "background-color",
+      "label": "Background Color",
+      "options": [
+        {
+          "value": "cyan",
+          "label": "Primary"
+        },
+        {
+          "value": "tan",
+          "label": "Secondary"
+        }
+      ],
+      "default": "cyan"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
