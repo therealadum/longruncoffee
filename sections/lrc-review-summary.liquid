@@ -9,7 +9,7 @@
             <h3 className="text-4xl lg:text-4xl font-accent text-neutral-900">{{ section.settings.title }}</h3>
             <div className="mt-2 flex items-center space-x-2">
                 <span className="text-2xl">⭐⭐⭐⭐⭐</span>
-                <span className="text-xl font-semibold text-neutral-700">1.6k+ Reviews</span>
+                <span className="text-xl font-semibold text-neutral-700">{{ section.settings.review-text }}</span>
             </div>
             <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
                 {% for block in section.blocks %}
@@ -35,6 +35,12 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "review-text",
+      "label": "Review Text (1.6k+ Reviews)",
+      "default": "1.6k+ Reviews"
     },
     {
       "type": "radio",

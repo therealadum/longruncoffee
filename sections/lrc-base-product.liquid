@@ -28,6 +28,25 @@
     }
   };
 
+  const productBundleServingSizes = {
+    // ultramarathon set
+    8281672483129: {
+      '1 lbs': 4 * 40, // 4 bags, 1lb each
+      '5 lbs': 4 * 200, // 4 bags, 5lb each
+    },
+    // new athlete sample kit
+    9445138465081: (3 * 4 + 2 * 1.5) * 2.5, // 3 bags of 4 ounces, 2 bags of 1.5 ounces
+    // run brunch bundle
+    9413945721145: 3 * 40, // 3 bags, 1lb each
+    // speedwork set
+    8281671237945: {
+      '1 lbs': 3 * 40, // 3 bags, 1lb each
+      '5 lbs': 3 * 200, // 3 bags, 5lb each
+    },
+    // flavored travel pack set
+    9107582288185: 10 * 1.5 * 2.5 // 10 bags of 1.5oz
+  }
+
   function useIsMobile() {
     const [windowSize, setWindowSize] = React.useState({
         width: 0,
@@ -124,18 +143,26 @@
     }
   }
 
-  function getServingCostSize(sizeString) {
+  function getServingCostSize(sizeString, productId) {
     let denominator = 1;
-    switch (sizeString) {
-      case "12 oz":
-        denominator = 30;
-        break;
-      case "1 lbs":
-        denominator = 40;
-        break;
-      case "5 lbs":
-        denominator = 200;
-        break;
+    if (productBundleServingSizes[productId]) {
+      if (typeof productBundleServingSizes[productId] === 'number') {
+        denominator = productBundleServingSizes[productId];
+      } else {
+        denominator = productBundleServingSizes[productId][sizeString]
+      }
+    } else {
+      switch (sizeString) {
+        case "12 oz":
+          denominator = 30;
+          break;
+        case "1 lbs":
+          denominator = 40;
+          break;
+        case "5 lbs":
+          denominator = 200;
+          break;
+      }
     }
     return denominator;
   }
@@ -433,7 +460,7 @@
             </div>
             {
               product.tags.indexOf('All Coffee') !== -1
-                ? <span className="text-base w-full text-right">${((productForm.isSubscription ? productCosts.subscribe_and_save_discounted_cost : productCosts.one_time_total_cost) / (getServingCostSize(variant.option1) * productForm.quantity)).toFixed(2)} / serving</span>
+                ? <span className="text-base w-full text-right">${((productForm.isSubscription ? productCosts.subscribe_and_save_discounted_cost : productCosts.one_time_total_cost) / (getServingCostSize(variant.option1, product.id) * productForm.quantity)).toFixed(2)} / serving</span>
                 : null
             }
           </div>
@@ -466,6 +493,7 @@
     const tags = product.tags.filter(f => [
       "All Coffee",
       "Flavor",
+      "Bundle",
       "Traditional",
       "Gear",
       "__hidden",
@@ -769,7 +797,7 @@
                                   className={`text-base font-accent border-[0.5px] rounded p-3 relative flex flex-col justify-center items-center ${productForm.options[option.name] === v ? "bg-cyan-200/90 border-cyan-600 text-cyan-700" : "border-cyan-500 text-cyan-600 hover:bg-cyan-100 hover:border-cyan-600 hover:text-cyan-700"}`}
                                 >
                                   <span className="text-lg font-accent">{v}</span>
-                                  <span className="text-sm -mt-1">${((productForm.isSubscription ? optionCosts.subscribe_and_save_discounted_cost : optionCosts.one_time_total_cost) / (getServingCostSize(v) * productForm.quantity)).toFixed(2)} / serving</span>
+                                  <span className="text-sm -mt-1">${((productForm.isSubscription ? optionCosts.subscribe_and_save_discounted_cost : optionCosts.one_time_total_cost) / (getServingCostSize(v, product.id) * productForm.quantity)).toFixed(2)} / serving</span>
                                 </button>
                                 case "Form":
                                   return <button
