@@ -282,7 +282,7 @@
     return screenSize;
   };
 
-  function OnScrollBuyButton({ product, variantID, productForm, setProductForm, variantQuantityMap, variant, variantCost, discountInformation }) {
+  function OnScrollBuyButton({ product, variantID, productForm, setProductForm, variantQuantityMap, variant, variantCost, discountInformation, images }) {
     const [scrollPosition, setScrollPosition] = React.useState(0);
     const [isLoading, setIsLoading] = React.useState(false);
     const { width } = useScreenSize();
@@ -680,7 +680,7 @@
 
     return <div className="relative bg-cyan-50 bg-opacity-20 z-30">
       {
-        product.type !== "Gift" ? <OnScrollBuyButton product={product} variantID={variantID} productForm={productForm} setProductForm={setProductForm} variantQuantityMap={variantQuantityMap} variant={variant} variantCost={variantCost} discountInformation={discountInformation}/> : null
+        product.type !== "Gift" ? <OnScrollBuyButton images={images} product={product} variantID={variantID} productForm={productForm} setProductForm={setProductForm} variantQuantityMap={variantQuantityMap} variant={variant} variantCost={variantCost} discountInformation={discountInformation}/> : null
       }
       <div className="flex flex-col p-4 lg:py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
