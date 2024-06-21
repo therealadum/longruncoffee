@@ -347,7 +347,7 @@
     </div> : scrollPosition > 860 && width >= 700 ? <div className="fixed z-30 bottom-8 left-8 right-8 flex">
       <div className="w-full shadow-lg shadow-cyan-900/50 rounded-full border border-cyan-900/50 bg-white flex items-center space-x-4 p-4">
         <img
-          src={`https://${product.images[0]}?width=150`}
+          src={`https://${images[0]}?width=150`}
           loading="lazy"
           width="150"
           height="150"
@@ -573,6 +573,7 @@
 
   function LRCBaseProduct() {
     const product = {{  product | json }};
+    const [images, setImages] = React.useState([...product.images]);
     const options = generateOptionsFromProductVariants(product);
 
     console.log(product)
@@ -669,6 +670,14 @@
     const isMobile = useIsMobile();
     const productCosts = useProductCosts(variant, productForm.quantity)
 
+    React.useEffect(() => {
+      if (variant && variant.featured_image) {
+        setImages([variant.featured_image.src, ...images])
+      } else {
+        setImages(product.images)
+      }
+    }, [variantID])
+
     return <div className="relative bg-cyan-50 bg-opacity-20 z-30">
       {
         product.type !== "Gift" ? <OnScrollBuyButton product={product} variantID={variantID} productForm={productForm} setProductForm={setProductForm} variantQuantityMap={variantQuantityMap} variant={variant} variantCost={variantCost} discountInformation={discountInformation}/> : null
@@ -684,15 +693,15 @@
             <div className={`flex relative rounded-xl overflow-hidden pt-8 pb-16 ${activeImageIndex === 0 && hoveredImageIndex === null || hoveredImageIndex === 0 ? "bg-cyan-50" : "bg-white"}`}>
               <div className="h-[20rem] lg:h-[32rem] w-full z-10 mx-auto">
                 {
-                  product.images && product.images.length ? hoveredImageIndex !== null ? <img
-                    src={`https://${product.images[hoveredImageIndex]}${isMobile ? '&width=450' : '&width=650'}`}
+                  images && images.length ? hoveredImageIndex !== null ? <img
+                    src={`https://${images[hoveredImageIndex]}${isMobile ? '&width=450' : '&width=650'}`}
                     loading="lazy"
                     width="400"
                     height="400"
                     alt="Featured product image"
                     className="w-full h-full object-contain"
                   /> : <img
-                    src={`https://${product.images[activeImageIndex]}${isMobile ? '&width=450' : '&width=650'}`}
+                    src={`https://${images[activeImageIndex]}${isMobile ? '&width=450' : '&width=650'}`}
                     loading="lazy"
                     width="400"
                     height="400"
@@ -703,7 +712,7 @@
               </div>
               <div className="absolute inset-0 bottom-4 z-10 flex justify-center items-end">
                 <div className="flex">
-                  {product.images.map((media, i) =>
+                  {images.map((media, i) =>
                     (<button
                       key={i}
                       onMouseEnter={() => setHoveredImageIndex(i)}

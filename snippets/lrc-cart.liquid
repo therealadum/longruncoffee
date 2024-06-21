@@ -69,12 +69,12 @@
     React.useEffect(() => {
         if (cartTotal >= 399) {
             const items = [];
-            if (!sticker_present_in_cart) {
+            {% comment %} if (!sticker_present_in_cart) {
                 items.push({
                     id: FREE_STICKER_VARIANT_ID,
                     quantity: 1
                 })
-            }
+            } {% endcomment %}
             if (!free_travel_set_present_in_cart && !free_boco_in_cart) {
                 items.push({
                     id: FREE_TRAVEL_SET_VARIANT_ID,
@@ -103,13 +103,13 @@
                 setCart(newCart);
             })
         } else {
-            if (!sticker_present_in_cart && !free_travel_set_present_in_cart) {
+            if (!free_travel_set_present_in_cart) {  // && !sticker_present_in_cart) {
                 return;
             }
             const vo = {};
-            if (sticker_present_in_cart) {
+            {% comment %} if (sticker_present_in_cart) {
                 vo[FREE_STICKER_VARIANT_ID] = 0;
-            }
+            } {% endcomment %}
             if (free_travel_set_present_in_cart) {
                 vo[FREE_TRAVEL_SET_VARIANT_ID] = 0;
             }
