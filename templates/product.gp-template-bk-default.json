@@ -76,6 +76,45 @@
       "settings": {
       }
     },
+    "lrc-review-summary": {
+      "type": "lrc-review-summary",
+      "blocks": {
+        "image_GGw6iH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hoka.png"
+          }
+        },
+        "image_ctk6RF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/runners-world-logo-vector-removebg-preview.png"
+          }
+        },
+        "image_qTwJhq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/believe-in-the-run.png"
+          }
+        },
+        "image_QF6Ptp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bigger-than-the-trail.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_GGw6iH",
+        "image_ctk6RF",
+        "image_qTwJhq",
+        "image_QF6Ptp"
+      ],
+      "settings": {
+        "title": "Trusted by Runners",
+        "background-color": "tan"
+      }
+    },
     "0e698922-8ed8-423d-886f-c78375d71373": {
       "type": "featured-collection",
       "settings": {
@@ -143,6 +182,7 @@
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "one-click-upsell",
+    "lrc-review-summary",
     "0e698922-8ed8-423d-886f-c78375d71373",
     "1693874745cc6bc7e5",
     "17093999844598d023",
