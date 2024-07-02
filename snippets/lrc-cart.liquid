@@ -128,16 +128,28 @@
     }
   }
 
-  function useAddToCartURL(subscriptionState, cart, setCartState, setCart, setIsOpen) {
+  function useAddToCartURL(subscriptionState, cart, setCartState, setCart, setIsOpen, totalSubscriptionItems) {
     const { items: subscriptionItems } = subscriptionState;
     const { items: oneTimeItems } = cart;
+    const [shouldCheckout, setShouldCheckout] = React.useState(false)
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
+    React.useEffect(() => {
+        if (shouldCheckout) {
+            setShouldCheckout(false)
+            if (!(subscriptionState.items.length && totalSubscriptionItems > 1 || subscriptionState.items.length == 0)) {
+                setIsOpen(true);
+                return;
+            }
+            window.location.href = '/checkout'
+        }
+    }, [shouldCheckout])
+
     React.useEffect(async () => {
         let mounted = true;
-        if (params.add_to_cart_variant_id && params.add_to_cart_product_hash) {
+        if (Boolean(params.add_to_cart_variant_id && params.add_to_cart_product_hash)) {
             let quantity = 1;
             if (params.add_to_cart_quantity) {
                 quantity = parseInt(params.add_to_cart_quantity);
@@ -152,108 +164,119 @@
             if (params.add_to_cart_max) {
                 max_add_to_cart = parseInt(params.add_to_cart_max);
             }
+
+            let shouldCheckoutParam = false;
+            if (params.add_to_cart_checkout) {
+                shouldCheckoutParam = true;
+            }
             try {
-                if (Boolean(params.add_to_cart_variant_id && params.add_to_cart_product_hash)) {
-                    const data = await fetch(window.Shopify.routes.root + `products/${params.add_to_cart_product_hash}.js`);
-                    const product = await data.json();
-
-                    // prevent additions if unmounted or product is not available
-                    if (!mounted) {
-                        return;
+                const data = await fetch(window.Shopify.routes.root + `products/${params.add_to_cart_product_hash}.js`);
+                const product = await data.json();
+                
+                // prevent additions if unmounted or product is not available
+                if (!mounted) {
+                    return;
+                }
+                if (!product.available) {
+                    removeAddToCartURLParameters()
+                    return;
+                }
+                    
+                if (subscription) {
+                    let variant;
+                    for (let j = 0; j < product.variants.length; j++) {
+                        if (product.variants[j].id == params.add_to_cart_variant_id) {
+                            variant = product.variants[j];
+                        }
                     }
-                    if (!product.available) {
-                        removeAddToCartURLParameters()
-                        return;
+                    const item = {
+                        product,
+                        variantID: params.add_to_cart_variant_id,
+                        variant,
+                        quantity
                     }
-                        
-                    if (subscription) {
-                        let variant;
-                        for (let j = 0; j < product.variants.length; j++) {
-                            if (product.variants[j].id == params.add_to_cart_variant_id) {
-                                variant = product.variants[j];
-                            }
-                        }
-                        const item = {
-                            product,
-                            variantID: params.add_to_cart_variant_id,
-                            variant,
-                            quantity
-                        }
 
-                        // if already in subscriptions, add quantity - otherwise add new item
-                        let existingItemIndex = null;
-                        for (let j = 0; j < subscriptionItems.length; j++) {
-                            if (subscriptionItems[j].variantID === item.variantID) {
-                                existingItemIndex = j;
-                            }
+                    // if already in subscriptions, add quantity - otherwise add new item
+                    let existingItemIndex = null;
+                    for (let j = 0; j < subscriptionItems.length; j++) {
+                        if (subscriptionItems[j].variantID === item.variantID) {
+                            existingItemIndex = j;
                         }
+                    }
 
-                        if (await klaviyo.isIdentified()) {
-                            // report to klayvio
-                            klaviyo.push(['track', 'add_subscription_item_to_cart', {
-                                'product_id' : product.id,
-                                'variant_id': params.add_to_cart_variant_id,
-                                'quantity': quantity
-                            }]);
-                        }
+                    if (await klaviyo.isIdentified()) {
+                        // report to klayvio
+                        klaviyo.push(['track', 'add_subscription_item_to_cart', {
+                            'product_id' : product.id,
+                            'variant_id': params.add_to_cart_variant_id,
+                            'quantity': quantity
+                        }]);
+                    }
 
-                        removeAddToCartURLParameters()
-                        
-                        if (existingItemIndex != null) {
-                            if (newItems[existingItemIndex].quantity + quantity > max_add_to_cart) {
-                                document.dispatchEvent(new CustomEvent('buy_button_complete'))
-                                return;
-                            }
-                            const newItems = [...subscriptionState.items];
-                            newItems[existingItemIndex].quantity += quantity;
-                            setCartState({
-                                ...subscriptionState,
-                                items: newItems
-                            })
-                        } else {
-                            setCartState({
-                                ...subscriptionState,
-                                items: [...subscriptionItems, {
-                                    ...item,
-                                    quantity
-                                }]
-                            })
-                        }
-                        setIsOpen(true);
-                        document.dispatchEvent(new CustomEvent('buy_button_complete'))
-                    } else {
-                        let existingItemQuantity = 0;
-                        oneTimeItems.forEach(item => {
-                            if (item.variant_id == params.add_to_cart_variant_id) {
-                                existingItemQuantity = item.quantity;
-                            }
-                        });
-                        removeAddToCartURLParameters();
-
-                        if (!mounted || existingItemQuantity + quantity > max_add_to_cart) {
+                    removeAddToCartURLParameters()
+                    
+                    if (existingItemIndex != null) {
+                        if (newItems[existingItemIndex].quantity + quantity > max_add_to_cart) {
                             document.dispatchEvent(new CustomEvent('buy_button_complete'))
                             return;
                         }
-
-                        fetch(window.Shopify.routes.root + 'cart/add.js', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                items: [{
-                                    'id': params.add_to_cart_variant_id,
-                                    quantity
-                                }]
-                            })
+                        const newItems = [...subscriptionState.items];
+                        newItems[existingItemIndex].quantity += quantity;
+                        setCartState({
+                            ...subscriptionState,
+                            items: newItems
                         })
-                        .then(async response => {
-                            const newCart = await getCart();
-                            setCart(newCart);
-                            setIsOpen(true);
-                            document.dispatchEvent(new CustomEvent('buy_button_complete'));
+                    } else {
+                        setCartState({
+                            ...subscriptionState,
+                            items: [...subscriptionItems, {
+                                ...item,
+                                quantity
+                            }]
                         })
                     }
+                    if (shouldCheckoutParam) {
+                        setShouldCheckout(true)
+                    } else {
+                        setIsOpen(true);
+                    }
+                    document.dispatchEvent(new CustomEvent('buy_button_complete'))
+                } else {
+                    let existingItemQuantity = 0;
+                    oneTimeItems.forEach(item => {
+                        if (item.variant_id == params.add_to_cart_variant_id) {
+                            existingItemQuantity = item.quantity;
+                        }
+                    });
+                    removeAddToCartURLParameters();
+
+                    if (!mounted || existingItemQuantity + quantity > max_add_to_cart) {
+                        document.dispatchEvent(new CustomEvent('buy_button_complete'))
+                        return;
+                    }
+
+                    fetch(window.Shopify.routes.root + 'cart/add.js', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            items: [{
+                                'id': params.add_to_cart_variant_id,
+                                quantity
+                            }]
+                        })
+                    })
+                    .then(async response => {
+                        const newCart = await getCart();
+                        setCart(newCart);
+                        if (shouldCheckoutParam) {
+                            setShouldCheckout(true)
+                        } else {
+                            setIsOpen(true);
+                        }
+                        document.dispatchEvent(new CustomEvent('buy_button_complete'));
+                    })
                 }
             } catch (e) {
                 console.error(e);
@@ -263,7 +286,7 @@
         return () => {
             mounted = false;
         }
-    }, [oneTimeItems.length, subscriptionItems.length, params.add_to_cart_variant_id, params.add_to_cart_product_hash, params.add_to_cart_is_subscription, params.add_to_cart_quantity])
+    }, [oneTimeItems.length, subscriptionItems.length, params.add_to_cart_variant_id, params.add_to_cart_checkout, params.add_to_cart_product_hash, params.add_to_cart_is_subscription, params.add_to_cart_quantity])
   }
 
   function isRechargeAvailableOnProduct(product) {
@@ -393,114 +416,100 @@
     return unique;
   }
 
-  function SubscriptionItem({index, item, cartState, setCartState}) {
-    const [state, setState] = React.useState({
-        isEditing: false,
-        editQuantity: item.quantity,
-        loading: false
-    });
+  function useCartItemProductCosts(price, compare_at_price, quantity, cart) {
+    const [subscriptionItems, setSubscriptionItems] = React.useState(localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)).items : []);
 
     React.useEffect(() => {
-        if (item.quantity !== state.editQuantity && state.isEditing === false) {
-            setState({
-                ...state,
-                editQuantity: item.quantity
-            });
-        }
-    }, [item.quantity, setState, state.editQuantity]);
+      const handler = (data) => {
+        setSubscriptionItems(localStorage.getItem(referenceString) ? JSON.parse(localStorage.getItem(referenceString)).items : [])
+      }
+      document.addEventListener('subscription_changed', handler);
+      return () => {
+        document.removeEventListener('subscription_changed', handler);
+      }
+    }, [setSubscriptionItems])
 
-    const onClick = React.useCallback(() => {
-        if (state.isEditing) {
-            setState({
-                ...state,
-                loading: true
-            })
-            const newItems = [...cartState.items];
-            let index = null;
-            for (let i = 0; i < newItems.length; i++) {
-                if (newItems[i].variantID === item.variantID) {
-                    index = i;
-                }
+    let qty = 0;
+    subscriptionItems.forEach(item => qty += item.quantity);
+
+    // get tier
+    let plan = plans.base;
+    if (qty >= plans.elite.bag_min) {
+      plan = plans.elite;
+    } else if (qty >= plans.pro.bag_min) {
+      plan = plans.pro;
+    }
+
+    return {
+      subscribe_and_save_total_cost: ((price * quantity) / 100).toFixed(2),
+      subscribe_and_save_discounted_cost: ((price * quantity * (1-plan.discount)) / 100).toFixed(2),
+      one_time_total_cost: ((price * quantity) / 100).toFixed(2),
+      one_time_compare_at_cost: compare_at_price ? ((compare_at_price * quantity) / 100).toFixed(2) : ((price * quantity) / 100).toFixed(2)
+    }
+  }
+
+  function SubscriptionItem({index, item, cart, cartState, setCartState}) {
+    const costs = useCartItemProductCosts(item.variant.price, item.variant.compare_at_price, item.quantity, cart);
+    const onClick = (qty) => {
+        const newItems = [...cartState.items];
+        let index = null;
+        for (let i = 0; i < newItems.length; i++) {
+            if (newItems[i].variantID === item.variantID) {
+                index = i;
             }
-            if (index === null) {
-                console.error("could not remove item.");
-                return;
-            }
-            if (state.editQuantity === 0) {
-                newItems.splice(index, 1)
-            } else {
-                newItems[index].quantity = state.editQuantity;
-            }
-            setState({
-                ...state,
-                loading: false,
-                isEditing: false
-            });
-            setCartState({
-                ...cartState,
-                items: newItems
-            });
+        }
+        if (index === null) {
+            console.error("could not remove item.");
+            return;
+        }
+        if (qty <= 0) {
+            newItems.splice(index, 1)
         } else {
-            setState({
-                ...state,
-                isEditing: true
-            })
+            newItems[index].quantity = qty;
         }
-    }, [setState, setCartState, cartState, state, item])
+        setCartState({
+            ...cartState,
+            items: newItems
+        });
+    }
 
-    return <div
-        className="flex flex-col space-y-2 group relative"
-      >
-        <div className="absolute top-2 left-0 right-0 flex items-stretch space-x-2">
-            {
-                state.isEditing ? <div className="flex-1 shadow-md z-10 rounded-full bg-neutral-50 flex items-center justify-center p-1">
-                    <button onClick={() => {
-                        if (state.editQuantity > 0) {
-                            setState({
-                                ...state,
-                                editQuantity: state.editQuantity - 1
-                            })
-                        }
-                    }} className="px-2 flex items-center justify-center text-base">
-                        <span>-</span>
-                    </button>
-                    <span className="flex-1 text-cyan-700 text-base text-center">{state.editQuantity}</span>
-                    <button onClick={() => setState({
-                            ...state,
-                            editQuantity: state.editQuantity + 1
-                        })} className="px-2 flex items-center justify-center text-base">
-                        <span>+</span>
-                    </button>
-                </div>: null
-            }
-            <button disabled={state.loading} onClick={onClick} className={`ml-auto shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center ${state.loading ? 'cursor-not-allowed' : ''}`}>
-                {
-                    state.isEditing ? state.loading ? <svg className="animate-spin h-4 w-4 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                      </svg> : <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="w-4 h-4 text-cyan-400"
-                    >
-                        <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
-                    </svg> : <span className="flex items-end self-center"><span className="text-sm" data-testid={`cart-subscription-quantity-${item.variant.id}`}>{state.editQuantity}</span><span className="text-xs">x</span></span>
-                }
-            </button>
+    return <div className="grid grid-cols-3 gap-x-2 md:gap-x-4">
+        <div className="h-24 relative"> 
+            <div className="relative z-20">
+                <img
+                    src={`${item.variant.featured_image ? item.variant.featured_image : item.product.featured_image}&width=150`}
+                    loading="lazy"
+                    className="h-24 object-contain p-4 mx-auto"
+                />
+            </div>
+            <div className="absolute inset-0 flex justify-center overflow-hidden z-10">
+                <img
+                  src="{{ "lrc-product-background.webp" | asset_url }}"
+                  loading="lazy"
+                  className="object-cover w-full h-full rounded-lg overflow-hidden"
+                />
+            </div>
         </div>
-        <img
-            src={`${item.product.featured_image}&width=150`}
-            loading="lazy"
-            className="w-full h-32 object-contain cursor-pointer"
-            onClick={onClick}
-        />
-        <h6 className="font-base text-xs text-cyan-800 text-center">
-            {item.variant.option1}, {item.variant.option2}
-        </h6>
-        <h5 className="font-base text-sm text-cyan-800 font-[700] text-center leading-[16px] tracking-tight">
-            <a href={item.product.url}>{item.product.title}</a>
-        </h5>
+        <div className="col-span-2 flex flex-col justify-center">
+            <h5 className="text-base font-accent text-cyan-800 text-left leading-[16px]">
+                <a href={item.product.url}>{item.product.title}</a>
+            </h5>
+            {
+                item.variant.options.filter((v) => v !== 'Default Title').length > 0
+                    ? <p className="mt-1 font-base text-xs text-cyan-800 text-left">
+                        {item.variant.options.filter((v) => v !== 'Default Title').join(', ')}
+                    </p>
+                    : null
+            }
+            <div className="mt-2 flex items-center justify-between">
+                <div className="border rounded border-neutral-400 flex items-stretch overflow-hidden">
+                    <button onClick={() => onClick(item.quantity - 1)} className="text-base text-neutral-700 px-4 hover:bg-neutral-100 hover:text-neutral-800">-</button>
+                    <span className="text-base font-bold py-1 w-12 text-center flex justify-center items-center">{item.quantity}</span>
+                    <button onClick={() => onClick(item.quantity + 1)} className="text-base text-neutral-700 px-4 hover:bg-neutral-100 hover:text-neutral-800">+</button>
+                </div>
+                <h4 className="text-base font-medium text-cyan-700">${costs.subscribe_and_save_discounted_cost}</h4>
+            </div>
+        </div>
     </div>
   }
 
@@ -564,117 +573,77 @@
       </div>
   }
 
-  function CartItem({item, setCart}) {
-    const [cartQuantityState, setCartQuantityState] = React.useState({
-        isEditing: false,
-        editQuantity: item.quantity,
-        loading: false
-    });
+  function CartItem({item, cart, setCart}) {
+    const [loading, setLoading] = React.useState(false);
+    const costs = useCartItemProductCosts(item.price, item.compare_at_price, item.quantity, cart);
 
-    React.useEffect(() => {
-        if (item.quantity !== cartQuantityState.editQuantity && cartQuantityState.isEditing === false) {
-            setCartQuantityState({
-                ...cartQuantityState,
-                editQuantity: item.quantity
-            });
-        }
-    }, [item.quantity, setCartQuantityState, cartQuantityState.editQuantity]);
+    const onClick = (qty) => {
+        const vo = {};
+        vo[item.variant_id] = qty;
+        setLoading(true);
+        fetch(window.Shopify.routes.root + 'cart/update.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                updates: vo
+            })
+        })
+        .then(async response => {
+            const newCart = await getCart();
+            setCart(newCart);
+            setLoading(false);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
 
-    const onClick = React.useCallback(() => {
-        if (cartQuantityState.isEditing) {
-            setCartQuantityState({
-                ...cartQuantityState,
-                loading: true
-            })
-            const vo = {};
-            vo[item.variant_id] = cartQuantityState.editQuantity;
-            fetch(window.Shopify.routes.root + 'cart/update.js', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    updates: vo
-                })
-            })
-            .then(async response => {
-                const newCart = await getCart();
-                setCartQuantityState({
-                    ...cartQuantityState,
-                    loading: false,
-                    isEditing: false
-                });
-                setCart(newCart);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-        } else {
-            setCartQuantityState({
-                ...cartQuantityState,
-                isEditing: true
-            })
-        }
-    }, [cartQuantityState, setCartQuantityState, setCart])
-
-    return <div
-            key={item.id}
-            className="flex flex-col space-y-2 group relative"
-        >
-            {item.product_type != "Gift" ? 
-                <div className="absolute top-2 left-0 right-0 flex items-stretch space-x-2">
-                    {
-                        cartQuantityState.isEditing ? <div className="flex-1 shadow-md z-10 rounded-full bg-neutral-50 flex items-center justify-center p-1">
-                            <button onClick={() => {
-                                if (cartQuantityState.editQuantity > 0) {
-                                    setCartQuantityState({
-                                        ...cartQuantityState,
-                                        editQuantity: cartQuantityState.editQuantity - 1
-                                    })
-                                }
-                            }} className="px-2 flex items-center justify-center text-base">
-                                <span>-</span>
-                            </button>
-                            <span className="flex-1 text-cyan-700 text-base text-center">{cartQuantityState.editQuantity}</span>
-                            <button onClick={() => setCartQuantityState({
-                                    ...cartQuantityState,
-                                    editQuantity: cartQuantityState.editQuantity + 1
-                                })} className="px-2 flex items-center justify-center text-base">
-                                <span>+</span>
-                            </button>
-                        </div>: null
-                    }
-                    <button disabled={cartQuantityState.loading} onClick={onClick} className={`ml-auto shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center ${cartQuantityState.loading ? 'cursor-not-allowed' : ''}`}>
-                        {
-                            cartQuantityState.isEditing ? cartQuantityState.loading ? <svg className="animate-spin h-4 w-4 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                              </svg> : <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                className="w-4 h-4 text-cyan-400"
-                            >
-                                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
-                            </svg> : <span className="flex items-end self-center"><span className="text-sm">{cartQuantityState.editQuantity}</span><span className="text-xs">x</span></span>
-                        }
-                    </button>
-                </div>
-            : null}
-            <img
-                src={`${item.featured_image.url}&width=150`}
-                loading="lazy"
-                className="w-full h-32 object-contain cursor-pointer"
-                onClick={onClick}
-            />
-            {
-                item.variant_options.filter(opt => opt !== "Default Title").length > 0 ? <h6 className="font-base text-xs text-cyan-800 text-center">
-                    {item.variant_options.join(', ')}
-                </h6> : null
-            }
-            <h5 className="font-base text-sm text-cyan-800 font-[700] text-center leading-[16px] tracking-tight">
+    return <div className="grid grid-cols-3 gap-x-2 md:gap-x-4">
+        <div className="h-24 relative"> 
+            <div className="relative z-20">
+                <img
+                    src={`${item.featured_image.url}&width=150`}
+                    loading="lazy"
+                    className="h-24 object-contain p-4 mx-auto"
+                />
+            </div>
+            <div className="absolute inset-0 flex justify-center overflow-hidden z-10">
+                <img
+                  src="{{ "lrc-product-background.webp" | asset_url }}"
+                  loading="lazy"
+                  className="object-cover w-full h-full rounded-lg overflow-hidden"
+                />
+            </div>
+        </div>
+        <div className="col-span-2 flex flex-col justify-center">
+            <h5 className="text-base font-accent text-cyan-800 text-left leading-[16px]">
                 <a href={item.url}>{item.product_title}</a>
             </h5>
+            {
+                item.variant_options.filter((v) => v !== 'Default Title').length > 0
+                    ? <p className="mt-1 font-base text-xs text-cyan-800 text-left">
+                        {item.variant_options.filter((v) => v !== 'Default Title').join(', ')}
+                    </p>
+                    : null
+            }
+            <div className="mt-2 flex items-center justify-between">
+                <div className="border rounded border-neutral-400 flex items-stretch overflow-hidden">
+                    <button disabled={loading} onClick={() => onClick(item.quantity - 1)} className="text-base text-neutral-700 px-4 hover:bg-neutral-100 hover:text-neutral-800">-</button>
+                    <span className="text-base font-bold py-1 w-12 text-center flex justify-center items-center">
+                        {
+                            !loading ? item.quantity : <svg className="animate-spin h-6 w-6 p-1 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                              </svg>
+                        }
+                    </span>
+                    <button disabled={loading} onClick={() => onClick(item.quantity + 1)} className="text-base text-neutral-700 px-4 hover:bg-neutral-100 hover:text-neutral-800">+</button>
+                </div>
+                <h4 className="text-base font-medium text-cyan-700">${costs.one_time_total_cost}</h4>
+            </div>
+        </div>
     </div>
   }
 
@@ -749,7 +718,7 @@
     }, [cartState]);
 
     useCartBot(cartState, cart, setCartState, setCart);
-    useAddToCartURL(cartState, cart, setCartState, setCart, setIsOpen);
+    useAddToCartURL(cartState, cart, setCartState, setCart, setIsOpen, totalSubscriptionItems);
 
     React.useEffect(() => {
         const handler = () => setIsOpen(!isOpen);
@@ -1355,7 +1324,7 @@
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
-                                                        fill="currentColor"
+                                                        fill="currentColor"v
                                                         className="w-6 h-6 text-cyan-400"
                                                     >
                                                         <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
@@ -1364,81 +1333,52 @@
                                                 </div>) : null
                                             }
                                         </div>
-                                        <div className="grid grid-cols-3 gap-3">
+                                        <div className="grid grid-cols-1 gap-8 pt-2">
                                             {
-                                            cartState.items.map((item, i) => <SubscriptionItem key={item.variantID} index={i} item={item} cartState={cartState} setCartState={setCartState} />)
+                                                cartState.items.map((item, i) => <SubscriptionItem key={item.variantID} cart={cart} index={i} item={item} cartState={cartState} setCartState={setCartState} />)
                                             }
                                         </div>
                                     </div>
+                                    {
+                                        cartState.items.length && (!plan || plan.display_name !== nextPlan.display_name) ? <div className="flex flex-col space-y-4 pt-4">
+                                            <div className="flex items-center justify-center">
+                                                <a href="/collections/subscribe-save" className="inline-flex items-center rounded-md bg-tan-100 px-2 py-1 text-xs font-semibold text-tan-700 ring-1 ring-inset ring-tan-600/40 relative">
+                                                    <span>Add {nextPlan.bag_min - totalSubscriptionItems} more bag</span>
+                                                    <svg viewBox="0 0 512.001 512.001" className="text-tan-700 absolute -right-3 -bottom-3 w-5 h-5 z-10">
+                                                        <path fill="currentColor" d="M429.742,319.31L82.49,0l-0.231,471.744l105.375-100.826l61.89,141.083l96.559-42.358l-61.89-141.083L429.742,319.31z
+                                                            M306.563,454.222l-41.62,18.259l-67.066-152.879l-85.589,81.894l0.164-333.193l245.264,225.529l-118.219,7.512L306.563,454.222z"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div className="pt-2 grid grid-cols-2 gap-y-1">
+                                                {
+                                                    nextPerks.map(p => <div key={p} className="flex items-center space-x-2">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        fill="currentColor"
+                                                        className="w-6 h-6 text-cyan-400"
+                                                    >
+                                                        <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
+                                                    </svg>
+                                                    <span className="text-cyan-800 text-base leading-[1.2rem]">{p}</span>
+                                                    </div>)
+                                                }
+                                            </div>
+                                        </div> : null
+                                    }
                                 </div> : null
                             }
                             {
-                                cartState.items.length && (!plan || plan.display_name !== nextPlan.display_name) ? <div className="flex flex-col space-y-4">
-                                    <div className="flex items-center space-x-2">
-                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Add {nextPlan.bag_min - totalSubscriptionItems} more and get</h4>
-                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    </div>
-                                    <div className="mt-2 grid grid-cols-2 gap-y-1">
-                                        {
-                                            nextPerks.map(p => <div key={p} className="flex items-center space-x-2">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="currentColor"
-                                                className="w-6 h-6 text-cyan-400"
-                                            >
-                                                <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
-                                            </svg>
-                                            <span className="text-cyan-800 text-base">{p}</span>
-                                            </div>)
-                                        }
-                                    </div>
-                                    <div>
-                                        {% render 'lrc-button', link: "/collections/subscribe-save", title: "Get More" %}
-                                    </div>
-                                </div> : null
-                            }
-                            {
-                                cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
-                                    <div className="flex items-center space-x-2">
-                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Free Bonus Items</h4>
-                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    </div>
-                                    <div className="grid grid-cols-3 gap-3">
-                                        {
-                                            cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} />)
-                                        }
-                                        {
-                                            totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
-                                        }
-                                        {
-                                            totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
-                                        }
-                                        {
-                                            totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/club-exclusive-lrc-x-boco-run-hat-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
-                                        }
-                                        {
-                                            totalSubscriptionItems > 0 && new Date() < new Date("May 24, 2024 12:00:00") ? <BonusItem key={4} title="Limited Offer - 1 Free Bag of Run Brunch" href="/blogs/news/run-brunch-is-here" header="Flavor selected post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/gempages_484137708004836523-f35452c1-f0c8-4d53-a53d-8d78405d9b8d.png?v=1715978716" /> : null
-                                        }
-                                    </div>
-                                </div> : null
-                            }
-                            {
-                                isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.filter(item => item.product_type !== 'Gift').length == 0 ? null : <div className="flex flex-col space-y-4">
+                                cart.items.length == 0 ? null : <div className="flex flex-col space-y-4">
                                     <div className="flex items-center space-x-2">
                                         <div className="flex-1 h-1 rounded bg-cyan-700" />
                                             <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">One-Time</h4>
                                         <div className="flex-1 h-1 rounded bg-cyan-700" />
                                     </div>
-                                    <div className="grid grid-cols-3 gap-3">
                                     {
-                                        cart.items.filter(item => item.product_type !== 'Gift').map((item, i) => <CartItem key={item.variant_id} item={item} setCart={setCart} />)
-                                    }
-                                    </div>
-                                    {
-                                        potentialSavings > 0 ? <div className="flex items-center justify-center">
+                                        potentialSavings > 0 ? <div className="flex items-center justify-center pt-2">
                                             <button disabled={loadingUpgrade} onClick={async () => {
                                                 setLoadingUpgrade(true);
                                                 const keys = Object.keys(cartProductSubscribable);
@@ -1494,6 +1434,36 @@
                                                     />
                                                 </svg>
                                             </button>
+                                        </div> : null
+                                    }
+                                    {
+                                        isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.filter(item => item.product_type !== 'Gift').length == 0 ? null : <div className="grid grid-cols-1 gap-8 pt-2">
+                                            {
+                                                cart.items.filter(item => item.product_type !== 'Gift').map((item, i) => <CartItem key={item.variant_id} cart={cart} item={item} setCart={setCart} />)
+                                            }
+                                        </div>
+                                    }
+                                    {
+                                        cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4 bg-cyan-50 bg-opacity-50 -mx-2 py-3 rounded">
+                                            <h4 className="px-2 text-cyan-700 font-accent text-base text-center lg:text-lg">Free Bonus Items</h4>
+                                            <div className="w-full h-px bg-cyan-200 -my-1" />
+                                            <div className="px-2 grid grid-cols-3 gap-3">
+                                                {
+                                                    cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} />)
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/club-exclusive-lrc-x-boco-run-hat-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 0 && new Date() < new Date("May 24, 2024 12:00:00") ? <BonusItem key={4} title="Limited Offer - 1 Free Bag of Run Brunch" href="/blogs/news/run-brunch-is-here" header="Flavor selected post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/gempages_484137708004836523-f35452c1-f0c8-4d53-a53d-8d78405d9b8d.png?v=1715978716" /> : null
+                                                }
+                                            </div>
                                         </div> : null
                                     }
                                 </div>
