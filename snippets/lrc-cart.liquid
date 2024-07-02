@@ -128,12 +128,24 @@
     }
   }
 
-  function useAddToCartURL(subscriptionState, cart, setCartState, setCart, setIsOpen) {
+  function useAddToCartURL(subscriptionState, cart, setCartState, setCart, setIsOpen, totalSubscriptionItems) {
     const { items: subscriptionItems } = subscriptionState;
     const { items: oneTimeItems } = cart;
+    const [shouldCheckout, setShouldCheckout] = React.useState(false)
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
+
+    React.useEffect(() => {
+        if (shouldCheckout) {
+            setShouldCheckout(false)
+            if (!(subscriptionState.items.length && totalSubscriptionItems > 1 || subscriptionState.items.length == 0)) {
+                setIsOpen(true);
+                return;
+            }
+            window.location.href = '/checkout'
+        }
+    }, [shouldCheckout])
 
     React.useEffect(async () => {
         let mounted = true;
@@ -151,6 +163,11 @@
             let max_add_to_cart = quantity;
             if (params.add_to_cart_max) {
                 max_add_to_cart = parseInt(params.add_to_cart_max);
+            }
+
+            let shouldCheckoutParam = false;
+            if (params.add_to_cart_checkout) {
+                shouldCheckoutParam = true;
             }
             try {
                 const data = await fetch(window.Shopify.routes.root + `products/${params.add_to_cart_product_hash}.js`);
@@ -218,7 +235,11 @@
                             }]
                         })
                     }
-                    setIsOpen(true);
+                    if (shouldCheckoutParam) {
+                        setShouldCheckout(true)
+                    } else {
+                        setIsOpen(true);
+                    }
                     document.dispatchEvent(new CustomEvent('buy_button_complete'))
                 } else {
                     let existingItemQuantity = 0;
@@ -249,7 +270,11 @@
                     .then(async response => {
                         const newCart = await getCart();
                         setCart(newCart);
-                        setIsOpen(true);
+                        if (shouldCheckoutParam) {
+                            setShouldCheckout(true)
+                        } else {
+                            setIsOpen(true);
+                        }
                         document.dispatchEvent(new CustomEvent('buy_button_complete'));
                     })
                 }
@@ -261,7 +286,7 @@
         return () => {
             mounted = false;
         }
-    }, [oneTimeItems.length, subscriptionItems.length, params.add_to_cart_variant_id, params.add_to_cart_product_hash, params.add_to_cart_is_subscription, params.add_to_cart_quantity])
+    }, [oneTimeItems.length, subscriptionItems.length, params.add_to_cart_variant_id, params.add_to_cart_checkout, params.add_to_cart_product_hash, params.add_to_cart_is_subscription, params.add_to_cart_quantity])
   }
 
   function isRechargeAvailableOnProduct(product) {
@@ -693,7 +718,7 @@
     }, [cartState]);
 
     useCartBot(cartState, cart, setCartState, setCart);
-    useAddToCartURL(cartState, cart, setCartState, setCart, setIsOpen);
+    useAddToCartURL(cartState, cart, setCartState, setCart, setIsOpen, totalSubscriptionItems);
 
     React.useEffect(() => {
         const handler = () => setIsOpen(!isOpen);
@@ -1337,7 +1362,7 @@
                                                     >
                                                         <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
                                                     </svg>
-                                                    <span className="text-cyan-800 text-base">{p}</span>
+                                                    <span className="text-cyan-800 text-base leading-[1.2rem]">{p}</span>
                                                     </div>)
                                                 }
                                             </div>
@@ -1346,16 +1371,11 @@
                                 </div> : null
                             }
                             {
-                                isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.filter(item => item.product_type !== 'Gift').length == 0 ? null : <div className="flex flex-col space-y-4">
+                                cart.items.length == 0 ? null : <div className="flex flex-col space-y-4">
                                     <div className="flex items-center space-x-2">
                                         <div className="flex-1 h-1 rounded bg-cyan-700" />
                                             <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">One-Time</h4>
                                         <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    </div>
-                                    <div className="grid grid-cols-1 gap-8">
-                                    {
-                                        cart.items.filter(item => item.product_type !== 'Gift').map((item, i) => <CartItem key={item.variant_id} cart={cart} item={item} setCart={setCart} />)
-                                    }
                                     </div>
                                     {
                                         potentialSavings > 0 ? <div className="flex items-center justify-center pt-2">
@@ -1416,33 +1436,37 @@
                                             </button>
                                         </div> : null
                                     }
+                                    {
+                                        isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || cart.items.filter(item => item.product_type !== 'Gift').length == 0 ? null : <div className="grid grid-cols-1 gap-8 pt-2">
+                                            {
+                                                cart.items.filter(item => item.product_type !== 'Gift').map((item, i) => <CartItem key={item.variant_id} cart={cart} item={item} setCart={setCart} />)
+                                            }
+                                        </div>
+                                    }
+                                    {
+                                        cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4 bg-cyan-50 bg-opacity-50 -mx-2 py-3 rounded">
+                                            <h4 className="px-2 text-cyan-700 font-accent text-base text-center lg:text-lg">Free Bonus Items</h4>
+                                            <div className="w-full h-px bg-cyan-200 -my-1" />
+                                            <div className="px-2 grid grid-cols-3 gap-3">
+                                                {
+                                                    cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} />)
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/club-exclusive-lrc-x-boco-run-hat-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 0 && new Date() < new Date("May 24, 2024 12:00:00") ? <BonusItem key={4} title="Limited Offer - 1 Free Bag of Run Brunch" href="/blogs/news/run-brunch-is-here" header="Flavor selected post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/gempages_484137708004836523-f35452c1-f0c8-4d53-a53d-8d78405d9b8d.png?v=1715978716" /> : null
+                                                }
+                                            </div>
+                                        </div> : null
+                                    }
                                 </div>
-                            }
-                            {
-                                cartContainsGiftItems(cart.items, totalSubscriptionItems) ? <div className="flex flex-col space-y-4">
-                                    <div className="flex items-center space-x-2">
-                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                        <h4 className="text-cyan-700 font-accent text-xl lg:text-2xl">Free Bonus Items</h4>
-                                        <div className="flex-1 h-1 rounded bg-cyan-700" />
-                                    </div>
-                                    <div className="grid grid-cols-3 gap-3">
-                                        {
-                                            cart.items.filter(item => item.product_type === "Gift").map(item => <BonusItem key={item.variant_id} href={item.url} title={item.product_title} image={`${item.featured_image.url}&width=150`} />)
-                                        }
-                                        {
-                                            totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
-                                        }
-                                        {
-                                            totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null
-                                        }
-                                        {
-                                            totalSubscriptionItems > 3 ? <BonusItem key={3} title="Club Exclusive - LRC x BOCO Run Hat" href="/products/club-exclusive-lrc-x-boco-run-hat-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/ClubHat.png?v=1714937792&width=150" /> : null
-                                        }
-                                        {
-                                            totalSubscriptionItems > 0 && new Date() < new Date("May 24, 2024 12:00:00") ? <BonusItem key={4} title="Limited Offer - 1 Free Bag of Run Brunch" href="/blogs/news/run-brunch-is-here" header="Flavor selected post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/gempages_484137708004836523-f35452c1-f0c8-4d53-a53d-8d78405d9b8d.png?v=1715978716" /> : null
-                                        }
-                                    </div>
-                                </div> : null
                             }
                             {
                                 isCartOnlyGiftItems(cart.items, totalSubscriptionItems) || (cart.items.length == 0 && totalSubscriptionItems == 0) ? null : upsellItems.filter(item => {
