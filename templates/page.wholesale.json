@@ -1,5 +1,198 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
+    "image_with_text_CYPn4M": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_EnExDH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wholesale & Custom",
+            "heading_size": "h1"
+          }
+        },
+        "text_PRxEgF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Long Run Co. can accommodate bulk, wholesale, and custom orders.<\/p><p>Learn more below about how we work with retailers, races, events, and corporate buyers across the US!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "caption_Tyj9bG": {
+          "type": "caption",
+          "settings": {
+            "caption": "Contact us using the form below",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EnExDH",
+        "text_PRxEgF",
+        "caption_Tyj9bG"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/LRC-Wholesale-pallet-mockup-web.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "accent-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_zKrpH8": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_MqCKyH": {
+          "type": "caption",
+          "settings": {
+            "caption": "WHOLESALE",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_ez8CKx": {
+          "type": "heading",
+          "settings": {
+            "heading": "RETAIL",
+            "heading_size": "h1"
+          }
+        },
+        "text_CEDj7k": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We work with retailers of all sizes to bring electrolyte infused coffee to your community.<\/p><p>With low minimum order quanitites and better than industry average margins, it's a no brainer to start carrying Long Run Coffee in your store!<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_MqCKyH",
+        "heading_ez8CKx",
+        "text_CEDj7k"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/484137708004836523-ab153e15-76c6-4c76-99ee-f43eba75711e.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_RMFxkj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_jP8yn7": {
+          "type": "caption",
+          "settings": {
+            "caption": "CUSTOM",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_pMUHfK": {
+          "type": "heading",
+          "settings": {
+            "heading": "RACES & EVENTS",
+            "heading_size": "h1"
+          }
+        },
+        "text_Hzf8Xx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Order custom coffee for your race, event, or brand!<\/p><p>Do your racers really want another t-shirt? Drive registrations and give racers a unique gift with co-branded electrolyte infused coffee.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_jP8yn7",
+        "heading_pMUHfK",
+        "text_Hzf8Xx"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_k4hxBK": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_xaXjFR": {
+          "type": "caption",
+          "settings": {
+            "caption": "CUSTOM",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_77Hfex": {
+          "type": "heading",
+          "settings": {
+            "heading": "CORPORATE",
+            "heading_size": "h1"
+          }
+        },
+        "text_kMDAJE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Order custom coffee for your brand or corporate event. <\/p><p>Marketing dollars well spent!<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_xaXjFR",
+        "heading_77Hfex",
+        "text_kMDAJE"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-4195ea24-5d06-4290-9f03-c1b5b16a68f1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "0404072b-ef32-4d53-9763-adccd5fedc35": {
       "type": "slideshow",
       "blocks": {
@@ -44,6 +237,7 @@
         "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-1",
         "template--21474730180921__0404072b-ef32-4d53-9763-adccd5fedc35-slide-2"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
         "@media (min-width: 961px) {h2 {font-size: 42px; } h6 {font-size: 22px; }}"
@@ -72,7 +266,7 @@
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h6>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/h6><p><\/p><p>Electrolyte infused solutions for:<\/p><p>- <strong>Retailers<\/strong><\/p><p>- <strong>Races<\/strong><\/p><p>- <strong>Corporate Events<\/strong><\/p><p><\/p><h6>Contact us with the form below, and we'll be in touch within 24 hours. <\/h6>"
+            "text": "<h6>Long Run Coffee can accommodate bulk, wholesale, and custom orders. <\/h6><p><\/p><p>Electrolyte infused solutions for:<\/p><p>- <strong>Retailers<\/strong><\/p><p>- <strong>Races<\/strong><\/p><p>- <strong>Corporate Events<\/strong><\/p><p><\/p><h6>Contact us with the form below, and we'll be in touch!<\/h6>"
           }
         },
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1": {
@@ -92,6 +286,7 @@
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-text-1",
         "template--21474730180921__ba4f982c-c438-465f-aa94-40b8e1eb2438-button-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -207,6 +402,10 @@
     }
   },
   "order": [
+    "image_with_text_CYPn4M",
+    "image_with_text_zKrpH8",
+    "image_with_text_RMFxkj",
+    "image_with_text_k4hxBK",
     "0404072b-ef32-4d53-9763-adccd5fedc35",
     "ba4f982c-c438-465f-aa94-40b8e1eb2438",
     "d0d8b155-050e-4a80-ae42-95133a443ed6",
