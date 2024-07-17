@@ -1095,6 +1095,13 @@
             }
         }
     }, [loadingCheckout])
+    
+    const promotion_end_date_string = '7/25/24';
+    const promotion_start_date = new Date("7/21/24");
+    promotion_start_date.setHours(0,0,0,0);
+    const promotion_end_date = new Date(promotion_end_date_string);
+    promotion_end_date.setHours(0,0,0,0);
+    const todayRightNow = new Date();
 
     const checkout = async () => {
         if (!cart.items.length && !cartState.items.length) {
@@ -1453,6 +1460,9 @@
                                                 }
                                                 {
                                                     totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
+                                                }
+                                                {
+                                                    totalSubscriptionItems > 0 && todayRightNow > promotion_start_date && todayRightNow < promotion_end_date ? <BonusItem key={5} title="Club Exclusive - Summer Stroopwafel" href="/products/summer-stroopwafel" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Stroop.png?v=1721164775" /> : null
                                                 }
                                                 {
                                                     totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null

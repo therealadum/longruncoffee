@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   content: [
     "./config/*.json",
     "./layout/*.liquid",

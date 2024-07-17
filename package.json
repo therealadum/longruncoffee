@@ -6,6 +6,7 @@
     "test": "npx playwright test",
     "prepare": "husky install",
     "format": "npx tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch",
+    "local": "yarn format | shopify theme dev",
     "dev": "earthly +build && docker-compose up -d"
   },
   "license": "UNLICENSED",
