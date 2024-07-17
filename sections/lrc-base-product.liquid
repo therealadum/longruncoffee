@@ -87,6 +87,7 @@
       '$email': email,
       '$phone_number': formatUSPhoneNumber(phone)
     });
+    klaviyo.push(['track', 'submit_contact_form_for_pdp_promotion', {}]);
   }
 
   function useIsMobile() {
