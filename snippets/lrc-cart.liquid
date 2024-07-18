@@ -479,7 +479,7 @@
         <div className="h-24 relative"> 
             <div className="relative z-20">
                 <img
-                    src={`${item.variant.featured_image.src ? item.variant.featured_image.src : item.product.featured_image}&width=150`}
+                    src={`${item.variant.featured_image && item.variant.featured_image.src ? item.variant.featured_image.src : item.product.featured_image}&width=150`}
                     loading="lazy"
                     className="h-24 object-contain p-4 mx-auto"
                 />
