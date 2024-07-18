@@ -76,7 +76,7 @@
         "text_CEDj7k": {
           "type": "text",
           "settings": {
-            "text": "<p>We work with retailers of all sizes to bring electrolyte infused coffee to your community.<\/p><p>With low minimum order quanitites and better than industry average margins, it's a no brainer to start carrying Long Run Coffee in your store!<\/p>",
+            "text": "<p>We work with retailers of all sizes across the United States to bring electrolyte infused coffee to your community.<\/p><p>With low minimum order quanitites and better than industry average margins, it's a no brainer to start carrying Long Run Coffee in your store!<\/p>",
             "text_style": "body"
           }
         }
@@ -88,7 +88,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/484137708004836523-ab153e15-76c6-4c76-99ee-f43eba75711e.png",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -133,8 +133,8 @@
         "text_Hzf8Xx"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
-        "height": "small",
+        "image": "shopify:\/\/shop_images\/Long_Run_Coffee_Race_Collaborations.png",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
@@ -179,8 +179,8 @@
         "text_kMDAJE"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
-        "height": "small",
+        "image": "shopify:\/\/shop_images\/Fleet_Feet_x_Long_Run_Coffee_Collaboration_Mockup.png",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
