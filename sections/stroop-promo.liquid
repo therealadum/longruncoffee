@@ -118,7 +118,7 @@
     promotion_end_date.setHours(0, 0, 0, 0);
     const todayRightNow = new Date();
 
-    if (todayRightNow > promotion_end_date) {
+    if (todayRightNow > promotion_end_date || todayRightNow < promotion_start_date) {
       return null;
     }
     return (
