@@ -42,9 +42,16 @@
     })
   }
 
-  const FREE_STICKER_VARIANT_ID = 48056421482809;
-  const FREE_TRAVEL_SET_VARIANT_ID = 49182276747577;
   function useCartBot(subscriptionState, cart, setCartState, setCart) {
+    const FREE_STICKER_VARIANT_ID = 48056421482809;
+    const FREE_TRAVEL_SET_VARIANT_ID = 49182276747577;
+    const STROOP_PROMO_ID = 49641829499193;
+    const STROOP_START_DATE = new Date('07/20/2024');
+    const STROOP_END_DATE = new Date('07/27/2024');
+    STROOP_START_DATE.setHours(0,0,0,0);
+    STROOP_END_DATE.setHours(0,0,0,0);
+    const rightNow = new Date();
+
     const { items: subscriptionItems } = subscriptionState;
     const { items: oneTimeItems } = cart;
 
@@ -55,6 +62,7 @@
     let free_travel_set_present_in_cart = false;
     let sticker_present_in_cart = false;
     let free_boco_in_cart = false;
+    let free_stroop_in_cart = false;
     oneTimeItems.forEach(product => {
         cartTotal += product.price;
         if (product.id == FREE_STICKER_VARIANT_ID) {
@@ -65,6 +73,9 @@
         }
         if (product.variant_id == 49364569588025) {
             free_boco_in_cart = true;
+        }
+        if (product.variant_id === STROOP_PROMO_ID) {
+            free_stroop_in_cart = true;
         }
     })
 
@@ -80,6 +91,12 @@
             if (!free_travel_set_present_in_cart && !free_boco_in_cart) {
                 items.push({
                     id: FREE_TRAVEL_SET_VARIANT_ID,
+                    quantity: 1
+                })
+            }
+            if (!free_stroop_in_cart && subscriptionItems.length && rightNow > STROOP_START_DATE && rightNow < STROOP_END_DATE) {
+                items.push({
+                    id: STROOP_PROMO_ID,
                     quantity: 1
                 })
             }
@@ -105,7 +122,7 @@
                 setCart(newCart);
             })
         } else {
-            if (!free_travel_set_present_in_cart && !sticker_present_in_cart) {
+            if (!free_travel_set_present_in_cart && !sticker_present_in_cart && !free_stroop_in_cart) {
                 return;
             }
             const vo = {};
@@ -115,13 +132,16 @@
             if (free_travel_set_present_in_cart) {
                 vo[FREE_TRAVEL_SET_VARIANT_ID] = 0;
             }
+            if (free_stroop_in_cart) {
+                vo[STROOP_PROMO_ID] = 0;
+            }
             updateItems(vo)
             .then(async response => {
                 const newCart = await getCart();
                 setCart(newCart);
             })
         }
-    }, [cartTotal, sticker_present_in_cart, free_travel_set_present_in_cart])
+    }, [cartTotal, sticker_present_in_cart, subscriptionItems.length, free_travel_set_present_in_cart])
   }
 
   function removeAddToCartURLParameters() {
@@ -730,60 +750,6 @@
         }
     }, [isOpen, setIsOpen]);
 
-    // listen to subscription additions / removals
-    // if any subscribables, add bonus coffee to cart
-    /* React.useEffect(() => {
-        let foundBonusCoffee = false;
-        cart.items.forEach(item => {
-            if (item.id === 48244318142777) {
-                foundBonusCoffee = true;
-            }
-        })
-        let subscriptionItemsInCart = false;
-        cart.items.forEach(item => {
-            if (item.selling_plan_allocation && item.selling_plan_allocation.selling_plan) {
-                subscriptionItemsInCart = true;
-            }
-        })
-        if (totalSubscriptionItems > 0 || subscriptionItemsInCart) {
-            // check if bonus coffee is in cart
-            // if not, add it
-            if (!foundBonusCoffee) {
-                fetch(window.Shopify.routes.root + 'cart/update.js', {
-                    method: 'POST',
-                    headers: {
-                    'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        updates: {
-                            '48244318142777': 1
-                        }
-                    })
-                }).then(async () => {
-                    const newCart = await getCart();
-                    setCart(newCart);
-                })
-            }
-        } else if (!subscriptionItemsInCart) {
-            if (foundBonusCoffee) {
-                fetch(window.Shopify.routes.root + 'cart/update.js', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        updates: {
-                            '48244318142777': 0
-                        }
-                    })
-                }).then(async () => {
-                    const newCart = await getCart();
-                    setCart(newCart);
-                })
-            }
-        }
-    }, [totalSubscriptionItems, setCart, cart]) */
-
     const [error, setError] = React.useState(null)
     React.useEffect(() => {
         const handler = async function(event) {
@@ -1096,14 +1062,7 @@
                 handler();
             }
         }
-    }, [loadingCheckout])
-    
-    const promotion_end_date_string = '7/25/24';
-    const promotion_start_date = new Date("7/21/24");
-    promotion_start_date.setHours(0,0,0,0);
-    const promotion_end_date = new Date(promotion_end_date_string);
-    promotion_end_date.setHours(0,0,0,0);
-    const todayRightNow = new Date();
+    }, [loadingCheckout]);
 
     const checkout = async () => {
         if (!cart.items.length && !cartState.items.length) {
@@ -1462,9 +1421,6 @@
                                                 }
                                                 {
                                                     totalSubscriptionItems > 0 ? <BonusItem key={1} title="Club Exclusive - Experimental Flavor" href="/products/experimental-flavor-trail-mix-copy" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Experimental_cea45969-90e9-441e-84fe-3c323b7266a2.png?v=1714574438&width=150" quantity={2} /> : null
-                                                }
-                                                {
-                                                    totalSubscriptionItems > 0 && todayRightNow > promotion_start_date && todayRightNow < promotion_end_date ? <BonusItem key={5} title="Club Exclusive - Summer Stroopwafel" href="/products/summer-stroopwafel" header="Items added post-purchase" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Stroop.png?v=1721164775" /> : null
                                                 }
                                                 {
                                                     totalSubscriptionItems > 2 ? <BonusItem key={2} title="Club Exclusive - LRC x YETI Tumbler" href="/products/club-exclusive-lrc-x-yeti-tumbler-1" header="Shipped after 3rd fulfillment" image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/1_0b4419a0-4d8f-4a4a-bb5e-cb3ac2715b72.png?v=1715952235&width=150" /> : null

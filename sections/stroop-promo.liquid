@@ -1,0 +1,190 @@
+<div id="lrc-stroop-promo" class="relative"></div>
+
+<script
+  type="text/babel"
+>
+  function getSecondsBetweenDates(date1, date2) {
+    // Ensure both arguments are Date objects
+    if (!(date1 instanceof Date) || !(date2 instanceof Date)) {
+      throw new Error('Both arguments must be Date objects.');
+    }
+    // Calculate the difference in milliseconds
+    const differenceInMilliseconds = Math.abs(date2 - date1);
+    // Convert milliseconds to seconds
+    const differenceInSeconds = differenceInMilliseconds / 1000;
+    return differenceInSeconds;
+  }
+
+  function convertSeconds(seconds) {
+    // Validate input
+    if (typeof seconds !== 'number' || seconds < 0) {
+      throw new Error('Input must be a non-negative number.');
+    }
+
+    const days = Math.floor(seconds / (24 * 3600));
+    seconds %= 24 * 3600;
+    const hours = Math.floor(seconds / 3600);
+    seconds %= 3600;
+    const minutes = Math.floor(seconds / 60);
+    seconds %= 60;
+
+    return {
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds,
+    };
+  }
+  const useCountdown = (initialTimer) => {
+    const milisecond = React.useRef(initialTimer * 1000);
+    const previous = React.useRef(milisecond);
+    const [timer, setTimer] = React.useState(initialTimer);
+    const [isPlaying, setIsPlaying] = React.useState(true);
+
+    React.useEffect(() => {
+      if (!isPlaying || milisecond.current <= 0) return;
+
+      let effectInitialMs = milisecond.current;
+      let effectInitialTimeStamp, handle;
+
+      const step = (timestampMs) => {
+        if (effectInitialTimeStamp === undefined) effectInitialTimeStamp = timestampMs;
+        const elapsed = timestampMs - effectInitialTimeStamp;
+        milisecond.current = effectInitialMs - elapsed;
+
+        if (milisecond.current <= 0) {
+          setTimer(0);
+          console.log('cancelAnimationFrame(zero)', handle, milisecond.current);
+          cancelAnimationFrame(handle);
+        } else {
+          const seconds = Math.floor(milisecond.current / 1000);
+          const isUpdate = seconds !== Math.floor(previous.current / 1000);
+          previous.current = milisecond.current;
+
+          if (isUpdate) {
+            setTimer(seconds);
+          }
+
+          if (isPlaying) {
+            handle = window.requestAnimationFrame(step);
+          }
+        }
+      };
+
+      handle = window.requestAnimationFrame(step);
+
+      return () => {
+        console.log('cancelAnimationFrame(pause)', handle, milisecond.current);
+        cancelAnimationFrame(handle);
+      };
+    }, [isPlaying]);
+
+    return timer;
+  };
+
+  function CountdownTimer({ date }) {
+    const timer = useCountdown(getSecondsBetweenDates(new Date(), date));
+    const { days, hours, minutes, seconds } = convertSeconds(timer);
+
+    return (
+      <div className="grid grid-cols-4 gap-3 max-w-md self-center w-full">
+        <div className="rounded-md bg-cyan-50 py-4 flex flex-col">
+          <p className="font-accent text-3xl text-center text-cyan-700">{days}</p>
+          <p className="font-medium text-sm text-center text-cyan-600">Days</p>
+        </div>
+        <div className="rounded-md bg-cyan-50 py-4 flex flex-col">
+          <p className="font-accent text-3xl text-center text-cyan-700">{hours}</p>
+          <p className="font-medium text-sm text-center text-cyan-600">Hours</p>
+        </div>
+        <div className="rounded-md bg-cyan-50 py-4 flex flex-col">
+          <p className="font-accent text-3xl text-center text-cyan-700">{minutes}</p>
+          <p className="font-medium text-sm text-center text-cyan-600">Minutes</p>
+        </div>
+        <div className="rounded-md bg-cyan-50 py-4 flex flex-col">
+          <p className="font-accent text-3xl text-center text-cyan-700">{seconds}</p>
+          <p className="font-medium text-sm text-center text-cyan-600">Seconds</p>
+        </div>
+      </div>
+    );
+  }
+
+  const MemoCountdownTimer = React.memo(CountdownTimer);
+
+  function StroopPromo() {
+    const promotion_end_date_string = '7/25/24';
+    const promotion_start_date = new Date('7/21/24');
+    promotion_start_date.setHours(0, 0, 0, 0);
+    const promotion_end_date = new Date(promotion_end_date_string);
+    promotion_end_date.setHours(0, 0, 0, 0);
+    const todayRightNow = new Date();
+
+    return (
+      <div className="bg-white mb-12 lg:mb-0">
+        <div className="overflow-hidden pt-32 sm:pt-14">
+          <div className="bg-gray-800">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="relative pb-16 pt-48 sm:pb-24">
+                <div>
+                  <h4 className="text-center text-2xl lg:text-4xl font-accent max-w-md text-white">
+                    Long Run Club Bonus
+                  </h4>
+                  <p className="my-6 text-lg text-white self-center text-center max-w-md leading-[1.9rem]">
+                    All Long Run Club sign ups through {promotion_end_date_string} get our Summer Stroopwafel free with
+                    their first shipment.
+                  </p>
+                  <MemoCountdownTimer date={promotion_end_date} />
+                  <a
+                    href="/collections/subscribe-save"
+                    className="mt-6 w-full inline-flex justify-center rounded-md p-3 self-center text-base font-accent border border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 max-w-md"
+                  >
+                    Join the Long Run Club
+                  </a>
+                </div>
+
+                <div className="absolute -top-32 left-1/2 -translate-x-1/2 transform sm:top-6 sm:translate-x-0">
+                  <div className="ml-24 flex min-w-max space-x-6 sm:ml-3 lg:space-x-8">
+                    <div className="flex space-x-6 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
+                      <div className="flex-shrink-0">
+                        <img
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/stroop-1.png?v=1721500555&width=500"
+                          alt=""
+                        />
+                      </div>
+
+                      <div className="mt-6 flex-shrink-0 sm:mt-0">
+                        <img
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/stroop-2.png?v=1721500555&width=500"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="flex space-x-6 sm:-mt-20 sm:flex-col sm:space-x-0 sm:space-y-6 lg:space-y-8">
+                      <div className="flex-shrink-0">
+                        <img
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/stroop-4.png?v=1721500555&width=500"
+                          alt=""
+                        />
+                      </div>
+
+                      <div className="mt-6 flex-shrink-0 sm:mt-0">
+                        <img
+                          className="h-64 w-64 rounded-lg object-cover md:h-72 md:w-72"
+                          src="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/stroop-3.png?v=1721500555&width=500"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.render(<StroopPromo />, document.getElementById('lrc-stroop-promo'));
+</script>

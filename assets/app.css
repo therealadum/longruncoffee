@@ -1004,6 +1004,14 @@ select {
   top: 0.5rem !important;
 }
 
+.-top-32 {
+  top: -8rem !important;
+}
+
+.left-1\/2 {
+  left: 50% !important;
+}
+
 .isolate {
   isolation: isolate !important;
 }
@@ -1227,6 +1235,18 @@ select {
 
 .mt-auto {
   margin-top: auto !important;
+}
+
+.ml-24 {
+  margin-left: 6rem !important;
+}
+
+.mb-20 {
+  margin-bottom: 5rem !important;
+}
+
+.mb-12 {
+  margin-bottom: 3rem !important;
 }
 
 .block {
@@ -1555,6 +1575,11 @@ select {
   min-width: fit-content !important;
 }
 
+.min-w-max {
+  min-width: -moz-max-content !important;
+  min-width: max-content !important;
+}
+
 .max-w-3xl {
   max-width: 48rem !important;
 }
@@ -1677,6 +1702,13 @@ select {
 
 .translate-y-full {
   --tw-translate-y: 100% !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50% !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
@@ -2354,6 +2386,11 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-gray-800 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity)) !important;
+}
+
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2 !important;
 }
@@ -2653,6 +2690,14 @@ select {
 
 .pt-8 {
   padding-top: 2rem !important;
+}
+
+.pt-32 {
+  padding-top: 8rem !important;
+}
+
+.pt-48 {
+  padding-top: 12rem !important;
 }
 
 .text-left {
@@ -4039,6 +4084,10 @@ h2#spr-header-title {
 }
 
 @media (min-width: 32em) {
+  .sm\:top-6 {
+    top: 1.5rem !important;
+  }
+
   .sm\:mx-0 {
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -4067,6 +4116,10 @@ h2#spr-header-title {
 
   .sm\:mt-4 {
     margin-top: 1rem !important;
+  }
+
+  .sm\:-mt-20 {
+    margin-top: -5rem !important;
   }
 
   .sm\:flex {
@@ -4105,12 +4158,23 @@ h2#spr-header-title {
     max-width: 28rem !important;
   }
 
+  .sm\:translate-x-0 {
+    --tw-translate-x: 0px !important;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
   .sm\:flex-row-reverse {
     flex-direction: row-reverse !important;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column !important;
   }
 
   .sm\:items-start {
@@ -4136,6 +4200,18 @@ h2#spr-header-title {
     margin-bottom: calc(0px * var(--tw-space-y-reverse)) !important;
   }
 
+  .sm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0 !important;
+    margin-right: calc(0px * var(--tw-space-x-reverse)) !important;
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse))) !important;
+  }
+
+  .sm\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0 !important;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse))) !important;
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse)) !important;
+  }
+
   .sm\:p-0 {
     padding: 0px !important;
   }
@@ -4152,6 +4228,14 @@ h2#spr-header-title {
   .sm\:py-24 {
     padding-top: 6rem !important;
     padding-bottom: 6rem !important;
+  }
+
+  .sm\:pb-24 {
+    padding-bottom: 6rem !important;
+  }
+
+  .sm\:pt-14 {
+    padding-top: 3.5rem !important;
   }
 
   .sm\:text-left {
@@ -4181,6 +4265,14 @@ h2#spr-header-title {
 @media (min-width: 48em) {
   .md\:flex {
     display: flex !important;
+  }
+
+  .md\:h-72 {
+    height: 18rem !important;
+  }
+
+  .md\:w-72 {
+    width: 18rem !important;
   }
 
   .md\:scroll-px-8 {
@@ -4218,6 +4310,11 @@ h2#spr-header-title {
   .md\:px-8 {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem !important;
+    line-height: 1 !important;
   }
 }
 
@@ -4278,6 +4375,10 @@ h2#spr-header-title {
 
   .lg\:mt-8 {
     margin-top: 2rem !important;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px !important;
   }
 
   .lg\:block {
