@@ -118,6 +118,9 @@
     promotion_end_date.setHours(0, 0, 0, 0);
     const todayRightNow = new Date();
 
+    if (todayRightNow > promotion_end_date) {
+      return null;
+    }
     return (
       <div className="bg-white mb-12 lg:mb-0">
         <div className="overflow-hidden pt-32 sm:pt-14">
