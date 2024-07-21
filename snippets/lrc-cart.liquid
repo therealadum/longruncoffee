@@ -100,27 +100,41 @@
                     quantity: 1
                 })
             }
+
+            // remove shit, even if cart value is > 399
+            const vo = {};
+            if (free_stroop_in_cart && (rightNow > STROOP_END_DATE || !subscriptionItems.length)) {
+                vo[STROOP_PROMO_ID] = 0;
+            }
             if (free_boco_in_cart) {
-                const vo = {};
                 vo[FREE_TRAVEL_SET_VARIANT_ID] = 0;
+            }
+            // if there is shit to remove
+            if (Object.keys(vo).length) {
                 updateItems(vo)
                 .then(async response => {
-                    addItems(items)
-                    .then(async response => {
+                    if (!items.length) {
                         const newCart = await getCart();
                         setCart(newCart);
-                    })
+                    } else {
+                        addItems(items)
+                        .then(async response => {
+                            const newCart = await getCart();
+                            setCart(newCart);
+                        })
+                    }
                 })
                 return;
+            } else {
+                if (!items.length) {
+                    return;
+                }
+                addItems(items)
+                .then(async response => {
+                    const newCart = await getCart();
+                    setCart(newCart);
+                })
             }
-            if (!items.length) {
-                return;
-            }
-            addItems(items)
-            .then(async response => {
-                const newCart = await getCart();
-                setCart(newCart);
-            })
         } else {
             if (!free_travel_set_present_in_cart && !sticker_present_in_cart && !free_stroop_in_cart) {
                 return;
