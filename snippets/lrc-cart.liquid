@@ -80,104 +80,74 @@
     })
 
     React.useEffect(() => {
-        if (cartTotal >= 399) {
-            const items = [];
-            const reportingItems = [];
-            if (!sticker_present_in_cart) {
-                items.push({
-                    id: FREE_STICKER_VARIANT_ID,
-                    quantity: 1
-                })
-                reportingItems.push({
-                    'product': 'Free Sticker',
-                    id: FREE_STICKER_VARIANT_ID,
-                    quantity: 1
-                })
-            }
-            if (!free_travel_set_present_in_cart && !free_boco_in_cart) {
-                items.push({
-                    id: FREE_TRAVEL_SET_VARIANT_ID,
-                    quantity: 1
-                })
-                reportingItems.push({
-                    'product': 'Free Travel Set',
-                    id: FREE_TRAVEL_SET_VARIANT_ID,
-                    quantity: 1
-                })
-            }
-            if (!free_stroop_in_cart && subscriptionItems.length && rightNow > STROOP_START_DATE && rightNow < STROOP_END_DATE) {
-                items.push({
-                    id: STROOP_PROMO_ID,
-                    quantity: 1
-                })
-                reportingItems.push({
-                    'product': 'Free StroopWafel',
-                    id: STROOP_PROMO_ID,
-                    quantity: 1
-                })
-            }
-            if (free_boco_in_cart) {
-                const vo = {};
-                vo[FREE_TRAVEL_SET_VARIANT_ID] = 0;
-                updateItems(vo)
-                .then(async response => {
-                    addItems(items)
-                    .then(async response => {
-                        const newCart = await getCart();
-                        setCart(newCart);
-                    })
-                })
-                return;
-            }
-            if (!items.length) {
-                return;
-            }
-            klaviyo.push(['track', 'auto_add_to_cart', {
-                items: reportingItems
-            }]);
-            addItems(items)
-            .then(async response => {
-                const newCart = await getCart();
-                setCart(newCart);
+        // add list of items to add
+        // add list of items to remove
+        // do it in one request
+        const items = {};
+        const reportingItems = [];
+
+        // process travel set
+        if (cartTotal >= 399 && !free_travel_set_present_in_cart && !free_boco_in_cart) {
+            items[FREE_TRAVEL_SET_VARIANT_ID] = 1;
+            reportingItems.push({
+                'product': 'Free Travel Set',
+                type: 'add',
+                id: FREE_TRAVEL_SET_VARIANT_ID
             })
-        } else {
-            const reportingItems = [];
-            if (!free_travel_set_present_in_cart && !sticker_present_in_cart && !free_stroop_in_cart) {
-                return;
-            }
-            const vo = {};
-            if (sticker_present_in_cart) {
-                vo[FREE_STICKER_VARIANT_ID] = 0;
-                reportingItems.push({
-                    'product': 'Free Sticker',
-                    id: FREE_STICKER_VARIANT_ID,
-                    quantity: 1
-                })
-            }
-            if (free_travel_set_present_in_cart) {
-                vo[FREE_TRAVEL_SET_VARIANT_ID] = 0;
-                reportingItems.push({
-                    'product': 'Free Travel Set',
-                    id: FREE_TRAVEL_SET_VARIANT_ID,
-                    quantity: 1
-                })
-            }
-            if (free_stroop_in_cart) {
-                vo[STROOP_PROMO_ID] = 0;
-                reportingItems.push({
-                    'product': 'Free StroopWafel',
-                    id: STROOP_PROMO_ID,
-                    quantity: 1
-                })
-            }
-            klaviyo.push(['track', 'auto_remove_from_cart', {
-                items: reportingItems
-            }]);
-            updateItems(vo)
-            .then(async response => {
-                const newCart = await getCart();
-                setCart(newCart);
+        }
+        if (cartTotal < 399 && free_travel_set_present_in_cart || free_boco_in_cart) {
+            items[FREE_TRAVEL_SET_VARIANT_ID] = 0;
+            reportingItems.push({
+                'product': 'Free Travel Set',
+                type: 'remove',
+                id: FREE_TRAVEL_SET_VARIANT_ID
             })
+        }
+
+        // process sticker
+        if (cartTotal >= 399 && !sticker_present_in_cart) {
+            items[FREE_STICKER_VARIANT_ID] = 1;
+            reportingItems.push({
+                'product': 'Free Sticker',
+                type: 'add',
+                id: FREE_STICKER_VARIANT_ID
+            })
+        }
+        if (cartTotal < 399 && sticker_present_in_cart) {
+            items[FREE_STICKER_VARIANT_ID] = 0;
+            reportingItems.push({
+                product: 'Free Sticker',
+                type: 'remove',
+                id: FREE_STICKER_VARIANT_ID
+            })
+        }
+
+        // process stroop
+        if (!free_stroop_in_cart && subscriptionItems.length && rightNow > STROOP_START_DATE && rightNow < STROOP_END_DATE) {
+            items[STROOP_PROMO_ID] = 1;
+            reportingItems.push({
+                'product': 'Free StroopWafel',
+                type: 'add',
+                id: STROOP_PROMO_ID
+            })
+        } else if (free_stroop_in_cart && (!subscriptionItems.length || rightNow < STROOP_START_DATE || rightNow > STROOP_END_DATE)) {
+            items[STROOP_PROMO_ID] = 0;
+            reportingItems.push({
+                'product': 'Free StroopWafel',
+                type: 'remove',
+                id: STROOP_PROMO_ID
+            })
+        }
+
+        // if there are items to update
+        if (Object.keys(items).length) {
+            updateItems(items).then(async () => {
+                const cart = await getCart();
+                setCart(cart);
+            });
+            klaviyo.push(['track', 'cartbot', {
+                items
+            }]);
         }
     }, [cartTotal, sticker_present_in_cart, free_travel_set_present_in_cart, free_boco_in_cart, free_stroop_in_cart, subscriptionItems.length, oneTimeItems.length])
   }
