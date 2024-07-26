@@ -42,7 +42,7 @@
     })
   }
 
-  function useCartBot(subscriptionState, cart, setCartState, setCart) {
+  function useCartBot(subscriptionState, cart, setCartState, setCart, loadingCheckout) {
     const FREE_STICKER_VARIANT_ID = 48056421482809;
     const FREE_TRAVEL_SET_VARIANT_ID = 49182276747577;
     const STROOP_PROMO_ID = 49641829499193;
@@ -78,11 +78,14 @@
             free_stroop_in_cart = true;
         }
     })
-
+    console.log(`loadingCheckout: ${loadingCheckout ? 'yes': 'no'}`)
     React.useEffect(() => {
-        // add list of items to add
-        // add list of items to remove
-        // do it in one request
+        let mounted = true;
+
+        if (loadingCheckout) {
+            return;
+        }
+
         const items = {};
         const reportingItems = [];
 
@@ -141,15 +144,21 @@
 
         // if there are items to update
         if (Object.keys(items).length) {
-            updateItems(items).then(async () => {
-                const cart = await getCart();
-                setCart(cart);
-            });
-            klaviyo.push(['track', 'cartbot', {
-                items
-            }]);
+            if (mounted) {
+                updateItems(items).then(async () => {
+                    const cart = await getCart();
+                    setCart(cart);
+                });
+                klaviyo.push(['track', 'cartbot', {
+                    items
+                }]);
+            }
         }
-    }, [cartTotal, sticker_present_in_cart, free_travel_set_present_in_cart, free_boco_in_cart, free_stroop_in_cart, subscriptionItems.length, oneTimeItems.length])
+
+        return () => {
+            mounted = false;
+        }
+    }, [cartTotal, sticker_present_in_cart, free_travel_set_present_in_cart, free_boco_in_cart, free_stroop_in_cart, subscriptionItems.length, oneTimeItems.length, loadingCheckout])
   }
 
   function removeAddToCartURLParameters() {
@@ -747,7 +756,7 @@
         innerSetCartState(newCartState)
     }, [cartState]);
 
-    useCartBot(cartState, cart, setCartState, setCart);
+    useCartBot(cartState, cart, setCartState, setCart, loadingCheckout);
     useAddToCartURL(cartState, cart, setCartState, setCart, setIsOpen, totalSubscriptionItems);
 
     React.useEffect(() => {
