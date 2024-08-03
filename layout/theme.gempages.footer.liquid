@@ -30,10 +30,6 @@
   <head>
     <!-- Google Tag Manager -->
     <script>
-      ((o, c, u) => {
-        (o[c] = o[c] || {}), (o[u] = o[u] || {}), (o[c].OCU = o[c].OCU || { api: o[u] });
-      })(window, 'Zipify', 'OCUApi');
-      Zipify.OCU.api.customCheckoutButton = '#checkout-button';
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -314,7 +310,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    
 
     <script id="docapp-cart">
       window.docappCart = {{ cart | json }}; window.docappCart.currency = "{{ 0 | money_with_currency | slice: -3, 3 }}"; window.docappCart.shop_currency = "{{ shop.currency }}";
@@ -358,7 +353,7 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div style="display:none"> {% sections 'header-group' %} </div>
+    <div style="display:none">{% sections 'header-group' %}</div>
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {% if request.path contains 'policies' %}

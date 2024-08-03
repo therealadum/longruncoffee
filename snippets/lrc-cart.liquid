@@ -1184,26 +1184,6 @@
         }
     }
 
-    Zipify.OCU.api.callbackBeforeRedirect = (dispatcher, event) => {
-        return new Promise(async (resolve) => {
-            try {
-                if (dispatcher.destination === 'checkout') {
-                    await checkout();
-                    return resolve({});
-                }
-    
-                const { response, type } = event.detail;
-                if (!(type === 'Upgrade' && response.accepted)) return resolve({});
-    
-                dispatcher._upsellAppInstance().hide();
-                setTimeout(() => Zipify.OCU.api.store.set('submitted', false));
-            } catch (e) {
-                await checkout();
-                resolve({});
-            }
-        });
-    };
-
     return <React.Fragment>
         {
             error ? <div class="relative z-[1000]" aria-labelledby="modal-title" role="dialog" aria-modal="true">

@@ -11,6 +11,7 @@ module.exports = {
     "./templates/*.json",
     "./templates/customers/*.liquid",
     "./locales/*.json",
+    "./src/**/*.tsx",
   ],
   safelist: ["border-cyan-600", "bg-cyan-800", "text-cyan-50"],
   theme: {

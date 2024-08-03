@@ -30,10 +30,6 @@
   <head>
     <!-- Google Tag Manager -->
     <script>
-      ((o, c, u) => {
-        (o[c] = o[c] || {}), (o[u] = o[u] || {}), (o[c].OCU = o[c].OCU || { api: o[u] });
-      })(window, 'Zipify', 'OCUApi');
-      Zipify.OCU.api.customCheckoutButton = '#checkout-button';
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -75,6 +71,8 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+
+    <script src="{{ 'webcomponents.umd.js' | asset_url }}" defer="defer"></script>
 
     <script crossorigin type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
     <script crossorigin type="text/javascript" src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -314,7 +312,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    
 
     <script id="docapp-cart">
       window.docappCart = {{ cart | json }}; window.docappCart.currency = "{{ 0 | money_with_currency | slice: -3, 3 }}"; window.docappCart.shop_currency = "{{ shop.currency }}";
