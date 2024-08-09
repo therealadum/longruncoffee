@@ -25,7 +25,7 @@
         "lrc_accordion_item_2": {
           "type": "lrc-accordion-image",
           "settings": {
-            "title": "Supplement Facts",
+            "title": "Ingredients",
             "image": "shopify:\/\/shop_images\/Supp_w_CalCarb_5.png"
           }
         },
