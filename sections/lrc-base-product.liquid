@@ -12,6 +12,6 @@
   const reviews = encodeURIComponent(JSON.stringify({{ product.metafields.reviews | json }}))
   const variantquantitymap = encodeURIComponent(JSON.stringify(variantQuantityMap))
   
-  const element = `<product-form productjson="${productjson}" reviews="${reviews}" variantquantitymap="${variantquantitymap}"></product-form>`
-  document.getElementById('lrc-base-product').innerHTML = element;
+  const baseproduct = `<product-form productjson="${productjson}" reviews="${reviews}" variantquantitymap="${variantquantitymap}"></product-form>`
+  document.getElementById('lrc-base-product').innerHTML = baseproduct;
 </script>

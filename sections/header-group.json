@@ -2,66 +2,10 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Free Shipping Orders $59+",
-            "link": "shopify:\/\/collections\/coffee"
-          }
-        },
-        "b2d8484d-b7d0-434a-a97f-b199fb49714d": {
-          "type": "announcement",
-          "settings": {
-            "text": "1% donated to mental health",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement-bar-0",
-        "b2d8484d-b7d0-434a-a97f-b199fb49714d"
-      ],
-      "custom_css": [
-        ".announcement-bar__message {padding: 0px 0 !important; font-size: 16px !important;}",
-        "@media (max-width: 767px) {.announcement-bar__message {font-size: 12px !important; }}"
-      ],
-      "settings": {
-        "color_scheme": "scheme-4195ea24-5d06-4290-9f03-c1b5b16a68f1",
-        "show_line_separator": false,
-        "show_social": true,
-        "auto_rotate": true,
-        "change_slides_speed": 5
-      }
-    },
     "header": {
-      "type": "header",
-      "custom_css": [
-        "h3 {font-size: 20px;}",
-        ".header__heading-logo {width: 80px !important;}",
-        "@media (max-width: 749px) {.menu-drawer__menu-item {font-size: 20px !important; } .header__icon--cart {width: 50px !important; } .header__icon--menu {width: 0px !important; } .header__icon--search {width: 20px !important; } .header__icon--account {width: 20px !important; } .header__icon--cart {width: 50px !important; } .header__icon--menu {width: 0px !important; } .header__icon--search {width: 20px !important; } .header__icon--account {width: 20px !important; }}"
-      ],
-      "settings": {
-        "logo_position": "middle-left",
-        "menu": "new-main-menu",
-        "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
-        "show_line_separator": false,
-        "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
-        "menu_color_scheme": "background-1",
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "mobile_logo_position": "center",
-        "margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
+      "type": "lrc-navigation",
+      "settings": {}
     }
   },
-  "order": [
-    "announcement-bar",
-    "header"
-  ]
+  "order": ["header"]
 }

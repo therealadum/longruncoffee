@@ -91,5 +91,6 @@ module.exports = {
     require("tailwindcss-animate"),
     require("@tailwindcss/forms"),
     require("tailwindcss-inner-border"),
+    require("@tailwindcss/aspect-ratio"),
   ],
 };

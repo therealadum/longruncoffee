@@ -24,40 +24,38 @@
 .image-gallery-using-mouse .image-gallery-icon:focus {
   outline: none;
 }
-.image-gallery-fullscreen-button,
+
 .image-gallery-play-button {
-  bottom: 0;
   padding: 20px;
 }
-.image-gallery-fullscreen-button .image-gallery-svg,
 .image-gallery-play-button .image-gallery-svg {
   height: 28px;
   width: 28px;
 }
+.image-gallery-fullscreen-button {
+  right: 12px;
+  top: 16px;
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+}
 @media (max-width: 768px) {
-  .image-gallery-fullscreen-button,
   .image-gallery-play-button {
     padding: 15px;
   }
-  .image-gallery-fullscreen-button .image-gallery-svg,
   .image-gallery-play-button .image-gallery-svg {
     height: 24px;
     width: 24px;
   }
 }
 @media (max-width: 480px) {
-  .image-gallery-fullscreen-button,
   .image-gallery-play-button {
     padding: 10px;
   }
-  .image-gallery-fullscreen-button .image-gallery-svg,
   .image-gallery-play-button .image-gallery-svg {
     height: 16px;
     width: 16px;
   }
-}
-.image-gallery-fullscreen-button {
-  right: 0;
 }
 .image-gallery-play-button {
   left: 0;

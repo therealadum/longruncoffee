@@ -1,6 +1,7 @@
-import React from "react";
+import React, { LegacyRef, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "./style.css";
+import Fullscreen from "./ImageGalleryFullscreenButton";
 
 const referenceString = "v2-subscription-items";
 const plans = {
@@ -1167,22 +1168,34 @@ export function ProductForm(args: any) {
 
   const productCosts = useProductCosts(variant, productForm.quantity);
 
+  const [isImageGalleryFullscreen, setIsImageGalleryFullscreen] =
+    useState<boolean>(false);
+  const ImageGalleryRef = useRef<ImageGallery>();
+  const onImageGalleryOnClick = () => {
+    if (ImageGalleryRef.current) {
+      if (isImageGalleryFullscreen) {
+        ImageGalleryRef.current.exitFullScreen();
+      } else {
+        ImageGalleryRef.current.fullScreen();
+      }
+      setIsImageGalleryFullscreen(!isImageGalleryFullscreen);
+    }
+  };
+
   React.useEffect(() => {
+    let originalWidth = isMobile ? "&width=650" : "&width=2000";
+    let thumbnailWidth = isMobile ? "&width=250" : "&width=500";
     if (variant && variant.featured_image) {
       setImages([
         {
-          original: `https:${variant.featured_image.src}${
-            isMobile ? "&width=450" : "&width=1000"
-          }`,
-          thumbnail: `https:${variant.featured_image.src}${
-            isMobile ? "&width=150" : "&width=250"
-          }`,
+          original: `https:${variant.featured_image.src}${originalWidth}`,
+          thumbnail: `https:${variant.featured_image.src}${thumbnailWidth}`,
           originalHeight: "200",
           originalWidth: "200",
         },
         ...product.images.map((img: string) => ({
-          original: `https:${img}${isMobile ? "&width=450" : "&width=1000"}`,
-          thumbnail: `https:${img}${isMobile ? "&width=150" : "&width=250"}`,
+          original: `https:${img}${originalWidth}`,
+          thumbnail: `https:${img}${thumbnailWidth}`,
           originalHeight: "200",
           originalWidth: "200",
         })),
@@ -1190,14 +1203,14 @@ export function ProductForm(args: any) {
     } else {
       setImages(
         product.images.map((img: string) => ({
-          original: `https:${img}${isMobile ? "&width=450" : "&width=1000"}`,
-          thumbnail: `https:${img}${isMobile ? "&width=150" : "&width=250"}`,
+          original: `https:${img}${originalWidth}`,
+          thumbnail: `https:${img}${thumbnailWidth}`,
           originalHeight: "200",
           originalWidth: "200",
         })),
       );
     }
-  }, [variantID]);
+  }, [variantID, isImageGalleryFullscreen]);
 
   return (
     <div className="relative bg-cyan-50 bg-opacity-20 z-30">
@@ -1218,8 +1231,8 @@ export function ProductForm(args: any) {
 
       <div className="flex flex-col p-4 lg:py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-          <div className="flex flex-col space-y-4">
-            <div className="flex flex-col lg:hidden">
+          <div className="flex flex-col">
+            <div className="flex flex-col lg:hidden mb-4">
               <h1 className="font-accent text-2xl text-cyan-700 tracking-tight">
                 {product.title}
               </h1>
@@ -1227,10 +1240,17 @@ export function ProductForm(args: any) {
               <Tags product={product} />
             </div>
             <ImageGallery
+              ref={ImageGalleryRef as LegacyRef<ImageGallery>}
               items={images}
               showPlayButton={false}
-              showFullscreenButton={isMobile}
-              additionalClass="bg-center bg-cover bg-[url('https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-product-background.webp?v=1722464283')]"
+              onClick={onImageGalleryOnClick}
+              renderFullscreenButton={() => (
+                <Fullscreen
+                  isFullscreen={isImageGalleryFullscreen}
+                  onClick={onImageGalleryOnClick}
+                />
+              )}
+              additionalClass="z-60 bg-center bg-cover bg-[url('https://cdn.shopify.com/s/files/1/0761/6924/9081/files/lrc-product-background.webp?v=1722464283')]"
             />
           </div>
           <div
