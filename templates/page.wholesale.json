@@ -22,7 +22,7 @@
         "text_PRxEgF": {
           "type": "text",
           "settings": {
-            "text": "<p>Long Run Co. can accommodate bulk, wholesale, and custom orders.<\/p><p>Learn more below about how we work with retailers, races, events, and corporate buyers across the US!<\/p>",
+            "text": "<p>Long Run Coffee can accommodate bulk, wholesale, and custom orders.<\/p><p>Learn more below about how we work with retailers, races, events, and corporate buyers across the US!<\/p>",
             "text_style": "body"
           }
         },
@@ -372,7 +372,7 @@
     "77237581-0be1-446e-a5c5-ceb99d007f3a": {
       "type": "featured-collection",
       "custom_css": [
-        "h2 {font-size: 25px;}"
+        "h2 {font-size: 28px;}"
       ],
       "settings": {
         "title": "Fuel your passion",
