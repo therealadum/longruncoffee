@@ -60,6 +60,7 @@ const navigation = {
           id: "gear",
           name: "Gear",
           items: [
+            { name: "All", href: "/collections/gear" },
             { name: "Drinkware", href: "/collections/drinkware" },
             { name: "Clothing", href: "/collections/clothing" },
             { name: "Reusable Pods", href: "/collections/reusable-pods" },
