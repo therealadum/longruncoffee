@@ -8,13 +8,64 @@
 * ------------------------------------------------------------
 */
 {
+  "order": [
+    "home-hero",
+    "48b2557b-a48d-4912-a99b-5daa46fa2d10",
+    "57fefd56-ea79-4796-b1c9-2297353cd585",
+    "19de0fcb-783c-40cf-81be-9ebfe8b8ecc3",
+    "home-coffee-club-cta",
+    "home-reviews",
+    "home-mission-cta",
+    "home-founder-quote",
+    "6b1352cb-e207-4d66-9158-7591b506a138",
+    "a7b19093-ee1f-4466-9934-44ebc66bfd60",
+    "af701c13-b6f9-4b72-97c3-6f39ce6c4b6e"
+  ],
   "sections": {
-    "home-hero": {
-      "type": "home-hero",
-      "custom_css": [
-
+    "19de0fcb-783c-40cf-81be-9ebfe8b8ecc3": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "YES PLEASE!",
+            "button_link": "shopify:\/\/products\/race-season-roast"
+          }
+        },
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Just released!",
+            "heading_size": "h1"
+          }
+        },
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Our Limited Edition <strong>Brown Butter Pumpkin <\/strong>Electrolyte Infused Coffee is available while supplies last!<\/h6>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-heading-1",
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1",
+        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1"
       ],
+      "disabled": true,
       "settings": {
+        "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "48b2557b-a48d-4912-a99b-5daa46fa2d10": {
@@ -119,82 +170,6 @@
         "padding_bottom": 0
       }
     },
-    "19de0fcb-783c-40cf-81be-9ebfe8b8ecc3": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Just released!",
-            "heading_size": "h1"
-          }
-        },
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h6>Our Limited Edition <strong>Brown Butter Pumpkin <\/strong>Electrolyte Infused Coffee is available while supplies last!<\/h6>",
-            "text_style": "body"
-          }
-        },
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "YES PLEASE!",
-            "button_link": "shopify:\/\/products\/race-season-roast"
-          }
-        }
-      },
-      "block_order": [
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-heading-1",
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-text-1",
-        "template--19876927668537__19de0fcb-783c-40cf-81be-9ebfe8b8ecc3-button-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "inverse",
-        "image_behavior": "ambient",
-        "mobile_content_alignment": "center",
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "home-coffee-club-cta": {
-      "type": "home-coffee-club-cta",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
-    },
-    "home-reviews": {
-      "type": "home-reviews",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
-    },
-    "home-mission-cta": {
-      "type": "home-mission-cta",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
-    },
-    "home-founder-quote": {
-      "type": "home-founder-quote",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "6b1352cb-e207-4d66-9158-7591b506a138": {
       "type": "home-founder-quote",
       "custom_css": [
@@ -244,19 +219,44 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "home-coffee-club-cta": {
+      "type": "home-coffee-club-cta",
+      "custom_css": [
+
+      ],
+      "settings": {
+      }
+    },
+    "home-founder-quote": {
+      "type": "home-founder-quote",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "home-hero": {
+      "type": "home-hero",
+      "custom_css": [
+
+      ],
+      "settings": {
+      }
+    },
+    "home-mission-cta": {
+      "type": "home-mission-cta",
+      "custom_css": [
+
+      ],
+      "settings": {
+      }
+    },
+    "home-reviews": {
+      "type": "home-reviews",
+      "custom_css": [
+
+      ],
+      "settings": {
+      }
     }
-  },
-  "order": [
-    "home-hero",
-    "48b2557b-a48d-4912-a99b-5daa46fa2d10",
-    "57fefd56-ea79-4796-b1c9-2297353cd585",
-    "19de0fcb-783c-40cf-81be-9ebfe8b8ecc3",
-    "home-coffee-club-cta",
-    "home-reviews",
-    "home-mission-cta",
-    "home-founder-quote",
-    "6b1352cb-e207-4d66-9158-7591b506a138",
-    "a7b19093-ee1f-4466-9934-44ebc66bfd60",
-    "af701c13-b6f9-4b72-97c3-6f39ce6c4b6e"
-  ]
+  }
 }
