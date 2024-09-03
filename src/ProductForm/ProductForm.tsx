@@ -1009,8 +1009,8 @@ export function ProductForm(args: any) {
   );
   const options = generateOptionsFromProductVariants(product);
 
-  const promotion_end_date_string = "7/25/24";
-  const promotion_start_date = new Date("7/21/24");
+  const promotion_end_date_string = "9/12/24";
+  const promotion_start_date = new Date("9/8/24");
   promotion_start_date.setHours(0, 0, 0, 0);
   const promotion_end_date = new Date(promotion_end_date_string);
   promotion_end_date.setHours(0, 0, 0, 0);
