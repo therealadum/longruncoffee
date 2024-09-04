@@ -10,8 +10,8 @@
       "type": "gp-section-485854940149908364",
       "settings": {}
     },
-    "stroop-promo": {
-      "type": "stroop-promo",
+    "club-promo": {
+      "type": "club-promo",
       "settings": {}
     },
     "gp_section_505612812685411434": {
@@ -54,7 +54,7 @@
   "order": [
     "gp_section_485854940099511180",
     "gp_section_485854940149908364",
-    "stroop-promo",
+    "club-promo",
     "gp_section_505612812685411434",
     "gp_section_485854940166620044",
     "gp_section_485854940149973900",

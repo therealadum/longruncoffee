@@ -2,7 +2,7 @@ import React from "react";
 import * as ReactDOMClient from "react-dom/client";
 import reactToWebComponent from "react-to-webcomponent";
 
-import { CartDrawer, ProductForm, NavigationBar } from ".";
+import { CartDrawer, ProductForm, NavigationBar, ClubPromoRoast } from ".";
 
 declare global {
   interface Window {
@@ -25,4 +25,9 @@ customElements.define(
   reactToWebComponent(ProductForm, React, ReactDOMClient, {
     props: ["productJSON", "reviews"],
   }),
+);
+
+customElements.define(
+  "club-promo-roast",
+  reactToWebComponent(ClubPromoRoast, React, ReactDOMClient),
 );

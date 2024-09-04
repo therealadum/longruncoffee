@@ -29,11 +29,12 @@ const navigation = {
       name: "Shop",
       featured: [
         {
-          name: "Stroopwafel",
-          href: "/products/stroopwafel",
+          name: "Brown Butter Pumkin",
+          href: "/products/race-season-roast",
           imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/stroop-2.png?v=1721500555&width=500",
-          imageAlt: "Stroopwafel flavored coffee. Summer 2024",
+            "https://longruncoffee.com/cdn/shop/files/1_a31df4a7-6aea-46aa-a6de-6f6a9be300cc.png?v=1725300689&width=500",
+          imageAlt:
+            "It's Race Season! And Long Run Coffee has made your new favorite way to fuel training",
           description: "Shop now",
         },
         {
@@ -82,20 +83,21 @@ const navigation = {
       name: "Info",
       featured: [
         {
-          name: "Ben and the Vermont 100",
-          href: "/blogs/athlete-stories/ben",
+          name: "How Electrolytes and Caffeine Affect Each Other",
+          href: "/blogs/science/how-electrolytes-caffeine-affect-eachother",
           imageSrc:
-            "https://longruncoffee.com/cdn/shop/articles/Blog_Primary_Image_badbc7b3-16c5-4989-b9bc-3bcb81c790de.png?v=1712799572&width=500",
-          imageAlt: "Athlete highlight: Ben Simanski runs the Vermont 100.",
+            "http://longruncoffee.myshopify.com/cdn/shop/articles/Blog_Post_Banners_10.png?v=1698369962&width=500",
+          imageAlt:
+            "Science highlight: How Electrolytes and Caffeine Affect Each Other.",
           description: "Read now",
         },
         {
-          name: "Overnight Oats: Stroopwafel",
-          href: "/blogs/recipes/stroopwafel-overnight-oats",
+          name: "Pumpkin Coffee Donuts",
+          href: "/blogs/recipes/pumpkin-coffee-donuts-recipe",
           imageSrc:
-            "https://longruncoffee.com/cdn/shop/articles/169_Blog_Pictures_4_4c316376-7a2c-4272-8c30-a2a282f39dac.png?v=1721837822&width=500",
+            "https://longruncoffee.com/cdn/shop/articles/Pumpkin_Coffee_Donuts_Recipe_Hero.jpg?v=1696296639&width=500",
           imageAlt:
-            "A fantastic recipe for overnight oats using our stroopwafel coffee.",
+            "A fantastic recipe for Pumpkin Coffee Donuts using our Brown Butter Pumpkin.",
           description: "Read now",
         },
       ],
