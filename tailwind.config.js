@@ -69,6 +69,7 @@ module.exports = {
         "100v": "100vh",
       },
       screens: {
+        xs: "24em",
         sm: "32em",
         md: "48em",
         lg: "64em",

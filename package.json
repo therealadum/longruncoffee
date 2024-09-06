@@ -14,7 +14,9 @@
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
+    "@rechargeapps/storefront-client": "^1.22.3",
     "react": "^18.2.0",
+    "react-confetti-explosion": "^2.1.2",
     "react-dom": "^18.2.0",
     "react-image-gallery": "^1.3.0",
     "react-to-webcomponent": "^2.0.0-alpha.0"

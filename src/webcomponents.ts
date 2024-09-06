@@ -7,12 +7,15 @@ import { CartDrawer, ProductForm, NavigationBar, ClubPromoRoast } from ".";
 declare global {
   interface Window {
     klaviyo: any;
+    Shopify: any;
   }
 }
 
 customElements.define(
-  "cart-drawer",
-  reactToWebComponent(CartDrawer, React, ReactDOMClient),
+  "cart-slide",
+  reactToWebComponent(CartDrawer, React, ReactDOMClient, {
+    props: ["cart"],
+  }),
 );
 
 customElements.define(
