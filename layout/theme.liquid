@@ -73,6 +73,19 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'webcomponents.umd.js' | asset_url }}"></script>
+    <script crossorigin type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js" defer></script>
+    <script
+      crossorigin
+      type="text/javascript"
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      defer
+    ></script>
+    <script
+      crossorigin
+      type="text/javascript"
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      defer
+    ></script>
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
