@@ -20,10 +20,10 @@ const theme = create({
   inputBorder: "rgba(0,0,0,.3)",
   inputTextColor: "#333333",
   inputBorderRadius: 4,
-  brandTitle: "Bitovi Storybook",
-  brandUrl: "https://bitovi.com",
+  brandTitle: "Long Run Coffee Storybook",
+  brandUrl: "https://longruncoffee.com",
   brandImage:
-    "https://2171535.fs1.hubspotusercontent-na1.net/hubfs/2171535/Bitovi_July_2016_Theme/Images/bitovi-logo.png",
+    "https://longruncoffee.com/cdn/shop/files/LRC_Sticker_13.png?v=1697587388&width=600",
 });
 
 addons.setConfig({

@@ -3,42 +3,7 @@ import ImageGallery from "react-image-gallery";
 import "./style.css";
 import Fullscreen from "./ImageGalleryFullscreenButton";
 import ClubPromoRoastInner from "../ClubPromoRoast/inner";
-
-const referenceString = "v2-subscription-items";
-const plans = {
-  base: {
-    display_name: "base",
-    bag_min: 2,
-    perk_list: ["10% savings", "Free shipping", "Experimental samples"],
-    discount: 0.1,
-    type: "base",
-  },
-  pro: {
-    display_name: "Pro",
-    bag_min: 3,
-    perk_list: [
-      "20% savings",
-      "Free shipping",
-      "Experimental samples",
-      "Free Yeti Tumbler",
-    ],
-    discount: 0.2,
-    type: "pro",
-  },
-  elite: {
-    display_name: "Elite",
-    bag_min: 4, // or 5 pound bag
-    perk_list: [
-      "25% savings",
-      "Free shipping",
-      "Experimental samples",
-      "Free Yeti Tumbler",
-      "Free BOCO hat",
-    ],
-    discount: 0.25,
-    type: "elite",
-  },
-};
+import { plans, referenceString } from "../common/constants";
 
 const productBundleServingSizes: any = {
   // ultramarathon set
@@ -412,6 +377,7 @@ function OnScrollBuyButton({
                 variantId: variantID,
                 isSubscription: productForm.isSubscription,
                 quantity: productForm.quantity,
+                product_hash: product.handle,
               },
             }),
           );
@@ -677,6 +643,7 @@ function OnScrollBuyButton({
                     variantId: variantID,
                     isSubscription: productForm.isSubscription,
                     quantity: productForm.quantity,
+                    product_hash: product.handle,
                   },
                 }),
               );
@@ -996,7 +963,7 @@ export function ProductForm(args: any) {
     }
   }, [variantID, isImageGalleryFullscreen]);
 
-  const promotion_start_date = new Date("9/8/24");
+  const promotion_start_date = new Date("9/7/24");
   const promotion_end_date = new Date("9/12/24");
   promotion_start_date.setHours(0, 0, 0, 0);
   promotion_end_date.setHours(0, 0, 0, 0);
@@ -2538,7 +2505,8 @@ export function ProductForm(args: any) {
                       <span className="text-left lowercase text-sm lg:text-base">
                         1
                       </span>
-                      {amountUntilFreeShipping - variantCost >= 0 ? null : (
+                      {!productForm.isSubscription &&
+                      amountUntilFreeShipping - variantCost >= 0 ? null : (
                         <span className="text-left text-[0.5rem] lg:text-xs leading-[0.5rem] absolute bottom-0 w-auto py-1 px-2 mx-auto transform translate-y-1/2 bg-cyan-50 rounded-full border border-cyan-500">
                           Free Shipping
                         </span>
@@ -2561,7 +2529,8 @@ export function ProductForm(args: any) {
                       <span className="text-left lowercase text-sm lg:text-base">
                         2
                       </span>
-                      {amountUntilFreeShipping - variantCost * 2 >= 0 ? null : (
+                      {!productForm.isSubscription &&
+                      amountUntilFreeShipping - variantCost * 2 >= 0 ? null : (
                         <span className="text-left text-[0.5rem] lg:text-xs leading-[0.5rem] absolute bottom-0 w-auto py-1 px-2 mx-auto transform translate-y-1/2 bg-cyan-50 rounded-full border border-cyan-500">
                           Free Shipping
                         </span>
@@ -2584,7 +2553,8 @@ export function ProductForm(args: any) {
                       <span className="text-left lowercase text-sm lg:text-base">
                         3
                       </span>
-                      {amountUntilFreeShipping - variantCost * 3 >= 0 ? null : (
+                      {!productForm.isSubscription &&
+                      amountUntilFreeShipping - variantCost * 3 >= 0 ? null : (
                         <span className="text-left text-[0.5rem] lg:text-xs leading-[0.5rem] absolute bottom-0 w-auto py-1 px-2 mx-auto transform translate-y-1/2 bg-cyan-50 rounded-full border border-cyan-500">
                           Free Shipping
                         </span>
@@ -2604,6 +2574,7 @@ export function ProductForm(args: any) {
                             variantId: variantID,
                             isSubscription: productForm.isSubscription,
                             quantity: productForm.quantity,
+                            product_hash: product.handle,
                           },
                         }),
                       );

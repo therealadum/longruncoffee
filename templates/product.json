@@ -1,32 +1,30 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "lrc-base-product": {
       "type": "lrc-base-product",
-      "settings": {
-      }
+      "settings": {}
     },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
         "product-description": {
           "type": "product-description",
-          "settings": {
-          }
+          "settings": {}
         },
         "lrc_accordion_item_2": {
           "type": "lrc-accordion-image",
           "settings": {
             "title": "Ingredients",
-            "image": "shopify:\/\/shop_images\/Supp_w_CalCarb_5.png"
+            "image": "shopify://shop_images/Supp_w_CalCarb_5.png"
           }
         },
         "lrc_accordion_item_3": {
@@ -42,8 +40,7 @@
         "lrc_accordion_item_2",
         "lrc_accordion_item_3"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
@@ -65,16 +62,12 @@
       "type": "lrc-reviews",
       "blocks": {
         "one-click-upsell": {
-          "type": "shopify:\/\/apps\/one-click-upsell\/blocks\/on-page\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
-          "settings": {
-          }
+          "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+          "settings": {}
         }
       },
-      "block_order": [
-        "one-click-upsell"
-      ],
-      "settings": {
-      }
+      "block_order": ["one-click-upsell"],
+      "settings": {}
     },
     "lrc-review-summary": {
       "type": "lrc-review-summary",
@@ -82,25 +75,25 @@
         "image_GGw6iH": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hoka.png"
+            "image": "shopify://shop_images/hoka.png"
           }
         },
         "image_ctk6RF": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/runners-world-logo-vector-removebg-preview.png"
+            "image": "shopify://shop_images/runners-world-logo-vector-removebg-preview.png"
           }
         },
         "image_qTwJhq": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/believe-in-the-run.png"
+            "image": "shopify://shop_images/believe-in-the-run.png"
           }
         },
         "image_QF6Ptp": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bigger-than-the-trail.png"
+            "image": "shopify://shop_images/bigger-than-the-trail.png"
           }
         }
       },
@@ -155,14 +148,11 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_review_widget_iFiJeK": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
-      "block_order": [
-        "judge_me_reviews_review_widget_iFiJeK"
-      ],
+      "block_order": ["judge_me_reviews_review_widget_iFiJeK"],
       "settings": {
         "include_margins": true
       }
@@ -170,7 +160,7 @@
     "3e4ec809-784d-4120-a4a6-cced1ff5c986": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}\/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price\/100,\n      $value: data.total_price\/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price\/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}\/cart\/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='\/cart\/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n<\/script>",
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
