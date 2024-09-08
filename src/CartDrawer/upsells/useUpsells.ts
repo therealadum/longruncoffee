@@ -13,6 +13,7 @@ interface ICartUpsellCampaignCondition {
 export interface IFinalUpsellComponentProps {
   product: IProduct;
   variant: IVariant;
+  cartState: ICartState;
   update: (
     updates: any,
     shouldOpen?: boolean,

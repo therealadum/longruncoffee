@@ -58,6 +58,7 @@ export function CartDrawer(args: any) {
       const { Component } = upsell;
       return (
         <Component
+          cartState={cartState}
           product={upsell.product}
           variant={upsell.variant}
           params={upsell.params}

@@ -35,14 +35,19 @@ const stats = [
 ];
 
 function _RaceSeasonRoastUpsell({
+  cartState,
   variant,
   checkout,
   update,
   loading,
   params,
 }: IFinalUpsellComponentProps) {
+  const qty =
+    cartState.items.find((item) => item.variant_id === variant.id)?.quantity ||
+    0;
+
   const updates: any = {};
-  updates[variant.id] = 1;
+  updates[variant.id] = qty + 1;
 
   return (
     <div className="flex flex-col">
