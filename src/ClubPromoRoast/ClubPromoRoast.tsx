@@ -2,9 +2,9 @@ import ClubPromoRoastInner from "./inner";
 
 export function ClubPromoRoast() {
   const todayRightNow = new Date();
-  const promotion_start_date = new Date("9/7/24");
+  const promotion_start_date = new Date("9/8/24");
   const promotion_active_date = new Date("9/2/24");
-  const promotion_end_date = new Date("9/12/24");
+  const promotion_end_date = new Date("9/13/24");
   promotion_start_date.setHours(0, 0, 0, 0);
   promotion_active_date.setHours(0, 0, 0, 0);
   promotion_end_date.setHours(0, 0, 0, 0);
@@ -28,13 +28,13 @@ export function ClubPromoRoast() {
                 </h4>
                 <p className="text-center text-base text-neutral-100 max-w-sm">
                   Free with your first subscription order when you subscribe and
-                  save between 9/7 and 9/12!
+                  save between 9/8 and 9/13!
                 </p>
                 <ClubPromoRoastInner
                   promotion_end_date={promotion_end_date}
                   promotion_start_date={promotion_start_date}
                   title="Long Run Club Bonus"
-                  description="Starting Saturday, September 7th, all Long Run Club sign ups get our Brown butter Pumpkin Roast free with their first shipment."
+                  description="Starting Saturday, September 8th, all Long Run Club sign ups get our Brown butter Pumpkin Roast free with their first shipment."
                 />
               </div>
 

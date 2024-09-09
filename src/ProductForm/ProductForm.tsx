@@ -963,8 +963,8 @@ export function ProductForm(args: any) {
     }
   }, [variantID, isImageGalleryFullscreen]);
 
-  const promotion_start_date = new Date("9/7/24");
-  const promotion_end_date = new Date("9/12/24");
+  const promotion_start_date = new Date("9/8/24");
+  const promotion_end_date = new Date("9/13/24");
   promotion_start_date.setHours(0, 0, 0, 0);
   promotion_end_date.setHours(0, 0, 0, 0);
 
@@ -2305,7 +2305,7 @@ export function ProductForm(args: any) {
             {product.tags.indexOf("Club Member Exclusive") !== -1 ? (
               <ClubPromoRoastInner
                 title="Long Run Club Bonus"
-                description="All Long Run Club sign ups through 9/12/24 get this item free with their first shipment"
+                description="All Long Run Club sign ups through 9/13/24 get this item free with their first shipment"
                 promotion_start_date={promotion_start_date}
                 promotion_end_date={promotion_end_date}
               />

@@ -21,7 +21,7 @@ interface ICartBotItem {
   end_date?: Date;
 }
 
-const RACE_SEASON_ROAST_START_DATE = new Date("9/7/24");
+const RACE_SEASON_ROAST_START_DATE = new Date("9/8/24");
 RACE_SEASON_ROAST_START_DATE.setHours(0, 0, 0, 0);
 const RACE_SEASON_ROAST_END_DATE = new Date("9/14/24");
 RACE_SEASON_ROAST_END_DATE.setHours(0, 0, 0, 0);
