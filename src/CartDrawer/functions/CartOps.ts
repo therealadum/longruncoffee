@@ -1,5 +1,9 @@
 import { IPlan } from "../../common/plans";
-import { ICartState, ISubscriptionCartState } from "../../common/product";
+import {
+  ICartState,
+  IProduct,
+  ISubscriptionCartState,
+} from "../../common/product";
 
 export interface ICheckoutStatusProps {
   cartState: ICartState;
@@ -64,4 +68,10 @@ export async function getCart() {
     console.error(e);
     return null;
   }
+}
+
+export async function getProduct(product_hash: string): Promise<IProduct> {
+  const data = await fetch(`/products/${product_hash}.js`);
+  const product = await data.json();
+  return product;
 }

@@ -17,9 +17,14 @@ import {
   addToCart,
   checkoutStatus,
   getCart,
+  getProduct,
   updateCart,
 } from "./functions/CartOps";
 import { useUpsells } from "./upsells/useUpsells";
+import {
+  removeAddToCartURLParameters,
+  useAddToCartURL,
+} from "./functions/CartURL";
 
 interface IUseCartDrawerStateProps {
   cart: ICartState;
@@ -200,18 +205,45 @@ export const useCartDrawerState = ({
     return unique;
   }, [plan, nextPlan]);
 
+  // state for triggering automatic checkout
+  const [shouldCheckout, setShouldCheckout] = useState<boolean>(false);
+  useEffect(() => {
+    if (shouldCheckout && !loading) {
+      setShouldCheckout(false);
+      // check if can checkout
+      if (
+        checkoutStatus({ cartState, subscriptionCartState, plan }) !== "OKAY"
+      ) {
+        return;
+      }
+      window.location.href = "/checkout";
+    }
+  }, [shouldCheckout, loading, cartState, subscriptionCartState, plan]);
+
   // listen for buy_button
   const handleBuyButton = useCallback(
     async (event: any) => {
       setLoading(true);
-      const { variantId, isSubscription, quantity, available, product_hash } =
-        event.detail;
+      const {
+        variantId,
+        isSubscription,
+        quantity,
+        available,
+        product_hash,
+        a2c_max_qty,
+        a2c_should_reset_url_params,
+        a2c_should_checkout,
+        a2c_product,
+      } = event.detail;
       try {
         if (isSubscription) {
           if (variantId && product_hash) {
-            const data = await fetch(`/products/${product_hash}.js`);
-            const product = await data.json();
-
+            let product = null;
+            if (a2c_product) {
+              product = a2c_product;
+            } else {
+              product = await getProduct(product_hash);
+            }
             let variant;
             for (let j = 0; j < product.variants.length; j++) {
               if (product.variants[j].id == variantId) {
@@ -275,10 +307,15 @@ export const useCartDrawerState = ({
           update_payload[variantId] = quantity;
           // check if item already in cart
           const existing_item = cartState.items.find(
-            (item) => item.variant_id === variantId,
+            (item) => item.variant_id == variantId,
           );
           // update qty
-          if (existing_item) {
+          if (existing_item && a2c_max_qty) {
+            update_payload[variantId] =
+              a2c_max_qty > existing_item.quantity + quantity
+                ? existing_item.quantity + quantity
+                : a2c_max_qty;
+          } else if (existing_item) {
             update_payload[variantId] += existing_item.quantity;
           }
           const response = await updateCart(update_payload);
@@ -286,13 +323,25 @@ export const useCartDrawerState = ({
           setCartState(parsed);
           setIsOpen(true);
         }
+        if (a2c_should_reset_url_params) {
+          removeAddToCartURLParameters();
+        }
+        if (a2c_should_checkout) {
+          checkout();
+        }
       } catch (e: any) {
         console.error(e);
       }
       document.dispatchEvent(new CustomEvent("buy_button_complete"));
       setLoading(false);
     },
-    [cartState, setCartState, subscriptionCartState, setSubscriptionCartState],
+    [
+      cartState,
+      setCartState,
+      subscriptionCartState,
+      setSubscriptionCartState,
+      shouldCheckout,
+    ],
   );
   useEffect(() => {
     document.addEventListener("buy_button", handleBuyButton);
@@ -554,6 +603,7 @@ export const useCartDrawerState = ({
   }, [nextPlan, plan, subscriptionCartState]);
 
   useCartBot({ cartState, subscriptionCartState, loading, update });
+  useAddToCartURL();
   const upsells = useUpsells({ cartState, loading });
 
   return {

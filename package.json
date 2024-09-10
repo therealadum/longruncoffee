@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
-    "@playwright/test": "^1.42.1",
     "@rollup/plugin-typescript": "^9.0.1",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
