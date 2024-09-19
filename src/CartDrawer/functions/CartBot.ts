@@ -97,7 +97,13 @@ export function useCartBot({
   loading,
   update,
 }: ICartBotProps) {
-  const sessionLengthOver20s = useSessionTime(20);
+  const d = new Date();
+  const ab_test_start = new Date("9/20/24");
+  ab_test_start.setHours(0);
+  ab_test_start.setMinutes(0);
+  ab_test_start.setSeconds(0);
+
+  const sessionLengthAdequate = useSessionTime(d > ab_test_start ? 5 : 20);
   useEffect(() => {
     let mounted = true;
     if (loading) {
@@ -121,7 +127,7 @@ export function useCartBot({
     // session time
     triggerEvaluations.set(
       ICartBotItemTriggerEnum.SESSION_TIME,
-      sessionLengthOver20s,
+      sessionLengthAdequate,
     );
     // build update object & evaluate if items should be in or out
     const updates: any = {};
@@ -173,5 +179,5 @@ export function useCartBot({
     return () => {
       mounted = false;
     };
-  }, [cartState, subscriptionCartState, loading, sessionLengthOver20s]);
+  }, [cartState, subscriptionCartState, loading, sessionLengthAdequate]);
 }
