@@ -28,6 +28,11 @@
     }
   </style>
   <head>
+
+{% if handle contains 'try-it-free' %}
+<meta name="robots" content="noindex">
+{% endif %}
+    
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
