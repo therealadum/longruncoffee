@@ -8,76 +8,10 @@
 * ------------------------------------------------------------
 */
 {
-  "order": [
-    "83a3bd26-97b8-4892-b4bb-61be853a0ac4",
-    "6cf0681f-6907-4599-808a-e71801658fb2",
-    "banner",
-    "product-grid",
-    "d38e1539-2c3d-4b7c-a09d-ea5ca38e288c"
-  ],
   "sections": {
-    "6cf0681f-6907-4599-808a-e71801658fb2": {
-      "type": "rich-text",
-      "blocks": {
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        },
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Black Friday is here",
-            "heading_size": "h2"
-          }
-        },
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h6>Save 10% on Orders Under $49<\/h6><h6>Save 20% on Orders $49+<\/h6><h6><span style=\"text-decoration:underline\">Extra<\/span> 10% savings on all gear<\/h6>"
-          }
-        }
-      },
-      "block_order": [
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-heading-1",
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-text-1",
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h2 {font-size: 20px;}",
-        "h6 {font-size: 18px;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-2",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
     "83a3bd26-97b8-4892-b4bb-61be853a0ac4": {
       "type": "image-banner",
       "blocks": {
-        "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-buttons-1": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        },
         "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-heading-1": {
           "type": "heading",
           "disabled": true,
@@ -92,6 +26,18 @@
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
+          }
+        },
+        "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -115,6 +61,53 @@
         "show_text_below": false
       }
     },
+    "6cf0681f-6907-4599-808a-e71801658fb2": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Black Friday is here",
+            "heading_size": "h2"
+          }
+        },
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Save 10% on Orders Under $49<\/h6><h6>Save 20% on Orders $49+<\/h6><h6><span style=\"text-decoration:underline\">Extra<\/span> 10% savings on all gear<\/h6>"
+          }
+        },
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-heading-1",
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-text-1",
+        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 20px;}",
+        "h6 {font-size: 18px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "custom_css": [
@@ -124,52 +117,6 @@
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "background-1"
-      }
-    },
-    "d38e1539-2c3d-4b7c-a09d-ea5ca38e288c": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "YES PLEASE!",
-            "button_link": "shopify:\/\/products\/race-season-roast"
-          }
-        },
-        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Just released!",
-            "heading_size": "h1"
-          }
-        },
-        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our Limited Edition <strong>Brown Butter Pumpkin <\/strong>Electrolyte Infused Coffee is available while supplies last!<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-heading-1",
-        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-text-1",
-        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-button-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
-        "image_behavior": "ambient",
-        "mobile_content_alignment": "center",
-        "padding_top": 28,
-        "padding_bottom": 28
       }
     },
     "product-grid": {
@@ -193,6 +140,59 @@
         "padding_top": 32,
         "padding_bottom": 32
       }
+    },
+    "d38e1539-2c3d-4b7c-a09d-ea5ca38e288c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Just released!",
+            "heading_size": "h1"
+          }
+        },
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Limited Edition <strong>Brown Butter Pumpkin <\/strong>Electrolyte Infused Coffee is available while supplies last!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "YES PLEASE!",
+            "button_link": "shopify:\/\/products\/race-season-roast"
+          }
+        }
+      },
+      "block_order": [
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-heading-1",
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-text-1",
+        "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
     }
-  }
+  },
+  "order": [
+    "83a3bd26-97b8-4892-b4bb-61be853a0ac4",
+    "6cf0681f-6907-4599-808a-e71801658fb2",
+    "banner",
+    "product-grid",
+    "d38e1539-2c3d-4b7c-a09d-ea5ca38e288c"
+  ]
 }

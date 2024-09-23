@@ -24,10 +24,29 @@
   <style>
     @font-face {
       font-family: IntroRust;
-      src: url(https://cdn.shopify.com/s/files/1/0761/6924/9081/t/3/assets/IntroRust-Base.ttf);
+      src: url(https://cdn.shopify.com/s/files/1/0761/6924/9081/files/IntroRust-Base.ttf?v=1724257310);
     }
   </style>
   <head>
+
+{% if handle contains 'try-it-free' %}
+<meta name="robots" content="noindex">
+{% endif %}
+
+    
+{% if handle contains 'free-samples-for-racers' %}
+<meta name="robots" content="noindex">
+{% endif %}
+
+    {% if handle contains 'free-samples-for-friends' %}
+<meta name="robots" content="noindex">
+{% endif %}
+
+    {% if handle contains 'free-samples-for-ambassador-referrals' %}
+<meta name="robots" content="noindex">
+{% endif %}
+    
+    
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -72,17 +91,19 @@
 
     {% render 'meta-tags' %}
 
-    <script crossorigin type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
-    <script crossorigin type="text/javascript" src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="{{ 'webcomponents.umd.js' | asset_url }}"></script>
+    <script crossorigin type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js" defer></script>
+    <script
+      crossorigin
+      type="text/javascript"
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      defer
+    ></script>
     <script
       crossorigin
       type="text/javascript"
       src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-    ></script>
-    <script src="https://static.rechargecdn.com/assets/storefront/recharge-client-1.16.3.min.js"></script>
-    <script
-      src="https://js.sentry-cdn.com/cac5fa3e67bc4ec512a2fb6fe18303d4.min.js"
-      crossorigin="anonymous"
+      defer
     ></script>
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
@@ -329,11 +350,9 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    {% if request.path contains 'policies' %}
-      {% render 'policy', content: content_for_layout %}
-    {% else %}
-      {{ content_for_layout }}
-    {% endif %}
-  </body>
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">{% if request.path contains 'policies' %}
+        {% render 'policy', content: content_for_layout %}
+      {% else %}
+        {{ content_for_layout }}
+      {% endif %}</body>
 </html>
