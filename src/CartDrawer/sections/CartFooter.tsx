@@ -8,8 +8,13 @@ interface ICartFooterProps {
   checkoutState:
     | "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT"
     | "OKAY"
+    | "MINIMUM_SPEND"
     | "NOTHING_TO_CHECKOUT"
     | "ONLY_GIFTS";
+  minimum_spend?: {
+    amount: string;
+    variant_id: string;
+  };
 }
 
 export function CartFooter({
@@ -20,6 +25,7 @@ export function CartFooter({
   setIsOpen,
   checkout,
   checkoutState,
+  minimum_spend,
 }: ICartFooterProps) {
   return (
     <div className="flex-1 mt-4 border-t border-cyan-200 flex flex-col space-y-2 flex-shrink-0 justify-end px-4 py-4">
@@ -40,6 +46,22 @@ export function CartFooter({
           </span>
         )}
       </div>
+      {checkoutState === "MINIMUM_SPEND" && minimum_spend ? (
+        <span className="block md:hidden font-medium text-xs pb-1 text-center text-tan-600">
+          Your cart requires a minimum spend of $
+          {(parseFloat(minimum_spend.amount) / 100).toFixed(2)}
+        </span>
+      ) : null}
+      {checkoutState === "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT" ? (
+        <span className="block md:hidden font-medium text-xs pb-1 text-center text-tan-600">
+          Subscribe & Save requires a 2 bag minumum
+        </span>
+      ) : null}
+      {checkoutState === "ONLY_GIFTS" ? (
+        <span className="block md:hidden font-medium text-xs pb-1 text-center text-tan-600">
+          Free Gifts Require Purchase
+        </span>
+      ) : null}
       <div className="grid grid-cols-2 gap-2">
         <button
           type="button"
@@ -81,13 +103,19 @@ export function CartFooter({
           ) : (
             "Checkout"
           )}
+          {checkoutState === "MINIMUM_SPEND" && minimum_spend ? (
+            <span className="hidden md:block tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center">
+              Your cart requires a minimum spend of $
+              {(parseFloat(minimum_spend.amount) / 100).toFixed(2)}
+            </span>
+          ) : null}
           {checkoutState === "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT" ? (
-            <span className="tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center">
+            <span className="hidden md:block tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center">
               Subscribe & Save requires a 2 bag minumum
             </span>
           ) : null}
           {checkoutState === "ONLY_GIFTS" ? (
-            <span className="tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center">
+            <span className="hidden md:block tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center">
               Free Gifts Require Purchase
             </span>
           ) : null}

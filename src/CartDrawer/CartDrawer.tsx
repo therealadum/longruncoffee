@@ -161,6 +161,7 @@ export function CartDrawer(args: any) {
                         checkout={checkoutOrUpsell}
                         checkoutState={checkoutState}
                         loading={loading}
+                        minimum_spend={cartState?.attributes?.minimum_spend}
                       />
                     </>
                   ) : (

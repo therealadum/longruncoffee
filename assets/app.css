@@ -4340,8 +4340,16 @@ h2#spr-header-title {
     margin-top: 0px !important;
   }
 
+  .md\:block {
+    display: block !important;
+  }
+
   .md\:flex {
     display: flex !important;
+  }
+
+  .md\:hidden {
+    display: none !important;
   }
 
   .md\:h-72 {

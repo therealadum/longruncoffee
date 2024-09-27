@@ -9,18 +9,26 @@ export interface ICheckoutStatusProps {
   cartState: ICartState;
   subscriptionCartState: ISubscriptionCartState;
   plan: IPlan | null;
+  cartSubTotalWithDiscounts: number;
 }
 
 export function checkoutStatus({
   cartState,
   subscriptionCartState,
   plan,
+  cartSubTotalWithDiscounts,
 }: ICheckoutStatusProps):
   | "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT"
   | "OKAY"
   | "NOTHING_TO_CHECKOUT"
+  | "MINIMUM_SPEND"
   | "ONLY_GIFTS" {
-  if (subscriptionCartState.items.length && !plan) {
+  if (
+    cartState.attributes?.minimum_spend &&
+    cartState?.attributes?.minimum_spend?.amount > cartSubTotalWithDiscounts
+  ) {
+    return "MINIMUM_SPEND";
+  } else if (subscriptionCartState.items.length && !plan) {
     return "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT";
   } else if (subscriptionCartState.items.length && plan) {
     return "OKAY";
@@ -37,7 +45,18 @@ export function checkoutStatus({
   }
 }
 
-export async function updateCart(updates: any) {
+export async function updateCart(updates: any, attributes?: any) {
+  if (attributes) {
+    await fetch(window.Shopify.routes.root + "cart/update.js", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        attributes,
+      }),
+    });
+  }
   return await fetch(window.Shopify.routes.root + "cart/update.js", {
     method: "POST",
     headers: {

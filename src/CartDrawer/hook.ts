@@ -68,12 +68,13 @@ export const useCartDrawerState = ({
       shouldOpen: boolean = true,
       shouldSetCartState: boolean = true,
       shouldSetLoading: boolean = true,
+      attributes?: any,
     ) => {
       if (shouldSetLoading) {
         setLoading(true);
       }
       try {
-        const response = await updateCart(updates);
+        const response = await updateCart(updates, attributes);
         const newCart = await response.json();
         if (shouldSetCartState) {
           setCartState(newCart);
@@ -212,7 +213,12 @@ export const useCartDrawerState = ({
       setShouldCheckout(false);
       // check if can checkout
       if (
-        checkoutStatus({ cartState, subscriptionCartState, plan }) !== "OKAY"
+        checkoutStatus({
+          cartState,
+          subscriptionCartState,
+          plan,
+          cartSubTotalWithDiscounts,
+        }) !== "OKAY"
       ) {
         return;
       }
@@ -234,6 +240,7 @@ export const useCartDrawerState = ({
         a2c_should_reset_url_params,
         a2c_should_checkout,
         a2c_product,
+        a2c_minimum_spend,
       } = event.detail;
       try {
         if (isSubscription) {
@@ -305,20 +312,34 @@ export const useCartDrawerState = ({
         } else if (available) {
           const update_payload: any = {};
           update_payload[variantId] = quantity;
-          // check if item already in cart
-          const existing_item = cartState.items.find(
-            (item) => item.variant_id == variantId,
-          );
-          // update qty
-          if (existing_item && a2c_max_qty) {
-            update_payload[variantId] =
-              a2c_max_qty > existing_item.quantity + quantity
-                ? existing_item.quantity + quantity
-                : a2c_max_qty;
-          } else if (existing_item) {
-            update_payload[variantId] += existing_item.quantity;
+
+          // skip checking in this case
+          let attributes = null;
+
+          if (!a2c_minimum_spend) {
+            // check if item already in cart
+            const existing_item = cartState.items.find(
+              (item) => item.variant_id == variantId,
+            );
+            // update qty
+            if (existing_item && a2c_max_qty) {
+              update_payload[variantId] =
+                a2c_max_qty > existing_item.quantity + quantity
+                  ? existing_item.quantity + quantity
+                  : a2c_max_qty;
+            } else if (existing_item) {
+              update_payload[variantId] += existing_item.quantity;
+            }
+          } else {
+            attributes = {
+              minimum_spend: {
+                variant_id: variantId,
+                amount: a2c_minimum_spend,
+              },
+            };
           }
-          const response = await updateCart(update_payload);
+
+          const response = await updateCart(update_payload, attributes);
           const parsed = await response.json();
           setCartState(parsed);
           setIsOpen(true);
@@ -383,6 +404,7 @@ export const useCartDrawerState = ({
     cartState,
     subscriptionCartState,
     plan,
+    cartSubTotalWithDiscounts,
   });
   const checkout = async () => {
     setLoading(true);

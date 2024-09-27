@@ -1,5 +1,5 @@
 import { TUseCartItemProductCosts } from "../../common/constants";
-import { ICartItem, ICartState, IProduct } from "../../common/product";
+import { ICartItem, ICartState } from "../../common/product";
 
 interface IOneTimePurchasesProps {
   cartState: ICartState;
@@ -39,6 +39,7 @@ export function OneTimePurchases({
             .map((item, i) => (
               <CartItem
                 key={item.variant_id}
+                cart_attributes={cartState.attributes}
                 item={item}
                 useCartItemProductCosts={useCartItemProductCosts}
                 update={update}
@@ -57,6 +58,9 @@ export function OneTimePurchases({
             {totalSubscriptionItems > 3 ? (
               <BonusItem
                 key={3}
+                update={update}
+                loading={loading}
+                cart_attributes={cartState.attributes}
                 title="Club Exclusive - LRC x BOCO Run Hat"
                 href="/products/club-exclusive-lrc-x-boco-run-hat-1"
                 header="In 3rd Shipment"
@@ -66,6 +70,9 @@ export function OneTimePurchases({
             {totalSubscriptionItems > 2 ? (
               <BonusItem
                 key={2}
+                update={update}
+                loading={loading}
+                cart_attributes={cartState.attributes}
                 title="Club Exclusive - LRC x YETI Tumbler"
                 href="/products/club-exclusive-lrc-x-yeti-tumbler-1"
                 header="In 3rd Shipment"
@@ -94,6 +101,10 @@ export function OneTimePurchases({
                   href={item.url}
                   title={item.product_title}
                   image={`${item.featured_image.url}&width=150`}
+                  update={update}
+                  loading={loading}
+                  cart_attributes={cartState.attributes}
+                  item={item}
                 />
               ))}
           </div>
@@ -106,8 +117,15 @@ export function OneTimePurchases({
 interface ICartItemProps {
   useCartItemProductCosts: TUseCartItemProductCosts;
   item: ICartItem;
-  update: (updates: any) => Promise<void>;
+  update: (
+    updates: any,
+    shouldOpen?: boolean,
+    shouldSetCartState?: boolean,
+    shouldSetLoading?: boolean,
+    attributes?: any,
+  ) => Promise<void>;
   loading: boolean;
+  cart_attributes?: any;
 }
 
 function CartItem({
@@ -115,13 +133,26 @@ function CartItem({
   item,
   update,
   loading,
+  cart_attributes,
 }: ICartItemProps) {
   const costs = useCartItemProductCosts(item.price, item.price, item.quantity);
 
   const onClick = (int: number) => {
     const payload: any = {};
     payload[item.variant_id] = int;
-    update(payload);
+
+    // check if cart_attributes has min spend related to this item and clear it if so
+    if (
+      int == 0 &&
+      cart_attributes?.minimum_spend &&
+      cart_attributes?.minimum_spend?.variant_id == item.variant_id
+    ) {
+      update(payload, false, true, true, {
+        minimum_spend: null,
+      });
+    } else {
+      update(payload);
+    }
   };
 
   return (
@@ -212,6 +243,16 @@ interface ICartBonusItemProps {
   image: string;
   header?: string;
   quantity?: number;
+  item?: ICartItem;
+  update: (
+    updates: any,
+    shouldOpen?: boolean,
+    shouldSetCartState?: boolean,
+    shouldSetLoading?: boolean,
+    attributes?: any,
+  ) => Promise<void>;
+  loading: boolean;
+  cart_attributes: any;
 }
 function BonusItem({
   title,
@@ -219,9 +260,64 @@ function BonusItem({
   image,
   header,
   quantity,
+  item,
+  update,
+  loading,
+  cart_attributes,
 }: ICartBonusItemProps) {
+  const onClick = () => {
+    if (item) {
+      const payload: any = {};
+      payload[item.variant_id] = 0;
+      update(payload, false, true, true, {
+        minimum_spend: {
+          amount: 0,
+          variant_id: "",
+        },
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col space-y-2 group relative">
+      {cart_attributes &&
+      cart_attributes?.minimum_spend &&
+      cart_attributes.minimum_spend.variant_id == item?.variant_id ? (
+        <div className="absolute top-2 left-0 right-0 flex items-stretch space-x-2">
+          <button
+            disabled={loading}
+            onClick={onClick}
+            className="ml-auto shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center"
+          >
+            {!loading ? (
+              <span className="flex items-end self-center">
+                <span className="text-xs">x</span>
+              </span>
+            ) : (
+              <svg
+                className="animate-spin h-6 w-6 p-1 text-cyan-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+      ) : null}
       {quantity ? (
         <div className="absolute top-2 left-0 right-0 flex items-stretch space-x-2">
           <div className="ml-auto shadow-md z-10 rounded-full h-8 w-8 bg-neutral-50 flex items-center justify-center">

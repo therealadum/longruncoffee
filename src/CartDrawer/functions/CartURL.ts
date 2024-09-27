@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { ICartState, ISubscriptionCartState } from "../../common/product";
-import { getCart, getProduct } from "./CartOps";
+import { useEffect } from "react";
+import { getProduct } from "./CartOps";
 
 export function removeAddToCartURLParameters() {
   if (window.history) {
@@ -19,6 +18,7 @@ interface IUseAddToCartURLParams {
   add_to_cart_quantity?: string;
   add_to_cart_max?: string;
   add_to_cart_checkout?: string;
+  add_to_cart_minimum_spend?: string;
 }
 
 async function process_event({
@@ -28,6 +28,7 @@ async function process_event({
   product_hash,
   a2c_max_qty,
   a2c_should_checkout,
+  a2c_minimum_spend,
 }: any) {
   const a2c_product = await getProduct(product_hash);
   document.dispatchEvent(
@@ -42,6 +43,7 @@ async function process_event({
         a2c_should_reset_url_params: true,
         a2c_should_checkout,
         a2c_product,
+        a2c_minimum_spend,
       },
     }),
   );
@@ -58,6 +60,7 @@ export function useAddToCartURL() {
   const add_to_cart_is_subscription = params.add_to_cart_is_subscription;
   const add_to_cart_max = params.add_to_cart_max;
   const add_to_cart_checkout = params.add_to_cart_checkout;
+  const add_to_cart_minimum_spend = params.add_to_cart_minimum_spend;
 
   useEffect(() => {
     if (Boolean(add_to_cart_variant_id && add_to_cart_product_hash)) {
@@ -90,6 +93,7 @@ export function useAddToCartURL() {
           a2c_qty: add_to_cart_quantity,
           a2c_max_qty: max_add_to_cart,
           a2c_should_checkout: shouldCheckoutParam,
+          a2c_minimum_spend: add_to_cart_minimum_spend,
         });
       } catch (e) {
         console.error(e);

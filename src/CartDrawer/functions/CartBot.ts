@@ -97,13 +97,7 @@ export function useCartBot({
   loading,
   update,
 }: ICartBotProps) {
-  const d = new Date();
-  const ab_test_start = new Date("9/20/24");
-  ab_test_start.setHours(0);
-  ab_test_start.setMinutes(0);
-  ab_test_start.setSeconds(0);
-
-  const sessionLengthAdequate = useSessionTime(d > ab_test_start ? 5 : 20);
+  const sessionLengthAdequate = useSessionTime(20);
   useEffect(() => {
     let mounted = true;
     if (loading) {
