@@ -21,26 +21,10 @@
           "type": "product-description",
           "settings": {
           }
-        },
-        "lrc_accordion_item_2": {
-          "type": "lrc-accordion-image",
-          "settings": {
-            "title": "Ingredients",
-            "image": "shopify://shop_images/Supp_w_CalCarb_5.png"
-          }
-        },
-        "lrc_accordion_item_3": {
-          "type": "lrc-accordion-text",
-          "settings": {
-            "title": "How to Use",
-            "body": "We recommend brewing LRC with 2 tbsp of ground coffee per 12oz of water. Because LRC is actual coffee (not coffee alternative), any traditional brewing method works! Consume 30-45 mins before your run."
-          }
         }
       },
       "block_order": [
-        "product-description",
-        "lrc_accordion_item_2",
-        "lrc_accordion_item_3"
+        "product-description"
       ],
       "settings": {
       }
@@ -112,7 +96,7 @@
       ],
       "settings": {
         "title": "Trusted by Runners",
-        "review-text": "1.6k+ Reviews",
+        "review-text": "1.8k+ Reviews",
         "background-color": "tan"
       }
     },

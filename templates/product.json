@@ -1,24 +1,26 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "lrc-base-product": {
       "type": "lrc-base-product",
-      "settings": {}
+      "settings": {
+      }
     },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
         "product-description": {
           "type": "product-description",
-          "settings": {}
+          "settings": {
+          }
         },
         "lrc_accordion_item_2": {
           "type": "lrc-accordion-image",
@@ -40,7 +42,8 @@
         "lrc_accordion_item_2",
         "lrc_accordion_item_3"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
@@ -63,11 +66,15 @@
       "blocks": {
         "one-click-upsell": {
           "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
-          "settings": {}
+          "settings": {
+          }
         }
       },
-      "block_order": ["one-click-upsell"],
-      "settings": {}
+      "block_order": [
+        "one-click-upsell"
+      ],
+      "settings": {
+      }
     },
     "lrc-review-summary": {
       "type": "lrc-review-summary",
@@ -105,7 +112,7 @@
       ],
       "settings": {
         "title": "Trusted by Runners",
-        "review-text": "1.6k+ Reviews",
+        "review-text": "1.8k+ Reviews",
         "background-color": "tan"
       }
     },
@@ -149,10 +156,13 @@
       "blocks": {
         "judge_me_reviews_review_widget_iFiJeK": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+          }
         }
       },
-      "block_order": ["judge_me_reviews_review_widget_iFiJeK"],
+      "block_order": [
+        "judge_me_reviews_review_widget_iFiJeK"
+      ],
       "settings": {
         "include_margins": true
       }
