@@ -1,0 +1,192 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "lrc-base-product": {
+      "type": "lrc-base-product",
+      "settings": {
+      }
+    },
+    "lrc-accordion": {
+      "type": "lrc-accordion",
+      "blocks": {
+        "product-description": {
+          "type": "product-description",
+          "settings": {
+          }
+        },
+        "lrc_accordion_item_2": {
+          "type": "lrc-accordion-image",
+          "settings": {
+            "title": "Ingredients",
+            "image": "shopify://shop_images/Supp_w_CalCarb_5.png"
+          }
+        },
+        "lrc_accordion_item_3": {
+          "type": "lrc-accordion-text",
+          "settings": {
+            "title": "How to Use",
+            "body": "We recommend brewing LRC with 2 tbsp of ground coffee per 12oz of water. Because LRC is actual coffee (not coffee alternative), any traditional brewing method works! Consume 30-45 mins before your run."
+          }
+        }
+      },
+      "block_order": [
+        "product-description",
+        "lrc_accordion_item_2",
+        "lrc_accordion_item_3"
+      ],
+      "settings": {
+      }
+    },
+    "lrc-coffee-benefits-short": {
+      "type": "lrc-coffee-benefits-short",
+      "settings": {
+        "show_cta": false,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "lrc-coffee-benefits": {
+      "type": "lrc-coffee-benefits",
+      "settings": {
+        "show_cta": false,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "one-click-upsell": {
+      "type": "lrc-reviews",
+      "blocks": {
+        "one-click-upsell": {
+          "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "one-click-upsell"
+      ],
+      "settings": {
+      }
+    },
+    "lrc-review-summary": {
+      "type": "lrc-review-summary",
+      "blocks": {
+        "image_GGw6iH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hoka.png"
+          }
+        },
+        "image_ctk6RF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/runners-world-logo-vector-removebg-preview.png"
+          }
+        },
+        "image_qTwJhq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/believe-in-the-run.png"
+          }
+        },
+        "image_QF6Ptp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bigger-than-the-trail.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_GGw6iH",
+        "image_ctk6RF",
+        "image_qTwJhq",
+        "image_QF6Ptp"
+      ],
+      "settings": {
+        "title": "Trusted by Runners",
+        "review-text": "1.6k+ Reviews",
+        "background-color": "tan"
+      }
+    },
+    "0e698922-8ed8-423d-886f-c78375d71373": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "You may also like",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "coffee",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1693874745cc6bc7e5": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17093999844598d023": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_iFiJeK": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_iFiJeK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "3e4ec809-784d-4120-a4a6-cced1ff5c986": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "lrc-base-product",
+    "lrc-accordion",
+    "lrc-coffee-benefits-short",
+    "lrc-coffee-benefits",
+    "one-click-upsell",
+    "lrc-review-summary",
+    "0e698922-8ed8-423d-886f-c78375d71373",
+    "1693874745cc6bc7e5",
+    "17093999844598d023",
+    "3e4ec809-784d-4120-a4a6-cced1ff5c986"
+  ]
+}
