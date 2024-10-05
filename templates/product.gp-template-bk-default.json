@@ -112,7 +112,7 @@
       ],
       "settings": {
         "title": "Trusted by Runners",
-        "review-text": "1.6k+ Reviews",
+        "review-text": "1.8k+ Reviews",
         "background-color": "tan"
       }
     },
@@ -126,11 +126,11 @@
         "description_style": "body",
         "collection": "coffee",
         "products_to_show": 8,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
+        "enable_desktop_slider": false,
         "color_scheme": "",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -175,6 +175,40 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "featured_blog_6nQLaw": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Fuel Your Passion",
+        "heading_size": "h1",
+        "blog": "fuel-your-passion",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_R6TUwB": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Recipes for Runners",
+        "heading_size": "h1",
+        "blog": "recipes",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "accent-2",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -187,6 +221,8 @@
     "0e698922-8ed8-423d-886f-c78375d71373",
     "1693874745cc6bc7e5",
     "17093999844598d023",
-    "3e4ec809-784d-4120-a4a6-cced1ff5c986"
+    "3e4ec809-784d-4120-a4a6-cced1ff5c986",
+    "featured_blog_6nQLaw",
+    "featured_blog_R6TUwB"
   ]
 }
