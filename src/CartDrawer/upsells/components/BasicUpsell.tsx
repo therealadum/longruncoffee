@@ -34,7 +34,7 @@ const stats = [
   },
 ];
 
-function _RaceSeasonRoastUpsell({
+function _BasicUpsell({
   cartState,
   variant,
   checkout,
@@ -42,6 +42,8 @@ function _RaceSeasonRoastUpsell({
   loading,
   params,
 }: IFinalUpsellComponentProps) {
+  console.log(params);
+
   const qty =
     cartState.items.find((item) => item.variant_id === variant.id)?.quantity ||
     0;
@@ -52,14 +54,7 @@ function _RaceSeasonRoastUpsell({
   return (
     <div className="h-full bg-[#4E637C]">
       <div className="flex flex-col bg-white">
-        <img
-          className="w-full aspect-square"
-          src={
-            params.is_in_cart
-              ? "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Upsell_Gif.gif?v=1725763583"
-              : "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/race-season-roast-upsell.gif?v=1725755755&width=800"
-          }
-        />
+        <img className="w-full aspect-square" src={params.img} />
         <div className="grid grid-cols-2 space-x-1 sm:space-x-3 -translate-y-1/2 px-1 sm:px-2">
           <button
             onClick={checkout}
@@ -127,4 +122,4 @@ function _RaceSeasonRoastUpsell({
   );
 }
 
-export const RaceSeasonRoastUpsell = memo(_RaceSeasonRoastUpsell);
+export const BasicUpsell = memo(_BasicUpsell);

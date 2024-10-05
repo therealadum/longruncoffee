@@ -2,14 +2,14 @@
   "campaigns": [
     {
       "id": 1727828292441,
-      "name": "My new upsell 12",
+      "name": "Race Season Roast - Not In Cart",
       "conditions": {
         "combinator": "and",
         "rules": [
           {
-            "field": "CART",
-            "operator": "GTE",
-            "value": 1,
+            "field": "CART_VARIANTS",
+            "operator": "NOT_CONTAINS_VARIANT_IDS",
+            "value": [46827447222585, 49843237552441],
             "id": "009848cb-6168-4607-8ec0-a2b018b7edbe"
           }
         ],
@@ -18,36 +18,38 @@
       "component": {
         "name": "BasicUpsell",
         "params": {
-          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Sets_20c08752-f5a6-40b1-910e-42c70b042440.png?v=1718826198"
+          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/race-season-roast-upsell.gif?v=1725755755&width=800"
         }
       },
       "product": {
-        "variant_id": "gid://shopify/Product/8281658229049",
-        "handle": "the-long-run"
+        "handle": "race-season-roast",
+        "variant_id": "gid://shopify/ProductVariant/46827447222585"
       }
     },
     {
       "id": 1727828256626,
-      "name": "My new upsell",
+      "name": "Race Season Roast - In Cart",
       "conditions": {
         "combinator": "and",
         "rules": [
           {
-            "field": "CART",
-            "operator": "GTE",
-            "value": 1
+            "field": "CART_VARIANTS",
+            "operator": "CONTAINS_VARIANT_IDS",
+            "value": [46827447222585, 49843237552441],
+            "id": "d55954af-e018-47e4-beef-cc6ff23358f3"
           }
-        ]
+        ],
+        "id": "195a7680-c183-41d7-94f0-07fdc850c689"
       },
       "component": {
         "name": "BasicUpsell",
         "params": {
-          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Sets_20c08752-f5a6-40b1-910e-42c70b042440.png?v=1718826198"
+          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Upsell_Gif.gif?v=1725763583&width=800"
         }
       },
       "product": {
-        "variant_id": "gid://shopify/Product/8281658229049",
-        "handle": "the-long-run"
+        "handle": "race-season-roast",
+        "variant_id": "gid://shopify/ProductVariant/46827447222585"
       }
     }
   ]

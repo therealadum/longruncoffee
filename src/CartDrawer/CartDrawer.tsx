@@ -55,13 +55,15 @@ export function CartDrawer(args: any) {
 
   const UpsellComponent = () => {
     if (upsell) {
-      const { Component } = upsell;
+      const {
+        component: { Element, params },
+      } = upsell;
       return (
-        <Component
+        <Element
           cartState={cartState}
           product={upsell.product}
           variant={upsell.variant}
-          params={upsell.params}
+          params={params}
           checkout={checkout}
           update={update}
           loading={loading}

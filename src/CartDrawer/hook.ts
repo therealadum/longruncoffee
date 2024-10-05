@@ -626,7 +626,7 @@ export const useCartDrawerState = ({
 
   useCartBot({ cartState, subscriptionCartState, loading, update });
   useAddToCartURL();
-  const upsells = useUpsells({ cartState, loading });
+  const upsells = useUpsells({ cartState, subscriptionCartState, loading });
 
   return {
     loading,
