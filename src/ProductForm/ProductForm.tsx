@@ -359,7 +359,10 @@ function OnScrollBuyButton({
     };
   }, [setIsLoading]);
 
-  if (product.tags.indexOf("Club Member Exclusive") !== -1) {
+  if (
+    product.tags.indexOf("Club Member Exclusive") !== -1 &&
+    product.tags.indexOf("Product Launch") !== -1
+  ) {
     return null;
   }
 
@@ -729,6 +732,7 @@ function Tags({ product }: any) {
         "free-gift",
         "Members Only",
         "Club Member Exclusive",
+        "Product Launch",
       ].indexOf(f) == -1,
   );
   return (
@@ -962,11 +966,6 @@ export function ProductForm(args: any) {
       );
     }
   }, [variantID, isImageGalleryFullscreen]);
-
-  const promotion_start_date = new Date("9/8/24");
-  const promotion_end_date = new Date("9/13/24");
-  promotion_start_date.setHours(0, 0, 0, 0);
-  promotion_end_date.setHours(0, 0, 0, 0);
 
   return (
     <div className="relative bg-cyan-50 bg-opacity-20 z-30">
@@ -2302,12 +2301,10 @@ export function ProductForm(args: any) {
                   );
                 })}
             </div>
-            {product.tags.indexOf("Club Member Exclusive") !== -1 ? (
+            {product.tags.indexOf("Product Launch") !== -1 ? (
               <ClubPromoRoastInner
-                title="Long Run Club Bonus"
-                description="All Long Run Club sign ups through 9/13/24 get this item free with their first shipment"
-                promotion_start_date={promotion_start_date}
-                promotion_end_date={promotion_end_date}
+                title="Coming Soon!"
+                description="Through Wednesday, October 16th get Long Run's new electrolyte powder free with any order $79+"
               />
             ) : product.type == "Gift" ? (
               <div className="bg-neutral-50 w-full h-64 flex items-center justify-center">
