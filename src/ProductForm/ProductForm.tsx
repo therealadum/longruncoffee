@@ -360,7 +360,7 @@ function OnScrollBuyButton({
   }, [setIsLoading]);
 
   if (
-    product.tags.indexOf("Club Member Exclusive") !== -1 &&
+    product.tags.indexOf("Club Member Exclusive") !== -1 ||
     product.tags.indexOf("Product Launch") !== -1
   ) {
     return null;
