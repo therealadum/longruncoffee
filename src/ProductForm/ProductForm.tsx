@@ -6,6 +6,16 @@ import ClubPromoRoastInner from "../ClubPromoRoast/inner";
 import { plans, referenceString } from "../common/constants";
 
 const productBundleServingSizes: any = {
+  // ready to run
+  9670153044281: {
+    "1 Pack": 1 * 20,
+    "5 Pack": 5 * 20,
+  },
+  // ready to run - free gift
+  9670942622009: {
+    "1 Pack": 1 * 20,
+    "5 Pack": 5 * 20,
+  },
   // ultramarathon set
   8281672483129: {
     "1 lbs": 4 * 40, // 4 bags, 1lb each
@@ -2267,7 +2277,32 @@ export function ProductForm(args: any) {
                                   </button>
                                 );
                               default:
-                                return;
+                                return (
+                                  <button
+                                    data-testid={`product-page-option-${option.name}-${v}`}
+                                    key={v}
+                                    onClick={() => {
+                                      const newOptions = Object.assign(
+                                        {},
+                                        productForm.options,
+                                      );
+                                      newOptions[option.name] = v;
+                                      setProductForm({
+                                        ...productForm,
+                                        options: newOptions,
+                                      });
+                                    }}
+                                    className={`text-base font-accent border-[0.5px] rounded p-3 relative flex flex-col justify-center items-center ${
+                                      productForm.options[option.name] === v
+                                        ? "bg-cyan-200/90 border-cyan-600 text-cyan-700"
+                                        : "border-cyan-500 text-cyan-600 hover:bg-cyan-100 hover:border-cyan-600 hover:text-cyan-700"
+                                    }`}
+                                  >
+                                    <span className="text-lg font-accent">
+                                      {v}
+                                    </span>
+                                  </button>
+                                );
                             }
                           } else {
                             return (
