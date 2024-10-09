@@ -6,11 +6,12 @@ enum ICartBotItemTriggerEnum {
   "ANYTHING_IN_CART" = "ANYTHING_IN_CART",
   "SESSION_TIME" = "SESSION_TIME",
   "SUBSCRIPTION_ITEMS_PRESENT" = "SUBSCRIPTION_ITEMS_PRESENT",
+  "CART_VALUE_EXCEEDS" = "CART_VALUE_EXCEEDS",
 }
 
 interface ICartBotItemTrigger {
   enum: ICartBotItemTriggerEnum;
-  //   params?: any;
+  params?: any;
 }
 
 interface ICartBotItem {
@@ -21,10 +22,10 @@ interface ICartBotItem {
   end_date?: Date;
 }
 
-const RACE_SEASON_ROAST_START_DATE = new Date("9/8/24");
-RACE_SEASON_ROAST_START_DATE.setHours(0, 0, 0, 0);
-const RACE_SEASON_ROAST_END_DATE = new Date("9/14/24");
-RACE_SEASON_ROAST_END_DATE.setHours(0, 0, 0, 0);
+const READY_TO_RUN_START_DATE = new Date("10/13/24");
+READY_TO_RUN_START_DATE.setHours(0, 0, 0, 0);
+const READY_TO_RUN_END_DATE = new Date("10/18/24");
+READY_TO_RUN_END_DATE.setHours(0, 0, 0, 0);
 
 const todayRightNow = new Date();
 
@@ -36,9 +37,9 @@ const cart_bot_items: ICartBotItem[] = [
       {
         enum: ICartBotItemTriggerEnum.ANYTHING_IN_CART,
       },
-      {
-        enum: ICartBotItemTriggerEnum.SESSION_TIME,
-      },
+      // {
+      //   enum: ICartBotItemTriggerEnum.SESSION_TIME,
+      // },
     ],
   },
   {
@@ -48,19 +49,22 @@ const cart_bot_items: ICartBotItem[] = [
       {
         enum: ICartBotItemTriggerEnum.ANYTHING_IN_CART,
       },
-      {
-        enum: ICartBotItemTriggerEnum.SESSION_TIME,
-      },
+      // {
+      //   enum: ICartBotItemTriggerEnum.SESSION_TIME,
+      // },
     ],
   },
   {
-    name: "Free Race Season Roast",
-    variant_id: 49843237552441,
-    start_date: RACE_SEASON_ROAST_START_DATE,
-    end_date: RACE_SEASON_ROAST_END_DATE,
+    name: "Free Ready to Run",
+    variant_id: 50007065166137,
+    start_date: READY_TO_RUN_START_DATE,
+    end_date: READY_TO_RUN_END_DATE,
     triggers: [
       {
-        enum: ICartBotItemTriggerEnum.SUBSCRIPTION_ITEMS_PRESENT,
+        enum: ICartBotItemTriggerEnum.CART_VALUE_EXCEEDS,
+        params: {
+          value: 7900,
+        },
       },
     ],
   },
@@ -89,6 +93,7 @@ interface ICartBotProps {
   subscriptionCartState: ISubscriptionCartState;
   loading: boolean;
   update: (updates: any) => Promise<void>;
+  cartSubTotal: number;
 }
 
 export function useCartBot({
@@ -96,6 +101,7 @@ export function useCartBot({
   subscriptionCartState,
   loading,
   update,
+  cartSubTotal,
 }: ICartBotProps) {
   const sessionLengthAdequate = useSessionTime(20);
   useEffect(() => {
@@ -103,7 +109,7 @@ export function useCartBot({
     if (loading) {
       return;
     }
-    const triggerEvaluations: Map<ICartBotItemTriggerEnum, boolean> = new Map<
+    const triggerEvaluations: Map<ICartBotItemTriggerEnum, any> = new Map<
       ICartBotItemTriggerEnum,
       boolean
     >();
@@ -123,6 +129,11 @@ export function useCartBot({
       ICartBotItemTriggerEnum.SESSION_TIME,
       sessionLengthAdequate,
     );
+    // cart value
+    triggerEvaluations.set(
+      ICartBotItemTriggerEnum.CART_VALUE_EXCEEDS,
+      cartSubTotal,
+    );
     // build update object & evaluate if items should be in or out
     const updates: any = {};
     cart_bot_items.forEach((cbi) => {
@@ -136,8 +147,15 @@ export function useCartBot({
       }
       // otherwise, iterate thru triggers
       cbi.triggers.forEach((trig) => {
-        if (triggerEvaluations.get(trig.enum)) {
-          found_true_trigger = true;
+        if (trig.enum !== ICartBotItemTriggerEnum.CART_VALUE_EXCEEDS) {
+          if (triggerEvaluations.get(trig.enum)) {
+            found_true_trigger = true;
+          }
+        } else {
+          const v = triggerEvaluations.get(trig.enum);
+          if (v && trig.params.value && v > trig.params.value) {
+            found_true_trigger = true;
+          }
         }
       });
       updates[cbi.variant_id] = found_true_trigger && within_date_range ? 1 : 0;
