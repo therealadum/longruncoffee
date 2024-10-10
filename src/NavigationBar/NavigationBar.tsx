@@ -47,6 +47,7 @@ const navigation = {
       ],
       sections: [
         {
+          order: 2,
           id: "coffee",
           name: "Coffee",
           items: [
@@ -57,6 +58,7 @@ const navigation = {
           ],
         },
         {
+          order: 3,
           id: "gear",
           name: "Gear",
           items: [
@@ -68,6 +70,7 @@ const navigation = {
           ],
         },
         {
+          order: 1,
           id: "powders",
           name: "Powders",
           items: [
@@ -105,6 +108,7 @@ const navigation = {
       ],
       sections: [
         {
+          order: 1,
           id: "lrc",
           name: "Long Run Coffee",
           items: [
@@ -114,6 +118,7 @@ const navigation = {
           ],
         },
         {
+          order: 2,
           id: "community",
           name: "Community",
           items: [
@@ -122,6 +127,7 @@ const navigation = {
           ],
         },
         {
+          order: 3,
           id: "inqueries",
           name: "Inqueries",
           items: [
@@ -226,39 +232,41 @@ export function NavigationBar(props: any) {
                         </div>
                       ))}
                     </div>
-                    {category.sections.map((section) => (
-                      <div key={section.name}>
-                        <p
-                          id={`${category.id}-${section.id}-heading-mobile`}
-                          className="font-accent text-cyan-700"
-                        >
-                          {section.name}
-                        </p>
-                        <ul
-                          role="list"
-                          aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
-                          className="mt-6 flex flex-col space-y-6"
-                        >
-                          {section.items.map((item) => (
-                            <li key={item.name} className="flow-root">
-                              <a
-                                href={item.href}
-                                className="hover:text-cyan-800 flex group"
-                              >
-                                {/* @ts-ignore */}
-                                {item?.label ? (
-                                  <div className="mr-1 -mt-px bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
-                                    {/* @ts-ignore */}
-                                    {item.label}
-                                  </div>
-                                ) : null}
-                                {item.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                    {category.sections
+                      .sort((a, b) => a.order - b.order)
+                      .map((section) => (
+                        <div key={section.name}>
+                          <p
+                            id={`${category.id}-${section.id}-heading-mobile`}
+                            className="font-accent text-cyan-700"
+                          >
+                            {section.name}
+                          </p>
+                          <ul
+                            role="list"
+                            aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
+                            className="mt-6 flex flex-col space-y-6"
+                          >
+                            {section.items.map((item) => (
+                              <li key={item.name} className="flow-root">
+                                <a
+                                  href={item.href}
+                                  className="hover:text-cyan-800 flex group"
+                                >
+                                  {/* @ts-ignore */}
+                                  {item?.label ? (
+                                    <div className="mr-1 bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
+                                      {/* @ts-ignore */}
+                                      {item.label}
+                                    </div>
+                                  ) : null}
+                                  {item.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                   </TabPanel>
                 ))}
               </TabPanels>
