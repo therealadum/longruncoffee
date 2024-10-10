@@ -29,12 +29,11 @@ const navigation = {
       name: "Shop",
       featured: [
         {
-          name: "Brown Butter Pumkin",
-          href: "/products/race-season-roast",
+          name: "Ready to Run",
+          href: "/products/ready-to-run",
           imageSrc:
-            "https://longruncoffee.com/cdn/shop/files/1_a31df4a7-6aea-46aa-a6de-6f6a9be300cc.png?v=1725300689&width=500",
-          imageAlt:
-            "It's Race Season! And Long Run Coffee has made your new favorite way to fuel training",
+            "https://longruncoffee.myshopify.com/cdn/shop/files/1_0450620e-9f81-45d4-b2dc-64745683887e.png?v=1728006848&width=650",
+          imageAlt: "Ready to Run instant electrolyte powder.",
           description: "Shop now",
         },
         {
@@ -69,11 +68,14 @@ const navigation = {
           ],
         },
         {
-          id: "subscribe-and-save",
-          name: "Subscribe & Save",
+          id: "powders",
+          name: "Powders",
           items: [
-            { name: "Club Exclusives", href: "/collections/club-exclusives" },
-            { name: "All Subscriptions", href: "/collections/subscribe-save" },
+            {
+              name: "Ready to Run",
+              href: "/products/ready-to-run",
+              label: "New!",
+            },
           ],
         },
       ],
@@ -241,8 +243,15 @@ export function NavigationBar(props: any) {
                             <li key={item.name} className="flow-root">
                               <a
                                 href={item.href}
-                                className="-m-2 block p-2 text-gray-500"
+                                className="hover:text-cyan-800 flex group"
                               >
+                                {/* @ts-ignore */}
+                                {item?.label ? (
+                                  <div className="mr-1 -mt-px bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
+                                    {/* @ts-ignore */}
+                                    {item.label}
+                                  </div>
+                                ) : null}
                                 {item.name}
                               </a>
                             </li>
@@ -378,8 +387,15 @@ export function NavigationBar(props: any) {
                                         <li key={item.name} className="flex">
                                           <a
                                             href={item.href}
-                                            className="hover:text-cyan-800"
+                                            className="hover:text-cyan-800 flex group"
                                           >
+                                            {/* @ts-ignore */}
+                                            {item?.label ? (
+                                              <div className="mr-1 -mt-px bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
+                                                {/* @ts-ignore */}
+                                                {item.label}
+                                              </div>
+                                            ) : null}
                                             {item.name}
                                           </a>
                                         </li>
