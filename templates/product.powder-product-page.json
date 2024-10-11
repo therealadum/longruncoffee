@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "lrc-base-product": {
@@ -43,6 +43,57 @@
         "lrc_accordion_item_3"
       ],
       "settings": {
+      }
+    },
+    "image_banner_kfKWU6": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_YDHygB": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_TT44Qk": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_WGzwmY": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YDHygB",
+        "text_TT44Qk",
+        "buttons_WGzwmY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Ready_to_Run_Electrolyte_Powder_with_Caffeine_for_Runners_-_Smooth_Hazelnut_Latte.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "lrc-coffee-benefits-short": {
@@ -214,6 +265,7 @@
   "order": [
     "lrc-base-product",
     "lrc-accordion",
+    "image_banner_kfKWU6",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "one-click-upsell",
