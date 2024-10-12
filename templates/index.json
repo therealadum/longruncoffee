@@ -113,6 +113,9 @@
         "text_rxcXGK",
         "button_fQyRDF"
       ],
+      "custom_css": [
+        "p {font-size: 28px;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/Get_One.gif",
         "height": "adapt",
