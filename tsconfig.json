@@ -18,7 +18,8 @@
     "jsx": "react-jsx",
     "declaration": true
   },
-  "include": ["src"],
+  "types": ["@testing-library/jest-dom", "jest"],
+  "include": ["src", "testutils"],
   "exclude": ["src/**/*.stories.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

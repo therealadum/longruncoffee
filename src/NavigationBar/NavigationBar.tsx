@@ -142,7 +142,7 @@ const navigation = {
   pages: [{ name: "Long Run Club", href: "/pages/long-run-club" }],
 };
 
-export function NavigationBar(props: any) {
+export function NavigationBar() {
   const [open, setOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
 
@@ -175,6 +175,7 @@ export function NavigationBar(props: any) {
               <button
                 type="button"
                 onClick={() => setOpen(false)}
+                data-testid="close-navbar"
                 className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
               >
                 <span className="absolute -inset-0.5" />
@@ -305,6 +306,7 @@ export function NavigationBar(props: any) {
               <button
                 type="button"
                 onClick={() => setOpen(true)}
+                data-testid="open-navbar"
                 className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
               >
                 <span className="absolute -inset-0.5" />
@@ -462,13 +464,17 @@ export function NavigationBar(props: any) {
                     onClick={() =>
                       document.dispatchEvent(new CustomEvent("cart_toggle"))
                     }
+                    data-testid="navbar-open-cart"
                     className="group -m-2 flex items-center p-2"
                   >
                     <ShoppingBagIcon
                       aria-hidden="true"
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                     />
-                    <span className="ml-2 text-sm font-medium text-gray-500 group-hover:text-gray-700">
+                    <span
+                      data-testid="navbar-cart-count"
+                      className="ml-2 text-sm font-medium text-gray-500 group-hover:text-gray-700"
+                    >
                       {cartCount}
                     </span>
                     <span className="sr-only">items in cart, view bag</span>

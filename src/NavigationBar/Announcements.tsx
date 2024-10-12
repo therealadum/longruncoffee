@@ -6,10 +6,16 @@ interface UseTypewriterOptions {
   pauseDuration?: number;
 }
 
+const isTesting = process.env.NODE_ENV === "test";
+
 const useTypewriter = (
   texts: string[],
   options: UseTypewriterOptions = {},
 ): string => {
+  if (isTesting) {
+    return texts[0];
+  }
+
   const { speed = 150, deleteSpeed = 100, pauseDuration = 1000 } = options;
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
