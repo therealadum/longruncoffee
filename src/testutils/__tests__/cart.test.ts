@@ -1,4 +1,4 @@
-import { ICartItem } from "../../src/common/product";
+import { ICartItem } from "../../common/product";
 import { ShopifyCartAPI } from "../cart";
 
 // Sample item for testing

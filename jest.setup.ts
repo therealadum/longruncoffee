@@ -1,4 +1,4 @@
-import { ShopifyCartAPI } from "./testutils/cart";
+import { ShopifyCartAPI } from "./src/testutils/cart";
 
 class _ResizeObserver {
   observe() {
@@ -36,6 +36,4 @@ global.fetch = jest.fn((_url, options) => {
   if (url.endsWith("/cart/shipping_rates.json")) {
     return ShopifyCartAPI.getShippingRates();
   }
-
-  return Promise.reject(new Error("Unknown API endpoint"));
 });

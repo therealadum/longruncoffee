@@ -1,4 +1,4 @@
-import { ICartState, ICartItem } from "../src/common/product";
+import { ICartState, ICartItem } from "../common/product";
 
 class MockResponse {
   body: string;
@@ -30,7 +30,7 @@ const mockResponse = (data: any) => {
 };
 
 // Factory function to create a new cart state with 0 items
-const createMockCartState = (): ICartState => ({
+export const createMockCartState = (): ICartState => ({
   token: "mock-cart-token",
   note: "",
   attributes: {},
