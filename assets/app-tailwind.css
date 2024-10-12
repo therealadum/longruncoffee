@@ -189,3 +189,15 @@ h2#spr-header-title {
   .jdgm-all-reviews-text__text {
   @apply text-cyan-700;
 }
+
+.article-container ul {
+  list-style: disc;
+  padding: 0 2rem;
+}
+.article-container ol {
+  list-style: decimal;
+  padding: 0 2rem;
+}
+.article-container h5 {
+  @apply pt-6;
+}

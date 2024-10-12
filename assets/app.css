@@ -3624,6 +3624,20 @@ h2#spr-header-title {
   color: rgb(33 122 133 / var(--tw-text-opacity));
 }
 
+.article-container ul {
+  list-style: disc;
+  padding: 0 2rem;
+}
+
+.article-container ol {
+  list-style: decimal;
+  padding: 0 2rem;
+}
+
+.article-container h5 {
+  padding-top: 1.5rem;
+}
+
 .placeholder\:text-neutral-500::-moz-placeholder {
   --tw-text-opacity: 1 !important;
   color: rgb(98 125 152 / var(--tw-text-opacity)) !important;
