@@ -32,7 +32,7 @@ const navigation = {
           name: "Ready to Run",
           href: "/products/ready-to-run",
           imageSrc:
-            "https://longruncoffee.myshopify.com/cdn/shop/files/1_0450620e-9f81-45d4-b2dc-64745683887e.png?v=1728006848&width=650",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600",
           imageAlt: "Ready to Run instant electrolyte powder.",
           description: "Shop now",
         },
@@ -88,12 +88,12 @@ const navigation = {
       name: "Info",
       featured: [
         {
-          name: "How Electrolytes and Caffeine Affect Each Other",
-          href: "/blogs/science/how-electrolytes-caffeine-affect-eachother",
+          name: "Long Run Coffee's First Instant Powder Is Here!",
+          href: "/blogs/news/ready-to-run",
           imageSrc:
-            "http://longruncoffee.myshopify.com/cdn/shop/articles/Blog_Post_Banners_10.png?v=1698369962&width=500",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600",
           imageAlt:
-            "Science highlight: How Electrolytes and Caffeine Affect Each Other.",
+            "After a year of development, Long Run Coffee's first instant electrolyte powder is here.",
           description: "Read now",
         },
         {
