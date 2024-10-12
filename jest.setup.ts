@@ -1,4 +1,5 @@
 import { ShopifyCartAPI } from "./src/testutils/cart";
+import { ShopifyProductAPI } from "./src/testutils/product";
 
 class _ResizeObserver {
   observe() {
@@ -13,6 +14,21 @@ class _ResizeObserver {
 }
 
 global.ResizeObserver = _ResizeObserver;
+
+const regex = /\/products\/[a-zA-Z0-9_-]+\.js$/;
+
+function isValidProductUrl(url: string): boolean {
+  return regex.test(url);
+}
+function extractProductIdentifier(url: string): string | null {
+  const regex = /\/products\/([a-zA-Z0-9_-]+)\.js$/;
+  const match = regex.exec(url);
+
+  if (match && match[1]) {
+    return match[1]; // Return the captured product identifier
+  }
+  return null; // Return null if the pattern doesn't match
+}
 
 // @ts-ignore
 global.fetch = jest.fn((_url, options) => {
@@ -35,5 +51,9 @@ global.fetch = jest.fn((_url, options) => {
   }
   if (url.endsWith("/cart/shipping_rates.json")) {
     return ShopifyCartAPI.getShippingRates();
+  }
+  if (isValidProductUrl(url)) {
+    const handle = extractProductIdentifier(url);
+    return ShopifyProductAPI.getProductByHandle(handle as string);
   }
 });

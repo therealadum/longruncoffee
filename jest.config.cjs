@@ -7,5 +7,6 @@ module.exports = {
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  testPathIgnorePatterns: ["<rootDir>/dist"],
   coveragePathIgnorePatterns: ["<rootDir>/src/NavigationBar/Announcements.tsx"],
 };
