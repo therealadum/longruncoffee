@@ -393,7 +393,8 @@ export const useCartDrawerState = ({
         detail: {
           count: totalCartItems + totalSubscriptionItems,
           amountUntilFreeShipping:
-            totalSubscriptionItems > 0 ? 0 : 5900 - cartSubTotalWithDiscounts,
+            // totalSubscriptionItems > 0 ? 0 : 5900 - cartSubTotalWithDiscounts,
+            totalSubscriptionItems > 0 ? 0 : 7900 - cartSubTotalWithDiscounts,
         },
       }),
     );
@@ -632,7 +633,7 @@ export const useCartDrawerState = ({
     cartSubTotal,
   });
   useAddToCartURL();
-  const upsells = useUpsells({ cartState, loading });
+  const upsells = useUpsells({ cartState, subscriptionCartState, loading });
 
   return {
     loading,

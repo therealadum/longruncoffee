@@ -920,7 +920,8 @@ export function ProductForm(args: any) {
   }, [discountInformation, setDiscountInformation, setSubscriptionItems]);
 
   const [amountUntilFreeShipping, setAmountUntilFreeShipping] =
-    React.useState(5900);
+    // React.useState(5900);
+    React.useState(7900);
   React.useEffect(() => {
     const handler = (data: any) => {
       setAmountUntilFreeShipping(data.detail.amountUntilFreeShipping);

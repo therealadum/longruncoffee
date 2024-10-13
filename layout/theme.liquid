@@ -27,26 +27,36 @@
       src: url(https://cdn.shopify.com/s/files/1/0761/6924/9081/files/IntroRust-Base.ttf?v=1724257310);
     }
   </style>
+
+  <link
+    rel="preload"
+    href="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Add_Another.gif?v=1728517131&width=800"
+    as="image"
+  >
+
+  <link
+    rel="preload"
+    href="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Get_One.gif?v=1728517131&width=800"
+    as="image"
+  >
+
   <head>
+    {% if handle contains 'try-it-free' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
 
-{% if handle contains 'try-it-free' %}
-<meta name="robots" content="noindex">
-{% endif %}
-
-    
-{% if handle contains 'free-samples-for-racers' %}
-<meta name="robots" content="noindex">
-{% endif %}
+    {% if handle contains 'free-samples-for-racers' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
 
     {% if handle contains 'free-samples-for-friends' %}
-<meta name="robots" content="noindex">
-{% endif %}
+      <meta name="robots" content="noindex">
+    {% endif %}
 
     {% if handle contains 'free-samples-for-ambassador-referrals' %}
-<meta name="robots" content="noindex">
-{% endif %}
-    
-    
+      <meta name="robots" content="noindex">
+    {% endif %}
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {

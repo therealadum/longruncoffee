@@ -1,85 +1,37 @@
-import { memo, MemoExoticComponent, useEffect, useMemo, useState } from "react";
-import { ICartState, IProduct, IVariant } from "../../common/product";
-import { RaceSeasonRoastUpsell } from "./components/RaceSeasonRoastUpsell";
+import * as yup from "yup";
+import * as data from "./data.json";
+import {
+  ICartState,
+  IProduct,
+  ISubscriptionCartState,
+  IVariant,
+} from "../../common/product";
+import { useEffect, useMemo, useState } from "react";
+import { evaluateQuery } from "./operators";
+import UpsellComponentMap from "./components";
 
-enum ICartUpsellCampaignConditionEnum {
-  "PRODUCT_VARIANT_IN_CART" = "PRODUCT_VARIANT_IN_CART",
-  "PRODUCT_VARIANT_NOT_IN_CART" = "PRODUCT_VARIANT_NOT_IN_CART",
-}
-interface ICartUpsellCampaignCondition {
-  enum: ICartUpsellCampaignConditionEnum;
-  params: any;
-}
-export interface IFinalUpsellComponentProps {
-  product: IProduct;
-  variant: IVariant;
-  cartState: ICartState;
-  update: (
-    updates: any,
-    shouldOpen?: boolean,
-    shouldSetCartState?: boolean,
-    shouldSetLoading?: boolean,
-  ) => Promise<void>;
-  checkout: () => Promise<void>;
-  loading: boolean;
-  params: any;
-}
-interface ICartUpsellCampaign {
-  name: string;
-  priority: number;
-  variant_id: number;
-  product_hash: string;
-  params: any;
-  conditions: ICartUpsellCampaignCondition[];
-  Component: React.MemoExoticComponent<
-    ({ product, update, loading }: IFinalUpsellComponentProps) => JSX.Element
-  >;
-}
+export const IUpsellSchema = yup.object({
+  id: yup.number(),
+  name: yup.string(),
+  product: yup.object({
+    handle: yup.string(),
+    variant_id: yup.string(),
+  }),
+  component: yup.object({
+    name: yup.string(),
+    params: yup.object(),
+  }),
+  conditions: yup.object(),
+});
 
-const upsell_campaigns: ICartUpsellCampaign[] = [
-  {
-    name: "Race Szn Roast - Not in cart",
-    priority: 1,
-    variant_id: 46827447222585,
-    product_hash: "race-season-roast",
-    Component: RaceSeasonRoastUpsell,
-    params: {
-      is_in_cart: false,
-    },
-    conditions: [
-      {
-        enum: ICartUpsellCampaignConditionEnum.PRODUCT_VARIANT_NOT_IN_CART,
-        params: {
-          variant_ids: [46827447222585, 49843237552441],
-        },
-      },
-    ],
-  },
-  {
-    name: "Race Szn Roast - Present in cart",
-    priority: 2,
-    variant_id: 46827447222585,
-    product_hash: "race-season-roast",
-    Component: RaceSeasonRoastUpsell,
-    params: {
-      is_in_cart: true,
-    },
-    conditions: [
-      {
-        enum: ICartUpsellCampaignConditionEnum.PRODUCT_VARIANT_IN_CART,
-        params: {
-          variant_ids: [46827447222585, 49843237552441],
-        },
-      },
-    ],
-  },
-];
+export type IUpsell = yup.InferType<typeof IUpsellSchema>;
 
-// build map of campaign product hash's
+const upsell_campaigns: IUpsell[] = data.campaigns;
+
 const product_hashes: string[] = [];
 upsell_campaigns.forEach((usc) => {
-  if (product_hashes.indexOf(usc.product_hash) == -1) {
-    product_hashes.push(usc.product_hash);
+  if (usc.product.handle && product_hashes.indexOf(usc.product.handle) === -1) {
+    product_hashes.push(usc.product.handle);
   }
 });
 
@@ -105,51 +57,42 @@ async function FetchUpsellProducts(
   setUpsellProducts(newUpsellProducts);
 }
 
-function evaluateCondition(
-  cartState: ICartState,
-  condition: ICartUpsellCampaignCondition,
-): boolean {
-  let condition_passed = false;
-  switch (condition.enum) {
-    case ICartUpsellCampaignConditionEnum.PRODUCT_VARIANT_IN_CART:
-      condition_passed = Boolean(
-        cartState.items.find(
-          (item) =>
-            condition.params.variant_ids.indexOf(item.variant_id) !== -1,
-        ),
-      );
-      break;
-    case ICartUpsellCampaignConditionEnum.PRODUCT_VARIANT_NOT_IN_CART:
-      condition_passed = Boolean(
-        !cartState.items.find(
-          (item) =>
-            condition.params.variant_ids.indexOf(item.variant_id) !== -1,
-        ),
-      );
-      break;
-    default:
-      console.error("Upsell condition enum not handled.");
-      break;
-  }
-  return condition_passed;
+export interface IFinalUpsellComponentProps {
+  product: IProduct;
+  variant: IVariant;
+  cartState: ICartState;
+  update: (
+    updates: any,
+    shouldOpen?: boolean,
+    shouldSetCartState?: boolean,
+    shouldSetLoading?: boolean,
+  ) => Promise<void>;
+  checkout: () => Promise<void>;
+  loading: boolean;
+  params: any;
 }
 
 export interface IFinalUpsell {
   product: IProduct;
   variant: IVariant;
-  Component: MemoExoticComponent<
-    ({ product, update, loading }: IFinalUpsellComponentProps) => JSX.Element
-  >;
+  component: {
+    Element: any;
+    params: any;
+  };
   priority: number;
-  params: any;
   name: string;
 }
 
 interface IUseUpsellsProps {
   cartState: ICartState;
+  subscriptionCartState: ISubscriptionCartState;
   loading: boolean;
 }
-export function useUpsells({ cartState, loading }: IUseUpsellsProps) {
+export function useUpsells({
+  cartState,
+  subscriptionCartState,
+  loading,
+}: IUseUpsellsProps) {
   const [upsellProducts, setUpsellProducts] = useState<Map<string, IProduct>>(
     new Map<string, IProduct>(),
   );
@@ -164,35 +107,45 @@ export function useUpsells({ cartState, loading }: IUseUpsellsProps) {
       return [];
     }
     const unordered: IFinalUpsell[] = [];
-    upsell_campaigns.forEach((usc) => {
+    upsell_campaigns.forEach((usc, priority) => {
+      if (!usc.product.handle || !usc.product.variant_id) {
+        return;
+      }
       // get relevant product
-      const product = upsellProducts.get(usc.product_hash);
+      const product = upsellProducts.get(usc.product.handle);
       if (!product || !product.available) {
         return;
       }
       // get relevant variant
       const variant = product.variants.find(
-        (variant) => variant.id === usc.variant_id,
+        (variant) =>
+          `gid://shopify/ProductVariant/${variant.id}` ==
+          (usc.product.variant_id as string),
       );
       if (!variant || !variant.available) {
         return;
       }
       // check if conditions are met
-      let condition_failed = false;
-      usc.conditions.forEach((con) => {
-        if (!evaluateCondition(cartState, con)) {
-          condition_failed = true;
+      if (
+        evaluateQuery(usc.conditions, {
+          cartState,
+          subscriptionCartState,
+        })
+      ) {
+        // get the component from the list of components
+        const Element = UpsellComponentMap.get(usc.component.name as string);
+        if (Element) {
+          unordered.push({
+            product,
+            variant,
+            component: {
+              Element,
+              params: usc.component.params,
+            },
+            priority,
+            name: usc.name as string,
+          });
         }
-      });
-      if (!condition_failed) {
-        unordered.push({
-          product,
-          variant,
-          Component: usc.Component,
-          priority: usc.priority,
-          name: usc.name,
-          params: usc.params,
-        });
       }
     });
     return unordered.sort((a, b) => a.priority - b.priority);

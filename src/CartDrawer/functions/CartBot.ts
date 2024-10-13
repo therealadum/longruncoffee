@@ -22,7 +22,7 @@ interface ICartBotItem {
   end_date?: Date;
 }
 
-const READY_TO_RUN_START_DATE = new Date("10/13/24");
+const READY_TO_RUN_START_DATE = new Date("10/12/24");
 READY_TO_RUN_START_DATE.setHours(0, 0, 0, 0);
 const READY_TO_RUN_END_DATE = new Date("10/18/24");
 READY_TO_RUN_END_DATE.setHours(0, 0, 0, 0);
