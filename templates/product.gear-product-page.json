@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "lrc-base-product": {
@@ -199,6 +199,57 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_banner_f6FhGD": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_xjhgzi": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_FGkAM6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_hfntgg": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xjhgzi",
+        "text_FGkAM6",
+        "buttons_hfntgg"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Long_Run_Coffee_Gear_3x2_9f07c2c4-17fc-4232-836c-b52caf1495dc.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
     }
   },
   "order": [
@@ -206,6 +257,7 @@
     "lrc-accordion",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
+    "image_banner_f6FhGD",
     "one-click-upsell",
     "lrc-review-summary",
     "0e698922-8ed8-423d-886f-c78375d71373",
