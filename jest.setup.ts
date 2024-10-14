@@ -31,26 +31,32 @@ function extractProductIdentifier(url: string): string | null {
 }
 
 // @ts-ignore
+window.Shopify = {
+  routes: {
+    root: "http://127.0.0.1:9292/",
+  },
+};
+
+// @ts-ignore
 global.fetch = jest.fn((_url, options) => {
   const url = _url as string;
   const parsedbody =
     typeof options?.body == "string" ? JSON.parse(options.body) : {};
-  if (url.endsWith("/cart/add.js")) {
-    return ShopifyCartAPI.addItem(parsedbody);
-  }
-  if (url.endsWith("/cart/change.js")) {
+  if (
+    url.endsWith("/cart/update.js") &&
+    parsedbody.updates &&
+    parsedbody.updates.length
+  ) {
+    const keys = Object.keys(parsedbody.updates);
+    keys.forEach((key) => {
+      ShopifyCartAPI.updateItemQuantity(parseInt(key), parsedbody.updates[key]);
+    });
     return parsedbody.quantity === 0
       ? ShopifyCartAPI.removeItem(parsedbody.id)
       : ShopifyCartAPI.updateItemQuantity(parsedbody.id, parsedbody.quantity);
   }
   if (url.endsWith("/cart.js")) {
     return ShopifyCartAPI.getCart();
-  }
-  if (url.endsWith("/cart/clear.js")) {
-    return ShopifyCartAPI.clearCart();
-  }
-  if (url.endsWith("/cart/shipping_rates.json")) {
-    return ShopifyCartAPI.getShippingRates();
   }
   if (isValidProductUrl(url)) {
     const handle = extractProductIdentifier(url);

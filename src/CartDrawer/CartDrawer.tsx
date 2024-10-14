@@ -109,7 +109,10 @@ export function CartDrawer(args: any) {
                     </button>
                   </div>
                 </TransitionChild>
-                <div className="flex h-full flex-col bg-white shadow-xl">
+                <div
+                  data-testid="cart-title"
+                  className="flex h-full flex-col bg-white shadow-xl"
+                >
                   <div className="p-4 sm:p-6 bg-cyan-600">
                     <DialogTitle className="text-xl font-accent leading-6 text-white">
                       Your Cart

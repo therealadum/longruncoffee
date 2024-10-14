@@ -26,7 +26,7 @@ function SubscriptionItem({
   );
   const onClick = (qty: number) => {
     const newItems = [...subscriptionCartState.items];
-    let index = null;
+    let index: null | number = null;
     for (let i = 0; i < newItems.length; i++) {
       if (newItems[i].variantID === item.variantID) {
         index = i;

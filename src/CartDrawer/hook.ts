@@ -7,6 +7,7 @@ import {
 
 import {
   ICartState,
+  IProduct,
   ISubscriptionCartItem,
   ISubscriptionCartState,
 } from "../common/product";
@@ -167,7 +168,7 @@ export const useCartDrawerState = ({
 
   // current and plan based on subscription items
   const plan = useMemo(() => {
-    let plan = null;
+    let plan: null | IPlan = null;
     if (totalSubscriptionItems >= plans.elite.bag_min) {
       plan = plans.elite;
     } else if (totalSubscriptionItems >= plans.pro.bag_min) {
@@ -191,7 +192,7 @@ export const useCartDrawerState = ({
 
   // calculate next perks based on current / next plan
   const nextPerks = useMemo(() => {
-    const unique = [];
+    const unique: string[] = [];
     if (!nextPlan) {
       return null;
     }
@@ -245,20 +246,22 @@ export const useCartDrawerState = ({
       try {
         if (isSubscription) {
           if (variantId && product_hash) {
-            let product = null;
+            let product: IProduct | null = null;
             if (a2c_product) {
               product = a2c_product;
             } else {
               product = await getProduct(product_hash);
             }
             let variant;
-            for (let j = 0; j < product.variants.length; j++) {
-              if (product.variants[j].id == variantId) {
-                variant = product.variants[j];
+            if (product && product.variants) {
+              for (let j = 0; j < product.variants.length; j++) {
+                if (product.variants[j].id == variantId) {
+                  variant = product.variants[j];
+                }
               }
             }
             const item = {
-              product,
+              product: product as IProduct,
               variantID: variantId,
               variant,
               quantity,
@@ -270,7 +273,7 @@ export const useCartDrawerState = ({
                 "track",
                 "add_subscription_item_to_cart",
                 {
-                  product_id: product.id,
+                  product_id: product?.id,
                   variant_id: variantId,
                   quantity: quantity,
                 },
@@ -278,7 +281,7 @@ export const useCartDrawerState = ({
             }
 
             // if already in subscriptions, add quantity - otherwise add new item
-            let existingItemIndex = null;
+            let existingItemIndex: null | number = null;
             for (let j = 0; j < subscriptionCartState.items.length; j++) {
               if (subscriptionCartState.items[j].variantID === item.variantID) {
                 existingItemIndex = j;
@@ -314,7 +317,7 @@ export const useCartDrawerState = ({
           update_payload[variantId] = quantity;
 
           // skip checking in this case
-          let attributes = null;
+          let attributes: any = null;
 
           if (!a2c_minimum_spend) {
             // check if item already in cart
@@ -423,7 +426,7 @@ export const useCartDrawerState = ({
 
     if (subscriptionCartState.items.length && plan) {
       // calculate tier based on items
-      let bundleVariantId = null;
+      let bundleVariantId: null | string = null;
       if (plan.display_name.toLowerCase() === "base") {
         bundleVariantId = "47884295078201";
       } else if (plan.display_name.toLowerCase() === "pro") {
@@ -435,7 +438,7 @@ export const useCartDrawerState = ({
       }
 
       // pluck selling plan from items[0].product.selling_plan_groups[name === 'Base'].selling_plans[0].options[0].value
-      let bundleSellingPlan = null;
+      let bundleSellingPlan: null | string = null;
       for (
         let i = 0;
         i < subscriptionCartState.items[0].product.selling_plan_groups.length;
@@ -461,7 +464,7 @@ export const useCartDrawerState = ({
           selectionMap[`${item.product.id}-${item.variant.id}`].quantity +=
             item.quantity;
         } else {
-          let sellingPlan = null;
+          let sellingPlan: number | null = null;
           for (let j = 0; j < item.product.selling_plan_groups.length; j++) {
             if (
               item.product.selling_plan_groups[j].name.toLowerCase() ===
@@ -484,7 +487,7 @@ export const useCartDrawerState = ({
         }
       }
 
-      const selections = [];
+      const selections: any = [];
       const selectionKeys = Object.keys(selectionMap);
       for (let i = 0; i < selectionKeys.length; i++) {
         selections.push(selectionMap[selectionKeys[i]]);
@@ -554,7 +557,7 @@ export const useCartDrawerState = ({
                   quantity: ca.quantity,
                 };
                 // if already in subscriptions, add quantity - otherwise add new item
-                let existingItemIndex = null;
+                let existingItemIndex: number | null = null;
                 for (let j = 0; j < newCartItems.length; j++) {
                   if (newCartItems[j].variantID === item.variantID) {
                     existingItemIndex = j;

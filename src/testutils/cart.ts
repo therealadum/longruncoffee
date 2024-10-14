@@ -1,4 +1,6 @@
-import { ICartState, ICartItem } from "../common/product";
+import { ICartState, ICartItem, IProduct } from "../common/product";
+import { convertProductToCartItem } from "./convertProductToCartItem";
+import { mockProducts } from "./product";
 
 class MockResponse {
   body: string;
@@ -93,9 +95,9 @@ export const ShopifyCartAPI = {
     return mockResponse(mockCart);
   }),
 
-  updateItemQuantity: jest.fn((itemId: number, quantity: number) => {
+  updateItemQuantity: jest.fn((variantId: number, quantity: number) => {
     // Find the item and update its quantity
-    const item = mockCart.items.find((item) => item.id === itemId);
+    const item = mockCart.items.find((item) => item.variant_id == variantId);
     if (item) {
       const quantityDifference = quantity - item.quantity;
       mockCart.item_count += quantityDifference;
@@ -103,6 +105,20 @@ export const ShopifyCartAPI = {
       mockCart.total_price += quantityDifference * item.price;
       item.quantity = quantity;
       item.line_price = item.price * quantity;
+    } else {
+      const item = mockProducts.find((product) => product.id == variantId);
+      if (item) {
+        const lineitem = convertProductToCartItem(
+          item as IProduct,
+          item.variants[0],
+        );
+        mockCart.items.push(lineitem);
+        mockCart.item_count += 1;
+        mockCart.items_subtotal_price += lineitem.price;
+        mockCart.total_price += lineitem.price;
+        mockCart.original_total_price += lineitem.original_price;
+        mockCart.requires_shipping = true;
+      }
     }
     return mockResponse(mockCart);
   }),

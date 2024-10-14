@@ -39,7 +39,10 @@ export function FreeShippingProgress({
           <ConfettiExplosion {...smallProps} />
         ) : null} */}
       </div>
-      <h4 className="px-4 font-accent text-lg text-center text-cyan-600 leading-[1.50rem]">
+      <h4
+        data-testid="free-shipping-progress"
+        className="px-4 font-accent text-lg text-center text-cyan-600 leading-[1.50rem]"
+      >
         {/* {progressOutOf100 >= 1
           ? "Congratulations, you've unlocked free shipping!"
           : `You're only $${((5900 - cartSubtotal) / 100).toFixed(

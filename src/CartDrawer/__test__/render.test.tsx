@@ -4,7 +4,7 @@ import { CartDrawer } from "../CartDrawer";
 import { createMockCartState } from "../../testutils/cart";
 
 describe("Cart Drawer", () => {
-  it("renders the component", () => {
+  it("opens when toggled", () => {
     const container = {
       attributes: {
         getNamedItem: (str: string) => ({
@@ -13,8 +13,40 @@ describe("Cart Drawer", () => {
       },
     };
     render(<CartDrawer container={container} />);
-    const element = screen.getByText(/Shop/i);
-    console.error(element);
+    act(() => {
+      document.dispatchEvent(new CustomEvent("cart_toggle"));
+    });
+    const element = screen.getByTestId("cart-title");
     expect(element).toBeInTheDocument();
+  });
+  it("opens after purchase, and reflects proper item/subtotal", async () => {
+    const container = {
+      attributes: {
+        getNamedItem: (str: string) => ({
+          value: encodeURIComponent(JSON.stringify(createMockCartState())),
+        }),
+      },
+    };
+    render(<CartDrawer container={container} />);
+    act(() => {
+      document.dispatchEvent(
+        new CustomEvent("buy_button", {
+          detail: {
+            available: true,
+            variantId: 50003198312761,
+            isSubscription: false,
+            quantity: 1,
+            product_hash: "ready-to-run",
+          },
+        }),
+      );
+    });
+
+    await new Promise((r) => setTimeout(r, 1000));
+
+    expect(screen.getByTestId("cart-title")).toBeInTheDocument();
+    expect(screen.getByTestId("free-shipping-progress")).toHaveTextContent(
+      `You're only $45.21 away from a free Ready to Run!`,
+    );
   });
 });

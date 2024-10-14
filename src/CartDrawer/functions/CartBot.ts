@@ -117,7 +117,8 @@ export function useCartBot({
     // anything in cart
     triggerEvaluations.set(
       ICartBotItemTriggerEnum.ANYTHING_IN_CART,
-      cartState.items.filter((item) => item.product_type !== "Gift").length > 0,
+      cartState.items.filter((item) => item.product_type !== "Gift").length >
+        0 || subscriptionCartState.items.length > 0,
     );
     // subscription items present
     triggerEvaluations.set(
