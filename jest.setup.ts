@@ -1,5 +1,6 @@
 import { ShopifyCartAPI } from "./src/testutils/cart";
 import { ShopifyProductAPI } from "./src/testutils/product";
+import { UpsellAPI } from "./src/testutils/upsells";
 
 class _ResizeObserver {
   observe() {
@@ -41,22 +42,23 @@ window.Shopify = {
 global.fetch = jest.fn((_url, options) => {
   const url = _url as string;
   const parsedbody =
-    typeof options?.body == "string" ? JSON.parse(options.body) : {};
-  if (
-    url.endsWith("/cart/update.js") &&
-    parsedbody.updates &&
-    parsedbody.updates.length
-  ) {
+    typeof options?.body == "string"
+      ? JSON.parse(options.body)
+      : options?.body
+      ? options.body
+      : {};
+  if (url.endsWith("/update.js") && parsedbody.updates) {
     const keys = Object.keys(parsedbody.updates);
     keys.forEach((key) => {
       ShopifyCartAPI.updateItemQuantity(parseInt(key), parsedbody.updates[key]);
     });
-    return parsedbody.quantity === 0
-      ? ShopifyCartAPI.removeItem(parsedbody.id)
-      : ShopifyCartAPI.updateItemQuantity(parsedbody.id, parsedbody.quantity);
+    return ShopifyCartAPI.getCart();
   }
   if (url.endsWith("/cart.js")) {
     return ShopifyCartAPI.getCart();
+  }
+  if (url.endsWith("/products.json")) {
+    return UpsellAPI.getUpsells();
   }
   if (isValidProductUrl(url)) {
     const handle = extractProductIdentifier(url);

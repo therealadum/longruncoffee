@@ -46,7 +46,7 @@ describe("Cart Drawer", () => {
 
     expect(screen.getByTestId("cart-title")).toBeInTheDocument();
     expect(screen.getByTestId("free-shipping-progress")).toHaveTextContent(
-      `You're only $45.21 away from a free Ready to Run!`,
+      `You're only $48.59 away from a free Ready to Run!`,
     );
   });
 });
