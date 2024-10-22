@@ -12,7 +12,8 @@
     "gp_section_499301219227927325": {
       "type": "gp-section-499301219227927325",
       "settings": {
-        "section_preload": "true"
+        "section_preload": "true",
+        "checksum": "b6f997c60d3daed6fd08c9b3bafe117d56dbb7fd9cef3964f6e53453f0554aa4"
       }
     }
   },
