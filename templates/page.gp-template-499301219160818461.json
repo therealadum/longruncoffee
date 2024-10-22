@@ -13,11 +13,18 @@
       "type": "gp-section-536993191010763634",
       "settings": {
         "section_preload": "true",
-        "checksum": "189f815546d492285f1113882586e0a85a41946351602ff7f12bf60775c5bb8b"
+        "checksum": "e17619ccf51e0cf11a8252423e14e65dd914567b6fb4bf0f5123bf2151c921d3"
+      }
+    },
+    "gp_section_536993649313973328": {
+      "type": "gp-section-536993649313973328",
+      "settings": {
+        "checksum": "bfad2fe33e63be1e8a13817968c1c34e1161b1dd4432ab5137f979c98eaabde2"
       }
     }
   },
   "order": [
-    "gp_section_536993191010763634"
+    "gp_section_536993191010763634",
+    "gp_section_536993649313973328"
   ]
 }
