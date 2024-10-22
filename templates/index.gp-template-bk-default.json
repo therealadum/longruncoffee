@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "home-hero": {
@@ -68,7 +68,7 @@
         "@media (min-width: 961px) {h2 {font-size: 42px; }}"
       ],
       "settings": {
-        "caption": "Patent Protected Formula Maximizes Your Performance",
+        "caption": "Proprietary Formula Maximizes Your Performance",
         "heading": "Ditch Dehydrating, Depleting Coffee",
         "heading_size": "h2",
         "heading_alignment": "center",
@@ -89,14 +89,14 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "Brown butter pumpkin is here!",
+            "heading": "Fuel. Perform. Recover.",
             "heading_size": "h1"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>AVAILABLE WHILE  SUPPLIES LAST<\/p>",
+            "text": "<p>An instant hazelnut latte, with essential electrolytes and natural caffeine from coffee. <\/p>",
             "text_style": "body"
           }
         },
@@ -104,7 +104,7 @@
           "type": "button",
           "settings": {
             "button_label": "TAKE ME THERE",
-            "button_link": "shopify:\/\/products\/race-season-roast"
+            "button_link": "shopify:\/\/products\/ready-to-run"
           }
         }
       },
@@ -113,15 +113,18 @@
         "text_rxcXGK",
         "button_fQyRDF"
       ],
+      "custom_css": [
+        "p {font-size: 28px;}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Race_Season_Roast_-_Brown_Butter_Pumpkin_Electrolyte_Infused_Coffee-Photoroom.jpg",
-        "height": "medium",
+        "image": "shopify:\/\/shop_images\/Get_One.gif",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "content_layout": "overlap",
-        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 36,
