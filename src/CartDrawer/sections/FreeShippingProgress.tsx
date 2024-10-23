@@ -43,16 +43,16 @@ export function FreeShippingProgress({
         data-testid="free-shipping-progress"
         className="px-4 font-accent text-lg text-center text-cyan-600 leading-[1.50rem]"
       >
-        {/* {progressOutOf100 >= 1
+        {progressOutOf100 >= 1
           ? "Congratulations, you've unlocked free shipping!"
           : `You're only $${((5900 - cartSubtotal) / 100).toFixed(
               2,
-            )} away from free shipping!`} */}
-        {progressOutOf100 >= 1
+            )} away from free shipping!`}
+        {/* {progressOutOf100 >= 1
           ? "Congratulations, a free Ready to Run is in your cart!"
           : `You're only $${((7900 - cartSubtotal) / 100).toFixed(
               2,
-            )} away from a free Ready to Run!`}
+            )} away from a free Ready to Run!`} */}
       </h4>
     </div>
   ) : null;

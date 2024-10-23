@@ -128,10 +128,9 @@ export function CartDrawer(args: any) {
                             totalSubscriptionItems == 0
                           }
                           progressOutOf100={
-                            // totalSubscriptionItems > 0
-                            //   ? 100
-                            //   : cartSubTotalWithDiscounts / 5900
-                            cartSubTotalWithDiscounts / 7900
+                            totalSubscriptionItems > 0
+                              ? 100
+                              : cartSubTotalWithDiscounts / 5900
                           }
                           cartSubtotal={cartSubTotalWithDiscounts}
                         />

@@ -396,8 +396,7 @@ export const useCartDrawerState = ({
         detail: {
           count: totalCartItems + totalSubscriptionItems,
           amountUntilFreeShipping:
-            // totalSubscriptionItems > 0 ? 0 : 5900 - cartSubTotalWithDiscounts,
-            totalSubscriptionItems > 0 ? 0 : 7900 - cartSubTotalWithDiscounts,
+            totalSubscriptionItems > 0 ? 0 : 5900 - cartSubTotalWithDiscounts,
         },
       }),
     );

@@ -54,20 +54,20 @@ const cart_bot_items: ICartBotItem[] = [
       // },
     ],
   },
-  {
-    name: "Free Ready to Run",
-    variant_id: 50007065166137,
-    start_date: READY_TO_RUN_START_DATE,
-    end_date: READY_TO_RUN_END_DATE,
-    triggers: [
-      {
-        enum: ICartBotItemTriggerEnum.CART_VALUE_EXCEEDS,
-        params: {
-          value: 7900,
-        },
-      },
-    ],
-  },
+  // {
+  //   name: "Free Ready to Run",
+  //   variant_id: 50007065166137,
+  //   start_date: READY_TO_RUN_START_DATE,
+  //   end_date: READY_TO_RUN_END_DATE,
+  //   triggers: [
+  //     {
+  //       enum: ICartBotItemTriggerEnum.CART_VALUE_EXCEEDS,
+  //       params: {
+  //         value: 7900,
+  //       },
+  //     },
+  //   ],
+  // },
   {
     name: "Free Experimental - #1",
     variant_id: 48137979953465,
