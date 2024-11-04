@@ -116,6 +116,13 @@
         "background-color": "tan"
       }
     },
+    "gp_global_section_538796875008967812_8Pgw33": {
+      "type": "gp-global-section-538796875008967812",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
+    },
     "0e698922-8ed8-423d-886f-c78375d71373": {
       "type": "featured-collection",
       "settings": {
@@ -218,6 +225,7 @@
     "lrc-coffee-benefits",
     "one-click-upsell",
     "lrc-review-summary",
+    "gp_global_section_538796875008967812_8Pgw33",
     "0e698922-8ed8-423d-886f-c78375d71373",
     "1693874745cc6bc7e5",
     "17093999844598d023",
