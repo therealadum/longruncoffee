@@ -22,6 +22,10 @@
         "checksum": "0e9261dd49ff31345918a2e97f6e6a55250019fa107512e9c56e1acf272ec2eb_1"
       }
     },
+    "club-promo": {
+      "type": "club-promo",
+      "settings": {}
+    },
     "gp_section_534553535400903481": {
       "type": "gp-section-534553535400903481",
       "settings": {
@@ -98,6 +102,7 @@
   "order": [
     "gp_section_534533922415969420",
     "gp_section_485854940099511180",
+    "club-promo",
     "gp_section_534553535400903481",
     "gp_section_534553516996297723",
     "gp_section_485884236306318590",

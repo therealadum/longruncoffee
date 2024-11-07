@@ -1090,6 +1090,11 @@ select {
   margin-bottom: 8rem !important;
 }
 
+.my-6 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
 .my-8 {
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
@@ -2868,6 +2873,10 @@ select {
   line-height: 1.6rem !important;
 }
 
+.leading-\[1\.9rem\] {
+  line-height: 1.9rem !important;
+}
+
 .leading-\[16px\] {
   line-height: 16px !important;
 }
@@ -3815,6 +3824,11 @@ h2#spr-header-title {
 .hover\:text-tan-700:hover {
   --tw-text-opacity: 1 !important;
   color: rgb(235 150 45 / var(--tw-text-opacity)) !important;
+}
+
+.hover\:text-tan-800:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(223 132 22 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:text-tan-900:hover {

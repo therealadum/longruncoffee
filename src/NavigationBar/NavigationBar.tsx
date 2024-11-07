@@ -29,11 +29,11 @@ const navigation = {
       name: "Shop",
       featured: [
         {
-          name: "Ready to Run",
-          href: "/products/ready-to-run",
+          name: "Sugar Cookie",
+          href: "/products/santa-sleighin-miles",
           imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600",
-          imageAlt: "Ready to Run instant electrolyte powder.",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Santa.gif?v=1730944454&width=500",
+          imageAlt: "Sleighin' Miles Blend",
           description: "Shop now",
         },
         {

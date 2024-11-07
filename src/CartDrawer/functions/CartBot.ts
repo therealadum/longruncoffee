@@ -22,10 +22,10 @@ interface ICartBotItem {
   end_date?: Date;
 }
 
-const READY_TO_RUN_START_DATE = new Date("10/12/24");
-READY_TO_RUN_START_DATE.setHours(0, 0, 0, 0);
-const READY_TO_RUN_END_DATE = new Date("10/18/24");
-READY_TO_RUN_END_DATE.setHours(0, 0, 0, 0);
+const SANTA_START_DATE = new Date("11/9/24");
+SANTA_START_DATE.setHours(23, 0, 0, 0);
+const SANTA_END_DATE = new Date("11/15/24");
+SANTA_END_DATE.setHours(0, 0, 0, 0);
 
 const todayRightNow = new Date();
 
@@ -54,20 +54,17 @@ const cart_bot_items: ICartBotItem[] = [
       // },
     ],
   },
-  // {
-  //   name: "Free Ready to Run",
-  //   variant_id: 50007065166137,
-  //   start_date: READY_TO_RUN_START_DATE,
-  //   end_date: READY_TO_RUN_END_DATE,
-  //   triggers: [
-  //     {
-  //       enum: ICartBotItemTriggerEnum.CART_VALUE_EXCEEDS,
-  //       params: {
-  //         value: 7900,
-  //       },
-  //     },
-  //   ],
-  // },
+  {
+    name: "Free Sleighin' Miles",
+    variant_id: 50087451951417,
+    start_date: SANTA_START_DATE,
+    end_date: SANTA_END_DATE,
+    triggers: [
+      {
+        enum: ICartBotItemTriggerEnum.SUBSCRIPTION_ITEMS_PRESENT,
+      },
+    ],
+  },
   {
     name: "Free Experimental - #1",
     variant_id: 48137979953465,
