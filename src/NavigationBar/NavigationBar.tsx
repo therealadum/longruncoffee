@@ -88,21 +88,20 @@ const navigation = {
       name: "Info",
       featured: [
         {
+          name: "Sugar Cookie",
+          href: "/products/santa-sleighin-miles",
+          imageSrc:
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Santa.gif?v=1730944454&width=500",
+          imageAlt: "Sleighin' Miles Blend",
+          description: "Shop now",
+        },
+        {
           name: "Long Run Coffee's First Instant Powder Is Here!",
           href: "/blogs/news/ready-to-run",
           imageSrc:
             "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600",
           imageAlt:
             "After a year of development, Long Run Coffee's first instant electrolyte powder is here.",
-          description: "Read now",
-        },
-        {
-          name: "Pumpkin Coffee Donuts",
-          href: "/blogs/recipes/pumpkin-coffee-donuts-recipe",
-          imageSrc:
-            "https://longruncoffee.com/cdn/shop/articles/Pumpkin_Coffee_Donuts_Recipe_Hero.jpg?v=1696296639&width=500",
-          imageAlt:
-            "A fantastic recipe for Pumpkin Coffee Donuts using our Brown Butter Pumpkin.",
           description: "Read now",
         },
       ],
