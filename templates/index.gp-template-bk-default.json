@@ -11,11 +11,8 @@
   "sections": {
     "home-hero": {
       "type": "home-hero",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "48b2557b-a48d-4912-a99b-5daa46fa2d10": {
       "type": "collapsible-content",
@@ -169,41 +166,28 @@
     },
     "home-coffee-club-cta": {
       "type": "home-coffee-club-cta",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "home-reviews": {
       "type": "home-reviews",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "home-mission-cta": {
       "type": "home-mission-cta",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "home-founder-quote": {
       "type": "home-founder-quote",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "6b1352cb-e207-4d66-9158-7591b506a138": {
       "type": "home-founder-quote",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "a7b19093-ee1f-4466-9934-44ebc66bfd60": {
       "type": "featured-blog",
