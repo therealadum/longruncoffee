@@ -40,7 +40,7 @@ const navigation = {
           name: "Long Run Club",
           href: "/pages/long-run-club",
           imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/LRC4.jpg?v=1711743212&width=500",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/subscribe_and_save.png?v=1731189577&width=500",
           imageAlt: "Subscribe and save with Long Run Club.",
           description: "Subscribe & Save",
         },
