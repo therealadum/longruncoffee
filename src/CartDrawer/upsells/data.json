@@ -2,14 +2,14 @@
   "campaigns": [
     {
       "id": 1727828292441,
-      "name": "Ready to Run - Not In Cart",
+      "name": "Sugar Cookie - Not In Cart",
       "conditions": {
         "combinator": "and",
         "rules": [
           {
             "field": "CART_VARIANTS",
             "operator": "NOT_CONTAINS_VARIANT_IDS",
-            "value": [50003198312761, 50003198345529, 50007065166137],
+            "value": [50087451951417, 50087333527865, 50087333560633],
             "id": "009848cb-6168-4607-8ec0-a2b018b7edbe"
           }
         ],
@@ -18,24 +18,24 @@
       "component": {
         "name": "BasicUpsell",
         "params": {
-          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Get_One.gif?v=1728517131&width=800"
+          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/get_one_santa.gif?v=1730933989&width=800"
         }
       },
       "product": {
-        "handle": "ready-to-run",
-        "variant_id": "gid://shopify/ProductVariant/50003198312761"
+        "handle": "santa-sleighin-miles",
+        "variant_id": "gid://shopify/ProductVariant/50087333527865"
       }
     },
     {
       "id": 1727828256626,
-      "name": "Ready to Run - In Cart",
+      "name": "Sugar Cookie - In Cart",
       "conditions": {
         "combinator": "and",
         "rules": [
           {
             "field": "CART_VARIANTS",
             "operator": "CONTAINS_VARIANT_IDS",
-            "value": [50003198312761, 50003198345529, 50007065166137],
+            "value": [50087451951417, 50087333527865, 50087333560633],
             "id": "d55954af-e018-47e4-beef-cc6ff23358f3"
           }
         ],
@@ -44,12 +44,12 @@
       "component": {
         "name": "BasicUpsell",
         "params": {
-          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Add_Another.gif?v=1728517131&width=800"
+          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/add_another_santa.gif?v=1730933988&width=800"
         }
       },
       "product": {
-        "handle": "ready-to-run",
-        "variant_id": "gid://shopify/ProductVariant/50003198312761"
+        "handle": "santa-sleighin-miles",
+        "variant_id": "gid://shopify/ProductVariant/50087333527865"
       }
     }
   ]
