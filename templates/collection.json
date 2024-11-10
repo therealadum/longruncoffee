@@ -110,6 +110,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "custom_css": [
         "h1 {font-size: 35px;}"
       ],
@@ -121,7 +122,6 @@
     },
     "gp_global_section_539510752042550419_attY46": {
       "type": "gp-global-section-539510752042550419",
-      "disabled": true,
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": ""
