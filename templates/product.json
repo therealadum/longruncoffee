@@ -11,16 +11,14 @@
   "sections": {
     "lrc-base-product": {
       "type": "lrc-base-product",
-      "settings": {
-      }
+      "settings": {}
     },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
         "product-description": {
           "type": "product-description",
-          "settings": {
-          }
+          "settings": {}
         },
         "lrc_accordion_item_2": {
           "type": "lrc-accordion-image",
@@ -42,8 +40,7 @@
         "lrc_accordion_item_2",
         "lrc_accordion_item_3"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
@@ -66,15 +63,13 @@
       "blocks": {
         "one-click-upsell": {
           "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "one-click-upsell"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "lrc-review-summary": {
       "type": "lrc-review-summary",
@@ -163,8 +158,7 @@
       "blocks": {
         "judge_me_reviews_review_widget_iFiJeK": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -181,6 +175,43 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "image_with_text_JtUkwM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wPyir4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Coffee",
+            "heading_size": "h1"
+          }
+        },
+        "text_3Ybr6Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The coffee beans used in our electrolyte infused coffee are sourced from Costa Rica, Brazil and Mexico, depending on the roast.  </p><p>All of our roasts use arabica beans and are organic, FDA approved, and have no GMOs.</p><p>Our green bean supplier is heavily involved with the farms they source beans from and even started the <a href=\"https://nkgbloom.coffee/\" target=\"_blank\" title=\"NKG Bloom\">NKG Bloom program</a> in several countries to help farming communities.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wPyir4",
+        "text_3Ybr6Q"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/top_down_view_of_a_travel_tumbler_of_coffee_with_coffee_beans_on_the_white_platform.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_blog_6nQLaw": {
@@ -230,6 +261,7 @@
     "1693874745cc6bc7e5",
     "17093999844598d023",
     "3e4ec809-784d-4120-a4a6-cced1ff5c986",
+    "image_with_text_JtUkwM",
     "featured_blog_6nQLaw",
     "featured_blog_R6TUwB"
   ]
