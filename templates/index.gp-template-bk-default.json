@@ -14,6 +14,54 @@
       "custom_css": [],
       "settings": {}
     },
+    "image_with_text_GDRGia": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TpBMeR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sugar cookie",
+            "heading_size": "h1"
+          }
+        },
+        "text_rxcXGK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Electrolyte infused and full of flavor, Sleighin' Miles is here to help you... well... sleigh miles.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_fQyRDF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/products\/santa-sleighin-miles"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TpBMeR",
+        "text_rxcXGK",
+        "button_fQyRDF"
+      ],
+      "custom_css": [
+        "p {font-size: 28px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Santa_1.gif",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "48b2557b-a48d-4912-a99b-5daa46fa2d10": {
       "type": "collapsible-content",
       "blocks": {
@@ -78,54 +126,6 @@
         "desktop_layout": "image_second",
         "padding_top": 16,
         "padding_bottom": 32
-      }
-    },
-    "image_with_text_GDRGia": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_TpBMeR": {
-          "type": "heading",
-          "settings": {
-            "heading": "Fuel. Perform. Recover.",
-            "heading_size": "h1"
-          }
-        },
-        "text_rxcXGK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>An instant hazelnut latte, with essential electrolytes and natural caffeine from coffee. <\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_fQyRDF": {
-          "type": "button",
-          "settings": {
-            "button_label": "TAKE ME THERE",
-            "button_link": "shopify:\/\/products\/ready-to-run"
-          }
-        }
-      },
-      "block_order": [
-        "heading_TpBMeR",
-        "text_rxcXGK",
-        "button_fQyRDF"
-      ],
-      "custom_css": [
-        "p {font-size: 28px;}"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Get_One.gif",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "57fefd56-ea79-4796-b1c9-2297353cd585": {
@@ -234,8 +234,8 @@
   },
   "order": [
     "home-hero",
-    "48b2557b-a48d-4912-a99b-5daa46fa2d10",
     "image_with_text_GDRGia",
+    "48b2557b-a48d-4912-a99b-5daa46fa2d10",
     "57fefd56-ea79-4796-b1c9-2297353cd585",
     "home-coffee-club-cta",
     "home-reviews",
