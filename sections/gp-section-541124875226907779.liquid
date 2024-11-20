@@ -71,17 +71,17 @@
       assign productHandles = ''| split: ','
       assign products = null
       assign target_collection = null
-      assign productSrc = 'DynamicCollection'
+      assign productSrc = 'Collection'
       assign c = 0
       assign limit = 4
       if request.page_type == 'collection' or preview_page_type == 'collection'
         assign target_collection = collection
         if target_collection == empty or target_collection == null
-          if '488429912377' == 'latest'
+          if '488430076217' == 'latest'
             assign target_collection = collections | sort: 'updated_at'  | first
           else
             for collection in collections
-              if collection.id == 488429912377
+              if collection.id == 488430076217
                 assign target_collection = collection
                 break
               endif
@@ -112,11 +112,11 @@
             endif
           endunless
         else
-          if '488429912377' == 'latest'
+          if '488430076217' == 'latest'
             assign target_collection = collections | sort: 'updated_at'  | first
           else
             for collection in collections
-              if collection.id == 488429912377
+              if collection.id == 488430076217
                 assign target_collection = collection
                 break
               endif
@@ -131,7 +131,7 @@
         
     {%- if products == null -%}
     {%- if count == 0 and 0 == 0 -%}
-      {% if 'DynamicCollection' == 'RelatedProduct' -%}
+      {% if 'Collection' == 'RelatedProduct' -%}
           <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
         {% else %}
           <div>{{ "gempages.ProductList.no_products_found" | t }}</div>
@@ -960,7 +960,7 @@
         {%- endif -%}
         {% endfor %}
         {%- if count == 0 and 0 == 0 -%}
-          {% if 'DynamicCollection' == 'RelatedProduct' -%}
+          {% if 'Collection' == 'RelatedProduct' -%}
               <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
             {% else %}
               <div>{{ "gempages.ProductList.no_products_found" | t }}</div>
@@ -1008,11 +1008,11 @@
       if request.page_type == 'collection' or preview_page_type == 'collection'
         assign target_collection = collection
         if target_collection == empty or target_collection == null
-          if '488430043449' == 'latest'
+          if '488430076217' == 'latest'
             assign target_collection = collections | sort: 'updated_at'  | first
           else
             for collection in collections
-              if collection.id == 488430043449
+              if collection.id == 488430076217
                 assign target_collection = collection
                 break
               endif
@@ -1043,11 +1043,11 @@
             endif
           endunless
         else
-          if '488430043449' == 'latest'
+          if '488430076217' == 'latest'
             assign target_collection = collections | sort: 'updated_at'  | first
           else
             for collection in collections
-              if collection.id == 488430043449
+              if collection.id == 488430076217
                 assign target_collection = collection
                 break
               endif

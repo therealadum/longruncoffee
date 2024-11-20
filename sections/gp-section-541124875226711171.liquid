@@ -1362,7 +1362,7 @@
       assign target_collection = null
       assign productSrc = 'Collection'
       assign c = 0
-      assign limit = 4
+      assign limit = 6
       if request.page_type == 'collection' or preview_page_type == 'collection'
         assign target_collection = collection
         if target_collection == empty or target_collection == null
@@ -1377,7 +1377,7 @@
             endfor
           endif
         endif
-        paginate target_collection.products by 4
+        paginate target_collection.products by 6
           assign products = target_collection.products  
         endpaginate
       else
@@ -1411,7 +1411,7 @@
               endif
             endfor
           endif
-          paginate target_collection.products by 4
+          paginate target_collection.products by 6
             assign products = target_collection.products  
           endpaginate
         endif
