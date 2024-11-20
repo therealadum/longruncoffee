@@ -201,29 +201,15 @@ function ProgressBar({
       </div>
       <h4 className="text-cyan-600 font-accent text-xl text-center mt-3 leading-6">
         {found_next_reward
-          ? `${
-              totalSubscriptionItems > 0 ? "" : "$"
-            }${amt_remaining_for_next_reward.toFixed(2)} more${
-              totalSubscriptionItems > 0 ? " item " : " "
-            }to unlock ${found_next_reward.name}`
+          ? `${totalSubscriptionItems > 0 ? "" : "$"}${
+              totalSubscriptionItems > 0
+                ? amt_remaining_for_next_reward
+                : amt_remaining_for_next_reward.toFixed(2)
+            } more${totalSubscriptionItems > 0 ? " item " : " "}to unlock ${
+              found_next_reward.name
+            }`
           : "All Rewards Unlocked!"}
       </h4>
-
-      {/* <button
-        className="mr-4"
-        onClick={() => setTotalSubscriptionItems(totalSubscriptionItems + 1)}
-      >
-        up
-      </button>
-      <button
-        onClick={() =>
-          setTotalSubscriptionItems(
-            totalSubscriptionItems > 0 ? totalSubscriptionItems - 1 : 0,
-          )
-        }
-      >
-        down
-      </button> */}
     </div>
   );
 }
