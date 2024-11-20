@@ -1,5 +1,6 @@
 import { TUseCartItemProductCosts } from "../../common/constants";
 import { ICartItem, ICartState } from "../../common/product";
+import { IAddToCartDisplayOnly } from "./ProgressBar";
 
 interface IOneTimePurchasesProps {
   cartState: ICartState;
@@ -7,6 +8,7 @@ interface IOneTimePurchasesProps {
   cartContainsGiftItems: boolean;
   totalSubscriptionItems: number;
   useCartItemProductCosts: TUseCartItemProductCosts;
+  display_only_cart_items: IAddToCartDisplayOnly[];
   update: (updates: any) => Promise<void>;
   loading: boolean;
 }
@@ -15,7 +17,7 @@ export function OneTimePurchases({
   cartState,
   cartContainsOneTimeItems,
   cartContainsGiftItems,
-  totalSubscriptionItems,
+  display_only_cart_items,
   useCartItemProductCosts,
   update,
   loading,
@@ -55,30 +57,18 @@ export function OneTimePurchases({
           </h4>
           <div className="w-full h-px bg-cyan-200 -my-1" />
           <div className="px-2 grid grid-cols-3 gap-3">
-            {totalSubscriptionItems > 3 ? (
+            {display_only_cart_items.map((doci) => (
               <BonusItem
-                key={3}
+                key={doci.id}
                 update={update}
                 loading={loading}
                 cart_attributes={cartState.attributes}
-                title="Club Exclusive - LRC x BOCO Run Hat"
-                href="/products/club-exclusive-lrc-x-boco-run-hat-1"
-                header="In 3rd Shipment"
-                image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Club_Hat_be96f498-170e-4af6-bc4f-b047f584ad4c.png?v=1725736939&width=150"
-              />
-            ) : null}
-            {totalSubscriptionItems > 2 ? (
-              <BonusItem
-                key={2}
-                update={update}
-                loading={loading}
-                cart_attributes={cartState.attributes}
-                title="Club Exclusive - LRC x YETI Tumbler"
+                title={doci.title}
                 href="/products/club-exclusive-lrc-x-yeti-tumbler-1"
-                header="In 3rd Shipment"
-                image="https://cdn.shopify.com/s/files/1/0761/6924/9081/files/YETI_1_9c2db956-c907-4043-b62c-b890a9c76f67.png?v=1725736631&width=150"
+                header={doci.description}
+                image={`${doci.image}&width=150`}
               />
-            ) : null}
+            ))}
             {cartState.items
               .filter((item) => item.product_type === "Gift")
               .sort((a, b) => {

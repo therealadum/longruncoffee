@@ -26,6 +26,10 @@ import {
   removeAddToCartURLParameters,
   useAddToCartURL,
 } from "./functions/CartURL";
+import axios from "axios";
+import { cart_progress_bar_request } from "./testdata";
+import { IProgressBarRewardAnimation } from "./sections/ProgressBar";
+import { useQuery } from "react-query";
 
 interface IUseCartDrawerStateProps {
   cart: ICartState;
@@ -120,6 +124,31 @@ export const useCartDrawerState = ({
       document.removeEventListener("cart_toggle", handler);
     };
   }, [isOpen, setIsOpen]);
+
+  // prime cache
+  const cartRewardQuery = useQuery({
+    queryKey: ["cart-rewards"],
+    queryFn: async () => {
+      let data: IProgressBarRewardAnimation[] =
+        cart_progress_bar_request.data.map((d) => ({
+          ...d,
+          reward_type: d.reward_type as "MONETARY" | "SUBSCRIPTION",
+          reward_state: "NOT_REWARDED_YET",
+        }));
+      try {
+        const response = await axios(
+          "https://seal-app-nr7lb.ondigitalocean.app/backend/cart-rewards",
+          {
+            method: "GET",
+          },
+        );
+        data = response.data.data;
+      } catch (e) {
+        console.error(e);
+      }
+      return data;
+    },
+  });
 
   // function to return cart item costs
   const useCartItemProductCosts = useCallback(
@@ -627,12 +656,14 @@ export const useCartDrawerState = ({
     );
   }, [nextPlan, plan, subscriptionCartState]);
 
-  useCartBot({
+  const display_only_cart_items = useCartBot({
     cartState,
     subscriptionCartState,
+    totalSubscriptionItems,
     loading,
     update,
     cartSubTotal,
+    cartRewardQuery,
   });
   useAddToCartURL();
   const upsells = useUpsells({ cartState, subscriptionCartState, loading });
@@ -658,5 +689,6 @@ export const useCartDrawerState = ({
     cartSubTotal,
     cartSubTotalWithDiscounts,
     upsells,
+    display_only_cart_items,
   };
 };

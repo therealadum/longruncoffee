@@ -6,7 +6,7 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { FreeShippingProgress } from "./sections/FreeShippingProgress";
+import ProgressBar from "./sections/ProgressBar";
 import { LongRunClub } from "./sections/LongRunClub";
 import { useCartDrawerState } from "./hook";
 import { OneTimePurchases } from "./sections/OneTimePurchases";
@@ -14,8 +14,11 @@ import { referenceString } from "../common/constants";
 import { Addons } from "./sections/Addons";
 import { CartFooter } from "./sections/CartFooter";
 import { useState } from "react";
+import { items } from "./testdata";
+import { queryClient } from "../common/queryClient";
+import { QueryClientProvider } from "react-query";
 
-export function CartDrawer(args: any) {
+function _CartDrawer(args: any) {
   const stored_subscription = localStorage.getItem(referenceString);
 
   const [upsellActive, setUpsellActive] = useState<boolean>(false);
@@ -33,6 +36,7 @@ export function CartDrawer(args: any) {
     nextPlan,
     totalSubscriptionItems,
     nextPerks,
+    display_only_cart_items,
     cartState,
     cartSubTotal,
     cartSubTotalWithDiscounts,
@@ -44,11 +48,16 @@ export function CartDrawer(args: any) {
     cart: JSON.parse(
       decodeURIComponent(args.container.attributes.getNamedItem("cart").value),
     ),
-    subscription: stored_subscription
-      ? JSON.parse(stored_subscription)
-      : {
-          items: [],
-        },
+    subscription:
+      process.env.XSTORYBOOK_EXAMPLE_APP != null
+        ? {
+            items,
+          }
+        : stored_subscription
+        ? JSON.parse(stored_subscription)
+        : {
+            items: [],
+          },
   });
 
   const upsell = upsells && upsells.length ? upsells[0] : null;
@@ -122,22 +131,15 @@ export function CartDrawer(args: any) {
                   subscriptionCartState.items.length > 0 ? (
                     <>
                       <div className="grid grid-cols-1 space-y-8 overflow-y-auto">
-                        <FreeShippingProgress
+                        <ProgressBar
                           isCartEmpty={
                             cartState.item_count == 0 &&
                             totalSubscriptionItems == 0
                           }
-                          progressOutOf100={
-                            totalSubscriptionItems > 0
-                              ? 100
-                              : cartSubTotalWithDiscounts / 5900
-                          }
+                          totalSubscriptionItems={totalSubscriptionItems}
                           cartSubtotal={cartSubTotalWithDiscounts}
                         />
                         <LongRunClub
-                          plan={plan}
-                          nextPlan={nextPlan}
-                          nextPerks={nextPerks}
                           totalSubscriptionItems={totalSubscriptionItems}
                           subscriptionCartState={subscriptionCartState}
                           setSubscriptionCartState={setSubscriptionCartState}
@@ -145,6 +147,7 @@ export function CartDrawer(args: any) {
                         />
                         <OneTimePurchases
                           cartState={cartState}
+                          display_only_cart_items={display_only_cart_items}
                           cartContainsGiftItems={cartContainsGiftItems}
                           cartContainsOneTimeItems={cartContainsOneTimeItems}
                           totalSubscriptionItems={totalSubscriptionItems}
@@ -243,5 +246,13 @@ export function CartDrawer(args: any) {
         </div>
       </Dialog>
     </>
+  );
+}
+
+export function CartDrawer(args: any) {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <_CartDrawer {...args} />
+    </QueryClientProvider>
   );
 }

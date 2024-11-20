@@ -1,9 +1,10 @@
-import React, { LegacyRef, useRef, useState } from "react";
+import React, { LegacyRef, useEffect, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "./style.css";
 import Fullscreen from "./ImageGalleryFullscreenButton";
 import ClubPromoRoastInner from "../ClubPromoRoast/inner";
 import { plans, referenceString } from "../common/constants";
+import { IPlan } from "../common/plans";
 
 const productBundleServingSizes: any = {
   // ready to run
@@ -226,8 +227,8 @@ function calculateCurrentDiscountInformation() {
     : {
         items: [],
       };
-  let plan = null;
-  let nextPlan = null;
+  let plan: null | IPlan = null;
+  let nextPlan: null | IPlan = null;
 
   // tier information
   if (items.length >= plans.elite.bag_min - 1) {
@@ -265,7 +266,7 @@ function ReviewSummary({ reviews }: any) {
     return null;
   }
   const ceil = Math.ceil((reviewRating * 5) / maxRating);
-  const arr = [];
+  const arr: any = [];
   for (let i = 0; i < ceil; i++) {
     arr.push(i);
   }
@@ -842,9 +843,9 @@ export function ProductForm(args: any) {
   });
   const [isLoading, setIsLoading] = React.useState(false);
 
-  let variantID = null;
+  let variantID: any = null;
   let variantCost = 0;
-  let variant = null;
+  let variant: any = null;
 
   if (product && product.variants) {
     for (let i = 0; i < product.variants.length; i++) {
@@ -2619,13 +2620,14 @@ export function ProductForm(args: any) {
                           variantQuantityMap[variantID] <= 0)) ||
                       isLoading
                     }
-                    className={`rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${
+                    className={`relative rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border ${
                       !productForm.isSubscription &&
                       (!product.available || variantQuantityMap[variantID] <= 0)
                         ? "border-neutral-600 bg-neutral-100 text-neutral-600 hover:border-neutral-700 hover:text-neutral-700 hover:bg-neutral-200 cursor-not-allowed"
                         : "border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer"
                     }`}
                   >
+                    <span id="buy-button-reward-id" />
                     {isLoading ? (
                       <svg
                         className="animate-spin h-4 w-4 text-tan-500"
