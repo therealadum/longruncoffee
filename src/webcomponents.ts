@@ -3,6 +3,7 @@ import * as ReactDOMClient from "react-dom/client";
 import reactToWebComponent from "react-to-webcomponent";
 
 import { CartDrawer, ProductForm, NavigationBar, ClubPromoRoast } from ".";
+import GempagesAddToCartButton from "./GempagesAddToCartButton";
 
 declare global {
   interface Window {
@@ -33,4 +34,11 @@ customElements.define(
 customElements.define(
   "club-promo-roast",
   reactToWebComponent(ClubPromoRoast, React, ReactDOMClient),
+);
+
+customElements.define(
+  "gempages-add-to-cart-button",
+  reactToWebComponent(GempagesAddToCartButton, React, ReactDOMClient, {
+    props: ["variant_id"],
+  }),
 );
