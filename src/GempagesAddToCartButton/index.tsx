@@ -4,13 +4,6 @@ export default function GempagesAddToCartButton(args: any) {
   const [disabled, setDisabled] = useState<boolean>(false);
   const available = args.container.attributes.getNamedItem("available").value;
   const variantId = args.container.attributes.getNamedItem("variant_id").value;
-  const handle = args.container.attributes.getNamedItem("handle").value;
-
-  console.log({
-    available,
-    handle,
-    variantId,
-  });
 
   const on_submit = () => {
     setDisabled(true);
@@ -21,7 +14,7 @@ export default function GempagesAddToCartButton(args: any) {
           variantId,
           isSubscription: false,
           quantity: 1,
-          product_hash: handle,
+          product_hash: null,
         },
       }),
     );

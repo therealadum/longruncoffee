@@ -39,6 +39,6 @@ customElements.define(
 customElements.define(
   "gempages-add-to-cart-button",
   reactToWebComponent(GempagesAddToCartButton, React, ReactDOMClient, {
-    props: ["variant_id", "available", "handle"],
+    props: ["variant_id", "available"],
   }),
 );
