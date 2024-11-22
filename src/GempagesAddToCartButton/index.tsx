@@ -26,7 +26,7 @@ export default function GempagesAddToCartButton(args: any) {
   return (
     <button
       disabled={disabled}
-      className="rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border border-tan-600 bg-tan-100 text-tan-600 hover:border-tan-700 hover:text-tan-700 hover:bg-tan-200 cursor-pointer"
+      className="rounded w-full text-base flex items-center justify-center text-center py-3 px-4 font-accent border border-tan-600 bg-tan-200 text-tan-700 hover:border-tan-800 hover:text-tan-800 hover:bg-tan-300 cursor-pointer"
       onClick={on_submit}
     >
       Add to Cart
