@@ -116,8 +116,8 @@
         "checksum": ""
       }
     },
-    "gp_global_section_541817153842578480_MCwBiD": {
-      "type": "gp-global-section-541817153842578480",
+    "gp_global_section_541819721629041529_UmqnbJ": {
+      "type": "gp-global-section-541819721629041529",
       "disabled": true,
       "settings": {
         "section_preload": "off_lazy_script",
@@ -160,7 +160,7 @@
     "83a3bd26-97b8-4892-b4bb-61be853a0ac4",
     "6cf0681f-6907-4599-808a-e71801658fb2",
     "gp_global_section_539510752042550419_attY46",
-    "gp_global_section_541817153842578480_MCwBiD",
+    "gp_global_section_541819721629041529_UmqnbJ",
     "banner",
     "product-grid"
   ]
