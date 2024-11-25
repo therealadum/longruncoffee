@@ -54,7 +54,7 @@ const navigation = {
             { name: "All", href: "/collections/coffee" },
             { name: "Traditional", href: "/collections/traditional-roasts" },
             { name: "Flavored", href: "/collections/flavored" },
-            { name: "Bundles", href: "/collections/bundle-save" },
+            { name: "Bundles", href: "/pages/bundlesweekend", label: "Sale!" },
           ],
         },
         {
