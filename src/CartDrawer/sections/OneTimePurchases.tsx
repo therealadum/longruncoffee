@@ -72,10 +72,10 @@ export function OneTimePurchases({
             {cartState.items
               .filter((item) => item.product_type === "Gift")
               .sort((a, b) => {
-                // put race season roast in first
-                if (a.variant_id === 49843237552441) {
+                // put hat in first
+                if (a.variant_id === 50182315376953) {
                   return -1;
-                } else if (b.variant_id === 49843237552441) {
+                } else if (b.variant_id === 50182315376953) {
                   return 1;
                 }
                 // put sticker last
