@@ -30,7 +30,7 @@ const navigation = {
       featured: [
         {
           name: "Bundles Week",
-          href: "asdfasdf",
+          href: "/pages/bundlesweekend",
           imageSrc:
             "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Navigation_Banner_Gif.gif?v=1732498817&width=500",
           imageAlt: "Bundles Week",
