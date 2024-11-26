@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "gp_global_section_541817153842578480_DUP4eX": {
+      "type": "gp-global-section-541817153842578480",
+      "custom_css": [],
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
+    },
     "home-hero": {
       "type": "home-hero",
       "custom_css": [],
@@ -44,7 +52,6 @@
         "text_rxcXGK",
         "button_fQyRDF"
       ],
-      "disabled": true,
       "custom_css": [
         "p {font-size: 28px;}"
       ],
@@ -61,13 +68,6 @@
         "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "gp_global_section_541817153842578480_DUP4eX": {
-      "type": "gp-global-section-541817153842578480",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": ""
       }
     },
     "48b2557b-a48d-4912-a99b-5daa46fa2d10": {
@@ -241,9 +241,9 @@
     }
   },
   "order": [
+    "gp_global_section_541817153842578480_DUP4eX",
     "home-hero",
     "image_with_text_GDRGia",
-    "gp_global_section_541817153842578480_DUP4eX",
     "48b2557b-a48d-4912-a99b-5daa46fa2d10",
     "57fefd56-ea79-4796-b1c9-2297353cd585",
     "home-coffee-club-cta",
