@@ -118,7 +118,6 @@
     },
     "gp_global_section_541819721629041529_UmqnbJ": {
       "type": "gp-global-section-541819721629041529",
-      "disabled": true,
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": ""
