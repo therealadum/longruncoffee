@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,18 +14,15 @@
       "blocks": {
         "featured_image": {
           "type": "featured_image",
-          "settings": {
-          }
+          "settings": {}
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -33,8 +30,7 @@
         "title",
         "content"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "d3b0ac57-5524-42de-879f-6a527664d1df": {
       "type": "featured-blog",
@@ -67,13 +63,12 @@
         "template--19876927635769__23248347-63e2-42e0-98ed-979b4b69f4b7-paragraph-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Exclusive deals, limited-edition coffee, and motivation delivered to your inbox<\/p>"
+            "text": "<p>Exclusive deals, limited-edition coffee, and motivation delivered to your inbox</p>"
           }
         },
         "template--19876927635769__23248347-63e2-42e0-98ed-979b4b69f4b7-email_form-1": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -119,10 +114,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "gp_global_section_541817153842578480_r7L7Vj": {
+      "type": "gp-global-section-541817153842578480",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
     }
   },
   "order": [
     "main",
+    "gp_global_section_541817153842578480_r7L7Vj",
     "d3b0ac57-5524-42de-879f-6a527664d1df",
     "23248347-63e2-42e0-98ed-979b4b69f4b7",
     "5e66a8e9-aacd-4620-8146-215ced6e2c59"
