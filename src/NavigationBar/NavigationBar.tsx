@@ -54,7 +54,7 @@ const navigation = {
             { name: "All", href: "/collections/coffee" },
             { name: "Traditional", href: "/collections/traditional-roasts" },
             { name: "Flavored", href: "/collections/flavored" },
-            { name: "Bundles", href: "/pages/bundlesweekend", label: "Sale!" },
+            { name: "Bundles", href: "/collections/bundle-save" },
           ],
         },
         {
@@ -71,13 +71,26 @@ const navigation = {
         },
         {
           order: 1,
-          id: "powders",
-          name: "Powders",
+          id: "hot-right-now",
+          name: "Hot Right Now",
           items: [
+            {
+              name: "Bundles Weekend",
+              href: "/pages/bundlesweekend",
+              label: "Sale",
+            },
+            {
+              name: "Free Winter Hat - Subscribers",
+              href: "/collections/subscribe-save",
+              label: "Promo",
+            },
             {
               name: "Ready to Run",
               href: "/products/ready-to-run",
-              label: "New!",
+            },
+            {
+              name: "Gift Cards",
+              href: "/products/long-run-coffee-card",
             },
           ],
         },
@@ -251,8 +264,9 @@ export function NavigationBar() {
                               <li key={item.name} className="flow-root">
                                 <a
                                   href={item.href}
-                                  className="hover:text-cyan-800 flex group"
+                                  className="hover:text-cyan-800 flex group items-center space-x-2"
                                 >
+                                  <span>{item.name}</span>
                                   {/* @ts-ignore */}
                                   {item?.label ? (
                                     <div className="mr-1 bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
@@ -260,7 +274,6 @@ export function NavigationBar() {
                                       {item.label}
                                     </div>
                                   ) : null}
-                                  {item.name}
                                 </a>
                               </li>
                             ))}
