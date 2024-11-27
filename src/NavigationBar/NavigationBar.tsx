@@ -266,7 +266,6 @@ export function NavigationBar() {
                                   href={item.href}
                                   className="hover:text-cyan-800 flex group items-center space-x-2"
                                 >
-                                  <span>{item.name}</span>
                                   {/* @ts-ignore */}
                                   {item?.label ? (
                                     <div className="mr-1 bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
@@ -274,6 +273,7 @@ export function NavigationBar() {
                                       {item.label}
                                     </div>
                                   ) : null}
+                                  <span>{item.name}</span>
                                 </a>
                               </li>
                             ))}
