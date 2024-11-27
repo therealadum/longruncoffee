@@ -80,11 +80,6 @@ const navigation = {
               label: "Sale",
             },
             {
-              name: "Free Winter Hat - Subscribers",
-              href: "/collections/subscribe-save",
-              label: "Promo",
-            },
-            {
               name: "Ready to Run",
               href: "/products/ready-to-run",
             },
@@ -264,7 +259,7 @@ export function NavigationBar() {
                               <li key={item.name} className="flow-root">
                                 <a
                                   href={item.href}
-                                  className="hover:text-cyan-800 flex group items-center space-x-2"
+                                  className="hover:text-cyan-800 flex group items-center space-x-1"
                                 >
                                   {/* @ts-ignore */}
                                   {item?.label ? (
