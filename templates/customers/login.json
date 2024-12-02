@@ -9,58 +9,10 @@
  */
 {
   "sections": {
-    "rich_text_nGf4Wn": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_HCzkPr": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscriber?",
-            "heading_size": "h2"
-          }
-        },
-        "text_pYjbEU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>If you are a Long Run Club member looking to edit your subscription, click below to sign in to your Club portal.</p>"
-          }
-        },
-        "button_WiaDDB": {
-          "type": "button",
-          "settings": {
-            "button_label": "Manage Subscription",
-            "button_link": "https://longruncoffee.com/tools/recurring/get-subscription-access",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_HCzkPr",
-        "text_pYjbEU",
-        "button_WiaDDB"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "main": {
       "type": "main-login",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "rich_text_nGf4Wn",
-    "main"
-  ]
+  "order": ["main"]
 }

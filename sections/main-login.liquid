@@ -14,62 +14,86 @@
   }
 {%- endstyle -%}
 
-<div class="customer login section-{{ section.id }}-padding">
-  <h1 id="recover" tabindex="-1">
-    {{ 'customer.recover_password.title' | t }}
-  </h1>
+<div class="bg-cyan-50">
+  <div class="px-6 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-4xl font-accent text-cyan-800 sm:text-5xl">Subscriber?</h2>
+      <p class="mx-auto mt-6 max-w-xl text-pretty text-lg/8 text-cyan-700">
+        If you are a Long Run Club member looking to edit your subscription, click below to sign in to your Club portal.
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a
+          href="/tools/recurring/get-subscription-access"
+          class="rounded-md bg-tan-100 px-3.5 py-2.5 text-sm font-semibold text-tan-600 shadow-sm hover:bg-tan-200 hover:text-tan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >Manage Subscriptions</a
+        >
+        <a href="/pages/long-run-club" class="text-sm/6 font-semibold text-cyan-700"
+          >Learn more <span aria-hidden="true">→</span></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="px-6 py-16 sm:px-6 sm:py-24 lg:px-8">
+  <h2 id="recover" tabindex="-1" class="text-4xl text-center font-accent text-cyan-800 sm:text-5xl">Password Reset</h2>
   <div>
-    <p>
-      {{ 'customer.recover_password.subtext' | t }}
-    </p>
-
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
-      <div class="field">
-        <input
-          type="email"
-          value=""
-          name="email"
-          id="RecoverEmail"
-          autocorrect="off"
-          autocapitalize="off"
-          autocomplete="email"
-          {% if form.errors %}
-            aria-invalid="true"
-            aria-describedby="RecoverEmail-email-error"
-            autofocus
-          {% endif %}
-          placeholder="{{ 'customer.login_page.email' | t }}"
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm flex flex-col space-y-6">
+        <div>
+          <label for="RecoverEmail" class="block text-sm/6 font-medium text-gray-900">
+            {{ 'customer.login_page.email' | t }}
+          </label>
+          <div class="mt-2">
+            <input
+              type="email"
+              value=""
+              name="email"
+              id="RecoverEmail"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              {% if form.errors %}
+                aria-invalid="true"
+                aria-describedby="RecoverEmail-email-error"
+                autofocus
+              {% endif %}
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-cyan-600 sm:text-sm/6"
+            >
+          </div>
+        </div>
+        {%- if form.errors -%}
+          <small id="RecoverEmail-email-error" class="form__message">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
+              <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+              <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+              <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+              <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+            </svg>
+            {{ form.errors.messages.form }}
+          </small>
+        {%- endif -%}
+
+        <button
+          class="flex w-full justify-center rounded-md bg-cyan-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
         >
-        <label for="RecoverEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
+          Send Reset Instructions
+        </button>
+
+        <a
+          href="#login"
+          class="border border-gray-100 flex w-full justify-center rounded-md bg-gray-50 px-3 py-1.5 text-sm/6 font-semibold text-gray-700 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-200"
+        >
+          {{ 'customer.login_page.cancel' | t }}
+        </a>
       </div>
-      {%- if form.errors -%}
-        <small id="RecoverEmail-email-error" class="form__message">
-          <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
-            <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-            <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-            <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-          </svg>
-          {{ form.errors.messages.form }}
-        </small>
-      {%- endif -%}
-
-      <button>
-        {{ 'customer.login_page.submit' | t }}
-      </button>
-
-      <a href="#login">
-        {{ 'customer.login_page.cancel' | t }}
-      </a>
     {%- endform -%}
   </div>
 
-  <h1 id="login" tabindex="-1">
+  <h2 id="login" tabindex="-1" class="text-4xl text-center font-accent text-cyan-800 sm:text-5xl">
     {{ 'customer.login_page.title' | t }}
-  </h1>
+  </h2>
   <div>
     {%- if recover_success == true -%}
       <h3 class="form__message" tabindex="-1" autofocus>
@@ -96,54 +120,73 @@
         {{ form.errors | default_errors }}
       {%- endif -%}
 
-      <div class="field">
-        <input
-          type="email"
-          name="customer[email]"
-          id="CustomerEmail"
-          autocomplete="email"
-          autocorrect="off"
-          autocapitalize="off"
-          {% if form.errors contains 'form' %}
-            aria-invalid="true"
-          {% endif %}
-          placeholder="{{ 'customer.login_page.email' | t }}"
-        >
-        <label for="CustomerEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
-      </div>
-
-      {%- if form.password_needed -%}
-        <div class="field">
-          <input
-            type="password"
-            value=""
-            name="customer[password]"
-            id="CustomerPassword"
-            autocomplete="current-password"
-            {% if form.errors contains 'form' %}
-              aria-invalid="true"
-            {% endif %}
-            placeholder="{{ 'customer.login_page.password' | t }}"
-          >
-          <label for="CustomerPassword">
-            {{ 'customer.login_page.password' | t }}
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm flex flex-col space-y-6">
+        <div>
+          <label for="CustomerEmail" class="block text-sm/6 font-medium text-gray-900">
+            {{- 'customer.login_page.email' | t -}}
           </label>
+          <div class="mt-2">
+            <input
+              type="email"
+              name="customer[email]"
+              id="CustomerEmail"
+              autocomplete="email"
+              autocorrect="off"
+              autocapitalize="off"
+              {% if form.errors contains 'form' %}
+                aria-invalid="true"
+              {% endif %}
+              placeholder="{{ 'customer.login_page.email' | t }}"
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-cyan-600 sm:text-sm/6"
+            >
+          </div>
         </div>
 
-        <a href="#recover">
-          {{ 'customer.login_page.forgot_password' | t }}
-        </a>
-      {%- endif -%}
+        {%- if form.password_needed -%}
+          <div>
+            <div class="flex items-center justify-between">
+              <label for="CustomerPassword" class="block text-sm/6 font-medium text-gray-900">
+                {{- 'customer.login_page.password' | t -}}
+              </label>
+              <div class="text-sm">
+                <a href="#recover" class="font-semibold text-cyan-600 hover:text-cyan-500">
+                  {{- 'customer.login_page.forgot_password' | t -}}
+                </a>
+              </div>
+            </div>
+            <div class="mt-2">
+              <input
+                type="password"
+                name="customer[password]"
+                id="CustomerPassword"
+                autocomplete="current-password"
+                {% if form.errors contains 'form' %}
+                  aria-invalid="true"
+                {% endif %}
+                placeholder="{{ 'customer.login_page.password' | t }}"
+                required
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-cyan-600 sm:text-sm/6"
+              >
+            </div>
+          </div>
+        {%- endif -%}
 
-      <button>
-        {{ 'customer.login_page.sign_in' | t }}
-      </button>
+        <div>
+          <button
+            class="flex w-full justify-center rounded-md bg-cyan-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
+          >
+            {{ 'customer.login_page.sign_in' | t }}
+          </button>
+        </div>
 
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
+        <p class="mt-10 text-center text-sm/6 text-gray-500">
+          Not a member?
+          <a href="{{ routes.account_register_url }}" class="font-semibold text-cyan-600 hover:text-cyan-500">
+            {{- 'customer.login_page.create_account' | t -}}
+          </a>
+        </p>
+      </div>
     {%- endform -%}
   </div>
 
