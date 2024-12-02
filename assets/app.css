@@ -1151,8 +1151,16 @@ select {
   bottom: -0.75rem !important;
 }
 
+.-left-4 {
+  left: -1rem !important;
+}
+
 .-right-3 {
   right: -0.75rem !important;
+}
+
+.-right-4 {
+  right: -1rem !important;
 }
 
 .-top-2 {
@@ -1199,6 +1207,10 @@ select {
   left: 0.5rem !important;
 }
 
+.left-4 {
+  left: 1rem !important;
+}
+
 .left-8 {
   left: 2rem !important;
 }
@@ -1213,6 +1225,10 @@ select {
 
 .right-2 {
   right: 0.5rem !important;
+}
+
+.right-4 {
+  right: 1rem !important;
 }
 
 .right-8 {
@@ -1572,6 +1588,10 @@ select {
   aspect-ratio: 4/3 !important;
 }
 
+.\!h-6 {
+  height: 1.5rem !important;
+}
+
 .h-1 {
   height: 0.25rem !important;
 }
@@ -1711,6 +1731,10 @@ select {
 
 .min-h-screen {
   min-height: 100vh !important;
+}
+
+.\!w-6 {
+  width: 1.5rem !important;
 }
 
 .\!w-full {
@@ -1893,6 +1917,10 @@ select {
 
 .flex-none {
   flex: none !important;
+}
+
+.flex-shrink {
+  flex-shrink: 1 !important;
 }
 
 .flex-shrink-0 {
@@ -2820,6 +2848,11 @@ select {
   padding: 4px !important;
 }
 
+.px-0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
 .px-1 {
   padding-left: 0.25rem !important;
   padding-right: 0.25rem !important;
@@ -3401,6 +3434,10 @@ select {
 
 .opacity-0 {
   opacity: 0 !important;
+}
+
+.opacity-100 {
+  opacity: 1 !important;
 }
 
 .opacity-25 {
