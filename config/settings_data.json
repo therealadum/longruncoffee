@@ -1,15 +1,15 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/LRC_Sticker_13.png",
+    "logo": "shopify://shop_images/LRC_Sticker_13.png",
     "logo_width": 90,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -107,12 +107,12 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "",
-    "social_facebook_link": "https:\/\/www.facebook.com\/longruncoffee",
-    "social_instagram_link": "https:\/\/www.instagram.com\/longruncoffee",
-    "social_amazon_link": "https:\/\/amzn.to\/3FhV6IN",
-    "social_youtube_link": "https:\/\/www.youtube.com\/@longruncoffee\/featured",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@longruncoffee?lang=en",
-    "social_twitter_link": "https:\/\/twitter.com\/longruncoffee",
+    "social_facebook_link": "https://www.facebook.com/longruncoffee",
+    "social_instagram_link": "https://www.instagram.com/longruncoffee",
+    "social_amazon_link": "https://amzn.to/3FhV6IN",
+    "social_youtube_link": "https://www.youtube.com/@longruncoffee/featured",
+    "social_tiktok_link": "https://www.tiktok.com/@longruncoffee?lang=en",
+    "social_twitter_link": "https://twitter.com/longruncoffee",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -125,7 +125,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "latest-products",
-    "checkout_logo_image": "shopify:\/\/shop_images\/Logo_Trim_1.png",
+    "checkout_logo_image": "shopify://shop_images/Logo_Trim_1.png",
     "checkout_accent_color": "#2ca4b2",
     "checkout_button_color": "#eb962d",
     "sections": {
@@ -142,36 +142,25 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
-      "10436698916776057164": {
-        "type": "shopify:\/\/apps\/appstle-subscriptions\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "13768625480086291342": {
-        "type": "shopify:\/\/apps\/forms\/blocks\/forms\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "11667715999621601152": {
-        "type": "shopify:\/\/apps\/pixeltok-multi-pixel-install\/blocks\/turbo-tiktok\/0f61e244-e2c9-43da-9523-9762c9f7e6bf",
+        "type": "shopify://apps/pixeltok-multi-pixel-install/blocks/turbo-tiktok/0f61e244-e2c9-43da-9523-9762c9f7e6bf",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": true,
         "settings": {
           "button_color": "#202a36",
@@ -183,31 +172,27 @@
         }
       },
       "826009465879322885": {
-        "type": "shopify:\/\/apps\/recomsale-affiliate-marketing\/blocks\/app\/689432f1-f205-49e7-a1de-1b016449398f",
+        "type": "shopify://apps/recomsale-affiliate-marketing/blocks/app/689432f1-f205-49e7-a1de-1b016449398f",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "3667842014806057753": {
-        "type": "shopify:\/\/apps\/one-click-upsell-zipify-ocu\/blocks\/app-embed\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+        "type": "shopify://apps/one-click-upsell-zipify-ocu/blocks/app-embed/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "15079184273603081885": {
-        "type": "shopify:\/\/apps\/essential-shipping-bar\/blocks\/app_embed\/4125375e-37c8-4137-949d-c4e1a3aac572",
+        "type": "shopify://apps/essential-shipping-bar/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
         "disabled": true,
-        "settings": {
-        }
+        "settings": {}
       },
       "17151115064775110295": {
-        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
+        "type": "shopify://apps/recharge-subscriptions/blocks/recharge-theme/371eed76-0b44-4869-9813-730372ea378e",
         "disabled": false,
         "settings": {
           "color_brand": "#467C99",
@@ -223,16 +208,14 @@
         }
       },
       "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "6478312753674380289": {
-        "type": "shopify:\/\/apps\/gempages-builder\/blocks\/embed-gp-script-head\/20b379d4-1b20-474c-a6ca-665c331919f3",
+        "type": "shopify://apps/gempages-builder/blocks/embed-gp-script-head/20b379d4-1b20-474c-a6ca-665c331919f3",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
