@@ -9,105 +9,6 @@
  */
 {
   "sections": {
-    "83a3bd26-97b8-4892-b4bb-61be853a0ac4": {
-      "type": "image-banner",
-      "blocks": {
-        "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-heading-1": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-text-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-buttons-1": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-heading-1",
-        "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-text-1",
-        "template--19876927439161__83a3bd26-97b8-4892-b4bb-61be853a0ac4-buttons-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/Long_Run_Coffee_Black_Friday_Banner.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
-      }
-    },
-    "6cf0681f-6907-4599-808a-e71801658fb2": {
-      "type": "rich-text",
-      "blocks": {
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Black Friday is here",
-            "heading_size": "h2"
-          }
-        },
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h6>Save 10% on Orders Under $49</h6><h6>Save 20% on Orders $49+</h6><h6><span style=\"text-decoration:underline\">Extra</span> 10% savings on all gear</h6>"
-          }
-        },
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-heading-1",
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-text-1",
-        "template--19876927439161__6cf0681f-6907-4599-808a-e71801658fb2-button-1"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h2 {font-size: 20px;}",
-        "h6 {font-size: 18px;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-2",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
     "gp_global_section_539510752042550419_attY46": {
       "type": "gp-global-section-539510752042550419",
       "disabled": true,
@@ -118,6 +19,7 @@
     },
     "gp_global_section_541819721629041529_UmqnbJ": {
       "type": "gp-global-section-541819721629041529",
+      "disabled": true,
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": ""
@@ -156,8 +58,6 @@
     }
   },
   "order": [
-    "83a3bd26-97b8-4892-b4bb-61be853a0ac4",
-    "6cf0681f-6907-4599-808a-e71801658fb2",
     "gp_global_section_539510752042550419_attY46",
     "gp_global_section_541819721629041529_UmqnbJ",
     "banner",
