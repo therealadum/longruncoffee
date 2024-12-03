@@ -90,11 +90,6 @@ const navigation = {
           name: "Hot Right Now",
           items: [
             {
-              name: "Bundles Weekend",
-              href: "/pages/bundlesweekend",
-              label: "Sale",
-            },
-            {
               name: "Ready to Run",
               href: "/products/ready-to-run",
             },
