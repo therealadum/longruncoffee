@@ -23,7 +23,7 @@ import {
 import Announcements from "./Announcements";
 
 const today = new Date();
-const bundles_week_end = new Date("12/2/24");
+const bundles_week_end = new Date("12/3/24");
 bundles_week_end.setHours(0);
 bundles_week_end.setMinutes(0);
 bundles_week_end.setSeconds(0);
