@@ -22,20 +22,35 @@ import {
 } from "@heroicons/react/24/outline";
 import Announcements from "./Announcements";
 
+const today = new Date();
+const bundles_week_end = new Date("12/2/24");
+bundles_week_end.setHours(0);
+bundles_week_end.setMinutes(0);
+bundles_week_end.setSeconds(0);
+
 const navigation = {
   categories: [
     {
       id: "shop",
       name: "Shop",
       featured: [
-        {
-          name: "Bundles Week",
-          href: "/pages/bundlesweekend",
-          imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Navigation_Banner_Gif.gif?v=1732498817&width=500",
-          imageAlt: "Bundles Week",
-          description: "Save up to 35%",
-        },
+        today > bundles_week_end
+          ? {
+              name: "Sugar Cookie",
+              href: "/products/santa-sleighin-miles",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Santa.gif?v=1730944454&width=500",
+              imageAlt: "Sleighin' Miles Blend",
+              description: "Shop now",
+            }
+          : {
+              name: "Bundles Week",
+              href: "/pages/bundlesweekend",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Navigation_Banner_Gif.gif?v=1732498817&width=500",
+              imageAlt: "Bundles Week",
+              description: "Save up to 35%",
+            },
         {
           name: "Long Run Club",
           href: "/pages/long-run-club",
