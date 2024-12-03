@@ -118,6 +118,7 @@
     },
     "gp_global_section_541817153842578480_MCwBiD": {
       "type": "gp-global-section-541817153842578480",
+      "disabled": true,
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": ""
