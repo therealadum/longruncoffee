@@ -2556,6 +2556,11 @@ select {
   border-color: rgb(255 232 204 / var(--tw-border-opacity)) !important;
 }
 
+.border-tan-400 {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(255 205 143 / var(--tw-border-opacity)) !important;
+}
+
 .border-tan-50 {
   --tw-border-opacity: 1 !important;
   border-color: rgb(255 253 250 / var(--tw-border-opacity)) !important;
@@ -3353,6 +3358,11 @@ select {
 .text-gray-700 {
   --tw-text-opacity: 1 !important;
   color: rgb(55 65 81 / var(--tw-text-opacity)) !important;
+}
+
+.text-gray-800 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(31 41 55 / var(--tw-text-opacity)) !important;
 }
 
 .text-gray-900 {
