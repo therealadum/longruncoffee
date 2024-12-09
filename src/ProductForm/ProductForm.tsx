@@ -982,8 +982,9 @@ export function ProductForm(args: any) {
   }, [variantID, isImageGalleryFullscreen]);
 
   const should_show_sold_out_notification =
-    !(variantQuantityMap[variantID] > 0) &&
-    !isRechargeAvailableOnProduct(product);
+    (!(variantQuantityMap[variantID] > 0) &&
+      !isRechargeAvailableOnProduct(product)) ||
+    product?.tags?.includes("SEASONAL_OUT_OF_STOCK");
 
   return (
     <div className="relative bg-cyan-50 bg-opacity-20 z-30">
