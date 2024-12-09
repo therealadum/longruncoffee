@@ -719,6 +719,7 @@ function Tags({ product }: any) {
     (f: any) =>
       [
         "All Coffee",
+        "SEASONAL_OUT_OF_STOCK",
         "Flavor",
         "Bundle",
         "Traditional",
