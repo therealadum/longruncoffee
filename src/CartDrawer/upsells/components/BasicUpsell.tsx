@@ -73,7 +73,8 @@ function _BasicUpsell({
           </button>
         </div>
         <h1 className="text-2xl font-accent max-w-xs self-center text-cyan-900 text-center">
-          Sleighin' Miles, Sippin' Flavor
+          Chestnut Praline / Pecan Brownie / Mint Vanilla Creme / Christmas Dark
+          Roast
         </h1>
         <div className="mt-8 px-4 grid grid-cols-3 gap-x-3 w-full">
           {perks.map((perk, i) => (
