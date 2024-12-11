@@ -34,23 +34,14 @@ const navigation = {
       id: "shop",
       name: "Shop",
       featured: [
-        today > bundles_week_end
-          ? {
-              name: "Sugar Cookie",
-              href: "/products/santa-sleighin-miles",
-              imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Santa.gif?v=1730944454&width=500",
-              imageAlt: "Sleighin' Miles Blend",
-              description: "Shop now",
-            }
-          : {
-              name: "Bundles Week",
-              href: "/pages/bundlesweekend",
-              imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Navigation_Banner_Gif.gif?v=1732498817&width=500",
-              imageAlt: "Bundles Week",
-              description: "Save up to 35%",
-            },
+        {
+          name: "Gifts",
+          href: "/collections/best-selling-gifts",
+          imageSrc:
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Gifts.gif?v=1733944444&width=500",
+          imageAlt: "Gifts",
+          description: "Shop now",
+        },
         {
           name: "Long Run Club",
           href: "/pages/long-run-club",
