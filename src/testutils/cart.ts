@@ -79,7 +79,6 @@ export const ShopifyCartAPI = {
         });
       });
       if (p && v) {
-        console.error("YOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYOYO");
         const lineitem = convertProductToCartItem(p, v);
         mockCart.items.push(lineitem);
         mockCart.item_count += 1;

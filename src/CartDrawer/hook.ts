@@ -66,37 +66,6 @@ export const useCartDrawerState = ({
   // state for the items within the regular cart
   const [cartState, setCartState] = useState<ICartState>(cart);
 
-  // update items
-  const update = useCallback(
-    async (
-      updates: any,
-      shouldOpen: boolean = true,
-      shouldSetCartState: boolean = true,
-      shouldSetLoading: boolean = true,
-      attributes?: any,
-    ) => {
-      if (shouldSetLoading) {
-        setLoading(true);
-      }
-      try {
-        const response = await updateCart(updates, attributes);
-        const newCart = await response.json();
-        if (shouldSetCartState) {
-          setCartState(newCart);
-        }
-        if (newCart.items.length && shouldOpen) {
-          setIsOpen(true);
-        }
-      } catch (e) {
-        console.error(e);
-      }
-      if (shouldSetLoading) {
-        setLoading(false);
-      }
-    },
-    [cartState, setCartState],
-  );
-
   // does cart have gift items in it?
   const cartContainsGiftItems = useMemo(() => {
     return (
@@ -555,6 +524,41 @@ export const useCartDrawerState = ({
     }
   };
 
+  // update items
+  const update = useCallback(
+    async (
+      updates: any,
+      shouldOpen: boolean = true,
+      shouldSetCartState: boolean = true,
+      shouldSetLoading: boolean = true,
+      attributes?: any,
+      shouldCheckout?: boolean,
+    ) => {
+      if (shouldSetLoading) {
+        setLoading(true);
+      }
+      try {
+        const response = await updateCart(updates, attributes);
+        const newCart = await response.json();
+        if (shouldSetCartState) {
+          setCartState(newCart);
+        }
+        if (newCart.items.length && shouldOpen) {
+          setIsOpen(true);
+        }
+      } catch (e) {
+        console.error(e);
+      }
+      if (shouldSetLoading) {
+        setLoading(false);
+      }
+      if (shouldCheckout) {
+        checkout();
+      }
+    },
+    [cartState, setCartState],
+  );
+
   // restore subscriptions
   useEffect(() => {
     if (!loading) {
@@ -690,5 +694,6 @@ export const useCartDrawerState = ({
     cartSubTotalWithDiscounts,
     upsells,
     display_only_cart_items,
+    cartRewardQuery,
   };
 };

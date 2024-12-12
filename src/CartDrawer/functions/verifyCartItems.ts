@@ -1,86 +1,40 @@
-import { ICartState, ISubscriptionCartState } from "../../common/product";
 import { UseQueryResult } from "react-query";
+import { ICartState } from "../../common/product";
+import { IProgressBarRewardAnimation } from "../sections/ProgressBar";
 import {
-  IAddToCartDisplayOnly,
-  IProgressBarRewardAnimation,
-} from "../sections/ProgressBar";
+  ICartBotItem,
+  ICartBotItemTrigger,
+  ICartBotItemTriggerEnum,
+} from "./CartBot";
 
-export enum ICartBotItemTriggerEnum {
-  "SUBSCRIPTION_ITEMS_PRESENT" = "SUBSCRIPTION_ITEMS_PRESENT",
-  "CART_VALUE_EXCEEDS" = "CART_VALUE_EXCEEDS",
-}
-
-export interface ICartBotItemTrigger {
-  enum: ICartBotItemTriggerEnum;
-  params?: any;
-}
-
-export interface ICartBotItem {
-  variant_ids: number[];
-  a2c_display_only: IAddToCartDisplayOnly[];
-  name: string;
-  triggers: ICartBotItemTrigger[];
-}
-
-const todayRightNow = new Date();
-
-interface ICartBotProps {
+interface IVerifyCartItemsProps {
   cartState: ICartState;
   totalSubscriptionItems: number;
-  subscriptionCartState: ISubscriptionCartState;
-  loading: boolean;
-  update: (updates: any) => Promise<void>;
   cartSubTotal: number;
   cartRewardQuery: UseQueryResult<IProgressBarRewardAnimation[], unknown>;
 }
 
-export function useCartBot({
+const todayRightNow = new Date();
+
+export enum IVerifyCartItemsResponse {
+  "VALID",
+  "MISSING_DATA",
+  "TOO_MANY_CART_ITEMS",
+  "MISSING_CART_ITEMS",
+}
+
+export function verifyCartItems({
   cartState,
-  subscriptionCartState,
   totalSubscriptionItems,
-  loading,
-  update,
   cartSubTotal,
   cartRewardQuery,
-}: ICartBotProps) {
+}: IVerifyCartItemsProps): IVerifyCartItemsResponse {
   if (!cartRewardQuery.data) {
-    return [];
+    return IVerifyCartItemsResponse.MISSING_DATA;
   }
-  const {
-    foundMissingItemInCart,
-    foundExtraItemInCart,
-    updates,
-    display_only_cart_items,
-  } = getCartBotUpdates({
-    cartRewards: cartRewardQuery.data,
-    cartSubTotal,
-    totalSubscriptionItems,
-    cartState,
-  });
-
-  if ((foundMissingItemInCart || foundExtraItemInCart) && !loading) {
-    update(updates);
-  }
-  return display_only_cart_items;
-}
-
-interface IGetCartBotUpdates {
-  cartRewards: IProgressBarRewardAnimation[];
-  cartSubTotal: number;
-  totalSubscriptionItems: number;
-  cartState: ICartState;
-}
-
-export function getCartBotUpdates({
-  cartRewards,
-  cartSubTotal,
-  totalSubscriptionItems,
-  cartState,
-}: IGetCartBotUpdates) {
-  const display_only_cart_items: IAddToCartDisplayOnly[] = [];
 
   // Convert cartRewardQuery data into cart bot items
-  const cartBotItems: ICartBotItem[] = cartRewards.map((reward) => {
+  const cartBotItems: ICartBotItem[] = cartRewardQuery.data.map((reward) => {
     const triggers: ICartBotItemTrigger[] = [];
     if (reward.reward_type === "MONETARY" && reward.reward_threshold) {
       triggers.push({
@@ -131,10 +85,6 @@ export function getCartBotUpdates({
     cbi.variant_ids.forEach((vid) => {
       updates[vid] = foundTrueTrigger && withinDateRange ? 1 : 0;
     });
-
-    if (foundTrueTrigger && withinDateRange) {
-      display_only_cart_items.push(...cbi.a2c_display_only);
-    }
   });
 
   // Compare updates with current cart state
@@ -149,6 +99,9 @@ export function getCartBotUpdates({
       foundMissingItemInCart = true;
     }
   });
+  if (foundMissingItemInCart) {
+    return IVerifyCartItemsResponse.MISSING_CART_ITEMS;
+  }
 
   let foundExtraItemInCart = false;
   cartState.items.forEach((csi) => {
@@ -164,10 +117,9 @@ export function getCartBotUpdates({
       foundExtraItemInCart = true;
     }
   });
-  return {
-    foundMissingItemInCart,
-    foundExtraItemInCart,
-    updates,
-    display_only_cart_items,
-  };
+  if (foundExtraItemInCart) {
+    return IVerifyCartItemsResponse.TOO_MANY_CART_ITEMS;
+  }
+
+  return IVerifyCartItemsResponse.VALID;
 }

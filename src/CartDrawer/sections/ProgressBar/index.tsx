@@ -60,7 +60,7 @@ function ProgressBar({
     queryFn: async () => {
       let data: IProgressBarRewardAnimation[] =
         cart_progress_bar_request.data.map((d) => ({
-          ...(d as IProgressBarRewardAnimation),
+          ...(d as unknown as IProgressBarRewardAnimation),
         }));
       try {
         const response = await axios(
@@ -154,7 +154,7 @@ function ProgressBar({
     : 0;
 
   return (
-    <div className="p-4 pb-0">
+    <div data-testid="free-shipping-progress" className="p-4 pb-0">
       <div className="relative rounded-full h-4 w-full bg-cyan-50 border border-cyan-500">
         <div
           className="absolute left-0 top-0 bottom-0 rounded-full bg-cyan-400 transition-all duration-500"

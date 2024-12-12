@@ -17,6 +17,11 @@ import { useState } from "react";
 import { items } from "./testdata";
 import { queryClient } from "../common/queryClient";
 import { QueryClientProvider } from "react-query";
+import {
+  IVerifyCartItemsResponse,
+  verifyCartItems,
+} from "./functions/verifyCartItems";
+import { getCartBotUpdates } from "./functions/CartBot";
 
 function _CartDrawer(args: any) {
   const stored_subscription = localStorage.getItem(referenceString);
@@ -44,6 +49,7 @@ function _CartDrawer(args: any) {
     cartContainsOneTimeItems,
     update,
     upsells,
+    cartRewardQuery,
   } = useCartDrawerState({
     cart: JSON.parse(
       decodeURIComponent(args.container.attributes.getNamedItem("cart").value),
@@ -82,11 +88,33 @@ function _CartDrawer(args: any) {
   };
 
   const checkoutOrUpsell = () => {
-    if (upsell) {
-      setIsOpen(false);
-      setUpsellActive(true);
-    } else {
-      checkout();
+    // check if anything is in cart that isn't supposed to be
+    const cart_status = verifyCartItems({
+      cartState,
+      totalSubscriptionItems,
+      cartSubTotal,
+      cartRewardQuery,
+    });
+    if (cart_status === IVerifyCartItemsResponse.VALID) {
+      if (upsell) {
+        setIsOpen(false);
+        setUpsellActive(true);
+      } else {
+        checkout();
+      }
+    } else if (
+      (cart_status === IVerifyCartItemsResponse.MISSING_DATA ||
+        cart_status === IVerifyCartItemsResponse.MISSING_CART_ITEMS) &&
+      cartRewardQuery.data
+    ) {
+      // update cart
+      const { updates } = getCartBotUpdates({
+        cartRewards: cartRewardQuery.data,
+        cartSubTotal,
+        totalSubscriptionItems,
+        cartState,
+      });
+      update(updates, false, false, false, cartState.attributes, true);
     }
   };
 
