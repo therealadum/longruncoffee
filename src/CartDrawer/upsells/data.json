@@ -2,14 +2,14 @@
   "campaigns": [
     {
       "id": 1727828292441,
-      "name": "Holiday Experimental Sampler - Not In Cart",
+      "name": "Best Sellers - Not In Cart",
       "conditions": {
         "combinator": "and",
         "rules": [
           {
             "field": "CART_VARIANTS",
             "operator": "NOT_CONTAINS_VARIANT_IDS",
-            "value": [50169282625849],
+            "value": [50275519136057],
             "id": "009848cb-6168-4607-8ec0-a2b018b7edbe"
           }
         ],
@@ -18,24 +18,24 @@
       "component": {
         "name": "BasicUpsell",
         "params": {
-          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Get_One_3x_new.gif?v=1733944444&width=800"
+          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Best_Sellers_Travel_Packs.gif?v=1734568823&width=800"
         }
       },
       "product": {
-        "handle": "holiday-experimental-sampler",
-        "variant_id": "gid://shopify/ProductVariant/50169282625849"
+        "handle": "best-sellers-travel-packs-light-medium-pb-j",
+        "variant_id": "gid://shopify/ProductVariant/50275519136057"
       }
     },
     {
       "id": 1727828256626,
-      "name": "Holiday Experimental Sampler - In Cart",
+      "name": "Best Sellers - In Cart",
       "conditions": {
         "combinator": "and",
         "rules": [
           {
             "field": "CART_VARIANTS",
             "operator": "CONTAINS_VARIANT_IDS",
-            "value": [50169282625849],
+            "value": [50275519136057],
             "id": "d55954af-e018-47e4-beef-cc6ff23358f3"
           }
         ],
@@ -44,12 +44,12 @@
       "component": {
         "name": "BasicUpsell",
         "params": {
-          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Get_One_3x_new.gif?v=1733944444&width=800"
+          "img": "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Best_Sellers_Travel_Packs.gif?v=1734568823&width=800"
         }
       },
       "product": {
-        "handle": "holiday-experimental-sampler",
-        "variant_id": "gid://shopify/ProductVariant/50169282625849"
+        "handle": "best-sellers-travel-packs-light-medium-pb-j",
+        "variant_id": "gid://shopify/ProductVariant/50275519136057"
       }
     }
   ]
