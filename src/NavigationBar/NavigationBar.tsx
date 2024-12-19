@@ -23,10 +23,15 @@ import {
 import Announcements from "./Announcements";
 
 const today = new Date();
-const bundles_week_end = new Date("12/3/24");
-bundles_week_end.setHours(0);
-bundles_week_end.setMinutes(0);
-bundles_week_end.setSeconds(0);
+const gift_promo_start = new Date("12/18/24");
+// const gift_promo_start = new Date("12/20/24");
+gift_promo_start.setHours(0);
+gift_promo_start.setMinutes(0);
+gift_promo_start.setSeconds(0);
+const gift_promo_end = new Date("12/23/24");
+gift_promo_end.setHours(0);
+gift_promo_end.setMinutes(0);
+gift_promo_end.setSeconds(0);
 
 const navigation = {
   categories: [
@@ -34,14 +39,32 @@ const navigation = {
       id: "shop",
       name: "Shop",
       featured: [
-        {
-          name: "Gifts",
-          href: "/collections/best-selling-gifts",
-          imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Gifts.gif?v=1733944444&width=500",
-          imageAlt: "Gifts",
-          description: "Shop now",
-        },
+        today < gift_promo_start
+          ? {
+              name: "Gifts",
+              href: "/collections/best-selling-gifts",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Gifts.gif?v=1733944444&width=500",
+              imageAlt: "Gifts",
+              description: "Shop now",
+            }
+          : today < gift_promo_end
+          ? {
+              name: "Gift Card BOGO",
+              href: "/products/long-run-coffee-card",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Gift_Card_Gif.gif?v=1734572795&width=500",
+              imageAlt: "Gift Card BOGO",
+              description: "Shop now",
+            }
+          : {
+              name: "Ready to Run",
+              href: "/products/ready-to-run",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600&width=500",
+              imageAlt: "Ready to Run",
+              description: "Shop now",
+            },
         {
           name: "Long Run Club",
           href: "/pages/long-run-club",
@@ -78,7 +101,7 @@ const navigation = {
         {
           order: 1,
           id: "hot-right-now",
-          name: "Hot Right Now",
+          name: "🔥 Hot Right Now",
           items: [
             {
               name: "Ready to Run",
@@ -87,6 +110,10 @@ const navigation = {
             {
               name: "Gift Cards",
               href: "/products/long-run-coffee-card",
+              label:
+                today > gift_promo_start && today < gift_promo_end
+                  ? "BOGO"
+                  : undefined,
             },
           ],
         },
@@ -108,7 +135,7 @@ const navigation = {
           name: "Long Run Coffee's First Instant Powder Is Here!",
           href: "/blogs/news/ready-to-run",
           imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600&width=500",
           imageAlt:
             "After a year of development, Long Run Coffee's first instant electrolyte powder is here.",
           description: "Read now",

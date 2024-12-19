@@ -6,6 +6,7 @@ import {
   ICartBotItemTrigger,
   ICartBotItemTriggerEnum,
 } from "./CartBot";
+import { variantIdInCart } from "../upsells/functions/variantIdInCart";
 
 interface IVerifyCartItemsProps {
   cartState: ICartState;
@@ -15,6 +16,10 @@ interface IVerifyCartItemsProps {
 }
 
 const todayRightNow = new Date();
+
+// const gift_card_promo_start = new Date(2024, 11, 20, 0, 0, 0);
+const gift_card_promo_start = new Date(2024, 11, 18, 0, 0, 0); // 12/20/24 at 12:00 AM
+const gift_card_promo_end = new Date(2024, 11, 23, 0, 0, 0); // 12/23/24 at 12:00 AM
 
 export enum IVerifyCartItemsResponse {
   "VALID",
@@ -58,6 +63,28 @@ export function verifyCartItems({
     };
   });
 
+  if (
+    todayRightNow > gift_card_promo_start &&
+    todayRightNow < gift_card_promo_end
+  ) {
+    cartBotItems.push({
+      name: "Free $25 Virtual Gift Card",
+      variant_ids: [50119844954425],
+      triggers: [
+        {
+          enum: ICartBotItemTriggerEnum.VARIANT_ID_IN_CART,
+          params: {
+            variant_ids: [
+              45397908390201, 45397908422969, 45397908455737, 45397908488505,
+              45397908521273,
+            ],
+          },
+        },
+      ],
+      a2c_display_only: [],
+    });
+  }
+
   // Build update object & evaluate if items should be in or out
   const updates: any = {};
   cartBotItems.forEach((cbi) => {
@@ -77,6 +104,13 @@ export function verifyCartItems({
           break;
         case ICartBotItemTriggerEnum.SUBSCRIPTION_ITEMS_PRESENT:
           foundTrueTrigger = totalSubscriptionItems >= trigger.params.value;
+          break;
+        case ICartBotItemTriggerEnum.VARIANT_ID_IN_CART:
+          foundTrueTrigger = variantIdInCart({
+            items: cartState.items,
+            variant_ids: trigger.params.variant_ids,
+          });
+          break;
         default:
           return;
       }
@@ -86,6 +120,32 @@ export function verifyCartItems({
       updates[vid] = foundTrueTrigger && withinDateRange ? 1 : 0;
     });
   });
+
+  // temporary rule to prevent adding travel pack if
+  // only item in cart is a gift cart
+  let cart_contains_only_gift_card = false;
+  const filtered_items_for_gift_cards = cartState.items.filter(
+    (item) =>
+      [
+        45397908357433, 45397908390201, 45397908422969, 45397908455737,
+        45397908488505, 45397908521273,
+      ].indexOf(item.variant_id) !== -1,
+  );
+  const items_that_arent_gifts = cartState.items.filter(
+    (item) => item.product_type !== "Gift",
+  );
+  cart_contains_only_gift_card =
+    items_that_arent_gifts.length === filtered_items_for_gift_cards.length;
+
+  // free travel set
+  if (updates[49182276747577] === 1 && cart_contains_only_gift_card) {
+    updates[49182276747577] = 0;
+  }
+
+  // sticker
+  if (updates[48056421482809] === 1 && cart_contains_only_gift_card) {
+    updates[48056421482809] = 0;
+  }
 
   // Compare updates with current cart state
   let foundMissingItemInCart = false;
