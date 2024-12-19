@@ -29,14 +29,14 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "Sugar cookie",
+            "heading": "Buy One, Get One Gift Card Sale is Live!",
             "heading_size": "h1"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>Electrolyte infused and full of flavor, Sleighin' Miles is here to help you... well... sleigh miles.</p>",
+            "text": "<p>Purchase any $50+ gift card and get a free $25 gift card, on us. </p><p>LRC gift cards are the perfect last minute holiday gift. Plus you get $25 to keep for  yourself ◡̈</p><p></p>",
             "text_style": "body"
           }
         },
@@ -57,7 +57,7 @@
         "p {font-size: 28px;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Santa_1.gif",
+        "image": "shopify://shop_images/Gift_Card_Gif.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
