@@ -11,22 +11,64 @@
   "sections": {
     "lrc-base-product": {
       "type": "lrc-base-product",
-      "settings": {
-      }
+      "settings": {}
     },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
         "product-description": {
           "type": "product-description",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "product-description"
       ],
+      "settings": {}
+    },
+    "image_with_text_PizpqR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GCqxbQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "BOGO GIFT CARD SALE IS LIVE!",
+            "heading_size": "h1"
+          }
+        },
+        "text_CdK46E": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Purchase any $50+ gift card and get a free $25 gift card, on us. </p><p>LRC gift cards are the perfect last minute holiday gift. Plus you get $25 to keep for  yourself ☻ </p><p>Offer valid through December 22, 2024.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_dyYwMQ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/long-run-coffee-card"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GCqxbQ",
+        "text_CdK46E",
+        "button_dyYwMQ"
+      ],
       "settings": {
+        "image": "shopify://shop_images/Gift_Card_7.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-32f77d80-b5bd-4ce4-8e48-9608677bf633",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "lrc-coffee-benefits-short": {
@@ -45,20 +87,69 @@
         "cta_scroll_to_id": "lrc-klaviyo-form"
       }
     },
+    "image_banner_f6FhGD": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_xjhgzi": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_FGkAM6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_hfntgg": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xjhgzi",
+        "text_FGkAM6",
+        "buttons_hfntgg"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Long_Run_Coffee_Gear_3x2_9f07c2c4-17fc-4232-836c-b52caf1495dc.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
     "one-click-upsell": {
       "type": "lrc-reviews",
       "blocks": {
         "one-click-upsell": {
           "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "one-click-upsell"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "lrc-review-summary": {
       "type": "lrc-review-summary",
@@ -140,8 +231,7 @@
       "blocks": {
         "judge_me_reviews_review_widget_iFiJeK": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -162,9 +252,7 @@
     },
     "featured_blog_nEgRQe": {
       "type": "featured-blog",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "heading": "Fuel your passion",
         "heading_size": "h2",
@@ -182,9 +270,7 @@
     },
     "featured_blog_NdLydd": {
       "type": "featured-blog",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "heading": "Recipes for Runners",
         "heading_size": "h1",
@@ -199,62 +285,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "image_banner_f6FhGD": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_xjhgzi": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_FGkAM6": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_hfntgg": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_xjhgzi",
-        "text_FGkAM6",
-        "buttons_hfntgg"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Long_Run_Coffee_Gear_3x2_9f07c2c4-17fc-4232-836c-b52caf1495dc.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
     }
   },
   "order": [
     "lrc-base-product",
     "lrc-accordion",
+    "image_with_text_PizpqR",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "image_banner_f6FhGD",
