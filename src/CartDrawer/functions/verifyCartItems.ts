@@ -123,27 +123,35 @@ export function verifyCartItems({
 
   // temporary rule to prevent adding travel pack if
   // only item in cart is a gift cart
-  let cart_contains_only_gift_card = false;
-  const filtered_items_for_gift_cards = cartState.items.filter(
-    (item) =>
-      [
-        45397908357433, 45397908390201, 45397908422969, 45397908455737,
-        45397908488505, 45397908521273,
-      ].indexOf(item.variant_id) !== -1,
-  );
+  let cart_contains_only_gift_card_or_mental_health = false;
+  const filtered_items_for_gift_cards_and_mental_health =
+    cartState.items.filter(
+      (item) =>
+        [
+          48138060661049, 45397908357433, 45397908390201, 45397908422969,
+          45397908455737, 45397908488505, 45397908521273,
+        ].indexOf(item.variant_id) !== -1,
+    );
   const items_that_arent_gifts = cartState.items.filter(
     (item) => item.product_type !== "Gift",
   );
-  cart_contains_only_gift_card =
-    items_that_arent_gifts.length === filtered_items_for_gift_cards.length;
+  cart_contains_only_gift_card_or_mental_health =
+    items_that_arent_gifts.length ===
+    filtered_items_for_gift_cards_and_mental_health.length;
 
   // free travel set
-  if (updates[49182276747577] === 1 && cart_contains_only_gift_card) {
+  if (
+    updates[49182276747577] === 1 &&
+    cart_contains_only_gift_card_or_mental_health
+  ) {
     updates[49182276747577] = 0;
   }
 
   // sticker
-  if (updates[48056421482809] === 1 && cart_contains_only_gift_card) {
+  if (
+    updates[48056421482809] === 1 &&
+    cart_contains_only_gift_card_or_mental_health
+  ) {
     updates[48056421482809] = 0;
   }
 
