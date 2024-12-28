@@ -23,15 +23,8 @@ import {
 import Announcements from "./Announcements";
 
 const today = new Date();
-const gift_promo_start = new Date("12/18/24");
-// const gift_promo_start = new Date("12/20/24");
-gift_promo_start.setHours(0);
-gift_promo_start.setMinutes(0);
-gift_promo_start.setSeconds(0);
-const gift_promo_end = new Date("12/23/24");
-gift_promo_end.setHours(0);
-gift_promo_end.setMinutes(0);
-gift_promo_end.setSeconds(0);
+const gift_promo_start = new Date(Date.UTC(2024, 11, 29, 5, 0, 0, 0));
+const gift_promo_end = new Date(Date.UTC(2025, 0, 2, 6, 0, 0, 0));
 
 const navigation = {
   categories: [
@@ -39,22 +32,13 @@ const navigation = {
       id: "shop",
       name: "Shop",
       featured: [
-        today < gift_promo_start
+        today >= gift_promo_start && today <= gift_promo_end
           ? {
-              name: "Gifts",
-              href: "/collections/best-selling-gifts",
+              name: "Countdown to New Year",
+              href: "/pages/countdown-to-new-year",
               imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Gifts.gif?v=1733944444&width=500",
-              imageAlt: "Gifts",
-              description: "Shop now",
-            }
-          : today < gift_promo_end
-          ? {
-              name: "Gift Card BOGO",
-              href: "/products/long-run-coffee-card",
-              imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Gift_Card_Gif.gif?v=1734572795&width=500",
-              imageAlt: "Gift Card BOGO",
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Navigation_Banner_Gif_1.gif?v=1735414809&width=500",
+              imageAlt: "Countdown to New Year",
               description: "Shop now",
             }
           : {
