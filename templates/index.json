@@ -29,22 +29,22 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "Buy One, Get One Gift Card Sale is Live!",
+            "heading": "Our New Year Sale is live!",
             "heading_size": "h1"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>Purchase any $50+ gift card and get a free $25 gift card, on us. </p><p>LRC gift cards are the perfect last minute holiday gift. Plus, you get $25 to keep for  yourself ☻ </p><p>Offer valid through December 22, 2024.</p><p></p>",
+            "text": "<p>Start your new year off right — caffeinated, hydrated, and motivated.</p><p>Sale is live from December 29 through January 1, while supplies last.</p>",
             "text_style": "body"
           }
         },
         "button_fQyRDF": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://products/long-run-coffee-card"
+            "button_label": "See the Deals",
+            "button_link": "https://longruncoffee.com/pages/countdown-to-new-year"
           }
         }
       },
@@ -53,12 +53,11 @@
         "text_rxcXGK",
         "button_fQyRDF"
       ],
-      "disabled": true,
       "custom_css": [
         "p {font-size: 28px;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Gift_Card_Gif.gif",
+        "image": "shopify://shop_images/Navigation_Banner_Gif_1.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
