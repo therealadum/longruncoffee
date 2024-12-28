@@ -17,10 +17,6 @@ interface IVerifyCartItemsProps {
 
 const todayRightNow = new Date();
 
-// const gift_card_promo_start = new Date(2024, 11, 20, 0, 0, 0);
-const gift_card_promo_start = new Date(2024, 11, 18, 0, 0, 0); // 12/20/24 at 12:00 AM
-const gift_card_promo_end = new Date(2024, 11, 23, 0, 0, 0); // 12/23/24 at 12:00 AM
-
 export enum IVerifyCartItemsResponse {
   "VALID",
   "MISSING_DATA",
@@ -62,28 +58,6 @@ export function verifyCartItems({
       a2c_display_only: reward.add_to_cart_display_only,
     };
   });
-
-  if (
-    todayRightNow > gift_card_promo_start &&
-    todayRightNow < gift_card_promo_end
-  ) {
-    cartBotItems.push({
-      name: "Free $25 Virtual Gift Card",
-      variant_ids: [50119844954425],
-      triggers: [
-        {
-          enum: ICartBotItemTriggerEnum.VARIANT_ID_IN_CART,
-          params: {
-            variant_ids: [
-              45397908390201, 45397908422969, 45397908455737, 45397908488505,
-              45397908521273,
-            ],
-          },
-        },
-      ],
-      a2c_display_only: [],
-    });
-  }
 
   // Build update object & evaluate if items should be in or out
   const updates: any = {};

@@ -18,6 +18,7 @@ export interface ICartBotItemTrigger {
 }
 
 export interface ICartBotItem {
+  id: number;
   variant_ids: number[];
   a2c_display_only: IAddToCartDisplayOnly[];
   name: string;
@@ -73,10 +74,6 @@ interface IGetCartBotUpdates {
 
 const todayRightNow = new Date();
 
-// const gift_card_promo_start = new Date(2024, 11, 20, 0, 0, 0); // 12/20/24 at 12:00 AM
-const gift_card_promo_start = new Date(2024, 11, 18, 0, 0, 0); // 12/20/24 at 12:00 AM
-const gift_card_promo_end = new Date(2024, 11, 23, 0, 0, 0); // 12/23/24 at 12:00 AM
-
 export function getCartBotUpdates({
   cartRewards,
   cartSubTotal,
@@ -101,6 +98,7 @@ export function getCartBotUpdates({
       });
     }
     return {
+      id: reward.id,
       name: reward.name,
       variant_ids: reward.add_to_cart.map((a2c) =>
         parseInt(a2c.variant_id.split("/").pop() as string),
@@ -110,30 +108,10 @@ export function getCartBotUpdates({
     };
   });
 
-  if (
-    todayRightNow > gift_card_promo_start &&
-    todayRightNow < gift_card_promo_end
-  ) {
-    cartBotItems.push({
-      name: "Free $25 Virtual Gift Card",
-      variant_ids: [50119844954425],
-      triggers: [
-        {
-          enum: ICartBotItemTriggerEnum.VARIANT_ID_IN_CART,
-          params: {
-            variant_ids: [
-              45397908357433, 45397908390201, 45397908422969, 45397908455737,
-              45397908488505, 45397908521273,
-            ],
-          },
-        },
-      ],
-      a2c_display_only: [],
-    });
-  }
-
   // Build update object & evaluate if items should be in or out
+  const pre_updates: any = {};
   const updates: any = {};
+
   cartBotItems.forEach((cbi) => {
     let foundTrueTrigger = false;
     let withinDateRange = true;
@@ -164,12 +142,27 @@ export function getCartBotUpdates({
     });
 
     cbi.variant_ids.forEach((vid) => {
-      updates[vid] = foundTrueTrigger && withinDateRange ? 1 : 0;
+      if (!pre_updates[vid]) {
+        pre_updates[vid] = {};
+      }
+      pre_updates[vid][cbi.id] = foundTrueTrigger && withinDateRange ? 1 : 0;
     });
 
     if (foundTrueTrigger && withinDateRange) {
       display_only_cart_items.push(...cbi.a2c_display_only);
     }
+  });
+
+  // set reward update to MAX quantity found in map
+  Object.keys(pre_updates).forEach((pre_update_key) => {
+    const obj = pre_updates[pre_update_key];
+    let update_quantity = 0;
+    Object.keys(obj).forEach((obj_key) => {
+      if (obj[obj_key] > update_quantity) {
+        update_quantity = obj[obj_key];
+      }
+    });
+    updates[pre_update_key] = update_quantity;
   });
 
   // temporary rule to prevent adding travel pack if
