@@ -88,6 +88,11 @@ const navigation = {
           name: "🔥 Hot Right Now",
           items: [
             {
+              name: "Sitewide Sale",
+              href: "/pages/countdown-to-new-year",
+              label: "Sale",
+            },
+            {
               name: "Ready to Run",
               href: "/products/ready-to-run",
             },
