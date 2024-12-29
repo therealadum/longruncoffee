@@ -94,10 +94,6 @@ const navigation = {
             {
               name: "Gift Cards",
               href: "/products/long-run-coffee-card",
-              label:
-                today > gift_promo_start && today < gift_promo_end
-                  ? "BOGO"
-                  : undefined,
             },
           ],
         },

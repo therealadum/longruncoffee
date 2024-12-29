@@ -95,7 +95,6 @@ function _CartDrawer(args: any) {
       cartSubTotal,
       cartRewardQuery,
     });
-    console.log(`[checkoutOrUpsell] - ${cart_status}`);
 
     if (cart_status === IVerifyCartItemsResponse.VALID) {
       if (upsell) {
