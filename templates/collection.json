@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "gp_global_section_546735289234621262_hBb8yq": {
-      "type": "gp-global-section-546735289234621262",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": ""
-      }
-    },
     "gp_global_section_539510752042550419_attY46": {
       "type": "gp-global-section-539510752042550419",
       "disabled": true,
@@ -65,7 +58,6 @@
     }
   },
   "order": [
-    "gp_global_section_546735289234621262_hBb8yq",
     "gp_global_section_539510752042550419_attY46",
     "gp_global_section_541817153842578480_MCwBiD",
     "banner",
