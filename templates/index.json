@@ -53,6 +53,7 @@
         "text_rxcXGK",
         "button_fQyRDF"
       ],
+      "disabled": true,
       "custom_css": [
         "p {font-size: 28px;}"
       ],
