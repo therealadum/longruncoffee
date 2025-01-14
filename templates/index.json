@@ -29,22 +29,22 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "Our New Year Sale is live!",
-            "heading_size": "h1"
+            "heading": "Snickerdoodle Is here!",
+            "heading_size": "h2"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>Start your new year off right — caffeinated, hydrated, and motivated.</p><p>Sale is live from December 29 through January 1, while supplies last.</p>",
+            "text": "<p>Our limited winter release is here to help you stay motivated during these dark, cold days. </p><p>Get yours while supplies last!</p>",
             "text_style": "body"
           }
         },
         "button_fQyRDF": {
           "type": "button",
           "settings": {
-            "button_label": "See the Deals",
-            "button_link": "https://longruncoffee.com/pages/countdown-to-new-year"
+            "button_label": "Get Mine",
+            "button_link": "shopify://products/base-phase-blend-snickerdoodle"
           }
         }
       },
@@ -53,12 +53,11 @@
         "text_rxcXGK",
         "button_fQyRDF"
       ],
-      "disabled": true,
       "custom_css": [
-        "p {font-size: 28px;}"
+        "p {font-size: 24px;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Navigation_Banner_Gif_1.gif",
+        "image": "shopify://shop_images/Snickerdoodle_Launch.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
