@@ -34,19 +34,19 @@ const navigation = {
       featured: [
         today >= gift_promo_start && today <= gift_promo_end
           ? {
-              name: "Countdown to New Year",
-              href: "/pages/countdown-to-new-year",
-              imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Navigation_Banner_Gif_1.gif?v=1735414809&width=500",
-              imageAlt: "Countdown to New Year",
-              description: "Shop now",
-            }
-          : {
               name: "Ready to Run",
               href: "/products/ready-to-run",
               imageSrc:
                 "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600&width=500",
               imageAlt: "Ready to Run",
+              description: "Shop now",
+            }
+          : {
+              name: "Snickerdoodle",
+              href: "/products/base-phase-blend-snickerdoodle",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Snickerdoodle_Launch.gif?v=1736885485&width=500",
+              imageAlt: "Snickerdoodle",
               description: "Shop now",
             },
         {
@@ -104,11 +104,11 @@ const navigation = {
       name: "Info",
       featured: [
         {
-          name: "Sugar Cookie",
-          href: "/products/santa-sleighin-miles",
+          name: "Snickerdoodle",
+          href: "/products/base-phase-blend-snickerdoodle",
           imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Santa.gif?v=1730944454&width=500",
-          imageAlt: "Sleighin' Miles Blend",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Snickerdoodle_Launch.gif?v=1736885485&width=500",
+          imageAlt: "Snickerdoodle",
           description: "Shop now",
         },
         {
