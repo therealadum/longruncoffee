@@ -1,5 +1,6 @@
 import * as yup from "yup";
 import * as data from "./data.json";
+import * as snickerdoodle_data from "./snickerdoodle.json";
 import {
   ICartState,
   IProduct,
@@ -26,7 +27,11 @@ export const IUpsellSchema = yup.object({
 
 export type IUpsell = yup.InferType<typeof IUpsellSchema>;
 
-const upsell_campaigns: IUpsell[] = data.campaigns;
+const today = new Date();
+const snickerdoodle_start = new Date(Date.UTC(2025, 0, 19, 6, 0, 0, 0));
+
+const upsell_campaigns: IUpsell[] =
+  today > snickerdoodle_start ? snickerdoodle_data.campaigns : data.campaigns;
 
 const product_hashes: string[] = [];
 upsell_campaigns.forEach((usc) => {
