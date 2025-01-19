@@ -35,6 +35,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "custom_css": [
         "h1 {font-size: 35px;}"
       ],
@@ -63,13 +64,21 @@
         "padding_top": 32,
         "padding_bottom": 32
       }
+    },
+    "gp_global_section_549834816321750213_DaPJ9b": {
+      "type": "gp-global-section-549834816321750213",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
     }
   },
   "order": [
+    "banner",
+    "gp_global_section_549834816321750213_DaPJ9b",
     "gp_global_section_546734978587690208_tDx8nh",
     "gp_global_section_539510752042550419_attY46",
     "gp_global_section_541819721629041529_UmqnbJ",
-    "banner",
     "product-grid"
   ]
 }
