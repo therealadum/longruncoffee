@@ -92,8 +92,9 @@ const navigation = {
               href: "/products/ready-to-run",
             },
             {
-              name: "Gift Cards",
-              href: "/products/long-run-coffee-card",
+              name: "Snickerdoodle",
+              href: "/products/base-phase-blend-snickerdoodle",
+              label: "NEW",
             },
           ],
         },
