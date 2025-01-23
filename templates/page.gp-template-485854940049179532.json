@@ -27,6 +27,7 @@
     },
     "gp_global_section_549834816321750213_NUrTgM": {
       "type": "gp-global-section-549834816321750213",
+      "disabled": true,
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": ""
@@ -162,9 +163,9 @@
     }
   },
   "order": [
+    "gp_global_section_549834816321750213_NUrTgM",
     "gp_global_section_549190775087301655_UbEHqK",
     "gp_section_534533922415969420",
-    "gp_global_section_549834816321750213_NUrTgM",
     "gp_section_485854940099511180",
     "gp_section_534553535400903481",
     "gp_section_534553516996297723",
