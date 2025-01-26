@@ -4,6 +4,7 @@ import reactToWebComponent from "react-to-webcomponent";
 
 import { CartDrawer, ProductForm, NavigationBar, ClubPromoRoast } from ".";
 import GempagesAddToCartButton from "./GempagesAddToCartButton";
+import { Collection } from "./Collection/Collection";
 
 declare global {
   interface Window {
@@ -40,5 +41,12 @@ customElements.define(
   "gempages-add-to-cart-button",
   reactToWebComponent(GempagesAddToCartButton, React, ReactDOMClient, {
     props: ["variant_id", "available"],
+  }),
+);
+
+customElements.define(
+  "lrc-collection",
+  reactToWebComponent(Collection, React, ReactDOMClient, {
+    props: ["collectionjson", "productsjson"],
   }),
 );

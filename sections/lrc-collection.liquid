@@ -1,0 +1,63 @@
+<div id="lrc-collection"></div>
+
+<script
+  type="text/javascript"
+>
+  const reviews = {};
+  {% for product in collection.products %}
+    {% if product.metafields.reviews.rating_count > 0 %}
+      reviews[{{ product.id }}] = {{ product.metafields.reviews | json }}
+    {% endif %}
+  {% endfor %}
+  const collections = [];
+  let c = null;
+  const parser = new DOMParser();
+  {% for collection in section.settings.coffee_collections %}
+    c = {{ collection | json }}
+    collections.push({
+      category: parser.parseFromString(c.body_html, 'text/html')?.body?.textContent || '',
+      title: c.title,
+      href: `/collections/${c.handle}`,
+      src: `http:${c.image.src}&width=300`,
+      is_all_coffee: true,
+    })
+  {% endfor %}
+  {% for collection in section.settings.other_collections %}
+    c = {{ collection | json }}
+    collections.push({
+      category: parser.parseFromString(c.body_html, 'text/html')?.body?.textContent || '',
+      title: c.title,
+      href: `/collections/${c.handle}`,
+      src: `http:${c.image.src}&width=300`,
+      is_all_coffee: false,
+    })
+  {% endfor %}
+  const collectionjson = encodeURIComponent(JSON.stringify({
+    collection: {{ collection | json }},
+    collections,
+    products: {{ collection.products | json }},
+    reviews
+  }))
+  const lrc_collection = `<lrc-collection collectionjson="${collectionjson}"></lrc-collection>`
+  document.getElementById('lrc-collection').innerHTML = lrc_collection;
+</script>
+
+{% schema %}
+{
+  "name": "LRC Collection",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "collection_list",
+      "id": "coffee_collections",
+      "label": "Featured Coffee Collections (these can be filtered)"
+    },
+    {
+      "type": "collection_list",
+      "id": "other_collections",
+      "label": "Featured Other Collections (no filtering)"
+    }
+  ]
+}
+{% endschema %}
