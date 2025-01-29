@@ -3,6 +3,13 @@ import { IPlans } from "./plans";
 export const referenceString = "v2-subscription-items";
 
 export const plans: IPlans = {
+  starter: {
+    display_name: "Starter",
+    bag_min: 1,
+    perk_list: ["10% savings", "Experimental samples"],
+    discount: 0.1,
+    type: "starter",
+  },
   base: {
     display_name: "Base",
     bag_min: 2,

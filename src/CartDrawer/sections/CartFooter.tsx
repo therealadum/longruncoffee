@@ -6,7 +6,6 @@ interface ICartFooterProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   checkout: any;
   checkoutState:
-    | "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT"
     | "OKAY"
     | "MINIMUM_SPEND"
     | "NOTHING_TO_CHECKOUT"
@@ -50,11 +49,6 @@ export function CartFooter({
         <span className="block md:hidden font-medium text-xs pb-1 text-center text-tan-600">
           Your cart requires a minimum spend of $
           {(parseFloat(minimum_spend.amount) / 100).toFixed(2)}
-        </span>
-      ) : null}
-      {checkoutState === "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT" ? (
-        <span className="block md:hidden font-medium text-xs pb-1 text-center text-tan-600">
-          Subscribe & Save requires a 2 bag minumum
         </span>
       ) : null}
       {checkoutState === "ONLY_GIFTS" ? (
@@ -107,11 +101,6 @@ export function CartFooter({
             <span className="hidden md:block tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center">
               Your cart requires a minimum spend of $
               {(parseFloat(minimum_spend.amount) / 100).toFixed(2)}
-            </span>
-          ) : null}
-          {checkoutState === "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT" ? (
-            <span className="hidden md:block tooltip rounded shadow p-1.5 bg-tan-50 text-tan-700 text-sm -mt-24 lg:-mt-16 text-center">
-              Subscribe & Save requires a 2 bag minumum
             </span>
           ) : null}
           {checkoutState === "ONLY_GIFTS" ? (

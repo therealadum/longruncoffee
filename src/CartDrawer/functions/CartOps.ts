@@ -18,7 +18,6 @@ export function checkoutStatus({
   plan,
   cartSubTotalWithDiscounts,
 }: ICheckoutStatusProps):
-  | "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT"
   | "OKAY"
   | "NOTHING_TO_CHECKOUT"
   | "MINIMUM_SPEND"
@@ -28,8 +27,6 @@ export function checkoutStatus({
     cartState?.attributes?.minimum_spend?.amount > cartSubTotalWithDiscounts
   ) {
     return "MINIMUM_SPEND";
-  } else if (subscriptionCartState.items.length && !plan) {
-    return "SUBSCRIBE_AND_SAVE_MINIMUM_BAG_COUNT";
   } else if (subscriptionCartState.items.length && plan) {
     return "OKAY";
   } else if (

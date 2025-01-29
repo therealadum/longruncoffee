@@ -8,6 +8,7 @@ export interface IPlan {
 
 export interface IPlans {
   base: IPlan;
+  starter: IPlan;
   pro: IPlan;
   elite: IPlan;
 }

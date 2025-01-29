@@ -126,8 +126,10 @@ export const useCartDrawerState = ({
       subscriptionCartState.items.forEach((item) => (qty += item.quantity));
 
       // get tier
-      let plan = plans.base;
-      if (qty >= plans.elite.bag_min) {
+      let plan = plans.starter;
+      if (qty >= plans.base.bag_min) {
+        plan = plans.base;
+      } else if (qty >= plans.elite.bag_min) {
         plan = plans.elite;
       } else if (qty >= plans.pro.bag_min) {
         plan = plans.pro;
@@ -173,17 +175,21 @@ export const useCartDrawerState = ({
       plan = plans.pro;
     } else if (totalSubscriptionItems >= plans.base.bag_min) {
       plan = plans.base;
+    } else if (totalSubscriptionItems >= plans.starter.bag_min) {
+      plan = plans.starter;
     }
     return plan;
   }, [totalSubscriptionItems]);
   const nextPlan = useMemo(() => {
-    let newNextPlan: IPlan | null = plans.base;
+    let newNextPlan: IPlan | null = plans.starter;
     if (totalSubscriptionItems >= plans.elite.bag_min) {
       newNextPlan = null;
     } else if (totalSubscriptionItems >= plans.pro.bag_min) {
       newNextPlan = plans.elite;
     } else if (totalSubscriptionItems >= plans.base.bag_min) {
       newNextPlan = plans.pro;
+    } else if (totalSubscriptionItems >= plans.starter.bag_min) {
+      newNextPlan = plans.base;
     }
     return newNextPlan;
   }, [plan]);
@@ -416,15 +422,12 @@ export const useCartDrawerState = ({
       return;
     }
 
-    // prevent checkout if user has only one item in subscription
-    if (subscriptionCartState.items.length && !plan) {
-      return;
-    }
-
     if (subscriptionCartState.items.length && plan) {
       // calculate tier based on items
       let bundleVariantId: null | string = null;
-      if (plan.display_name.toLowerCase() === "base") {
+      if (plan.display_name.toLowerCase() === "starter") {
+        bundleVariantId = "50397064986937";
+      } else if (plan.display_name.toLowerCase() === "base") {
         bundleVariantId = "47884295078201";
       } else if (plan.display_name.toLowerCase() === "pro") {
         bundleVariantId = "47884295110969";
@@ -653,7 +656,7 @@ export const useCartDrawerState = ({
     document.dispatchEvent(
       new CustomEvent("subscription_changed", {
         detail: {
-          newDiscount: plan?.discount || plans.base.discount,
+          newDiscount: plan?.discount || plans.starter.discount,
           nextPlan: nextPlan,
         },
       }),

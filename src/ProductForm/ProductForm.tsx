@@ -81,8 +81,10 @@ function getProductCosts(
   qty += quantity;
 
   // get tier
-  let plan = plans.base;
-  if (qty >= plans.elite.bag_min) {
+  let plan = plans.starter;
+  if (qty >= plans.base.bag_min) {
+    plan = plans.base;
+  } else if (qty >= plans.elite.bag_min) {
     plan = plans.elite;
   } else if (qty >= plans.pro.bag_min) {
     plan = plans.pro;
@@ -142,8 +144,10 @@ function useProductCosts(variant: any, quantity: any): any {
   qty += quantity;
 
   // get tier
-  let plan = plans.base;
-  if (qty >= plans.elite.bag_min) {
+  let plan = plans.starter;
+  if (qty >= plans.base.bag_min) {
+    plan = plans.base;
+  } else if (qty >= plans.elite.bag_min) {
     plan = plans.elite;
   } else if (qty >= plans.pro.bag_min) {
     plan = plans.pro;
@@ -240,6 +244,8 @@ function calculateCurrentDiscountInformation() {
     plan = plans.pro;
   } else if (items.length >= plans.base.bag_min - 1) {
     plan = plans.base;
+  } else if (items.length >= plans.starter.bag_min - 1) {
+    plan = plans.starter;
   } else {
     plan = null;
   }
@@ -249,8 +255,10 @@ function calculateCurrentDiscountInformation() {
     nextPlan = plans.elite;
   } else if (items.length === plans.pro.bag_min - 1) {
     nextPlan = plans.pro;
-  } else {
+  } else if (items.length === plans.base.bag_min - 1) {
     nextPlan = plans.base;
+  } else {
+    nextPlan = plans.starter;
   }
 
   return {
