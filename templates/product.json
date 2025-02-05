@@ -216,6 +216,10 @@
     },
     "featured_blog_6nQLaw": {
       "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
       "settings": {
         "heading": "Fuel Your Passion",
         "heading_size": "h1",
@@ -233,6 +237,10 @@
     },
     "featured_blog_R6TUwB": {
       "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
       "settings": {
         "heading": "Recipes for Runners",
         "heading_size": "h1",
