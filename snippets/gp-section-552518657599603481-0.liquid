@@ -2,21 +2,47 @@
     {%- assign gpBkProduct = product -%}
     
         {%- liquid
-          if request.page_type != 'product'
-            assign product = all_products['lrc-x-yeti-french-press']
-            assign productId = '9777079288121' | times: 1
-            if product == empty or product == null
+          if request.page_type == 'product'
+            if 'static' == 'static'
+              if '9773416251705' == 'latest'
+                paginate collections.all.products by 100000
+                  assign product = collections.all.products | sort: 'created_at' | reverse | first
+                endpaginate
+              else
+                assign product = all_products['club-bonus-amaretto-creme']
+                assign productId = '9773416251705' | times: 1
+                if product == empty or product == null
+                  paginate collections.all.products by 100000
+                    for item in collections.all.products
+                      if item.id == productId
+                        assign product = item
+                      endif
+                    endfor
+                  endpaginate
+                endif
+              endif
+            endif
+          else
+            if '9773416251705' == 'latest'
               paginate collections.all.products by 100000
-                for item in collections.all.products
-                  if item.id == productId
-                    assign product = item
-                  endif
-                endfor
+                assign product = collections.all.products | sort: 'created_at'| reverse | first
               endpaginate
+            else
+              assign product = all_products['club-bonus-amaretto-creme']
+              assign productId = '9773416251705' | times: 1
+              if product == empty or product == null
+                paginate collections.all.products by 100000
+                  for item in collections.all.products
+                    if item.id == productId
+                      assign product = item
+                    endif
+                  endfor
+                endpaginate
+              endif
             endif
           endif
         -%}
-        
+      
 
     {%-if product != empty and product != null -%}
       {%- assign initVariantId =  -%}
