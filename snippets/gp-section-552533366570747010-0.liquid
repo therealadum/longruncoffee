@@ -2,34 +2,60 @@
     {%- assign gpBkProduct = product -%}
     
         {%- liquid
-          if request.page_type != 'product'
-            assign product = all_products['lrc-x-yeti-french-press']
-            assign productId = '9777079288121' | times: 1
-            if product == empty or product == null
+          if request.page_type == 'product'
+            if 'static' == 'static'
+              if '9777079288121' == 'latest'
+                paginate collections.all.products by 100000
+                  assign product = collections.all.products | sort: 'created_at' | reverse | first
+                endpaginate
+              else
+                assign product = all_products['lrc-x-yeti-french-press']
+                assign productId = '9777079288121' | times: 1
+                if product == empty or product == null
+                  paginate collections.all.products by 100000
+                    for item in collections.all.products
+                      if item.id == productId
+                        assign product = item
+                      endif
+                    endfor
+                  endpaginate
+                endif
+              endif
+            endif
+          else
+            if '9777079288121' == 'latest'
               paginate collections.all.products by 100000
-                for item in collections.all.products
-                  if item.id == productId
-                    assign product = item
-                  endif
-                endfor
+                assign product = collections.all.products | sort: 'created_at'| reverse | first
               endpaginate
+            else
+              assign product = all_products['lrc-x-yeti-french-press']
+              assign productId = '9777079288121' | times: 1
+              if product == empty or product == null
+                paginate collections.all.products by 100000
+                  for item in collections.all.products
+                    if item.id == productId
+                      assign product = item
+                    endif
+                  endfor
+                endpaginate
+              endif
             endif
           endif
         -%}
-        
+      
 
     {%-if product != empty and product != null -%}
-      {%- assign initVariantId =  -%}
+      {%- assign initVariantId = 50003198312761 -%}
       {%- assign product_form_id = 'product-form-' | append: "gJ8gSeI9yR" -%}
-      {%- assign variant = product.selected_or_first_available_variant -%}
-      {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
+      {%- assign variant = product.variants | where: 'id', initVariantId | first -%}
+      {%- assign productSelectedVariant = product.variants | where: 'id', initVariantId | first -%}
       {%-if productSelectedVariant == empty or productSelectedVariant == null -%}
         {%- assign productSelectedVariant = product.selected_or_first_available_variant -%}
       {%- endif -%}
       {%-if variant == empty or variant == null -%}
         {%- assign variant = product.selected_or_first_available_variant -%}
       {%- endif -%}
-      <gp-product data-uid="gJ8gSeI9yR" data-id="gJ8gSeI9yR"   gp-context='{"productId": {{ product.id }}, "preSelectedOptionIds": [], "isSyncProduct": "true", "variantSelected": {{ variant | json | escape }}, "inventoryQuantity": {{ variant.inventory_quantity }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
+      <gp-product data-uid="gJ8gSeI9yR" data-id="gJ8gSeI9yR"   gp-context='{"productId": {{ product.id }}, "preSelectedOptionIds": [4445872521529,4451431940409], "isSyncProduct": "true", "variantSelected": {{ variant | json | escape }}, "inventoryQuantity": {{ variant.inventory_quantity }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
         gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1, "productUrl":{{ product.url | json | escape }}, "productHandle":{{ product.handle | json | escape }}, "collectionUrl": {{ collection.url | json | escape }}, "collectionHandle": {{ collection.handle | json | escape }}}'>
         <product-form class="product-form">
           {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
