@@ -11,6 +11,7 @@
   "sections": {
     "lrc-base-product": {
       "type": "lrc-base-product",
+      "disabled": true,
       "settings": {}
     },
     "gp_global_section_552208349601465447_WtdYzc": {
