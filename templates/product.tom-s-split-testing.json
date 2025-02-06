@@ -13,6 +13,13 @@
       "type": "lrc-base-product",
       "settings": {}
     },
+    "gp_global_section_552208349601465447_WtdYzc": {
+      "type": "gp-global-section-552208349601465447",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
+    },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
@@ -259,6 +266,7 @@
   },
   "order": [
     "lrc-base-product",
+    "gp_global_section_552208349601465447_WtdYzc",
     "lrc-accordion",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
