@@ -10,17 +10,17 @@
 {
   "layout": "theme.gempages.blank",
   "sections": {
-    "gp_section_552501968833086584": {
-      "type": "gp-section-552501968833086584",
-      "settings": {
-        "section_preload": "true",
-        "checksum": "5bd2c71d18e81805a04fa688ea9506642270a020ca957d581a9d80943b10334e_1_1"
-      }
-    },
     "gp_section_552499823614427929": {
       "type": "gp-section-552499823614427929",
       "settings": {
-        "checksum": "174cd2a8bd39128d599b0d7fc13f0a563fe3fa29f7f4e72d2d156c707ffecd45_1_1"
+        "section_preload": "true",
+        "checksum": "1dd58c6b568717109e7ea7a300e08cc84a95daf411b0120258abe3c633ae6dc0_1_1"
+      }
+    },
+    "gp_section_552502472736769144": {
+      "type": "gp-section-552502472736769144",
+      "settings": {
+        "checksum": "91f3ce54f7c071b59f4d0ccb4e322d85342618ecde2a4b56e64486b89c4732a4_1_1"
       }
     },
     "gp_section_552499823614690073": {
@@ -49,8 +49,8 @@
     }
   },
   "order": [
-    "gp_section_552501968833086584",
     "gp_section_552499823614427929",
+    "gp_section_552502472736769144",
     "gp_section_552499823614690073",
     "gp_section_552499823614362393",
     "gp_section_552499823614559001",
