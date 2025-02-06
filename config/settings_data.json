@@ -207,14 +207,14 @@
           "cards_border_color": "rgba(0,0,0,0)"
         }
       },
-      "17676059084223943535": {
-        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": false,
-        "settings": {}
-      },
       "6478312753674380289": {
         "type": "shopify://apps/gempages-builder/blocks/embed-gp-script-head/20b379d4-1b20-474c-a6ca-665c331919f3",
         "disabled": false,
+        "settings": {}
+      },
+      "17676059084223943535": {
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": true,
         "settings": {}
       }
     },
