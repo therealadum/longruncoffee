@@ -9,11 +9,6 @@
  */
 {
   "sections": {
-    "lrc-base-product": {
-      "type": "lrc-base-product",
-      "disabled": true,
-      "settings": {}
-    },
     "gp_global_section_552208349601465447_WtdYzc": {
       "type": "gp-global-section-552208349601465447",
       "settings": {
@@ -48,6 +43,11 @@
         "lrc_accordion_item_2",
         "lrc_accordion_item_3"
       ],
+      "settings": {}
+    },
+    "lrc-base-product": {
+      "type": "lrc-base-product",
+      "disabled": true,
       "settings": {}
     },
     "lrc-coffee-benefits-short": {
@@ -266,9 +266,9 @@
     }
   },
   "order": [
-    "lrc-base-product",
     "gp_global_section_552208349601465447_WtdYzc",
     "lrc-accordion",
+    "lrc-base-product",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "one-click-upsell",
