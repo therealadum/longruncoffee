@@ -28,7 +28,7 @@
 {%- assign gpBkProduct = product -%}
 {%- assign gpBkProducts = products -%}
 {%- liquid
-      assign productHandles = 'the-post-race-banana,the-pre-run-pb-j,run-brunch-bottomless-mimosa,run-brunch-blueberry-pancake,run-brunch-maple-bacon,stroopwafel,race-season-roast,santa-sleighin-miles,base-phase-blend-snickerdoodle'| split: ','
+      assign productHandles = 'the-post-race-banana,the-pre-run-pb-j,run-brunch-bottomless-mimosa,run-brunch-blueberry-pancake,run-brunch-maple-bacon,stroopwafel,race-season-roast,santa-sleighin-miles,base-phase-blend-snickerdoodle,mint-cookie,trail-mix'| split: ','
       assign products = null
       assign target_collection = null
       assign productSrc = 'PickProduct'
@@ -65,7 +65,7 @@
             endfor
             assign limit = products.length
           else
-            if 9 == 0
+            if 11 == 0
               paginate collections.all.products by 100000
                 assign products = collections.all.products  | sort : "created_at"  | reverse
               endpaginate
@@ -90,7 +90,7 @@
       -%}
         
     {%- if products == null -%}
-    {%- if count == 0 and 9 == 0 -%}
+    {%- if count == 0 and 11 == 0 -%}
       {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
         {% else %}
@@ -692,7 +692,7 @@
       
       draggable="false"
       class="gp-w-full featured-image-only !gp-rounded-none"
-      data-src="{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}" data-srcset="{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }} 768w,{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }} 1024w,{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }} 1440w" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgwIiBoZWlnaHQ9IjQ4MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxkZWZzPgogICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImctNDgwLTQ4MCI+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0icmdiYSg1MSwgNTEsIDUxLCAwKSIgb2Zmc2V0PSIyMCUiIC8+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0icmdiYSg1MSwgNTEsIDUxLCAwKSIgb2Zmc2V0PSI1MCUiIC8+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0icmdiYSg1MSwgNTEsIDUxLCAwKSIgb2Zmc2V0PSI3MCUiIC8+CiAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8cmVjdCB3aWR0aD0iNDgwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iNDgwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0idXJsKCNnLTQ4MC00ODApIiAvPgogICAgPGFuaW1hdGUgeGxpbms6aHJlZj0iI3IiIGF0dHJpYnV0ZU5hbWU9IngiIGZyb209Ii00ODAiIHRvPSI0ODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" width="480" height="480" alt="no image"
+      data-src="{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}" data-srcset="{{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgwIiBoZWlnaHQ9IjQ4MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxkZWZzPgogICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImctNDgwLTQ4MCI+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0icmdiYSg1MSwgNTEsIDUxLCAwKSIgb2Zmc2V0PSIyMCUiIC8+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0icmdiYSg1MSwgNTEsIDUxLCAwKSIgb2Zmc2V0PSI1MCUiIC8+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0icmdiYSg1MSwgNTEsIDUxLCAwKSIgb2Zmc2V0PSI3MCUiIC8+CiAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8cmVjdCB3aWR0aD0iNDgwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iNDgwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0idXJsKCNnLTQ4MC00ODApIiAvPgogICAgPGFuaW1hdGUgeGxpbms6aHJlZj0iI3IiIGF0dHJpYnV0ZU5hbWU9IngiIGZyb209Ii00ODAiIHRvPSI0ODAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" width="480" height="480" alt="no image"
       quality-type={"desktop":"finest"}
       quality-percent={"desktop":100}
       data-sizes="auto"
@@ -874,7 +874,7 @@
             </gp-product>
         {%- endif -%}
         {% endfor %}
-        {%- if count == 0 and 9 == 0 -%}
+        {%- if count == 0 and 11 == 0 -%}
           {% if 'PickProduct' == 'RelatedProduct' -%}
               <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
             {% else %}
