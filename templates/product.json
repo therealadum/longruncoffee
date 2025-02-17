@@ -190,7 +190,7 @@
         "text_3Ybr6Q": {
           "type": "text",
           "settings": {
-            "text": "<p>The coffee beans used in our electrolyte infused coffee are sourced from Costa Rica, Brazil and Mexico, depending on the roast.  </p><p>All of our roasts use arabica beans and are organic, FDA approved, and have no GMOs.</p><p>Our green bean supplier is heavily involved with the farms they source beans from and even started the <a href=\"https://nkgbloom.coffee/\" target=\"_blank\" title=\"NKG Bloom\">NKG Bloom program</a> in several countries to help farming communities.</p>",
+            "text": "<p>The coffee beans used in our electrolyte infused coffee are arabic beans sourced from Costa Rica, Brazil and Mexico, depending on the roast.  </p><p>All of our roasts use arabica beans and are organic, FDA approved, and have no GMOs.</p><p>Our green bean supplier is heavily involved with the farms they source beans from and even started the <a href=\"https://nkgbloom.coffee/\" target=\"_blank\" title=\"NKG Bloom\">NKG Bloom program</a> in several countries to help farming communities.</p>",
             "text_style": "body"
           }
         }
@@ -208,6 +208,52 @@
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
         "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_CxL9kk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_iiYrpQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Process",
+            "heading_size": "h1"
+          }
+        },
+        "text_HxzVLK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our proprietary process infuses the four essential electrolytes (sodium, magnesium, potassium, and calcium) directly into the natural oils of coffee during the roasting process. </p><p>Does it taste salty? No way. </p><p>We infuse the electrolytes for performance and optimize for taste. Most athletes prefer the taste of LRC over the coffee they were drinking before making the switch. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_9QkJAY": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_iiYrpQ",
+        "text_HxzVLK",
+        "button_9QkJAY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Coffee_Roasting.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 36,
@@ -270,6 +316,7 @@
     "17093999844598d023",
     "3e4ec809-784d-4120-a4a6-cced1ff5c986",
     "image_with_text_JtUkwM",
+    "image_with_text_CxL9kk",
     "featured_blog_6nQLaw",
     "featured_blog_R6TUwB"
   ]
