@@ -9,89 +9,149 @@
  */
 {
   "sections": {
+    "gp_global_section_554702231539025136_43xT3b": {
+      "type": "gp-global-section-554702231539025136",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
+    },
     "gp_section_534533922415969420": {
       "type": "gp-section-534533922415969420",
       "settings": {
         "section_preload": "true",
-        "checksum": "1eb7f4fe59542102a5da7a315906bf0326cece4b63f1b231ebb4d925f885b648_1_1"
+        "checksum": "1eb7f4fe59542102a5da7a315906bf0326cece4b63f1b231ebb4d925f885b648_1_1",
+        "ggYy7627c3k_label": "Build My Subscription"
       }
     },
     "gp_section_485854940099511180": {
       "type": "gp-section-485854940099511180",
       "settings": {
-        "checksum": "15507e6936c40cf31e60d0fc0fb6ee319c5effd5024026554de9c374dc89a098_1_1"
+        "section_preload": "false",
+        "checksum": "15507e6936c40cf31e60d0fc0fb6ee319c5effd5024026554de9c374dc89a098_1_1",
+        "ggBUuxsx2zr_label": "Build My Subscription"
       }
     },
     "gp_section_534553535400903481": {
       "type": "gp-section-534553535400903481",
       "settings": {
-        "checksum": "65d0cddaa6ef424b630952020f7af941a57beba65acb504c4879dd8675b960f9_1_1"
+        "section_preload": "false",
+        "checksum": "65d0cddaa6ef424b630952020f7af941a57beba65acb504c4879dd8675b960f9_1_1",
+        "ggToySFkNsY_text": "<p>Club Benefits</p>"
       }
     },
     "gp_section_534553516996297723": {
       "type": "gp-section-534553516996297723",
       "settings": {
-        "checksum": "f76164119fd60de44280d8358b247ffeabf29dc10ddb50ab0362237015701ac4_1_1"
+        "section_preload": "false",
+        "checksum": "f76164119fd60de44280d8358b247ffeabf29dc10ddb50ab0362237015701ac4_1_1",
+        "ggrV_TiYVq6_label": "Build My Subscription"
       }
     },
     "gp_section_485884236306318590": {
       "type": "gp-section-485884236306318590",
       "settings": {
-        "checksum": "de8fc8eee6acad07523dc5e26b1d5985ec83822d51cae08e9c61184c4c1bd5a3_1_1"
+        "section_preload": "false",
+        "checksum": "de8fc8eee6acad07523dc5e26b1d5985ec83822d51cae08e9c61184c4c1bd5a3_1_1",
+        "ggqeDdF4nM2_label": "Build My Subscription"
       }
     },
     "gp_section_485854940166620044": {
       "type": "gp-section-485854940166620044",
       "settings": {
-        "checksum": "a5013f825f10f93503d1f5de0d457647aec8dae3f1dca34db75fdb05c8c6c1e1_1_1"
+        "section_preload": "false",
+        "checksum": "a5013f825f10f93503d1f5de0d457647aec8dae3f1dca34db75fdb05c8c6c1e1_1_1",
+        "ggzlUWrMTCt_childItem_0": "<p>1 Item</p>",
+        "ggzlUWrMTCt_childItem_1": "<p>2 Items</p>",
+        "ggzlUWrMTCt_childItem_2": "<p>3 Items</p>",
+        "ggzlUWrMTCt_childItem_3": "<p>4+ Items</p>",
+        "gguyanfB-5b_label": "Build My Subscription"
       }
     },
     "gp_section_505612812685411434": {
       "type": "gp-section-505612812685411434",
       "settings": {
-        "checksum": "e5e830386ba9b81def113c6084c7f0d3855df9fb4e16c355153877828bf5520b_1_1"
+        "section_preload": "false",
+        "checksum": "e5e830386ba9b81def113c6084c7f0d3855df9fb4e16c355153877828bf5520b_1_1",
+        "ggG2O4qv9o1_text": "<p>How it Works</p>",
+        "ggKFSrRpBT8_text": "<p>Choose Your Items</p>",
+        "ggKw7z008xB_text": "<p>Go to any favorite LRC product, and select \"Subscribe &amp; Save.\"</p>",
+        "ggVe0LifdbJ_text": "<p>Save up to 25% + Bonuses</p>",
+        "ggHPDIO0561_text": "<p>Maximize your savings &amp; free welcome gear by subscribing to 4+ items. </p>",
+        "ggN7yqhat99_text": "<p>Maximum Flexibility</p>",
+        "gg88L-kuUCy_text": "<p>Skip, Cancel, and Edit Anytime.</p><p>Full Control &amp; Risk Free.</p>",
+        "gg67GuatpUk_label": "Build My Subscription"
       }
     },
     "gp_section_534536956860695567": {
       "type": "gp-section-534536956860695567",
       "settings": {
-        "checksum": "fdf29eedcb4035d17e0fa25ebe975e5c76217398762b0f3da66da2fbf7973709_1_1"
+        "section_preload": "false",
+        "checksum": "fdf29eedcb4035d17e0fa25ebe975e5c76217398762b0f3da66da2fbf7973709_1_1",
+        "gg5MkJQscYh_text": "<p>Club Best Sellers</p>"
       }
     },
     "gp_section_534536446346789903": {
       "type": "gp-section-534536446346789903",
       "settings": {
-        "checksum": "8ca604b0718352831534b88f39a2a785bc2056e5ad8471916bdc8a14d73f8aff_1_1"
+        "section_preload": "false",
+        "checksum": "8ca604b0718352831534b88f39a2a785bc2056e5ad8471916bdc8a14d73f8aff_1_1",
+        "gg8T-zHWeiF_label": "Build My Subscription"
       }
     },
     "gp_section_485854940166685580": {
       "type": "gp-section-485854940166685580",
       "settings": {
-        "checksum": "40d27f88880cd821e9a5bdfd8db2a899b2086c60d21673a59956a277a300030b_1_1"
+        "section_preload": "false",
+        "checksum": "40d27f88880cd821e9a5bdfd8db2a899b2086c60d21673a59956a277a300030b_1_1",
+        "gggvXc9f2sL_text": "<p>1. You can reschedule your next shipment for a specific day.</p><p> </p><p>2. You can skip as many shipments as you need to. This way you can keep your savings tier and club bonuses, without getting too much product.</p><p> </p><p>3. Manage your bundle to cancel, upgrade, or edit the items in your shipment.</p>",
+        "ggFaqN5ph1d_label": "Build My Subscription"
       }
     },
     "gp_section_534592796451931151": {
       "type": "gp-section-534592796451931151",
       "settings": {
-        "checksum": "ebc7651909dfe72713844eae778f99fc70197e86c19cbc887aef697489e0b7f1_1_1"
+        "section_preload": "false",
+        "checksum": "ebc7651909dfe72713844eae778f99fc70197e86c19cbc887aef697489e0b7f1_1_1",
+        "ggrDLSrR3lM_text": "<p>Savings / year calculated with club savings, shipping, free experimental samples, and applicable welcome gear.</p>",
+        "gg9_ji8nmLz_label": "Build My Subscription"
       }
     },
     "gp_section_485864644125131660": {
       "type": "gp-section-485864644125131660",
       "settings": {
-        "checksum": "806796de53862d6a0699f9f4f41bb81ff1fe03f9a418070fb87ef610a6c747e6_1_1"
+        "section_preload": "false",
+        "checksum": "806796de53862d6a0699f9f4f41bb81ff1fe03f9a418070fb87ef610a6c747e6_1_1",
+        "ggpLJudGgJZ_label": "Build My Subscription"
       }
     },
     "gp_section_485854940183397260": {
       "type": "gp-section-485854940183397260",
       "settings": {
-        "checksum": "bca7d3a9e4153a3ec04dc5fc3c046ba7b3921273bfaf60800d0a0a632bee30b9_1_1"
+        "section_preload": "false",
+        "checksum": "bca7d3a9e4153a3ec04dc5fc3c046ba7b3921273bfaf60800d0a0a632bee30b9_1_1",
+        "ggkujRpGPmh_text": "<p>Long Run Club FAQs</p>",
+        "ggS04LChPE4_childItem_0": "<p>What is the Long Run Club?</p>",
+        "ggS04LChPE4_childItem_1": "<p>Do I have to add the gear and samples to my cart?</p>",
+        "ggS04LChPE4_childItem_2": "<p>How often are subscription shipments?</p>",
+        "ggS04LChPE4_childItem_3": "<p>Why should I subscribe?</p>",
+        "ggS04LChPE4_childItem_4": "<p>How do the experimental coffees work? </p>",
+        "ggS04LChPE4_childItem_5": "<p>How fast is shipping?</p>",
+        "ggS04LChPE4_childItem_6": "<p>Will my price ever increase?</p>",
+        "ggEPw1HqFve_text": "<p>The Long Run Club is a monthly subscription for you to get your favorite LRC items each month without worry. Members save on coffee &amp; shipping, plus enjoy bonus perks.</p>",
+        "ggi1jn0QkUd_text": "<p>Nope! The experimental flavor samples are automatically added to your orders each month - there is no need to add these to your cart. </p><p> </p><p>Same for the free welcome gear. Applicable gear for your plan automatically ships with your third shipment - there is nothing for you to do!</p><p> </p><p>You'll get a routine emails to confirm your items &amp; shipments. </p>",
+        "gg_yHc4ae8E_text": "<p>This is a monthly subscription! Your personalized subscription items are sent on the same day each month.</p>",
+        "ggmAosSups9_text": "<p>When you subscribe to the Long Run Club, you unlock savings, shipping benefits, free experimental roast samples, and free welcome gear. Long Run Club members enjoy routine coffee deliveries, to make consistent training easy. </p>",
+        "gglHk818gi5_text": "<p>Each month you automatically receive two complimentary samples of new &amp; experimental LRC roasts (both traditional &amp; flavored). The samples change each month, and it'll be a surprise. </p><p> </p><p>Our club members are the first to try these experimental flavors, and will decide which become LRC's new full time products.</p>",
+        "ggIlcOZng4Q_text": "<p>We use expedited shipping for our club members.</p>",
+        "gg0iy772Kk8_text": "<p>When athletes sign up for the Long Run Club, we're guaranteeing that the price they're paying for electrolyte infused coffee will never increase. Regardless of inflation and supply chain issues, club members will know what to expect, forever. </p>"
       }
     }
   },
   "order": [
     "gp_section_534533922415969420",
     "gp_section_485854940099511180",
+    "gp_global_section_554702231539025136_43xT3b",
     "gp_section_534553535400903481",
     "gp_section_534553516996297723",
     "gp_section_485884236306318590",
