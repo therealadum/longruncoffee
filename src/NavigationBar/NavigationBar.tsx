@@ -23,8 +23,8 @@ import {
 import Announcements from "./Announcements";
 
 const today = new Date();
-const gift_promo_start = new Date(Date.UTC(2024, 11, 29, 5, 0, 0, 0));
-const gift_promo_end = new Date(Date.UTC(2025, 0, 2, 6, 0, 0, 0));
+const gift_promo_start = new Date(Date.UTC(2025, 1, 26, 5, 0, 0, 0));
+const gift_promo_end = new Date(Date.UTC(2025, 3, 5, 5, 0, 0, 0));
 
 const navigation = {
   categories: [
@@ -32,23 +32,14 @@ const navigation = {
       id: "shop",
       name: "Shop",
       featured: [
-        today >= gift_promo_start && today <= gift_promo_end
-          ? {
-              name: "Ready to Run",
-              href: "/products/ready-to-run",
-              imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Adam_Gif.gif?v=1728772600&width=500",
-              imageAlt: "Ready to Run",
-              description: "Shop now",
-            }
-          : {
-              name: "Snickerdoodle",
-              href: "/products/base-phase-blend-snickerdoodle",
-              imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Snickerdoodle_Launch.gif?v=1736885485&width=500",
-              imageAlt: "Snickerdoodle",
-              description: "Shop now",
-            },
+        {
+          name: "Mint Vanilla Creme",
+          href: "/products/mint-cookie",
+          imageSrc:
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Menu.gif?v=1740612979&width=500",
+          imageAlt: "Mint Vanilla Creme",
+          description: "Shop now",
+        },
         {
           name: "Long Run Club",
           href: "/pages/long-run-club",
@@ -92,8 +83,8 @@ const navigation = {
               href: "/products/ready-to-run",
             },
             {
-              name: "Snickerdoodle",
-              href: "/products/base-phase-blend-snickerdoodle",
+              name: "Mint Vanilla Creme",
+              href: "/products/mint-cookie",
               label: "NEW",
             },
           ],
@@ -105,11 +96,11 @@ const navigation = {
       name: "Info",
       featured: [
         {
-          name: "Snickerdoodle",
-          href: "/products/base-phase-blend-snickerdoodle",
+          name: "Mint Vanilla Creme",
+          href: "/products/mint-cookie",
           imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Snickerdoodle_Launch.gif?v=1736885485&width=500",
-          imageAlt: "Snickerdoodle",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Menu.gif?v=1740612979&width=500",
+          imageAlt: "Mint Vanilla Creme",
           description: "Shop now",
         },
         {
@@ -272,7 +263,7 @@ export function NavigationBar() {
                                 >
                                   {/* @ts-ignore */}
                                   {item?.label ? (
-                                    <div className="mr-1 bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
+                                    <div className="mr-1 bg-cyan-200 self-start rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
                                       {/* @ts-ignore */}
                                       {item.label}
                                     </div>
@@ -417,7 +408,7 @@ export function NavigationBar() {
                                           >
                                             {/* @ts-ignore */}
                                             {item?.label ? (
-                                              <div className="mr-1 -mt-px bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
+                                              <div className="mr-1 -mt-px self-start bg-cyan-200 rounded-md p-1 text-cyan-700 group-hover:text-cyan-800 group-hover:bg-cyan-300 text-xs font-medium">
                                                 {/* @ts-ignore */}
                                                 {item.label}
                                               </div>
