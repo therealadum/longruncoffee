@@ -199,6 +199,10 @@
         "heading_wPyir4",
         "text_3Ybr6Q"
       ],
+      "custom_css": [
+        "@media (max-width: 960px) {p {font-size: 16px; }}",
+        "@media (min-width: 961px) {p {font-size: 22px; }}"
+      ],
       "settings": {
         "image": "shopify://shop_images/top_down_view_of_a_travel_tumbler_of_coffee_with_coffee_beans_on_the_white_platform.jpg",
         "height": "adapt",
@@ -245,6 +249,10 @@
         "text_HxzVLK",
         "button_9QkJAY"
       ],
+      "custom_css": [
+        "@media (max-width: 960px) {p {font-size: 16px; }}",
+        "@media (min-width: 961px) {p {font-size: 20px; }}"
+      ],
       "settings": {
         "image": "shopify://shop_images/Coffee_Roasting.jpg",
         "height": "adapt",
@@ -252,7 +260,7 @@
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "content_layout": "overlap",
         "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
