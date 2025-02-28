@@ -36,7 +36,7 @@
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>Mint Vanilla Creme was the most-requested flavor by club members, so we made it a full-time flavor!</p><p>While supplies last, you can get a bag for FREE when you start a new subscription. </p>",
+            "text": "<p>Long Run Club members (subscribers) test new flavors with every shipment. Mint Vanilla Creme was introduced in November of 2024, and has since become the <strong>single most-requested flavor.</strong></p><p>Think Girl Scout Thin Mints Cookies meets Andes Mints meets Mint Chip Ice Cream.</p><p>It's smooth, easy on your stomach, and the perfect addition to your running routine.</p>",
             "text_style": "body"
           }
         },
@@ -44,7 +44,7 @@
           "type": "button",
           "settings": {
             "button_label": "Get Mine",
-            "button_link": "shopify://blogs/news/mint-cookie-mint-vanilla-creme-is-here"
+            "button_link": "shopify://products/mint-cookie"
           }
         }
       },
@@ -54,7 +54,7 @@
         "button_fQyRDF"
       ],
       "custom_css": [
-        "p {font-size: 24px;}"
+        "p {font-size: 18px;}"
       ],
       "settings": {
         "image": "shopify://shop_images/Half_Dome_Mint_cookie_square.png",
