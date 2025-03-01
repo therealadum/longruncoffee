@@ -76,9 +76,7 @@ function _BasicUpsell({
           </button>
         </div>
         <h1 className="text-2xl font-accent max-w-xs self-center text-cyan-900 text-center">
-          {today > snickerdoodle_start
-            ? "Snickerdoodle - Base Phase Blend"
-            : "Best Sellers Travel Packs — Light / Medium / PB&J"}
+          Best Sellers Travel Packs — Light / Medium / PB&J
         </h1>
         <div className="mt-8 px-4 grid grid-cols-3 gap-x-3 w-full">
           {perks.map((perk, i) => (

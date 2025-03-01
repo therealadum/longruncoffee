@@ -30,8 +30,7 @@ export type IUpsell = yup.InferType<typeof IUpsellSchema>;
 const today = new Date();
 const snickerdoodle_start = new Date(Date.UTC(2025, 0, 19, 6, 0, 0, 0));
 
-const upsell_campaigns: IUpsell[] =
-  today > snickerdoodle_start ? snickerdoodle_data.campaigns : data.campaigns;
+const upsell_campaigns: IUpsell[] = data.campaigns;
 
 const product_hashes: string[] = [];
 upsell_campaigns.forEach((usc) => {
