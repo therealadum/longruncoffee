@@ -9,8 +9,8 @@
  */
 {
   "sections": {
-    "gp_global_section_554702231539025136_43xT3b": {
-      "type": "gp-global-section-554702231539025136",
+    "gp_global_section_555920513323500596_8gCPNB": {
+      "type": "gp-global-section-555920513323500596",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": ""
@@ -149,7 +149,7 @@
     }
   },
   "order": [
-    "gp_global_section_554702231539025136_43xT3b",
+    "gp_global_section_555920513323500596_8gCPNB",
     "gp_section_534533922415969420",
     "gp_section_485854940099511180",
     "gp_section_534553535400903481",
