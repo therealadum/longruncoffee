@@ -43,7 +43,7 @@
         "button_fQyRDF": {
           "type": "button",
           "settings": {
-            "button_label": "Get Mine",
+            "button_label": "Shop Now",
             "button_link": "shopify://products/mint-cookie"
           }
         }
