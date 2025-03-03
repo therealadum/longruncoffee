@@ -28,7 +28,7 @@
 {%- assign gpBkProduct = product -%}
 {%- assign gpBkProducts = products -%}
 {%- liquid
-      assign productHandles = 'the-post-race-banana,the-pre-run-pb-j,run-brunch-bottomless-mimosa,run-brunch-blueberry-pancake,run-brunch-maple-bacon,stroopwafel,race-season-roast,santa-sleighin-miles,base-phase-blend-snickerdoodle,mint-cookie,trail-mix'| split: ','
+      assign productHandles = 'the-post-race-banana,the-pre-run-pb-j,run-brunch-bottomless-mimosa,run-brunch-blueberry-pancake,run-brunch-maple-bacon,stroopwafel,race-season-roast,santa-sleighin-miles,base-phase-blend-snickerdoodle,mint-cookie,trail-mix,run-brunch-bundle'| split: ','
       assign products = null
       assign target_collection = null
       assign productSrc = 'PickProduct'
@@ -65,7 +65,7 @@
             endfor
             assign limit = products.length
           else
-            if 11 == 0
+            if 12 == 0
               paginate collections.all.products by 100000
                 assign products = collections.all.products  | sort : "created_at"  | reverse
               endpaginate
@@ -90,7 +90,7 @@
       -%}
         
     {%- if products == null -%}
-    {%- if count == 0 and 11 == 0 -%}
+    {%- if count == 0 and 12 == 0 -%}
       {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
         {% else %}
@@ -874,7 +874,7 @@
             </gp-product>
         {%- endif -%}
         {% endfor %}
-        {%- if count == 0 and 11 == 0 -%}
+        {%- if count == 0 and 12 == 0 -%}
           {% if 'PickProduct' == 'RelatedProduct' -%}
               <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
             {% else %}
