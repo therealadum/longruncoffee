@@ -11,6 +11,7 @@
   "sections": {
     "gp_global_section_555920513323500596_bRWADY": {
       "type": "gp-global-section-555920513323500596",
+      "disabled": true,
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": ""
@@ -18,7 +19,6 @@
     },
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "custom_css": [
         "h1 {font-size: 35px;}"
       ],
