@@ -32,6 +32,43 @@
       ],
       "settings": {}
     },
+    "newsletter_eyf8Pc": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_JycGJQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join our community",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_Ce6HwP": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Exclusive deals, limited releases, and motivation delivered to your inbox.</p>"
+          }
+        },
+        "email_form_Qg6CDr": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_JycGJQ",
+        "paragraph_Ce6HwP",
+        "email_form_Qg6CDr"
+      ],
+      "custom_css": [
+        "p {font-size: 20px;}",
+        "h2 {font-size: 32px;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "gp_global_section_541817153842578480_r7L7Vj": {
       "type": "gp-global-section-541817153842578480",
       "disabled": true,
@@ -42,14 +79,13 @@
     },
     "d3b0ac57-5524-42de-879f-6a527664d1df": {
       "type": "featured-blog",
-      "disabled": true,
       "settings": {
-        "heading": "Fuel Your passion",
+        "heading": "More Motivation",
         "heading_size": "h1",
-        "blog": "",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "",
+        "blog": "fuel-your-passion",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-2",
         "show_image": true,
         "show_date": true,
         "show_author": false,
@@ -127,6 +163,7 @@
   },
   "order": [
     "main",
+    "newsletter_eyf8Pc",
     "gp_global_section_541817153842578480_r7L7Vj",
     "d3b0ac57-5524-42de-879f-6a527664d1df",
     "23248347-63e2-42e0-98ed-979b4b69f4b7",
