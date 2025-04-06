@@ -33,11 +33,11 @@ const navigation = {
       name: "Shop",
       featured: [
         {
-          name: "Mint Vanilla Creme",
-          href: "/products/mint-cookie",
+          name: "Trail Mix",
+          href: "/products/trail-mix",
           imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Menu.gif?v=1740612979&width=500",
-          imageAlt: "Mint Vanilla Creme",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Trail_Mix.gif?v=1743910281&width=500",
+          imageAlt: "Trail Mix",
           description: "Shop now",
         },
         {
@@ -83,8 +83,8 @@ const navigation = {
               href: "/products/ready-to-run",
             },
             {
-              name: "Mint Vanilla Creme",
-              href: "/products/mint-cookie",
+              name: "Trail Mix",
+              href: "/products/trail-mix",
               label: "NEW",
             },
           ],
@@ -96,11 +96,11 @@ const navigation = {
       name: "Info",
       featured: [
         {
-          name: "Mint Vanilla Creme",
-          href: "/products/mint-cookie",
+          name: "Trail Mix",
+          href: "/products/trail-mix",
           imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Menu.gif?v=1740612979&width=500",
-          imageAlt: "Mint Vanilla Creme",
+            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Trail_Mix.gif?v=1743910281&width=500",
+          imageAlt: "Trail Mix",
           description: "Shop now",
         },
         {
