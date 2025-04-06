@@ -29,22 +29,22 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "Mint Cookie Is here!",
+            "heading": "Trail Mix Is here!",
             "heading_size": "h2"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>Long Run Club members (subscribers) test new flavors with every shipment. Mint Vanilla Creme was introduced in November of 2024, and has since become the <strong>single most-requested flavor.</strong></p><p>It's smooth, easy on your stomach, and the perfect addition to your running routine.</p>",
+            "text": "<p><strong>\"Who at all the damn chocolate?\"</strong></p><p>This Trail Mix flavor is sweet, smooth, and keeps you running. Plus, you never have to worry about someone picking out all the chocolate. </p><p>Infused with essential electrolytes, this coffee delivers hydration and a stronger energy kick to reduce morning fatigue. </p><p>It's made to help runners build a routine they love, and train consistently. </p>",
             "text_style": "body"
           }
         },
         "button_fQyRDF": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://products/mint-cookie"
+            "button_label": "Take Me There",
+            "button_link": "shopify://products/trail-mix"
           }
         }
       },
@@ -58,7 +58,7 @@
         "@media (min-width: 961px) {p {font-size: 24px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Half_Dome_Mint_cookie_square.png",
+        "image": "shopify://shop_images/Trail_Mix.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
