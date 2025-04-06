@@ -36,7 +36,7 @@
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>\"Who at all the damn chocolate?\"</strong></p><p>This Trail Mix flavor is sweet, smooth, and keeps you running. Plus, you never have to worry about someone picking out all the chocolate. </p><p>Infused with essential electrolytes, this coffee delivers hydration and a stronger energy kick to reduce morning fatigue. </p><p>It's made to help runners build a routine they love, and train consistently. </p>",
+            "text": "<p><strong>\"Who at all the damn chocolate?\"</strong></p><p>This Trail Mix flavor is sweet, smooth, and keeps you running. Plus, you never have to worry about someone picking out all the chocolate. </p><p>Infused with essential electrolytes, this coffee delivers hydration and a stronger energy kick to reduce morning fatigue. </p>",
             "text_style": "body"
           }
         },
@@ -64,7 +64,7 @@
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "content_layout": "overlap",
         "color_scheme": "inverse",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
