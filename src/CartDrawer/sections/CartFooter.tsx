@@ -27,7 +27,7 @@ export function CartFooter({
   minimum_spend,
 }: ICartFooterProps) {
   return (
-    <div className="flex-1 mt-4 border-t border-cyan-200 flex flex-col space-y-2 flex-shrink-0 justify-end px-4 py-4">
+    <div className="flex-1 border-t border-cyan-200 flex flex-col space-y-2 flex-shrink-0 justify-end px-4 py-4">
       <div className="flex items-center">
         <h4 className="flex-1 text-lg font-accent text-cyan-700">Subtotal</h4>
         {totalSubscriptionItems ? (

@@ -5,8 +5,8 @@ import {
   DialogTitle,
   TransitionChild,
 } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import ProgressBar from "./sections/ProgressBar";
+import { XMarkIcon } from "@heroicons/react/24/solid";
+import { ProgressBar } from "./sections/ProgressBar";
 import { LongRunClub } from "./sections/LongRunClub";
 import { useCartDrawerState } from "./hook";
 import { OneTimePurchases } from "./sections/OneTimePurchases";
@@ -129,13 +129,13 @@ function _CartDrawer(args: any) {
 
         <div className="fixed inset-0 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full md:pl-10">
               <DialogPanel
                 transition
                 className="pointer-events-auto relative w-screen max-w-md transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700"
               >
                 <TransitionChild>
-                  <div className="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 duration-500 ease-in-out data-[closed]:opacity-0 sm:-ml-10 sm:pr-4">
+                  <div className="absolute md:flex left-0 top-0 -ml-8 hidden pr-2 pt-4 duration-500 ease-in-out data-[closed]:opacity-0 sm:-ml-10 sm:pr-4">
                     <button
                       type="button"
                       onClick={() => setIsOpen(false)}
@@ -152,19 +152,25 @@ function _CartDrawer(args: any) {
                   className="flex h-full flex-col bg-white shadow-xl"
                 >
                   <div className="p-4 sm:p-6 bg-cyan-600">
-                    <DialogTitle className="text-xl font-accent leading-6 text-white">
-                      Your Cart
+                    <DialogTitle className="flex items-center">
+                      <span className="text-xl font-accent leading-6 text-white">
+                        Your Cart
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setIsOpen(false)}
+                        className="md:hidden ml-auto flex items-center justify-center text-cyan-50 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                      >
+                        <span className="sr-only">Close cart</span>
+                        <XMarkIcon aria-hidden="true" className="size-6 " />
+                      </button>
                     </DialogTitle>
                   </div>
                   {cartState.items.length > 0 ||
                   subscriptionCartState.items.length > 0 ? (
                     <>
-                      <div className="grid grid-cols-1 space-y-8 overflow-y-auto">
+                      <div className="grid grid-cols-1 space-y-8 overflow-y-auto overflow-x-hidden scrollbar-hidden">
                         <ProgressBar
-                          isCartEmpty={
-                            cartState.item_count == 0 &&
-                            totalSubscriptionItems == 0
-                          }
                           totalSubscriptionItems={totalSubscriptionItems}
                           cartSubtotal={cartSubTotalWithDiscounts}
                         />

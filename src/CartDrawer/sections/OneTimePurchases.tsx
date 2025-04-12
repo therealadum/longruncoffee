@@ -38,6 +38,7 @@ export function OneTimePurchases({
         <div className="grid grid-cols-1 gap-8 pt-2">
           {cartState.items
             .filter((item) => item.product_type !== "Gift")
+            .filter((item) => item.handle)
             .map((item, i) => (
               <CartItem
                 key={item.variant_id}

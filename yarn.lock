@@ -1977,6 +1977,13 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@konami-emoji-blast/react@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@konami-emoji-blast/react/-/react-0.0.1.tgz#b812c9b92242e2ec84bf53868dc58812710f4dc9"
+  integrity sha512-6CP0+peDPmFYH1kYNmi570pACi7DRQI6aaKLsVAqMsEfXmsxTXib6rHoEEw/9t0hJ2YYbjYL85yAi+5SD+VyPg==
+  dependencies:
+    konami-emoji-blast ""
+
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"
@@ -6076,6 +6083,11 @@ emittery@^0.13.1:
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.13.1.tgz#c04b8c3457490e0847ae51fced3af52d338e3dad"
   integrity sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==
 
+emoji-blast@, emoji-blast@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/emoji-blast/-/emoji-blast-0.10.2.tgz#e73f8aac4a85082ce754143bb9898db4c353106e"
+  integrity sha512-3VrqajirPj8QeQxQeMHUfD+03H64XTEVPGRjxP5rjDCVEC5NGF3FgutMpU5scIOhcuzG23Qvs32k0Pnj+hRzGA==
+
 emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
@@ -9208,6 +9220,19 @@ klona@^2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.6.tgz#85bffbf819c03b2f53270412420a4555ef882e22"
   integrity sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==
+
+konami-code-js@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/konami-code-js/-/konami-code-js-0.8.3.tgz#1a913e22005d3ac21661819e7e7840fcd6e3b6a2"
+  integrity sha512-TDiZMsSWTPCZVClclyU7HTZC/3Ql972HhvT/D33evd3+8FgR1DZcCVe84kKsSSvDqzJII0R4m74WASZDlcpIoQ==
+
+konami-emoji-blast@:
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/konami-emoji-blast/-/konami-emoji-blast-0.5.9.tgz#120c3ca0cc8ef08c4e21c51c794dc3c0f9488575"
+  integrity sha512-iFXd/V/hsOG4W/Oh7L0voKCJjFjJjTyB3nrc1eqr9tT8fkLpRFy5aqXtmEBLt5RKsJDbe6VOtH0lAHdvZmLv9g==
+  dependencies:
+    emoji-blast ""
+    konami-code-js "^0.8.3"
 
 lazy-universal-dotenv@^3.0.1:
   version "3.0.1"
@@ -13333,6 +13358,11 @@ url@^0.11.0:
   dependencies:
     punycode "^1.4.1"
     qs "^6.11.2"
+
+use-debounce@^10.0.4:
+  version "10.0.4"
+  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-10.0.4.tgz#2135be498ad855416c4495cfd8e0e130bd33bb24"
+  integrity sha512-6Cf7Yr7Wk7Kdv77nnJMf6de4HuDE4dTxKij+RqE9rufDsI6zsbjyAxcH5y2ueJCQAnfgKbzXbZHYlkFwmBlWkw==
 
 use-sync-external-store@^1.0.0:
   version "1.2.2"

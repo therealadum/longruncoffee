@@ -9,4 +9,9 @@ export default defineConfig({
       NODE_ENV: "production",
     },
   },
+  server: {
+    watch: {
+      ignored: ["**/coverage/**"],
+    },
+  },
 });

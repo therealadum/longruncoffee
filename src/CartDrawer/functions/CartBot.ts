@@ -81,7 +81,6 @@ export function getCartBotUpdates({
   cartState,
 }: IGetCartBotUpdates) {
   const display_only_cart_items: IAddToCartDisplayOnly[] = [];
-
   // Convert cartRewardQuery data into cart bot items
   const cartBotItems: ICartBotItem[] = cartRewards.map((reward) => {
     const triggers: ICartBotItemTrigger[] = [];
@@ -198,6 +197,13 @@ export function getCartBotUpdates({
   ) {
     updates[48056421482809] = 0;
   }
+
+  // catch any items that have been removed
+  cartState.items.forEach((item) => {
+    if (!item.handle && !item.sku && item.variant_id) {
+      updates[item.variant_id] = 0;
+    }
+  });
 
   // Compare updates with current cart state
   let foundMissingItemInCart = false;

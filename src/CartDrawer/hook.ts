@@ -103,6 +103,7 @@ export const useCartDrawerState = ({
           ...d,
           reward_type: d.reward_type as "MONETARY" | "SUBSCRIPTION",
           reward_state: "NOT_REWARDED_YET",
+          progress: 0,
         }));
       try {
         const response = await axios(

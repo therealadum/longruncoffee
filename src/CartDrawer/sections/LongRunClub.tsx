@@ -129,7 +129,7 @@ export function LongRunClub({
       <div className="flex items-center space-x-2">
         <div className="flex-1 h-1 rounded bg-cyan-600" />
         <h4 className="text-cyan-600 font-accent text-xl lg:text-2xl">
-          Long Run Club
+          Subscribe & Save
         </h4>
         <div className="flex-1 h-1 rounded bg-cyan-600" />
       </div>
