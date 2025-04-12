@@ -14,9 +14,9 @@
       "settings": {
         "coffee_collections": [
           "coffee",
-          "traditional-roasts",
+          "bundle-save",
           "flavored",
-          "bundle-save"
+          "traditional-roasts"
         ],
         "other_collections": [
           "gear"
