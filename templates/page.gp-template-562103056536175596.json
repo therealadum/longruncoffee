@@ -8,17 +8,17 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": "theme.gempages.footer",
   "sections": {
     "gp_section_562103109434737569": {
       "type": "gp-section-562103109434737569",
       "settings": {
         "section_preload": "true",
-        "checksum": "dcaae81ec8a8cc7dcbd5b43cb57e6d45ef23d9175aafdfd3b334d43efdf46761_1_1"
+        "checksum": "c4e0bd5cc4a88fd9ca8b4818bcb81f836b9c58f49ab55438a6503cfb11bf74fe_1_1"
       }
     }
   },
   "order": [
     "gp_section_562103109434737569"
-  ],
-  "layout": "theme.gempages.footer"
+  ]
 }
