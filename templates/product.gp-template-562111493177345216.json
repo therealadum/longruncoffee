@@ -14,35 +14,11 @@
       "type": "gp-section-562111520406766784",
       "settings": {
         "section_preload": "true",
-        "checksum": "fb7dd910780bb0f2c26955f5148b6e2ae072a9d443cde33fd8d35fb5addf02f5_1_1"
+        "checksum": "2d4d87d2b4d743e7ba4510479feec4357ddd49752468b0ba455f046c4af7a9b5_1_1"
       }
-    },
-    "lrc_base_product_q9t87H": {
-      "type": "lrc-base-product",
-      "settings": {}
-    },
-    "lrc_accordion_Qzk96w": {
-      "type": "lrc-accordion",
-      "settings": {}
-    },
-    "lrc_coffee_benefits_qNChfg": {
-      "type": "lrc-coffee-benefits",
-      "settings": {
-        "show_cta": false,
-        "cta_text": "Start for $3",
-        "cta_scroll_to_id": "lrc-klaviyo-form"
-      }
-    },
-    "lrc_reviews_3peg6h": {
-      "type": "lrc-reviews",
-      "settings": {}
     }
   },
   "order": [
-    "gp_section_562111520406766784",
-    "lrc_base_product_q9t87H",
-    "lrc_accordion_Qzk96w",
-    "lrc_coffee_benefits_qNChfg",
-    "lrc_reviews_3peg6h"
+    "gp_section_562111520406766784"
   ]
 }
