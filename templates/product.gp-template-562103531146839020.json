@@ -19,19 +19,26 @@
     "gp_section_562104492649087980": {
       "type": "gp-section-562104492649087980",
       "settings": {
+        "section_preload": "false",
         "checksum": "b5c5f69171179b5bb3e82470fb3bf7886c4ad52fef64c2b0945fc6c85b2d5fe8_1_1"
       }
     },
     "gp_section_562104492649088192": {
       "type": "gp-section-562104492649088192",
       "settings": {
+        "section_preload": "false",
         "checksum": "9e4fcb5ef25bd8000df014f3a42721581662eb4d5f54fcfae4cd14dcad1f69e7_1_1"
       }
+    },
+    "lrc_base_product_kRqTN3": {
+      "type": "lrc-base-product",
+      "settings": {}
     }
   },
   "order": [
     "gp_section_562103568576807972",
     "gp_section_562104492649087980",
-    "gp_section_562104492649088192"
+    "gp_section_562104492649088192",
+    "lrc_base_product_kRqTN3"
   ]
 }
