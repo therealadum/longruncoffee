@@ -54,6 +54,14 @@
       "type": "lrc-reviews",
       "settings": {}
     },
+    "lrc_review_summary_gPVmw3": {
+      "type": "lrc-review-summary",
+      "settings": {
+        "title": "",
+        "review-text": "1.6k+ Reviews",
+        "background-color": "cyan"
+      }
+    },
     "gp_global_section_538796875008967812_adNWQq": {
       "type": "gp-global-section-538796875008967812",
       "settings": {
@@ -84,6 +92,7 @@
     "lrc_coffee_benefits_short_qHtU7R",
     "lrc_coffee_benefits_R4JaCb",
     "lrc_reviews_tX9QpN",
+    "lrc_review_summary_gPVmw3",
     "gp_global_section_538796875008967812_adNWQq",
     "174458199611f16e22"
   ]
