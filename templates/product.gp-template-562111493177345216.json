@@ -27,10 +27,26 @@
         "product_description_4VqAeb": {
           "type": "product-description",
           "settings": {}
+        },
+        "lrc_accordion_image_AzmGyD": {
+          "type": "lrc-accordion-image",
+          "settings": {
+            "title": "Ingredients",
+            "image": "shopify://shop_images/Supp_w_CalCarb_5.png"
+          }
+        },
+        "lrc_accordion_text_PH4Chm": {
+          "type": "lrc-accordion-text",
+          "settings": {
+            "title": "How To Use",
+            "body": "Long Run Coffee is actual coffee (not a coffee alternative) and works with any brewing method! LRC is meant to be consumed daily, wherever it fits your routine best."
+          }
         }
       },
       "block_order": [
-        "product_description_4VqAeb"
+        "product_description_4VqAeb",
+        "lrc_accordion_image_AzmGyD",
+        "lrc_accordion_text_PH4Chm"
       ],
       "settings": {}
     },
@@ -56,10 +72,42 @@
     },
     "lrc_review_summary_gPVmw3": {
       "type": "lrc-review-summary",
+      "blocks": {
+        "image_NypNjG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hoka.png"
+          }
+        },
+        "image_Vd4PHM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/runners-world-logo-vector-removebg-preview.png"
+          }
+        },
+        "image_jULXx3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/believe-in-the-run.png"
+          }
+        },
+        "image_3c9eqR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bigger-than-the-trail.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_NypNjG",
+        "image_Vd4PHM",
+        "image_jULXx3",
+        "image_3c9eqR"
+      ],
       "settings": {
-        "title": "",
-        "review-text": "1.6k+ Reviews",
-        "background-color": "cyan"
+        "title": "Trusted By Runners",
+        "review-text": "1.8k+ Reviews",
+        "background-color": "tan"
       }
     },
     "gp_global_section_538796875008967812_adNWQq": {
