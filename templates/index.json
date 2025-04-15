@@ -184,6 +184,51 @@
       "custom_css": [],
       "settings": {}
     },
+    "image_with_text_DTVzkb": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ABztcB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Race Ready",
+            "heading_size": "h1"
+          }
+        },
+        "text_rfNjLE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your next personal best has arrived with our first-ever LRC racing jersey! </p><p>We guarantee this is the lightest, most comfortable racing top you have EVER worn.</p><p>Combine that with our LRC BOCO Elite performance hat, and you will be sure to turn some heads on the starting line.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_xwTU3K": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check it out",
+            "button_link": "shopify://products/racing-jersey-boco-elite-hat"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ABztcB",
+        "text_rfNjLE",
+        "button_xwTU3K"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/BOAxLRCJerseys_3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collection_list_y8Ej7b": {
       "type": "collection-list",
       "blocks": {
@@ -342,6 +387,7 @@
     "57fefd56-ea79-4796-b1c9-2297353cd585",
     "home-coffee-club-cta",
     "home-reviews",
+    "image_with_text_DTVzkb",
     "collection_list_y8Ej7b",
     "featured_blog_gVaz9H",
     "home-mission-cta",
