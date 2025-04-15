@@ -104,7 +104,7 @@
         "heading": "New LRC Gear",
         "heading_size": "h2",
         "desktop_layout": "right",
-        "mobile_layout": "column",
+        "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
         "color_scheme": "",
         "padding_top": 36,
