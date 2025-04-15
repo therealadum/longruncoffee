@@ -272,6 +272,45 @@
         "padding_bottom": 0
       }
     },
+    "collage_jaeDxX": {
+      "type": "collage",
+      "blocks": {
+        "image_4jTeyq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/169_Blog_Pictures_4_b1b5a590-9e73-47e3-bc5f-0cf6aeca78a6.png"
+          }
+        },
+        "product_8y9B6D": {
+          "type": "product",
+          "settings": {
+            "product": "lrc-x-boa-racing-jersey",
+            "second_image": false
+          }
+        },
+        "collection_mt3rYf": {
+          "type": "collection",
+          "settings": {
+            "collection": "gear"
+          }
+        }
+      },
+      "block_order": [
+        "image_4jTeyq",
+        "product_8y9B6D",
+        "collection_mt3rYf"
+      ],
+      "settings": {
+        "heading": "LRC Gear",
+        "heading_size": "h1",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_blog_DiXBHA": {
       "type": "featured-blog",
       "custom_css": [
@@ -279,7 +318,7 @@
         "h3 {font-size: 28px;}"
       ],
       "settings": {
-        "heading": "Fuel Your Passion",
+        "heading": "Fuel Your Passion Blog",
         "heading_size": "h2",
         "blog": "fuel-your-passion",
         "post_limit": 4,
@@ -328,6 +367,7 @@
     "1693874745cc6bc7e5",
     "17093999844598d023",
     "3e4ec809-784d-4120-a4a6-cced1ff5c986",
+    "collage_jaeDxX",
     "featured_blog_DiXBHA",
     "featured_blog_R9inLc"
   ]
