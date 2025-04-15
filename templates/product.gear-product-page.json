@@ -72,6 +72,45 @@
         "padding_bottom": 36
       }
     },
+    "collage_PJncjy": {
+      "type": "collage",
+      "blocks": {
+        "image_3iNgXC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/169_Blog_Pictures_4_b1b5a590-9e73-47e3-bc5f-0cf6aeca78a6.png"
+          }
+        },
+        "product_QTWd6m": {
+          "type": "product",
+          "settings": {
+            "product": "lrc-x-boa-racing-jersey",
+            "second_image": false
+          }
+        },
+        "collection_pmxUG8": {
+          "type": "collection",
+          "settings": {
+            "collection": "gear"
+          }
+        }
+      },
+      "block_order": [
+        "image_3iNgXC",
+        "product_QTWd6m",
+        "collection_pmxUG8"
+      ],
+      "settings": {
+        "heading": "Just Released",
+        "heading_size": "h2",
+        "desktop_layout": "right",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
       "settings": {
@@ -298,6 +337,7 @@
     "lrc-base-product",
     "lrc-accordion",
     "image_with_text_PizpqR",
+    "collage_PJncjy",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "image_banner_f6FhGD",
