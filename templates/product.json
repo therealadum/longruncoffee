@@ -268,6 +268,45 @@
         "padding_bottom": 36
       }
     },
+    "collage_w37phJ": {
+      "type": "collage",
+      "blocks": {
+        "image_LpaUaf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/169_Blog_Pictures_4_b1b5a590-9e73-47e3-bc5f-0cf6aeca78a6.png"
+          }
+        },
+        "product_Rjn9FC": {
+          "type": "product",
+          "settings": {
+            "product": "lrc-x-boa-racing-jersey",
+            "second_image": true
+          }
+        },
+        "collection_9QaECb": {
+          "type": "collection",
+          "settings": {
+            "collection": "gear"
+          }
+        }
+      },
+      "block_order": [
+        "image_LpaUaf",
+        "product_Rjn9FC",
+        "collection_9QaECb"
+      ],
+      "settings": {
+        "heading": "LRC Gear",
+        "heading_size": "h1",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_blog_6nQLaw": {
       "type": "featured-blog",
       "custom_css": [
@@ -275,12 +314,12 @@
         "h3 {font-size: 28px;}"
       ],
       "settings": {
-        "heading": "Fuel Your Passion",
-        "heading_size": "h1",
+        "heading": "Fuel Your Passion Blog",
+        "heading_size": "h2",
         "blog": "fuel-your-passion",
         "post_limit": 4,
         "columns_desktop": 4,
-        "color_scheme": "",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
         "show_image": true,
         "show_date": true,
         "show_author": false,
@@ -297,11 +336,11 @@
       ],
       "settings": {
         "heading": "Recipes for Runners",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "blog": "recipes",
         "post_limit": 4,
         "columns_desktop": 4,
-        "color_scheme": "accent-2",
+        "color_scheme": "background-2",
         "show_image": true,
         "show_date": true,
         "show_author": false,
@@ -325,6 +364,7 @@
     "3e4ec809-784d-4120-a4a6-cced1ff5c986",
     "image_with_text_JtUkwM",
     "image_with_text_CxL9kk",
+    "collage_w37phJ",
     "featured_blog_6nQLaw",
     "featured_blog_R6TUwB"
   ]
