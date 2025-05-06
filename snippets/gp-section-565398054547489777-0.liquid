@@ -1,31 +1,10 @@
 
-{% render 'gp-head', 'isThemeSection: true' %}
-<style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-565398054547489777.gps.gpsil [style*="--ai:"]{align-items:var(--ai)}.gps-565398054547489777.gps.gpsil [style*="--aspect:"]{aspect-ratio:var(--aspect)}.gps-565398054547489777.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-565398054547489777.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-565398054547489777.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-565398054547489777.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-565398054547489777.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-565398054547489777.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-565398054547489777.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-565398054547489777.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-565398054547489777.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-565398054547489777.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-565398054547489777.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-565398054547489777.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-565398054547489777.gps.gpsil [style*="--radius:"]{border-radius:var(--radius)}.gps-565398054547489777.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-565398054547489777.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-565398054547489777.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-565398054547489777.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-565398054547489777.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-565398054547489777.gps.gpsil [style*="--bottom:"]{bottom:var(--bottom)}.gps-565398054547489777.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-565398054547489777.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-565398054547489777.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-565398054547489777.gps.gpsil [style*="--ff:"]{font-family:var(--ff)}.gps-565398054547489777.gps.gpsil [style*="--size:"]{font-size:var(--size)}.gps-565398054547489777.gps.gpsil [style*="--weight:"]{font-weight:var(--weight)}.gps-565398054547489777.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-565398054547489777.gps.gpsil [style*="--h:"]{height:var(--h)}.gps-565398054547489777.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-565398054547489777.gps.gpsil [style*="--left:"]{left:var(--left)}.gps-565398054547489777.gps.gpsil [style*="--ls:"]{letter-spacing:var(--ls)}.gps-565398054547489777.gps.gpsil [style*="--lh:"]{line-height:var(--lh)}.gps-565398054547489777.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-565398054547489777.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-565398054547489777.gps.gpsil [style*="--ml:"]{margin-left:var(--ml)}.gps-565398054547489777.gps.gpsil [style*="--mr:"]{margin-right:var(--mr)}.gps-565398054547489777.gps.gpsil [style*="--mt:"]{margin-top:var(--mt)}.gps-565398054547489777.gps.gpsil [style*="--maxw:"]{max-width:var(--maxw)}.gps-565398054547489777.gps.gpsil [style*="--minw:"]{min-width:var(--minw)}.gps-565398054547489777.gps.gpsil [style*="--objf:"]{-o-object-fit:var(--objf);object-fit:var(--objf)}.gps-565398054547489777.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-565398054547489777.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-565398054547489777.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-565398054547489777.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-565398054547489777.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-565398054547489777.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-565398054547489777.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-565398054547489777.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-565398054547489777.gps.gpsil [style*="--right:"]{right:var(--right)}.gps-565398054547489777.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-565398054547489777.gps.gpsil [style*="--ts:"]{text-shadow:var(--ts)}.gps-565398054547489777.gps.gpsil [style*="--top:"]{top:var(--top)}.gps-565398054547489777.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-565398054547489777.gps.gpsil [style*="--w:"]{width:var(--w)}.gps-565398054547489777.gps.gpsil [style*="--line-clamp:"]{-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp);display:-webkit-box;overflow:hidden}@media only screen and (max-width:1024px){.gps-565398054547489777.gps.gpsil [style*="--aspect-tablet:"]{aspect-ratio:var(--aspect-tablet)}.gps-565398054547489777.gps.gpsil [style*="--bottom-tablet:"]{bottom:var(--bottom-tablet)}.gps-565398054547489777.gps.gpsil [style*="--cg-tablet:"]{-moz-column-gap:var(--cg-tablet);column-gap:var(--cg-tablet)}.gps-565398054547489777.gps.gpsil [style*="--size-tablet:"]{font-size:var(--size-tablet)}.gps-565398054547489777.gps.gpsil [style*="--gtc-tablet:"]{grid-template-columns:var(--gtc-tablet)}.gps-565398054547489777.gps.gpsil [style*="--h-tablet:"]{height:var(--h-tablet)}.gps-565398054547489777.gps.gpsil [style*="--left-tablet:"]{left:var(--left-tablet)}.gps-565398054547489777.gps.gpsil [style*="--lh-tablet:"]{line-height:var(--lh-tablet)}.gps-565398054547489777.gps.gpsil [style*="--ml-tablet:"]{margin-left:var(--ml-tablet)}.gps-565398054547489777.gps.gpsil [style*="--maxw-tablet:"]{max-width:var(--maxw-tablet)}.gps-565398054547489777.gps.gpsil [style*="--minw-tablet:"]{min-width:var(--minw-tablet)}.gps-565398054547489777.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-565398054547489777.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-565398054547489777.gps.gpsil [style*="--right-tablet:"]{right:var(--right-tablet)}.gps-565398054547489777.gps.gpsil [style*="--top-tablet:"]{top:var(--top-tablet)}.gps-565398054547489777.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}.gps-565398054547489777.gps.gpsil [style*="--line-clamp-tablet:"]{-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-tablet);display:-webkit-box;overflow:hidden}}@media only screen and (max-width:767px){.gps-565398054547489777.gps.gpsil [style*="--aspect-mobile:"]{aspect-ratio:var(--aspect-mobile)}.gps-565398054547489777.gps.gpsil [style*="--bga-mobile:"]{background-attachment:var(--bga-mobile)}.gps-565398054547489777.gps.gpsil [style*="--bgc-mobile:"]{background-color:var(--bgc-mobile)}.gps-565398054547489777.gps.gpsil [style*="--bgi-mobile:"]{background-image:var(--bgi-mobile)}.gps-565398054547489777.gps.gpsil [style*="--bgp-mobile:"]{background-position:var(--bgp-mobile)}.gps-565398054547489777.gps.gpsil [style*="--bgr-mobile:"]{background-repeat:var(--bgr-mobile)}.gps-565398054547489777.gps.gpsil [style*="--bgs-mobile:"]{background-size:var(--bgs-mobile)}.gps-565398054547489777.gps.gpsil [style*="--bottom-mobile:"]{bottom:var(--bottom-mobile)}.gps-565398054547489777.gps.gpsil [style*="--cg-mobile:"]{-moz-column-gap:var(--cg-mobile);column-gap:var(--cg-mobile)}.gps-565398054547489777.gps.gpsil [style*="--size-mobile:"]{font-size:var(--size-mobile)}.gps-565398054547489777.gps.gpsil [style*="--gtc-mobile:"]{grid-template-columns:var(--gtc-mobile)}.gps-565398054547489777.gps.gpsil [style*="--h-mobile:"]{height:var(--h-mobile)}.gps-565398054547489777.gps.gpsil [style*="--jc-mobile:"]{justify-content:var(--jc-mobile)}.gps-565398054547489777.gps.gpsil [style*="--left-mobile:"]{left:var(--left-mobile)}.gps-565398054547489777.gps.gpsil [style*="--lh-mobile:"]{line-height:var(--lh-mobile)}.gps-565398054547489777.gps.gpsil [style*="--mb-mobile:"]{margin-bottom:var(--mb-mobile)}.gps-565398054547489777.gps.gpsil [style*="--ml-mobile:"]{margin-left:var(--ml-mobile)}.gps-565398054547489777.gps.gpsil [style*="--mr-mobile:"]{margin-right:var(--mr-mobile)}.gps-565398054547489777.gps.gpsil [style*="--mt-mobile:"]{margin-top:var(--mt-mobile)}.gps-565398054547489777.gps.gpsil [style*="--maxw-mobile:"]{max-width:var(--maxw-mobile)}.gps-565398054547489777.gps.gpsil [style*="--minw-mobile:"]{min-width:var(--minw-mobile)}.gps-565398054547489777.gps.gpsil [style*="--pb-mobile:"]{padding-bottom:var(--pb-mobile)}.gps-565398054547489777.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-565398054547489777.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-565398054547489777.gps.gpsil [style*="--pt-mobile:"]{padding-top:var(--pt-mobile)}.gps-565398054547489777.gps.gpsil [style*="--right-mobile:"]{right:var(--right-mobile)}.gps-565398054547489777.gps.gpsil [style*="--top-mobile:"]{top:var(--top-mobile)}.gps-565398054547489777.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}.gps-565398054547489777.gps.gpsil [style*="--line-clamp-mobile:"]{-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-mobile);display:-webkit-box;overflow:hidden}}.gps-565398054547489777 .gp-rotate-0,.gps-565398054547489777 .gp-rotate-180,.gps-565398054547489777 .mobile\:gp-rotate-0,.gps-565398054547489777 .mobile\:gp-rotate-180,.gps-565398054547489777 .tablet\:gp-rotate-0,.gps-565398054547489777 .tablet\:gp-rotate-180{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1}.gps-565398054547489777 .gp-shadow-md{--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000}.gps-565398054547489777 .gp-static{position:static}.gps-565398054547489777 .\!gp-relative{position:relative!important}.gps-565398054547489777 .gp-relative{position:relative}.gps-565398054547489777 .gp-left-0{left:0}.gps-565398054547489777 .gp-right-0{right:0}.gps-565398054547489777 .gp-z-1{z-index:1}.gps-565398054547489777 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-565398054547489777 .gp-my-0{margin-bottom:0;margin-top:0}.gps-565398054547489777 .gp-mb-0{margin-bottom:0}.gps-565398054547489777 .gp-block{display:block}.gps-565398054547489777 .\!gp-flex{display:flex!important}.gps-565398054547489777 .gp-flex{display:flex}.gps-565398054547489777 .gp-inline-flex{display:inline-flex}.gps-565398054547489777 .gp-grid{display:grid}.gps-565398054547489777 .gp-contents{display:contents}.gps-565398054547489777 .\!gp-hidden{display:none!important}.gps-565398054547489777 .gp-hidden{display:none}.gps-565398054547489777 .gp-aspect-square{aspect-ratio:1/1}.gps-565398054547489777 .gp-h-auto{height:auto}.gps-565398054547489777 .gp-h-full{height:100%}.gps-565398054547489777 .\!gp-min-h-full{min-height:100%!important}.gps-565398054547489777 .gp-w-\[12px\]{width:12px}.gps-565398054547489777 .gp-w-full{width:100%}.gps-565398054547489777 .gp-max-w-full{max-width:100%}.gps-565398054547489777 .gp-flex-none{flex:none}.gps-565398054547489777 .gp-shrink-0{flex-shrink:0}.gps-565398054547489777 .gp-rotate-0{--tw-rotate:0deg}.gps-565398054547489777 .gp-rotate-0,.gps-565398054547489777 .gp-rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-565398054547489777 .gp-rotate-180{--tw-rotate:180deg}.gps-565398054547489777 .gp-cursor-pointer{cursor:pointer}.gps-565398054547489777 .gp-select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.gps-565398054547489777 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-565398054547489777 .\!gp-flex-row{flex-direction:row!important}.gps-565398054547489777 .gp-flex-row{flex-direction:row}.gps-565398054547489777 .gp-flex-col{flex-direction:column}.gps-565398054547489777 .gp-flex-wrap{flex-wrap:wrap}.gps-565398054547489777 .\!gp-flex-nowrap{flex-wrap:nowrap!important}.gps-565398054547489777 .gp-items-center{align-items:center}.gps-565398054547489777 .gp-justify-center{justify-content:center}.gps-565398054547489777 .gp-justify-between{justify-content:space-between}.gps-565398054547489777 .gp-gap-2{gap:8px}.gps-565398054547489777 .gp-gap-y-0{row-gap:0}.gps-565398054547489777 .gp-overflow-hidden{overflow:hidden}.gps-565398054547489777 .gp-rounded-full{border-radius:9999px}.gps-565398054547489777 .gp-text-center{text-align:center}.gps-565398054547489777 .gp-leading-\[0\]{line-height:0}.gps-565398054547489777 .gp-text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.gps-565398054547489777 .gp-shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.gps-565398054547489777 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-565398054547489777 .gp-duration-200{transition-duration:.2s}.gps-565398054547489777 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (max-width:1024px){.gps-565398054547489777 .tablet\:gp-static{position:static}.gps-565398054547489777 .tablet\:\!gp-relative{position:relative!important}.gps-565398054547489777 .tablet\:gp-left-0{left:0}.gps-565398054547489777 .tablet\:gp-right-0{right:0}.gps-565398054547489777 .tablet\:gp-block{display:block}.gps-565398054547489777 .tablet\:\!gp-flex{display:flex!important}.gps-565398054547489777 .tablet\:\!gp-hidden{display:none!important}.gps-565398054547489777 .tablet\:gp-hidden{display:none}.gps-565398054547489777 .tablet\:gp-h-auto{height:auto}.gps-565398054547489777 .tablet\:\!gp-min-h-full{min-height:100%!important}.gps-565398054547489777 .tablet\:gp-flex-none{flex:none}.gps-565398054547489777 .tablet\:gp-rotate-0{--tw-rotate:0deg}.gps-565398054547489777 .tablet\:gp-rotate-0,.gps-565398054547489777 .tablet\:gp-rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-565398054547489777 .tablet\:gp-rotate-180{--tw-rotate:180deg}.gps-565398054547489777 .tablet\:\!gp-flex-row{flex-direction:row!important}.gps-565398054547489777 .tablet\:gp-flex-row{flex-direction:row}.gps-565398054547489777 .tablet\:\!gp-flex-nowrap{flex-wrap:nowrap!important}.gps-565398054547489777 .tablet\:gp-px-0{padding-left:0;padding-right:0}}@media (max-width:767px){.gps-565398054547489777 .mobile\:gp-static{position:static}.gps-565398054547489777 .mobile\:\!gp-absolute{position:absolute!important}.gps-565398054547489777 .mobile\:gp-left-0{left:0}.gps-565398054547489777 .mobile\:gp-right-0{right:0}.gps-565398054547489777 .mobile\:gp-z-2{z-index:2}.gps-565398054547489777 .mobile\:gp-block{display:block}.gps-565398054547489777 .mobile\:\!gp-flex{display:flex!important}.gps-565398054547489777 .mobile\:\!gp-hidden{display:none!important}.gps-565398054547489777 .mobile\:gp-hidden{display:none}.gps-565398054547489777 .mobile\:gp-h-auto{height:auto}.gps-565398054547489777 .mobile\:\!gp-min-h-full{min-height:100%!important}.gps-565398054547489777 .mobile\:gp-flex-none{flex:none}.gps-565398054547489777 .mobile\:gp-rotate-0{--tw-rotate:0deg}.gps-565398054547489777 .mobile\:gp-rotate-0,.gps-565398054547489777 .mobile\:gp-rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.gps-565398054547489777 .mobile\:gp-rotate-180{--tw-rotate:180deg}.gps-565398054547489777 .mobile\:\!gp-flex-row{flex-direction:row!important}.gps-565398054547489777 .mobile\:gp-flex-row{flex-direction:row}.gps-565398054547489777 .mobile\:\!gp-flex-nowrap{flex-wrap:nowrap!important}.gps-565398054547489777 .mobile\:gp-px-0{padding-left:0;padding-right:0}}.gps-565398054547489777 .\[\&\>svg\]\:\!gp-h-\[var\(--height-desktop\)\]>svg{height:var(--height-desktop)!important}.gps-565398054547489777 .\[\&\>svg\]\:gp-h-full>svg{height:100%}.gps-565398054547489777 .\[\&\>svg\]\:\!gp-w-auto>svg{width:auto!important}.gps-565398054547489777 .\[\&\>svg\]\:gp-w-full>svg{width:100%}@media (max-width:1024px){.gps-565398054547489777 .tablet\:\[\&\>svg\]\:\!gp-h-\[var\(--height-tablet\)\]>svg{height:var(--height-tablet)!important}}@media (max-width:767px){.gps-565398054547489777 .mobile\:\[\&\>svg\]\:\!gp-h-\[var\(--height-mobile\)\]>svg{height:var(--height-mobile)!important}}.gps-565398054547489777 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}.gps-565398054547489777 .\[\&_p\]\:gp-inline p{display:inline}.gps-565398054547489777 .\[\&_p\]\:after\:gp-whitespace-pre-wrap p:after{content:var(--tw-content);white-space:pre-wrap}.gps-565398054547489777 .\[\&_p\]\:after\:gp-content-\[\'\\A\'\] p:after{--tw-content:"\A";content:var(--tw-content)}</style>
-
-       
-      
-            <section
-              class="gp-mx-auto gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
-              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px"
-            >
-              
-    <div
-      id="i2l89e9fdb512" data-id="i2l89e9fdb512"
-        style="--pt:auto;--pb:auto;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--op:100%;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:#F7FCFD;--bgc-mobile:#F7FCFD;--bgi:url();--bgi-mobile:url();--bgp:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-mobile:no-repeat;--bga:scroll;--bga-mobile:scroll"
-        class="i2l89e9fdb512 gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
-    >
-    <div
-      tag="Col" label="Block" type="component"
-      style="--jc:start"
-      class="i2l390dfee991 gp-relative gp-flex gp-flex-col"
-    >
-      {% render 'gp-section-565398054547489777-0', product: product, variant: variant, product_form_id: product_form_id, productSelectedVariant: productSelectedVariant, form: form %}
-    <gp-carousel data-id="gq3Brp7bB8"  id="gp-root-carousel-gq3Brp7bB8-{{section.id}}" class="  gp-group/carousel gp-flex" gp-data='{"id":"gq3Brp7bB8-{{section.id}}","setting":{"childItem":["Slide 4","Slide 3","Slide 5","Slide 6","Slide 7","Slide 8"],"itemNumber":{"desktop":3,"tablet":2,"mobile":1},"sneakPeak":{"desktop":false,"mobile":false},"sneakPeakType":{"desktop":"forward"},"sneakPeakOffsetForward":{"desktop":50,"mobile":90},"sneakPeakOffsetCenter":{"desktop":50},"vertical":{"desktop":false},"controlOverContent":{"desktop":true},"dot":{"desktop":true,"tablet":true,"mobile":true},"dotStyle":{"desktop":"none","mobile":"none"},"dotSize":{"desktop":12},"dotGapToCarousel":{"desktop":16},"dotColor":{"desktop":"bg-1"},"dotActiveColor":{"desktop":"line-3"},"navigationStyle":{"desktop":"outside","mobile":"inside"},"arrowCustom":"<svg height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508817714167153000\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,109.66-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32l32,32A8,8,0,0,1,173.66,133.66Z\" /></svg>","arrowCustomColor":"#1A4D40","arrowIconSize":{"desktop":28,"mobile":26},"arrowButtonSize":{"desktop":{"shapeValue":"1/1","shapeLinked":true,"width":"30px","height":"30px","padding":{"linked":true},"gap":""},"mobile":{"shapeValue":"1/1","shapeLinked":true,"width":"30px","height":"30px","padding":{"top":"2px","bottom":"2px","left":"2px","right":"2px","type":"small","linked":true},"shape":"","customShapeValue":"","gap":""}},"arrowBackgroundColor":"transparent","arrowBorder":{"desktop":{"borderType":"none","border":"none","borderWidth":"1px","width":"1px 1px 1px 1px","isCustom":false}},"roundedArrow":{"desktop":{"radiusType":"small"}},"arrowGapToEachSide":"10","showWhenHover":false,"rtl":false,"autoplay":false,"autoplayTimeout":2,"pauseOnHover":true,"runPreview":false,"enableDrag":{"desktop":true,"mobile":true},"loop":{"desktop":true,"mobile":true},"animationMode":"ease-in","background":{"desktop":{"type":"color","color":"transparent","image":{"src":"","width":0,"height":0},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll"}},"label":true},"styles":{"fullWidth":{"desktop":false,"tablet":false,"mobile":false},"sizeSetting":{"desktop":{"shapeLinked":false,"width":"70%","height":"auto","gap":""},"mobile":{"shapeLinked":false,"width":"","height":"auto","gap":"","shape":"","shapeValue":"","customShapeValue":""}},"playSpeed":500,"align":{"desktop":"center"},"borderContent":{"borderType":"none","border":"none","width":"1px 1px 1px 1px","position":"all","borderWidth":"1px","color":"#121212","isCustom":true},"roundedContent":{"radiusType":"none"},"hasActiveShadow":false,"carouselShadow":{"type":"shadow-1","distance":"4px","blur":"12px","spread":"0px","color":"#121212","angle":90},"spacing":{"desktop":16},"itemPadding":{"desktop":{"padding":{"type":"custom","top":"0px","left":"0px","bottom":"0px","right":"0px"}}}},"isHiddenArrowWhenDisabled":true}' style="--jc:center">
+    <gp-carousel data-id="goDRh5wp1V"  id="gp-root-carousel-goDRh5wp1V-{{section.id}}" class="  gp-group/carousel gp-flex" gp-data='{"id":"goDRh5wp1V-{{section.id}}","setting":{"childItem":["Slide 4","Slide 3","Slide 5","Slide 6","Slide 7","Slide 8"],"itemNumber":{"desktop":3,"tablet":2,"mobile":1},"sneakPeak":{"desktop":false,"mobile":false},"sneakPeakType":{"desktop":"forward"},"sneakPeakOffsetForward":{"desktop":50,"mobile":90},"sneakPeakOffsetCenter":{"desktop":50},"vertical":{"desktop":false},"controlOverContent":{"desktop":true},"dot":{"desktop":true,"tablet":true,"mobile":true},"dotStyle":{"desktop":"none","mobile":"none"},"dotSize":{"desktop":12},"dotGapToCarousel":{"desktop":16},"dotColor":{"desktop":"bg-1"},"dotActiveColor":{"desktop":"line-3"},"navigationStyle":{"desktop":"outside","mobile":"inside"},"arrowCustom":"<svg height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508817714167153000\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,109.66-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32l32,32A8,8,0,0,1,173.66,133.66Z\" /></svg>","arrowCustomColor":"#1A4D40","arrowIconSize":{"desktop":28,"mobile":26},"arrowButtonSize":{"desktop":{"shapeValue":"1/1","shapeLinked":true,"width":"30px","height":"30px","padding":{"linked":true},"gap":""},"mobile":{"shapeValue":"1/1","shapeLinked":true,"width":"30px","height":"30px","padding":{"top":"2px","bottom":"2px","left":"2px","right":"2px","type":"small","linked":true},"shape":"","customShapeValue":"","gap":""}},"arrowBackgroundColor":"transparent","arrowBorder":{"desktop":{"borderType":"none","border":"none","borderWidth":"1px","width":"1px 1px 1px 1px","isCustom":false}},"roundedArrow":{"desktop":{"radiusType":"small"}},"arrowGapToEachSide":"10","showWhenHover":false,"rtl":false,"autoplay":false,"autoplayTimeout":2,"pauseOnHover":true,"runPreview":false,"enableDrag":{"desktop":true,"mobile":true},"loop":{"desktop":true,"mobile":true},"animationMode":"ease-in","background":{"desktop":{"type":"color","color":"transparent","image":{"src":"","width":0,"height":0},"size":"cover","position":{"x":50,"y":50},"repeat":"no-repeat","attachment":"scroll"}},"label":true},"styles":{"fullWidth":{"desktop":false,"tablet":false,"mobile":false},"sizeSetting":{"desktop":{"shapeLinked":false,"width":"70%","height":"auto","gap":""},"mobile":{"shapeLinked":false,"width":"","height":"auto","gap":"","shape":"","shapeValue":"","customShapeValue":""}},"playSpeed":500,"align":{"desktop":"center"},"borderContent":{"borderType":"none","border":"none","width":"1px 1px 1px 1px","position":"all","borderWidth":"1px","color":"#121212","isCustom":true},"roundedContent":{"radiusType":"none"},"hasActiveShadow":false,"carouselShadow":{"type":"shadow-1","distance":"4px","blur":"12px","spread":"0px","color":"#121212","angle":90},"spacing":{"desktop":16},"itemPadding":{"desktop":{"padding":{"type":"custom","top":"0px","left":"0px","bottom":"0px","right":"0px"}}}},"isHiddenArrowWhenDisabled":true}' style="--jc:center">
       <div class="gp-hidden gp-aspect-square gp-w-[12px] gp-rounded-full gp-shadow-md"></div>
       <div
         
-        class="gp-relative gp-my-0 tablet:gp-px-0 gp-max-w-full mobile:gp-px-0 gp-carousel-wrapper mobile:gp-block tablet:gp-block gp-block gq3Brp7bB8"
-        style="--pt:30px;--pl:0px;--pb:40px;--pr:0px;--mt-mobile:0px;--pt-mobile:40px;--pb-mobile:40px;--d:block;--d-tablet:block;--d-mobile:none;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--w:70%;--w-tablet:70%;--w-mobile:auto;--h:auto;--h-tablet:auto;--h-mobile:auto"
+        class="gp-relative gp-my-0 tablet:gp-px-0 gp-max-w-full mobile:gp-px-0 gp-carousel-wrapper mobile:gp-block tablet:gp-block gp-block goDRh5wp1V"
+        style="--pt:30px;--pl:0px;--pb:40px;--pr:0px;--mt-mobile:0px;--pt-mobile:40px;--pb-mobile:40px;--d:none;--d-tablet:none;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--w:70%;--w-tablet:70%;--w-mobile:auto;--h:auto;--h-tablet:auto;--h-mobile:auto"
       >
         <div
           class="gp-h-full gp-relative gp-mx-auto gp-flex gp-items-center gp-justify-between mobile:!gp-flex-row tablet:!gp-flex-row !gp-flex-row"
@@ -35,7 +14,7 @@
     <button
       type="button"
       aria-label='Carousel Back Arrow'
-      class="gp-z-1 gp-carousel-action-back gem-slider-previous gq3Brp7bB8-{{section.id}} gp-carousel-arrow-gq3Brp7bB8 gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0  gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative  tablet:!gp-flex tablet:!gp-relative  mobile:!gp-flex mobile:!gp-absolute mobile:gp-z-2"
+      class="gp-z-1 gp-carousel-action-back gem-slider-previous goDRh5wp1V-{{section.id}} gp-carousel-arrow-goDRh5wp1V gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0  gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative  tablet:!gp-flex tablet:!gp-relative  mobile:!gp-flex mobile:!gp-absolute mobile:gp-z-2"
       style="--left:initial;--top:initial;--right:initial;--bottom:;--left-tablet:initial;--top-tablet:initial;--right-tablet:initial;--bottom-tablet:;--left-mobile:10px;--top-mobile:initial;--right-mobile:initial;--bottom-mobile:;--d:flex;--d-tablet:flex;--d-mobile:flex;background-color:transparent;--w:30px;--w-mobile:30px;--h:30px;--h-mobile:30px;--pl-mobile:2px;--pr-mobile:2px;--pt-mobile:2px;--pb-mobile:2px"
       onClick={onClick}
       
@@ -48,10 +27,10 @@
               <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,109.66-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32l32,32A8,8,0,0,1,173.66,133.66Z" /></svg>
     </div>
       <style>
-    .gp-carousel-arrow-gq3Brp7bB8 {
+    .gp-carousel-arrow-goDRh5wp1V {
       border-radius: var(--g-radius-small);
     }
-    .gp-carousel-arrow-gq3Brp7bB8::before {
+    .gp-carousel-arrow-goDRh5wp1V::before {
       content: '';
       height: 100%;
       width: 100%;
@@ -65,10 +44,10 @@
       border-radius: var(--g-radius-small);
     }
     @media only screen and (max-width: 1024px) and (min-width: 768px) {
-      .gp-carousel-arrow-gq3Brp7bB8 {
+      .gp-carousel-arrow-goDRh5wp1V {
         border-radius: var(--g-radius-small);
       }
-      .gp-carousel-arrow-gq3Brp7bB8::before {
+      .gp-carousel-arrow-goDRh5wp1V::before {
         border-style: none;
   border-width: 1px 1px 1px 1px;
   
@@ -77,10 +56,10 @@
       }
     }
     @media only screen and (max-width: 768px) {
-      .gp-carousel-arrow-gq3Brp7bB8 {
+      .gp-carousel-arrow-goDRh5wp1V {
         border-radius: var(--g-radius-small);
       }
-      .gp-carousel-arrow-gq3Brp7bB8::before {
+      .gp-carousel-arrow-goDRh5wp1V::before {
         border-style: none;
   border-width: 1px 1px 1px 1px;
   
@@ -91,7 +70,7 @@
   </style>
     </button>
   
-          <div id="gp-carousel-gq3Brp7bB8-{{section.id}}" class="gem-slider gp-h-full gp-overflow-hidden gp-select-none mobile:!gp-flex-nowrap tablet:!gp-flex-nowrap !gp-flex-nowrap mobile:!gp-min-h-full tablet:!gp-min-h-full !gp-min-h-full"
+          <div id="gp-carousel-goDRh5wp1V-{{section.id}}" class="gem-slider gp-h-full gp-overflow-hidden gp-select-none mobile:!gp-flex-nowrap tablet:!gp-flex-nowrap !gp-flex-nowrap mobile:!gp-min-h-full tablet:!gp-min-h-full !gp-min-h-full"
           style="--cg-mobile:16px;--cg-tablet:16px;--cg:16px">
           
     <div
@@ -104,7 +83,7 @@
       
       tag="CarouselItem" label="Carousel Item" type="component"
       style="--bgc:transparent;--minw:calc(100% / 3 - 10.666666666666666px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 1 - 0px);--maxw:calc(100% / 3 - 10.666666666666666px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 1 - 0px);--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ml:0px;--ml-tablet:0px;--ml-mobile:0px;--pl:0px;--pr:0px;--pt:0px;--pb:0px"
-      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-gq3Brp7bB8 gVu4SxUPmk"
+      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-goDRh5wp1V gPQB_TH4Er"
       data-index="0"
     >
       <div
@@ -115,40 +94,27 @@
        
       
     <div
-      parentTag="CarouselItem" id="gE4NJYEKi6" data-id="gE4NJYEKi6"
+      parentTag="CarouselItem" id="gnP-T52lFm" data-id="gnP-T52lFm"
         style="--bs:solid;--bw:1px 1px 1px 1px;--bc:rgb(249, 245, 237);--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:16px;--pl:16px;--pb:28px;--pr:16px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:16px;--pl-mobile:16px;--pb-mobile:28px;--pr-mobile:16px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:85%;--bgc:rgb(254, 254, 254);--bgi:url()"
-        class="gE4NJYEKi6 gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gnP-T52lFm gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       label="Block" tag="Col" type="component"
       style="--jc:start"
-      class="g-cB3gi_Wk gp-relative gp-flex gp-flex-col"
-    >
-      
-       
-      
-    <div
-      parentTag="Col" id="gnruclPYMO" data-id="gnruclPYMO"
-        style="--mb:32px;--mb-mobile:20px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gnruclPYMO gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
-    >
-    <div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="gSNcLlFkzt gp-relative gp-flex gp-flex-col"
+      class="gTwBjpZrJb gp-relative gp-flex gp-flex-col"
     >
       
     
     <div
-    data-id="g0IGMYDKyd"
+    data-id="g9DLpM0ODS"
       
-      data-id="g0IGMYDKyd"
-      style="--mb:0px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+      data-id="g9DLpM0ODS"
+      style="--mb:32px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
 
     <div
             class="gp-flex gp-flex-wrap"
-            style="--cg:0px;--jc:center;--ai:start">
-            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gihZJE0LWQ ">
+            style="--cg:0px;--jc:center;--jc-mobile:left;--ai:start">
+            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gZTis7XpJs ">
       
     <div 
       
@@ -158,10 +124,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] g8ReC3NgON"
+      class="gp-leading-[0] gvVqsDkNDv"
     >
       <div 
-      data-id="g8ReC3NgON"
+      data-id="gvVqsDkNDv"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -178,7 +144,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gEoYfhv-cL ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="glXdV-WowA ">
       
     <div 
       
@@ -188,10 +154,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gJDGeC7YHE"
+      class="gp-leading-[0] gdyXcQEYEg"
     >
       <div 
-      data-id="gJDGeC7YHE"
+      data-id="gdyXcQEYEg"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -208,7 +174,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gDRYy_gh5C ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gL2PEdXCI1 ">
       
     <div 
       
@@ -218,10 +184,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gjaB6HQwP_"
+      class="gp-leading-[0] ggTmMY3dEy"
     >
       <div 
-      data-id="gjaB6HQwP_"
+      data-id="ggTmMY3dEy"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -239,7 +205,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gc5cTrVqLh ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gv3XXbh997 ">
       
     <div 
       
@@ -249,10 +215,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb:0px;--ta:left"
-      class="gp-leading-[0] gzljb_ZYc3"
+      class="gp-leading-[0] gleQVhNWhy"
     >
       <div 
-      data-id="gzljb_ZYc3"
+      data-id="gleQVhNWhy"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -269,7 +235,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gKBUusgrY1 ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g9YPJTbJZu ">
       
     <div 
       
@@ -279,10 +245,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] gcWkoRSWeN"
+      class="gp-leading-[0] g6HLrcVFO6"
     >
       <div 
-      data-id="gcWkoRSWeN"
+      data-id="g6HLrcVFO6"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -303,18 +269,12 @@
          </div>
     </div>
   
-    </div><div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="g7gTeZRVDg gp-relative gp-flex gp-flex-col"
-    >
-      
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gFl-c-FZbc">
+  <gp-text data-id="gl6B_tvUAB">
     <div
       parentTag="Col"
-        class="gFl-c-FZbc "
-        style="--ta:left;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+        class="gl6B_tvUAB "
+        style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -322,20 +282,16 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:19px;--size-tablet:18px;--size-mobile:23px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(90, 69, 47);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggFl-c-FZbc_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggl6B_tvUAB_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
     
-    </div>
-    </div>
-   
-    
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gwHeYDy-c-">
+  <gp-text data-id="g3OXyistIH">
     <div
       parentTag="Col"
-        class="gwHeYDy-c- "
+        class="g3OXyistIH "
         style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -344,7 +300,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:400;--size:18px;--size-tablet:18px;--size-mobile:15px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggwHeYDy-c-_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.gg3OXyistIH_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -352,21 +308,21 @@
        
       
     <div
-      parentTag="Col" id="gQVKsPlhJk" data-id="gQVKsPlhJk"
+      parentTag="Col" id="gxf3s36o8u" data-id="gxf3s36o8u"
         style="--mb:69px;--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--cg-mobile:20px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gQVKsPlhJk gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gxf3s36o8u gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       tag="Col" label="Block" type="component"
       style="--jc:start;--jc-mobile:center"
-      class="gCVHwI1Hf0 gp-relative gp-flex gp-flex-col"
+      class="gdNwoR-8Eq gp-relative gp-flex gp-flex-col"
     >
       
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gq1a5E_zke">
+  <gp-text data-id="gB-7-xtTkb">
     <div
       parentTag="Col"
-        class="gq1a5E_zke "
+        class="gB-7-xtTkb "
         style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -375,7 +331,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:18px;--size-tablet:18px;--size-mobile:17px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggq1a5E_zke_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggB-7-xtTkb_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -383,13 +339,13 @@
     </div><div
       tag="Col" label="Block" type="component"
       style="--jc:start;--jc-mobile:center"
-      class="gaQNEQjAdv gp-relative gp-flex gp-flex-col"
+      class="gSCTFQHryx gp-relative gp-flex gp-flex-col"
     >
       <div
     
-     data-id="g7sU4k0Tuj"
+     data-id="giwZYzv12I"
     role="presentation"
-    class="gp-group/image g7sU4k0Tuj gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
+    class="gp-group/image giwZYzv12I gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
     style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:center"
     >
       <div
@@ -437,7 +393,7 @@
       
       tag="CarouselItem" label="Carousel Item" type="component"
       style="--bgc:transparent;--minw:calc(100% / 3 - 10.666666666666666px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 1 - 0px);--maxw:calc(100% / 3 - 10.666666666666666px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 1 - 0px);--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ml:0px;--ml-tablet:0px;--ml-mobile:0px;--pl:0px;--pr:0px;--pt:0px;--pb:0px"
-      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-gq3Brp7bB8 ggxic13wvd"
+      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-goDRh5wp1V gt852fyV2z"
       data-index="1"
     >
       <div
@@ -448,40 +404,27 @@
        
       
     <div
-      parentTag="CarouselItem" id="gmoeXVFMZU" data-id="gmoeXVFMZU"
+      parentTag="CarouselItem" id="gELboVKE0N" data-id="gELboVKE0N"
         style="--bs:solid;--bw:1px 1px 1px 1px;--bc:rgb(249, 245, 237);--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:16px;--pl:16px;--pb:28px;--pr:16px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:16px;--pl-mobile:16px;--pb-mobile:28px;--pr-mobile:16px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:85%;--bgc:rgb(254, 254, 254);--bgi:url()"
-        class="gmoeXVFMZU gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gELboVKE0N gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       label="Block" tag="Col" type="component"
       style="--jc:start"
-      class="gYWsOiqgrH gp-relative gp-flex gp-flex-col"
-    >
-      
-       
-      
-    <div
-      parentTag="Col" id="gEuy9KUHZz" data-id="gEuy9KUHZz"
-        style="--mb:32px;--mb-mobile:20px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gEuy9KUHZz gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
-    >
-    <div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="gvRDAoZDL5 gp-relative gp-flex gp-flex-col"
+      class="gXyOfyh-Aq gp-relative gp-flex gp-flex-col"
     >
       
     
     <div
-    data-id="gXR2SvG32N"
+    data-id="gBp-RV1i43"
       
-      data-id="gXR2SvG32N"
-      style="--mb:0px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+      data-id="gBp-RV1i43"
+      style="--mb:32px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
 
     <div
             class="gp-flex gp-flex-wrap"
             style="--cg:0px;--jc:left;--ai:start">
-            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g0gcszcTkZ ">
+            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gWJgO_bDNu ">
       
     <div 
       
@@ -491,10 +434,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--mb:0px;--ta:left"
-      class="gp-leading-[0] gIGIb27i1Y"
+      class="gp-leading-[0] g8IOyYGWsJ"
     >
       <div 
-      data-id="gIGIb27i1Y"
+      data-id="g8IOyYGWsJ"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -511,7 +454,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="goZM638qsY ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gqR9APK9ms ">
       
     <div 
       
@@ -521,10 +464,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gvy5zHVY4h"
+      class="gp-leading-[0] gw1a6aOoNS"
     >
       <div 
-      data-id="gvy5zHVY4h"
+      data-id="gw1a6aOoNS"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -541,7 +484,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="giLaJyfL0l ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gHOTOFN0-r ">
       
     <div 
       
@@ -551,10 +494,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gz5_22sgqi"
+      class="gp-leading-[0] gj332sDavl"
     >
       <div 
-      data-id="gz5_22sgqi"
+      data-id="gj332sDavl"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -572,7 +515,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gI6Ri-CeEo ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gYls3-kNUo ">
       
     <div 
       
@@ -582,10 +525,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb:0px;--ta:left"
-      class="gp-leading-[0] gL6ZMMqaIz"
+      class="gp-leading-[0] goHOd4WZB9"
     >
       <div 
-      data-id="gL6ZMMqaIz"
+      data-id="goHOd4WZB9"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -602,7 +545,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gYKEIMwZq9 ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gXJA3A1Cke ">
       
     <div 
       
@@ -611,11 +554,11 @@
     
   <div
       
-      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] gF2laYg6_m"
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
+      class="gp-leading-[0] gKnEs_EWn8"
     >
       <div 
-      data-id="gF2laYg6_m"
+      data-id="gKnEs_EWn8"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -636,18 +579,12 @@
          </div>
     </div>
   
-    </div><div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="gGIwKhiaKy gp-relative gp-flex gp-flex-col"
-    >
-      
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gcmppm_lF3">
+  <gp-text data-id="g5QDQ4Kmda">
     <div
       parentTag="Col"
-        class="gcmppm_lF3 "
-        style="--ta:left;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+        class="g5QDQ4Kmda "
+        style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -655,20 +592,16 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:19px;--size-tablet:18px;--size-mobile:23px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(90, 69, 47);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggcmppm_lF3_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.gg5QDQ4Kmda_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
     
-    </div>
-    </div>
-   
-    
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gA29j_Sf5c">
+  <gp-text data-id="gL_y1fn5rZ">
     <div
       parentTag="Col"
-        class="gA29j_Sf5c "
+        class="gL_y1fn5rZ "
         style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -677,7 +610,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:400;--size:18px;--size-tablet:18px;--size-mobile:15px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggA29j_Sf5c_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggL_y1fn5rZ_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -685,21 +618,21 @@
        
       
     <div
-      parentTag="Col" id="gk6T0khers" data-id="gk6T0khers"
+      parentTag="Col" id="ghy_X0e6VR" data-id="ghy_X0e6VR"
         style="--mb:21px;--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--cg-mobile:20px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gk6T0khers gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="ghy_X0e6VR gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       tag="Col" label="Block" type="component"
       style="--jc:start;--jc-mobile:center"
-      class="gitExtVpWw gp-relative gp-flex gp-flex-col"
+      class="gEds_GFzJM gp-relative gp-flex gp-flex-col"
     >
       
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="geeqphrHhv">
+  <gp-text data-id="g1DBZGUOPm">
     <div
       parentTag="Col"
-        class="geeqphrHhv "
+        class="g1DBZGUOPm "
         style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -708,7 +641,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:18px;--size-tablet:18px;--size-mobile:17px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggeeqphrHhv_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.gg1DBZGUOPm_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -716,13 +649,13 @@
     </div><div
       tag="Col" label="Block" type="component"
       style="--jc:start;--jc-mobile:center"
-      class="gZRk7XeUZ9 gp-relative gp-flex gp-flex-col"
+      class="gLetWtjf9p gp-relative gp-flex gp-flex-col"
     >
       <div
     
-     data-id="g8a0nEPPAo"
+     data-id="ggtNTpSJs8"
     role="presentation"
-    class="gp-group/image g8a0nEPPAo gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
+    class="gp-group/image ggtNTpSJs8 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
     style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:center"
     >
       <div
@@ -770,7 +703,7 @@
       
       tag="CarouselItem" label="Carousel Item" type="component"
       style="--bgc:transparent;--minw:calc(100% / 3 - 10.666666666666666px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 1 - 0px);--maxw:calc(100% / 3 - 10.666666666666666px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 1 - 0px);--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ml:0px;--ml-tablet:0px;--ml-mobile:0px;--pl:0px;--pr:0px;--pt:0px;--pb:0px"
-      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-gq3Brp7bB8 gMqscldoSf"
+      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-goDRh5wp1V gqitq21GFX"
       data-index="2"
     >
       <div
@@ -781,40 +714,27 @@
        
       
     <div
-      parentTag="CarouselItem" id="ggxKmrgzsK" data-id="ggxKmrgzsK"
+      parentTag="CarouselItem" id="gyNf007GF8" data-id="gyNf007GF8"
         style="--bs:solid;--bw:1px 1px 1px 1px;--bc:rgb(249, 245, 237);--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:16px;--pl:16px;--pb:28px;--pr:16px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:16px;--pl-mobile:16px;--pb-mobile:28px;--pr-mobile:16px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:85%;--bgc:rgb(254, 254, 254);--bgi:url()"
-        class="ggxKmrgzsK gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gyNf007GF8 gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       label="Block" tag="Col" type="component"
       style="--jc:start"
-      class="gdpjt6DPri gp-relative gp-flex gp-flex-col"
-    >
-      
-       
-      
-    <div
-      parentTag="Col" id="gz8mzJEc9X" data-id="gz8mzJEc9X"
-        style="--mb:32px;--mb-mobile:20px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gz8mzJEc9X gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
-    >
-    <div
-      tag="Col" label="Block" type="component"
-      style="--jc:start"
-      class="gn0dyLqeYH gp-relative gp-flex gp-flex-col"
+      class="gPFIHaGCIi gp-relative gp-flex gp-flex-col"
     >
       
     
     <div
-    data-id="gIUFoU4ra_"
+    data-id="gRnSj_mcEP"
       
-      data-id="gIUFoU4ra_"
-      style="--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+      data-id="gRnSj_mcEP"
+      style="--mb:32px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
 
     <div
             class="gp-flex gp-flex-wrap"
             style="--cg:4px;--jc:left;--ai:start">
-            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gBxOf2Ya5U ">
+            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g88WlG5yrs ">
       
     <div 
       
@@ -824,10 +744,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gBS6DM3A0y"
+      class="gp-leading-[0] gXNw1arscf"
     >
       <div 
-      data-id="gBS6DM3A0y"
+      data-id="gXNw1arscf"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -844,7 +764,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g5hgRn_9r2 ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gwF6kJ93La ">
       
     <div 
       
@@ -854,10 +774,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] g2Z03RKVgx"
+      class="gp-leading-[0] gT7iIN0cYg"
     >
       <div 
-      data-id="g2Z03RKVgx"
+      data-id="gT7iIN0cYg"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -874,7 +794,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gmGBEsG_cM ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gpL5gNSmoo ">
       
     <div 
       
@@ -884,10 +804,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gdMtrRW7Xa"
+      class="gp-leading-[0] gEywQ0CJ5q"
     >
       <div 
-      data-id="gdMtrRW7Xa"
+      data-id="gEywQ0CJ5q"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -905,7 +825,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gjKv_t3WfT ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gHuo3TxBYL ">
       
     <div 
       
@@ -915,10 +835,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] gF2Pvi0x5T"
+      class="gp-leading-[0] gUJSRThBSL"
     >
       <div 
-      data-id="gF2Pvi0x5T"
+      data-id="gUJSRThBSL"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -935,7 +855,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gL-W5LpiSr ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gz7uNaxNlT ">
       
     <div 
       
@@ -945,10 +865,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] g-nOtYZJsr"
+      class="gp-leading-[0] g_Pv1ELM0N"
     >
       <div 
-      data-id="g-nOtYZJsr"
+      data-id="g_Pv1ELM0N"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -969,18 +889,12 @@
          </div>
     </div>
   
-    </div><div
-      tag="Col" label="Block" type="component"
-      style="--jc:start"
-      class="g8bpQWz0RF gp-relative gp-flex gp-flex-col"
-    >
-      
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gE0YJIWJbw">
+  <gp-text data-id="g-dFYYR87e">
     <div
       parentTag="Col"
-        class="gE0YJIWJbw "
-        style="--ta:left;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+        class="g-dFYYR87e "
+        style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -988,20 +902,16 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:19px;--size-tablet:18px;--size-mobile:23px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(90, 69, 47);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggE0YJIWJbw_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.gg-dFYYR87e_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
     
-    </div>
-    </div>
-   
-    
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gOekvy3m2_">
+  <gp-text data-id="g-1zdEzhiD">
     <div
       parentTag="Col"
-        class="gOekvy3m2_ "
+        class="g-1zdEzhiD "
         style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -1010,7 +920,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:400;--size:18px;--size-tablet:18px;--size-mobile:15px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggOekvy3m2__text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.gg-1zdEzhiD_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -1018,21 +928,21 @@
        
       
     <div
-      parentTag="Col" id="gJ74FTohXL" data-id="gJ74FTohXL"
+      parentTag="Col" id="gJFbfIMrYD" data-id="gJFbfIMrYD"
         style="--mb:46px;--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--cg-mobile:20px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gJ74FTohXL gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gJFbfIMrYD gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       tag="Col" label="Block" type="component"
       style="--jc:start;--jc-mobile:center"
-      class="gsYbEcT8_G gp-relative gp-flex gp-flex-col"
+      class="gRa8B7TwU7 gp-relative gp-flex gp-flex-col"
     >
       
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gcCa2BsKbX">
+  <gp-text data-id="gb8zWncFLk">
     <div
       parentTag="Col"
-        class="gcCa2BsKbX "
+        class="gb8zWncFLk "
         style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -1041,7 +951,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:18px;--size-tablet:18px;--size-mobile:17px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggcCa2BsKbX_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggb8zWncFLk_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -1049,13 +959,13 @@
     </div><div
       tag="Col" label="Block" type="component"
       style="--jc:start;--jc-mobile:center"
-      class="g3Sw7-b5v7 gp-relative gp-flex gp-flex-col"
+      class="gOylpwhNQS gp-relative gp-flex gp-flex-col"
     >
       <div
     
-     data-id="g9Z63JL33a"
+     data-id="gJDmxjZECP"
     role="presentation"
-    class="gp-group/image g9Z63JL33a gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
+    class="gp-group/image gJDmxjZECP gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
     style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:center"
     >
       <div
@@ -1103,7 +1013,7 @@
       
       tag="CarouselItem" label="Carousel Item" type="component"
       style="--bgc:transparent;--minw:calc(100% / 3 - 10.666666666666666px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 1 - 0px);--maxw:calc(100% / 3 - 10.666666666666666px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 1 - 0px);--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ml:0px;--ml-tablet:0px;--ml-mobile:0px;--pl:0px;--pr:0px;--pt:0px;--pb:0px"
-      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-gq3Brp7bB8 gUUs8SkDb_"
+      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-goDRh5wp1V guBv6Y58T9"
       data-index="3"
     >
       <div
@@ -1114,40 +1024,27 @@
        
       
     <div
-      parentTag="CarouselItem" id="g2WnnVm3qA" data-id="g2WnnVm3qA"
+      parentTag="CarouselItem" id="gZtdiJhmHt" data-id="gZtdiJhmHt"
         style="--bs:solid;--bw:1px 1px 1px 1px;--bc:rgb(249, 245, 237);--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:16px;--pl:16px;--pb:28px;--pr:16px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:16px;--pl-mobile:16px;--pb-mobile:28px;--pr-mobile:16px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:85%;--bgc:rgb(254, 254, 254);--bgi:url()"
-        class="g2WnnVm3qA gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gZtdiJhmHt gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       label="Block" tag="Col" type="component"
       style="--jc:start"
-      class="g_ddMXKuNE gp-relative gp-flex gp-flex-col"
-    >
-      
-       
-      
-    <div
-      parentTag="Col" id="gtQ81oQ0O1" data-id="gtQ81oQ0O1"
-        style="--mb:32px;--mb-mobile:20px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gtQ81oQ0O1 gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
-    >
-    <div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="gHVFX_7PRd gp-relative gp-flex gp-flex-col"
+      class="gEZ3ppf0bg gp-relative gp-flex gp-flex-col"
     >
       
     
     <div
-    data-id="g3z5QWJiXj"
+    data-id="gF74uYtDro"
       
-      data-id="g3z5QWJiXj"
-      style="--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+      data-id="gF74uYtDro"
+      style="--mb:32px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
 
     <div
             class="gp-flex gp-flex-wrap"
             style="--cg:0px;--jc:left;--ai:start">
-            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g2lCr-TYZt ">
+            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gPaZbEwa8M ">
       
     <div 
       
@@ -1157,10 +1054,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] garxnVdnFZ"
+      class="gp-leading-[0] gbni_5dbdT"
     >
       <div 
-      data-id="garxnVdnFZ"
+      data-id="gbni_5dbdT"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1177,7 +1074,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gDPCrT24GF ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gA-4j33WhI ">
       
     <div 
       
@@ -1187,10 +1084,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gdFB_n98U2"
+      class="gp-leading-[0] glKWwqcFyp"
     >
       <div 
-      data-id="gdFB_n98U2"
+      data-id="glKWwqcFyp"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1207,7 +1104,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gpphuNlkRH ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gy4SoPrO9p ">
       
     <div 
       
@@ -1217,10 +1114,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] giWF7QJ_hm"
+      class="gp-leading-[0] gnpZ1M0lR1"
     >
       <div 
-      data-id="giWF7QJ_hm"
+      data-id="gnpZ1M0lR1"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1238,7 +1135,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gu0GM2Y2HU ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g-juD-sdAs ">
       
     <div 
       
@@ -1247,11 +1144,11 @@
     
   <div
       
-      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] gPcIGtB4zW"
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
+      class="gp-leading-[0] g3liCCHMqr"
     >
       <div 
-      data-id="gPcIGtB4zW"
+      data-id="g3liCCHMqr"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1268,7 +1165,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gL_QJhX_J7 ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g1UAzfClht ">
       
     <div 
       
@@ -1278,10 +1175,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] g1dO_ethAk"
+      class="gp-leading-[0] gWRSuJpvCY"
     >
       <div 
-      data-id="g1dO_ethAk"
+      data-id="gWRSuJpvCY"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1302,18 +1199,12 @@
          </div>
     </div>
   
-    </div><div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="grAdhDjguR gp-relative gp-flex gp-flex-col"
-    >
-      
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="ghOHWW4cub">
+  <gp-text data-id="gX_EGkD4fH">
     <div
       parentTag="Col"
-        class="ghOHWW4cub "
-        style="--ta:left;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+        class="gX_EGkD4fH "
+        style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -1321,20 +1212,16 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:19px;--size-tablet:18px;--size-mobile:23px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(90, 69, 47);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.gghOHWW4cub_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggX_EGkD4fH_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
     
-    </div>
-    </div>
-   
-    
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gmM4fK7pWR">
+  <gp-text data-id="gTmTG13nqg">
     <div
       parentTag="Col"
-        class="gmM4fK7pWR "
+        class="gTmTG13nqg "
         style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -1343,7 +1230,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:400;--size:18px;--size-tablet:18px;--size-mobile:15px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggmM4fK7pWR_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggTmTG13nqg_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -1351,21 +1238,21 @@
        
       
     <div
-      parentTag="Col" id="g3SLrLZi5w" data-id="g3SLrLZi5w"
+      parentTag="Col" id="gcDLEO-w6R" data-id="gcDLEO-w6R"
         style="--mb:0px;--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--cg-mobile:20px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="g3SLrLZi5w gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gcDLEO-w6R gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       tag="Col" label="Block" type="component"
       style="--jc:start;--jc-mobile:center"
-      class="gblJC8EWIU gp-relative gp-flex gp-flex-col"
+      class="gbIwwz2uJc gp-relative gp-flex gp-flex-col"
     >
       
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gu565qFWG-">
+  <gp-text data-id="gX8S3KLjTv">
     <div
       parentTag="Col"
-        class="gu565qFWG- "
+        class="gX8S3KLjTv "
         style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -1374,7 +1261,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:18px;--size-tablet:18px;--size-mobile:17px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggu565qFWG-_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggX8S3KLjTv_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -1382,13 +1269,13 @@
     </div><div
       tag="Col" label="Block" type="component"
       style="--jc:start;--jc-mobile:center"
-      class="gS0DJvREDv gp-relative gp-flex gp-flex-col"
+      class="gDxhCL8B1Q gp-relative gp-flex gp-flex-col"
     >
       <div
     
-     data-id="gGU5Fb-Ezb"
+     data-id="g_7v1VVoIW"
     role="presentation"
-    class="gp-group/image gGU5Fb-Ezb gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
+    class="gp-group/image g_7v1VVoIW gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
     style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:center"
     >
       <div
@@ -1436,7 +1323,7 @@
       
       tag="CarouselItem" label="Carousel Item" type="component"
       style="--bgc:transparent;--minw:calc(100% / 3 - 10.666666666666666px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 1 - 0px);--maxw:calc(100% / 3 - 10.666666666666666px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 1 - 0px);--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ml:0px;--ml-tablet:0px;--ml-mobile:0px;--pl:0px;--pr:0px;--pt:0px;--pb:0px"
-      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-gq3Brp7bB8 gIN5Fpc9AF"
+      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-goDRh5wp1V gNe92r8Wy0"
       data-index="4"
     >
       <div
@@ -1447,40 +1334,27 @@
        
       
     <div
-      parentTag="CarouselItem" id="gl_Rji2NEj" data-id="gl_Rji2NEj"
+      parentTag="CarouselItem" id="gMqjz9yPmA" data-id="gMqjz9yPmA"
         style="--bs:solid;--bw:1px 1px 1px 1px;--bc:rgb(249, 245, 237);--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:16px;--pl:16px;--pb:28px;--pr:16px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:16px;--pl-mobile:16px;--pb-mobile:28px;--pr-mobile:16px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:85%;--bgc:rgb(254, 254, 254);--bgi:url()"
-        class="gl_Rji2NEj gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gMqjz9yPmA gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       label="Block" tag="Col" type="component"
       style="--jc:start"
-      class="g-7dXtAg5h gp-relative gp-flex gp-flex-col"
-    >
-      
-       
-      
-    <div
-      parentTag="Col" id="gXlKbZuiy2" data-id="gXlKbZuiy2"
-        style="--mb:32px;--mb-mobile:20px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gXlKbZuiy2 gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
-    >
-    <div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="gZGb-g8eVs gp-relative gp-flex gp-flex-col"
+      class="gN6xfB6z4l gp-relative gp-flex gp-flex-col"
     >
       
     
     <div
-    data-id="ghGGj4LPC1"
+    data-id="gXTnP1vRKj"
       
-      data-id="ghGGj4LPC1"
-      style="--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+      data-id="gXTnP1vRKj"
+      style="--mb:32px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
 
     <div
             class="gp-flex gp-flex-wrap"
             style="--cg:0px;--jc:left;--ai:start">
-            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gJgB3ydl22 ">
+            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gr5r365iLW ">
       
     <div 
       
@@ -1490,10 +1364,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gYJWgj_jZp"
+      class="gp-leading-[0] gpcJ_LCRB0"
     >
       <div 
-      data-id="gYJWgj_jZp"
+      data-id="gpcJ_LCRB0"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1510,7 +1384,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gHsCHi2lh2 ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gnpYQQiKwj ">
       
     <div 
       
@@ -1520,10 +1394,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gar3JTEUkx"
+      class="gp-leading-[0] grZv94Od0-"
     >
       <div 
-      data-id="gar3JTEUkx"
+      data-id="grZv94Od0-"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1540,7 +1414,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gVeUVn1m2b ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gomvbNXe8k ">
       
     <div 
       
@@ -1550,10 +1424,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gZNolSnobG"
+      class="gp-leading-[0] gb0zqIx4o4"
     >
       <div 
-      data-id="gZNolSnobG"
+      data-id="gb0zqIx4o4"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1571,7 +1445,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g8DiBaSJ_3 ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gmRKcJ0hDC ">
       
     <div 
       
@@ -1581,10 +1455,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] g1EfKBaH3L"
+      class="gp-leading-[0] geMLwZkAKs"
     >
       <div 
-      data-id="g1EfKBaH3L"
+      data-id="geMLwZkAKs"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1601,7 +1475,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gtQsqvLMY5 ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gHWyZ8aYUz ">
       
     <div 
       
@@ -1611,10 +1485,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] gLVuievZfG"
+      class="gp-leading-[0] gNCHDPGcOr"
     >
       <div 
-      data-id="gLVuievZfG"
+      data-id="gNCHDPGcOr"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1635,18 +1509,12 @@
          </div>
     </div>
   
-    </div><div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="glIpbymAvP gp-relative gp-flex gp-flex-col"
-    >
-      
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gxom4vxJhy">
+  <gp-text data-id="grdW1_70EF">
     <div
       parentTag="Col"
-        class="gxom4vxJhy "
-        style="--ta:left;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+        class="grdW1_70EF "
+        style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -1654,20 +1522,16 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:19px;--size-tablet:18px;--size-mobile:23px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(90, 69, 47);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggxom4vxJhy_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggrdW1_70EF_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
     
-    </div>
-    </div>
-   
-    
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gtaMHoGSUZ">
+  <gp-text data-id="gLp1Nen75V">
     <div
       parentTag="Col"
-        class="gtaMHoGSUZ "
+        class="gLp1Nen75V "
         style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -1676,7 +1540,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:400;--size:18px;--size-tablet:18px;--size-mobile:15px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggtaMHoGSUZ_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggLp1Nen75V_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -1684,21 +1548,21 @@
        
       
     <div
-      parentTag="Col" id="gDTdrzYyLj" data-id="gDTdrzYyLj"
+      parentTag="Col" id="gyQr0biAZF" data-id="gyQr0biAZF"
         style="--mb:47px;--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--cg-mobile:20px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="gDTdrzYyLj gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gyQr0biAZF gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       tag="Col" label="Block" type="component"
       style="--jc:center;--jc-mobile:center"
-      class="gKYQ7-7rB7 gp-relative gp-flex gp-flex-col"
+      class="gQP1Ju7L-T gp-relative gp-flex gp-flex-col"
     >
       
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gWL_VKoE9E">
+  <gp-text data-id="gFfXu6Gd-b">
     <div
       parentTag="Col"
-        class="gWL_VKoE9E "
+        class="gFfXu6Gd-b "
         style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -1707,7 +1571,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:18px;--size-tablet:18px;--size-mobile:17px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggWL_VKoE9E_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggFfXu6Gd-b_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -1715,13 +1579,13 @@
     </div><div
       tag="Col" label="Block" type="component"
       style="--jc:center;--jc-mobile:center"
-      class="gEAmIC2fjM gp-relative gp-flex gp-flex-col"
+      class="gUKR-IIm3D gp-relative gp-flex gp-flex-col"
     >
       <div
     
-     data-id="g-souPu1E8"
+     data-id="gT_mzFFiA9"
     role="presentation"
-    class="gp-group/image g-souPu1E8 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
+    class="gp-group/image gT_mzFFiA9 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
     style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:center"
     >
       <div
@@ -1769,7 +1633,7 @@
       
       tag="CarouselItem" label="Carousel Item" type="component"
       style="--bgc:transparent;--minw:calc(100% / 3 - 10.666666666666666px);--minw-tablet:calc(100% / 2 - 8px);--minw-mobile:calc(100% / 1 - 0px);--maxw:calc(100% / 3 - 10.666666666666666px);--maxw-tablet:calc(100% / 2 - 8px);--maxw-mobile:calc(100% / 1 - 0px);--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ml:0px;--ml-tablet:0px;--ml-mobile:0px;--pl:0px;--pr:0px;--pt:0px;--pb:0px"
-      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-gq3Brp7bB8 gHxXhB3Hmm"
+      class="gem-slider-item gp-w-full gem-slider-item- gp-child-item-goDRh5wp1V g7zWtqWvgt"
       data-index="5"
     >
       <div
@@ -1780,40 +1644,27 @@
        
       
     <div
-      parentTag="CarouselItem" id="gRXRfaseUA" data-id="gRXRfaseUA"
+      parentTag="CarouselItem" id="gt0p4-7dAg" data-id="gt0p4-7dAg"
         style="--bs:solid;--bw:1px 1px 1px 1px;--bc:rgb(249, 245, 237);--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--mt:0px;--ml:auto;--mb:0px;--mr:auto;--pt:16px;--pl:16px;--pb:28px;--pr:16px;--mt-mobile:0px;--ml-mobile:auto;--mb-mobile:0px;--mr-mobile:auto;--pt-mobile:16px;--pl-mobile:16px;--pb-mobile:28px;--pr-mobile:16px;--cg:32px;--cg-tablet:32px;--pc:start;--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:85%;--bgc:rgb(254, 254, 254);--bgi:url()"
-        class="gRXRfaseUA gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gt0p4-7dAg gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       label="Block" tag="Col" type="component"
       style="--jc:start"
-      class="gSHJ0rc59_ gp-relative gp-flex gp-flex-col"
-    >
-      
-       
-      
-    <div
-      parentTag="Col" id="g9UPutXU5X" data-id="g9UPutXU5X"
-        style="--mb:32px;--mb-mobile:20px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="g9UPutXU5X gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
-    >
-    <div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="gXP-U3xyTs gp-relative gp-flex gp-flex-col"
+      class="gxY-RFbCaq gp-relative gp-flex gp-flex-col"
     >
       
     
     <div
-    data-id="gEyTNM-IJB"
+    data-id="gOssciHii7"
       
-      data-id="gEyTNM-IJB"
-      style="--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+      data-id="gOssciHii7"
+      style="--mb:32px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
 
     <div
             class="gp-flex gp-flex-wrap"
             style="--cg:4px;--jc:left;--ai:start">
-            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="ghDPoaBWFx ">
+            <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="giGE1rV-e3 ">
       
     <div 
       
@@ -1823,10 +1674,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gxAnzVsM35"
+      class="gp-leading-[0] gUjaYeLTX6"
     >
       <div 
-      data-id="gxAnzVsM35"
+      data-id="gUjaYeLTX6"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1843,7 +1694,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gNvvJEkZIw ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g_ukGatjeA ">
       
     <div 
       
@@ -1853,10 +1704,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] ggbJt8v5og"
+      class="gp-leading-[0] gzqwlNibLm"
     >
       <div 
-      data-id="ggbJt8v5og"
+      data-id="gzqwlNibLm"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1873,7 +1724,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gd_IdEmMAp ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gZZzUVwqVS ">
       
     <div 
       
@@ -1883,10 +1734,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb-mobile:0px;--ta:left"
-      class="gp-leading-[0] gtBkQKzx7U"
+      class="gp-leading-[0] g3e2dc0LzR"
     >
       <div 
-      data-id="gtBkQKzx7U"
+      data-id="g3e2dc0LzR"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1904,7 +1755,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gddDr_ziv4 ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="g0AQivufHX ">
       
     <div 
       
@@ -1914,10 +1765,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb:0px;--ta:left"
-      class="gp-leading-[0] gFtLcgoGwt"
+      class="gp-leading-[0] gRIZjq5PEV"
     >
       <div 
-      data-id="gFtLcgoGwt"
+      data-id="gRIZjq5PEV"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1934,7 +1785,7 @@
     
     </div>
   
-      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gdldGZb8jz ">
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="ghVs1tdscW ">
       
     <div 
       
@@ -1944,10 +1795,10 @@
   <div
       
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:left"
-      class="gp-leading-[0] g95li2j2YP"
+      class="gp-leading-[0] go3IpXln4o"
     >
       <div 
-      data-id="g95li2j2YP"
+      data-id="go3IpXln4o"
       class="icon-wrapper gp-inline-flex gp-overflow-hidden"
       style="--bs:none;--bw:1px 1px 1px 1px;--bc:#000000"
       >
@@ -1968,18 +1819,12 @@
          </div>
     </div>
   
-    </div><div
-      tag="Col" label="Block" type="component"
-      style="--jc:center"
-      class="gFr9aWV1NZ gp-relative gp-flex gp-flex-col"
-    >
-      
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gy9KO2Bsjb">
+  <gp-text data-id="gQz48m5NpN">
     <div
       parentTag="Col"
-        class="gy9KO2Bsjb "
-        style="--ta:left;--mt:0px;--ml:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px"
+        class="gQz48m5NpN "
+        style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -1987,20 +1832,16 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:19px;--size-tablet:18px;--size-mobile:23px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(90, 69, 47);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggy9KO2Bsjb_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggQz48m5NpN_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
     
-    </div>
-    </div>
-   
-    
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="g5o8prSpva">
+  <gp-text data-id="gE6uFrpQYL">
     <div
       parentTag="Col"
-        class="g5o8prSpva "
+        class="gE6uFrpQYL "
         style="--ta:left;--mt:0px;--ml:0px;--mb:32px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:25px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -2009,7 +1850,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:400;--size:18px;--size-tablet:18px;--size-mobile:15px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.gg5o8prSpva_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.ggE6uFrpQYL_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -2017,21 +1858,21 @@
        
       
     <div
-      parentTag="Col" id="g-3Wb6WthG" data-id="g-3Wb6WthG"
+      parentTag="Col" id="gbkHASXooZ" data-id="gbkHASXooZ"
         style="--mb:23px;--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--cg-mobile:20px;--pc:start;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
-        class="g-3Wb6WthG gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+        class="gbkHASXooZ gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
     >
     <div
       tag="Col" label="Block" type="component"
       style="--jc:center;--jc-mobile:center"
-      class="gAKg-elTkX gp-relative gp-flex gp-flex-col"
+      class="gDn0BKSnf3 gp-relative gp-flex gp-flex-col"
     >
       
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="g5Dit3pIPC">
+  <gp-text data-id="g-TVgAdVAR">
     <div
       parentTag="Col"
-        class="g5Dit3pIPC "
+        class="g-TVgAdVAR "
         style="--ta:left;--mt:0px;--ml:0px;--mb:0px;--mr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--ml-mobile:0px;--mb-mobile:0px;--mr-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px"
       >
       <div class="gp-flex" style="--jc:left">
@@ -2040,7 +1881,7 @@
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--ls:1px;--size:18px;--size-tablet:18px;--size-mobile:17px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--weight:bold;--c:rgb(89, 66, 45);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.gg5Dit3pIPC_text | replace: '$locationOrigin', locationOrigin }}</div>
+        >{{ section.settings.gg-TVgAdVAR_text | replace: '$locationOrigin', locationOrigin }}</div>
       </div>
     </div>
     </gp-text>
@@ -2048,13 +1889,13 @@
     </div><div
       tag="Col" label="Block" type="component"
       style="--jc:center;--jc-mobile:center"
-      class="gsMz-wL34a gp-relative gp-flex gp-flex-col"
+      class="gd5bacVYlm gp-relative gp-flex gp-flex-col"
     >
       <div
     
-     data-id="g66be4Oi6J"
+     data-id="gKxEJDh4PZ"
     role="presentation"
-    class="gp-group/image g66be4Oi6J gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
+    class="gp-group/image gKxEJDh4PZ gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto"
     style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:center"
     >
       <div
@@ -2097,7 +1938,7 @@
     <button
       type="button"
       aria-label='Carousel Next Arrow'
-      class="gp-z-1 gp-carousel-action-next gem-slider-next gq3Brp7bB8-{{section.id}} gp-carousel-arrow-gq3Brp7bB8 gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0  gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative  tablet:!gp-flex tablet:!gp-relative  mobile:!gp-flex mobile:!gp-absolute mobile:gp-z-2"
+      class="gp-z-1 gp-carousel-action-next gem-slider-next goDRh5wp1V-{{section.id}} gp-carousel-arrow-goDRh5wp1V gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0  gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative  tablet:!gp-flex tablet:!gp-relative  mobile:!gp-flex mobile:!gp-absolute mobile:gp-z-2"
       style="--left:initial;--top:;--right:initial;--bottom:initial;--left-tablet:initial;--top-tablet:;--right-tablet:initial;--bottom-tablet:initial;--left-mobile:initial;--top-mobile:;--right-mobile:10px;--bottom-mobile:initial;--d:flex;--d-tablet:flex;--d-mobile:flex;background-color:transparent;--w:30px;--w-mobile:30px;--h:30px;--h-mobile:30px;--pl-mobile:2px;--pr-mobile:2px;--pt-mobile:2px;--pb-mobile:2px"
       onClick={onClick}
       
@@ -2110,10 +1951,10 @@
               <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,109.66-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32l32,32A8,8,0,0,1,173.66,133.66Z" /></svg>
     </div>
       <style>
-    .gp-carousel-arrow-gq3Brp7bB8 {
+    .gp-carousel-arrow-goDRh5wp1V {
       border-radius: var(--g-radius-small);
     }
-    .gp-carousel-arrow-gq3Brp7bB8::before {
+    .gp-carousel-arrow-goDRh5wp1V::before {
       content: '';
       height: 100%;
       width: 100%;
@@ -2127,10 +1968,10 @@
       border-radius: var(--g-radius-small);
     }
     @media only screen and (max-width: 1024px) and (min-width: 768px) {
-      .gp-carousel-arrow-gq3Brp7bB8 {
+      .gp-carousel-arrow-goDRh5wp1V {
         border-radius: var(--g-radius-small);
       }
-      .gp-carousel-arrow-gq3Brp7bB8::before {
+      .gp-carousel-arrow-goDRh5wp1V::before {
         border-style: none;
   border-width: 1px 1px 1px 1px;
   
@@ -2139,10 +1980,10 @@
       }
     }
     @media only screen and (max-width: 768px) {
-      .gp-carousel-arrow-gq3Brp7bB8 {
+      .gp-carousel-arrow-goDRh5wp1V {
         border-radius: var(--g-radius-small);
       }
-      .gp-carousel-arrow-gq3Brp7bB8::before {
+      .gp-carousel-arrow-goDRh5wp1V::before {
         border-style: none;
   border-width: 1px 1px 1px 1px;
   
@@ -2155,7 +1996,7 @@
   
         </div>
         <div
-    class="gp-items-center gp-justify-center gp-gap-2 gp-text-center gp-carousel-dot-container gp-carousel-dot-container-gq3Brp7bB8-{{section.id}} gp-static gp-flex-row gp-left-0 gp-right-0 tablet:gp-static tablet:gp-flex-row tablet:gp-left-0 tablet:gp-right-0 mobile:gp-static mobile:gp-flex-row mobile:gp-left-0 mobile:gp-right-0"
+    class="gp-items-center gp-justify-center gp-gap-2 gp-text-center gp-carousel-dot-container gp-carousel-dot-container-goDRh5wp1V-{{section.id}} gp-static gp-flex-row gp-left-0 gp-right-0 tablet:gp-static tablet:gp-flex-row tablet:gp-left-0 tablet:gp-right-0 mobile:gp-static mobile:gp-flex-row mobile:gp-left-0 mobile:gp-right-0"
     style="--bottom:16px;--bottom-tablet:16px;--bottom-mobile:16px;--d:none;--d-tablet:none;--d-mobile:none"
  ></div>
       </div>
@@ -2163,74 +2004,3 @@
     <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-carousel-v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
 
   
-    </div>
-    </div>
-  
-            </section>
-           
-    
-<style {% if section.settings.section_preload == "false" %} class="gps-link" type="text/disabled-css" {% endif %}>@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXw.woff) format('woff');
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw0aXx-p7K4KLjztg.woff) format('woff');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw9aXx-p7K4KLjztg.woff) format('woff');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw2aXx-p7K4KLjztg.woff) format('woff');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXx-p7K4KLjztg.woff) format('woff');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXx-p7K4KLg.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-</style>
-
-{% schema %}
-  {
-    "presets": [{ "name": "PDP - COF - Review Carous" }],
-    "name": "PDP - COF - Review Carous",
-    "tag": "section",
-    "class": "gps-565398054547489777 gps gpsil",
-    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=565398054547489777)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggl6B_tvUAB_text","label":"ggl6B_tvUAB_text","default":"<p>This sh*t slaps</p>"},{"type":"html","id":"gg3OXyistIH_text","label":"gg3OXyistIH_text","default":"<p>It's smooth, not a bitter coffee, and not acidic either. 10/10 will be buying again to train with.</p>"},{"type":"html","id":"ggB-7-xtTkb_text","label":"ggB-7-xtTkb_text","default":"<p>Bri l.</p>"},{"type":"html","id":"gg5QDQ4Kmda_text","label":"gg5QDQ4Kmda_text","default":"<p>Love it</p>"},{"type":"html","id":"ggL_y1fn5rZ_text","label":"ggL_y1fn5rZ_text","default":"<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>"},{"type":"html","id":"gg1DBZGUOPm_text","label":"gg1DBZGUOPm_text","default":"<p>Alex H.</p>"},{"type":"html","id":"gg-dFYYR87e_text","label":"gg-dFYYR87e_text","default":"<p><strong>Fast</strong></p>"},{"type":"html","id":"gg-1zdEzhiD_text","label":"gg-1zdEzhiD_text","default":"<p>Fast shipping and great tasting product. Works fast and provides a noticeably stronger energy kick.</p>"},{"type":"html","id":"ggb8zWncFLk_text","label":"ggb8zWncFLk_text","default":"<p>Cody D.</p>"},{"type":"html","id":"ggX_EGkD4fH_text","label":"ggX_EGkD4fH_text","default":"<p>Great taste</p>"},{"type":"html","id":"ggTmTG13nqg_text","label":"ggTmTG13nqg_text","default":"<p>Love it. The coffee tastes good and I feel great after drinking it. I have a cup before every run.</p><p>&nbsp;</p><p>Haven't found a flavor that I did not like.</p>"},{"type":"html","id":"ggX8S3KLjTv_text","label":"ggX8S3KLjTv_text","default":"<p>Alex R.</p>"},{"type":"html","id":"ggrdW1_70EF_text","label":"ggrdW1_70EF_text","default":"<p>New Routine</p>"},{"type":"html","id":"ggLp1Nen75V_text","label":"ggLp1Nen75V_text","default":"<p>No more guessing about pre-run fueling. This coffee is consistent, quick, and reliable—exactly what I needed.</p>"},{"type":"html","id":"ggFfXu6Gd-b_text","label":"ggFfXu6Gd-b_text","default":"<p>Ryan D.</p>"},{"type":"html","id":"ggQz48m5NpN_text","label":"ggQz48m5NpN_text","default":"<p>Awesome</p>"},{"type":"html","id":"ggE6uFrpQYL_text","label":"ggE6uFrpQYL_text","default":"<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>"},{"type":"html","id":"gg-TVgAdVAR_text","label":"gg-TVgAdVAR_text","default":"<p>Josh C.</p>"},{"type":"html","id":"ggFl-c-FZbc_text","label":"ggFl-c-FZbc_text","default":"<p>This sh*t slaps</p>"},{"type":"html","id":"ggwHeYDy-c-_text","label":"ggwHeYDy-c-_text","default":"<p>It's smooth, not a bitter coffee, and not acidic either. 10/10 will be buying again to train with.</p>"},{"type":"html","id":"ggq1a5E_zke_text","label":"ggq1a5E_zke_text","default":"<p>Bri l.</p>"},{"type":"html","id":"ggcmppm_lF3_text","label":"ggcmppm_lF3_text","default":"<p>Love it</p>"},{"type":"html","id":"ggA29j_Sf5c_text","label":"ggA29j_Sf5c_text","default":"<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>"},{"type":"html","id":"ggeeqphrHhv_text","label":"ggeeqphrHhv_text","default":"<p>Alex H.</p>"},{"type":"html","id":"ggE0YJIWJbw_text","label":"ggE0YJIWJbw_text","default":"<p><strong>Fast</strong></p>"},{"type":"html","id":"ggOekvy3m2__text","label":"ggOekvy3m2__text","default":"<p>Fast shipping and great tasting product. Works fast and provides a noticeably stronger energy kick.</p>"},{"type":"html","id":"ggcCa2BsKbX_text","label":"ggcCa2BsKbX_text","default":"<p>Cody D.</p>"},{"type":"html","id":"gghOHWW4cub_text","label":"gghOHWW4cub_text","default":"<p>Great taste</p>"},{"type":"html","id":"ggmM4fK7pWR_text","label":"ggmM4fK7pWR_text","default":"<p>Love it. The coffee tastes good and I feel great after drinking it. I have a cup before every run.</p><p>&nbsp;</p><p>Haven't found a flavor that I did not like.</p>"},{"type":"html","id":"ggu565qFWG-_text","label":"ggu565qFWG-_text","default":"<p>Alex R.</p>"},{"type":"html","id":"ggxom4vxJhy_text","label":"ggxom4vxJhy_text","default":"<p>New Routine</p>"},{"type":"html","id":"ggtaMHoGSUZ_text","label":"ggtaMHoGSUZ_text","default":"<p>No more guessing about pre-run fueling. This coffee is consistent, quick, and reliable—exactly what I needed.</p>"},{"type":"html","id":"ggWL_VKoE9E_text","label":"ggWL_VKoE9E_text","default":"<p>Ryan D.</p>"},{"type":"html","id":"ggy9KO2Bsjb_text","label":"ggy9KO2Bsjb_text","default":"<p>Awesome</p>"},{"type":"html","id":"gg5o8prSpva_text","label":"gg5o8prSpva_text","default":"<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>"},{"type":"html","id":"gg5Dit3pIPC_text","label":"gg5Dit3pIPC_text","default":"<p>Josh C.</p>"}],
-    "blocks": [{"type": "@app"}],
-    "locales": {}
-  }
-{% endschema %}
