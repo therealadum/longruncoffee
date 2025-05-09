@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_with_text_adUPRF": {
@@ -15,27 +15,35 @@
         "heading_bRDneY": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome Amazon customers",
+            "heading": "How did we do?",
             "heading_size": "h1"
           }
         },
         "text_GcfTnx": {
           "type": "text",
           "settings": {
-            "text": "<p>Do you have an issue, question, or want to provide feedback on your order?<\/p><p>We're here to help!<\/p>",
+            "text": "<p>We would love for you to share your experience with others by leaving a review on Amazon. </p><p>As a small,  athlete owned business nothing matters more than our customers.  </p>",
             "text_style": "body"
+          }
+        },
+        "button_6rtDrg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Leave a Review",
+            "button_link": "https://www.amazon.com/review/create-review?asin=B0F5SCTZN7"
           }
         }
       },
       "block_order": [
         "heading_bRDneY",
-        "text_GcfTnx"
+        "text_GcfTnx",
+        "button_6rtDrg"
       ],
       "custom_css": [
         "@media screen and (max-width: 960px) {h2 {font-size: 36px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/LRC4.jpg",
+        "image": "shopify://shop_images/LRC4.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -52,7 +60,7 @@
     "contact_form_nyRdK3": {
       "type": "contact-form",
       "settings": {
-        "heading": "Get in touch",
+        "heading": "Have an issue with your order? We're here to help!",
         "heading_size": "h2",
         "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
         "padding_top": 36,
@@ -95,7 +103,7 @@
           "settings": {
             "heading": "Easier Running",
             "icon": "shoe",
-            "row_content": "<h6>Our electrolyte coffee aids muscle contraction, making the run feel easier. <\/h6>",
+            "row_content": "<h6>Our electrolyte coffee aids muscle contraction, making the run feel easier. </h6>",
             "page": ""
           }
         },
@@ -104,7 +112,7 @@
           "settings": {
             "heading": "No Upset Stomach",
             "icon": "check_mark",
-            "row_content": "<h6>Our formula is pH basic, meaning it's easier on your stomach than regular coffee and other pre-workouts.<\/h6>",
+            "row_content": "<h6>Our formula is pH basic, meaning it's easier on your stomach than regular coffee and other pre-workouts.</h6>",
             "page": ""
           }
         },
@@ -113,7 +121,7 @@
           "settings": {
             "heading": "Reduce Sluggishness",
             "icon": "lightning_bolt",
-            "row_content": "<h6>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.<\/h6>",
+            "row_content": "<h6>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.</h6>",
             "page": ""
           }
         },
@@ -122,7 +130,7 @@
           "settings": {
             "heading": "Effortless Routine",
             "icon": "stopwatch",
-            "row_content": "<h6>The most enjoyable electrolyte routine you can be consistent with.<\/h6>",
+            "row_content": "<h6>The most enjoyable electrolyte routine you can be consistent with.</h6>",
             "page": ""
           }
         }
@@ -146,7 +154,7 @@
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "open_first_collapsible_row": true,
-        "image": "shopify:\/\/shop_images\/Ultra_10.png",
+        "image": "shopify://shop_images/Ultra_10.png",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -155,24 +163,20 @@
     },
     "home_coffee_club_cta_U3WrD7": {
       "type": "home-coffee-club-cta",
-      "settings": {
-      }
+      "settings": {}
     },
     "9eb1c3fa-e7be-4e65-9b5b-c0b66b92f636": {
       "type": "home-reviews",
-      "settings": {
-      }
+      "settings": {}
     },
     "coming-soon": {
       "type": "coming-soon",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "d5466ac7-0a29-4c38-af12-7e4caee3d53f": {
       "type": "home-mission-cta",
-      "settings": {
-      }
+      "settings": {}
     },
     "accf1238-351b-4e82-a2fb-ed65fbb5d239": {
       "type": "featured-blog",
@@ -273,7 +277,7 @@
         "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h5>Electrolyte Infused <br\/>Coffee For Athletes<br\/><br\/>Try it Free.<\/h5>"
+            "text": "<h5>Electrolyte Infused <br/>Coffee For Athletes<br/><br/>Try it Free.</h5>"
           }
         },
         "template--21124510023993__5ba6089b-f4b0-483a-bb71-f0815cd8c897-button-1": {
@@ -320,7 +324,7 @@
         "text_jR8PGt": {
           "type": "text",
           "settings": {
-            "text": "<strong>Long Run Co. helps athletes fuel, recover, and sleep better. <\/strong>",
+            "text": "<strong>Long Run Co. helps athletes fuel, recover, and sleep better. </strong>",
             "text_style": "subtitle"
           }
         }
@@ -333,7 +337,7 @@
         "@media (max-width: 960px) {h2 {font-size: 32px; } p {font-size: 18px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Copy_of_Marathon_Mock_Up_1.png",
+        "image": "shopify://shop_images/Copy_of_Marathon_Mock_Up_1.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
