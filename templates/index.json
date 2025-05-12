@@ -29,22 +29,22 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "Trail Mix Is here!",
+            "heading": "New Coffee & Gear!",
             "heading_size": "h2"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>\"Who ate all the damn chocolate?\"</strong></p><p>This Trail Mix flavor is sweet, smooth, and keeps you running. Plus, you never have to worry about someone picking out all the chocolate. </p><p>Infused with essential electrolytes, this coffee delivers hydration and a stronger energy kick to reduce morning fatigue. </p>",
+            "text": "<p>On May 18, we are launching two new athlete favorites: <strong>Pistachio Cream</strong> and <strong>Rocky Mountain Runoff</strong>.</p><p>You can also get our new trail trucker hat free when starting a new subscription (while supplies last). </p>",
             "text_style": "body"
           }
         },
         "button_fQyRDF": {
           "type": "button",
           "settings": {
-            "button_label": "Take Me There",
-            "button_link": "shopify://products/trail-mix"
+            "button_label": "See What's New",
+            "button_link": "shopify://collections/meta-flavor"
           }
         }
       },
@@ -58,7 +58,7 @@
         "@media (min-width: 961px) {p {font-size: 24px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Trail_Mix.gif",
+        "image": "shopify://shop_images/Pistachio_and_Rocky_Mountain_Launch.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
