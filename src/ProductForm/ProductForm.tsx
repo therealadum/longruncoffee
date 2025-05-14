@@ -839,6 +839,16 @@ export function ProductForm(args: any) {
       args.container.attributes.getNamedItem("variantquantitymap").value,
     ),
   );
+  const variantServingUnitMap = JSON.parse(
+    decodeURIComponent(
+      args.container.attributes.getNamedItem("variantservingunitmap").value,
+    ),
+  );
+  const variantTotalServingsMap = JSON.parse(
+    decodeURIComponent(
+      args.container.attributes.getNamedItem("varianttotalservingsmap").value,
+    ),
+  );
   const isMobile = useIsMobile();
   const [images, setImages] = React.useState(
     product.images.map((img: string) => ({
@@ -850,7 +860,7 @@ export function ProductForm(args: any) {
   );
   const options = generateOptionsFromProductVariants(product);
 
-  console.log(product);
+  console.log({ product, variantServingUnitMap, variantTotalServingsMap });
 
   const [productForm, setProductForm] = React.useState({
     hasSellingPlan: isRechargeAvailableOnProduct(product),

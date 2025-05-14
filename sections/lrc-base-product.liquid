@@ -4,15 +4,21 @@
   type="text/javascript"
 >
   const variantQuantityMap = {};
+  const variantServingUnitMap = {};
+  const variantTotalServingsMap = {};
   {% for variant in product.variants %}
     variantQuantityMap[{{ variant.id }}] = {{ variant.inventory_quantity }};
+    variantServingUnitMap[{{ variant.id }}] = "{{  variant.metafields.lrc.serving_size_unit.value | default: "cup" }}"
+    variantTotalServingsMap[{{ variant.id }}] = {{ variant.metafields.lrc.total_servings.value | default: 0 }}
   {% endfor %}
 
   const productjson = encodeURIComponent(JSON.stringify({{ product | json }}))
   const reviews = encodeURIComponent(JSON.stringify({{ product.metafields.reviews | json }}))
   const variantquantitymap = encodeURIComponent(JSON.stringify(variantQuantityMap))
-  
-  const baseproduct = `<product-form productjson="${productjson}" reviews="${reviews}" variantquantitymap="${variantquantitymap}"></product-form>`
+  const variantservingunitmap = encodeURIComponent(JSON.stringify(variantServingUnitMap))
+  const varianttotalservingsmap = encodeURIComponent(JSON.stringify(variantTotalServingsMap))
+
+  const baseproduct = `<product-form productjson="${productjson}" reviews="${reviews}" variantquantitymap="${variantquantitymap}" variantservingunitmap="${variantservingunitmap}" varianttotalservingsmap="${varianttotalservingsmap}"></product-form>`
   document.getElementById('lrc-base-product').innerHTML = baseproduct;
 </script>
 {% schema %}
