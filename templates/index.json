@@ -44,7 +44,7 @@
           "type": "button",
           "settings": {
             "button_label": "See What's New",
-            "button_link": "shopify://collections/meta-flavor"
+            "button_link": "shopify://collections/new"
           }
         }
       },
