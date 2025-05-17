@@ -23,8 +23,8 @@ import {
 import Announcements from "./Announcements";
 
 const today = new Date();
-const gift_promo_start = new Date(Date.UTC(2025, 1, 26, 5, 0, 0, 0));
-const gift_promo_end = new Date(Date.UTC(2025, 3, 5, 5, 0, 0, 0));
+const gift_promo_start = new Date(Date.UTC(2025, 4, 18, 5, 0, 0, 0)); // 12 am CT
+const gift_promo_end = new Date(Date.UTC(2025, 4, 22, 4, 59, 0, 0)); // 11:59 pm CT
 
 const navigation = {
   categories: [
@@ -32,14 +32,23 @@ const navigation = {
       id: "shop",
       name: "Shop",
       featured: [
-        {
-          name: "Trail Mix",
-          href: "/products/trail-mix",
-          imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Trail_Mix.gif?v=1743910281&width=500",
-          imageAlt: "Trail Mix",
-          description: "Shop now",
-        },
+        today > gift_promo_start && today < gift_promo_end
+          ? {
+              name: "Free Trail Hat",
+              href: "/collections/new",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Copy_of_Trail_Mix.gif?v=1747441148&width=500",
+              imageAlt: "Free Trail Hat",
+              description: "Subscribe by 11/21",
+            }
+          : {
+              name: "Trail Mix",
+              href: "/products/trail-mix",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Trail_Mix.gif?v=1743910281&width=500",
+              imageAlt: "Trail Mix",
+              description: "Shop now",
+            },
         {
           name: "Long Run Club",
           href: "/pages/long-run-club",
@@ -83,9 +92,18 @@ const navigation = {
               href: "/products/ready-to-run",
             },
             {
-              name: "Trail Mix",
-              href: "/products/trail-mix",
+              name: "Pistachio Cream",
+              href: "/products/pistachio-cream",
               label: "NEW",
+            },
+            {
+              name: "Rocky Mountain Runoff",
+              href: "/products/rocky-mountain-runoff",
+              label: "NEW",
+            },
+            {
+              name: "Half Dome Mint Cookie",
+              href: "/products/mint-cookie",
             },
           ],
         },
@@ -95,14 +113,23 @@ const navigation = {
       id: "info",
       name: "Info",
       featured: [
-        {
-          name: "Trail Mix",
-          href: "/products/trail-mix",
-          imageSrc:
-            "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Trail_Mix.gif?v=1743910281&width=500",
-          imageAlt: "Trail Mix",
-          description: "Shop now",
-        },
+        today > gift_promo_start && today < gift_promo_end
+          ? {
+              name: "Free Trail Hat",
+              href: "/collections/new",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Copy_of_Trail_Mix.gif?v=1747441148&width=500",
+              imageAlt: "Free Trail Hat",
+              description: "Subscribe by 11/21",
+            }
+          : {
+              name: "Trail Mix",
+              href: "/products/trail-mix",
+              imageSrc:
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Trail_Mix.gif?v=1743910281&width=500",
+              imageAlt: "Trail Mix",
+              description: "Shop now",
+            },
         {
           name: "Long Run Coffee's First Instant Powder Is Here!",
           href: "/blogs/news/ready-to-run",
