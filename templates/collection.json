@@ -13,6 +13,7 @@
       "type": "lrc-collection",
       "settings": {
         "coffee_collections": [
+          "new",
           "coffee",
           "traditional-roasts",
           "flavored",
