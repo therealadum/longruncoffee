@@ -57,6 +57,55 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_ebz4Bm": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jEDk7h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Want a $15 Gift Card?",
+            "heading_size": "h1"
+          }
+        },
+        "text_wU9UgY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It's as easy as one, two, three:</p><p>1) Leave a review on Amazon</p><p>2) Take a screenshot</p><p>3) Send it to <strong>amazon@longruncoffee.com </strong></p><p></p><p>We will send an electronic gift card your way as a thank you for sharing your experience with others!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_8rWxef": {
+          "type": "button",
+          "settings": {
+            "button_label": "Leave a Review",
+            "button_link": "https://www.amazon.com/review/create-review?asin=B0F5SCTZN7"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jEDk7h",
+        "text_wU9UgY",
+        "button_8rWxef"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 960px) {h2 {font-size: 36px; }}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Gift_Card.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "contact_form_nyRdK3": {
       "type": "contact-form",
       "settings": {
@@ -141,6 +190,7 @@
         "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-3",
         "template--21124510023993__7f3ffb9d-263c-40c5-8c42-206c33aa50dd-collapsible_row-4"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 960px) {h2 {font-size: 28px; } h3 {font-size: 18px; } h6 {font-size: 18px; }}",
         "@media (min-width: 961px) {h2 {font-size: 42px; } h6 {font-size: 22px; }}"
@@ -353,6 +403,7 @@
   },
   "order": [
     "image_with_text_adUPRF",
+    "image_with_text_ebz4Bm",
     "contact_form_nyRdK3",
     "featured_collection_b8deL3",
     "7f3ffb9d-263c-40c5-8c42-206c33aa50dd",
