@@ -29,22 +29,22 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "New Coffee & Gear!",
+            "heading": "Summer Stroopwafel is coming",
             "heading_size": "h2"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Long Run Parks Series and new casual trail hat are available now while supplies last. </p><p>Enjoy our two new and most requested flavors:  <strong>Pistachio Cream</strong> and <strong>Rocky Mountain Runoff</strong>.</p>",
+            "text": "<p>On June 29th, all athletes can start a new subscription and get Stroopwafel free with their first shipment. </p><p></p><p>This is a limited time and limited stock item - we expect it to sell out.</p>",
             "text_style": "body"
           }
         },
         "button_fQyRDF": {
           "type": "button",
           "settings": {
-            "button_label": "See What's New",
-            "button_link": "shopify://collections/new"
+            "button_label": "Subscribe Now",
+            "button_link": "shopify://collections/subscribe-save"
           }
         }
       },
@@ -58,7 +58,7 @@
         "@media (min-width: 961px) {p {font-size: 24px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Pistachio_and_Rocky_Mountain_Launch.gif",
+        "image": "shopify://shop_images/Copy_of_0._Intro_Email_1_-_GIF.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
