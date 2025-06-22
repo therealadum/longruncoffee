@@ -9,11 +9,17 @@
  */
 {
   "sections": {
-    "gp_global_section_554702231539025136_EWwDai": {
-      "type": "gp-global-section-554702231539025136",
+    "gp_global_section_572237986394014592_reDkDr": {
+      "type": "gp-global-section-572237986394014592",
+      "name": "Banner - Stroop",
       "settings": {
         "section_preload": "off_lazy_script",
-        "checksum": ""
+        "checksum": "",
+        "ggIR2ppG4iH_dayLabel": "Days",
+        "ggIR2ppG4iH_hourLabel": "Hours",
+        "ggIR2ppG4iH_minuteLabel": "Minutes",
+        "ggIR2ppG4iH_secondLabel": "Seconds",
+        "ggIR2ppG4iH_weekLabel": "Weeks"
       }
     },
     "gp_section_534533922415969420": {
@@ -149,7 +155,7 @@
     }
   },
   "order": [
-    "gp_global_section_554702231539025136_EWwDai",
+    "gp_global_section_572237986394014592_reDkDr",
     "gp_section_534533922415969420",
     "gp_section_485854940099511180",
     "gp_section_534553535400903481",

@@ -9,22 +9,22 @@
  */
 {
   "sections": {
-    "gp_global_section_567062381704774593_UTyEDF": {
-      "type": "gp-global-section-567062381704774593",
-      "disabled": true,
-      "name": "Banner - 7PHat - Active",
+    "gp_global_section_572237986394014592_LUbBJj": {
+      "type": "gp-global-section-572237986394014592",
+      "name": "Banner - Stroop",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggPRrgh_5XJ_dayLabel": "Days",
-        "ggPRrgh_5XJ_hourLabel": "Hours",
-        "ggPRrgh_5XJ_minuteLabel": "Minutes",
-        "ggPRrgh_5XJ_secondLabel": "Seconds",
-        "ggPRrgh_5XJ_weekLabel": "Weeks"
+        "ggIR2ppG4iH_dayLabel": "Days",
+        "ggIR2ppG4iH_hourLabel": "Hours",
+        "ggIR2ppG4iH_minuteLabel": "Minutes",
+        "ggIR2ppG4iH_secondLabel": "Seconds",
+        "ggIR2ppG4iH_weekLabel": "Weeks"
       }
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "custom_css": [
         "h1 {font-size: 35px;}"
       ],
@@ -56,7 +56,7 @@
     }
   },
   "order": [
-    "gp_global_section_567062381704774593_UTyEDF",
+    "gp_global_section_572237986394014592_LUbBJj",
     "banner",
     "product-grid"
   ]
