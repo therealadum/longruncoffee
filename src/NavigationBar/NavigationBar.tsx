@@ -23,8 +23,8 @@ import {
 import Announcements from "./Announcements";
 
 const today = new Date();
-const gift_promo_start = new Date(Date.UTC(2025, 4, 18, 5, 0, 0, 0)); // 12 am CT
-const gift_promo_end = new Date(Date.UTC(2025, 4, 22, 4, 59, 0, 0)); // 11:59 pm CT
+const gift_promo_start = new Date(Date.UTC(2025, 5, 29, 5, 0, 0, 0)); // 12 am CT
+const gift_promo_end = new Date(Date.UTC(2025, 6, 3, 4, 59, 0, 0)); // 11:59 pm CT
 
 const navigation = {
   categories: [
@@ -34,19 +34,19 @@ const navigation = {
       featured: [
         today > gift_promo_start && today < gift_promo_end
           ? {
-              name: "Free Trail Hat",
-              href: "/collections/new",
+              name: "Free Summer Stroopwafel",
+              href: "/collections/subscribe-save",
               imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Copy_of_Trail_Mix.gif?v=1747441148&width=500",
-              imageAlt: "Free Trail Hat",
-              description: "Subscribe by 11/21",
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Stroop_Free.gif?v=1751137769&width=500",
+              imageAlt: "Free Summer Stroopwafel",
+              description: "Subscribe by 7/2",
             }
           : {
-              name: "Trail Mix",
-              href: "/products/trail-mix",
+              name: "Summer Stroopwafel",
+              href: "/products/stroopwafel",
               imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Trail_Mix.gif?v=1743910281&width=500",
-              imageAlt: "Trail Mix",
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Stroop.gif?v=1751137768&width=500",
+              imageAlt: "Summer Stroopwafel",
               description: "Shop now",
             },
         {
@@ -115,19 +115,19 @@ const navigation = {
       featured: [
         today > gift_promo_start && today < gift_promo_end
           ? {
-              name: "Free Trail Hat",
-              href: "/collections/new",
+              name: "Free Summer Stroopwafel",
+              href: "/collections/subscribe-save",
               imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Copy_of_Trail_Mix.gif?v=1747441148&width=500",
-              imageAlt: "Free Trail Hat",
-              description: "Subscribe by 11/21",
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Stroop_Free.gif?v=1751137769&width=500",
+              imageAlt: "Free Summer Stroopwafel",
+              description: "Subscribe by 7/2",
             }
           : {
-              name: "Trail Mix",
-              href: "/products/trail-mix",
+              name: "Summer Stroopwafel",
+              href: "/products/stroopwafel",
               imageSrc:
-                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Trail_Mix.gif?v=1743910281&width=500",
-              imageAlt: "Trail Mix",
+                "https://cdn.shopify.com/s/files/1/0761/6924/9081/files/Stroop.gif?v=1751137768&width=500",
+              imageAlt: "Summer Stroopwafel",
               description: "Shop now",
             },
         {
