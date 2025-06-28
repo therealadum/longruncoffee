@@ -189,6 +189,9 @@
     },
     "StockCounter": {
       "let_buy_now": "<mark>HURRY!</mark> LET BUY NOW"
+    },
+    "Breadcrumb": {
+      "home": "Home"
     }
   },
   "general": {
