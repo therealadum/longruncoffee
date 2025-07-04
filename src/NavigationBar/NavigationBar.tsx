@@ -105,6 +105,11 @@ const navigation = {
               name: "Half Dome Mint Cookie",
               href: "/products/mint-cookie",
             },
+            {
+              name: "Summer Sale",
+              href: "/pages/summer-sale-2025",
+              label: "SALE",
+            },
           ],
         },
       ],
@@ -173,7 +178,10 @@ const navigation = {
       ],
     },
   ],
-  pages: [{ name: "Long Run Club", href: "/pages/long-run-club" }],
+  pages: [
+    { name: "Long Run Club", href: "/pages/long-run-club" },
+    { name: "Summer Sale", href: "/pages/summer-sale-2025" },
+  ],
 };
 
 export function NavigationBar() {
