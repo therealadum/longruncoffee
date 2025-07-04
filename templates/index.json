@@ -29,22 +29,22 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "Summer Stroopwafel is coming",
+            "heading": "Our 4th of july sale is live",
             "heading_size": "h2"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>On June 29th, all athletes can start a new subscription and get Stroopwafel free with their first shipment. </p><p></p><p>This is a limited time and limited stock item - we expect it to sell out.</p>",
+            "text": "<p>This weekend only, we have BOGO on our Ready to Run powder and 26.2% off all gear. </p><p></p><p>Stock up for summer training while supplies last!</p>",
             "text_style": "body"
           }
         },
         "button_fQyRDF": {
           "type": "button",
           "settings": {
-            "button_label": "Subscribe Now",
-            "button_link": "shopify://collections/subscribe-save"
+            "button_label": "View Sale",
+            "button_link": "shopify://pages/summer-sale-2025"
           }
         }
       },
@@ -58,7 +58,7 @@
         "@media (min-width: 961px) {p {font-size: 24px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Copy_of_0._Intro_Email_1_-_GIF.gif",
+        "image": "shopify://shop_images/BOGO.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
