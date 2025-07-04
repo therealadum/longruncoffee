@@ -11,6 +11,7 @@
   "sections": {
     "gp_global_section_572237986394014592_LUbBJj": {
       "type": "gp-global-section-572237986394014592",
+      "disabled": true,
       "name": "Banner - Stroop",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -24,7 +25,6 @@
     },
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "custom_css": [
         "h1 {font-size: 35px;}"
       ],
