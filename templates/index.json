@@ -29,22 +29,22 @@
         "heading_TpBMeR": {
           "type": "heading",
           "settings": {
-            "heading": "Our 4th of july sale is live!",
+            "heading": "Stroopwafel is back for a limited time!",
             "heading_size": "h2"
           }
         },
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>This weekend only, we have BOGO on our Ready to Run powder and 26.2% off all gear. </p><p></p><p>Stock up for summer training while supplies last!</p>",
+            "text": "<p>Back by popular demand from last summer, we did a limited run of our Stroopwafel electrolyte coffee. </p><p></p><p>Get it while supplies last!</p>",
             "text_style": "body"
           }
         },
         "button_fQyRDF": {
           "type": "button",
           "settings": {
-            "button_label": "View Sale",
-            "button_link": "shopify://pages/summer-sale-2025"
+            "button_label": "Get Yours",
+            "button_link": "shopify://products/stroopwafel"
           }
         }
       },
@@ -58,7 +58,7 @@
         "@media (min-width: 961px) {p {font-size: 24px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/BOGO.jpg",
+        "image": "shopify://shop_images/10_1cf54120-a2c0-4df7-be50-6c5f56ab7932.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
