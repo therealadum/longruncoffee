@@ -1,0 +1,371 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "lrc-base-product": {
+      "type": "lrc-base-product",
+      "settings": {}
+    },
+    "lrc-accordion": {
+      "type": "lrc-accordion",
+      "blocks": {
+        "product-description": {
+          "type": "product-description",
+          "settings": {}
+        },
+        "lrc_accordion_item_2": {
+          "type": "lrc-accordion-image",
+          "settings": {
+            "title": "Ingredients",
+            "image": "shopify://shop_images/Supp_w_CalCarb_5.png"
+          }
+        },
+        "lrc_accordion_item_3": {
+          "type": "lrc-accordion-text",
+          "settings": {
+            "title": "How to Use",
+            "body": "Long Run Coffee is actual coffee (not coffee alternative) and works with any brewing method! LRC is meant to be consumed daily, wherever it fits your routine best."
+          }
+        }
+      },
+      "block_order": [
+        "product-description",
+        "lrc_accordion_item_2",
+        "lrc_accordion_item_3"
+      ],
+      "settings": {}
+    },
+    "lrc-coffee-benefits-short": {
+      "type": "lrc-coffee-benefits-short",
+      "settings": {
+        "show_cta": false,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "lrc-coffee-benefits": {
+      "type": "lrc-coffee-benefits",
+      "settings": {
+        "show_cta": false,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "one-click-upsell": {
+      "type": "lrc-reviews",
+      "blocks": {
+        "one-click-upsell": {
+          "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "one-click-upsell"
+      ],
+      "settings": {}
+    },
+    "lrc-review-summary": {
+      "type": "lrc-review-summary",
+      "blocks": {
+        "image_GGw6iH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hoka.png"
+          }
+        },
+        "image_ctk6RF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/runners-world-logo-vector-removebg-preview.png"
+          }
+        },
+        "image_qTwJhq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/believe-in-the-run.png"
+          }
+        },
+        "image_QF6Ptp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bigger-than-the-trail.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_GGw6iH",
+        "image_ctk6RF",
+        "image_qTwJhq",
+        "image_QF6Ptp"
+      ],
+      "settings": {
+        "title": "Trusted by Runners",
+        "review-text": "1.8k+ Reviews",
+        "background-color": "tan"
+      }
+    },
+    "gp_global_section_538796875008967812_8Pgw33": {
+      "type": "gp-global-section-538796875008967812",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
+    },
+    "0e698922-8ed8-423d-886f-c78375d71373": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "You may also like",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "coffee",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1693874745cc6bc7e5": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17093999844598d023": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_iFiJeK": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_iFiJeK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "3e4ec809-784d-4120-a4a6-cced1ff5c986": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_JtUkwM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wPyir4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Coffee",
+            "heading_size": "h1"
+          }
+        },
+        "text_3Ybr6Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The coffee beans used in our electrolyte infused coffee are arabic beans sourced from Costa Rica, Brazil and Mexico, depending on the roast.  </p><p>All of our roasts use arabica beans and are organic, FDA approved, and have no GMOs.</p><p>Our green bean supplier is heavily involved with the farms they source beans from and even started the <a href=\"https://nkgbloom.coffee/\" target=\"_blank\" title=\"NKG Bloom\">NKG Bloom program</a> in several countries to help farming communities.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wPyir4",
+        "text_3Ybr6Q"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {p {font-size: 16px; }}",
+        "@media (min-width: 961px) {p {font-size: 22px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/top_down_view_of_a_travel_tumbler_of_coffee_with_coffee_beans_on_the_white_platform.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_CxL9kk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_iiYrpQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Process",
+            "heading_size": "h1"
+          }
+        },
+        "text_HxzVLK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We use a proprietary process, that is both unique and effective.</p><p>As coffee beans roast, they release natural oils. Immediately after roasting, we infuse our blend of electrolytes directly into these oils.</p><p>The beans are then cooled, and allowed to set. This binds the electrolytes to the bean's exterior.</p><p>This all-natural electrolyte + caffeine combo provides you with reduced fatigue, sustained endurance, better muscle function, and overall enhanced performance and recovery.</p><p>In addition, the added electrolytes bring down the acidity of the coffee which makes it stomach- friendly before your workout.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_9QkJAY": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_iiYrpQ",
+        "text_HxzVLK",
+        "button_9QkJAY"
+      ],
+      "custom_css": [
+        "@media (max-width: 960px) {p {font-size: 16px; }}",
+        "@media (min-width: 961px) {p {font-size: 20px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Coffee_Roasting.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collage_w37phJ": {
+      "type": "collage",
+      "blocks": {
+        "image_LpaUaf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/169_Blog_Pictures_4_b1b5a590-9e73-47e3-bc5f-0cf6aeca78a6.png"
+          }
+        },
+        "product_Rjn9FC": {
+          "type": "product",
+          "settings": {
+            "product": "lrc-x-boa-racing-jersey",
+            "second_image": true
+          }
+        },
+        "collection_9QaECb": {
+          "type": "collection",
+          "settings": {
+            "collection": "gear"
+          }
+        }
+      },
+      "block_order": [
+        "image_LpaUaf",
+        "product_Rjn9FC",
+        "collection_9QaECb"
+      ],
+      "settings": {
+        "heading": "LRC Gear",
+        "heading_size": "h1",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_6nQLaw": {
+      "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
+      "settings": {
+        "heading": "Fuel Your Passion Blog",
+        "heading_size": "h2",
+        "blog": "fuel-your-passion",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_R6TUwB": {
+      "type": "featured-blog",
+      "custom_css": [
+        "p {font-size: 18px;}",
+        "h3 {font-size: 28px;}"
+      ],
+      "settings": {
+        "heading": "Recipes for Runners",
+        "heading_size": "h2",
+        "blog": "recipes",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-2",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "lrc-base-product",
+    "lrc-accordion",
+    "lrc-coffee-benefits-short",
+    "lrc-coffee-benefits",
+    "one-click-upsell",
+    "lrc-review-summary",
+    "gp_global_section_538796875008967812_8Pgw33",
+    "0e698922-8ed8-423d-886f-c78375d71373",
+    "1693874745cc6bc7e5",
+    "17093999844598d023",
+    "3e4ec809-784d-4120-a4a6-cced1ff5c986",
+    "image_with_text_JtUkwM",
+    "image_with_text_CxL9kk",
+    "collage_w37phJ",
+    "featured_blog_6nQLaw",
+    "featured_blog_R6TUwB"
+  ]
+}
