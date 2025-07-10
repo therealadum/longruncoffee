@@ -195,16 +195,16 @@
         "gg95L9mKpt2_text": "Naturally Calming"
       }
     },
-    "gp_global_section_574758233458082591_E3mcJP": {
+    "gp_global_section_574758233458082591_9x96Qt": {
       "type": "gp-global-section-574758233458082591",
-      "name": "PDP - TEA - SB Ingredient",
+      "name": "PDP - TEA - Ingr Mobile",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
         "ggtIGrqbSIJ_text": "Science-Backed Ingredients",
-        "gg_wthrdAjc_childItem_0": "<p><strong>Natural Herbal Tea Blend</strong></p>",
-        "gg_wthrdAjc_childItem_1": "<p><strong>Melatonin 3 - 6 mg</strong></p>",
-        "gg_wthrdAjc_childItem_2": "<p><strong>Fast-Release Mesh Tea Bag</strong></p>",
+        "gg_wthrdAjc_childItem_0": "<p>Natural Herbal Tea Blend</p>",
+        "gg_wthrdAjc_childItem_1": "<p>Melatonin 3 - 6 mg</p>",
+        "gg_wthrdAjc_childItem_2": "<p>Fast-Release Mesh Tea Bag</p>",
         "ggbttQK_CGT_text": "<p>This calming blend combines soothing herbs traditionally used to promote rest and relaxation. No synthetic flavors. No hidden fillers. Just real plants, carefully selected to help you rest &amp; recover.</p>",
         "ggHe4M-QBJM_text": "<p>We use a science-backed dose of melatonin—enough to help you fall asleep faster, without leaving you groggy the next day. You can still control the strength (3 -6 mg) depending on your preference.</p>",
         "ggdO4VsD8Gq_text": "<p>Our custom-designed tea bag is engineered to allow melatonin to fully dissolve and pass through the lining—something standard tea bags won’t do. It delivers full potency with no waste, so every sip does what it’s meant to do.</p>",
@@ -215,6 +215,14 @@
         "gg9hWHzSC-z_text": "<p>This calming blend combines soothing herbs traditionally used to promote rest and relaxation. No synthetic flavors. No hidden fillers. Just real plants, carefully selected to help you rest &amp; recover.</p>",
         "ggZqRu1bYAn_text": "<p>We use a science-backed dose of melatonin—enough to help you fall asleep faster, without leaving you groggy the next day. You can still control the strength (3 -6 mg) depending on your preference.</p>",
         "ggXvtfDC_K2_text": "<p>Our custom-designed tea bag is engineered to allow melatonin to fully dissolve and pass through the lining—something standard tea bags won’t do. It delivers full potency with no waste, so every sip does what it’s meant to do.</p>"
+      }
+    },
+    "gp_global_section_574889549818234085_HAhaq4": {
+      "type": "gp-global-section-574889549818234085",
+      "name": "PDP - TEA - Ingr Desktop",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
       }
     },
     "lrc-coffee-benefits-short": {
@@ -535,7 +543,8 @@
     "gp_global_section_574745672205468784_HhK4CP",
     "gp_global_section_574754045781082911_3zjgUL",
     "gp_global_section_574756630327985264_zRcGaL",
-    "gp_global_section_574758233458082591_E3mcJP",
+    "gp_global_section_574758233458082591_9x96Qt",
+    "gp_global_section_574889549818234085_HAhaq4",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "one-click-upsell",
