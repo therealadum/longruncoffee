@@ -86,7 +86,7 @@
         "ggarHKaBiXB_text": "<p>alex g.</p>"
       }
     },
-    "gp_global_section_574742541627294949_qWxTat": {
+    "gp_global_section_574742541627294949_DA9pXi": {
       "type": "gp-global-section-574742541627294949",
       "name": "PDP - TEA - FAQ",
       "settings": {
@@ -119,17 +119,17 @@
         "ggEYWjeND_g_text": "<p>Long Run Coffee does not have sweeteners. Flavored coffees use natural oil extracts to create the products flavor profile. Traditional coffees do not have any oil extracts.</p>",
         "ggZdeDvGmkn_text": "Frequently Asked Questions",
         "ggFf2I3n3X8_childItem_0": "<p>Will I feel groggy in the morning?</p>",
-        "ggFf2I3n3X8_childItem_1": "<p><strong>How much melatonin is in it?</strong></p>",
-        "ggFf2I3n3X8_childItem_2": "<p><strong>Is it caffeine-free?</strong></p>",
-        "ggFf2I3n3X8_childItem_3": "<p><strong>Can I take it every night?</strong></p>",
-        "ggFf2I3n3X8_childItem_4": "<p><strong>Does it actually help with recovery?</strong></p>",
-        "ggFf2I3n3X8_childItem_5": "<p><strong>When should I drink it?</strong></p>",
+        "ggFf2I3n3X8_childItem_1": "<p>How much melatonin is in it?</p>",
+        "ggFf2I3n3X8_childItem_2": "<p>Is it caffeine-free?</p>",
+        "ggFf2I3n3X8_childItem_3": "<p>Can I take it every night?</p>",
+        "ggFf2I3n3X8_childItem_4": "<p>Does it actually help with recovery?</p>",
+        "ggFf2I3n3X8_childItem_5": "<p>When should I drink it?</p>",
         "ggXmBbCjbbA_text": "<p>No - we only make appropriate, runner-friendly doses of melatonin tea. Enough to help you fall asleep fast and wake up feeling clear, not foggy.</p>",
-        "gg3uNIodn7v_text": "<p>Each serving contains 3 or 6mg of melatonin depending on what you choose—formulated to support quality sleep without overdoing it.</p>",
-        "gg2iLpa5FEu_text": "<p>This is 100% caffeine-free. This is the only Long Run product made to slow you down—not speed you up.</p>",
-        "ggJBRDSQnjj_text": "<p>Yes. It’s safe for nightly use and designed for athletes who want consistent, high-quality sleep as part of their recovery.</p>",
-        "ggxBKOzaOA3_text": "<p>Absolutely. Deep sleep is when your body rebuilds. Better sleep means better recovery, more energy, and long-term consistency.</p>",
-        "gg9L50A8UEb_text": "<p>About 30–60 minutes before bed. Make it part of your wind-down routine for the best results.</p>"
+        "ggJxlmWnBzW_text": "<p>Each serving contains 3 or 6mg of melatonin depending on what you choose—formulated to support quality sleep without overdoing it.</p>",
+        "ggkLZZJMMOv_text": "<p>This is 100% caffeine-free. This is the only Long Run product made to slow you down—not speed you up.</p>",
+        "gge3NV501iU_text": "<p>Yes. It’s safe for nightly use and designed for athletes who want consistent, high-quality sleep as part of their recovery.</p>",
+        "ggGB7EEbmhb_text": "<p>Absolutely. Deep sleep is when your body rebuilds. Better sleep means better recovery, more energy, and long-term consistency.</p>",
+        "ggydtwIntft_text": "<p>About 30–60 minutes before bed. Make it part of your wind-down routine for the best results.</p>"
       }
     },
     "gp_global_section_574745672205468784_HhK4CP": {
@@ -531,7 +531,7 @@
     "lrc-base-product",
     "lrc-accordion",
     "gp_global_section_572137576702411648_aGQAMG",
-    "gp_global_section_574742541627294949_qWxTat",
+    "gp_global_section_574742541627294949_DA9pXi",
     "gp_global_section_574745672205468784_HhK4CP",
     "gp_global_section_574754045781082911_3zjgUL",
     "gp_global_section_574756630327985264_zRcGaL",
