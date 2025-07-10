@@ -44,7 +44,6 @@
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
-      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
@@ -53,7 +52,6 @@
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
-      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
