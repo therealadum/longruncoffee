@@ -44,6 +44,7 @@
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
+      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
@@ -52,6 +53,7 @@
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
+      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
@@ -199,6 +201,7 @@
         "heading_wPyir4",
         "text_3Ybr6Q"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 960px) {p {font-size: 16px; }}",
         "@media (min-width: 961px) {p {font-size: 22px; }}"
@@ -249,6 +252,7 @@
         "text_HxzVLK",
         "button_9QkJAY"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 960px) {p {font-size: 16px; }}",
         "@media (min-width: 961px) {p {font-size: 20px; }}"
