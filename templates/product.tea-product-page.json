@@ -215,7 +215,26 @@
       "name": "PDP - TEA - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
-        "checksum": ""
+        "checksum": "",
+        "ggfKKbbCYO8_text": "Science-Backed Ingredients",
+        "ggfS7ejhDi1_childItem_0": "<p><strong>Natural Herbal Tea Blend</strong></p>",
+        "ggfS7ejhDi1_childItem_1": "<p><strong>Melatonin 3 - 6 mg</strong></p>",
+        "ggfS7ejhDi1_childItem_2": "<p><strong>Fast-Release Mesh Tea Bag</strong></p>",
+        "ggFuTjxeWIE_text": "<p>This calming blend combines soothing herbs traditionally used to promote rest and relaxation. No synthetic flavors. No hidden fillers. Just real plants, carefully selected to help you rest &amp; recover.</p>",
+        "ggrUG695REN_text": "<p>We use a science-backed dose of melatonin—enough to help you fall asleep faster, without leaving you groggy the next day. You can still control the strength (3 -6 mg) depending on your preference.</p>",
+        "ggnDW8SK5zs_text": "<p>Our custom-designed tea bag is engineered to allow melatonin to fully dissolve and pass through the lining—something standard tea bags won’t do. It delivers full potency with no waste, so every sip does what it’s meant to do.</p>"
+      }
+    },
+    "gp_global_section_574890795677516575_im9tMf": {
+      "type": "gp-global-section-574890795677516575",
+      "name": "PDP - TEA - Trust",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggGrnoTlzuQ_text": "100M+",
+        "ggjlbN9Tdvy_text": "Miles Fueled by Long Run Co.",
+        "ggfbOdq3EBk_text": "1.8k+ Reviews",
+        "ggX7rT6NVK4_text": "Brand partners"
       }
     },
     "lrc-coffee-benefits-short": {
@@ -540,6 +559,7 @@
     "gp_global_section_574756630327985264_zRcGaL",
     "gp_global_section_574758233458082591_9x96Qt",
     "gp_global_section_574889549818234085_HAhaq4",
+    "gp_global_section_574890795677516575_im9tMf",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "one-click-upsell",
