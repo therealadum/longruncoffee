@@ -237,6 +237,14 @@
         "ggX7rT6NVK4_text": "Brand partners"
       }
     },
+    "gp_global_section_574894265742656356_4Bbirc": {
+      "type": "gp-global-section-574894265742656356",
+      "name": "PDP - TEA - Videos",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
+    },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
       "settings": {
@@ -560,6 +568,7 @@
     "gp_global_section_574758233458082591_9x96Qt",
     "gp_global_section_574889549818234085_HAhaq4",
     "gp_global_section_574890795677516575_im9tMf",
+    "gp_global_section_574894265742656356_4Bbirc",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "one-click-upsell",
