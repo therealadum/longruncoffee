@@ -245,82 +245,50 @@
         "checksum": ""
       }
     },
-    "lrc-coffee-benefits-short": {
-      "type": "lrc-coffee-benefits-short",
-      "settings": {
-        "show_cta": false,
-        "cta_text": "Start for $3",
-        "cta_scroll_to_id": "lrc-klaviyo-form"
-      }
-    },
-    "lrc-coffee-benefits": {
-      "type": "lrc-coffee-benefits",
-      "settings": {
-        "show_cta": false,
-        "cta_text": "Start for $3",
-        "cta_scroll_to_id": "lrc-klaviyo-form"
-      }
-    },
-    "one-click-upsell": {
-      "type": "lrc-reviews",
-      "blocks": {
-        "one-click-upsell": {
-          "type": "shopify://apps/one-click-upsell/blocks/on-page/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "one-click-upsell"
-      ],
-      "disabled": true,
-      "settings": {}
-    },
-    "lrc-review-summary": {
-      "type": "lrc-review-summary",
-      "blocks": {
-        "image_GGw6iH": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/hoka.png"
-          }
-        },
-        "image_ctk6RF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/runners-world-logo-vector-removebg-preview.png"
-          }
-        },
-        "image_qTwJhq": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/believe-in-the-run.png"
-          }
-        },
-        "image_QF6Ptp": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/bigger-than-the-trail.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_GGw6iH",
-        "image_ctk6RF",
-        "image_qTwJhq",
-        "image_QF6Ptp"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Trusted by Runners",
-        "review-text": "1.8k+ Reviews",
-        "background-color": "tan"
-      }
-    },
-    "gp_global_section_538796875008967812_8Pgw33": {
-      "type": "gp-global-section-538796875008967812",
+    "gp_global_section_574897524498760816_XwY6Te": {
+      "type": "gp-global-section-574897524498760816",
+      "name": "PDP - TEA - Progress Bar",
       "settings": {
         "section_preload": "off_lazy_script",
-        "checksum": ""
+        "checksum": "",
+        "ggJ43IAaq5y_text": "Formulated to Change Your Training",
+        "ggYOO14_ML7_text": "Subscribe And Start Feeling The Benefits",
+        "ggyTCkLMnBI_text": "Immediately",
+        "gg5klcYNlOK_text": "Start falling asleep easier and faster for better recovery and stronger mornings.",
+        "ggF_VpKCK7i_text": "After a few nights",
+        "gg1uNZNpnEP_text": "Establish deeper, more consistent sleep so you wake up rested and ready to train.",
+        "ggPAF-mrPRk_text": "Within 7 days",
+        "ggmQ_3MRgks_text": "Recover more fully, feel more balanced, and unlock your full training potential.",
+        "ggUewglhvzA_text": "Formulated to Change Your Training",
+        "ggb15BqRHmL_text": "Subscribe to Long Run Co. <br>And Start Feeling The Benefits",
+        "ggCYvUUfxS7_text": "Immediately",
+        "ggX4gr4bDnB_text": "Fall asleep easier &amp; faster for better recovery and stronger mornings.",
+        "gg4C9WbETW7_text": "After a few nights",
+        "ggd14W4p2RN_text": "Establish deeper, more consistent sleep and wake up rested and ready to train.",
+        "ggsIv54oq8V_text": "Within 7 days",
+        "ggtPCD8v554_text": "Recover fully, feel more balanced, and unlock your full training potential."
+      }
+    },
+    "gp_global_section_574901489458218213_En6Y3q": {
+      "type": "gp-global-section-574901489458218213",
+      "name": "PDP - TEA - US vs. Them",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggIBpeiyrIj_text": "Long Run Co. vs. Your Old Routine",
+        "ggf564H6Wuc_text": "Rest &amp; Recover",
+        "gg5_yjyRObi_text": "Your New<br>Routine",
+        "gg4Hoti3V2p_text": "Your Old Routine",
+        "ggXXZNDQsq__text": "Fall Asleep Faster",
+        "ggfZnBL-94N_text": "x",
+        "ggTD2gmyHnt_text": "Recover Fully",
+        "gg04Uu3ALbV_text": "x",
+        "ggdgIcDCf0V_text": "Wake up Refreshed",
+        "ggoVZG0LKou_text": "x",
+        "ggoR-oAza8a_text": "Consistent routine",
+        "ggYBhC4_lFd_text": "x",
+        "ggtH4cSiA5Q_text": "Scrolling Social Media in Bed",
+        "ggCjbSkGppP_text": "x"
       }
     },
     "0e698922-8ed8-423d-886f-c78375d71373": {
@@ -381,180 +349,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "image_with_text_JtUkwM": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_wPyir4": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Coffee",
-            "heading_size": "h1"
-          }
-        },
-        "text_3Ybr6Q": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The coffee beans used in our electrolyte infused coffee are arabic beans sourced from Costa Rica, Brazil and Mexico, depending on the roast.  </p><p>All of our roasts use arabica beans and are organic, FDA approved, and have no GMOs.</p><p>Our green bean supplier is heavily involved with the farms they source beans from and even started the <a href=\"https://nkgbloom.coffee/\" target=\"_blank\" title=\"NKG Bloom\">NKG Bloom program</a> in several countries to help farming communities.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_wPyir4",
-        "text_3Ybr6Q"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media (max-width: 960px) {p {font-size: 16px; }}",
-        "@media (min-width: 961px) {p {font-size: 22px; }}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/top_down_view_of_a_travel_tumbler_of_coffee_with_coffee_beans_on_the_white_platform.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "overlap",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_CxL9kk": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_iiYrpQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Process",
-            "heading_size": "h1"
-          }
-        },
-        "text_HxzVLK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We use a proprietary process, that is both unique and effective.</p><p>As coffee beans roast, they release natural oils. Immediately after roasting, we infuse our blend of electrolytes directly into these oils.</p><p>The beans are then cooled, and allowed to set. This binds the electrolytes to the bean's exterior.</p><p>This all-natural electrolyte + caffeine combo provides you with reduced fatigue, sustained endurance, better muscle function, and overall enhanced performance and recovery.</p><p>In addition, the added electrolytes bring down the acidity of the coffee which makes it stomach- friendly before your workout.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_9QkJAY": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_iiYrpQ",
-        "text_HxzVLK",
-        "button_9QkJAY"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media (max-width: 960px) {p {font-size: 16px; }}",
-        "@media (min-width: 961px) {p {font-size: 20px; }}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Coffee_Roasting.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "overlap",
-        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collage_w37phJ": {
-      "type": "collage",
-      "blocks": {
-        "image_LpaUaf": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/169_Blog_Pictures_4_b1b5a590-9e73-47e3-bc5f-0cf6aeca78a6.png"
-          }
-        },
-        "product_Rjn9FC": {
-          "type": "product",
-          "settings": {
-            "product": "lrc-x-boa-racing-jersey",
-            "second_image": true
-          }
-        },
-        "collection_9QaECb": {
-          "type": "collection",
-          "settings": {
-            "collection": "gear"
-          }
-        }
-      },
-      "block_order": [
-        "image_LpaUaf",
-        "product_Rjn9FC",
-        "collection_9QaECb"
-      ],
-      "settings": {
-        "heading": "LRC Gear",
-        "heading_size": "h1",
-        "desktop_layout": "right",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_blog_6nQLaw": {
-      "type": "featured-blog",
-      "custom_css": [
-        "p {font-size: 18px;}",
-        "h3 {font-size: 28px;}"
-      ],
-      "settings": {
-        "heading": "Fuel Your Passion Blog",
-        "heading_size": "h2",
-        "blog": "fuel-your-passion",
-        "post_limit": 4,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_blog_R6TUwB": {
-      "type": "featured-blog",
-      "custom_css": [
-        "p {font-size: 18px;}",
-        "h3 {font-size: 28px;}"
-      ],
-      "settings": {
-        "heading": "Recipes for Runners",
-        "heading_size": "h2",
-        "blog": "recipes",
-        "post_limit": 4,
-        "columns_desktop": 4,
-        "color_scheme": "background-2",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -569,19 +363,11 @@
     "gp_global_section_574889549818234085_HAhaq4",
     "gp_global_section_574890795677516575_im9tMf",
     "gp_global_section_574894265742656356_4Bbirc",
-    "lrc-coffee-benefits-short",
-    "lrc-coffee-benefits",
-    "one-click-upsell",
-    "lrc-review-summary",
-    "gp_global_section_538796875008967812_8Pgw33",
+    "gp_global_section_574897524498760816_XwY6Te",
+    "gp_global_section_574901489458218213_En6Y3q",
     "0e698922-8ed8-423d-886f-c78375d71373",
     "1693874745cc6bc7e5",
     "17093999844598d023",
-    "3e4ec809-784d-4120-a4a6-cced1ff5c986",
-    "image_with_text_JtUkwM",
-    "image_with_text_CxL9kk",
-    "collage_w37phJ",
-    "featured_blog_6nQLaw",
-    "featured_blog_R6TUwB"
+    "3e4ec809-784d-4120-a4a6-cced1ff5c986"
   ]
 }
