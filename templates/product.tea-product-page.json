@@ -207,14 +207,7 @@
         "gg_wthrdAjc_childItem_2": "<p>Fast-Release Mesh Tea Bag</p>",
         "ggbttQK_CGT_text": "<p>This calming blend combines soothing herbs traditionally used to promote rest and relaxation. No synthetic flavors. No hidden fillers. Just real plants, carefully selected to help you rest &amp; recover.</p>",
         "ggHe4M-QBJM_text": "<p>We use a science-backed dose of melatonin—enough to help you fall asleep faster, without leaving you groggy the next day. You can still control the strength (3 -6 mg) depending on your preference.</p>",
-        "ggdO4VsD8Gq_text": "<p>Our custom-designed tea bag is engineered to allow melatonin to fully dissolve and pass through the lining—something standard tea bags won’t do. It delivers full potency with no waste, so every sip does what it’s meant to do.</p>",
-        "ggmBcu56Hoe_text": "Science-Backed Ingredients",
-        "ggukrlwaxO9_childItem_0": "<p><strong>Natural Herbal Tea Blend</strong></p>",
-        "ggukrlwaxO9_childItem_1": "<p><strong>Melatonin 3 - 6 mg</strong></p>",
-        "ggukrlwaxO9_childItem_2": "<p><strong>Fast-Release Mesh Tea Bag</strong></p>",
-        "gg9hWHzSC-z_text": "<p>This calming blend combines soothing herbs traditionally used to promote rest and relaxation. No synthetic flavors. No hidden fillers. Just real plants, carefully selected to help you rest &amp; recover.</p>",
-        "ggZqRu1bYAn_text": "<p>We use a science-backed dose of melatonin—enough to help you fall asleep faster, without leaving you groggy the next day. You can still control the strength (3 -6 mg) depending on your preference.</p>",
-        "ggXvtfDC_K2_text": "<p>Our custom-designed tea bag is engineered to allow melatonin to fully dissolve and pass through the lining—something standard tea bags won’t do. It delivers full potency with no waste, so every sip does what it’s meant to do.</p>"
+        "ggdO4VsD8Gq_text": "<p>Our custom-designed tea bag is engineered to allow melatonin to fully dissolve and pass through the lining—something standard tea bags won’t do. It delivers full potency with no waste, so every sip does what it’s meant to do.</p>"
       }
     },
     "gp_global_section_574889549818234085_HAhaq4": {
@@ -252,6 +245,7 @@
       "block_order": [
         "one-click-upsell"
       ],
+      "disabled": true,
       "settings": {}
     },
     "lrc-review-summary": {
@@ -288,6 +282,7 @@
         "image_qTwJhq",
         "image_QF6Ptp"
       ],
+      "disabled": true,
       "settings": {
         "title": "Trusted by Runners",
         "review-text": "1.8k+ Reviews",
