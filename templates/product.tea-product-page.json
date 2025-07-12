@@ -233,7 +233,7 @@
         "ggtPCD8v554_text": "Recover fully, feel more balanced, and unlock your full training potential."
       }
     },
-    "gp_global_section_575132587790435557_NiEMJb": {
+    "gp_global_section_575132587790435557_JfVxLd": {
       "type": "gp-global-section-575132587790435557",
       "name": "PDP - TEA - Subscription",
       "settings": {
@@ -245,9 +245,9 @@
         "ggZJdo4IS_8_text": "10-25% Off Always",
         "gg8wemqSB4z_text": "Save every month, no discount codes needed.",
         "ggo3fswZC7M_text": "Free shipping",
-        "ggH4HDISEXI_text": "Automatically applied for subscriptions of 2+ items.",
+        "ggH4HDISEXI_text": "Automatically applied for subscriptions of $59+.",
         "ggDsVfNcHj6_text": "Free Gear",
-        "gg6nUbuJ8uf_text": "Earn free gear as you go, like our LRC x YETI Tumbler on shipment #3. ",
+        "gg6nUbuJ8uf_text": "Earn free gear as you go, like our LRC x YETI Tumbler. ",
         "ggMxz_2lWl-_text": "Skip, Edit, Cancel",
         "ggHFEi9D8I8_text": "Full control. Flexible to fit your schedule and your training needs.",
         "ggQB3dW-rs-_text": "<strong>No-Risk Guarantee</strong>",
@@ -348,7 +348,17 @@
       "name": "PDP - TEA - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",
-        "checksum": ""
+        "checksum": "",
+        "ggrCAOrRvIS_text": "Long Run Coffee",
+        "ggHvrwYeJgy_text": "Coffee + Electrolytes",
+        "ggjPG2BYlxP_text": "Long Run Powder",
+        "ggamV38Vef9_text": "Electrolyte Powder + Natural Caffeine",
+        "ggV1LitCFFk_text": "Long Run Pouches ",
+        "gg3P52AUq4O_text": "Coming soon",
+        "ggPPtPLNjy2_text": "Long Run Gear",
+        "ggzZajgEBe7_text": "For All Training Routines",
+        "ggoeoQPWbNu_text": "Long Run Tea",
+        "ggfbIHsZGJH_text": "Melatonin Tea"
       }
     },
     "17093999844598d023": {
@@ -380,7 +390,7 @@
     "gp_global_section_572137576702411648_aGQAMG",
     "gp_global_section_574894265742656356_4Bbirc",
     "gp_global_section_574897524498760816_XwY6Te",
-    "gp_global_section_575132587790435557_NiEMJb",
+    "gp_global_section_575132587790435557_JfVxLd",
     "gp_global_section_574901489458218213_En6Y3q",
     "gp_global_section_575121399417406693_aYkVgE",
     "gp_global_section_574742541627294949_DA9pXi",
