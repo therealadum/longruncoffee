@@ -45,23 +45,23 @@
       "disabled": true,
       "settings": {}
     },
-    "gp_global_section_574745672205468784_HhK4CP": {
+    "gp_global_section_574745672205468784_8KagJJ": {
       "type": "gp-global-section-574745672205468784",
       "name": "PDP - TEA - Benefits 1",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggMrJDoWS8S_text": "Sleep Like You Trained for It",
+        "ggMrJDoWS8S_text": "Sleep Like You Trained<br>for It",
         "ggFGvi4dQ9v_childItem_0": "<p><strong>Deeper Sleep</strong></p>",
         "ggFGvi4dQ9v_childItem_1": "<p><strong>Real Recovery</strong></p>",
         "ggFGvi4dQ9v_childItem_2": "<p><strong>Clear Mornings</strong></p>",
         "ggFGvi4dQ9v_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
-        "ggFGvi4dQ9v_childItem_4": "<p><strong>Clean Ingredients</strong></p>",
+        "ggFGvi4dQ9v_childItem_4": "<p><strong>Built for Routine</strong></p>",
         "ggCyfGaHOFa_text": "<p>Fall asleep faster, stay asleep longer, and wake up feeling refreshed—not groggy.</p>",
         "ggMujprCMnX_text": "<p>Sleep is when your body rebuilds. Support deeper recovery so you can train consistently.</p>",
         "gga-bzKxqWG_text": "<p>No fog, no crash. Just calm, consistent energy to start your day strong</p>",
         "gg1Ey4Df4ya_text": "<p>No fillers, no weird additives—just melatonin and calming herbs that work.</p>",
-        "gg2WdoEXaxk_text": "<p>No fillers, no weird additives—just melatonin and calming herbs that work.</p>"
+        "gg2WdoEXaxk_text": "<p>Our tea helps you wind down the same way every night. When recovery becomes a habit, results follow.</p>"
       }
     },
     "gp_global_section_574754045781082911_3zjgUL": {
@@ -359,7 +359,7 @@
   "order": [
     "lrc-base-product",
     "lrc-accordion",
-    "gp_global_section_574745672205468784_HhK4CP",
+    "gp_global_section_574745672205468784_8KagJJ",
     "gp_global_section_574754045781082911_3zjgUL",
     "gp_global_section_574756630327985264_zRcGaL",
     "gp_global_section_574758233458082591_9x96Qt",
