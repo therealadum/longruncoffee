@@ -42,6 +42,15 @@
       ],
       "settings": {}
     },
+    "gp_global_section_575160220569830175_Xkh8hE": {
+      "type": "gp-global-section-575160220569830175",
+      "name": "PDP - TEA - Other Product",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg0Pg1BtrJv_text": "<p>Other Products in This Collection:</p>"
+      }
+    },
     "gp_global_section_574745672205468784_8KagJJ": {
       "type": "gp-global-section-574745672205468784",
       "name": "PDP - TEA - Benefits 1",
@@ -274,6 +283,8 @@
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
+        "gg0j4MEn_lg_text": "Long Run Stats",
+        "ggmOzct_KbU_text": "Data on sleep metrics, with melatonin + herbal support (e.g. herbal tea).",
         "ggLj8d5O172_text": "Long Run Stats",
         "ggiPzGG_qG6_text": "Data on sleep metrics, with melatonin + herbal support (e.g. herbal tea).",
         "gg0nNvXxAg6_childItem_0": "<p><strong>Time to Fall Asleep</strong></p>",
@@ -350,6 +361,7 @@
   },
   "order": [
     "lrc-base-product",
+    "gp_global_section_575160220569830175_Xkh8hE",
     "lrc-accordion",
     "gp_global_section_574745672205468784_8KagJJ",
     "gp_global_section_574754045781082911_3zjgUL",
