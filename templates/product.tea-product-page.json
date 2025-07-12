@@ -247,6 +247,24 @@
         "ggCjbSkGppP_text": "x"
       }
     },
+    "gp_global_section_575121399417406693_aYkVgE": {
+      "type": "gp-global-section-575121399417406693",
+      "name": "PDP - TEA - Graph",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggLj8d5O172_text": "Long Run Stats",
+        "ggiPzGG_qG6_text": "Data on sleep metrics, with melatonin + herbal support (e.g. herbal tea).",
+        "gg0nNvXxAg6_childItem_0": "<p><strong>Time to Fall Asleep</strong></p>",
+        "gg0nNvXxAg6_childItem_1": "<p><strong>Sleep Quality</strong></p>",
+        "gg0nNvXxAg6_childItem_2": "<p><strong>Physical Recovery</strong></p>",
+        "gg0nNvXxAg6_childItem_3": "<p><strong>Sources</strong></p>",
+        "gg8yCFf2S8w_text": "<p>People fall asleep faster when they combine melatonin with calming natural herbs. It helps quiet the mind and supports the body’s natural sleep cycle.</p><p> </p><p><strong>Avg. time saved: 12-16 minutes</strong></p>",
+        "gg0K9dhdlvc_text": "<p>Melatonin and herbal sleep aids help improve sleep efficiency—meaning fewer wake-ups and more time spent in deep, restorative sleep.</p><p> </p><p><strong>Avg. improvement: +15–20% in sleep efficiency</strong></p>",
+        "ggQHYNOMukD_text": "<p>Deep sleep is when the body rebuilds. Melatonin and calming herbs improve sleep depth, which supports better muscle recovery and next-day performance.</p><p> </p><p><strong>Avg. improvement: +10–12% faster physical recovery</strong></p>",
+        "ggPh2KjT0CK_text": "<p>Ferracioli-Oda E, Qawasmi A, Bloch MH. <i>Meta-analysis: Melatonin for the treatment of primary sleep disorders.</i> PLoS One. 2013.</p><p> </p><p>Zisapel N. <i>New perspectives on the role of melatonin in human sleep.</i> J Pineal Res. 2018.</p><p> </p><p>FitBit Sleep Data (Aggregated, 2021): Comparison of recovery scores based on sleep quality.</p><p> </p><p>Herbal support studies: McKay DL, Blumberg JB. <i>A review of the bioactivity and potential health benefits of chamomile tea.</i> Phytother Res. 2006.</p>"
+      }
+    },
     "gp_global_section_574742541627294949_DA9pXi": {
       "type": "gp-global-section-574742541627294949",
       "name": "PDP - TEA - FAQ",
@@ -322,6 +340,7 @@
     "gp_global_section_574894265742656356_4Bbirc",
     "gp_global_section_574897524498760816_XwY6Te",
     "gp_global_section_574901489458218213_En6Y3q",
+    "gp_global_section_575121399417406693_aYkVgE",
     "gp_global_section_574742541627294949_DA9pXi",
     "17093999844598d023"
   ]
