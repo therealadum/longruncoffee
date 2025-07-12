@@ -13,6 +13,15 @@
       "type": "lrc-base-product",
       "settings": {}
     },
+    "gp_global_section_575160220569830175_Xkh8hE": {
+      "type": "gp-global-section-575160220569830175",
+      "name": "PDP - TEA - Other Product",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg0Pg1BtrJv_text": "<p>Other Products in This Collection:</p>"
+      }
+    },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
@@ -41,15 +50,6 @@
         "lrc_accordion_item_3"
       ],
       "settings": {}
-    },
-    "gp_global_section_575160220569830175_Xkh8hE": {
-      "type": "gp-global-section-575160220569830175",
-      "name": "PDP - TEA - Other Product",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "gg0Pg1BtrJv_text": "<p>Other Products in This Collection:</p>"
-      }
     },
     "gp_global_section_574745672205468784_8KagJJ": {
       "type": "gp-global-section-574745672205468784",
@@ -343,6 +343,14 @@
         "ggydtwIntft_text": "<p>About 30–60 minutes before bed. Make it part of your wind-down routine for the best results.</p>"
       }
     },
+    "gp_global_section_575163681055179620_ikYmzM": {
+      "type": "gp-global-section-575163681055179620",
+      "name": "PDP - TEA - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": ""
+      }
+    },
     "17093999844598d023": {
       "type": "apps",
       "blocks": {
@@ -376,6 +384,7 @@
     "gp_global_section_574901489458218213_En6Y3q",
     "gp_global_section_575121399417406693_aYkVgE",
     "gp_global_section_574742541627294949_DA9pXi",
+    "gp_global_section_575163681055179620_ikYmzM",
     "17093999844598d023"
   ]
 }
