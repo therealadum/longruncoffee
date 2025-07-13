@@ -363,6 +363,22 @@
         "ggKzSSMzp_v_text": "<p>About 30–60 minutes before bed. Make it part of your wind-down routine for the best results.</p>"
       }
     },
+    "gp_global_section_575296632438915658_rQR7A7": {
+      "type": "gp-global-section-575296632438915658",
+      "name": "PDP - TCF - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg37c4jo_ET_text": "Long Run Powder",
+        "gg6k8fldKu4_text": "Electrolyte Powder + Natural Caffeine",
+        "ggltS59Bpaj_text": "Long Run Pouches ",
+        "ggUN-0HMK7L_text": "Coming soon",
+        "ggjF0OBZWKT_text": "Long Run Gear",
+        "ggm_xM7funq_text": "For All Training Routines",
+        "ggMmCDMz3xg_text": "Long Run Bundles",
+        "gg-3aGjg0bg_text": "Bundle &amp; Save"
+      }
+    },
     "17093999844598d023": {
       "type": "apps",
       "blocks": {
@@ -398,6 +414,7 @@
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "gp_global_section_575294284735971914_X3UbC9",
+    "gp_global_section_575296632438915658_rQR7A7",
     "17093999844598d023"
   ]
 }
