@@ -1,0 +1,630 @@
+
+{% render 'gp-head', 'isThemeSection: true' %}
+<style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-575273457869128530.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-575273457869128530.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-575273457869128530.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-575273457869128530.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-575273457869128530.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-575273457869128530.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-575273457869128530.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-575273457869128530.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-575273457869128530.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-575273457869128530.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-575273457869128530.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-575273457869128530.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-575273457869128530.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-575273457869128530.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-575273457869128530.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-575273457869128530.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-575273457869128530.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-575273457869128530.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-575273457869128530.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-575273457869128530.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-575273457869128530.gps.gpsil [style*="--ff:"]{font-family:var(--ff)}.gps-575273457869128530.gps.gpsil [style*="--size:"]{font-size:var(--size)}.gps-575273457869128530.gps.gpsil [style*="--weight:"]{font-weight:var(--weight)}.gps-575273457869128530.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-575273457869128530.gps.gpsil [style*="--h:"]{height:var(--h)}.gps-575273457869128530.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-575273457869128530.gps.gpsil [style*="--lh:"]{line-height:var(--lh)}.gps-575273457869128530.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-575273457869128530.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-575273457869128530.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-575273457869128530.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-575273457869128530.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-575273457869128530.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-575273457869128530.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-575273457869128530.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-575273457869128530.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-575273457869128530.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-575273457869128530.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-575273457869128530.gps.gpsil [style*="--ts:"]{text-shadow:var(--ts)}.gps-575273457869128530.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-575273457869128530.gps.gpsil [style*="--w:"]{width:var(--w)}.gps-575273457869128530.gps.gpsil [style*="--line-clamp:"]{-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp);display:-webkit-box;overflow:hidden}@media only screen and (max-width:1024px){.gps-575273457869128530.gps.gpsil [style*="--size-tablet:"]{font-size:var(--size-tablet)}.gps-575273457869128530.gps.gpsil [style*="--lh-tablet:"]{line-height:var(--lh-tablet)}.gps-575273457869128530.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-575273457869128530.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-575273457869128530.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}.gps-575273457869128530.gps.gpsil [style*="--line-clamp-tablet:"]{-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-tablet);display:-webkit-box;overflow:hidden}}@media only screen and (max-width:767px){.gps-575273457869128530.gps.gpsil [style*="--bblr-mobile:"]{border-bottom-left-radius:var(--bblr-mobile)}.gps-575273457869128530.gps.gpsil [style*="--bbrr-mobile:"]{border-bottom-right-radius:var(--bbrr-mobile)}.gps-575273457869128530.gps.gpsil [style*="--btlr-mobile:"]{border-top-left-radius:var(--btlr-mobile)}.gps-575273457869128530.gps.gpsil [style*="--btrr-mobile:"]{border-top-right-radius:var(--btrr-mobile)}.gps-575273457869128530.gps.gpsil [style*="--size-mobile:"]{font-size:var(--size-mobile)}.gps-575273457869128530.gps.gpsil [style*="--gtc-mobile:"]{grid-template-columns:var(--gtc-mobile)}.gps-575273457869128530.gps.gpsil [style*="--lh-mobile:"]{line-height:var(--lh-mobile)}.gps-575273457869128530.gps.gpsil [style*="--mb-mobile:"]{margin-bottom:var(--mb-mobile)}.gps-575273457869128530.gps.gpsil [style*="--pb-mobile:"]{padding-bottom:var(--pb-mobile)}.gps-575273457869128530.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-575273457869128530.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-575273457869128530.gps.gpsil [style*="--pt-mobile:"]{padding-top:var(--pt-mobile)}.gps-575273457869128530.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}.gps-575273457869128530.gps.gpsil [style*="--line-clamp-mobile:"]{-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-mobile);display:-webkit-box;overflow:hidden}}.gps-575273457869128530 .gp-relative{position:relative}.gps-575273457869128530 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-575273457869128530 .gp-mb-0{margin-bottom:0}.gps-575273457869128530 .gp-flex{display:flex}.gps-575273457869128530 .gp-grid{display:grid}.gps-575273457869128530 .\!gp-hidden{display:none!important}.gps-575273457869128530 .gp-hidden{display:none}.gps-575273457869128530 .gp-max-w-full{max-width:100%}.gps-575273457869128530 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-575273457869128530 .gp-flex-col{flex-direction:column}.gps-575273457869128530 .gp-gap-y-0{row-gap:0}.gps-575273457869128530 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-575273457869128530 .gp-duration-200{transition-duration:.2s}.gps-575273457869128530 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (max-width:1024px){.gps-575273457869128530 .tablet\:\!gp-hidden{display:none!important}.gps-575273457869128530 .tablet\:gp-hidden{display:none}}@media (max-width:767px){.gps-575273457869128530 .mobile\:\!gp-hidden{display:none!important}.gps-575273457869128530 .mobile\:gp-hidden{display:none}}.gps-575273457869128530 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}.gps-575273457869128530 .\[\&_p\]\:gp-inline p{display:inline}.gps-575273457869128530 .\[\&_p\]\:after\:gp-whitespace-pre-wrap p:after{content:var(--tw-content);white-space:pre-wrap}.gps-575273457869128530 .\[\&_p\]\:after\:gp-content-\[\'\\A\'\] p:after{--tw-content:"\A";content:var(--tw-content)}</style>
+
+       
+      
+            <section
+              class="gp-mx-auto gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px"
+            >
+              
+    <div
+      id="gxbr6icKL7" data-id="gxbr6icKL7"
+        style="--pt:var(--g-s-2xl);--pb:var(--g-s-2xl);--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:solid;--bw:0px;--bc:#121212;--shadow:none;--op:100%;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:#F7FCFD;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gxbr6icKL7 gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gHKbxzN2i2 gp-relative gp-flex gp-flex-col"
+    >
+      
+       
+      
+    <div
+      parentTag="Col" id="gA4k_5ETIz" data-id="gA4k_5ETIz"
+        style="--mb:0px;--pt:40px;--pl:20px;--pb:30px;--pr:20px;--mb-mobile:0px;--pt-mobile:30px;--pl-mobile:0px;--pb-mobile:30px;--pr-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:none;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--bblr-mobile:8px;--bbrr-mobile:8px;--btlr-mobile:8px;--btrr-mobile:8px;--shadow:none;--op:100%;--cg:0px;--pc:start;--gtc:minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:90%;--w-mobile:95%;--h:auto;--bgc:#def2f9;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gA4k_5ETIz gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="g3A5mAPIOc gp-relative gp-flex gp-flex-col"
+    >
+      
+       
+      
+    <div
+      parentTag="Col" id="geBS9_BIzo" data-id="geBS9_BIzo"
+        style="--mb:30px;--mb-mobile:30px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:95%;--h:auto;--bgc:#00000000;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="geBS9_BIzo gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gj1XJLztrD gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="g0_tyAiDUV">
+    <div
+      parentTag="Col"
+        class="g0_tyAiDUV "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:18px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249DAF;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.gg0_tyAiDUV_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gnIX1bSk-3">
+    <div
+      parentTag="Col"
+        class="gnIX1bSk-3 "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggnIX1bSk-3_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div>
+    </div>
+   
+    
+       
+      
+    <div
+      parentTag="Col" id="gJ-1Z-N90e" data-id="gJ-1Z-N90e"
+        style="--mb:15px;--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:95%;--h:auto;--bgc:#00000000;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gJ-1Z-N90e gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gQDQgKnW-o gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gcurmcEuTk">
+    <div
+      parentTag="Col"
+        class="gcurmcEuTk "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:17px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggcurmcEuTk_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gqR7gS4FgZ">
+    <div
+      parentTag="Col"
+        class="gqR7gS4FgZ "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggqR7gS4FgZ_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div>
+    </div>
+   
+    
+    </div><div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="g8qj4YEgDD gp-relative gp-flex gp-flex-col"
+    >
+      
+       
+      
+    <div
+      parentTag="Col" id="gbAtIpnjv0" data-id="gbAtIpnjv0"
+        style="--mb:30px;--mb-mobile:30px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:95%;--h:auto;--bgc:#00000000;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gbAtIpnjv0 gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gmx1GhdqYD gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gzcBnkxtRQ">
+    <div
+      parentTag="Col"
+        class="gzcBnkxtRQ "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:18px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggzcBnkxtRQ_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gqPo89rDa8">
+    <div
+      parentTag="Col"
+        class="gqPo89rDa8 "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggqPo89rDa8_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div>
+    </div>
+   
+    
+       
+      
+    <div
+      parentTag="Col" id="gTtTGwAJ_i" data-id="gTtTGwAJ_i"
+        style="--mb:15px;--mb-mobile:30px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:95%;--h:auto;--bgc:#00000000;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gTtTGwAJ_i gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="g0d6mpalV0 gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gwnkETQRFP">
+    <div
+      parentTag="Col"
+        class="gwnkETQRFP "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:18px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggwnkETQRFP_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gw4xF67-Hc">
+    <div
+      parentTag="Col"
+        class="gw4xF67-Hc "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggw4xF67-Hc_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div>
+    </div>
+   
+    
+    </div><div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="g4ouiPLK1J gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="getbVUP7ws">
+    <div
+      parentTag="Col"
+        class="getbVUP7ws "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:18px;--size-tablet:16px;--size-mobile:14px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggetbVUP7ws_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gi2yT0rgeU">
+    <div
+      parentTag="Col"
+        class="gi2yT0rgeU "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggi2yT0rgeU_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div>
+    </div>
+   
+    
+       
+      
+    <div
+      parentTag="Col" id="ghujwLyI_2" data-id="ghujwLyI_2"
+        style="--mb:0px;--pt:30px;--pl:0px;--pb:0px;--pr:0px;--mb-mobile:0px;--pt-mobile:30px;--pl-mobile:5px;--pb-mobile:30px;--pr-mobile:0px;--d:none;--d-tablet:none;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--bblr-mobile:8px;--bbrr-mobile:8px;--btlr-mobile:8px;--btrr-mobile:8px;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:90%;--h:auto;--bgc:#def2f9;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="ghujwLyI_2 gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gIozMEJ0Ef gp-relative gp-flex gp-flex-col"
+    >
+      
+       
+      
+    <div
+      parentTag="Col" id="g6unRROIPc" data-id="g6unRROIPc"
+        style="--mb:15px;--mb-mobile:30px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 6fr) minmax(0, 6fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:95%;--h:auto;--bgc:#00000000;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="g6unRROIPc gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gLNwPzu88a gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gp347Djgva">
+    <div
+      parentTag="Col"
+        class="gp347Djgva "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:16px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggp347Djgva_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gts-WiUBAM">
+    <div
+      parentTag="Col"
+        class="gts-WiUBAM "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggts-WiUBAM_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div><div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="g7Llf7j0UG gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="giV0VNPa88">
+    <div
+      parentTag="Col"
+        class="giV0VNPa88 "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:16px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggiV0VNPa88_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="g3nyZNRFmj">
+    <div
+      parentTag="Col"
+        class="g3nyZNRFmj "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.gg3nyZNRFmj_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div>
+    </div>
+   
+    
+       
+      
+    <div
+      parentTag="Col" id="ggUJew3mzS" data-id="ggUJew3mzS"
+        style="--mb:15px;--mb-mobile:30px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 6fr) minmax(0, 6fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:95%;--h:auto;--bgc:#00000000;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="ggUJew3mzS gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="g_n5InqT00 gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="g3WPJ8cQ9D">
+    <div
+      parentTag="Col"
+        class="g3WPJ8cQ9D "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:16px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.gg3WPJ8cQ9D_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gsQSQZfVLg">
+    <div
+      parentTag="Col"
+        class="gsQSQZfVLg "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggsQSQZfVLg_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div><div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gmJgnXSdcb gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gUhJYXmpuC">
+    <div
+      parentTag="Col"
+        class="gUhJYXmpuC "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:16px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggUhJYXmpuC_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="g3dMaky33e">
+    <div
+      parentTag="Col"
+        class="g3dMaky33e "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.gg3dMaky33e_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div>
+    </div>
+   
+    
+       
+      
+    <div
+      parentTag="Col" id="gq4d1cRgwi" data-id="gq4d1cRgwi"
+        style="--mb:15px;--mb-mobile:0px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--pc:start;--gtc:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--w:90%;--w-tablet:var(--g-ct-w, 100%);--w-mobile:95%;--h:auto;--bgc:#00000000;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gq4d1cRgwi gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gRoSQmFed3 gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gkaW5yTv86">
+    <div
+      parentTag="Col"
+        class="gkaW5yTv86 "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:16px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#249daf;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggkaW5yTv86_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gGimG1pHZR">
+    <div
+      parentTag="Col"
+        class="gGimG1pHZR "
+        style="--ta:left;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ts:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:13px;--lh:180%;--lh-tablet:180%;--lh-mobile:180%;--c:#151515;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.ggGimG1pHZR_text | replace: '$locationOrigin', locationOrigin }}</div>
+      </div>
+    </div>
+    </gp-text>
+    
+    </div>
+    </div>
+   
+    
+    </div>
+    </div>
+   
+    
+    </div>
+    </div>
+  
+            </section>
+           
+    
+<style {% if section.settings.section_preload == "false" %} class="gps-link" type="text/disabled-css" {% endif %}>@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXw.woff) format('woff');
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw0aXx-p7K4KLjztg.woff) format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw9aXx-p7K4KLjztg.woff) format('woff');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw2aXx-p7K4KLjztg.woff) format('woff');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXx-p7K4KLjztg.woff) format('woff');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXx-p7K4KLg.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+
+{% schema %}
+  {
+    "presets": [{ "name": "PDP - TCF - Usage" }],
+    "name": "PDP - TCF - Usage",
+    "tag": "section",
+    "class": "gps-575273457869128530 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=575273457869128530)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"gg0_tyAiDUV_text","label":"gg0_tyAiDUV_text","default":"<p><strong>TYPE</strong></p>"},{"type":"html","id":"ggnIX1bSk-3_text","label":"ggnIX1bSk-3_text","default":"<p><strong>Single-use Tea Bag</strong></p>"},{"type":"html","id":"ggcurmcEuTk_text","label":"ggcurmcEuTk_text","default":"<p><strong>MELATONIN DOSE</strong></p>"},{"type":"html","id":"ggqR7gS4FgZ_text","label":"ggqR7gS4FgZ_text","default":"<p><strong>3 - 6mg</strong></p>"},{"type":"html","id":"ggzcBnkxtRQ_text","label":"ggzcBnkxtRQ_text","default":"<p><strong>FORMULATION</strong></p>"},{"type":"html","id":"ggqPo89rDa8_text","label":"ggqPo89rDa8_text","default":"<p><strong>Natural Herbal Tea</strong></p><p><strong>+ Pure Melatonin</strong></p>"},{"type":"html","id":"ggwnkETQRFP_text","label":"ggwnkETQRFP_text","default":"<p><strong>CAFFEINE LEVEL</strong></p>"},{"type":"html","id":"ggw4xF67-Hc_text","label":"ggw4xF67-Hc_text","default":"<p><strong>Naturally Caffeine Free</strong></p>"},{"type":"html","id":"ggetbVUP7ws_text","label":"ggetbVUP7ws_text","default":"<p><strong>USAGE</strong></p>"},{"type":"html","id":"ggi2yT0rgeU_text","label":"ggi2yT0rgeU_text","default":"<p><strong>Steep 1 tea bag in hot water for 4–8 minutes.</strong></p><p>&nbsp;</p><p><strong>Drink 30–60 minutes before bed to support restful sleep. Drink hot or iced.</strong></p>"},{"type":"html","id":"ggp347Djgva_text","label":"ggp347Djgva_text","default":"<p><strong>TYPE</strong></p>"},{"type":"html","id":"ggts-WiUBAM_text","label":"ggts-WiUBAM_text","default":"<p><strong>Single-use Tea Bag</strong></p>"},{"type":"html","id":"ggiV0VNPa88_text","label":"ggiV0VNPa88_text","default":"<p><strong>MELATONIN DOSE</strong></p>"},{"type":"html","id":"gg3nyZNRFmj_text","label":"gg3nyZNRFmj_text","default":"<p><strong>3 - 6mg</strong></p>"},{"type":"html","id":"gg3WPJ8cQ9D_text","label":"gg3WPJ8cQ9D_text","default":"<p><strong>FORMULATION</strong></p>"},{"type":"html","id":"ggsQSQZfVLg_text","label":"ggsQSQZfVLg_text","default":"<p><strong>Natural Herbal Tea</strong></p><p><strong>+ Pure Melatonin</strong></p>"},{"type":"html","id":"ggUhJYXmpuC_text","label":"ggUhJYXmpuC_text","default":"<p><strong>CAFFEINE LEVEL</strong></p>"},{"type":"html","id":"gg3dMaky33e_text","label":"gg3dMaky33e_text","default":"<p><strong>Naturally Caffeine Free</strong></p>"},{"type":"html","id":"ggkaW5yTv86_text","label":"ggkaW5yTv86_text","default":"<p><strong>USAGE</strong></p>"},{"type":"html","id":"ggGimG1pHZR_text","label":"ggGimG1pHZR_text","default":"<p><strong>Steep 1 tea bag in hot water for 4–8 minutes.</strong></p><p>&nbsp;</p><p><strong>Drink 30–60 minutes before bed to support restful sleep. Drink hot or iced.</strong></p>"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}
