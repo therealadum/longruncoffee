@@ -9,28 +9,50 @@
  */
 {
   "sections": {
-    "gp_section_575315722847126090": {
+    "gp_section_575322849707819971": {
+      "type": "gp-section-575322849707819971",
       "settings": {
-        "checksum": "5a3c1a4e70f2cc48e53b31c08ccb0456974b749bedc18baf318d6eb957838094_1_1_1_0_"
-      },
-      "type": "gp-section-575315722847126090"
+        "section_preload": "true",
+        "checksum": "a21b8ebdc862cb85045b64d08d6a63ab0ecf0c66ab91bf03a962cfc4018eb13e_1_1_1_0_",
+        "ggiUCaEE9ay_text": "<p>1% to Mental Health</p>"
+      }
+    },
+    "gp_global_section_572237986394014592_pNWBdx": {
+      "type": "gp-global-section-572237986394014592",
+      "name": "Banner - Stroop",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggIR2ppG4iH_dayLabel": "Days",
+        "ggIR2ppG4iH_hourLabel": "Hours",
+        "ggIR2ppG4iH_minuteLabel": "Minutes",
+        "ggIR2ppG4iH_secondLabel": "Seconds",
+        "ggIR2ppG4iH_weekLabel": "Weeks"
+      }
+    },
+    "gp_section_575315722847126090": {
+      "type": "gp-section-575315722847126090",
+      "settings": {
+        "section_preload": "false",
+        "checksum": "5a3c1a4e70f2cc48e53b31c08ccb0456974b749bedc18baf318d6eb957838094_1_1_1_0_",
+        "gg4z4nK2lhQ_text": "Flavored Roasts",
+        "ggfFlh4d2Mm_text": "Powder",
+        "ggmyGqdxmQc_text": "Electrolyte Powder + Natural Caffeine",
+        "ggN1CNEfVKJ_text": "<p>Hazelnut Latte Flavor</p>",
+        "gg8nSrImEZm_text": "Traditional Roasts"
+      }
     },
     "gp_section_575316540048540191": {
+      "type": "gp-section-575316540048540191",
       "settings": {
+        "section_preload": "false",
         "checksum": "8e0dbc703220a475eb855c2c425b89e6aeff9f82e7faf115c39d8279365a98a3_1_1_1_0_"
-      },
-      "type": "gp-section-575316540048540191"
-    },
-    "gp_section_575322849707819971": {
-      "settings": {
-        "checksum": "a21b8ebdc862cb85045b64d08d6a63ab0ecf0c66ab91bf03a962cfc4018eb13e_1_1_1_0_",
-        "section_preload": "true"
-      },
-      "type": "gp-section-575322849707819971"
+      }
     }
   },
   "order": [
     "gp_section_575322849707819971",
+    "gp_global_section_572237986394014592_pNWBdx",
     "gp_section_575315722847126090",
     "gp_section_575316540048540191"
   ],

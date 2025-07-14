@@ -11,19 +11,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "gp_global_section_572237986394014592_j4Yaze": {
-      "type": "gp-global-section-572237986394014592",
-      "name": "Banner - Stroop",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggIR2ppG4iH_dayLabel": "Days",
-        "ggIR2ppG4iH_hourLabel": "Hours",
-        "ggIR2ppG4iH_minuteLabel": "Minutes",
-        "ggIR2ppG4iH_secondLabel": "Seconds",
-        "ggIR2ppG4iH_weekLabel": "Weeks"
-      }
-    },
     "gp_global_section_575269872192193362_8YMPW7": {
       "type": "gp-global-section-575269872192193362",
       "name": "PDP - TCF - Benefits",
@@ -367,7 +354,6 @@
     }
   },
   "order": [
-    "gp_global_section_572237986394014592_j4Yaze",
     "gp_global_section_575269872192193362_8YMPW7",
     "gp_global_section_575273457869128530_QhjgmN",
     "gp_global_section_575266263094264394_UtVy4z",
