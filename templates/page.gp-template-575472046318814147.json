@@ -58,7 +58,19 @@
         "ggQnWcSLqbW_text": "<p>25% Off</p>"
       }
     },
-    "gp_global_section_575273457869128530_gegpt7": {
+    "gp_global_section_575615915140318034_pCph7B": {
+      "type": "gp-global-section-575615915140318034",
+      "name": "EDCP - S2CF - Collection2",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggmm1DrBcph_text": "Sample Packs",
+        "ggwPTCLSg9l_text": "<s>$9.99</s>",
+        "gg1XNx_pYQa_text": "$8.69",
+        "ggEjpmI7_88_text": "<p>13.1% Off</p>"
+      }
+    },
+    "gp_global_section_575273457869128530_YmfPUi": {
       "type": "gp-global-section-575273457869128530",
       "name": "PDP - TCF - Usage",
       "settings": {
@@ -243,6 +255,40 @@
         "ggGfNeaNVPy_text": "<p>Cureton KJ, Warren GL, Millard-Stafford ML, Wingo JE, Trilk JL, Buyckx M. Caffeine effects on endurance performance in athletes. <i>Int J Sport Nutr Exerc Metab.</i> 2007;17(2):113–129.</p><p> </p><p>Ganio MS, Armstrong LE, Casa DJ, McDermott BP, Lee EC, Yamamoto LM, Marzano S, Lopez RM, Jimenez L, Le Bellego L, Chevillotte E, Lieberman HR, Maresh CM. Evidence-based approach to lingering hydration and energy effects of caffeine and carbohydrate co-ingestion. <i>Sports Med.</i> 2009;39(4):295–330.</p><p> </p><p>Ganio MS, Klau JF, Lee EC, Yeargin SW, McDermott BP, et al. Effect of caffeine on sport-specific endurance performance: a systematic review. <i>Sports Med.</i> 2009;39(10):813–832.</p>"
       }
     },
+    "gp_global_section_575284010452779858_6tGtRt": {
+      "type": "gp-global-section-575284010452779858",
+      "name": "PDP - TCF - Ingr Mobile",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggr_HmdoLDF_text": "Science-Backed Ingredients",
+        "ggmmqG1AxA__childItem_0": "<p>Sodium</p>",
+        "ggmmqG1AxA__childItem_1": "<p>Potassium</p>",
+        "ggmmqG1AxA__childItem_2": "<p>Magnesium</p>",
+        "ggmmqG1AxA__childItem_3": "<p>Calcium</p>",
+        "ggNF7aa1BxB_text": "<p>Sodium helps your body retain the fluids it needs to stay hydrated—especially when you’re sweating. It’s a critical electrolyte that supports endurance, performance, and consistent energy output.</p>",
+        "ggLKbgBM8XK_text": "<p>Potassium works with sodium to regulate hydration, nerve signals, and muscle contractions. It helps reduce cramps and keeps your body functioning smoothly during every mile.</p>",
+        "ggSZKWc9KfO_text": "<p>Magnesium supports muscle recovery, nerve signaling, and energy production. Low magnesium can lead to fatigue and soreness, making this mineral key for consistent training.</p>",
+        "ggGWYw-1hmg_text": "<p>Known for bone health, calcium also plays a crucial role in muscle contraction and electrolyte balance. It helps your muscles fire properly so you can run strong.</p>"
+      }
+    },
+    "gp_global_section_575274983270384579_Dewm8w": {
+      "type": "gp-global-section-575274983270384579",
+      "name": "PDP - TCF - Ingr Desktop",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggSzoGYSk7B_text": "Science-Backed Ingredients",
+        "ggeqIP5NJKY_childItem_0": "<p>Sodium</p>",
+        "ggeqIP5NJKY_childItem_1": "<p>Potassium</p>",
+        "ggeqIP5NJKY_childItem_2": "<p>Magnesium</p>",
+        "ggeqIP5NJKY_childItem_3": "<p><strong>Calcium</strong></p>",
+        "ggIGbnsQ-9W_text": "<p>Sodium helps your body retain the fluids it needs to stay hydrated—especially when you’re sweating. It’s a critical electrolyte that supports endurance, performance, and consistent energy output.</p>",
+        "ggXk8sp_bWu_text": "<p>Potassium works with sodium to regulate hydration, nerve signals, and muscle contractions. It helps reduce cramps and keeps your body functioning smoothly during every mile.</p>",
+        "ggcWasMh2sA_text": "<p>Magnesium supports muscle recovery, nerve signaling, and energy production. Low magnesium can lead to fatigue and soreness, making this mineral key for consistent training.</p>",
+        "ggjAaV1ODpE_text": "<p>Known for bone health, calcium also plays a crucial role in muscle contraction and electrolyte balance. It helps your muscles fire properly so you can run strong.</p>"
+      }
+    },
     "gp_section_575472046402700227": {
       "type": "gp-section-575472046402700227",
       "settings": {
@@ -256,7 +302,8 @@
     "gp_global_section_575615476063797791_DFUtnm",
     "gp_global_section_575610010348815299_DYCaVf",
     "gp_global_section_575612885292548639_GgjyG9",
-    "gp_global_section_575273457869128530_gegpt7",
+    "gp_global_section_575615915140318034_pCph7B",
+    "gp_global_section_575273457869128530_YmfPUi",
     "gp_global_section_575266263094264394_ckQdNe",
     "gp_global_section_575269872192193362_Wp8bJ6",
     "gp_global_section_574894265742656356_BPtbfb",
@@ -265,6 +312,8 @@
     "17526226215d80ebd3",
     "gp_global_section_575286887443333970_pWYw78",
     "gp_global_section_575288905809527634_VrMaTy",
+    "gp_global_section_575284010452779858_6tGtRt",
+    "gp_global_section_575274983270384579_Dewm8w",
     "gp_section_575472046402700227"
   ],
   "layout": "theme.gempages.footer"
