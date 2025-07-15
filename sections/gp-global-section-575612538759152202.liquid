@@ -59,7 +59,7 @@
 {%- assign gpBkProduct = product -%}
 {%- assign gpBkProducts = products -%}
 {%- liquid
-      assign productHandles = 'rocky-mountain-runoff,out-n-back-medium-dark-blend,two-week-taper,technical-trail,junk-miles,the-long-run'| split: ','
+      assign productHandles = '2x-premium-decaf,2x-premium-light-roast,2x-premium-medium-roast,2x-premium-dark-roast,2x-peanut-butter-jelly,2x-blueberry-pancake,2x-banana-bread,2x-maple-bacon'| split: ','
       assign products = null
       assign target_collection = null
       assign productSrc = 'PickProduct'
@@ -96,7 +96,7 @@
             endfor
             assign limit = products.length
           else
-            if 6 == 0
+            if 8 == 0
               paginate collections.all.products by 100000
                 assign products = collections.all.products  | sort : "created_at"  | reverse
               endpaginate
@@ -121,7 +121,7 @@
       -%}
         
     {%- if products == null -%}
-    {%- if count == 0 and 6 == 0 -%}
+    {%- if count == 0 and 8 == 0 -%}
       {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
         {% else %}
@@ -713,7 +713,7 @@
             </gp-product>
         {%- endif -%}
         {% endfor %}
-        {%- if count == 0 and 6 == 0 -%}
+        {%- if count == 0 and 8 == 0 -%}
           {% if 'PickProduct' == 'RelatedProduct' -%}
               <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
             {% else %}
@@ -805,7 +805,7 @@
     "name": "EDCP - S2CF - Coll",
     "tag": "section",
     "class": "gps-575612538759152202 gps gpsil",
-    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=575612538759152202)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggP0ZNoIxEZ_text","label":"ggP0ZNoIxEZ_text","default":"Traditional Roasts"},{"type":"html","id":"ggHwFLY2-gF_text","label":"ggHwFLY2-gF_text","default":"<s>$34</s>"},{"type":"html","id":"ggJLsogwD7U_text","label":"ggJLsogwD7U_text","default":"$29.55"},{"type":"html","id":"ggtroTTJhCb_text","label":"ggtroTTJhCb_text","default":"<p>13.1% Off</p>"}],
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=575612538759152202)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggP0ZNoIxEZ_text","label":"ggP0ZNoIxEZ_text","default":"Sample Packs"},{"type":"html","id":"ggHwFLY2-gF_text","label":"ggHwFLY2-gF_text","default":"<s>$34</s>"},{"type":"html","id":"ggJLsogwD7U_text","label":"ggJLsogwD7U_text","default":"$29.55"},{"type":"html","id":"ggtroTTJhCb_text","label":"ggtroTTJhCb_text","default":"<p>13.1% Off</p>"}],
     "blocks": [{"type": "@app"}],
     "locales": {}
   }
