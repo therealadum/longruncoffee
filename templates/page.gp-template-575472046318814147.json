@@ -9,15 +9,275 @@
  */
 {
   "sections": {
-    "gp_section_575472046402700227": {
+    "gp_global_section_575613363157992387_W8HbcV": {
+      "type": "gp-global-section-575613363157992387",
+      "name": "EDCP - Header - 13.1%",
       "settings": {
-        "checksum": "6460eb6a312ab88306707ded45f7a062bacd2b263e20afa236333a1bf46b8403_1_1_1_0_",
-        "section_preload": "true"
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggOGXp_iJqO_text": "<p>Use code LRC13 to get 13.1% off Electrolyte Coffee</p>",
+        "ggYGilatx2d_text": "13.1% OFF",
+        "ggQHQtP6Rxd_text": "<p>Energy. Hydration. Built for Runners.</p>",
+        "ggG8g4YE947_text": "<p>Long Run Co. is a small, athlete owned business, based in the US.</p><p> </p><p>You're here because runners want to stay consistent, and fuel their routine with clean, hydrating energy that supports training. </p><p> </p><p>We make products for people who love to run and want to build a routine they love.</p>",
+        "ggAVfMYau_T_text": "<p>Use the code LRC13 to get 13.1% off our electrolyte infused coffee.</p>"
+      }
+    },
+    "gp_global_section_575612146860163922_W6NqGy": {
+      "type": "gp-global-section-575612146860163922",
+      "name": "EDCP - FCF - Collection",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggl22OmhVtN_text": "Flavored Roasts",
+        "ggmD54cHarM_text": "<s></s>",
+        "gg7cE9-sBfe_text": ".55",
+        "ggUb6N6y3Bw_text": "<p>13.1% Off</p>"
+      }
+    },
+    "gp_global_section_575612146860163922_YGDq64": {
+      "type": "gp-global-section-575612146860163922",
+      "name": "EDCP - FCF - Collection",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggl22OmhVtN_text": "Flavored Roasts",
+        "ggmD54cHarM_text": "<s></s>",
+        "gg7cE9-sBfe_text": ".55",
+        "ggUb6N6y3Bw_text": "<p>13.1% Off</p>"
+      }
+    },
+    "gp_global_section_575612885292548639_GgjyG9": {
+      "type": "gp-global-section-575612885292548639",
+      "name": "EDCP - BNDL - Collection",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggNsUyzk635_text": "Bundle &amp; Save",
+        "ggqNF2_NtOf_text": "<s>$102</s>",
+        "ggxBxreob4f_text": "$77.34",
+        "ggQnWcSLqbW_text": "<p>25% Off</p>"
+      }
+    },
+    "gp_global_section_575612538759152202_qiLKjj": {
+      "type": "gp-global-section-575612538759152202",
+      "name": "EDCP - S2CF - Collection",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggP0ZNoIxEZ_text": "Sample Packs",
+        "ggHwFLY2-gF_text": "<s>$9.99</s>",
+        "ggJLsogwD7U_text": "$8.69",
+        "ggtroTTJhCb_text": "<p>13.1% Off</p>"
+      }
+    },
+    "gp_global_section_575273457869128530_gegpt7": {
+      "type": "gp-global-section-575273457869128530",
+      "name": "PDP - TCF - Usage",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg0_tyAiDUV_text": "<p><strong>TYPE</strong></p>",
+        "ggnIX1bSk-3_text": "<p>Fresh Roasted Coffee</p><p> </p>",
+        "ggcurmcEuTk_text": "<p><strong>Total electrolytes</strong></p>",
+        "ggqR7gS4FgZ_text": "<p>275mg / cup</p>",
+        "ggzcBnkxtRQ_text": "<p><strong>FORMULATION</strong></p>",
+        "ggqPo89rDa8_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
+        "ggwnkETQRFP_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
+        "ggw4xF67-Hc_text": "<p>95mg / cup</p>",
+        "ggetbVUP7ws_text": "<p><strong>USAGE</strong></p>",
+        "ggKRawX5UKG_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>",
+        "ggp347Djgva_text": "<p><strong>TYPE</strong></p>",
+        "ggts-WiUBAM_text": "<p>Fresh Roasted Coffee</p>",
+        "ggiV0VNPa88_text": "<p><strong>Total Electrolytes</strong></p>",
+        "gg3nyZNRFmj_text": "<p>275mg / cup</p>",
+        "gg3WPJ8cQ9D_text": "<p><strong>FORMULATION</strong></p>",
+        "ggsQSQZfVLg_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
+        "ggUhJYXmpuC_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
+        "gg3dMaky33e_text": "<p>95mg / cup</p>",
+        "ggkaW5yTv86_text": "<p><strong>USAGE</strong></p>",
+        "ggGimG1pHZR_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>"
+      }
+    },
+    "gp_global_section_575266263094264394_ckQdNe": {
+      "type": "gp-global-section-575266263094264394",
+      "name": "PDP - TCF - Badges",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggexFCbiteo_text": "Boosts Endurance",
+        "ggERzl1YNpr_text": "Hydrating Energy",
+        "ggny8TUczHU_text": "Stronger than<br>normal coffee",
+        "ggMCWBbE5ls_text": "Brew hot or cold",
+        "ggieXXwKIiO_text": "Zero sugar",
+        "ggtJ4Jt4_Hn_text": "No Gut Issues",
+        "gg3YzEn2tIy_text": "built for routine",
+        "ggOeGZ-yiSc_text": "3rd Party Tested"
+      }
+    },
+    "gp_global_section_575269872192193362_Wp8bJ6": {
+      "type": "gp-global-section-575269872192193362",
+      "name": "PDP - TCF - Benefits",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggcz4syU5_o_childItem_0": "<p><strong>Reduce morning fatigue</strong></p>",
+        "ggcz4syU5_o_childItem_1": "<p><strong>Hydration + Energy</strong></p>",
+        "ggcz4syU5_o_childItem_2": "<p><strong>Stronger kick</strong></p>",
+        "ggcz4syU5_o_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
+        "ggcz4syU5_o_childItem_4": "<p><strong>Built for Routine</strong></p>",
+        "gg2iulRAgXh_text": "<p>Reduces training fatigue, so you can run more and stay consistent.</p>",
+        "ggB_r72tVLK_text": "<p>Long Run Coffee delivers a clean caffeine boost with added electrolytes—so you hydrate while you drink.</p>",
+        "ggjfDOEOzmi_text": "<p>Caffeine + electrolytes delivers a noticeably stronger boost—without the crash. Hydration supports energy uptake, so you feel it more and feel it longer.</p>",
+        "gggv_wJJaY4_text": "<p>No sugar. No calories. No fillers, no weird additives—just coffee + electrolytes.</p>",
+        "ggcQBm_qVyQ_text": "<p>Designed to be your go-to cup every day. Easy to brew, easy on your stomach, and helps you show up—consistently.</p>"
+      }
+    },
+    "gp_global_section_574894265742656356_BPtbfb": {
+      "type": "gp-global-section-574894265742656356",
+      "name": "PDP - TEA - Videos",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg8agTHiGGM_text": "Long Run Co.",
+        "ggVflaiPXKB_text": "In Action"
+      }
+    },
+    "gp_global_section_574890795677516575_wUD43g": {
+      "type": "gp-global-section-574890795677516575",
+      "name": "PDP - TEA - Trust",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggGrnoTlzuQ_text": "100M+",
+        "ggjlbN9Tdvy_text": "Miles Fueled by Long Run Co.",
+        "ggfbOdq3EBk_text": "1.8k+ Reviews",
+        "ggX7rT6NVK4_text": "Brand partners"
+      }
+    },
+    "gp_global_section_565398054547489777_CMLPgd": {
+      "type": "gp-global-section-565398054547489777",
+      "name": "PDP - TCF - Review Carous",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggl6B_tvUAB_text": "<p>This sh*t slaps</p>",
+        "gg3OXyistIH_text": "<p>It's smooth, not a bitter coffee, and not acidic either. 10/10 will be buying again to train with.</p>",
+        "ggB-7-xtTkb_text": "<p>Bri l.</p>",
+        "gg5QDQ4Kmda_text": "<p>Love it</p>",
+        "ggL_y1fn5rZ_text": "<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>",
+        "gg1DBZGUOPm_text": "<p>Alex H.</p>",
+        "gg-dFYYR87e_text": "<p><strong>Fast</strong></p>",
+        "gg-1zdEzhiD_text": "<p>Fast shipping and great tasting product. Works fast and provides a noticeably stronger energy kick.</p>",
+        "ggb8zWncFLk_text": "<p>Cody D.</p>",
+        "ggX_EGkD4fH_text": "<p>Great taste</p>",
+        "ggTmTG13nqg_text": "<p>Love it. The coffee tastes good and I feel great after drinking it. I have a cup before every run. Haven't found a flavor that I did not like.</p>",
+        "ggX8S3KLjTv_text": "<p>Alex R.</p>",
+        "ggrdW1_70EF_text": "<p>New Routine</p>",
+        "ggLp1Nen75V_text": "<p>No more guessing about pre-run fueling. This coffee is consistent, quick, and reliable—exactly what I needed.</p>",
+        "ggFfXu6Gd-b_text": "<p>Ryan D.</p>",
+        "ggQz48m5NpN_text": "<p>Awesome</p>",
+        "ggE6uFrpQYL_text": "<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>",
+        "gg-TVgAdVAR_text": "<p>Josh C.</p>",
+        "ggFl-c-FZbc_text": "<p>This sh*t slaps</p>",
+        "ggwHeYDy-c-_text": "<p>It's smooth, not a bitter coffee, and not acidic either. 10/10 will be buying again to train with.</p>",
+        "ggq1a5E_zke_text": "<p>Bri l.</p>",
+        "ggcmppm_lF3_text": "<p>Love it</p>",
+        "ggA29j_Sf5c_text": "<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>",
+        "ggeeqphrHhv_text": "<p>Alex H.</p>",
+        "ggE0YJIWJbw_text": "<p><strong>Fast</strong></p>",
+        "ggOekvy3m2__text": "<p>Fast shipping and great tasting product. Works fast and provides a noticeably stronger energy kick.</p>",
+        "ggcCa2BsKbX_text": "<p>Cody D.</p>",
+        "gghOHWW4cub_text": "<p>Great taste</p>",
+        "ggmM4fK7pWR_text": "<p>Love it. The coffee tastes good and I feel great after drinking it. I have a cup before every run.</p><p> </p><p>Haven't found a flavor that I did not like.</p>",
+        "ggu565qFWG-_text": "<p>Alex R.</p>",
+        "ggxom4vxJhy_text": "<p>New Routine</p>",
+        "ggtaMHoGSUZ_text": "<p>No more guessing about pre-run fueling. This coffee is consistent, quick, and reliable—exactly what I needed.</p>",
+        "ggWL_VKoE9E_text": "<p>Ryan D.</p>",
+        "ggy9KO2Bsjb_text": "<p>Awesome</p>",
+        "gg5o8prSpva_text": "<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>",
+        "gg5Dit3pIPC_text": "<p>Josh C.</p>"
+      }
+    },
+    "17526226215d80ebd3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_page_ihycCG": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
       },
-      "type": "gp-section-575472046402700227"
+      "block_order": [
+        "judge_me_reviews_all_reviews_page_ihycCG"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "gp_global_section_575286887443333970_pWYw78": {
+      "type": "gp-global-section-575286887443333970",
+      "name": "PDP - TCF - US vs. Them",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggaboT0xorq_text": "Long Run Co. vs. Your Old Routine",
+        "gg-prd5XQON_text": "electrolytes + caffeine",
+        "ggTtlfMs97k_text": "Your New<br>Routine",
+        "gg-v21CdpZg_text": "Your Old Routine",
+        "ggo6zh8Bivm_text": "Energy + Hydration<br>in one",
+        "ggKWQn_dd_H_text": "x",
+        "ggZzwy8QqC5_text": "No Mid-Run Gut<br>Issues",
+        "gg1bci40GIB_text": "x",
+        "gg1DY-NckFu_text": "Reduce morning fatigue",
+        "ggRTu_JtcF7_text": "x",
+        "ggcUyMa28G__text": "Consistent routine",
+        "ggQ4-DUkHYr_text": "x",
+        "ggXKlUVb1NQ_text": "Sugar &amp; Weird ingredients",
+        "ggasMdwSpgH_text": "x"
+      }
+    },
+    "gp_global_section_575288905809527634_VrMaTy": {
+      "type": "gp-global-section-575288905809527634",
+      "name": "PDP - TCF - Graph",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggs1mveBL6Z_text": "Long Run Stats",
+        "gg7ULgUKiVC_text": "Data on endurance, fatigue, and power with electrolytes + caffeine.",
+        "ggqP9tp9Fge_text": "Long Run Stats",
+        "gg4wkLFYPmJ_text": "Data on endurance, fatigue, and power with electrolytes + caffeine.",
+        "ggqECmNFmJy_childItem_0": "<p><strong>Endurance</strong></p>",
+        "ggqECmNFmJy_childItem_1": "<p><strong>Fatigue</strong></p>",
+        "ggqECmNFmJy_childItem_2": "<p><strong>Power</strong></p>",
+        "ggqECmNFmJy_childItem_3": "<p><strong>Sources</strong></p>",
+        "ggjS56vtM6x_text": "<p>Combining electrolytes with caffeine helps the body perform longer before fatigue sets in. It supports muscular efficiency, hydration balance, and delayed exhaustion during endurance efforts.</p><p> </p><p><strong>Avg. improvement in time to exhaustion: +18–25%</strong></p>",
+        "ggMoHc9Bo_f_text": "<p>Electrolytes + caffeine reduce perceived effort during training, so the same pace feels easier. It helps you push harder without feeling like you are.</p><p><br><strong>Avg. reduction in fatigue (RPE): –9–14%</strong></p>",
+        "ggFBMcEs5IT_text": "<p>The combo of electrolytes and caffeine improves muscular power and stamina. That means better performance, especially in longer sessions.</p><p> </p><p><strong>Avg. increase in power output: +5–7%</strong></p>",
+        "ggGfNeaNVPy_text": "<p>Cureton KJ, Warren GL, Millard-Stafford ML, Wingo JE, Trilk JL, Buyckx M. Caffeine effects on endurance performance in athletes. <i>Int J Sport Nutr Exerc Metab.</i> 2007;17(2):113–129.</p><p> </p><p>Ganio MS, Armstrong LE, Casa DJ, McDermott BP, Lee EC, Yamamoto LM, Marzano S, Lopez RM, Jimenez L, Le Bellego L, Chevillotte E, Lieberman HR, Maresh CM. Evidence-based approach to lingering hydration and energy effects of caffeine and carbohydrate co-ingestion. <i>Sports Med.</i> 2009;39(4):295–330.</p><p> </p><p>Ganio MS, Klau JF, Lee EC, Yeargin SW, McDermott BP, et al. Effect of caffeine on sport-specific endurance performance: a systematic review. <i>Sports Med.</i> 2009;39(10):813–832.</p>"
+      }
+    },
+    "gp_section_575472046402700227": {
+      "type": "gp-section-575472046402700227",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "6460eb6a312ab88306707ded45f7a062bacd2b263e20afa236333a1bf46b8403_1_1_1_0_"
+      }
     }
   },
   "order": [
+    "gp_global_section_575613363157992387_W8HbcV",
+    "gp_global_section_575612146860163922_W6NqGy",
+    "gp_global_section_575612146860163922_YGDq64",
+    "gp_global_section_575612885292548639_GgjyG9",
+    "gp_global_section_575612538759152202_qiLKjj",
+    "gp_global_section_575273457869128530_gegpt7",
+    "gp_global_section_575266263094264394_ckQdNe",
+    "gp_global_section_575269872192193362_Wp8bJ6",
+    "gp_global_section_574894265742656356_BPtbfb",
+    "gp_global_section_574890795677516575_wUD43g",
+    "gp_global_section_565398054547489777_CMLPgd",
+    "17526226215d80ebd3",
+    "gp_global_section_575286887443333970_pWYw78",
+    "gp_global_section_575288905809527634_VrMaTy",
     "gp_section_575472046402700227"
   ],
   "layout": "theme.gempages.footer"
