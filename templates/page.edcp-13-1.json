@@ -9,12 +9,27 @@
  */
 {
   "sections": {
+    "gp_global_section_575613363157992387_WAbP3F": {
+      "type": "gp-global-section-575613363157992387",
+      "name": "EDCP - Header - 13.1%",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggOGXp_iJqO_text": "<p>Use code LRC13 to get 13.1% off Electrolyte Coffee</p>",
+        "ggYGilatx2d_text": "13.1% OFF",
+        "ggQHQtP6Rxd_text": "<p>Energy. Hydration. Built for Runners.</p>",
+        "ggG8g4YE947_text": "<p>Long Run Co. is a small, athlete owned business, based in the US.</p><p> </p><p>You're here because runners want to stay consistent, and fuel their routine with clean, hydrating energy that supports training. </p><p> </p><p>We make products for people who love to run and want to build a routine they love.</p>",
+        "ggAVfMYau_T_text": "<p>Use the code LRC13 to get 13.1% off our electrolyte infused coffee.</p>"
+      }
+    },
     "coming-soon": {
       "type": "coming-soon",
+      "disabled": true,
       "settings": {}
     }
   },
   "order": [
+    "gp_global_section_575613363157992387_WAbP3F",
     "coming-soon"
   ]
 }
