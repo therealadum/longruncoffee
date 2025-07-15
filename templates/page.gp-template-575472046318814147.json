@@ -58,6 +58,18 @@
         "ggQnWcSLqbW_text": "<p>25% Off</p>"
       }
     },
+    "gp_global_section_575612538759152202_4GncN9": {
+      "type": "gp-global-section-575612538759152202",
+      "name": "EDCP - S2CF - Collection",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggP0ZNoIxEZ_text": "Sample Packs",
+        "ggHwFLY2-gF_text": "<s>$9.99</s>",
+        "ggJLsogwD7U_text": "$8.69",
+        "ggtroTTJhCb_text": "<p>13.1% Off</p>"
+      }
+    },
     "gp_global_section_575273457869128530_gegpt7": {
       "type": "gp-global-section-575273457869128530",
       "name": "PDP - TCF - Usage",
@@ -256,6 +268,7 @@
     "gp_global_section_575615476063797791_DFUtnm",
     "gp_global_section_575610010348815299_DYCaVf",
     "gp_global_section_575612885292548639_GgjyG9",
+    "gp_global_section_575612538759152202_4GncN9",
     "gp_global_section_575273457869128530_gegpt7",
     "gp_global_section_575266263094264394_ckQdNe",
     "gp_global_section_575269872192193362_Wp8bJ6",
