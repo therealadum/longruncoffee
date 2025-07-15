@@ -33,7 +33,7 @@
       
 
     <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product.v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
-    
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-same-height.v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
     
 {%- assign gpBkProduct = product -%}
 {%- assign gpBkProducts = products -%}
@@ -110,10 +110,14 @@
     {%-else-%}
       
       
-    <div items-repeat data-id="g_u64VP4qj" style="--w:100%;--w-tablet:100%;--w-mobile:95%;--rg:16px;--rg-tablet:15px;--rg-mobile:15px;--cg:8px;--cg-tablet:8px;--cg-mobile:5px;--gtc:repeat(4, minmax(0, 1fr));--gtc-tablet:repeat(4, minmax(0, 1fr));--gtc-mobile:repeat(3, minmax(0, 1fr))"
-          class="gp-grid !gp-m-auto gp-w-full"
+    <div items-repeat data-id="g_u64VP4qj" style="--w:100%;--w-tablet:100%;--w-mobile:95%;--cg:8px;--cg-tablet:8px;--cg-mobile:5px;--gtc:repeat(4, minmax(0, 1fr));--gtc-tablet:repeat(4, minmax(0, 1fr));--gtc-mobile:repeat(3, minmax(0, 1fr))"
+          class="gp-grid !gp-m-auto gp-w-full  gp-grid-flow-row"
       >
         
+      <gp-same-height-v2
+        class="gp-contents"
+        style="visibility: hidden"
+        gp-data='{"targetUid":"gl0gGEIKwW","slidesToShow":{"desktop":4,"mobile":"3","tablet":"4"},"rowGap":{"desktop":"16px","mobile":"15px","tablet":"15px"}}'>
         
         {%- assign count = 0 -%}
         {%- for product in products limit: limit -%}
@@ -122,11 +126,11 @@
         {%- assign variant = product.selected_or_first_available_variant -%}
         {%- assign product_form_id = 'product-form-' | append: "g_u64VP4qj" | append: product.id -%}
             <gp-product 
-              class="gp-child-item-g_u64VP4qj" 
+              class="gp-child-item-g_u64VP4qj  gp-contents" 
               gp-context='{"variantSelected": {{ variant | json | escape }}, "quantity": 1 ,  "formId": "{{ product_form_id }}"}' 
               gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1, "productUrl":{{ product.url | json | escape }}, "productHandle":{{ product.handle | json | escape }}, "collectionUrl": {{ collection.url | json | escape }}, "collectionHandle": {{ collection.handle | json | escape }},"pageContext" : {"pageType":"GP_STATIC","sectionName":"","isPreviewing":false,"isOptimizePlan":false,"isTranslateWithLocale":false,"isLazyLoadSection":true,"isLazyLoadImage":true,"hasCollectionHandle":true,"numberOfProductOfProductList":0,"pageBackground":"","fontType":"google","primaryLocale":"","enableLazyLoadImage":true}}'
             >
-              {%- form 'product', product, id: product_form_id, class: 'form contents ',  data-type: 'add-to-cart-form', autocomplete: 'off' -%}
+              {%- form 'product', product, id: product_form_id, class: 'form contents  gp-contents [&>div]:gp-grid [&>div]:gp-grid-rows-[subgrid] [&>div]:gp-gap-y-0 [&>div]:gp-grid-col-[subgrid] [&>*>div:nth-child(1)]:gp-contents',  data-type: 'add-to-cart-form', autocomplete: 'off' -%}
               <input type="hidden" name="id" value="{{ variant.id }}" />
               <input type="hidden" min="1" name="quantity"  value="{{ quantity }}" />
               <button type="submit" onclick="return false;" style="display:none;"></button>
@@ -430,6 +434,9 @@
           {%- endif -%}
         {%- endif -%}
       
+      </gp-same-height-v2>
+    
+        
       </div>
 
     
