@@ -17,7 +17,7 @@
     },
     "gp_section_575472046402765763": {
       "settings": {
-        "checksum": "2737c70b909d1de7059f45d78e57070967033cbb5bd22bf4abb0328c2be9b62a_1_1_1_0_",
+        "checksum": "8e49bab1262b3b6e3a2dc0521c2132b5267aef6ebdd4c0f87ce208a5553a060a_1_1_1_0_",
         "section_preload": "true"
       },
       "type": "gp-section-575472046402765763"
@@ -33,17 +33,10 @@
         "checksum": "46ad37e3698f439bf973223b4c5dd11fdb667a2b8814ca1b5fdf288174de7f6f_1_1_1_0_"
       },
       "type": "gp-section-575476018677023306"
-    },
-    "gp_section_575477841336992330": {
-      "settings": {
-        "checksum": "dc4abf2fefb4da6a19154ad027020db8684b027763dff29907ee171d76661d96_1_1_1_0_"
-      },
-      "type": "gp-section-575477841336992330"
     }
   },
   "order": [
     "gp_section_575472046402765763",
-    "gp_section_575477841336992330",
     "gp_section_575476018677023306",
     "gp_section_575472046402896835",
     "gp_section_575472046402700227"
