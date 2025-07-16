@@ -59,7 +59,7 @@
 {%- assign gpBkProduct = product -%}
 {%- assign gpBkProducts = products -%}
 {%- liquid
-      assign productHandles = '2oz-maple-bacon-copy,2oz-blueberry-pancake-copy,2oz-peanut-butter-jelly-copy,2oz-premium-medium-roast,maple-bacon-copy,2oz-banana-bread-copy,2oz-premium-light-roast,2oz-premium-decaf'| split: ','
+      assign productHandles = 'ready-to-run'| split: ','
       assign products = null
       assign target_collection = null
       assign productSrc = 'PickProduct'
@@ -96,7 +96,7 @@
             endfor
             assign limit = products.length
           else
-            if 8 == 0
+            if 1 == 0
               paginate collections.all.products by 100000
                 assign products = collections.all.products  | sort : "created_at"  | reverse
               endpaginate
@@ -121,7 +121,7 @@
       -%}
         
     {%- if products == null -%}
-    {%- if count == 0 and 8 == 0 -%}
+    {%- if count == 0 and 1 == 0 -%}
       {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
         {% else %}
@@ -713,7 +713,7 @@
             </gp-product>
         {%- endif -%}
         {% endfor %}
-        {%- if count == 0 and 8 == 0 -%}
+        {%- if count == 0 and 1 == 0 -%}
           {% if 'PickProduct' == 'RelatedProduct' -%}
               <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
             {% else %}
@@ -805,7 +805,7 @@
     "name": "EDCP - R2R - Collection",
     "tag": "section",
     "class": "gps-575617091793584978 gps gpsil",
-    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=575617091793584978)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"gg1HyUlJEO7_text","label":"gg1HyUlJEO7_text","default":"Sample Packs"},{"type":"html","id":"ggFGz45DSjn_text","label":"ggFGz45DSjn_text","default":"<s>$4.99</s>"},{"type":"html","id":"ggQttkd9wM3_text","label":"ggQttkd9wM3_text","default":"$4.34"},{"type":"html","id":"ggozcL4C9Cq_text","label":"ggozcL4C9Cq_text","default":"<p>13.1% Off</p>"}],
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=575617091793584978)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"gg1HyUlJEO7_text","label":"gg1HyUlJEO7_text","default":"Electrolyte powder"},{"type":"html","id":"ggFGz45DSjn_text","label":"ggFGz45DSjn_text","default":"<s>$4.99</s>"},{"type":"html","id":"ggQttkd9wM3_text","label":"ggQttkd9wM3_text","default":"$4.34"},{"type":"html","id":"ggozcL4C9Cq_text","label":"ggozcL4C9Cq_text","default":"<p>13.1% Off</p>"}],
     "blocks": [{"type": "@app"}],
     "locales": {}
   }
