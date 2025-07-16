@@ -301,22 +301,6 @@
         "ggGfNeaNVPy_text": "<p>Cureton KJ, Warren GL, Millard-Stafford ML, Wingo JE, Trilk JL, Buyckx M. Caffeine effects on endurance performance in athletes. <i>Int J Sport Nutr Exerc Metab.</i> 2007;17(2):113–129.</p><p> </p><p>Ganio MS, Armstrong LE, Casa DJ, McDermott BP, Lee EC, Yamamoto LM, Marzano S, Lopez RM, Jimenez L, Le Bellego L, Chevillotte E, Lieberman HR, Maresh CM. Evidence-based approach to lingering hydration and energy effects of caffeine and carbohydrate co-ingestion. <i>Sports Med.</i> 2009;39(4):295–330.</p><p> </p><p>Ganio MS, Klau JF, Lee EC, Yeargin SW, McDermott BP, et al. Effect of caffeine on sport-specific endurance performance: a systematic review. <i>Sports Med.</i> 2009;39(10):813–832.</p>"
       }
     },
-    "lrc-coffee-benefits-short": {
-      "type": "lrc-coffee-benefits-short",
-      "settings": {
-        "show_cta": false,
-        "cta_text": "Start for $3",
-        "cta_scroll_to_id": "lrc-klaviyo-form"
-      }
-    },
-    "lrc-coffee-benefits": {
-      "type": "lrc-coffee-benefits",
-      "settings": {
-        "show_cta": false,
-        "cta_text": "Start for $3",
-        "cta_scroll_to_id": "lrc-klaviyo-form"
-      }
-    },
     "gp_global_section_575294284735971914_X3UbC9": {
       "type": "gp-global-section-575294284735971914",
       "name": "PDP - TCF - FAQ",
@@ -361,6 +345,24 @@
         "ggV-ZqVrcOu_text": "<p>Yes. It’s safe for nightly use and designed for athletes who want consistent, high-quality sleep as part of their recovery.</p>",
         "ggK59trRama_text": "<p>Absolutely. Deep sleep is when your body rebuilds. Better sleep means better recovery, more energy, and long-term consistency.</p>",
         "ggKzSSMzp_v_text": "<p>About 30–60 minutes before bed. Make it part of your wind-down routine for the best results.</p>"
+      }
+    },
+    "lrc-coffee-benefits-short": {
+      "type": "lrc-coffee-benefits-short",
+      "disabled": true,
+      "settings": {
+        "show_cta": false,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
+      }
+    },
+    "lrc-coffee-benefits": {
+      "type": "lrc-coffee-benefits",
+      "disabled": true,
+      "settings": {
+        "show_cta": false,
+        "cta_text": "Start for $3",
+        "cta_scroll_to_id": "lrc-klaviyo-form"
       }
     },
     "gp_global_section_575296632438915658_CgyWxY": {
@@ -415,9 +417,9 @@
     "gp_global_section_575285156688953887_xaxTzh",
     "gp_global_section_575286887443333970_GytpJc",
     "gp_global_section_575288905809527634_FYyFW3",
+    "gp_global_section_575294284735971914_X3UbC9",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
-    "gp_global_section_575294284735971914_X3UbC9",
     "gp_global_section_575296632438915658_CgyWxY",
     "17093999844598d023"
   ]
