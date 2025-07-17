@@ -13,13 +13,13 @@
       "type": "lrc-base-product",
       "settings": {}
     },
-    "gp_global_section_575295266186330962_iP9T8C": {
-      "type": "gp-global-section-575295266186330962",
-      "name": "PDP - TCF - Other Product",
+    "gp_global_section_575903728415015762_iUgTeC": {
+      "type": "gp-global-section-575903728415015762",
+      "name": "PDP - FCF - Other Product",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggwj1QSOLAo_text": "<p>Others in This Collection:</p>"
+        "ggD5F85euVC_text": "<p>Others in This Collection:</p>"
       }
     },
     "lrc-accordion": {
@@ -213,30 +213,6 @@
         "ggVflaiPXKB_text": "In Action"
       }
     },
-    "gp_global_section_575284568160993866_Cze3nR": {
-      "type": "gp-global-section-575284568160993866",
-      "name": "PDP - TCF - Progress Bar",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggQnKPhh_QI_text": "Formulated to Change Your Training",
-        "gg6rohExL4t_text": "Subscribe And Start Feeling The Benefits",
-        "ggnZtYBTaEJ_text": "Immediately",
-        "ggZqzOTe-nR_text": "Feel more energized in the morning with a stronger caffeine kick — no crash, no gut issues.",
-        "gg3OKf_oIwz_text": "After a few nights",
-        "ggSsULckEUA_text": "Notice steadier energy and better hydration throughout your runs, feeling more consistent..",
-        "ggnnDtknJX9_text": "Within 7 days",
-        "ggmaIglFc8s_text": "Your routine starts to feel locked in. Fewer skipped runs, less fatigue, and more confidence in your rhythm.",
-        "gg0xe8ZR5hg_text": "Formulated to Change Your Training",
-        "ggjdwitw2R3_text": "Subscribe to Long Run Co. <br>And Start Feeling The Benefits",
-        "gg_AuP_VR5g_text": "Immediately",
-        "ggGIVwY5LgR_text": "Feel more energized in the morning with a stronger caffeine kick — no crash, no gut issues.",
-        "ggHocyzmPxQ_text": "After a few nights",
-        "gg3hIxQ3HRq_text": "Notice steadier energy and better hydration throughout your runs, feeling more consistent..",
-        "ggSsCS9pUJQ_text": "Within 7 days",
-        "gglkiL_oOdX_text": "Your routine starts to feel locked in. Fewer skipped runs, less fatigue, and more confidence in your rhythm."
-      }
-    },
     "gp_global_section_575285156688953887_xaxTzh": {
       "type": "gp-global-section-575285156688953887",
       "name": "PDP - TCF - Subscription",
@@ -403,7 +379,7 @@
   },
   "order": [
     "lrc-base-product",
-    "gp_global_section_575295266186330962_iP9T8C",
+    "gp_global_section_575903728415015762_iUgTeC",
     "lrc-accordion",
     "gp_global_section_575269872192193362_QCcPhn",
     "gp_global_section_575273457869128530_hNwEmz",
@@ -413,7 +389,6 @@
     "gp_global_section_574890795677516575_Ftxc7j",
     "gp_global_section_565398054547489777_tjax9y",
     "gp_global_section_574894265742656356_Dppfqy",
-    "gp_global_section_575284568160993866_Cze3nR",
     "gp_global_section_575285156688953887_xaxTzh",
     "gp_global_section_575286887443333970_GytpJc",
     "gp_global_section_575288905809527634_FYyFW3",
