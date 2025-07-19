@@ -343,22 +343,26 @@
         "ggydtwIntft_text": "<p>About 30–60 minutes before bed. Make it part of your wind-down routine for the best results.</p>"
       }
     },
-    "gp_global_section_575163681055179620_ikYmzM": {
-      "type": "gp-global-section-575163681055179620",
-      "name": "PDP - TEA - Cross Sell",
+    "gp_global_section_575296632438915658_9FcLKy": {
+      "type": "gp-global-section-575296632438915658",
+      "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggrCAOrRvIS_text": "Long Run Coffee",
-        "ggHvrwYeJgy_text": "Coffee + Electrolytes",
-        "ggjPG2BYlxP_text": "Long Run Powder",
-        "ggamV38Vef9_text": "Electrolyte Powder + Natural Caffeine",
-        "ggV1LitCFFk_text": "Long Run Pouches ",
-        "gg3P52AUq4O_text": "Coming soon",
-        "ggPPtPLNjy2_text": "Long Run Gear",
-        "ggzZajgEBe7_text": "For All Training Routines",
-        "ggoeoQPWbNu_text": "Long Run Tea",
-        "ggfbIHsZGJH_text": "Melatonin Tea"
+        "ggctUhQ68gO_text": "Long Run Co.",
+        "ggbqUqmk4_6_text": "All Products",
+        "gg37c4jo_ET_text": "Long Run Coffee",
+        "gg6k8fldKu4_text": "Electrolyte Infused Coffee",
+        "gginC9tkMJY_text": "Long Run Powder",
+        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
+        "ggltS59Bpaj_text": "Long Run Tea ",
+        "ggUN-0HMK7L_text": "Coming soon",
+        "ggeUnHJL0rV_text": "Long Run Pouches ",
+        "ggdwS969w6E_text": "Coming soon",
+        "ggjF0OBZWKT_text": "Long Run Gear",
+        "ggm_xM7funq_text": "For All Training Routines",
+        "ggMmCDMz3xg_text": "Long Run Bundles",
+        "gg-3aGjg0bg_text": "Bundle &amp; Save"
       }
     },
     "17093999844598d023": {
@@ -394,7 +398,7 @@
     "gp_global_section_574901489458218213_En6Y3q",
     "gp_global_section_575121399417406693_aYkVgE",
     "gp_global_section_574742541627294949_DA9pXi",
-    "gp_global_section_575163681055179620_ikYmzM",
+    "gp_global_section_575296632438915658_9FcLKy",
     "17093999844598d023"
   ]
 }
