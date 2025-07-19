@@ -365,7 +365,7 @@
         "ggKzSSMzp_v_text": "<p>Yes. Long Run is gluten free, plant-based, and tested for mold / toxins.</p>"
       }
     },
-    "gp_global_section_575296632438915658_CgyWxY": {
+    "gp_global_section_575296632438915658_p9rCbQ": {
       "type": "gp-global-section-575296632438915658",
       "name": "PDP - TCF - Cross Sell",
       "settings": {
@@ -373,8 +373,10 @@
         "checksum": "",
         "ggctUhQ68gO_text": "Long Run Co.",
         "ggbqUqmk4_6_text": "All Products",
-        "gg37c4jo_ET_text": "Long Run Powder",
-        "gg6k8fldKu4_text": "Electrolyte Powder + Natural Caffeine",
+        "gg37c4jo_ET_text": "Long Run Coffee",
+        "gg6k8fldKu4_text": "Electrolyte Infused Coffee",
+        "gginC9tkMJY_text": "Long Run Powder",
+        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
         "ggltS59Bpaj_text": "Long Run Tea ",
         "ggUN-0HMK7L_text": "Coming soon",
         "ggeUnHJL0rV_text": "Long Run Pouches ",
@@ -399,35 +401,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "featured_collection_AhEQWT": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "title": "Electrolyte Coffee",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "coffee",
-        "products_to_show": 12,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "accent-2",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -449,8 +422,7 @@
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "gp_global_section_575294284735971914_gLFdN4",
-    "gp_global_section_575296632438915658_CgyWxY",
-    "17093999844598d023",
-    "featured_collection_AhEQWT"
+    "gp_global_section_575296632438915658_p9rCbQ",
+    "17093999844598d023"
   ]
 }
