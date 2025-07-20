@@ -13,15 +13,6 @@
       "type": "lrc-base-product",
       "settings": {}
     },
-    "gp_global_section_575160220569830175_Xkh8hE": {
-      "type": "gp-global-section-575160220569830175",
-      "name": "PDP - TEA - Other Product",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "gg0Pg1BtrJv_text": "<p>Other Melatonin Tea Flavors:</p>"
-      }
-    },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
@@ -50,6 +41,15 @@
         "lrc_accordion_item_3"
       ],
       "settings": {}
+    },
+    "gp_global_section_576333887962088274_NbnbbH": {
+      "type": "gp-global-section-576333887962088274",
+      "name": "PDP - TEA - Other Product",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggF3KKajXPY_text": "<p>MORE Melatonin Tea</p>"
+      }
     },
     "gp_global_section_574745672205468784_8KagJJ": {
       "type": "gp-global-section-574745672205468784",
@@ -383,8 +383,8 @@
   },
   "order": [
     "lrc-base-product",
-    "gp_global_section_575160220569830175_Xkh8hE",
     "lrc-accordion",
+    "gp_global_section_576333887962088274_NbnbbH",
     "gp_global_section_574745672205468784_8KagJJ",
     "gp_global_section_574754045781082911_3zjgUL",
     "gp_global_section_574756630327985264_zRcGaL",
