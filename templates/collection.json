@@ -14,10 +14,11 @@
       "settings": {
         "coffee_collections": [
           "coffee",
+          "rest-recover-tea",
+          "powders",
           "traditional-roasts",
           "flavored",
-          "bundle-save",
-          "rest-recover-tea"
+          "bundle-save"
         ],
         "other_collections": [
           "gear"
