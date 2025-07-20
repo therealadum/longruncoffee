@@ -1276,23 +1276,564 @@
     </gp-text>
     
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
-  <gp-text data-id="gUN-0HMK7L">
+  <gp-text data-id="glzuR2WWY4">
     <div
       parentTag="Col"
-        class="gUN-0HMK7L "
-        style="--ta:left;--mb-mobile:0px;--pl-mobile:5px;--pb-mobile:0px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+        class="glzuR2WWY4 "
+        style="--ta:left;--mb:15px;--mb-mobile:10px;--pl-mobile:5px;--pb-mobile:0px;--mb-tablet:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
       >
       <div class="gp-flex" style="--jc:left">
         <h2
           
           data-gp-text
           class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
-          style="--w:100%;--w-tablet:100%;--w-mobile:95%;--ts:none;--ta:left;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:600;--size:20px;--size-tablet:15px;--size-mobile:15px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--fs:italic;--c:#595959;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
-        >{{ section.settings.ggUN-0HMK7L_text | replace: '$locationOrigin', locationOrigin }}</h2>
+          style="--w:100%;--w-tablet:100%;--w-mobile:95%;--ts:none;--ta:left;--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:600;--size:20px;--size-tablet:15px;--size-mobile:13px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        >{{ section.settings.gglzuR2WWY4_text | replace: '$locationOrigin', locationOrigin }}</h2>
+      </div>
+    </div>
+    </gp-text>
+    <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gMQOfEUuJi ">
+      
+
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product.v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    
+    
+{%- assign gpBkProduct = product -%}
+{%- assign gpBkProducts = products -%}
+{%- liquid
+      assign productHandles = ''| split: ','
+      assign products = null
+      assign target_collection = null
+      assign productSrc = 'Collection'
+      assign c = 0
+      assign limit = 50
+      if request.page_type == 'collection' or preview_page_type == 'collection'
+        assign target_collection = collection
+        if target_collection == empty or target_collection == null
+          if '506339623225' == 'latest'
+            assign target_collection = collections | sort: 'updated_at'  | first
+          else
+            for collection in collections
+              if collection.id == 506339623225
+                assign target_collection = collection
+                break
+              endif
+            endfor
+          endif
+        endif
+        paginate target_collection.products by 50
+          assign products = target_collection.products  
+        endpaginate
+      else
+        if productSrc == 'RelatedProduct'
+          
+    
+    
+        elsif productSrc == 'PickProduct'
+          unless false 
+            assign products = null | sort
+            for handle in productHandles
+              assign productH = all_products[handle] | sort
+              assign products = products | concat: productH
+            endfor
+            assign limit = products.length
+          else
+            if 0 == 0
+              paginate collections.all.products by 100000
+                assign products = collections.all.products  | sort : "created_at"  | reverse
+              endpaginate
+            endif
+          endunless
+        else
+          if '506339623225' == 'latest'
+            assign target_collection = collections | sort: 'updated_at'  | first
+          else
+            for collection in collections
+              if collection.id == 506339623225
+                assign target_collection = collection
+                break
+              endif
+            endfor
+          endif
+          paginate target_collection.products by 50
+            assign products = target_collection.products  
+          endpaginate
+        endif
+      endif
+      -%}
+        
+    {%- if products == null -%}
+    {%- if count == 0 and 0 == 0 -%}
+      {% if 'Collection' == 'RelatedProduct' -%}
+          <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
+        {% else %}
+          <div>{{ "gempages.ProductList.no_products_found" | t }}</div>
+      {%- endif -%}
+    {%- endif -%}
+    {%-else-%}
+      
+      
+    
+        
+    <gp-carousel data-id="gMQOfEUuJi" items-repeat id="gp-root-carousel-product-list-carousel-gMQOfEUuJi-{{section.id}}" class="gp-justify-center  gp-group/carousel gp-flex" gp-data='{"id":"product-list-carousel-gMQOfEUuJi-{{section.id}}","setting":{"loop":{"desktop":false},"slidesToShow":{"desktop":"6","tablet":"5","mobile":"3"},"dot":{"desktop":false,"mobile":false,"tablet":true},"dotSize":{"desktop":12},"dotGapToCarousel":{"desktop":16},"dotStyle":{"desktop":"none","tablet":"outside","mobile":"none"},"navigationStyle":{"desktop":"outside","tablet":"none","mobile":"none"},"arrowCustom":"<svg height=\"100%\" width=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z\"></path></svg>","controlOverContent":{"desktop":false},"enableDrag":{"desktop":true,"tablet":true,"mobile":true},"speed":2,"dotActiveColor":{"desktop":"line-3"},"dotColor":{"desktop":"bg-1"},"autoplay":false,"pauseOnHover":true,"autoplayTimeout":2,"arrowCustomColor":"#000000","arrowButtonSize":{"desktop":{"width":"24px","height":"24px"}}},"styles":{"sizeSetting":{"desktop":{"height":"fit-content","width":"100%"},"tablet":{"height":"fit-content","width":"100%"},"mobile":{"height":"fit-content","width":"100%"}},"spacing":{"desktop":"70","mobile":"10","tablet":"30"}},"isHiddenArrowWhenDisabled":true}' >
+      <div class="gp-hidden gp-aspect-square gp-w-[12px] gp-rounded-full gp-shadow-md"></div>
+      <div
+        
+        class="gp-relative gp-my-0 tablet:gp-px-0 gp-max-w-full mobile:gp-px-0 gp-carousel-wrapper mobile:gp-block tablet:gp-block gp-block gMQOfEUuJi"
+        style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:fit-content;--h-tablet:fit-content;--h-mobile:fit-content"
+      >
+        <div
+          class="gp-h-full gp-relative gp-mx-auto gp-flex gp-items-center gp-justify-between mobile:!gp-flex-row tablet:!gp-flex-row !gp-flex-row"
+          style="--h:100%;--h-tablet:auto;--h-mobile:100%;gap:16px"
+        >
+          
+    <button
+      type="button"
+      aria-label='Carousel Back Arrow'
+      class="gp-z-1 product-list-carousel-gMQOfEUuJi gp-carousel-action-back gem-slider-previous product-list-carousel-gMQOfEUuJi-{{section.id}} gp-carousel-arrow-gMQOfEUuJi gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0  gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative  tablet:!gp-hidden mobile:!gp-hidden"
+      style="--left:initial;--top:initial;--right:initial;--bottom:;--left-tablet:initial;--top-tablet:initial;--right-tablet:initial;--bottom-tablet:;--left-mobile:initial;--top-mobile:initial;--right-mobile:initial;--bottom-mobile:;--d:flex;--d-tablet:none;--d-mobile:none;background-color:;--w:24px;--h:24px"
+      onClick={onClick}
+      
+    >
+      <div 
+  class="gp-flex gp-items-center gp-justify-center [&>svg]:gp-h-full [&>svg]:gp-w-full gp-rotate-180 tablet:gp-rotate-180 mobile:gp-rotate-180"
+  style="--c:#000000;--w:undefinedpx;--w-tablet:undefinedpx;--w-mobile:undefinedpx;--h:undefinedpx;--h-tablet:undefinedpx;--h-mobile:undefinedpx"
+  >
+    <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path></svg>
+    </div>
+      <style>
+    .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi {
+      
+    }
+    .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      pointer-events: none;
+      z-index: 10;
+      
+      
+    }
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi {
+        
+      }
+      .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi::before {
+        
+        
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi {
+        
+      }
+      .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi::before {
+        
+        
+      }
+    }
+  </style>
+    </button>
+  
+          <div id="gp-carousel-product-list-carousel-gMQOfEUuJi-{{section.id}}" class="gem-slider gp-h-full gp-overflow-hidden gp-select-none mobile:!gp-flex-nowrap tablet:!gp-flex-nowrap !gp-flex-nowrap mobile:!gp-min-h-full tablet:!gp-min-h-full !gp-min-h-full"
+          style="--cg-mobile:10px;--cg-tablet:30px;--cg:70px">
+          
+        
+      {%- assign count = 0 -%}
+      {%- for product in products limit: limit -%}
+      {%- if product.id != empty -%}
+      {%- assign count = count | plus: 1 -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign product_form_id = 'product-form-' | append: "gMQOfEUuJi" | append: product.id -%}
+                  
+    <div
+      media-type="{{media.media_type}}"
+      media-poster="{{media.preview_image.src}}"
+      media-source-url="{{media.sources.first.url}}"
+      media-last-source-url="{{mediaSourceUrl}}"
+      external-id="{{media.external_id}}"
+      grid-index="{{forloop.index}}"
+      
+      
+      style="--minw:calc(100% / 6 - 58.333333333333336px);--minw-tablet:calc(100% / 5 - 24px);--minw-mobile:calc(100% / 3 - 6.666666666666667px);--maxw:calc(100% / 6 - 58.333333333333336px);--maxw-tablet:calc(100% / 5 - 24px);--maxw-mobile:calc(100% / 3 - 6.666666666666667px);--ml:0px;--ml-tablet:0px;--ml-mobile:0px"
+      class="gem-slider-item gp-w-full gem-slider-item-product-list-carousel-gMQOfEUuJi gp-child-item-gMQOfEUuJi gp-child-item-undefined gMQOfEUuJi"
+      data-index=""
+    >
+      <div
+        class="gp-w-full gp-h-full",
+        
+      >
+      <gp-product gp-context='{"variantSelected": {{ variant | json | escape }}, "quantity": 1 ,  "formId": "{{ product_form_id }}"}' gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1, "productUrl":{{ product.url | json | escape }}, "productHandle":{{ product.handle | json | escape }}, "collectionUrl": {{ collection.url | json | escape }}, "collectionHandle": {{ collection.handle | json | escape }},"pageContext" : {"pageType":"","sectionName":"","isPreviewing":false,"isOptimizePlan":false,"isTranslateWithLocale":false,"isLazyLoadSection":true,"isLazyLoadImage":false,"hasCollectionHandle":true,"numberOfProductOfProductList":0,"pageBackground":"","fontType":"","primaryLocale":"","enableLazyLoadImage":false}}'>
+                      {%- form 'product', product, id: product_form_id, class: 'form contents AddToCartForm',  data-type: 'add-to-cart-form',autocomplete: 'off' -%}
+                      <input type="hidden" name="id" value="{{ variant.id }}" />
+                      <input type="hidden" min="1" name="quantity"  value="{{ quantity }}" />
+                        <button type="submit" onclick="return false;" style="display:none;"></button>
+                        
+       
+      
+    <div
+      parentTag="ProductList" id="gl20exzeLR" data-id="gl20exzeLR"
+        style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-1, line-1);--radius:var(--g-radius-medium);--d:grid;--d-tablet:grid;--d-mobile:grid;--shadow:none;--op:100%;--cg:var(--g-s-2xl);--pc:start;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--h:auto;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gl20exzeLR gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--ai:normal;--jc:start;--o:0"
+      class="gDOxxoDgIm gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign featured_image = product.featured_image %}
+  {%- if variant != null and variant.featured_image != null -%}
+  {% assign featured_image = variant.featured_image %}
+  {%- endif -%}
+    <gp-product-images-v2
+      gp-data='
+    {
+      "id":"geLIZ0XNUC",
+      "pageContext": {"pageType":"","sectionName":"","isPreviewing":false,"isOptimizePlan":false,"isTranslateWithLocale":false,"isLazyLoadSection":true,"isLazyLoadImage":false,"hasCollectionHandle":true,"numberOfProductOfProductList":0,"pageBackground":"","fontType":"","primaryLocale":"","enableLazyLoadImage":false},
+      "setting":{"ftClickOpenLightBox":{"desktop":"product-link"},"typeDisplay":"all-images","preDisplay":"1st-available-variant","hoverEffect":"none","zoomType":"default","zoom":150,"otherImage":0,"ftClickOpenNewTab":false,"ftNavigationPosition":{"desktop":"none"},"ftLoop":{"desktop":false},"ftPauseOnHover":true,"ftAnimationSpeed":500,"ftAnimationMode":"ease-out","ftArrowIcon":"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM10.6828 8.13017C10.5266 7.95661 10.2734 7.95661 10.1172 8.13017C9.96095 8.30374 9.96095 8.58515 10.1172 8.75871L13.0343 12L10.1172 15.2413C9.96095 15.4149 9.96095 15.6963 10.1172 15.8698C10.2734 16.0434 10.5266 16.0434 10.6828 15.8698L13.8828 12.3143C14.0391 12.1407 14.0391 11.8593 13.8828 11.6857L10.6828 8.13017Z\" fill=\"currentColor\"/>\n    </svg>","ftArrowIconColor":"#000000","ftDragToScroll":false,"ftArrowNavBorder":{"borderType":"none","border":"none","borderWidth":"1px","width":"1px 1px 1px 1px","isCustom":false},"ftArrowNavRadius":{"btrr":"0px","bblr":"0px","bbrr":"0px","btlr":"0px","radiusType":"none"},"type":{"desktop":"slider"},"galleryHoverEffect":"none","galleryZoomType":"default","galleryZoom":150,"clickOpenLightBox":{"desktop":false},"borderActive":{"borderType":"none","border":"solid","borderWidth":"1px","width":"1px 1px 1px 1px","isCustom":false,"color":"#000000"},"navigationPosition":{"desktop":"inside"},"loop":{"desktop":true},"pauseOnHover":true,"speed":1,"arrowIcon":"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM10.6828 8.13017C10.5266 7.95661 10.2734 7.95661 10.1172 8.13017C9.96095 8.30374 9.96095 8.58515 10.1172 8.75871L13.0343 12L10.1172 15.2413C9.96095 15.4149 9.96095 15.6963 10.1172 15.8698C10.2734 16.0434 10.5266 16.0434 10.6828 15.8698L13.8828 12.3143C14.0391 12.1407 14.0391 11.8593 13.8828 11.6857L10.6828 8.13017Z\" fill=\"currentColor\"/>\n    </svg>","arrowIconColor":"#000000","dragToScroll":true,"arrowNavBorder":{"borderType":"none","border":"none","borderWidth":"1px","width":"1px 1px 1px 1px","isCustom":false},"arrowNavRadius":{"btrr":"0px","bblr":"0px","bbrr":"0px","btlr":"0px","radiusType":"none"},"qualityType":{"desktop":"high"},"preload":false,"qualityPercent":{"desktop":100},"ftDotStyle":{"desktop":"none"},"ftDotSize":{"desktop":12},"ftDotGapToCarousel":{"desktop":16},"ftDotColor":{"desktop":"bg-1"},"ftDotActiveColor":{"desktop":"line-3"}},
+      "styles":{"position":{"desktop":"only-feature","mobile":"only-feature"},"spacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"ratioLayout":{"desktop":[2,10]},"ratioLayoutRight":{"desktop":[10,2]},"ftShape":{"desktop":{"shape":"square","shapeValue":"1/1","width":"100%","shapeLinked":true}},"ftLayout":{"desktop":"cover"},"ftCorner":{"btrr":"0px","bblr":"0px","bbrr":"0px","btlr":"0px","radiusType":"none"},"shape":{"desktop":{"shape":"square","shapeValue":"1/1","width":"100%","shapeLinked":true}},"shapeForFtOnly":{"desktop":{"shape":"square","shapeValue":"1/1","width":"100%","shapeLinked":true}},"shapeForBottom":{"desktop":{"shape":"square","shapeValue":"1/1","width":"20%","shapeLinked":true}},"shapeForInsideBottom":{"desktop":{"shape":"square","shapeValue":"1/1","width":"20%","shapeLinked":true}},"shapeForInside":{"desktop":{"shape":"square","shapeValue":"1/1","width":"20%","shapeLinked":true}},"shapeFor2Col":{"desktop":{"shape":"square","shapeValue":"1/1","width":"50%","shapeLinked":true}},"shapeFor1Col":{"desktop":{"shape":"square","shapeValue":"1/1","width":"100%","shapeLinked":true}},"layout":{"desktop":"cover"},"itemSpacing":{"desktop":"var(--g-s-s)","mobile":"var(--g-s-s)"},"corner":{"btrr":"0px","bblr":"0px","bbrr":"0px","btlr":"0px","radiusType":"none"},"align":{"desktop":"flex-start"}}, "productUrl":{{product.url | json | escape}}, "product":{{product | json | escape}}, "collectionUrl": {{ collection.url | json | escape }}, "collection": {{ collection | json | escape}}
+    }
+  '
+      section-id="{{section.id}}"
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      data-id="geLIZ0XNUC"
+      class="geLIZ0XNUC gp-overflow-hidden"
+    >
+      <div
+        class="{%- if product.media.size > 1 -%} gp-grid gp-w-full !gp-m-0 gp-relative {%- else -%} gp-w-full !gp-m-0 gp-relative {%- endif -%}"
+        {%- if product.media.size > 1 -%}
+        style="--gtc:minmax(0, 12fr);--gtc-tablet:minmax(0, 12fr);--gtc-mobile:minmax(0, 12fr);--gg:var(--g-s-s);--gg-mobile:var(--g-s-s)"
+        {%- else -%}
+        style="--gtc:minmax(0, 12fr);--gg:var(--g-s-s);--gg-mobile:var(--g-s-s)"
+        {%- endif -%}
+      >
+        
+    {% capture featureImageOnlyOne %}
+      
+        {% assign featureMedia = variant.featured_media %}
+        {% unless featureMedia %}
+        {% assign featureMedia = product.featured_media %}
+        {% endunless %}
+        {% if product.media.size > 1 %}
+          
+          {% assign featureMedia = variant.featured_media %}
+          {% unless featureMedia %}
+          {% assign featureMedia = product.featured_media %}
+          {% endunless %}
+        
+        {% endif %}
+        {% assign largestRatio = 0 %}
+        {% assign height = featureMedia.height | times: 1.0 %}
+        {% assign width = featureMedia.width | times: 1.0 %}
+        {% assign ratio = height | divided_by: width %}
+        {% if ratio > largestRatio %}
+          {% assign largestRatio = ratio %}
+        {% endif %}
+        {% assign productImageWidth = 0 %}
+        {% case featureMedia.media_type %}
+          {% when 'image' %}
+            {% assign productImageWidth = featureMedia.width %}
+          {% else %}
+            {% assign productImageWidth = featureMedia.preview_image.width %}
+        {% endcase %}
+        {% if featureMedia == null %}
+        {% assign productImageWidth = 1600 %}
+        {% endif %}
+        <div 
+          class='gp-feature-image-carousel gp-feature-image-only' 
+          style="--o:0;--o-tablet:0;--o-mobile:0;--d:flex;--d-mobile:flex;--d-tablet:flex;--jc:flex-start"
+        >
+          <div 
+            class="gp-relative"
+            style="--w:100%;--w-tablet:100%;--w-mobile:100%"
+          >
+            
+      
+    
+            <div 
+              type="gp-feature-image-only"
+              product-id="{{product.id}}"
+              product-media="{{product.media.size}}"
+              class="gp-image-item gp-ft-image-item gp-group gp-z-0 gp-flex !gp-max-w-full !gp-w-full gp-relative gp-items-start gp-justify-center gp-overflow-hidden gp-featured-image-wrapper"
+              style="--h:auto;--h-tablet:auto;--h-mobile:auto;width:{{productImageWidth}}px"
+            >
+              <div 
+                class="gp-w-full  {% if featureMedia == null or featureMedia.media_type == 'image' %} {{ 'gp-h-0' }} {% else %} {{ 'gp-h-full !gp-pb-0' }} {% endif %} gp-relative" 
+                style="--pb: calc((1/1)*100%);--pb-tablet: calc((1/1)*100%);--pb-mobile: calc((1/1)*100%); {% if featureMedia.media_type == 'video' or featureMedia.media_type == 'external_video' %} {{ 'display: flex; align-items: center; justify-content: center' }} {% endif %}"
+              >
+                
+    {% case featureMedia.media_type %}
+      {% when 'image' %}
+        
+      
+    {% assign src = featureMedia.src %}
+    
+    
+  <img
+      id="{%- if featureMedia != null -%}
+              {{featureMedia.id}}
+            {%- endif -%}"
+      
+      draggable="false"
+      class="gp-w-full gp-h-full gp-absolute gp-top-0 gp-left-0 featured-image-only gp-cursor-pointer !gp-rounded-none gp-w-full gp-transition-opacity {{shouldHidden}}"
+      data-src="{{src | image_url}}" data-srcset="{%- if src != null -%}
+              {{src | img_url: '480x480'}} 480w, {{src | img_url: '768x768'}} 768w,{{src | img_url: '1024x1024'}} 1024w,{{src | img_url: '1440x1440'}} 1440w
+            {%- else -%}
+              {{ 'https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif' }}
+            {%- endif -%}" src="{{src | image_url}}" width="{{featureMedia.width}}" height="{{featureMedia.height}}" alt="{{featureMedia.alt}}" base-src="{{src | image_url}}"
+      quality-type={"desktop":"high"}
+      quality-percent={"desktop":100}
+      data-sizes="auto"
+      sizes="100vw"
+      style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover"
+    />
+  
+      
+      
+    
+      {% when 'external_video' %}
+        {% assign mediaSourceVideo = featureMedia | external_video_url %}
+        
+    <iframe
+      width="100%" height="100%"
+      class="feature-video gp-w-full gp-h-full gp-relative"
+      src="{{mediaSourceVideo}}"
+      controls="true"
+      allowfullscreen="true"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      frameborder="0"
+      autoplay="false"
+      alt="{{featureMedia.alt}}"
+      style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1"
+    >
+    </iframe>
+  
+      {% when 'video' %}
+        {% assign mediaSourceVideo = featureMedia.sources.last.url %}
+        
+  <gp-lite-html5-embed>
+    
+    <video
+      id="gp-video-undefined"
+      class=" gp-w-full lazy"
+      style="width:100%;max-height:100%"
+      controls
+      
+      
+      
+      title="{{featureMedia.alt}}"
+      preload="none"
+      data-src="{{mediaSourceVideo}}"
+      src=""
+      poster=""
+      playsinline
+    >
+    
+  </video>
+    <div
+      style="width:100%;max-height:100%"
+      class="gp-absolute gp-top-0 gp-left-0  gp-w-full gp-thumbnail-video gp-hidden"
+    >
+      <img
+        id="video-thumbnail"
+        src=""
+        class="gp-w-full gp-h-full gp-object-cover"
+        alt="Video Thumbnail"
+      ></img>
+      <button
+        type="button"
+        class="gp-absolute gp-left-1/2 gp-top-1/2 gp-flex gp-aspect-[56/32] gp-w-14 -gp-translate-x-1/2 -gp-translate-y-1/2 gp-items-center gp-justify-center gp-rounded gp-bg-black/80 gp-transition-colors hover:gp-bg-[#ef0800]"
+        aria-label="Play"
+      >
+        <svg class="gp-w-5 gp-text-white" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M5 5.274c0-1.707 1.826-2.792 3.325-1.977l12.362 6.726c1.566.853 1.566 3.101 0 3.953L8.325 20.702C6.826 21.518 5 20.432 5 18.726V5.274Z"
+          />
+        </svg>
+      </button>
+    </div>
+    </gp-lite-html5-embed>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-lite-html5-embed.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+    <script>
+        if(lazyLoadInstance){lazyLoadInstance.update()}else{var lazyLoadInstance = new LazyLoad()}
+    </script>
+  
+      {% when 'model' %}
+        
+    <model-viewer
+      class="gp-w-full gp-h-full model-viewer gp-z-[90]"
+      width="100%"
+      
+      
+      
+      
+      src="{% if featureMedia.sources.first.url contains '.glb' %}{{ featureMedia.sources.first.url }}{% else %}{{featureMedia.sources.last.url}}{% endif %}"
+      alt="{{featureMedia.preview_image.alt}}"
+      camera-controls="true"
+      poster="{{featureMedia.preview_image.src | product_img_url: '1024x1024'}}"
+      data-js-focus-visible=""
+      data-shopify-feature="1.12"
+      ar-status="not-presenting"
+      style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1">
+    </model-viewer>
+  
+      {% else %}
+        
+    
+  <img
+      
+      
+      draggable="false"
+      class="gp-w-full gp-h-full gp-absolute gp-top-0 gp-left-0 featured-image-only gp-cursor-pointer !gp-rounded-none"
+      data-src data-srcset="https://cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_large.gif" src width="2237" height="1678" alt="No Image"
+      quality-type={"desktop":"high"}
+      quality-percent={"desktop":100}
+      data-sizes="auto"
+      sizes="100vw"
+      style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover"
+    />
+  
+    {% endcase %}
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    {% endcapture %}
+    {% if product.media.size > 1 %}
+      
+      {{ featureImageOnlyOne }}
+    {% else %}
+      {{ featureImageOnlyOne }}
+    {% endif %}
+  
+         
+      </div>
+    </gp-product-images-v2>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-images-v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gxJtZ5vjsK ">
+      
+    {%- unless product -%}
+      <p>{{ "gempages.ProductTitle.product_not_found" | t }}</p>
+    {%- else -%}
+      
+        
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gxJtZ5vjsK">
+    <div
+      
+        class="gxJtZ5vjsK "
+        
+      >
+      <div  >
+        <h1
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-product-title gp-text-g-text-2"
+          style="--w:100%;--ts:none;--ta:center;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-2, text-2);--ff:var(--g-font-Montserrat, 'Montserrat'), var(--g-font-heading, heading);--weight:500;--size:15px;--size-tablet:13px;--size-mobile:14px;--lh:130%;--lh-tablet:130%;--lh-mobile:120%;word-break:break-word;overflow:hidden"
+        >{{ product.title }}</h1>
       </div>
     </div>
     </gp-text>
     
+      
+    {%- endunless -%}
+  
+      </div>
+    </div>
+    </div>
+   
+    
+                      {%- endform -%}
+                    </gp-product>
+      </div>
+    </div>
+  
+      {%- endif -%}           
+      {%- endfor -%}
+      {%- if count == 0 and 0 == 0 -%}
+          {% if 'Collection' == 'RelatedProduct' -%}
+              <div>{{ "gempages.ProductList.no_related_products" | t }}</div>
+            {% else %}
+              <div>{{ "gempages.ProductList.no_products_found" | t }}</div>
+          {%- endif -%}
+      {%- endif -%}
+    
+      
+          </div>
+          
+    <button
+      type="button"
+      aria-label='Carousel Next Arrow'
+      class="gp-z-1 product-list-carousel-gMQOfEUuJi gp-carousel-action-next gem-slider-next product-list-carousel-gMQOfEUuJi-{{section.id}} gp-carousel-arrow-gMQOfEUuJi gp-items-center gp-justify-center gp-overflow-hidden gp-shrink-0  gp-cursor-pointer gp-text-gray-500 !gp-flex !gp-relative  tablet:!gp-hidden mobile:!gp-hidden"
+      style="--left:initial;--top:;--right:initial;--bottom:initial;--left-tablet:initial;--top-tablet:;--right-tablet:initial;--bottom-tablet:initial;--left-mobile:initial;--top-mobile:;--right-mobile:initial;--bottom-mobile:initial;--d:flex;--d-tablet:none;--d-mobile:none;background-color:;--w:24px;--h:24px"
+      onClick={onClick}
+      
+    >
+      <div 
+  class="gp-flex gp-items-center gp-justify-center [&>svg]:gp-h-full [&>svg]:gp-w-full gp-rotate-0 tablet:gp-rotate-0 mobile:gp-rotate-0"
+  style="--c:#000000;--w:undefinedpx;--w-tablet:undefinedpx;--w-mobile:undefinedpx;--h:undefinedpx;--h-tablet:undefinedpx;--h-mobile:undefinedpx"
+  >
+    <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path></svg>
+    </div>
+      <style>
+    .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi {
+      
+    }
+    .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      pointer-events: none;
+      z-index: 10;
+      
+      
+    }
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi {
+        
+      }
+      .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi::before {
+        
+        
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi {
+        
+      }
+      .product-list-carousel-gMQOfEUuJi.gp-carousel-arrow-gMQOfEUuJi::before {
+        
+        
+      }
+    }
+  </style>
+    </button>
+  
+        </div>
+        <div
+    class="gp-items-center gp-justify-center gp-gap-2 gp-text-center gp-carousel-dot-container gp-carousel-dot-container-product-list-carousel-gMQOfEUuJi-{{section.id}} gp-static gp-flex-row gp-left-0 gp-right-0 tablet:gp-static tablet:gp-flex-row tablet:gp-left-0 tablet:gp-right-0 mobile:gp-static mobile:gp-flex-row mobile:gp-left-0 mobile:gp-right-0"
+    style="--bottom:16px;--mt-tablet:16px;--bottom-mobile:16px;--d:none;--d-tablet:flex;--d-mobile:none"
+ ></div>
+      </div>
+    </gp-carousel>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-carousel-v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+
+  
+    
+    
+    {%- endif -%}
+    
+{%- assign product = gpBkProduct -%}
+{%- assign products = gpBkProducts -%}
+
+      </div>
     </div>
     </div>
    
@@ -2656,7 +3197,7 @@
     "name": "PDP - TCF - Cross Sell",
     "tag": "section",
     "class": "gps-575296632438915658 gps gpsil",
-    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=575296632438915658)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggctUhQ68gO_text","label":"ggctUhQ68gO_text","default":"Long Run Co."},{"type":"html","id":"ggbqUqmk4_6_text","label":"ggbqUqmk4_6_text","default":"All Products"},{"type":"html","id":"gg37c4jo_ET_text","label":"gg37c4jo_ET_text","default":"Long Run Coffee"},{"type":"html","id":"gg6k8fldKu4_text","label":"gg6k8fldKu4_text","default":"Electrolyte Infused Coffee"},{"type":"html","id":"gginC9tkMJY_text","label":"gginC9tkMJY_text","default":"Long Run Powder"},{"type":"html","id":"gggLTzbA2R1_text","label":"gggLTzbA2R1_text","default":"Electrolyte Powder + Natural Caffeine"},{"type":"html","id":"ggltS59Bpaj_text","label":"ggltS59Bpaj_text","default":"Long Run Tea&nbsp;"},{"type":"html","id":"ggUN-0HMK7L_text","label":"ggUN-0HMK7L_text","default":"Coming soon"},{"type":"html","id":"ggeUnHJL0rV_text","label":"ggeUnHJL0rV_text","default":"Long Run Pouches&nbsp;"},{"type":"html","id":"ggdwS969w6E_text","label":"ggdwS969w6E_text","default":"Coming soon"},{"type":"html","id":"ggjF0OBZWKT_text","label":"ggjF0OBZWKT_text","default":"Long Run Gear"},{"type":"html","id":"ggm_xM7funq_text","label":"ggm_xM7funq_text","default":"For All Training Routines"},{"type":"html","id":"ggMmCDMz3xg_text","label":"ggMmCDMz3xg_text","default":"Long Run Bundles"},{"type":"html","id":"gg-3aGjg0bg_text","label":"gg-3aGjg0bg_text","default":"Bundle &amp; Save"}],
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=575296632438915658)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggctUhQ68gO_text","label":"ggctUhQ68gO_text","default":"Long Run Co."},{"type":"html","id":"ggbqUqmk4_6_text","label":"ggbqUqmk4_6_text","default":"All Products"},{"type":"html","id":"gg37c4jo_ET_text","label":"gg37c4jo_ET_text","default":"Long Run Coffee"},{"type":"html","id":"gg6k8fldKu4_text","label":"gg6k8fldKu4_text","default":"Electrolyte Infused Coffee"},{"type":"html","id":"gginC9tkMJY_text","label":"gginC9tkMJY_text","default":"Long Run Powder"},{"type":"html","id":"gggLTzbA2R1_text","label":"gggLTzbA2R1_text","default":"Electrolyte Powder + Natural Caffeine"},{"type":"html","id":"ggltS59Bpaj_text","label":"ggltS59Bpaj_text","default":"Long Run Tea&nbsp;"},{"type":"html","id":"gglzuR2WWY4_text","label":"gglzuR2WWY4_text","default":"Rest &amp; Recover Melatonin Tea"},{"type":"html","id":"ggeUnHJL0rV_text","label":"ggeUnHJL0rV_text","default":"Long Run Pouches&nbsp;"},{"type":"html","id":"ggdwS969w6E_text","label":"ggdwS969w6E_text","default":"Coming soon"},{"type":"html","id":"ggjF0OBZWKT_text","label":"ggjF0OBZWKT_text","default":"Long Run Gear"},{"type":"html","id":"ggm_xM7funq_text","label":"ggm_xM7funq_text","default":"For All Training Routines"},{"type":"html","id":"ggMmCDMz3xg_text","label":"ggMmCDMz3xg_text","default":"Long Run Bundles"},{"type":"html","id":"gg-3aGjg0bg_text","label":"gg-3aGjg0bg_text","default":"Bundle &amp; Save"}],
     "blocks": [{"type": "@app"}],
     "locales": {}
   }
