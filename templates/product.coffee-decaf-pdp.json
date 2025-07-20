@@ -395,6 +395,34 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "gp_global_section_576320491959092050_Jmr4RM": {
+      "type": "gp-global-section-576320491959092050",
+      "name": "PDP - TCF Decaf - Usage",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg5Z8nbBpzQ_text": "<p><strong>TYPE</strong></p>",
+        "ggfgUcMKLWF_text": "<p>Fresh Roasted Coffee</p><p> </p>",
+        "ggXWJTYfVxj_text": "<p><strong>Total electrolytes</strong></p>",
+        "ggyPGkbr2YQ_text": "<p>275mg / cup</p>",
+        "ggoXodAEMHI_text": "<p><strong>FORMULATION</strong></p>",
+        "gg7uw3ePuPV_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
+        "ggRilQsxymz_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
+        "ggm1Qq3TfKz_text": "<p>Decaffeinated - 0mg / cup</p>",
+        "ggMXBqXs2Ls_text": "<p><strong>USAGE</strong></p>",
+        "ggQFX1QNdp7_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>",
+        "gghNY0bTh7i_text": "<p><strong>TYPE</strong></p>",
+        "gg7VYXeaKak_text": "<p>Fresh Roasted Coffee</p>",
+        "ggrIjLrMpzD_text": "<p><strong>Total Electrolytes</strong></p>",
+        "ggUBypWjLht_text": "<p>275mg / cup</p>",
+        "gg3hajLLGTx_text": "<p><strong>FORMULATION</strong></p>",
+        "ggrET5rv7cS_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
+        "ggPb3KlUp6o_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
+        "ggSJDwgvrb7_text": "<p>Decaffeinated - 0mg / cup</p>",
+        "ggBReBSX9CI_text": "<p><strong>USAGE</strong></p>",
+        "ggnREhqXVS3_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>"
+      }
     }
   },
   "order": [
@@ -402,6 +430,7 @@
     "lrc-accordion",
     "gp_global_section_575295266186330962_iP9T8C",
     "gp_global_section_575269872192193362_QCcPhn",
+    "gp_global_section_576320491959092050_Jmr4RM",
     "gp_global_section_575266263094264394_C3cxVU",
     "gp_global_section_575284010452779858_6nafAr",
     "gp_global_section_575274983270384579_Qww3AF",
