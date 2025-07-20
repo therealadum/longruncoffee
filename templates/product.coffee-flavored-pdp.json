@@ -13,15 +13,6 @@
       "type": "lrc-base-product",
       "settings": {}
     },
-    "gp_global_section_575903728415015762_iUgTeC": {
-      "type": "gp-global-section-575903728415015762",
-      "name": "PDP - FCF - Other Product",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggD5F85euVC_text": "<p>MORE ELECTROLYTE COFFEE</p>"
-      }
-    },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
@@ -50,6 +41,15 @@
         "lrc_accordion_item_3"
       ],
       "settings": {}
+    },
+    "gp_global_section_575903728415015762_iUgTeC": {
+      "type": "gp-global-section-575903728415015762",
+      "name": "PDP - FCF - Other Product",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggD5F85euVC_text": "<p>MORE ELECTROLYTE COFFEE</p>"
+      }
     },
     "gp_global_section_575269872192193362_QCcPhn": {
       "type": "gp-global-section-575269872192193362",
@@ -319,52 +319,6 @@
         "cta_scroll_to_id": "lrc-klaviyo-form"
       }
     },
-    "gp_global_section_575294284735971914_gLFdN4": {
-      "type": "gp-global-section-575294284735971914",
-      "name": "PDP - TCF - FAQ",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggFHVGPwTCI_text": "Frequently Asked Questions",
-        "ggG3rvI-aVC_childItem_0": "<p>Does coffee dehydrate?</p>",
-        "ggG3rvI-aVC_childItem_1": "<p>When should I drink it?</p>",
-        "gg6mzv75lJy_text": "<p>This is a myth. If you consume caffeine regularly it does not dehydrate. The formulation and added electrolytes improve hydration.</p>",
-        "ggtkEd5MH56_text": "<p>Long Run is meant to be consumed daily, wherever it fits your routine best. Electrolytes + caffeine are beneficial both before or after training.</p>",
-        "ggpGEE5gRhw_childItem_0": "<p>How much caffeine is there?</p>",
-        "ggpGEE5gRhw_childItem_1": "<p>Is it good to drink on off days?</p>",
-        "ggiPKdHiUGL_text": "<p>Long Run has 95mg / 2 tbsp of coffee (one brewed cup).</p>",
-        "ggchS8vP2VQ_text": "<p>Yes - electrolytes are good both on days you're running, as well as rest days. </p>",
-        "gg7F8Z8F2zZ_childItem_0": "<p>Will it hurt my stomach?</p>",
-        "gg7F8Z8F2zZ_childItem_1": "<p>Is it gluten free?</p>",
-        "gg-twdHnZAw_text": "<p>Long Run is specifically formulated to be easy on your stomach. This is why many athletes choose us.</p>",
-        "gge7tAeR5Zx_text": "<p>Yes. Long Run is gluten free, plant-based, and tested for mold / toxins.</p>",
-        "ggOUu6lQ_KZ_childItem_0": "<p>What are the benefits?</p>",
-        "ggOUu6lQ_KZ_childItem_1": "<p>Does it taste salty?</p>",
-        "ggOUu6lQ_KZ_childItem_2": "<p>Is this instant coffee?</p>",
-        "ggOUu6lQ_KZ_childItem_3": "<p>When should I consume it?</p>",
-        "ggOUu6lQ_KZ_childItem_4": "<p>Can I have more than one cup?</p>",
-        "ggOUu6lQ_KZ_childItem_5": "<p>Does this have any sweeteners?</p>",
-        "ggAhNXU0hUK_text": "<p>Long Run is coffee with electrolytes. It provides a stronger energy boost compared to regular coffee, and has hydration support. It's caffeine + electrolytes.</p>",
-        "gge8jcu8kp3_text": "<p>No! We add electrolytes to increase the product's effectiveness, but we optimize for taste. You will not taste salt.</p>",
-        "ggmMivshhzX_text": "<p>No. This is an actual, premium coffee. It can be brewed with any traditional method (drip, pour over, french press, espresso machine, etc.).</p>",
-        "ggV3B6AwwQw_text": "<p>Consume daily, wherever it fits your routine best. Many consume before their run for a pre-run energy boost, while many consume post-run to help get them through the morning.</p>",
-        "ggZFepHXgiT_text": "<p>Yes - the average Long Runner consumes 2 cups daily. We recommend no more than 3-4 cups per day to maintain ideal hydration and energy levels.</p>",
-        "gg6JjLkTEPr_text": "<p>Long Run Coffee does not have sweeteners. Flavored coffees use natural oil extracts to create the products flavor profile. Traditional coffees do not have any oil extracts.</p>",
-        "ggqaZPC4ZQQ_text": "Frequently Asked Questions",
-        "gg7kcT9iKQB_childItem_0": "<p>Does coffee dehydrate?</p>",
-        "gg7kcT9iKQB_childItem_1": "<p>When should I drink it?</p>",
-        "gg7kcT9iKQB_childItem_2": "<p>How much caffeine is there?</p>",
-        "gg7kcT9iKQB_childItem_3": "<p>Is it good to drink on off days?</p>",
-        "gg7kcT9iKQB_childItem_4": "<p>Will it hurt my stomach?</p>",
-        "gg7kcT9iKQB_childItem_5": "<p>Is it gluten free?</p>",
-        "ggVkD71WY2s_text": "<p>This is a myth. If you consume caffeine regularly it does not dehydrate. The formulation and added electrolytes improve hydration.</p>",
-        "ggOO9QHKDgz_text": "<p>Long Run is meant to be consumed daily, wherever it fits your routine best. Electrolytes + caffeine are beneficial both before or after training.</p>",
-        "ggFk0h3Vkrv_text": "<p>Long Run has 95mg / 2 tbsp of coffee (one brewed cup).</p>",
-        "ggV-ZqVrcOu_text": "<p>Yes - electrolytes are good both on days you're running, as well as rest days. </p>",
-        "ggK59trRama_text": "<p>Long Run is specifically formulated to be easy on your stomach. This is why many athletes choose us.</p>",
-        "ggKzSSMzp_v_text": "<p>Yes. Long Run is gluten free, plant-based, and tested for mold / toxins.</p>"
-      }
-    },
     "gp_global_section_575296632438915658_p9rCbQ": {
       "type": "gp-global-section-575296632438915658",
       "name": "PDP - TCF - Cross Sell",
@@ -401,6 +355,45 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "gp_global_section_575294284735971914_pYYbJr": {
+      "type": "gp-global-section-575294284735971914",
+      "name": "PDP - TCF - FAQ",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggFHVGPwTCI_text": "Frequently Asked Questions",
+        "ggG3rvI-aVC_childItem_0": "<p>Does coffee dehydrate?</p>",
+        "ggG3rvI-aVC_childItem_1": "<p>When should I drink it?</p>",
+        "ggG3rvI-aVC_childItem_2": "<p>What type of beans are used?</p>",
+        "gg6mzv75lJy_text": "<p>This is a myth. If you consume caffeine regularly it does not dehydrate. The formulation and added electrolytes improve hydration.</p>",
+        "ggtkEd5MH56_text": "<p>Long Run Coffee is meant to be consumed daily, wherever it fits your routine best. Electrolytes + caffeine are beneficial both before or after training.</p>",
+        "ggX8GcWopRq_text": "<p>All of our electrolyte infused coffee uses arabica beans sourced from countries in South America and Africa, depending on the roast. Our beans are organic, FDA approved, and have no GMOs.</p>",
+        "ggpGEE5gRhw_childItem_0": "<p>How much caffeine is there?</p>",
+        "ggpGEE5gRhw_childItem_1": "<p>Is it good to drink on off days?</p>",
+        "ggpGEE5gRhw_childItem_2": "<p>How is the coffee made?</p>",
+        "ggiPKdHiUGL_text": "<p>Long Run Coffee has roughly 95mg per 2 tbsp of coffee (one brewed cup), except for our decaf option which has no caffeine.</p>",
+        "ggchS8vP2VQ_text": "<p>Yes - electrolytes are good both on days you're running, as well as rest days. </p>",
+        "ggTPtWKRnaY_text": "<p>We use a proprietary process, that is both unique and effective.</p><p> </p><p>As coffee beans roast, they release natural oils. Immediately after roasting, we infuse our blend of electrolytes directly into these oils.</p><p> </p><p>The beans are then cooled, and allowed to set. This binds the electrolytes to the bean's exterior.</p><p> </p><p>This all-natural electrolyte + caffeine combo provides you with reduced fatigue, sustained endurance, better muscle function, and overall enhanced performance and recovery.</p><p> </p><p>In addition, the added electrolytes bring down the acidity of the coffee which makes it stomach- friendly before your workout.</p>",
+        "gg7F8Z8F2zZ_childItem_0": "<p>Will it hurt my stomach?</p>",
+        "gg7F8Z8F2zZ_childItem_1": "<p>Is it gluten free?</p>",
+        "gg7F8Z8F2zZ_childItem_2": "<p>Are there any allergens? </p>",
+        "gg-twdHnZAw_text": "<p>Long Run Coffee is specifically formulated to be easy on your stomach. This is why many athletes choose us.</p>",
+        "gge7tAeR5Zx_text": "<p>Yes. Long Run Coffee is gluten free, plant-based, and tested for mold / toxins. There are no calories and no sugar.</p>",
+        "ggw5eZqQlgw_text": "<p>No. All of our electrolyte coffees use organic coffee, essential electrolytes, and natural flavor oils (if buying a flavored roast). That's it! </p>",
+        "ggOUu6lQ_KZ_childItem_0": "<p>What are the benefits?</p>",
+        "ggOUu6lQ_KZ_childItem_1": "<p>Does it taste salty?</p>",
+        "ggOUu6lQ_KZ_childItem_2": "<p>Is this instant coffee?</p>",
+        "ggOUu6lQ_KZ_childItem_3": "<p>When should I consume it?</p>",
+        "ggOUu6lQ_KZ_childItem_4": "<p>Can I have more than one cup?</p>",
+        "ggOUu6lQ_KZ_childItem_5": "<p>Does this have any sweeteners?</p>",
+        "ggAhNXU0hUK_text": "<p>Long Run is coffee with electrolytes. It provides a stronger energy boost compared to regular coffee, and has hydration support. It's caffeine + electrolytes.</p>",
+        "gge8jcu8kp3_text": "<p>No! We add electrolytes to increase the product's effectiveness, but we optimize for taste. You will not taste salt.</p>",
+        "ggmMivshhzX_text": "<p>No. This is an actual, premium coffee. It can be brewed with any traditional method (drip, pour over, french press, espresso machine, etc.).</p>",
+        "ggV3B6AwwQw_text": "<p>Consume daily, wherever it fits your routine best. Many consume before their run for a pre-run energy boost, while many consume post-run to help get them through the morning.</p>",
+        "ggZFepHXgiT_text": "<p>Yes - the average Long Runner consumes 2 cups daily. We recommend no more than 3-4 cups per day to maintain ideal hydration and energy levels.</p>",
+        "gg6JjLkTEPr_text": "<p>Long Run Coffee does not have sweeteners. Flavored coffees use natural oil extracts to create the products flavor profile. Traditional coffees do not have any oil extracts.</p>"
+      }
     }
   },
   "order": [
@@ -421,7 +414,7 @@
     "gp_global_section_575288905809527634_FYyFW3",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
-    "gp_global_section_575294284735971914_gLFdN4",
+    "gp_global_section_575294284735971914_pYYbJr",
     "gp_global_section_575296632438915658_p9rCbQ",
     "17093999844598d023"
   ]
