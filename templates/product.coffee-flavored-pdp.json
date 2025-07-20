@@ -19,7 +19,7 @@
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggD5F85euVC_text": "<p>Others in This Collection:</p>"
+        "ggD5F85euVC_text": "<p>MORE ELECTROLYTE COFFEE</p>"
       }
     },
     "lrc-accordion": {
@@ -405,8 +405,8 @@
   },
   "order": [
     "lrc-base-product",
-    "gp_global_section_575903728415015762_iUgTeC",
     "lrc-accordion",
+    "gp_global_section_575903728415015762_iUgTeC",
     "gp_global_section_575269872192193362_QCcPhn",
     "gp_global_section_575273457869128530_hNwEmz",
     "gp_global_section_575266263094264394_C3cxVU",

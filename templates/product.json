@@ -13,15 +13,6 @@
       "type": "lrc-base-product",
       "settings": {}
     },
-    "gp_global_section_575295266186330962_iP9T8C": {
-      "type": "gp-global-section-575295266186330962",
-      "name": "PDP - TCF - Other Product",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggwj1QSOLAo_text": "<p>MORE ELECTROLYTE COFFEE</p>"
-      }
-    },
     "lrc-accordion": {
       "type": "lrc-accordion",
       "blocks": {
@@ -50,6 +41,15 @@
         "lrc_accordion_item_3"
       ],
       "settings": {}
+    },
+    "gp_global_section_575295266186330962_iP9T8C": {
+      "type": "gp-global-section-575295266186330962",
+      "name": "PDP - TCF - Other Product",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggwj1QSOLAo_text": "<p>MORE ELECTROLYTE COFFEE</p>"
+      }
     },
     "gp_global_section_575269872192193362_QCcPhn": {
       "type": "gp-global-section-575269872192193362",
@@ -434,8 +434,8 @@
   },
   "order": [
     "lrc-base-product",
-    "gp_global_section_575295266186330962_iP9T8C",
     "lrc-accordion",
+    "gp_global_section_575295266186330962_iP9T8C",
     "gp_global_section_575269872192193362_QCcPhn",
     "gp_global_section_575273457869128530_hNwEmz",
     "gp_global_section_575266263094264394_C3cxVU",
