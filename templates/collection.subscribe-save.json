@@ -9,22 +9,22 @@
  */
 {
   "sections": {
-    "gp_global_section_572237986394014592_LUbBJj": {
-      "type": "gp-global-section-572237986394014592",
-      "disabled": true,
-      "name": "Banner - Stroop",
+    "gp_global_section_576343121202250271_XkDt7b": {
+      "type": "gp-global-section-576343121202250271",
+      "name": "Banner - Tea - Pre",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggIR2ppG4iH_dayLabel": "Days",
-        "ggIR2ppG4iH_hourLabel": "Hours",
-        "ggIR2ppG4iH_minuteLabel": "Minutes",
-        "ggIR2ppG4iH_secondLabel": "Seconds",
-        "ggIR2ppG4iH_weekLabel": "Weeks"
+        "ggvNY0Mayi6_dayLabel": "Days",
+        "ggvNY0Mayi6_hourLabel": "Hours",
+        "ggvNY0Mayi6_minuteLabel": "Minutes",
+        "ggvNY0Mayi6_secondLabel": "Seconds",
+        "ggvNY0Mayi6_weekLabel": "Weeks"
       }
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "custom_css": [
         "h1 {font-size: 35px;}"
       ],
@@ -56,7 +56,7 @@
     }
   },
   "order": [
-    "gp_global_section_572237986394014592_LUbBJj",
+    "gp_global_section_576343121202250271_XkDt7b",
     "banner",
     "product-grid"
   ]
