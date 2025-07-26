@@ -9,17 +9,17 @@
  */
 {
   "sections": {
-    "gp_global_section_576343121202250271_XkDt7b": {
-      "type": "gp-global-section-576343121202250271",
-      "name": "Banner - Tea - Pre",
+    "gp_global_section_577161261100303251_9NnngB": {
+      "type": "gp-global-section-577161261100303251",
+      "name": "Banner - Tea - Live",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggvNY0Mayi6_dayLabel": "Days",
-        "ggvNY0Mayi6_hourLabel": "Hours",
-        "ggvNY0Mayi6_minuteLabel": "Minutes",
-        "ggvNY0Mayi6_secondLabel": "Seconds",
-        "ggvNY0Mayi6_weekLabel": "Weeks"
+        "ggzSph4oUzd_dayLabel": "Days",
+        "ggzSph4oUzd_hourLabel": "Hours",
+        "ggzSph4oUzd_minuteLabel": "Minutes",
+        "ggzSph4oUzd_secondLabel": "Seconds",
+        "ggzSph4oUzd_weekLabel": "Weeks"
       }
     },
     "banner": {
@@ -56,7 +56,7 @@
     }
   },
   "order": [
-    "gp_global_section_576343121202250271_XkDt7b",
+    "gp_global_section_577161261100303251_9NnngB",
     "banner",
     "product-grid"
   ]
