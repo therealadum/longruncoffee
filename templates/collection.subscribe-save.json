@@ -11,6 +11,7 @@
   "sections": {
     "gp_global_section_577161261100303251_9NnngB": {
       "type": "gp-global-section-577161261100303251",
+      "disabled": true,
       "name": "Banner - Tea - Live",
       "settings": {
         "section_preload": "off_lazy_script",
