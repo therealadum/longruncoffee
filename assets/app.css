@@ -6224,7 +6224,4 @@ h2#spr-header-title {
   white-space: pre-wrap !important;
 }
 
-.\[\&_p\]\:after\:content-\[\'\\A\'\] p::after {
-  --tw-content: '\A' !important;
-  content: var(--tw-content) !important;
-}
+
