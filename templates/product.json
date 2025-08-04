@@ -205,6 +205,7 @@
     },
     "gp_global_section_574894265742656356_Dppfqy": {
       "type": "gp-global-section-574894265742656356",
+      "disabled": true,
       "name": "PDP - TEA - Videos",
       "settings": {
         "section_preload": "off_lazy_script",
