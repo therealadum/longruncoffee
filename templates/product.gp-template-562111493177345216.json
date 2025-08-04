@@ -8,140 +8,17 @@
  * ------------------------------------------------------------
  */
 {
-  "layout": "theme.gempages.footer",
   "sections": {
     "gp_section_562111520406766784": {
-      "type": "gp-section-562111520406766784",
       "settings": {
-        "section_preload": "true",
-        "checksum": "2d4d87d2b4d743e7ba4510479feec4357ddd49752468b0ba455f046c4af7a9b5_1_1"
-      }
-    },
-    "lrc_base_product_xrU6Jx": {
-      "type": "lrc-base-product",
-      "settings": {}
-    },
-    "lrc_accordion_dNeATj": {
-      "type": "lrc-accordion",
-      "blocks": {
-        "product_description_4VqAeb": {
-          "type": "product-description",
-          "settings": {}
-        },
-        "lrc_accordion_image_AzmGyD": {
-          "type": "lrc-accordion-image",
-          "settings": {
-            "title": "Ingredients",
-            "image": "shopify://shop_images/Supp_w_CalCarb_5.png"
-          }
-        },
-        "lrc_accordion_text_PH4Chm": {
-          "type": "lrc-accordion-text",
-          "settings": {
-            "title": "How To Use",
-            "body": "Long Run Coffee is actual coffee (not a coffee alternative) and works with any brewing method! LRC is meant to be consumed daily, wherever it fits your routine best."
-          }
-        }
+        "checksum": "99aa1405e987f8ff3f5281d51abd25aea11a904dd76e1904a8be26d091cb5d72_1_1_1_0_",
+        "section_preload": "true"
       },
-      "block_order": [
-        "product_description_4VqAeb",
-        "lrc_accordion_image_AzmGyD",
-        "lrc_accordion_text_PH4Chm"
-      ],
-      "settings": {}
-    },
-    "lrc_coffee_benefits_short_qHtU7R": {
-      "type": "lrc-coffee-benefits-short",
-      "settings": {
-        "show_cta": false,
-        "cta_text": "Start for $3",
-        "cta_scroll_to_id": "lrc-klaviyo-form"
-      }
-    },
-    "lrc_coffee_benefits_R4JaCb": {
-      "type": "lrc-coffee-benefits",
-      "settings": {
-        "show_cta": false,
-        "cta_text": "Start for $3",
-        "cta_scroll_to_id": "lrc-klaviyo-form"
-      }
-    },
-    "lrc_reviews_tX9QpN": {
-      "type": "lrc-reviews",
-      "settings": {}
-    },
-    "lrc_review_summary_gPVmw3": {
-      "type": "lrc-review-summary",
-      "blocks": {
-        "image_NypNjG": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/hoka.png"
-          }
-        },
-        "image_Vd4PHM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/runners-world-logo-vector-removebg-preview.png"
-          }
-        },
-        "image_jULXx3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/believe-in-the-run.png"
-          }
-        },
-        "image_3c9eqR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/bigger-than-the-trail.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_NypNjG",
-        "image_Vd4PHM",
-        "image_jULXx3",
-        "image_3c9eqR"
-      ],
-      "settings": {
-        "title": "Trusted By Runners",
-        "review-text": "1.8k+ Reviews",
-        "background-color": "tan"
-      }
-    },
-    "gp_global_section_538796875008967812_adNWQq": {
-      "type": "gp-global-section-538796875008967812",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": ""
-      }
-    },
-    "174458199611f16e22": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_7egDhf": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_7egDhf"
-      ],
-      "settings": {
-        "include_margins": true
-      }
+      "type": "gp-section-562111520406766784"
     }
   },
   "order": [
-    "gp_section_562111520406766784",
-    "lrc_base_product_xrU6Jx",
-    "lrc_accordion_dNeATj",
-    "lrc_coffee_benefits_short_qHtU7R",
-    "lrc_coffee_benefits_R4JaCb",
-    "lrc_reviews_tX9QpN",
-    "lrc_review_summary_gPVmw3",
-    "gp_global_section_538796875008967812_adNWQq",
-    "174458199611f16e22"
-  ]
+    "gp_section_562111520406766784"
+  ],
+  "layout": "theme.gempages.footer"
 }
