@@ -44,7 +44,6 @@
     },
     "gp_global_section_575295266186330962_iP9T8C": {
       "type": "gp-global-section-575295266186330962",
-      "disabled": true,
       "name": "PDP - TCF - Other Product",
       "settings": {
         "section_preload": "off_lazy_script",
