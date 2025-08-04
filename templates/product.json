@@ -115,6 +115,7 @@
     },
     "gp_global_section_575284010452779858_6nafAr": {
       "type": "gp-global-section-575284010452779858",
+      "disabled": true,
       "name": "PDP - TCF - Ingr Mobile",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -132,6 +133,7 @@
     },
     "gp_global_section_575274983270384579_Qww3AF": {
       "type": "gp-global-section-575274983270384579",
+      "disabled": true,
       "name": "PDP - TCF - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
