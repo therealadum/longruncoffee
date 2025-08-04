@@ -161,7 +161,6 @@
     },
     "gp_global_section_565398054547489777_tjax9y": {
       "type": "gp-global-section-565398054547489777",
-      "disabled": true,
       "name": "PDP - TCF - Review Carous",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -206,7 +205,6 @@
     },
     "gp_global_section_574894265742656356_Dppfqy": {
       "type": "gp-global-section-574894265742656356",
-      "disabled": true,
       "name": "PDP - TEA - Videos",
       "settings": {
         "section_preload": "off_lazy_script",
