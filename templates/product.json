@@ -99,7 +99,6 @@
     },
     "gp_global_section_575266263094264394_C3cxVU": {
       "type": "gp-global-section-575266263094264394",
-      "disabled": true,
       "name": "PDP - TCF - Badges",
       "settings": {
         "section_preload": "off_lazy_script",
