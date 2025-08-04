@@ -413,6 +413,7 @@
     },
     "featured_collection_gax4K9": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "Electrolyte Coffee",
