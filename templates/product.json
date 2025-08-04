@@ -216,7 +216,6 @@
     },
     "gp_global_section_575284568160993866_Rwc3Px": {
       "type": "gp-global-section-575284568160993866",
-      "disabled": true,
       "name": "PDP - TCF - Progress Bar",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -241,7 +240,6 @@
     },
     "gp_global_section_575285156688953887_xaxTzh": {
       "type": "gp-global-section-575285156688953887",
-      "disabled": true,
       "name": "PDP - TCF - Subscription",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -264,7 +262,6 @@
     },
     "gp_global_section_575286887443333970_GytpJc": {
       "type": "gp-global-section-575286887443333970",
-      "disabled": true,
       "name": "PDP - TCF - US vs. Them",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -287,7 +284,6 @@
     },
     "gp_global_section_575288905809527634_FYyFW3": {
       "type": "gp-global-section-575288905809527634",
-      "disabled": true,
       "name": "PDP - TCF - Graph",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -308,7 +304,6 @@
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
-      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
@@ -317,7 +312,6 @@
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
-      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
@@ -326,7 +320,6 @@
     },
     "gp_global_section_575294284735971914_fJyjxt": {
       "type": "gp-global-section-575294284735971914",
-      "disabled": true,
       "name": "PDP - TCF - FAQ",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -366,7 +359,6 @@
     },
     "gp_global_section_575296632438915658_CgyWxY": {
       "type": "gp-global-section-575296632438915658",
-      "disabled": true,
       "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -398,7 +390,6 @@
       "block_order": [
         "judge_me_reviews_review_widget_iFiJeK"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }
