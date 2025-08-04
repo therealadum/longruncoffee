@@ -53,7 +53,6 @@
     },
     "gp_global_section_575269872192193362_QCcPhn": {
       "type": "gp-global-section-575269872192193362",
-      "disabled": true,
       "name": "PDP - TCF - Benefits",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -72,7 +71,6 @@
     },
     "gp_global_section_575273457869128530_hNwEmz": {
       "type": "gp-global-section-575273457869128530",
-      "disabled": true,
       "name": "PDP - TCF - Usage",
       "settings": {
         "section_preload": "off_lazy_script",
