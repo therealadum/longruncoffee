@@ -205,6 +205,7 @@
     },
     "gp_global_section_574894265742656356_Dppfqy": {
       "type": "gp-global-section-574894265742656356",
+      "disabled": true,
       "name": "PDP - TEA - Videos",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -342,7 +343,6 @@
     },
     "gp_global_section_575296632438915658_CgyWxY": {
       "type": "gp-global-section-575296632438915658",
-      "disabled": true,
       "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",
