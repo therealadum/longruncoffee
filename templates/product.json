@@ -132,7 +132,6 @@
     },
     "gp_global_section_575274983270384579_Qww3AF": {
       "type": "gp-global-section-575274983270384579",
-      "disabled": true,
       "name": "PDP - TCF - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -150,7 +149,6 @@
     },
     "gp_global_section_574890795677516575_Ftxc7j": {
       "type": "gp-global-section-574890795677516575",
-      "disabled": true,
       "name": "PDP - TEA - Trust",
       "settings": {
         "section_preload": "off_lazy_script",
