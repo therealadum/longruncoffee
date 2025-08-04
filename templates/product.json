@@ -161,6 +161,7 @@
     },
     "gp_global_section_565398054547489777_tjax9y": {
       "type": "gp-global-section-565398054547489777",
+      "disabled": true,
       "name": "PDP - TCF - Review Carous",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -216,6 +217,7 @@
     },
     "gp_global_section_575284568160993866_Rwc3Px": {
       "type": "gp-global-section-575284568160993866",
+      "disabled": true,
       "name": "PDP - TCF - Progress Bar",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -240,6 +242,7 @@
     },
     "gp_global_section_575285156688953887_xaxTzh": {
       "type": "gp-global-section-575285156688953887",
+      "disabled": true,
       "name": "PDP - TCF - Subscription",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -262,6 +265,7 @@
     },
     "gp_global_section_575286887443333970_GytpJc": {
       "type": "gp-global-section-575286887443333970",
+      "disabled": true,
       "name": "PDP - TCF - US vs. Them",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -284,6 +288,7 @@
     },
     "gp_global_section_575288905809527634_FYyFW3": {
       "type": "gp-global-section-575288905809527634",
+      "disabled": true,
       "name": "PDP - TCF - Graph",
       "settings": {
         "section_preload": "off_lazy_script",
