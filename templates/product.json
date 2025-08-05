@@ -55,7 +55,7 @@
       "type": "gp-global-section-575269872192193362",
       "name": "PDP - TCF - Benefits",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggcz4syU5_o_childItem_0": "<p><strong>Reduce morning fatigue</strong></p>",
         "ggcz4syU5_o_childItem_1": "<p><strong>Hydration + Energy</strong></p>",
@@ -73,7 +73,7 @@
       "type": "gp-global-section-575273457869128530",
       "name": "PDP - TCF - Usage",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "gg0_tyAiDUV_text": "<p><strong>TYPE</strong></p>",
         "ggnIX1bSk-3_text": "<p>Fresh Roasted Coffee</p><p> </p>",
@@ -101,7 +101,7 @@
       "type": "gp-global-section-575266263094264394",
       "name": "PDP - TCF - Badges",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggexFCbiteo_text": "Boosts Endurance",
         "ggERzl1YNpr_text": "Hydrating Energy",
@@ -134,7 +134,7 @@
       "type": "gp-global-section-575274983270384579",
       "name": "PDP - TCF - Ingr Desktop",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggSzoGYSk7B_text": "Science-Backed Ingredients",
         "ggeqIP5NJKY_childItem_0": "<p>Sodium</p>",
@@ -151,7 +151,7 @@
       "type": "gp-global-section-575294284735971914",
       "name": "PDP - TCF - FAQ",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggFHVGPwTCI_text": "Frequently Asked Questions",
         "ggG3rvI-aVC_childItem_0": "<p>Does coffee dehydrate?</p>",
@@ -190,7 +190,7 @@
       "type": "gp-global-section-574890795677516575",
       "name": "PDP - TEA - Trust",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggGrnoTlzuQ_text": "100M+",
         "ggjlbN9Tdvy_text": "Miles Fueled by Long Run Co.",
@@ -258,7 +258,7 @@
       "type": "gp-global-section-575284568160993866",
       "name": "PDP - TCF - Progress Bar",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggQnKPhh_QI_text": "Formulated to Change Your Training",
         "gg6rohExL4t_text": "Subscribe And Start Feeling The Benefits",
@@ -282,7 +282,7 @@
       "type": "gp-global-section-575285156688953887",
       "name": "PDP - TCF - Subscription",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggIWLArIGuZ_text": "Make it part of your Routine",
         "ggKl4CbIcIn_text": "Subscribers get more than just great coffee.",
@@ -304,7 +304,7 @@
       "type": "gp-global-section-575286887443333970",
       "name": "PDP - TCF - US vs. Them",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggaboT0xorq_text": "Long Run Co. vs. Your Old Routine",
         "gg-prd5XQON_text": "Rest &amp; Recover",
@@ -326,7 +326,7 @@
       "type": "gp-global-section-575288905809527634",
       "name": "PDP - TCF - Graph",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggs1mveBL6Z_text": "Long Run Stats",
         "gg7ULgUKiVC_text": "Data on endurance, fatigue, and power with electrolytes + caffeine.",
@@ -346,7 +346,7 @@
       "type": "gp-global-section-575296632438915658",
       "name": "PDP - TCF - Cross Sell",
       "settings": {
-        "section_preload": "false",
+        "section_preload": "off_lazy_script",
         "checksum": "",
         "ggctUhQ68gO_text": "Long Run Co.",
         "ggbqUqmk4_6_text": "All Products",
