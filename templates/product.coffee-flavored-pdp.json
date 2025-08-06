@@ -242,6 +242,7 @@
     },
     "gp_global_section_575285156688953887_xaxTzh": {
       "type": "gp-global-section-575285156688953887",
+      "disabled": true,
       "name": "PDP - TCF - Subscription",
       "settings": {
         "section_preload": "off_lazy_script",

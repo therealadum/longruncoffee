@@ -238,6 +238,7 @@
     },
     "gp_global_section_575132587790435557_JfVxLd": {
       "type": "gp-global-section-575132587790435557",
+      "disabled": true,
       "name": "PDP - TEA - Subscription",
       "settings": {
         "section_preload": "off_lazy_script",
