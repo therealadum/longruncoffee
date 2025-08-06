@@ -132,6 +132,7 @@
     },
     "gp_global_section_575274983270384579_Qww3AF": {
       "type": "gp-global-section-575274983270384579",
+      "disabled": true,
       "name": "PDP - TCF - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -161,6 +162,7 @@
     },
     "gp_global_section_565398054547489777_tjax9y": {
       "type": "gp-global-section-565398054547489777",
+      "disabled": true,
       "name": "PDP - TCF - Review Carous",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -205,6 +207,7 @@
     },
     "gp_global_section_574894265742656356_Dppfqy": {
       "type": "gp-global-section-574894265742656356",
+      "disabled": true,
       "name": "PDP - TEA - Videos",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -283,6 +286,7 @@
     },
     "gp_global_section_575288905809527634_FYyFW3": {
       "type": "gp-global-section-575288905809527634",
+      "disabled": true,
       "name": "PDP - TCF - Graph",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -317,43 +321,6 @@
         "show_cta": false,
         "cta_text": "Start for $3",
         "cta_scroll_to_id": "lrc-klaviyo-form"
-      }
-    },
-    "gp_global_section_575296632438915658_p9rCbQ": {
-      "type": "gp-global-section-575296632438915658",
-      "name": "PDP - TCF - Cross Sell",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggctUhQ68gO_text": "Long Run Co.",
-        "ggbqUqmk4_6_text": "All Products",
-        "gg37c4jo_ET_text": "Long Run Coffee",
-        "gg6k8fldKu4_text": "Electrolyte Infused Coffee",
-        "gginC9tkMJY_text": "Long Run Powder",
-        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
-        "ggltS59Bpaj_text": "Long Run Tea ",
-        "ggUN-0HMK7L_text": "Coming soon",
-        "ggeUnHJL0rV_text": "Long Run Pouches ",
-        "ggdwS969w6E_text": "Coming soon",
-        "ggjF0OBZWKT_text": "Long Run Gear",
-        "ggm_xM7funq_text": "For All Training Routines",
-        "ggMmCDMz3xg_text": "Long Run Bundles",
-        "gg-3aGjg0bg_text": "Bundle &amp; Save"
-      }
-    },
-    "17093999844598d023": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_iFiJeK": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_iFiJeK"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "gp_global_section_575294284735971914_pYYbJr": {
@@ -393,6 +360,43 @@
         "ggV3B6AwwQw_text": "<p>Consume daily, wherever it fits your routine best. Many consume before their run for a pre-run energy boost, while many consume post-run to help get them through the morning.</p>",
         "ggZFepHXgiT_text": "<p>Yes - the average Long Runner consumes 2 cups daily. We recommend no more than 3-4 cups per day to maintain ideal hydration and energy levels.</p>",
         "gg6JjLkTEPr_text": "<p>Long Run Coffee does not have sweeteners. Flavored coffees use natural oil extracts to create the products flavor profile. Traditional coffees do not have any oil extracts.</p>"
+      }
+    },
+    "gp_global_section_575296632438915658_p9rCbQ": {
+      "type": "gp-global-section-575296632438915658",
+      "name": "PDP - TCF - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggctUhQ68gO_text": "Long Run Co.",
+        "ggbqUqmk4_6_text": "All Products",
+        "gg37c4jo_ET_text": "Long Run Coffee",
+        "gg6k8fldKu4_text": "Electrolyte Infused Coffee",
+        "gginC9tkMJY_text": "Long Run Powder",
+        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
+        "ggltS59Bpaj_text": "Long Run Tea ",
+        "gglzuR2WWY4_text": "Rest &amp; Recover Melatonin Tea",
+        "ggeUnHJL0rV_text": "Long Run Pouches ",
+        "ggdwS969w6E_text": "Coming soon",
+        "ggjF0OBZWKT_text": "Long Run Gear",
+        "ggm_xM7funq_text": "For All Training Routines",
+        "ggMmCDMz3xg_text": "Long Run Bundles",
+        "gg-3aGjg0bg_text": "Bundle &amp; Save"
+      }
+    },
+    "17093999844598d023": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_iFiJeK": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_iFiJeK"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
