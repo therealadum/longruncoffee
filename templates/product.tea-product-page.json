@@ -130,6 +130,7 @@
     },
     "gp_global_section_574889549818234085_cpgDRT": {
       "type": "gp-global-section-574889549818234085",
+      "disabled": true,
       "name": "PDP - TEA - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -157,6 +158,7 @@
     },
     "gp_global_section_572137576702411648_aGQAMG": {
       "type": "gp-global-section-572137576702411648",
+      "disabled": true,
       "name": "PDP - TEA - Review Carous",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -201,6 +203,7 @@
     },
     "gp_global_section_574894265742656356_4Bbirc": {
       "type": "gp-global-section-574894265742656356",
+      "disabled": true,
       "name": "PDP - TEA - Videos",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -279,6 +282,7 @@
     },
     "gp_global_section_575121399417406693_aYkVgE": {
       "type": "gp-global-section-575121399417406693",
+      "disabled": true,
       "name": "PDP - TEA - Graph",
       "settings": {
         "section_preload": "off_lazy_script",
