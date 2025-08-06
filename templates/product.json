@@ -281,6 +281,7 @@
     },
     "gp_global_section_575285156688953887_xaxTzh": {
       "type": "gp-global-section-575285156688953887",
+      "disabled": true,
       "name": "PDP - TCF - Subscription",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -391,11 +392,11 @@
     "gp_global_section_575266263094264394_C3cxVU",
     "gp_global_section_575284010452779858_6nafAr",
     "gp_global_section_575274983270384579_Qww3AF",
-    "gp_global_section_575294284735971914_fJyjxt",
     "gp_global_section_574890795677516575_Ftxc7j",
+    "gp_global_section_575284568160993866_Rwc3Px",
+    "gp_global_section_575294284735971914_fJyjxt",
     "gp_global_section_565398054547489777_tjax9y",
     "gp_global_section_574894265742656356_Dppfqy",
-    "gp_global_section_575284568160993866_Rwc3Px",
     "gp_global_section_575285156688953887_xaxTzh",
     "gp_global_section_575286887443333970_GytpJc",
     "gp_global_section_575288905809527634_FYyFW3",
