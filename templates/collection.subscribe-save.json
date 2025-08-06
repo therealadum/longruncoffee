@@ -23,6 +23,19 @@
         "ggzSph4oUzd_weekLabel": "Weeks"
       }
     },
+    "gp_global_section_578664403788890747_QndRT4": {
+      "type": "gp-global-section-578664403788890747",
+      "name": "Banner - Black Hat",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggOatd-XHlN_dayLabel": "Days",
+        "ggOatd-XHlN_hourLabel": "Hours",
+        "ggOatd-XHlN_minuteLabel": "Minutes",
+        "ggOatd-XHlN_secondLabel": "Seconds",
+        "ggOatd-XHlN_weekLabel": "Weeks"
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -58,6 +71,7 @@
   },
   "order": [
     "gp_global_section_577161261100303251_9NnngB",
+    "gp_global_section_578664403788890747_QndRT4",
     "banner",
     "product-grid"
   ]
