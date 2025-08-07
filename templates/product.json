@@ -345,28 +345,6 @@
         "ggGfNeaNVPy_text": "<p>Cureton KJ, Warren GL, Millard-Stafford ML, Wingo JE, Trilk JL, Buyckx M. Caffeine effects on endurance performance in athletes. <i>Int J Sport Nutr Exerc Metab.</i> 2007;17(2):113–129.</p><p> </p><p>Ganio MS, Armstrong LE, Casa DJ, McDermott BP, Lee EC, Yamamoto LM, Marzano S, Lopez RM, Jimenez L, Le Bellego L, Chevillotte E, Lieberman HR, Maresh CM. Evidence-based approach to lingering hydration and energy effects of caffeine and carbohydrate co-ingestion. <i>Sports Med.</i> 2009;39(4):295–330.</p><p> </p><p>Ganio MS, Klau JF, Lee EC, Yeargin SW, McDermott BP, et al. Effect of caffeine on sport-specific endurance performance: a systematic review. <i>Sports Med.</i> 2009;39(10):813–832.</p>"
       }
     },
-    "gp_global_section_575296632438915658_CgyWxY": {
-      "type": "gp-global-section-575296632438915658",
-      "name": "PDP - TCF - Cross Sell",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggctUhQ68gO_text": "Long Run Co.",
-        "ggbqUqmk4_6_text": "All Products",
-        "gg37c4jo_ET_text": "Long Run Powder",
-        "gg6k8fldKu4_text": "Electrolyte Powder + Natural Caffeine",
-        "gginC9tkMJY_text": "Long Run Powder",
-        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
-        "ggltS59Bpaj_text": "Long Run Tea ",
-        "gglzuR2WWY4_text": "Rest &amp; Recover Melatonin Tea",
-        "ggeUnHJL0rV_text": "Long Run Pouches ",
-        "ggdwS969w6E_text": "Coming soon",
-        "ggjF0OBZWKT_text": "Long Run Gear",
-        "ggm_xM7funq_text": "For All Training Routines",
-        "ggMmCDMz3xg_text": "Long Run Bundles",
-        "gg-3aGjg0bg_text": "Bundle &amp; Save"
-      }
-    },
     "17093999844598d023": {
       "type": "apps",
       "blocks": {
@@ -380,6 +358,28 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "gp_global_section_575296632438915658_YaUGKC": {
+      "type": "gp-global-section-575296632438915658",
+      "name": "PDP - TCF - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggctUhQ68gO_text": "Long Run Co.",
+        "ggbqUqmk4_6_text": "All Products",
+        "gg37c4jo_ET_text": "Long Run Coffee",
+        "gg6k8fldKu4_text": "Electrolyte Infused Coffee",
+        "gginC9tkMJY_text": "Long Run Powder",
+        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
+        "ggltS59Bpaj_text": "Long Run Tea ",
+        "gglzuR2WWY4_text": "Rest &amp; Recover Melatonin Tea",
+        "ggeUnHJL0rV_text": "Long Run Pouches ",
+        "ggdwS969w6E_text": "Coming soon",
+        "ggjF0OBZWKT_text": "Long Run Gear",
+        "ggm_xM7funq_text": "For All Training Routines",
+        "ggMmCDMz3xg_text": "Long Run Bundles",
+        "gg-3aGjg0bg_text": "Bundle &amp; Save"
       }
     }
   },
@@ -400,7 +400,7 @@
     "gp_global_section_575286887443333970_GytpJc",
     "gp_global_section_575294284735971914_fJyjxt",
     "gp_global_section_575288905809527634_FYyFW3",
-    "gp_global_section_575296632438915658_CgyWxY",
+    "gp_global_section_575296632438915658_YaUGKC",
     "17093999844598d023"
   ]
 }
