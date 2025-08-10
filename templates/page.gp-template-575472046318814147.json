@@ -9,150 +9,19 @@
  */
 {
   "sections": {
-    "gp_global_section_575613363157992387_W8HbcV": {
-      "type": "gp-global-section-575613363157992387",
-      "name": "EDCP - Header - 13.1%",
+    "17526226215d80ebd3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_page_ihycCG": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_page_ihycCG"
+      ],
       "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggOGXp_iJqO_text": "<p>Use code LRC13 to get 13.1% off Electrolyte Coffee</p>",
-        "ggYGilatx2d_text": "13.1% OFF",
-        "ggQHQtP6Rxd_text": "<p>Energy. Hydration. Built for Runners.</p>",
-        "ggG8g4YE947_text": "<p>Long Run Co. is a small, athlete owned business, based in the US.</p><p> </p><p>You're here because runners want to stay consistent, and fuel their routine with clean, hydrating energy that supports training. </p><p> </p><p>We make products for people who love to run and want to build a routine they love.</p>",
-        "ggAVfMYau_T_text": "<p>Use the code LRC13 to get 13.1% off our electrolyte infused coffee.</p>"
-      }
-    },
-    "gp_global_section_575616655837627331_YfhJhW": {
-      "type": "gp-global-section-575616655837627331",
-      "name": "EDCP - FCF - Collection",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggqhEBcqJWo_text": "Flavored Roasts",
-        "ggocIZkP8QQ_text": "<s>$34</s>",
-        "ggfBlouIThq_text": "$29.55",
-        "ggoF7HGZ5bn_text": "<p>13.1% Off</p>"
-      }
-    },
-    "gp_global_section_575610010348815299_DYCaVf": {
-      "type": "gp-global-section-575610010348815299",
-      "name": "EDCP - TCF - Collection",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggrbC8F4tmQ_text": "Traditional Roasts",
-        "ggS3bUb_0m8_text": "<s>$34</s>",
-        "gguyxLfr44g_text": "$29.55",
-        "ggG7OBV652e_text": "<p>13.1% Off</p>"
-      }
-    },
-    "gp_global_section_575618683682947922_4MFmkr": {
-      "type": "gp-global-section-575618683682947922",
-      "name": "EDCP - R2R - Collection2",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggakrNjPShS_text": "Ready to run",
-        "ggTlaaWJ5E3_text": "Electrolyte powder + Natural Caffeine",
-        "ggzxuRjKa8t_text": "<s>$33.79</s>",
-        "ggA_SpK7zrI_text": "$29.36",
-        "ggEYq9RiMY9_text": "<p>13.1% Off</p>"
-      }
-    },
-    "gp_global_section_575612885292548639_GgjyG9": {
-      "type": "gp-global-section-575612885292548639",
-      "name": "EDCP - BNDL - Collection",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggNsUyzk635_text": "Bundle &amp; Save",
-        "ggqNF2_NtOf_text": "<s>$102</s>",
-        "ggxBxreob4f_text": "$77.34",
-        "ggQnWcSLqbW_text": "<p>25% Off</p>"
-      }
-    },
-    "gp_global_section_575273457869128530_YmfPUi": {
-      "type": "gp-global-section-575273457869128530",
-      "name": "PDP - TCF - Usage",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "gg0_tyAiDUV_text": "<p><strong>TYPE</strong></p>",
-        "ggnIX1bSk-3_text": "<p>Fresh Roasted Coffee</p><p> </p>",
-        "ggcurmcEuTk_text": "<p><strong>Total electrolytes</strong></p>",
-        "ggqR7gS4FgZ_text": "<p>275mg / cup</p>",
-        "ggzcBnkxtRQ_text": "<p><strong>FORMULATION</strong></p>",
-        "ggqPo89rDa8_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
-        "ggwnkETQRFP_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
-        "ggw4xF67-Hc_text": "<p>95mg / cup</p>",
-        "ggetbVUP7ws_text": "<p><strong>USAGE</strong></p>",
-        "ggKRawX5UKG_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>",
-        "ggp347Djgva_text": "<p><strong>TYPE</strong></p>",
-        "ggts-WiUBAM_text": "<p>Fresh Roasted Coffee</p>",
-        "ggiV0VNPa88_text": "<p><strong>Total Electrolytes</strong></p>",
-        "gg3nyZNRFmj_text": "<p>275mg / cup</p>",
-        "gg3WPJ8cQ9D_text": "<p><strong>FORMULATION</strong></p>",
-        "ggsQSQZfVLg_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
-        "ggUhJYXmpuC_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
-        "gg3dMaky33e_text": "<p>95mg / cup</p>",
-        "ggkaW5yTv86_text": "<p><strong>USAGE</strong></p>",
-        "ggGimG1pHZR_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>"
-      }
-    },
-    "gp_global_section_575266263094264394_ckQdNe": {
-      "type": "gp-global-section-575266263094264394",
-      "name": "PDP - TCF - Badges",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggexFCbiteo_text": "Boosts Endurance",
-        "ggERzl1YNpr_text": "Hydrating Energy",
-        "ggny8TUczHU_text": "Stronger than<br>normal coffee",
-        "ggMCWBbE5ls_text": "Brew hot or cold",
-        "ggieXXwKIiO_text": "Zero sugar",
-        "ggtJ4Jt4_Hn_text": "No Gut Issues",
-        "gg3YzEn2tIy_text": "built for routine",
-        "ggOeGZ-yiSc_text": "3rd Party Tested"
-      }
-    },
-    "gp_global_section_575269872192193362_Wp8bJ6": {
-      "type": "gp-global-section-575269872192193362",
-      "name": "PDP - TCF - Benefits",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggcz4syU5_o_childItem_0": "<p><strong>Reduce morning fatigue</strong></p>",
-        "ggcz4syU5_o_childItem_1": "<p><strong>Hydration + Energy</strong></p>",
-        "ggcz4syU5_o_childItem_2": "<p><strong>Stronger kick</strong></p>",
-        "ggcz4syU5_o_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
-        "ggcz4syU5_o_childItem_4": "<p><strong>Built for Routine</strong></p>",
-        "gg2iulRAgXh_text": "<p>Reduces training fatigue, so you can run more and stay consistent.</p>",
-        "ggB_r72tVLK_text": "<p>Long Run Coffee delivers a clean caffeine boost with added electrolytes—so you hydrate while you drink.</p>",
-        "ggjfDOEOzmi_text": "<p>Caffeine + electrolytes delivers a noticeably stronger boost—without the crash. Hydration supports energy uptake, so you feel it more and feel it longer.</p>",
-        "gggv_wJJaY4_text": "<p>No sugar. No calories. No fillers, no weird additives—just coffee + electrolytes.</p>",
-        "ggcQBm_qVyQ_text": "<p>Designed to be your go-to cup every day. Easy to brew, easy on your stomach, and helps you show up—consistently.</p>"
-      }
-    },
-    "gp_global_section_574894265742656356_BPtbfb": {
-      "type": "gp-global-section-574894265742656356",
-      "name": "PDP - TEA - Videos",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "gg8agTHiGGM_text": "Long Run Co.",
-        "ggVflaiPXKB_text": "In Action"
-      }
-    },
-    "gp_global_section_574890795677516575_wUD43g": {
-      "type": "gp-global-section-574890795677516575",
-      "name": "PDP - TEA - Trust",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggGrnoTlzuQ_text": "100M+",
-        "ggjlbN9Tdvy_text": "Miles Fueled by Long Run Co.",
-        "ggfbOdq3EBk_text": "1.8k+ Reviews",
-        "ggX7rT6NVK4_text": "Brand partners"
+        "include_margins": true
       }
     },
     "gp_global_section_565398054547489777_CMLPgd": {
@@ -199,19 +68,122 @@
         "gg5Dit3pIPC_text": "<p>Josh C.</p>"
       }
     },
-    "17526226215d80ebd3": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_all_reviews_page_ihycCG": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_all_reviews_page_ihycCG"
-      ],
+    "gp_global_section_574890795677516575_wUD43g": {
+      "type": "gp-global-section-574890795677516575",
+      "name": "PDP - TEA - Trust",
       "settings": {
-        "include_margins": true
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggGrnoTlzuQ_text": "100M+",
+        "ggjlbN9Tdvy_text": "Miles Fueled by Long Run Co.",
+        "ggfbOdq3EBk_text": "1.8k+ Reviews",
+        "ggX7rT6NVK4_text": "Brand partners"
+      }
+    },
+    "gp_global_section_574894265742656356_BPtbfb": {
+      "type": "gp-global-section-574894265742656356",
+      "name": "PDP - TEA - Videos",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg8agTHiGGM_text": "Long Run Co.",
+        "ggVflaiPXKB_text": "In Action"
+      }
+    },
+    "gp_global_section_575266263094264394_ckQdNe": {
+      "type": "gp-global-section-575266263094264394",
+      "name": "PDP - TCF - Badges",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggexFCbiteo_text": "Boosts Endurance",
+        "ggERzl1YNpr_text": "Hydrating Energy",
+        "ggny8TUczHU_text": "Stronger than<br>normal coffee",
+        "ggMCWBbE5ls_text": "Brew hot or cold",
+        "ggieXXwKIiO_text": "Zero sugar",
+        "ggtJ4Jt4_Hn_text": "No Gut Issues",
+        "gg3YzEn2tIy_text": "built for routine",
+        "ggOeGZ-yiSc_text": "3rd Party Tested"
+      }
+    },
+    "gp_global_section_575269872192193362_Wp8bJ6": {
+      "type": "gp-global-section-575269872192193362",
+      "name": "PDP - TCF - Benefits",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggcz4syU5_o_childItem_0": "<p><strong>Reduce morning fatigue</strong></p>",
+        "ggcz4syU5_o_childItem_1": "<p><strong>Hydration + Energy</strong></p>",
+        "ggcz4syU5_o_childItem_2": "<p><strong>Stronger kick</strong></p>",
+        "ggcz4syU5_o_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
+        "ggcz4syU5_o_childItem_4": "<p><strong>Built for Routine</strong></p>",
+        "gg2iulRAgXh_text": "<p>Reduces training fatigue, so you can run more and stay consistent.</p>",
+        "ggB_r72tVLK_text": "<p>Long Run Coffee delivers a clean caffeine boost with added electrolytes—so you hydrate while you drink.</p>",
+        "ggjfDOEOzmi_text": "<p>Caffeine + electrolytes delivers a noticeably stronger boost—without the crash. Hydration supports energy uptake, so you feel it more and feel it longer.</p>",
+        "gggv_wJJaY4_text": "<p>No sugar. No calories. No fillers, no weird additives—just coffee + electrolytes.</p>",
+        "ggcQBm_qVyQ_text": "<p>Designed to be your go-to cup every day. Easy to brew, easy on your stomach, and helps you show up—consistently.</p>"
+      }
+    },
+    "gp_global_section_575273457869128530_YmfPUi": {
+      "type": "gp-global-section-575273457869128530",
+      "name": "PDP - TCF - Usage",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg0_tyAiDUV_text": "<p><strong>TYPE</strong></p>",
+        "ggnIX1bSk-3_text": "<p>Fresh Roasted Coffee</p><p> </p>",
+        "ggcurmcEuTk_text": "<p><strong>Total electrolytes</strong></p>",
+        "ggqR7gS4FgZ_text": "<p>275mg / cup</p>",
+        "ggzcBnkxtRQ_text": "<p><strong>FORMULATION</strong></p>",
+        "ggqPo89rDa8_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
+        "ggwnkETQRFP_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
+        "ggw4xF67-Hc_text": "<p>95mg / cup</p>",
+        "ggetbVUP7ws_text": "<p><strong>USAGE</strong></p>",
+        "ggKRawX5UKG_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>",
+        "ggp347Djgva_text": "<p><strong>TYPE</strong></p>",
+        "ggts-WiUBAM_text": "<p>Fresh Roasted Coffee</p>",
+        "ggiV0VNPa88_text": "<p><strong>Total Electrolytes</strong></p>",
+        "gg3nyZNRFmj_text": "<p>275mg / cup</p>",
+        "gg3WPJ8cQ9D_text": "<p><strong>FORMULATION</strong></p>",
+        "ggsQSQZfVLg_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
+        "ggUhJYXmpuC_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
+        "gg3dMaky33e_text": "<p>95mg / cup</p>",
+        "ggkaW5yTv86_text": "<p><strong>USAGE</strong></p>",
+        "ggGimG1pHZR_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>"
+      }
+    },
+    "gp_global_section_575274983270384579_Dewm8w": {
+      "type": "gp-global-section-575274983270384579",
+      "name": "PDP - TCF - Ingr Desktop",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggSzoGYSk7B_text": "Science-Backed Ingredients",
+        "ggeqIP5NJKY_childItem_0": "<p>Sodium</p>",
+        "ggeqIP5NJKY_childItem_1": "<p>Potassium</p>",
+        "ggeqIP5NJKY_childItem_2": "<p>Magnesium</p>",
+        "ggeqIP5NJKY_childItem_3": "<p><strong>Calcium</strong></p>",
+        "ggIGbnsQ-9W_text": "<p>Sodium helps your body retain the fluids it needs to stay hydrated—especially when you’re sweating. It’s a critical electrolyte that supports endurance, performance, and consistent energy output.</p>",
+        "ggXk8sp_bWu_text": "<p>Potassium works with sodium to regulate hydration, nerve signals, and muscle contractions. It helps reduce cramps and keeps your body functioning smoothly during every mile.</p>",
+        "ggcWasMh2sA_text": "<p>Magnesium supports muscle recovery, nerve signaling, and energy production. Low magnesium can lead to fatigue and soreness, making this mineral key for consistent training.</p>",
+        "ggjAaV1ODpE_text": "<p>Known for bone health, calcium also plays a crucial role in muscle contraction and electrolyte balance. It helps your muscles fire properly so you can run strong.</p>"
+      }
+    },
+    "gp_global_section_575284010452779858_6tGtRt": {
+      "type": "gp-global-section-575284010452779858",
+      "name": "PDP - TCF - Ingr Mobile",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggr_HmdoLDF_text": "Science-Backed Ingredients",
+        "ggmmqG1AxA__childItem_0": "<p>Sodium</p>",
+        "ggmmqG1AxA__childItem_1": "<p>Potassium</p>",
+        "ggmmqG1AxA__childItem_2": "<p>Magnesium</p>",
+        "ggmmqG1AxA__childItem_3": "<p>Calcium</p>",
+        "ggNF7aa1BxB_text": "<p>Sodium helps your body retain the fluids it needs to stay hydrated—especially when you’re sweating. It’s a critical electrolyte that supports endurance, performance, and consistent energy output.</p>",
+        "ggLKbgBM8XK_text": "<p>Potassium works with sodium to regulate hydration, nerve signals, and muscle contractions. It helps reduce cramps and keeps your body functioning smoothly during every mile.</p>",
+        "ggSZKWc9KfO_text": "<p>Magnesium supports muscle recovery, nerve signaling, and energy production. Low magnesium can lead to fatigue and soreness, making this mineral key for consistent training.</p>",
+        "ggGWYw-1hmg_text": "<p>Known for bone health, calcium also plays a crucial role in muscle contraction and electrolyte balance. It helps your muscles fire properly so you can run strong.</p>"
       }
     },
     "gp_global_section_575286887443333970_pWYw78": {
@@ -256,38 +228,66 @@
         "ggGfNeaNVPy_text": "<p>Cureton KJ, Warren GL, Millard-Stafford ML, Wingo JE, Trilk JL, Buyckx M. Caffeine effects on endurance performance in athletes. <i>Int J Sport Nutr Exerc Metab.</i> 2007;17(2):113–129.</p><p> </p><p>Ganio MS, Armstrong LE, Casa DJ, McDermott BP, Lee EC, Yamamoto LM, Marzano S, Lopez RM, Jimenez L, Le Bellego L, Chevillotte E, Lieberman HR, Maresh CM. Evidence-based approach to lingering hydration and energy effects of caffeine and carbohydrate co-ingestion. <i>Sports Med.</i> 2009;39(4):295–330.</p><p> </p><p>Ganio MS, Klau JF, Lee EC, Yeargin SW, McDermott BP, et al. Effect of caffeine on sport-specific endurance performance: a systematic review. <i>Sports Med.</i> 2009;39(10):813–832.</p>"
       }
     },
-    "gp_global_section_575284010452779858_6tGtRt": {
-      "type": "gp-global-section-575284010452779858",
-      "name": "PDP - TCF - Ingr Mobile",
+    "gp_global_section_575610010348815299_DYCaVf": {
+      "type": "gp-global-section-575610010348815299",
+      "name": "EDCP - TCF - Collection",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggr_HmdoLDF_text": "Science-Backed Ingredients",
-        "ggmmqG1AxA__childItem_0": "<p>Sodium</p>",
-        "ggmmqG1AxA__childItem_1": "<p>Potassium</p>",
-        "ggmmqG1AxA__childItem_2": "<p>Magnesium</p>",
-        "ggmmqG1AxA__childItem_3": "<p>Calcium</p>",
-        "ggNF7aa1BxB_text": "<p>Sodium helps your body retain the fluids it needs to stay hydrated—especially when you’re sweating. It’s a critical electrolyte that supports endurance, performance, and consistent energy output.</p>",
-        "ggLKbgBM8XK_text": "<p>Potassium works with sodium to regulate hydration, nerve signals, and muscle contractions. It helps reduce cramps and keeps your body functioning smoothly during every mile.</p>",
-        "ggSZKWc9KfO_text": "<p>Magnesium supports muscle recovery, nerve signaling, and energy production. Low magnesium can lead to fatigue and soreness, making this mineral key for consistent training.</p>",
-        "ggGWYw-1hmg_text": "<p>Known for bone health, calcium also plays a crucial role in muscle contraction and electrolyte balance. It helps your muscles fire properly so you can run strong.</p>"
+        "ggrbC8F4tmQ_text": "Traditional Roasts",
+        "ggS3bUb_0m8_text": "<s>$34</s>",
+        "gguyxLfr44g_text": "$29.55",
+        "ggG7OBV652e_text": "<p>13.1% Off</p>"
       }
     },
-    "gp_global_section_575274983270384579_Dewm8w": {
-      "type": "gp-global-section-575274983270384579",
-      "name": "PDP - TCF - Ingr Desktop",
+    "gp_global_section_575612885292548639_GgjyG9": {
+      "type": "gp-global-section-575612885292548639",
+      "name": "EDCP - BNDL - Collection",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggSzoGYSk7B_text": "Science-Backed Ingredients",
-        "ggeqIP5NJKY_childItem_0": "<p>Sodium</p>",
-        "ggeqIP5NJKY_childItem_1": "<p>Potassium</p>",
-        "ggeqIP5NJKY_childItem_2": "<p>Magnesium</p>",
-        "ggeqIP5NJKY_childItem_3": "<p><strong>Calcium</strong></p>",
-        "ggIGbnsQ-9W_text": "<p>Sodium helps your body retain the fluids it needs to stay hydrated—especially when you’re sweating. It’s a critical electrolyte that supports endurance, performance, and consistent energy output.</p>",
-        "ggXk8sp_bWu_text": "<p>Potassium works with sodium to regulate hydration, nerve signals, and muscle contractions. It helps reduce cramps and keeps your body functioning smoothly during every mile.</p>",
-        "ggcWasMh2sA_text": "<p>Magnesium supports muscle recovery, nerve signaling, and energy production. Low magnesium can lead to fatigue and soreness, making this mineral key for consistent training.</p>",
-        "ggjAaV1ODpE_text": "<p>Known for bone health, calcium also plays a crucial role in muscle contraction and electrolyte balance. It helps your muscles fire properly so you can run strong.</p>"
+        "ggNsUyzk635_text": "Bundle &amp; Save",
+        "ggqNF2_NtOf_text": "<s>$102</s>",
+        "ggxBxreob4f_text": "$77.34",
+        "ggQnWcSLqbW_text": "<p>25% Off</p>"
+      }
+    },
+    "gp_global_section_575613363157992387_W8HbcV": {
+      "type": "gp-global-section-575613363157992387",
+      "name": "EDCP - Header - 13.1%",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggOGXp_iJqO_text": "<p>Use code LRC13 to get 13.1% off Electrolyte Coffee</p>",
+        "ggYGilatx2d_text": "13.1% OFF",
+        "ggQHQtP6Rxd_text": "<p>Energy. Hydration. Built for Runners.</p>",
+        "ggG8g4YE947_text": "<p>Long Run Co. is a small, athlete owned business, based in the US.</p><p> </p><p>You're here because runners want to stay consistent, and fuel their routine with clean, hydrating energy that supports training. </p><p> </p><p>We make products for people who love to run and want to build a routine they love.</p>",
+        "ggAVfMYau_T_text": "<p>Use the code LRC13 to get 13.1% off our electrolyte infused coffee.</p>"
+      }
+    },
+    "gp_global_section_575616655837627331_YfhJhW": {
+      "type": "gp-global-section-575616655837627331",
+      "name": "EDCP - FCF - Collection",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggqhEBcqJWo_text": "Flavored Roasts",
+        "ggocIZkP8QQ_text": "<s>$34</s>",
+        "ggfBlouIThq_text": "$29.55",
+        "ggoF7HGZ5bn_text": "<p>13.1% Off</p>"
+      }
+    },
+    "gp_global_section_575618683682947922_4MFmkr": {
+      "type": "gp-global-section-575618683682947922",
+      "name": "EDCP - R2R - Collection2",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggakrNjPShS_text": "Ready to run",
+        "ggTlaaWJ5E3_text": "Electrolyte powder + Natural Caffeine",
+        "ggzxuRjKa8t_text": "<s>$33.79</s>",
+        "ggA_SpK7zrI_text": "$29.36",
+        "ggEYq9RiMY9_text": "<p>13.1% Off</p>"
       }
     },
     "gp_section_575472046402700227": {
@@ -316,6 +316,5 @@
     "gp_global_section_575284010452779858_6tGtRt",
     "gp_global_section_575274983270384579_Dewm8w",
     "gp_section_575472046402700227"
-  ],
-  "layout": "theme.gempages.footer"
+  ]
 }
