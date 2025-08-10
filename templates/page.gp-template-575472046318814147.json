@@ -9,276 +9,102 @@
  */
 {
   "sections": {
+    "gp_section_575472046402700227": {
+      "settings": {
+        "checksum": "b2f1dcb29d0a89ad18a3f32544f31c3b47aa0e4802f0e1702f8f905de0ddda23_1_1_1_0_"
+      },
+      "type": "gp-section-575472046402700227"
+    },
     "gp_section_579323817600483937": {
-      "type": "gp-section-579323817600483937",
       "settings": {
-        "section_preload": "true",
         "checksum": "41992493c1787f4113d8b097b6876932794febcc1895d5db3073ca9cfc018a54_1_1_1_0_",
-        "ggtSlXm_AR__text": "13.1% OFF",
-        "ggjpkLCdzJi_text": "<p><strong>Fuel. perform. Recover.</strong></p>",
-        "ggmmvkeVjca_text": "<p>Routine-Based Products, Enhanced for Athletes</p>",
-        "ggn5TQeT41Q_text": "<p>Long Run Co. is a small athlete-owned business based in the US.</p><p> </p><p>We make routine-based products, built for athletes to <strong>train harder,</strong> <strong>recover faster, and stay consistent.</strong></p>",
-        "gg-Yw1rwR2B_text": "<p>Use code <u>LRC13</u> and get 13.1% off.</p>",
-        "ggL9lPB465x_defaultLabel": "Copy Discount Code"
-      }
-    },
-    "gp_section_579330670506017377": {
-      "type": "gp-section-579330670506017377",
-      "settings": {
-        "section_preload": "false",
-        "checksum": "fb2c2189e52084c9d72303d01bdd0379dd870ed59538bf92187bfb02a5cf3d69_1_1_1_0_",
-        "ggKs8a9S1U7_text": "Hydration + Energy",
-        "ggRNTrFirVx_text": "Electrolyte coffee",
-        "gg02tnBGD7p_text": "<s>$34</s>",
-        "ggcNg-G0hgG_text": "$29.55",
-        "ggLNIu3qotJ_text": "<p>13.1% Off</p>"
-      }
-    },
-    "gp_section_579333972949991957": {
-      "type": "gp-section-579333972949991957",
-      "settings": {
-        "section_preload": "false",
-        "checksum": "c65eb7c2bfd8c54810369d0c34ba48fce40a278a1983e57a32bd066c982fa1a4_1_1_1_0_",
-        "ggA4lFsVRwE_text": "<p><strong>TYPE</strong></p>",
-        "ggqNAThWhtv_text": "<p>Fresh Roasted Coffee</p><p> </p>",
-        "ggWBex2YqeF_text": "<p><strong>Total electrolytes</strong></p>",
-        "ggYOUdid4HW_text": "<p>275mg / cup</p>",
-        "gg84AMSzksB_text": "<p><strong>FORMULATION</strong></p>",
-        "ggXOhyTNotA_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
-        "ggDMoCHr58p_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
-        "gg2J9VRouDW_text": "<p>95mg / cup</p>",
-        "ggXG0mP9Aji_text": "<p><strong>USAGE</strong></p>",
-        "ggbIwM3Njw1_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>",
-        "ggXRsctfQ42_text": "<p><strong>TYPE</strong></p>",
-        "ggCp_h7g5bn_text": "<p>Fresh Roasted Coffee</p>",
-        "ggzeMyPtL7x_text": "<p><strong>Total Electrolytes</strong></p>",
-        "gg4bMf8nOs3_text": "<p>275mg / cup</p>",
-        "ggXvVmXP8QO_text": "<p><strong>FORMULATION</strong></p>",
-        "ggFYXafZUsa_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
-        "gg4_MwlJVSf_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
-        "ggRJrzps-r4_text": "<p>95mg / cup</p>",
-        "ggiGLgVi5UM_text": "<p><strong>USAGE</strong></p>",
-        "ggaE-5g8JPV_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>"
-      }
+        "section_preload": "true"
+      },
+      "type": "gp-section-579323817600483937"
     },
     "gp_section_579330579573506581": {
-      "type": "gp-section-579330579573506581",
       "settings": {
-        "section_preload": "false",
-        "checksum": "432d94e75ea08f80315cdafb6fc4b2c3f1e1cbd7e4b8bf52257186f2101289b7_1_1_1_0_",
-        "ggWAGTrzU2-_text": "Rest &amp; Recover",
-        "ggGuBbv7hAy_text": "Melatonin Tea",
-        "ggEAUQqpHpM_text": "<p>13.1% Off</p>"
-      }
+        "checksum": "432d94e75ea08f80315cdafb6fc4b2c3f1e1cbd7e4b8bf52257186f2101289b7_1_1_1_0_"
+      },
+      "type": "gp-section-579330579573506581"
     },
-    "gp_section_579333076895662873": {
-      "type": "gp-section-579333076895662873",
+    "gp_section_579330670506017377": {
       "settings": {
-        "section_preload": "false",
-        "checksum": "1bc37f670b2fa50d63126ff32c7b5f6625422800cb01bdae8f77416118baa818_1_1_1_0_",
-        "ggcO9LfwbL7_text": "<p><strong>TYPE</strong></p>",
-        "ggH8rywWRK3_text": "<p><strong>Single-use Tea Bag</strong></p>",
-        "ggNMNGQbBeW_text": "<p><strong>MELATONIN DOSE</strong></p>",
-        "ggnCSl1vNzQ_text": "<p><strong>3 - 6mg</strong></p>",
-        "gg1dq45a-D0_text": "<p><strong>FORMULATION</strong></p>",
-        "ggNQGZUioud_text": "<p><strong>Natural Herbal Tea</strong></p><p><strong>+ Pure Melatonin</strong></p>",
-        "ggEFcn--BFB_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
-        "ggKe-NRJuwo_text": "<p><strong>Naturally Caffeine Free</strong></p>",
-        "gg2tKJAGjnl_text": "<p><strong>USAGE</strong></p>",
-        "ggCYsYLsPl4_text": "<p><strong>Steep 1 tea bag in hot water for 4–8 minutes.</strong></p><p> </p><p><strong>Drink 30–60 minutes before bed to support restful sleep. Drink hot or iced.</strong></p>",
-        "ggEC_L3RSrb_text": "<p><strong>TYPE</strong></p>",
-        "ggXKbOBaeCh_text": "<p><strong>Single-use Tea Bag</strong></p>",
-        "gggwbs_EiyZ_text": "<p><strong>MELATONIN DOSE</strong></p>",
-        "gg7K8enriWn_text": "<p><strong>3 - 6mg</strong></p>",
-        "ggKjvzybvHo_text": "<p><strong>FORMULATION</strong></p>",
-        "ggP0DAUjc_C_text": "<p><strong>Natural Herbal Tea</strong></p><p><strong>+ Pure Melatonin</strong></p>",
-        "ggL_oFKc9FH_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
-        "ggwD72X10bR_text": "<p><strong>Naturally Caffeine Free</strong></p>",
-        "ggEvRPaXVrm_text": "<p><strong>USAGE</strong></p>",
-        "ggYClSEmelP_text": "<p><strong>Steep 1 tea bag in hot water for 4–8 minutes.</strong></p><p> </p><p><strong>Drink 30–60 minutes before bed to support restful sleep. Drink hot or iced.</strong></p>"
-      }
+        "checksum": "fb2c2189e52084c9d72303d01bdd0379dd870ed59538bf92187bfb02a5cf3d69_1_1_1_0_"
+      },
+      "type": "gp-section-579330670506017377"
     },
     "gp_section_579330720653116185": {
-      "type": "gp-section-579330720653116185",
       "settings": {
-        "section_preload": "false",
-        "checksum": "1b062633d3976e2c9f20901934de09f46c47d644b2bed1350d94298833956887_1_1_1_0_",
-        "ggO675kePUM_text": "Ready to run",
-        "ggHI78oAXBW_text": "Electrolyte powder + Natural Caffeine",
-        "gg-pCOxPsdT_text": "<s>$33.79</s>",
-        "ggS84ajkgaq_text": "$29.36",
-        "ggAR43dimZO_text": "<p>13.1% Off</p>"
-      }
+        "checksum": "1b062633d3976e2c9f20901934de09f46c47d644b2bed1350d94298833956887_1_1_1_0_"
+      },
+      "type": "gp-section-579330720653116185"
     },
     "gp_section_579330849636352609": {
-      "type": "gp-section-579330849636352609",
       "settings": {
-        "section_preload": "false",
-        "checksum": "99ea792b627fd188a37d039e66f8bb67ecfc65895826ef375c9392df3b04fc2c_1_1_1_0_",
-        "ggcI9NnylQE_text": "Bundle &amp; Save",
-        "ggE3CMrUmyE_text": "<s>$102</s>",
-        "ggIW-aveN_s_text": "$77.34",
-        "ggsnujgF8XU_text": "<p>25% Off</p>"
-      }
+        "checksum": "99ea792b627fd188a37d039e66f8bb67ecfc65895826ef375c9392df3b04fc2c_1_1_1_0_"
+      },
+      "type": "gp-section-579330849636352609"
     },
     "gp_section_579331999982945049": {
-      "type": "gp-section-579331999982945049",
       "settings": {
-        "section_preload": "false",
-        "checksum": "ebeee2cbb1d76506dac9c6a493a3ddbc21bdbaa41ed7b863fd0a800a0da0732d_1_1_1_0_",
-        "ggJQtoydLS8_text": "Brand Partners"
-      }
+        "checksum": "ebeee2cbb1d76506dac9c6a493a3ddbc21bdbaa41ed7b863fd0a800a0da0732d_1_1_1_0_"
+      },
+      "type": "gp-section-579331999982945049"
     },
     "gp_section_579332390288097889": {
-      "type": "gp-section-579332390288097889",
       "settings": {
-        "section_preload": "false",
-        "checksum": "767e48a63e21dab4853be21b0a3446b518701a263ddb08525c1dfdc986b033ff_1_1_1_0_",
-        "ggV23dm1xeI_text": "Built for athletes",
-        "ggjMLLMSGrP_text": "All Long Run products are designed to support training, recovery, and performance.",
-        "ggusvJkkIao_text": "<strong>Built for Routines</strong>",
-        "ggzk4Jvj5Pz_text": "Built to help you stay consistent, so you can build a routine you actually love.",
-        "ggIDz5n81Em_text": "<strong>Athlete Founded</strong>",
-        "ggov7nGUGfx_text": "We built the products we couldn’t find. And we’ll keep building for the athletes we support."
-      }
+        "checksum": "767e48a63e21dab4853be21b0a3446b518701a263ddb08525c1dfdc986b033ff_1_1_1_0_"
+      },
+      "type": "gp-section-579332390288097889"
     },
     "gp_section_579332470701294385": {
-      "type": "gp-section-579332470701294385",
       "settings": {
-        "section_preload": "false",
-        "checksum": "0891373aed256bab20f69a11fd6fd8ad23ad6e476a66118650b2b7780590bd7e_1_1_1_0_",
-        "ggdRlNys9mR_text": "100M+",
-        "gglyCfLLhSy_text": "Miles Fueled by Long Run Co.",
-        "gggWRloCCzL_text": "1.8k+ Reviews",
-        "gg-Jn-hBEy4_text": "Brand partners"
-      }
+        "checksum": "0891373aed256bab20f69a11fd6fd8ad23ad6e476a66118650b2b7780590bd7e_1_1_1_0_"
+      },
+      "type": "gp-section-579332470701294385"
     },
     "gp_section_579332685936198241": {
-      "type": "gp-section-579332685936198241",
       "settings": {
-        "section_preload": "false",
-        "checksum": "c16b7467172d0f473db55c97083d595029eef911bebbfa2120d009a2191beeaa_1_1_1_0_",
-        "gg1NJb50qhG_text": "Boosts Endurance",
-        "ggevsi5C2H__text": "Hydrating Energy",
-        "ggVVB0u058X_text": "Stronger than<br>normal coffee",
-        "gg0Y-29Gi1L_text": "Brew hot or cold",
-        "ggKE7eNN3mU_text": "Zero sugar",
-        "gg95TS0E2oD_text": "No Gut Issues",
-        "ggmrtRqUJJw_text": "built for routine",
-        "gg-eULgmJG-_text": "3rd Party Tested"
-      }
+        "checksum": "c16b7467172d0f473db55c97083d595029eef911bebbfa2120d009a2191beeaa_1_1_1_0_"
+      },
+      "type": "gp-section-579332685936198241"
     },
-    "gp_section_579334966614163989": {
-      "type": "gp-section-579334966614163989",
+    "gp_section_579333076895662873": {
       "settings": {
-        "section_preload": "false",
-        "checksum": "9ef20c6e86322d1c5aa1a1ace0a96467b9429867969d5da568146979a29a206c_1_1_1_0_",
-        "gg7_kk9uL0-_text": "Long Run Co.",
-        "ggzcopU_zTl_text": "In Action"
-      }
+        "checksum": "1bc37f670b2fa50d63126ff32c7b5f6625422800cb01bdae8f77416118baa818_1_1_1_0_"
+      },
+      "type": "gp-section-579333076895662873"
+    },
+    "gp_section_579333972949991957": {
+      "settings": {
+        "checksum": "c65eb7c2bfd8c54810369d0c34ba48fce40a278a1983e57a32bd066c982fa1a4_1_1_1_0_"
+      },
+      "type": "gp-section-579333972949991957"
     },
     "gp_section_579334927103820569": {
-      "type": "gp-section-579334927103820569",
       "settings": {
-        "section_preload": "false",
-        "checksum": "320ca30d82845d759c1e7360339feede4163c0e02c015993103729a9b09c47bf_1_1_1_0_",
-        "gg22_jrIdIP_text": "Long Run Co. vs. Your Old Routine",
-        "gg8b1hOlri1_text": "electrolytes + caffeine",
-        "gga5-vDZvJy_text": "Your New<br>Routine",
-        "ggOd-odfhvL_text": "Your Old Routine",
-        "ggjDPpHuacC_text": "Energy + Hydration<br>in one",
-        "gg2_1vuDEsp_text": "x",
-        "gg_NoVhB3JV_text": "No Mid-Run Gut<br>Issues",
-        "ggYZctzOFb1_text": "x",
-        "ggG2AfupN7B_text": "Reduce morning fatigue",
-        "ggV12ojqDdJ_text": "x",
-        "ggSq1vGlBc3_text": "Consistent routine",
-        "ggL20ULzNsM_text": "x",
-        "ggFNog4g1mM_text": "Sugar &amp; Weird ingredients",
-        "ggjXl3CbSN7_text": "x"
-      }
+        "checksum": "320ca30d82845d759c1e7360339feede4163c0e02c015993103729a9b09c47bf_1_1_1_0_"
+      },
+      "type": "gp-section-579334927103820569"
+    },
+    "gp_section_579334966614163989": {
+      "settings": {
+        "checksum": "9ef20c6e86322d1c5aa1a1ace0a96467b9429867969d5da568146979a29a206c_1_1_1_0_"
+      },
+      "type": "gp-section-579334966614163989"
     },
     "gp_section_579334993709367905": {
-      "type": "gp-section-579334993709367905",
       "settings": {
-        "section_preload": "false",
-        "checksum": "e463ff3d21cb5c0d1d0965578ae0ef2ada3458f25f3360e63f22e4a3858f7208_1_1_1_0_",
-        "ggh9hvaInNq_text": "<p>This sh*t slaps</p>",
-        "ggDadJ97Lbs_text": "<p>It's smooth, not a bitter coffee, and not acidic either. 10/10 will be buying again to train with.</p>",
-        "ggeeRuwhTqF_text": "<p>Bri l.</p>",
-        "ggPTP4OrdxR_text": "<p>Love it</p>",
-        "ggbY_sqhwsQ_text": "<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>",
-        "ggiviPW4fao_text": "<p>Alex H.</p>",
-        "ggxomnBK511_text": "<p><strong>Fast</strong></p>",
-        "ggfGm0DJm1F_text": "<p>Fast shipping and great tasting product. Works fast and provides a noticeably stronger energy kick.</p>",
-        "ggaxqAOYyEO_text": "<p>Cody D.</p>",
-        "ggQWrG0R007_text": "<p>Great taste</p>",
-        "ggeJXThh_z9_text": "<p>Love it. The coffee tastes good and I feel great after drinking it. I have a cup before every run. Haven't found a flavor that I did not like.</p>",
-        "ggPun1b-hRV_text": "<p>Alex R.</p>",
-        "ggxgsBqMD42_text": "<p>New Routine</p>",
-        "ggBiX5Lllss_text": "<p>No more guessing about pre-run fueling. This coffee is consistent, quick, and reliable—exactly what I needed.</p>",
-        "ggknngtCtZp_text": "<p>Ryan D.</p>",
-        "ggWQYU80OI5_text": "<p>Awesome</p>",
-        "gg0b40RhSiL_text": "<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>",
-        "gg-XBrkK6x5_text": "<p>Josh C.</p>",
-        "gg7ZcfyZi0m_text": "<p>This sh*t slaps</p>",
-        "ggrR6lIim58_text": "<p>It's smooth, not a bitter coffee, and not acidic either. 10/10 will be buying again to train with.</p>",
-        "gg8RcnGWwkd_text": "<p>Bri l.</p>",
-        "ggw5WI7jsuP_text": "<p>Love it</p>",
-        "ggVrAEbttnK_text": "<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>",
-        "ggS5UfarYBf_text": "<p>Alex H.</p>",
-        "ggAnAKjZ-By_text": "<p><strong>Fast</strong></p>",
-        "ggm313V7R7N_text": "<p>Fast shipping and great tasting product. Works fast and provides a noticeably stronger energy kick.</p>",
-        "ggrOx156ydd_text": "<p>Cody D.</p>",
-        "ggdgm7B8Hur_text": "<p>Great taste</p>",
-        "ggjHADSpb5h_text": "<p>Love it. The coffee tastes good and I feel great after drinking it. I have a cup before every run.</p><p> </p><p>Haven't found a flavor that I did not like.</p>",
-        "gg9gGjjtKZi_text": "<p>Alex R.</p>",
-        "ggQ4F8Ftsde_text": "<p>New Routine</p>",
-        "ggEW9j1qf1R_text": "<p>No more guessing about pre-run fueling. This coffee is consistent, quick, and reliable—exactly what I needed.</p>",
-        "ggvFsYLej0f_text": "<p>Ryan D.</p>",
-        "ggcmr0dXZZy_text": "<p>Awesome</p>",
-        "ggGJW5L5QcN_text": "<p>Was skeptical at first, but this coffee goes down easy even before hard workouts. Zero digestive trouble and keeps me hydrated.</p>",
-        "ggaiF-Vkody_text": "<p>Josh C.</p>"
-      }
+        "checksum": "acec6066f2782ccd93e845a3224947e5883902607ca3c29d1bc2447902ffaf65_1_1_1_0_"
+      },
+      "type": "gp-section-579334993709367905"
     },
     "gp_section_579335079323501337": {
-      "type": "gp-section-579335079323501337",
       "settings": {
-        "section_preload": "false",
-        "checksum": "83c7d9c23b25cebc5fb9e3783d588e2916d499f4e3db647d689f1cd29c054a44_1_1_1_0_",
-        "ggd02-Ex9hA_childItem_0": "<p><strong>Reduce morning fatigue</strong></p>",
-        "ggd02-Ex9hA_childItem_1": "<p><strong>Hydration + Energy</strong></p>",
-        "ggd02-Ex9hA_childItem_2": "<p><strong>Stronger kick</strong></p>",
-        "ggd02-Ex9hA_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
-        "ggd02-Ex9hA_childItem_4": "<p><strong>Built for Routine</strong></p>",
-        "ggsRoP-srrl_text": "<p>Reduces training fatigue, so you can run more and stay consistent.</p>",
-        "ggT9Hb6HkeW_text": "<p>Long Run Coffee delivers a clean caffeine boost with added electrolytes—so you hydrate while you drink.</p>",
-        "gg4HGP_RikG_text": "<p>Caffeine + electrolytes delivers a noticeably stronger boost—without the crash. Hydration supports energy uptake, so you feel it more and feel it longer.</p>",
-        "ggHtYU0Euxb_text": "<p>No sugar. No calories. No fillers, no weird additives—just coffee + electrolytes.</p>",
-        "ggC7-DwnNK3_text": "<p>Designed to be your go-to cup every day. Easy to brew, easy on your stomach, and helps you show up—consistently.</p>"
-      }
-    },
-    "1754844244aaa936c9": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_all_reviews_page_QiFC6n": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
+        "checksum": "e839e3a00240e22b6be79e7353950662771ae8e27b25190266452eda428bedc0_1_1_1_0_"
       },
-      "block_order": [
-        "judge_me_reviews_all_reviews_page_QiFC6n"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "gp_section_575472046402700227": {
-      "type": "gp-section-575472046402700227",
-      "settings": {
-        "section_preload": "false",
-        "checksum": "b2f1dcb29d0a89ad18a3f32544f31c3b47aa0e4802f0e1702f8f905de0ddda23_1_1_1_0_"
-      }
+      "type": "gp-section-579335079323501337"
     }
   },
   "order": [
@@ -297,7 +123,6 @@
     "gp_section_579334927103820569",
     "gp_section_579334993709367905",
     "gp_section_579335079323501337",
-    "1754844244aaa936c9",
     "gp_section_575472046402700227"
   ]
 }
