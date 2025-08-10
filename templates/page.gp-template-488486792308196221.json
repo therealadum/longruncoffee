@@ -1,30 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "gp_section_488486792811512701": {
-      "type": "gp-section-488486792811512701",
+    "gp_section_488486792644068221": {
       "settings": {
-        "section_preload": "true"
-      }
+        "checksum": "b536c31bc18c9b1e2c4b4d20a672aabb3f126bb948bc5bd9c33a50a2766fde62_1_1_1_0_"
+      },
+      "type": "gp-section-488486792644068221"
     },
     "gp_section_488486792677294973": {
-      "type": "gp-section-488486792677294973",
       "settings": {
-      }
+        "checksum": "ad116bd8d27e38f49e48a29976cf530d0552b516ce9fcbdd5d58fdb468941397_1_1_1_0_"
+      },
+      "type": "gp-section-488486792677294973"
     },
-    "gp_section_491392741796741970": {
-      "type": "gp-section-491392741796741970",
+    "gp_section_488486792811512701": {
       "settings": {
-      }
-    },
-    "gp_section_488486792644068221": {
-      "type": "gp-section-488486792644068221",
-      "settings": {
-      }
+        "checksum": "99e508521c2088f9b5aeb0fa78efede01d27c916f7eef60478b6856926247174_1_1_1_0_",
+        "section_preload": "true"
+      },
+      "type": "gp-section-488486792811512701"
     },
     "gp_section_488487864540070781": {
-      "type": "gp-section-488487864540070781",
       "settings": {
-      }
+        "checksum": "8b9b286c1a315477e5e443755f5d5086b5142f67213544b5cf177e2529efcc0f_1_1_1_0_"
+      },
+      "type": "gp-section-488487864540070781"
+    },
+    "gp_section_491392741796741970": {
+      "settings": {
+        "checksum": "604e6e57ac77a0ae22be521f36f3a9dd58e8aa97b365976df823507f3972abb5_1_1_1_0_"
+      },
+      "type": "gp-section-491392741796741970"
     }
   },
   "order": [
