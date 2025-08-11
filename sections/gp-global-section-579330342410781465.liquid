@@ -39,8 +39,25 @@
     {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
     <div data-id="gRY_hSghSQ"
         class="gRY_hSghSQ"
+        style="--ta:center;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mb-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--mb-mobile:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--dynamic-source-color:#F4F4F4"
+        data-test-force-publish="1754955189512"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <h2
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:var(--g-ct-w);--w-tablet:var(--g-ct-w);--w-mobile:var(--g-ct-w);--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--ta-tablet:center;--ta-mobile:center;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--weight:400;--size:15px;--size-tablet:15px;--size-mobile:13px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggRY_hSghSQ_text | replace: '$locationOrigin', locationOrigin }}
+        </h2>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gZ03v-3VBy"
+        class="gZ03v-3VBy"
         style="--ta:center;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:20px;--mb-mobile:20px;--mb-tablet:20px;--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1754837394286"
+        data-test-force-publish="1754955189513"
       >
       <div class="gp-flex" style="--jc:center">
         <h2
@@ -48,7 +65,7 @@
           class=" gp-text-instant gp-text"
           style="--w:var(--g-ct-w);--w-tablet:var(--g-ct-w);--w-mobile:var(--g-ct-w);--tdt:auto;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ts:none;--ta:center;--ta-tablet:center;--ta-mobile:center;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-heading, heading);--weight:400;--size:32px;--size-tablet:30px;--size-mobile:25px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
         >
-          {{ section.settings.ggRY_hSghSQ_text | replace: '$locationOrigin', locationOrigin }}
+          {{ section.settings.ggZ03v-3VBy_text | replace: '$locationOrigin', locationOrigin }}
         </h2>
       </div>
     </div>
@@ -71,7 +88,7 @@
           {%- assign gpBkProducts = products -%}
           
       {%- liquid
-        assign productHandles = 'stroopwafel,trail-mix,the-post-race-banana,pistachio-cream,mint-cookie,run-brunch-blueberry-pancake,the-pre-run-pb-j,run-brunch-maple-bacon'| split: ','
+        assign productHandles = 'rest-recover-bundle,rest-recover-tea-mint-cookie,rest-recover-tea-lemon-loaf-cake-copy,rest-recover-melatonin-tea-lemon-loaf-cake'| split: ','
         assign products = null
         assign target_collection = null
         assign productSrc = 'PickProduct'
@@ -108,7 +125,7 @@
               endfor
               assign limit = products.length
             else
-              if 8 == 0
+              if 4 == 0
                 paginate collections.all.products by 100000
                   assign products = collections.all.products  | sort : "created_at"  | reverse
                 endpaginate
@@ -134,7 +151,7 @@
     
           
     {%- if products == null -%}
-    {%- if count == 0 and 8 == 0 -%}
+    {%- if count == 0 and 4 == 0 -%}
       {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ 'gempages.ProductList.no_related_products' | t }}</div>
         {% else %}
@@ -407,7 +424,7 @@
     <div data-id="gYeDxxH4cF"
         class="gYeDxxH4cF"
         style="--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1754837394324"
+        data-test-force-publish="1754955189657"
       >
       <div  >
         <h2
@@ -523,7 +540,7 @@
     <div data-id="gFDX7bCkck"
         class="gFDX7bCkck"
         style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1754837394326"
+        data-test-force-publish="1754955189698"
       >
       <div class="gp-flex" style="--jc:left">
         <h2
@@ -546,7 +563,7 @@
     <div data-id="gKRx3UWy5a"
         class="gKRx3UWy5a"
         style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1754837394327"
+        data-test-force-publish="1754955189750"
       >
       <div class="gp-flex" style="--jc:left">
         <h2
@@ -569,7 +586,7 @@
     <div data-id="g4WWNtZvBu"
         class="g4WWNtZvBu"
         style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--mb-mobile:0px;--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1754837394327"
+        data-test-force-publish="1754955189757"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -617,7 +634,7 @@
   
       {%- endif -%}
       {% endfor %}
-      {%- if count == 0 and 8 == 0 -%}
+      {%- if count == 0 and 4 == 0 -%}
         {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ 'gempages.ProductList.no_related_products' | t }}</div>
         {% else %}
@@ -709,7 +726,7 @@
     "name": "EDCP - TEA - Collection",
     "tag": "section",
     "class": "gps-579330342410781465 gps gpsil",
-    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=579330342410781465)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggRY_hSghSQ_text","label":"ggRY_hSghSQ_text","default":"Flavored Roasts"},{"type":"html","id":"ggFDX7bCkck_text","label":"ggFDX7bCkck_text","default":"<s>$34</s>"},{"type":"html","id":"ggKRx3UWy5a_text","label":"ggKRx3UWy5a_text","default":"$29.55"},{"type":"html","id":"gg4WWNtZvBu_text","label":"gg4WWNtZvBu_text","default":"<p>13.1% Off</p>"}],
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=579330342410781465)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggRY_hSghSQ_text","label":"ggRY_hSghSQ_text","default":"Rest &amp; Recover"},{"type":"html","id":"ggZ03v-3VBy_text","label":"ggZ03v-3VBy_text","default":"Melatonin Tea"},{"type":"html","id":"ggFDX7bCkck_text","label":"ggFDX7bCkck_text","default":"<s>$34</s>"},{"type":"html","id":"ggKRx3UWy5a_text","label":"ggKRx3UWy5a_text","default":"$29.55"},{"type":"html","id":"gg4WWNtZvBu_text","label":"gg4WWNtZvBu_text","default":"<p>13.1% Off</p>"}],
     "blocks": [{"type": "@app"}],
     "locales": {}
   }
