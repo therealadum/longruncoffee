@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -18,6 +27,7 @@
     },
     "58fe39a5-778a-406f-a21e-11759f05032e": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Fuel Your passion",
         "heading_size": "h1",
@@ -43,10 +53,33 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "gp_global_section_575296632438915658_6jtbhp": {
+      "type": "gp-global-section-575296632438915658",
+      "name": "PDP - TCF - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggctUhQ68gO_text": "Long Run Co.",
+        "ggbqUqmk4_6_text": "All Products",
+        "gg37c4jo_ET_text": "Long Run Coffee",
+        "gg6k8fldKu4_text": "Electrolyte Infused Coffee",
+        "gginC9tkMJY_text": "Long Run Powder",
+        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
+        "ggltS59Bpaj_text": "Long Run Tea ",
+        "gglzuR2WWY4_text": "Rest &amp; Recover Melatonin Tea",
+        "ggeUnHJL0rV_text": "Long Run Pouches ",
+        "ggdwS969w6E_text": "Coming soon",
+        "ggjF0OBZWKT_text": "Long Run Gear",
+        "ggm_xM7funq_text": "For All Training Routines",
+        "ggMmCDMz3xg_text": "Long Run Bundles",
+        "gg-3aGjg0bg_text": "Bundle &amp; Save"
+      }
     }
   },
   "order": [
     "main",
-    "58fe39a5-778a-406f-a21e-11759f05032e"
+    "58fe39a5-778a-406f-a21e-11759f05032e",
+    "gp_global_section_575296632438915658_6jtbhp"
   ]
 }
