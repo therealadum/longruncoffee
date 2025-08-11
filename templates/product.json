@@ -115,7 +115,6 @@
     },
     "gp_global_section_575284010452779858_6nafAr": {
       "type": "gp-global-section-575284010452779858",
-      "disabled": true,
       "name": "PDP - TCF - Ingr Mobile",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -133,7 +132,6 @@
     },
     "gp_global_section_575274983270384579_Qww3AF": {
       "type": "gp-global-section-575274983270384579",
-      "disabled": true,
       "name": "PDP - TCF - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -187,7 +185,6 @@
     },
     "gp_global_section_565398054547489777_tjax9y": {
       "type": "gp-global-section-565398054547489777",
-      "disabled": true,
       "name": "PDP - TCF - Review Carous",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -232,7 +229,6 @@
     },
     "gp_global_section_574894265742656356_Dppfqy": {
       "type": "gp-global-section-574894265742656356",
-      "disabled": true,
       "name": "PDP - TEA - Videos",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -243,7 +239,6 @@
     },
     "gp_global_section_575285156688953887_xaxTzh": {
       "type": "gp-global-section-575285156688953887",
-      "disabled": true,
       "name": "PDP - TCF - Subscription",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -327,7 +322,6 @@
     },
     "gp_global_section_575288905809527634_FYyFW3": {
       "type": "gp-global-section-575288905809527634",
-      "disabled": true,
       "name": "PDP - TCF - Graph",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -348,7 +342,6 @@
     },
     "gp_global_section_575296632438915658_YaUGKC": {
       "type": "gp-global-section-575296632438915658",
-      "disabled": true,
       "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",
