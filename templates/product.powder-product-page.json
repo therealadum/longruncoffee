@@ -60,7 +60,7 @@
         "ggzb2xx2jt2_text": "<p>Designed to be your go-to cup every day. Easy to brew, easy on your stomach, and helps you show up—consistently.</p>"
       }
     },
-    "gp_global_section_579535949508117089_fmEAk3": {
+    "gp_global_section_579535949508117089_AhJbW7": {
       "type": "gp-global-section-579535949508117089",
       "name": "PDP - PWDR - Usage",
       "settings": {
@@ -69,13 +69,13 @@
         "ggkofmkVLYD_text": "<p><strong>TYPE</strong></p>",
         "gg9gAnTnWaE_text": "<p>Instant Dissolve Powder</p>",
         "ggLfOZyCfmH_text": "<p><strong>Total electrolytes</strong></p>",
-        "gg6zkHZS-RJ_text": "<p>600mg / cup</p>",
+        "gg6zkHZS-RJ_text": "<p>600mg / scoop</p>",
         "ggRxsPNnceE_text": "<p><strong>FORMULATION</strong></p>",
         "gggWyHsUQez_text": "<p>Natural Caffeine, Sodium, </p><p>Potassium, &amp; Magnesium</p>",
         "ggNoIFTooC6_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
         "ggP3IqFz-Xz_text": "<p>50mg / scoop</p>",
         "ggRsrn5sBJI_text": "<p><strong>USAGE</strong></p>",
-        "ggxs98O1NSl_text": "<p>Mix with hot or cold water.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>",
+        "ggxs98O1NSl_text": "<p>Mix one scoop of powder with 12-16 ounces of water. Enjoy hot or cold!</p><p> </p><p>Consume daily, wherever it fits your routine best—to reduce fatigue, stay hydrated, and train consistently.</p>",
         "ggpwcY-6VDM_text": "<p><strong>TYPE</strong></p>",
         "gg1QZK2xm03_text": "<p>Instant Powder</p>",
         "ggSiH_wNDFt_text": "<p><strong>Total Electrolytes</strong></p>",
@@ -85,7 +85,7 @@
         "ggo8N1zs2J3_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
         "ggFbj4tpUH-_text": "<p>50mg / scoop</p>",
         "gguLtupPXuY_text": "<p><strong>USAGE</strong></p>",
-        "ggUT3NHDhh1_text": "<p>Mix with hot or cold water.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>"
+        "ggUT3NHDhh1_text": "<p>Mix one scoop of powder with 12-16 ounces of water. Enjoy hot or cold!</p><p> </p><p>Consume daily, wherever it fits your routine best—to reduce fatigue, stay hydrated, and train consistently.</p>"
       }
     },
     "gp_global_section_579537126144606741_etEfFQ": {
@@ -162,17 +162,40 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "gp_global_section_575296632438915658_ciTf8T": {
+      "type": "gp-global-section-575296632438915658",
+      "name": "PDP - TCF - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggctUhQ68gO_text": "Long Run Co.",
+        "ggbqUqmk4_6_text": "All Products",
+        "gg37c4jo_ET_text": "Long Run Coffee",
+        "gg6k8fldKu4_text": "Electrolyte Infused Coffee",
+        "gginC9tkMJY_text": "Long Run Powder",
+        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
+        "ggltS59Bpaj_text": "Long Run Tea ",
+        "gglzuR2WWY4_text": "Rest &amp; Recover Melatonin Tea",
+        "ggeUnHJL0rV_text": "Long Run Pouches ",
+        "ggdwS969w6E_text": "Coming soon",
+        "ggjF0OBZWKT_text": "Long Run Gear",
+        "ggm_xM7funq_text": "For All Training Routines",
+        "ggMmCDMz3xg_text": "Long Run Bundles",
+        "gg-3aGjg0bg_text": "Bundle &amp; Save"
+      }
     }
   },
   "order": [
     "lrc-base-product",
     "lrc-accordion",
     "gp_global_section_579528993003275033_j9fgF8",
-    "gp_global_section_579535949508117089_fmEAk3",
+    "gp_global_section_579535949508117089_AhJbW7",
     "gp_global_section_579537126144606741_etEfFQ",
     "gp_global_section_574890795677516575_PeEfXE",
     "gp_global_section_575284568160993866_eWBC8w",
     "lrc-coffee-benefits",
+    "gp_global_section_575296632438915658_ciTf8T",
     "17093999844598d023"
   ]
 }
