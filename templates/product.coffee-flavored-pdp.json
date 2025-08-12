@@ -115,6 +115,7 @@
     },
     "gp_global_section_575284010452779858_6nafAr": {
       "type": "gp-global-section-575284010452779858",
+      "disabled": true,
       "name": "PDP - TCF - Ingr Mobile",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -365,6 +366,7 @@
     },
     "gp_global_section_575296632438915658_p9rCbQ": {
       "type": "gp-global-section-575296632438915658",
+      "disabled": true,
       "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",
