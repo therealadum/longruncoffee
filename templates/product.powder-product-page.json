@@ -42,24 +42,6 @@
       ],
       "settings": {}
     },
-    "gp_global_section_579528993003275033_j9fgF8": {
-      "type": "gp-global-section-579528993003275033",
-      "name": "PDP - PWDR - Benefits",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggLxDjJCpql_childItem_0": "<p><strong>Reduce Training fatigue</strong></p>",
-        "ggLxDjJCpql_childItem_1": "<p><strong>Hydrate faster</strong></p>",
-        "ggLxDjJCpql_childItem_2": "<p><strong>strong caffeine kick</strong></p>",
-        "ggLxDjJCpql_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
-        "ggLxDjJCpql_childItem_4": "<p><strong>Built for Routine</strong></p>",
-        "ggAb2jFpgaG_text": "<p>Reduces training fatigue, so you can run more and stay consistent.</p>",
-        "ggMq_xTbDdE_text": "<p>Long Run Coffee delivers a clean caffeine boost with added electrolytes—so you hydrate while you drink.</p>",
-        "gg1-fihQocm_text": "<p>Caffeine + electrolytes delivers a noticeably stronger boost—without the crash. Hydration supports energy uptake, so you feel it more and feel it longer.</p>",
-        "gguBZCxAWEW_text": "<p>No sugar. No calories. No fillers, no weird additives—just coffee + electrolytes.</p>",
-        "ggzb2xx2jt2_text": "<p>Designed to be your go-to cup every day. Easy to brew, easy on your stomach, and helps you show up—consistently.</p>"
-      }
-    },
     "gp_global_section_579535949508117089_AhJbW7": {
       "type": "gp-global-section-579535949508117089",
       "name": "PDP - PWDR - Usage",
@@ -148,21 +130,6 @@
         "cta_scroll_to_id": "lrc-klaviyo-form"
       }
     },
-    "17093999844598d023": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_iFiJeK": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_iFiJeK"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "gp_global_section_575296632438915658_ciTf8T": {
       "type": "gp-global-section-575296632438915658",
       "name": "PDP - TCF - Cross Sell",
@@ -184,12 +151,48 @@
         "ggMmCDMz3xg_text": "Long Run Bundles",
         "gg-3aGjg0bg_text": "Bundle &amp; Save"
       }
+    },
+    "17093999844598d023": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_iFiJeK": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_iFiJeK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "gp_global_section_579528993003275033_MpCjHk": {
+      "type": "gp-global-section-579528993003275033",
+      "name": "PDP - PWDR - Benefits",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggLxDjJCpql_childItem_0": "<p><strong>Reduce Training fatigue</strong></p>",
+        "ggLxDjJCpql_childItem_1": "<p><strong>Hydrate faster</strong></p>",
+        "ggLxDjJCpql_childItem_2": "<p><strong>strong caffeine kick</strong></p>",
+        "ggLxDjJCpql_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
+        "ggLxDjJCpql_childItem_4": "<p><strong>Built for Routine</strong></p>",
+        "ggAb2jFpgaG_text": "<p>Electrolyte + caffeine formula that reduces fatigue, so you can feel good while training.</p>",
+        "ggMq_xTbDdE_text": "<p>Optimized electrolyte blend containing 600mg of potassium, magnesium and sodium is formulated for rapid absorption, so your body rehydrates efficiently before, during, or after workouts.</p>",
+        "gg1-fihQocm_text": "<p>With 50mg of natural caffeine per serving, Ready to Run delivers a performance boost that’s smoother and longer-lasting than, keeping energy high without the crash.</p>",
+        "gguBZCxAWEW_text": "<p>No added zero sugar, no artificial additives, and only performance-focused ingredients you can trust.</p>",
+        "ggzb2xx2jt2_text": "<p>Easy - just mix with hot or cold water. It's simple to use, effective, and helps you train consistently.</p>"
+      }
     }
   },
   "order": [
     "lrc-base-product",
     "lrc-accordion",
-    "gp_global_section_579528993003275033_j9fgF8",
+    "gp_global_section_579528993003275033_MpCjHk",
     "gp_global_section_579535949508117089_AhJbW7",
     "gp_global_section_579537126144606741_etEfFQ",
     "gp_global_section_574890795677516575_PeEfXE",
