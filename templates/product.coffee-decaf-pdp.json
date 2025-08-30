@@ -69,6 +69,34 @@
         "ggcQBm_qVyQ_text": "<p>Designed to be your go-to cup every day. Easy to brew, easy on your stomach, and helps you show up—consistently.</p>"
       }
     },
+    "gp_global_section_576320491959092050_Jmr4RM": {
+      "type": "gp-global-section-576320491959092050",
+      "name": "PDP - TCF Decaf - Usage",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gg5Z8nbBpzQ_text": "<p><strong>TYPE</strong></p>",
+        "ggfgUcMKLWF_text": "<p>Fresh Roasted Coffee</p><p> </p>",
+        "ggXWJTYfVxj_text": "<p><strong>Total electrolytes</strong></p>",
+        "ggyPGkbr2YQ_text": "<p>275mg / cup</p>",
+        "ggoXodAEMHI_text": "<p><strong>FORMULATION</strong></p>",
+        "gg7uw3ePuPV_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
+        "ggRilQsxymz_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
+        "ggm1Qq3TfKz_text": "<p>Decaffeinated - 0mg / cup</p>",
+        "ggMXBqXs2Ls_text": "<p><strong>USAGE</strong></p>",
+        "ggQFX1QNdp7_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>",
+        "gghNY0bTh7i_text": "<p><strong>TYPE</strong></p>",
+        "gg7VYXeaKak_text": "<p>Fresh Roasted Coffee</p>",
+        "ggrIjLrMpzD_text": "<p><strong>Total Electrolytes</strong></p>",
+        "ggUBypWjLht_text": "<p>275mg / cup</p>",
+        "gg3hajLLGTx_text": "<p><strong>FORMULATION</strong></p>",
+        "ggrET5rv7cS_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
+        "ggPb3KlUp6o_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
+        "ggSJDwgvrb7_text": "<p>Decaffeinated - 0mg / cup</p>",
+        "ggBReBSX9CI_text": "<p><strong>USAGE</strong></p>",
+        "ggnREhqXVS3_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>"
+      }
+    },
     "gp_global_section_575266263094264394_C3cxVU": {
       "type": "gp-global-section-575266263094264394",
       "name": "PDP - TCF - Badges",
@@ -177,6 +205,7 @@
     },
     "gp_global_section_574894265742656356_Dppfqy": {
       "type": "gp-global-section-574894265742656356",
+      "disabled": true,
       "name": "PDP - TEA - Videos",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -231,14 +260,14 @@
         "gg6xTyq5P4E_text": "If you don't love it, we’ll make it right. No pressure. No hassle. Just support you can feel—backed by our promise."
       }
     },
-    "gp_global_section_575286887443333970_GytpJc": {
+    "gp_global_section_575286887443333970_jbWCdG": {
       "type": "gp-global-section-575286887443333970",
       "name": "PDP - TCF - US vs. Them",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
         "ggaboT0xorq_text": "Long Run Co. vs. Your Old Routine",
-        "gg-prd5XQON_text": "Rest &amp; Recover",
+        "gg-prd5XQON_text": "electrolytes + caffeine",
         "ggTtlfMs97k_text": "Your New<br>Routine",
         "gg-v21CdpZg_text": "Your Old Routine",
         "ggo6zh8Bivm_text": "Energy + Hydration<br>in one",
@@ -357,7 +386,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_iFiJeK": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
@@ -395,34 +427,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "gp_global_section_576320491959092050_Jmr4RM": {
-      "type": "gp-global-section-576320491959092050",
-      "name": "PDP - TCF Decaf - Usage",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "gg5Z8nbBpzQ_text": "<p><strong>TYPE</strong></p>",
-        "ggfgUcMKLWF_text": "<p>Fresh Roasted Coffee</p><p> </p>",
-        "ggXWJTYfVxj_text": "<p><strong>Total electrolytes</strong></p>",
-        "ggyPGkbr2YQ_text": "<p>275mg / cup</p>",
-        "ggoXodAEMHI_text": "<p><strong>FORMULATION</strong></p>",
-        "gg7uw3ePuPV_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
-        "ggRilQsxymz_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
-        "ggm1Qq3TfKz_text": "<p>Decaffeinated - 0mg / cup</p>",
-        "ggMXBqXs2Ls_text": "<p><strong>USAGE</strong></p>",
-        "ggQFX1QNdp7_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>",
-        "gghNY0bTh7i_text": "<p><strong>TYPE</strong></p>",
-        "gg7VYXeaKak_text": "<p>Fresh Roasted Coffee</p>",
-        "ggrIjLrMpzD_text": "<p><strong>Total Electrolytes</strong></p>",
-        "ggUBypWjLht_text": "<p>275mg / cup</p>",
-        "gg3hajLLGTx_text": "<p><strong>FORMULATION</strong></p>",
-        "ggrET5rv7cS_text": "<p>Sodium, Potassium, </p><p>Calcium, &amp; Magnesium</p>",
-        "ggPb3KlUp6o_text": "<p><strong>CAFFEINE LEVEL</strong></p>",
-        "ggSJDwgvrb7_text": "<p>Decaffeinated - 0mg / cup</p>",
-        "ggBReBSX9CI_text": "<p><strong>USAGE</strong></p>",
-        "ggnREhqXVS3_text": "<p>Works with any brewing method, hot or cold.</p><p> </p><p>Consume daily, wherever it fits your routine best, to reduce fatigue, stay hydrated, and train consistently.</p>"
-      }
     }
   },
   "order": [
@@ -439,7 +443,7 @@
     "gp_global_section_574894265742656356_Dppfqy",
     "gp_global_section_575284568160993866_Rwc3Px",
     "gp_global_section_575285156688953887_xaxTzh",
-    "gp_global_section_575286887443333970_GytpJc",
+    "gp_global_section_575286887443333970_jbWCdG",
     "gp_global_section_575288905809527634_FYyFW3",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
