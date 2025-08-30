@@ -327,7 +327,6 @@
     },
     "gp_global_section_575288905809527634_FYyFW3": {
       "type": "gp-global-section-575288905809527634",
-      "disabled": true,
       "name": "PDP - TCF - Graph",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -348,7 +347,6 @@
     },
     "gp_global_section_575296632438915658_YaUGKC": {
       "type": "gp-global-section-575296632438915658",
-      "disabled": true,
       "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -374,7 +372,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_iFiJeK": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
