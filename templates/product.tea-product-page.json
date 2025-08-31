@@ -115,6 +115,7 @@
     },
     "gp_global_section_574758233458082591_9x96Qt": {
       "type": "gp-global-section-574758233458082591",
+      "disabled": true,
       "name": "PDP - TEA - Ingr Mobile",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -130,6 +131,7 @@
     },
     "gp_global_section_574889549818234085_cpgDRT": {
       "type": "gp-global-section-574889549818234085",
+      "disabled": true,
       "name": "PDP - TEA - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -145,6 +147,7 @@
     },
     "gp_global_section_574890795677516575_im9tMf": {
       "type": "gp-global-section-574890795677516575",
+      "disabled": true,
       "name": "PDP - TEA - Trust",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -281,6 +284,7 @@
     },
     "gp_global_section_575121399417406693_aYkVgE": {
       "type": "gp-global-section-575121399417406693",
+      "disabled": true,
       "name": "PDP - TEA - Graph",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -347,6 +351,7 @@
     },
     "gp_global_section_575296632438915658_9FcLKy": {
       "type": "gp-global-section-575296632438915658",
+      "disabled": true,
       "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",

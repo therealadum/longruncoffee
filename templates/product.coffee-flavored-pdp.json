@@ -115,6 +115,7 @@
     },
     "gp_global_section_575284010452779858_6nafAr": {
       "type": "gp-global-section-575284010452779858",
+      "disabled": true,
       "name": "PDP - TCF - Ingr Mobile",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -132,6 +133,7 @@
     },
     "gp_global_section_575274983270384579_Qww3AF": {
       "type": "gp-global-section-575274983270384579",
+      "disabled": true,
       "name": "PDP - TCF - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -161,6 +163,7 @@
     },
     "gp_global_section_565398054547489777_tjax9y": {
       "type": "gp-global-section-565398054547489777",
+      "disabled": true,
       "name": "PDP - TCF - Review Carous",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -283,6 +286,27 @@
         "ggasMdwSpgH_text": "x"
       }
     },
+    "gp_global_section_575288905809527634_FYyFW3": {
+      "type": "gp-global-section-575288905809527634",
+      "disabled": true,
+      "name": "PDP - TCF - Graph",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggs1mveBL6Z_text": "Long Run Stats",
+        "gg7ULgUKiVC_text": "Data on endurance, fatigue, and power with electrolytes + caffeine.",
+        "ggqP9tp9Fge_text": "Long Run Stats",
+        "gg4wkLFYPmJ_text": "Data on endurance, fatigue, and power with electrolytes + caffeine.",
+        "ggqECmNFmJy_childItem_0": "<p><strong>Endurance</strong></p>",
+        "ggqECmNFmJy_childItem_1": "<p><strong>Fatigue</strong></p>",
+        "ggqECmNFmJy_childItem_2": "<p><strong>Power</strong></p>",
+        "ggqECmNFmJy_childItem_3": "<p><strong>Sources</strong></p>",
+        "ggjS56vtM6x_text": "<p>Combining electrolytes with caffeine helps the body perform longer before fatigue sets in. It supports muscular efficiency, hydration balance, and delayed exhaustion during endurance efforts.</p><p> </p><p><strong>Avg. improvement in time to exhaustion: +18–25%</strong></p>",
+        "ggMoHc9Bo_f_text": "<p>Electrolytes + caffeine reduce perceived effort during training, so the same pace feels easier. It helps you push harder without feeling like you are.</p><p><br><strong>Avg. reduction in fatigue (RPE): –9–14%</strong></p>",
+        "ggFBMcEs5IT_text": "<p>The combo of electrolytes and caffeine improves muscular power and stamina. That means better performance, especially in longer sessions.</p><p> </p><p><strong>Avg. increase in power output: +5–7%</strong></p>",
+        "ggGfNeaNVPy_text": "<p>Cureton KJ, Warren GL, Millard-Stafford ML, Wingo JE, Trilk JL, Buyckx M. Caffeine effects on endurance performance in athletes. <i>Int J Sport Nutr Exerc Metab.</i> 2007;17(2):113–129.</p><p> </p><p>Ganio MS, Armstrong LE, Casa DJ, McDermott BP, Lee EC, Yamamoto LM, Marzano S, Lopez RM, Jimenez L, Le Bellego L, Chevillotte E, Lieberman HR, Maresh CM. Evidence-based approach to lingering hydration and energy effects of caffeine and carbohydrate co-ingestion. <i>Sports Med.</i> 2009;39(4):295–330.</p><p> </p><p>Ganio MS, Klau JF, Lee EC, Yeargin SW, McDermott BP, et al. Effect of caffeine on sport-specific endurance performance: a systematic review. <i>Sports Med.</i> 2009;39(10):813–832.</p>"
+      }
+    },
     "gp_global_section_575294284735971914_pYYbJr": {
       "type": "gp-global-section-575294284735971914",
       "name": "PDP - TCF - FAQ",
@@ -322,26 +346,6 @@
         "gg6JjLkTEPr_text": "<p>Long Run Coffee does not have sweeteners. Flavored coffees use natural oil extracts to create the products flavor profile. Traditional coffees do not have any oil extracts.</p>"
       }
     },
-    "gp_global_section_575288905809527634_FYyFW3": {
-      "type": "gp-global-section-575288905809527634",
-      "name": "PDP - TCF - Graph",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggs1mveBL6Z_text": "Long Run Stats",
-        "gg7ULgUKiVC_text": "Data on endurance, fatigue, and power with electrolytes + caffeine.",
-        "ggqP9tp9Fge_text": "Long Run Stats",
-        "gg4wkLFYPmJ_text": "Data on endurance, fatigue, and power with electrolytes + caffeine.",
-        "ggqECmNFmJy_childItem_0": "<p><strong>Endurance</strong></p>",
-        "ggqECmNFmJy_childItem_1": "<p><strong>Fatigue</strong></p>",
-        "ggqECmNFmJy_childItem_2": "<p><strong>Power</strong></p>",
-        "ggqECmNFmJy_childItem_3": "<p><strong>Sources</strong></p>",
-        "ggjS56vtM6x_text": "<p>Combining electrolytes with caffeine helps the body perform longer before fatigue sets in. It supports muscular efficiency, hydration balance, and delayed exhaustion during endurance efforts.</p><p> </p><p><strong>Avg. improvement in time to exhaustion: +18–25%</strong></p>",
-        "ggMoHc9Bo_f_text": "<p>Electrolytes + caffeine reduce perceived effort during training, so the same pace feels easier. It helps you push harder without feeling like you are.</p><p><br><strong>Avg. reduction in fatigue (RPE): –9–14%</strong></p>",
-        "ggFBMcEs5IT_text": "<p>The combo of electrolytes and caffeine improves muscular power and stamina. That means better performance, especially in longer sessions.</p><p> </p><p><strong>Avg. increase in power output: +5–7%</strong></p>",
-        "ggGfNeaNVPy_text": "<p>Cureton KJ, Warren GL, Millard-Stafford ML, Wingo JE, Trilk JL, Buyckx M. Caffeine effects on endurance performance in athletes. <i>Int J Sport Nutr Exerc Metab.</i> 2007;17(2):113–129.</p><p> </p><p>Ganio MS, Armstrong LE, Casa DJ, McDermott BP, Lee EC, Yamamoto LM, Marzano S, Lopez RM, Jimenez L, Le Bellego L, Chevillotte E, Lieberman HR, Maresh CM. Evidence-based approach to lingering hydration and energy effects of caffeine and carbohydrate co-ingestion. <i>Sports Med.</i> 2009;39(4):295–330.</p><p> </p><p>Ganio MS, Klau JF, Lee EC, Yeargin SW, McDermott BP, et al. Effect of caffeine on sport-specific endurance performance: a systematic review. <i>Sports Med.</i> 2009;39(10):813–832.</p>"
-      }
-    },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
       "disabled": true,
@@ -362,6 +366,7 @@
     },
     "gp_global_section_575296632438915658_p9rCbQ": {
       "type": "gp-global-section-575296632438915658",
+      "disabled": true,
       "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",

@@ -42,6 +42,24 @@
       ],
       "settings": {}
     },
+    "gp_global_section_579528993003275033_MpCjHk": {
+      "type": "gp-global-section-579528993003275033",
+      "name": "PDP - PWDR - Benefits",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggLxDjJCpql_childItem_0": "<p><strong>Reduce Training fatigue</strong></p>",
+        "ggLxDjJCpql_childItem_1": "<p><strong>Hydrate faster</strong></p>",
+        "ggLxDjJCpql_childItem_2": "<p><strong>strong caffeine kick</strong></p>",
+        "ggLxDjJCpql_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
+        "ggLxDjJCpql_childItem_4": "<p><strong>Built for Routine</strong></p>",
+        "ggAb2jFpgaG_text": "<p>Electrolyte + caffeine formula that reduces fatigue, so you can feel good while training.</p>",
+        "ggMq_xTbDdE_text": "<p>Optimized electrolyte blend containing 600mg of potassium, magnesium and sodium is formulated for rapid absorption, so your body rehydrates efficiently before, during, or after workouts.</p>",
+        "gg1-fihQocm_text": "<p>With 50mg of natural caffeine per serving, Ready to Run delivers a performance boost that’s smoother and longer-lasting than, keeping energy high without the crash.</p>",
+        "gguBZCxAWEW_text": "<p>No added zero sugar, no artificial additives, and only performance-focused ingredients you can trust.</p>",
+        "ggzb2xx2jt2_text": "<p>Easy - just mix with hot or cold water. It's simple to use, effective, and helps you train consistently.</p>"
+      }
+    },
     "gp_global_section_579535949508117089_AhJbW7": {
       "type": "gp-global-section-579535949508117089",
       "name": "PDP - PWDR - Usage",
@@ -124,6 +142,7 @@
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
+      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
@@ -132,6 +151,7 @@
     },
     "gp_global_section_575296632438915658_ciTf8T": {
       "type": "gp-global-section-575296632438915658",
+      "disabled": true,
       "name": "PDP - TCF - Cross Sell",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -168,24 +188,6 @@
       ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "gp_global_section_579528993003275033_MpCjHk": {
-      "type": "gp-global-section-579528993003275033",
-      "name": "PDP - PWDR - Benefits",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggLxDjJCpql_childItem_0": "<p><strong>Reduce Training fatigue</strong></p>",
-        "ggLxDjJCpql_childItem_1": "<p><strong>Hydrate faster</strong></p>",
-        "ggLxDjJCpql_childItem_2": "<p><strong>strong caffeine kick</strong></p>",
-        "ggLxDjJCpql_childItem_3": "<p><strong>Clean Ingredients</strong></p>",
-        "ggLxDjJCpql_childItem_4": "<p><strong>Built for Routine</strong></p>",
-        "ggAb2jFpgaG_text": "<p>Electrolyte + caffeine formula that reduces fatigue, so you can feel good while training.</p>",
-        "ggMq_xTbDdE_text": "<p>Optimized electrolyte blend containing 600mg of potassium, magnesium and sodium is formulated for rapid absorption, so your body rehydrates efficiently before, during, or after workouts.</p>",
-        "gg1-fihQocm_text": "<p>With 50mg of natural caffeine per serving, Ready to Run delivers a performance boost that’s smoother and longer-lasting than, keeping energy high without the crash.</p>",
-        "gguBZCxAWEW_text": "<p>No added zero sugar, no artificial additives, and only performance-focused ingredients you can trust.</p>",
-        "ggzb2xx2jt2_text": "<p>Easy - just mix with hot or cold water. It's simple to use, effective, and helps you train consistently.</p>"
       }
     }
   },
