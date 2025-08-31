@@ -9,33 +9,6 @@
  */
 {
   "sections": {
-    "gp_global_section_577161261100303251_9NnngB": {
-      "type": "gp-global-section-577161261100303251",
-      "disabled": true,
-      "name": "Banner - Tea - Live",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggzSph4oUzd_dayLabel": "Days",
-        "ggzSph4oUzd_hourLabel": "Hours",
-        "ggzSph4oUzd_minuteLabel": "Minutes",
-        "ggzSph4oUzd_secondLabel": "Seconds",
-        "ggzSph4oUzd_weekLabel": "Weeks"
-      }
-    },
-    "gp_global_section_578664403788890747_QndRT4": {
-      "type": "gp-global-section-578664403788890747",
-      "name": "Banner - Black Hat",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggOatd-XHlN_dayLabel": "Days",
-        "ggOatd-XHlN_hourLabel": "Hours",
-        "ggOatd-XHlN_minuteLabel": "Minutes",
-        "ggOatd-XHlN_secondLabel": "Seconds",
-        "ggOatd-XHlN_weekLabel": "Weeks"
-      }
-    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -46,6 +19,19 @@
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "background-1"
+      }
+    },
+    "gp_global_section_582385718626615921_nRkxQC": {
+      "type": "gp-global-section-582385718626615921",
+      "name": "Banner - Pumpkin - Pre",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "gguQN1CXkne_dayLabel": "Days",
+        "gguQN1CXkne_hourLabel": "Hours",
+        "gguQN1CXkne_minuteLabel": "Minutes",
+        "gguQN1CXkne_secondLabel": "Seconds",
+        "gguQN1CXkne_weekLabel": "Weeks"
       }
     },
     "product-grid": {
@@ -70,9 +56,8 @@
     }
   },
   "order": [
-    "gp_global_section_577161261100303251_9NnngB",
-    "gp_global_section_578664403788890747_QndRT4",
     "banner",
+    "gp_global_section_582385718626615921_nRkxQC",
     "product-grid"
   ]
 }
