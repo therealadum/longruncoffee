@@ -359,28 +359,6 @@
         "gg6JjLkTEPr_text": "<p>Long Run Coffee does not have sweeteners. Flavored coffees use natural oil extracts to create the products flavor profile. Traditional coffees do not have any oil extracts.</p>"
       }
     },
-    "gp_global_section_575296632438915658_CgyWxY": {
-      "type": "gp-global-section-575296632438915658",
-      "name": "PDP - TCF - Cross Sell",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggctUhQ68gO_text": "Long Run Co.",
-        "ggbqUqmk4_6_text": "All Products",
-        "gg37c4jo_ET_text": "Long Run Powder",
-        "gg6k8fldKu4_text": "Electrolyte Powder + Natural Caffeine",
-        "gginC9tkMJY_text": "Long Run Powder",
-        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
-        "ggltS59Bpaj_text": "Long Run Tea ",
-        "gglzuR2WWY4_text": "Rest &amp; Recover Melatonin Tea",
-        "ggeUnHJL0rV_text": "Long Run Pouches ",
-        "ggdwS969w6E_text": "Coming soon",
-        "ggjF0OBZWKT_text": "Long Run Gear",
-        "ggm_xM7funq_text": "For All Training Routines",
-        "ggMmCDMz3xg_text": "Long Run Bundles",
-        "gg-3aGjg0bg_text": "Bundle &amp; Save"
-      }
-    },
     "17093999844598d023": {
       "type": "apps",
       "blocks": {
@@ -399,29 +377,51 @@
         "include_margins": true
       }
     },
-    "featured_collection_gax4K9": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+    "collection_list_NiXN47": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_wAnxdU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "coffee"
+          }
+        },
+        "featured_collection_GtMDET": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "powders"
+          }
+        },
+        "featured_collection_F9tG6V": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rest-recover-tea"
+          }
+        },
+        "featured_collection_RjA8AJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gear"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_wAnxdU",
+        "featured_collection_GtMDET",
+        "featured_collection_F9tG6V",
+        "featured_collection_RjA8AJ"
+      ],
+      "custom_css": [
+        "h3{font-size:20px}"
+      ],
+      "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "Electrolyte Coffee",
+        "title": "Long Run Co. Products",
         "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "coffee",
-        "products_to_show": 12,
+        "image_ratio": "square",
         "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "accent-2",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -448,8 +448,7 @@
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "gp_global_section_575294284735971914_fJyjxt",
-    "gp_global_section_575296632438915658_CgyWxY",
     "17093999844598d023",
-    "featured_collection_gax4K9"
+    "collection_list_NiXN47"
   ]
 }

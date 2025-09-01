@@ -189,6 +189,57 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "collection_list_B6Qkc9": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_yqeiMa": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "coffee"
+          }
+        },
+        "featured_collection_8CbrPD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "powders"
+          }
+        },
+        "featured_collection_GRJ84q": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rest-recover-tea"
+          }
+        },
+        "featured_collection_ncbfC8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gear"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_yqeiMa",
+        "featured_collection_8CbrPD",
+        "featured_collection_GRJ84q",
+        "featured_collection_ncbfC8"
+      ],
+      "custom_css": [
+        "h3{font-size:20px}"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Long Run Co. Products",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-9b3d66b6-3b72-498b-af77-1f72538c3a8c",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -201,6 +252,7 @@
     "gp_global_section_575284568160993866_eWBC8w",
     "lrc-coffee-benefits",
     "gp_global_section_575296632438915658_ciTf8T",
-    "17093999844598d023"
+    "17093999844598d023",
+    "collection_list_B6Qkc9"
   ]
 }

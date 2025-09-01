@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "77990eb0-2559-470f-be36-9072020dc37c": {
@@ -13,15 +22,16 @@
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>See if your question has been answered in our FAQ.<\/p><p>If not, contact us below and we will get back to you in a jiffy.<\/p>",
+            "text": "<p>Long Run Co. is a small business built by athletes, for athletes. </p><p>We welcome any and all feedback—good or bad—so we can continue getting better. </p><p>Drop us a note below and we will respond in a jiffy. </p>",
             "text_style": "body"
           }
         },
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-button-1": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "View FAQs",
-            "button_link": "shopify:\/\/pages\/faq"
+            "button_link": "shopify://pages/faq"
           }
         }
       },
@@ -31,10 +41,11 @@
         "template--20922550976825__77990eb0-2559-470f-be36-9072020dc37c-button-1"
       ],
       "custom_css": [
-        "h2 {font-size: 36px;}"
+        "h2 {font-size: 36px;}",
+        "p {font-size: 18px;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Email_Pic_2.png",
+        "image": "shopify://shop_images/Email_Pic_2.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -71,8 +82,7 @@
     "coming-soon": {
       "type": "coming-soon",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "9ae28934-928f-4a51-bfb4-14de2c49646a": {
       "type": "newsletter",
@@ -87,16 +97,15 @@
         "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-paragraph-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Access special offers, limited edition coffees, and extra motivation <\/p>"
+            "text": "<p>Access special offers, limited edition coffees, and extra motivation </p>"
           }
         },
         "template--19876927570233__9ae28934-928f-4a51-bfb4-14de2c49646a-email_form-1": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         },
         "759f7b1e-376e-43a3-8f89-69dd1ee66f7a": {
-          "type": "shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "disabled": true,
           "settings": {
             "form_id": "",
