@@ -21,17 +21,17 @@
         "color_scheme": "background-1"
       }
     },
-    "gp_global_section_582385718626615921_nRkxQC": {
-      "type": "gp-global-section-582385718626615921",
-      "name": "Banner - Pumpkin - Pre",
+    "gp_global_section_583018061796213400_kUPmWx": {
+      "type": "gp-global-section-583018061796213400",
+      "name": "Banner - Pumpkin - Live",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "gguQN1CXkne_dayLabel": "Days",
-        "gguQN1CXkne_hourLabel": "Hours",
-        "gguQN1CXkne_minuteLabel": "Minutes",
-        "gguQN1CXkne_secondLabel": "Seconds",
-        "gguQN1CXkne_weekLabel": "Weeks"
+        "ggH5HUuPDYU_dayLabel": "Days",
+        "ggH5HUuPDYU_hourLabel": "Hours",
+        "ggH5HUuPDYU_minuteLabel": "Minutes",
+        "ggH5HUuPDYU_secondLabel": "Seconds",
+        "ggH5HUuPDYU_weekLabel": "Weeks"
       }
     },
     "product-grid": {
@@ -57,7 +57,7 @@
   },
   "order": [
     "banner",
-    "gp_global_section_582385718626615921_nRkxQC",
+    "gp_global_section_583018061796213400_kUPmWx",
     "product-grid"
   ]
 }
