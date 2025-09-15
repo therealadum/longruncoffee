@@ -24,7 +24,7 @@
           "type": "lrc-accordion-image",
           "settings": {
             "title": "Ingredients",
-            "image": "shopify://shop_images/R2R_14.png"
+            "image": "shopify://shop_images/R2R_ade6242d-ab75-4c5c-9a1f-34eb06fd3b95.png"
           }
         },
         "lrc_accordion_item_3": {
@@ -225,7 +225,7 @@
         "featured_collection_ncbfC8"
       ],
       "custom_css": [
-        "h3{font-size:20px}"
+        "h3 {font-size: 20px;}"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
