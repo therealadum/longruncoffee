@@ -23,6 +23,7 @@
     },
     "gp_global_section_583018061796213400_kUPmWx": {
       "type": "gp-global-section-583018061796213400",
+      "disabled": true,
       "name": "Banner - Pumpkin - Live",
       "settings": {
         "section_preload": "off_lazy_script",
