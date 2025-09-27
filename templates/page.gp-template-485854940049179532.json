@@ -11,6 +11,7 @@
   "sections": {
     "gp_global_section_583018775566091096_MgLqtL": {
       "type": "gp-global-section-583018775566091096",
+      "disabled": true,
       "name": "Banner - Pumpkin - Sub",
       "settings": {
         "section_preload": "off_lazy_script",
