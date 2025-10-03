@@ -26,6 +26,26 @@
       ],
       "settings": {}
     },
+    "gp_global_section_575163681055179620_JQLGME": {
+      "type": "gp-global-section-575163681055179620",
+      "name": "PDP - TEA - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggyBjC9ocKS_text": "Long Run Co.",
+        "ggTlNWpTBqW_text": "All Products",
+        "ggrCAOrRvIS_text": "Long Run Coffee",
+        "ggHvrwYeJgy_text": "Coffee + Electrolytes",
+        "ggjPG2BYlxP_text": "Long Run Powder",
+        "ggamV38Vef9_text": "Electrolyte Powder + Natural Caffeine",
+        "ggV1LitCFFk_text": "Long Run Pouches ",
+        "gg3P52AUq4O_text": "Coming soon",
+        "ggPPtPLNjy2_text": "Long Run Gear",
+        "ggzZajgEBe7_text": "For All Training Routines",
+        "ggoeoQPWbNu_text": "Long Run Tea",
+        "ggfbIHsZGJH_text": "Melatonin Tea"
+      }
+    },
     "image_with_text_PizpqR": {
       "type": "image-with-text",
       "blocks": {
@@ -47,7 +67,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify://products/long-run-coffee-card"
+            "button_link": "shopify://products/long-run-gift-card"
           }
         }
       },
@@ -74,6 +94,7 @@
     },
     "lrc-coffee-benefits-short": {
       "type": "lrc-coffee-benefits-short",
+      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
@@ -82,6 +103,7 @@
     },
     "lrc-coffee-benefits": {
       "type": "lrc-coffee-benefits",
+      "disabled": true,
       "settings": {
         "show_cta": false,
         "cta_text": "Start for $3",
@@ -297,15 +319,16 @@
   "order": [
     "lrc-base-product",
     "lrc-accordion",
+    "gp_global_section_575163681055179620_JQLGME",
     "image_with_text_PizpqR",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
     "image_banner_f6FhGD",
     "one-click-upsell",
     "lrc-review-summary",
+    "17093999844598d023",
     "0e698922-8ed8-423d-886f-c78375d71373",
     "1693874745cc6bc7e5",
-    "17093999844598d023",
     "3e4ec809-784d-4120-a4a6-cced1ff5c986",
     "featured_blog_nEgRQe",
     "featured_blog_NdLydd"
