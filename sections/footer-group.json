@@ -11,6 +11,16 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_liquid_GmXpTJ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"appstle-loyalty-redeem-widget-block\" id=\"appstle-loyalty-redeem-widget-block\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -58,6 +68,7 @@
     }
   },
   "order": [
+    "custom_liquid_GmXpTJ",
     "footer"
   ]
 }
