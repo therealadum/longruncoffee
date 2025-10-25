@@ -11,13 +11,13 @@
   "sections": {
     "gp_section_578802995890750075": {
       "settings": {
-        "checksum": "7e61e1d0d70e6a3051abe0a032eca3a5ac505ae717f71d24610fb803b4845a3a_1_1_1_0__1",
+        "checksum": "6304040c1956da5e1cd0aff92bc312454e0728fa5722489ea103d7cdb325c54f_1_1_1_0__1",
         "ggLgqUawelF_text": "Built for athletes",
         "ggUe0uRg95H_text": "Built for Routines",
-        "ggeVL4EU1d7_text": "All Long Run products are designed to support training, recovery, and performance.",
-        "ggv6dRzS6wz_text": "Built to help you stay consistent, so you can build a routine you actually love.",
-        "ggxBsbD4IQo_text": "We built the products we couldn’t find. And we’ll keep building for the athletes we support.",
-        "ggxMeup770L_text": "Athlete Founded"
+        "ggeVL4EU1d7_text": "Designed to support training, recovery, and performance.",
+        "ggv6dRzS6wz_text": "Created to make consistency easy, and support routine.",
+        "ggxBsbD4IQo_text": "No product replaces effort. But the right tools make a difference.",
+        "ggxMeup770L_text": "Built for effort"
       },
       "type": "gp-section-578802995890750075"
     },
@@ -41,7 +41,7 @@
     },
     "gp_section_578802996024968065": {
       "settings": {
-        "checksum": "881eff91ee3077cef7e137835972b0f576d03b6aebd236165e104ff438de090f_1_1_1_0__1",
+        "checksum": "db167da1d4b4edf70183ddf23d65bf5d2b3423ca572be2eeefcd7f77bc1ccc56_1_1_1_0__1",
         "ggcW_RJGpuE_text": "energy Pouches",
         "ggnAXg1FLDR_text": "Reduce training fatigue with a strong energy kick, delivered in 5 minutes or less.",
         "ggs-GKLSXxT_leftImageLabel": "Before",
@@ -51,7 +51,7 @@
     },
     "gp_section_578802996025033601": {
       "settings": {
-        "checksum": "394a20c25afd9edb557fd4ea95e5bf643ebcb4323d4b4663ff5bd001d9cf690e_1_1_1_0__1",
+        "checksum": "d7f6084b603c9606b467c41473ba7ab42442268c98a9db4555829cdbef568542_1_1_1_0__1",
         "gg10sOiM6Lb_text": "energy",
         "gg5NbSanC4u_label": "<p>shop Now</p>",
         "ggOLRqL_qy-_text": "<p>Shop by benefit</p>",
@@ -64,7 +64,7 @@
     },
     "gp_section_578802996058522505": {
       "settings": {
-        "checksum": "c4706db73fa0ae7ad976cf112418f68104e97563e808975f445b4180d0c1aadc_1_1_1_0__1",
+        "checksum": "8384f300e1fcc58c9ef739904c9990a6c44e427fe59c59c1843175c9b0395fea_1_1_1_0__1",
         "gg0Fbf6CNAK_text": "<p><span style=\"background-color:rgb(255,255,255);color:rgb(51,78,104);font-size:16px;\">Perfection is a myth.</span></p>",
         "gg8Sw14bvcf_text": "<p><span style=\"background-color:rgb(255,255,255);color:rgb(51,78,104);font-size:16px;\">The quiet grind demands discipline, resilience, and patience.</span></p>",
         "ggAaMwN6dkF_text": "Discomfort Builds Strength",
@@ -84,7 +84,7 @@
     },
     "gp_section_578802996058588041": {
       "settings": {
-        "checksum": "9c11bff06ddde87f55c9068cc865020475236c3ec8a19adcd9f8f3df8d0a62ec_1_1_1_0__1",
+        "checksum": "ba1ae414164c3c3dfe69e72d5fdb65d09cdb2dc2aa7fcda256c765aaacbe0949_1_1_1_0__1",
         "gg4pP8jVwMn_text": "Join our text list&nbsp;",
         "ggkehhtSkxZ_text": "<p>Text subscribers get special access to products releases, the best offers, and more.</p>"
       },
@@ -92,15 +92,27 @@
     },
     "gp_section_578802996108853883": {
       "settings": {
-        "checksum": "f32a79334b91c1b713d7d91013b3843be805b83b20d17d62ff5da3eea779e3f5_1_1_1_0__1",
+        "checksum": "110c8aedd1b0b31fb7157a8dc78bae9d999bd8c35efcc8bd05b4b5928d7349f9_1_1_1_0__1",
+        "gg3Eg6Unc1V_text": "<p>“This hat has transformed my daily outings, providing unparalleled comfort and protection.”</p>",
+        "gg4U9gvE3Sj_text": "<p>-Maria K.</p>",
+        "gg5jUF69qJ9_text": "<p>“This hat has transformed my daily outings, providing unparalleled comfort and protection.”</p>",
         "gg6EpaN38oe_text": "<p>“This hat has transformed my daily outings, providing unparalleled comfort and protection.”</p>",
+        "gg7qAQofQO4_text": "<p>Pretty slick</p>",
         "ggAt_BZ85M4_text": "<p>1.8k+ 5-Star Reviews</p>",
         "ggGc_bzI3Ry_text": "<p>-Maria K.</p>",
+        "ggK3zcBbqgl_text": "<p>“This hat has transformed my daily outings, providing unparalleled comfort and protection.”</p>",
         "ggK8wT8Zams_text": "<p>Pretty slick</p>",
-        "ggOwYroYPFh_text": "what our Athletes Say About Us",
+        "ggKbP_mJ_6n_text": "<p>Pretty slick</p>",
+        "ggOwYroYPFh_text": "what our athletes say",
+        "ggRQ9CZYYKY_text": "<p>-Maria K.</p>",
+        "ggVyLrh9R2w_text": "<p>-Maria K.</p>",
+        "ggdI3a539ir_text": "<p>Pretty slick</p>",
+        "ggg1RIxMxTw_text": "<p>-Maria K.</p>",
+        "ggkxJk2YsWw_text": "<p>Pretty slick</p>",
         "ggmOftG4JKU_text": "<p>“This hat has transformed my daily outings, providing unparalleled comfort and protection.”</p>",
         "ggpbPEwtjNO_text": "<p>-Maria K.</p>",
-        "ggrBZf3vK6z_text": "<p>Pretty slick</p>"
+        "ggrBZf3vK6z_text": "<p>Pretty slick</p>",
+        "ggv9CnRVXkw_text": "<p>“This hat has transformed my daily outings, providing unparalleled comfort and protection.”</p>"
       },
       "type": "gp-section-578802996108853883"
     },
@@ -127,14 +139,14 @@
     },
     "gp_section_578874802912100885": {
       "settings": {
-        "checksum": "551bb7830b0ada4df960fac8dcf180b44876f2b4590013feba5f1f04db95bfde_1_1_1_0__1",
+        "checksum": "e49d558d1de3a4b76bd393b4227d8923adeffaa02627a3132dede899a2ea825f_1_1_1_0__1",
         "ggceYYV1wtf_text": "<p>Top Rated Products</p>"
       },
       "type": "gp-section-578874802912100885"
     },
     "gp_section_578957573491786545": {
       "settings": {
-        "checksum": "794b4531a8c54c613094bc46fb246ba32e8f417a259403a412eba0e94028149b_1_1_1_0__1",
+        "checksum": "123c6983f914aa2650b7c7445ce07409d4963eaf0252e4b1433291e62cae3ea9_1_1_1_0__1",
         "ggTKQPd9k-N_text": "Brand partners",
         "gg_EAtF-1lj_text": "100M+",
         "ggydpu77OVp_text": "Miles Fueled by Long Run Co.",
@@ -154,7 +166,7 @@
     },
     "gp_section_579099972058743577": {
       "settings": {
-        "checksum": "416f02310a245870fa89832e730593592e1170898f1c9be332a2a55075d2336e_1_1_1_0__1",
+        "checksum": "2df28c3993605e072e9afae2e4f4d120e12a673715f3bd78ec218189ea5bb596_1_1_1_0__1",
         "ggDeA58lXWf_text": "Melatonin Tea",
         "ggZ1jWz_yAA_text": "Rest &amp; Recover helps athletes fall asleep faster and recover fully, so you can train harder tomorrow."
       },
