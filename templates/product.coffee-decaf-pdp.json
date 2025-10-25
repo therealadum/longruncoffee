@@ -115,6 +115,7 @@
     },
     "gp_global_section_575284010452779858_6nafAr": {
       "type": "gp-global-section-575284010452779858",
+      "disabled": true,
       "name": "PDP - TCF - Ingr Mobile",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -132,6 +133,7 @@
     },
     "gp_global_section_575274983270384579_Qww3AF": {
       "type": "gp-global-section-575274983270384579",
+      "disabled": true,
       "name": "PDP - TCF - Ingr Desktop",
       "settings": {
         "section_preload": "off_lazy_script",
@@ -366,6 +368,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         }
@@ -412,7 +416,7 @@
         "featured_collection_RjA8AJ"
       ],
       "custom_css": [
-        "h3{font-size:20px}"
+        "h3 {font-size: 20px;}"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
