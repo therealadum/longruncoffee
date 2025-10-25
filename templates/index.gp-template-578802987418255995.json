@@ -1,0 +1,180 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_578802995890750075": {
+      "settings": {
+        "checksum": "7e61e1d0d70e6a3051abe0a032eca3a5ac505ae717f71d24610fb803b4845a3a_1_1_1_0__1",
+        "ggLgqUawelF_text": "Built for athletes",
+        "ggUe0uRg95H_text": "Built for Routines",
+        "ggeVL4EU1d7_text": "All Long Run products are designed to support training, recovery, and performance.",
+        "ggv6dRzS6wz_text": "Built to help you stay consistent, so you can build a routine you actually love.",
+        "ggxBsbD4IQo_text": "We built the products we couldn’t find. And we’ll keep building for the athletes we support.",
+        "ggxMeup770L_text": "Athlete Founded"
+      },
+      "type": "gp-section-578802995890750075"
+    },
+    "gp_section_578802996008190857": {
+      "settings": {
+        "checksum": "c9fd633680b715fb6444799f9cc93320aed86d9d07ee2ddb4dbaa0e3f1a09da0_1_1_1_0__1",
+        "gg5w1zBzUnL_text": "Long RUn Club",
+        "gg94gPgWHHC_childItem_0": "<p>Save up to 25%</p>",
+        "gg94gPgWHHC_childItem_1": "<p>Free Long Run Gear</p>",
+        "gg94gPgWHHC_childItem_2": "<p>Skip, Edit, cancel. Anytime</p>",
+        "ggDApuDoA_j_label": "<p>Subscribe Now</p>",
+        "ggWsbxuUj6r_text": "<p>Flexible subscriptions, for consistent training</p>"
+      },
+      "type": "gp-section-578802996008190857"
+    },
+    "gp_section_578802996024967911": {
+      "settings": {
+        "checksum": "281a5524667ae2ebbc1851a6c954a17304a2acf1bc8c6eb026712af91be86dba_1_1_1_0__1"
+      },
+      "type": "gp-section-578802996024967911"
+    },
+    "gp_section_578802996024968065": {
+      "settings": {
+        "checksum": "881eff91ee3077cef7e137835972b0f576d03b6aebd236165e104ff438de090f_1_1_1_0__1",
+        "ggcW_RJGpuE_text": "energy Pouches",
+        "ggnAXg1FLDR_text": "Reduce training fatigue with a strong energy kick, delivered in 5 minutes or less.",
+        "ggs-GKLSXxT_leftImageLabel": "Before",
+        "ggs-GKLSXxT_rightImageLabel": "After"
+      },
+      "type": "gp-section-578802996024968065"
+    },
+    "gp_section_578802996025033601": {
+      "settings": {
+        "checksum": "394a20c25afd9edb557fd4ea95e5bf643ebcb4323d4b4663ff5bd001d9cf690e_1_1_1_0__1",
+        "gg10sOiM6Lb_text": "energy",
+        "gg5NbSanC4u_label": "<p>shop Now</p>",
+        "ggOLRqL_qy-_text": "<p>Shop by benefit</p>",
+        "ggaR8uDBgCp_label": "<p>shop Now</p>",
+        "gghkmaxWC7m_text": "hydration",
+        "ggi-WgDcmN6_text": "Recovery",
+        "ggs-IFmfcD__label": "<p>Shop Now</p>"
+      },
+      "type": "gp-section-578802996025033601"
+    },
+    "gp_section_578802996058522505": {
+      "settings": {
+        "checksum": "c4706db73fa0ae7ad976cf112418f68104e97563e808975f445b4180d0c1aadc_1_1_1_0__1",
+        "gg0Fbf6CNAK_text": "<p><span style=\"background-color:rgb(255,255,255);color:rgb(51,78,104);font-size:16px;\">Perfection is a myth.</span></p>",
+        "gg8Sw14bvcf_text": "<p><span style=\"background-color:rgb(255,255,255);color:rgb(51,78,104);font-size:16px;\">The quiet grind demands discipline, resilience, and patience.</span></p>",
+        "ggAaMwN6dkF_text": "Discomfort Builds Strength",
+        "ggE-z-Yc-hF_text": "<p>July &nbsp;29, 2025 | Long Run Co.</p>",
+        "ggH4tuTvEAA_text": "<p>August &nbsp;5, 2025 | Long Run Co.</p>",
+        "ggJ6w-Os-t__text": "Success is Quiet",
+        "ggMj7Mn9J56_text": "<p>June 16, 2025 | Long Run Co.</p>",
+        "ggUxUJKEVzJ_text": "Mindset, Training, &amp; Hard-Earned Lessons",
+        "ggV9hwH5mM0_text": "A Hard Life Is a Good Life",
+        "ggWwmg0_VxK_text": "<p>June 16, 2025 | Long Run Co.</p>",
+        "ggY1To7P1Pw_text": "Long Run Library",
+        "gg_LVbC-WEJ_text": "Consistency Before Perfection",
+        "ggjs9ZAtt7A_text": "<p>Avoiding the hard parts means avoiding the best parts of progress.</p>",
+        "ggwOsNz5UyM_text": "<p>The easy life is the one that actually costs the most.</p>"
+      },
+      "type": "gp-section-578802996058522505"
+    },
+    "gp_section_578802996058588041": {
+      "settings": {
+        "checksum": "9c11bff06ddde87f55c9068cc865020475236c3ec8a19adcd9f8f3df8d0a62ec_1_1_1_0__1",
+        "gg4pP8jVwMn_text": "Join our text list&nbsp;",
+        "ggkehhtSkxZ_text": "<p>Text subscribers get special access to products releases, the best offers, and more.</p>"
+      },
+      "type": "gp-section-578802996058588041"
+    },
+    "gp_section_578802996108853883": {
+      "settings": {
+        "checksum": "f32a79334b91c1b713d7d91013b3843be805b83b20d17d62ff5da3eea779e3f5_1_1_1_0__1",
+        "gg6EpaN38oe_text": "<p>“This hat has transformed my daily outings, providing unparalleled comfort and protection.”</p>",
+        "ggAt_BZ85M4_text": "<p>1.8k+ 5-Star Reviews</p>",
+        "ggGc_bzI3Ry_text": "<p>-Maria K.</p>",
+        "ggK8wT8Zams_text": "<p>Pretty slick</p>",
+        "ggOwYroYPFh_text": "what our Athletes Say About Us",
+        "ggmOftG4JKU_text": "<p>“This hat has transformed my daily outings, providing unparalleled comfort and protection.”</p>",
+        "ggpbPEwtjNO_text": "<p>-Maria K.</p>",
+        "ggrBZf3vK6z_text": "<p>Pretty slick</p>"
+      },
+      "type": "gp-section-578802996108853883"
+    },
+    "gp_section_578805009794204553": {
+      "settings": {
+        "checksum": "fb598423bcfb78d898a317c6cd23903dd1f67cf758e9978737f8a3f4543c2ea5_1_1_1_0__1",
+        "gg4NCnRoZyP_text": "<p><strong>Unique supplements built for athletes — to train harder, recover faster, and stay consistent.</strong></p>",
+        "ggJed0Ka5A4_text": "<p>Build a routine you love.</p>",
+        "ggNX1EgLKLK_text": "<p>Build a routine you love.</p>",
+        "ggPCJoi6LxJ_label": "<p>Shop all</p>",
+        "ggQNw_qqFfm_text": "<strong>Fuel. perform. Recover.</strong>",
+        "ggk3nK0P9bD_label": "<p>Shop all</p>",
+        "ggrm5F4hqJP_text": "<p><strong>Routine building products for athletes to train harder &amp; recover faster.</strong></p>",
+        "ggyOj4FiuyC_text": "<strong>Fuel. perform. Recover.</strong>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-578805009794204553"
+    },
+    "gp_section_578809263741207425": {
+      "settings": {
+        "checksum": "dd665f3d1fca0e4d1fa4b345f86d7b1b2b5a723bf662967ac07603f8c1147932_1_1_1_0__1"
+      },
+      "type": "gp-section-578809263741207425"
+    },
+    "gp_section_578874802912100885": {
+      "settings": {
+        "checksum": "551bb7830b0ada4df960fac8dcf180b44876f2b4590013feba5f1f04db95bfde_1_1_1_0__1",
+        "ggceYYV1wtf_text": "<p>Top Rated Products</p>"
+      },
+      "type": "gp-section-578874802912100885"
+    },
+    "gp_section_578957573491786545": {
+      "settings": {
+        "checksum": "794b4531a8c54c613094bc46fb246ba32e8f417a259403a412eba0e94028149b_1_1_1_0__1",
+        "ggTKQPd9k-N_text": "Brand partners",
+        "gg_EAtF-1lj_text": "100M+",
+        "ggydpu77OVp_text": "Miles Fueled by Long Run Co.",
+        "ggyyc_VJzp5_text": "1.8k+ Reviews"
+      },
+      "type": "gp-section-578957573491786545"
+    },
+    "gp_section_579097202291376737": {
+      "settings": {
+        "checksum": "62bdda73b1af3317e9f9e56d154cdff31831a649a374e3df7564350389d13af0_1_1_1_0__1",
+        "ggM1BmJnpCn_text": "Coffee + Electrolytes",
+        "ggUKkNjVOku_text": "Long Run Coffee provides a strong energy kick, hydration boost, and is easy on the stomach.",
+        "ggqGWmApFzv_leftImageLabel": "Before",
+        "ggqGWmApFzv_rightImageLabel": "After"
+      },
+      "type": "gp-section-579097202291376737"
+    },
+    "gp_section_579099972058743577": {
+      "settings": {
+        "checksum": "416f02310a245870fa89832e730593592e1170898f1c9be332a2a55075d2336e_1_1_1_0__1",
+        "ggDeA58lXWf_text": "Melatonin Tea",
+        "ggZ1jWz_yAA_text": "Rest &amp; Recover helps athletes fall asleep faster and recover fully, so you can train harder tomorrow."
+      },
+      "type": "gp-section-579099972058743577"
+    }
+  },
+  "order": [
+    "gp_section_578805009794204553",
+    "gp_section_578802996024967911",
+    "gp_section_578809263741207425",
+    "gp_section_578874802912100885",
+    "gp_section_578802995890750075",
+    "gp_section_578802996025033601",
+    "gp_section_578802996008190857",
+    "gp_section_578802996024968065",
+    "gp_section_578957573491786545",
+    "gp_section_579097202291376737",
+    "gp_section_579099972058743577",
+    "gp_section_578802996108853883",
+    "gp_section_578802996058588041",
+    "gp_section_578802996058522505"
+  ]
+}
