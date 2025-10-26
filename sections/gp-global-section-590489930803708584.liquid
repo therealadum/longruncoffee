@@ -54,7 +54,7 @@
     <div data-id="gq_0kPKK9R"
         class="gq_0kPKK9R"
         style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:15px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mb-mobile:5px;--pt-mobile:0px;--pl-mobile:20px;--pb-mobile:0px;--pr-mobile:0px;--mb-tablet:0px;--pl-tablet:0px;--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1761489030674"
+        data-test-force-publish="1761489082928"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -95,16 +95,19 @@
         if request.page_type == 'collection' or preview_page_type == 'collection'
           assign target_collection = collection
           if target_collection == empty or target_collection == null
-            if '506522108217' == 'latest'
+            if '508935209273' == 'latest'
               assign target_collection = collections | sort: 'updated_at'  | first
             else
               
-          for collection in collections
-            if collection.id == 506522108217
-              assign target_collection = collection
-              break
-            endif
-          endfor
+          assign target_collection = collections['caffyne-energy-pouches']
+          if target_collection == empty
+            for collection in collections
+              if collection.id == 508935209273
+                assign target_collection = collection
+                break
+              endif
+            endfor
+          endif
         
             endif
           endif
@@ -132,16 +135,19 @@
               endif
             endunless
           else
-            if '506522108217' == 'latest'
+            if '508935209273' == 'latest'
               assign target_collection = collections | sort: 'updated_at'  | first
             else
               
-          for collection in collections
-            if collection.id == 506522108217
-              assign target_collection = collection
-              break
-            endif
-          endfor
+          assign target_collection = collections['caffyne-energy-pouches']
+          if target_collection == empty
+            for collection in collections
+              if collection.id == 508935209273
+                assign target_collection = collection
+                break
+              endif
+            endfor
+          endif
         
             endif
             paginate target_collection.products by 50
@@ -163,7 +169,7 @@
     {%-else-%}
       
     
-    <gp-carousel gp-data='{"id":"product-list-carousel-gACpuyFXsB","setting":{"dotSize":{"desktop":12},"dotGapToCarousel":{"desktop":16},"arrowIconSize":{"desktop":24},"showWhenHover":false,"rtl":false,"arrowButtonSize":{"desktop":{"shapeLinked":true,"shapeValue":"1/1"}},"arrowCustom":"<svg height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508817562042106216\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z\" /></svg>","arrowCustomColor":"#151515","autoplay":false,"autoplayTimeout":2,"columns":{"desktop":4,"mobile":1,"tablet":2},"dot":{"desktop":false,"mobile":true},"dotActiveColor":{"desktop":"line-3"},"dotColor":{"desktop":"bg-1"},"dotStyle":{"desktop":"outside"},"dragToScroll":true,"enableDrag":{"desktop":true},"loop":{"desktop":false},"navigationEnable":{"desktop":true,"mobile":false},"navigationStyle":{"desktop":"outside","mobile":"outside"},"numberOfProducts":"50","pauseOnHover":true,"productSetting":{"collectionId":"gid://shopify/Collection/506522108217","hasRelatedExclude":false,"productHandles":["club-bonus-rest-recover-tea-lemon-loaf-cake","rest-recover-melatonin-tea-lemon-loaf-cake","dark-roast-copy-copy","dark-roast-copy-2"],"productIds":["gid://shopify/Product/9923510763833","gid://shopify/Product/9922063532345","gid://shopify/Product/9920334266681","gid://shopify/Product/9920334135609"],"productSrc":"Collection","productTitles":["Club Bonus:  Rest & Recover Tea — Lemon Loaf Cake","Rest & Recover Tea — Lemon Loaf Cake","Dark Roast","Dark Roast"],"relatedTag":["collection"],"relatedType":"related-product"},"sameHeight":false,"slidesToShow":{"desktop":"6","mobile":"4","tablet":"6"},"speed":2},"styles":{"height":{"desktop":"auto","mobile":"auto","tablet":"auto"},"horizontalGutter":{"desktop":"16px","mobile":"16px"},"layout":"slider","spacing":{"desktop":"30","mobile":"0","tablet":"10"},"verticalGutter":{"desktop":"8px","mobile":"8px"},"width":{"desktop":"100%","mobile":"100%","tablet":"100%"},"sizeSetting":{"desktop":{"height":"auto","width":"100%"},"tablet":{"height":"auto","width":"100%"},"mobile":{"height":"auto","width":"100%"}}}}' data-id="gACpuyFXsB" id="gp-root-carousel-product-list-carousel-gACpuyFXsB" items-repeat="true"  class="gp-group/carousel gp-w-full gp-flex gp-justify-center gp-overflow-hidden">
+    <gp-carousel gp-data='{"id":"product-list-carousel-gACpuyFXsB","setting":{"dotSize":{"desktop":12},"dotGapToCarousel":{"desktop":16},"arrowIconSize":{"desktop":24},"showWhenHover":false,"rtl":false,"arrowButtonSize":{"desktop":{"shapeLinked":true,"shapeValue":"1/1"}},"arrowCustom":"<svg height=\"20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 256 256\" fill=\"currentColor\" data-id=\"508817562042106216\">\n              <path fill=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" fill=\"currentColor\" d=\"M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z\" /></svg>","arrowCustomColor":"#151515","autoplay":false,"autoplayTimeout":2,"columns":{"desktop":4,"mobile":1,"tablet":2},"dot":{"desktop":false,"mobile":true},"dotActiveColor":{"desktop":"line-3"},"dotColor":{"desktop":"bg-1"},"dotStyle":{"desktop":"outside"},"dragToScroll":true,"enableDrag":{"desktop":true},"loop":{"desktop":false},"navigationEnable":{"desktop":true,"mobile":false},"navigationStyle":{"desktop":"outside","mobile":"outside"},"numberOfProducts":"50","pauseOnHover":true,"productSetting":{"collectionId":"gid://shopify/Collection/508935209273","hasRelatedExclude":false,"productHandles":["club-bonus-rest-recover-tea-lemon-loaf-cake","rest-recover-melatonin-tea-lemon-loaf-cake","dark-roast-copy-copy","dark-roast-copy-2"],"productIds":["gid://shopify/Product/9923510763833","gid://shopify/Product/9922063532345","gid://shopify/Product/9920334266681","gid://shopify/Product/9920334135609"],"productSrc":"Collection","productTitles":["Club Bonus:  Rest & Recover Tea — Lemon Loaf Cake","Rest & Recover Tea — Lemon Loaf Cake","Dark Roast","Dark Roast"],"relatedTag":["collection"],"relatedType":"related-product","collectionHandle":"caffyne-energy-pouches"},"sameHeight":false,"slidesToShow":{"desktop":"6","mobile":"4","tablet":"6"},"speed":2},"styles":{"height":{"desktop":"auto","mobile":"auto","tablet":"auto"},"horizontalGutter":{"desktop":"16px","mobile":"16px"},"layout":"slider","spacing":{"desktop":"30","mobile":"0","tablet":"10"},"verticalGutter":{"desktop":"8px","mobile":"8px"},"width":{"desktop":"100%","mobile":"100%","tablet":"100%"},"sizeSetting":{"desktop":{"height":"auto","width":"100%"},"tablet":{"height":"auto","width":"100%"},"mobile":{"height":"auto","width":"100%"}}}}' data-id="gACpuyFXsB" id="gp-root-carousel-product-list-carousel-gACpuyFXsB" items-repeat="true"  class="gp-group/carousel gp-w-full gp-flex gp-justify-center gp-overflow-hidden">
       <div
         
         class="gACpuyFXsB gp-relative gp-my-0 tablet:gp-px-0 gp-max-w-full mobile:gp-px-0 gp-carousel-wrapper mobile:gp-block tablet:gp-block gp-block"
@@ -478,7 +484,7 @@
     <div data-id="gCYyeS1epp"
         class="gCYyeS1epp"
         style="--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1761489030687"
+        data-test-force-publish="1761489082942"
       >
       <div  >
         <h1
@@ -669,7 +675,7 @@
     "name": "PDP - PCH - Other Product",
     "tag": "section",
     "class": "gps-590489930803708584 gps gpsil",
-    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=590489930803708584)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggq_0kPKK9R_text","label":"ggq_0kPKK9R_text","default":"<p>MORE ELECTROLYTE COFFEE</p>"}],
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=590489930803708584)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggq_0kPKK9R_text","label":"ggq_0kPKK9R_text","default":"<p>MORE Caffyne Pouches</p>"}],
     "blocks": [{"type": "@app"}],
     "locales": {}
   }
