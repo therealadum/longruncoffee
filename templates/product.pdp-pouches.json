@@ -19,26 +19,10 @@
         "product-description": {
           "type": "product-description",
           "settings": {}
-        },
-        "lrc_accordion_item_2": {
-          "type": "lrc-accordion-image",
-          "settings": {
-            "title": "Ingredients",
-            "image": "shopify://shop_images/Supp_w_CalCarb_5.png"
-          }
-        },
-        "lrc_accordion_item_3": {
-          "type": "lrc-accordion-text",
-          "settings": {
-            "title": "How to Use",
-            "body": "Long Run Coffee is actual coffee (not coffee alternative) and works with any brewing method! LRC is meant to be consumed daily, wherever it fits your routine best."
-          }
         }
       },
       "block_order": [
-        "product-description",
-        "lrc_accordion_item_2",
-        "lrc_accordion_item_3"
+        "product-description"
       ],
       "settings": {}
     },
