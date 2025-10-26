@@ -41,7 +41,7 @@
     },
     "gp_section_578802996024968065": {
       "settings": {
-        "checksum": "c79392d526ce9886a75de13e4de480284cad5c21d0901341fae22e652969b509_1_1_1_0__1",
+        "checksum": "6aa67b3233d2a5459c4a715faee6c29bfbddca1f47e7555e4cbd203bfec69832_1_1_1_0__1",
         "ggcW_RJGpuE_text": "energy Pouches",
         "ggnAXg1FLDR_text": "Reduce training fatigue with a strong energy kick, delivered in 5 minutes or less.",
         "ggn_ZTN-j9P_label": "<p>View more</p>",
@@ -93,7 +93,7 @@
     },
     "gp_section_578802996108853883": {
       "settings": {
-        "checksum": "62f0268658aaa1d0ed879dfe3cd42e152a738312614aff67ad84cb7ceaf4a870_1_1_1_0__1",
+        "checksum": "c00888154b7a606e2e5901893bddda3fd774b0459282b6c7ca3b6504e78ad1ba_1_1_1_0__1",
         "gg3Eg6Unc1V_text": "<p>“Strong enough to work, but still feels natural. Waking up rested has changed my training.”</p>",
         "gg4U9gvE3Sj_text": "<p>- Quinn</p>",
         "gg5jUF69qJ9_text": "<p>“This coffee doesn’t wreck my stomach before runs. It's easy energy that lasts.”</p>",
@@ -157,11 +157,9 @@
     },
     "gp_section_579097202291376737": {
       "settings": {
-        "checksum": "62bdda73b1af3317e9f9e56d154cdff31831a649a374e3df7564350389d13af0_1_1_1_0__1",
+        "checksum": "bf8f3c7775194060414936cfe55da7ae800a4fea13d27915254b20bfa55cc6d7_1_1_1_0__1",
         "ggM1BmJnpCn_text": "Coffee + Electrolytes",
-        "ggUKkNjVOku_text": "Long Run Coffee provides a strong energy kick, hydration boost, and is easy on the stomach.",
-        "ggqGWmApFzv_leftImageLabel": "Before",
-        "ggqGWmApFzv_rightImageLabel": "After"
+        "ggUKkNjVOku_text": "Long Run Coffee provides a strong energy kick, hydration boost, and is easy on the stomach."
       },
       "type": "gp-section-579097202291376737"
     },
