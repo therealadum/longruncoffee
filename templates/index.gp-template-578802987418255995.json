@@ -41,9 +41,10 @@
     },
     "gp_section_578802996024968065": {
       "settings": {
-        "checksum": "cc6d71a7e2624fc2b42dd29d9251bd67406c547b18f9f0430e588e821ba847be_1_1_1_0__1",
+        "checksum": "c79392d526ce9886a75de13e4de480284cad5c21d0901341fae22e652969b509_1_1_1_0__1",
         "ggcW_RJGpuE_text": "energy Pouches",
         "ggnAXg1FLDR_text": "Reduce training fatigue with a strong energy kick, delivered in 5 minutes or less.",
+        "ggn_ZTN-j9P_label": "<p>View more</p>",
         "ggs-GKLSXxT_leftImageLabel": "Before",
         "ggs-GKLSXxT_rightImageLabel": "After"
       },
@@ -139,7 +140,7 @@
     },
     "gp_section_578874802912100885": {
       "settings": {
-        "checksum": "7ebfca5fdaf7a30fb80cbb149e071f1c78e578010d1a64e2e21c4f0f68345a4b_1_1_1_0__1",
+        "checksum": "c2febb8ff6b9a8eed3cd79f9ae53f6c88f231a8b0827b568a541fe0cd4457ce4_1_1_1_0__1",
         "ggceYYV1wtf_text": "<p>Top Rated Products</p>"
       },
       "type": "gp-section-578874802912100885"
