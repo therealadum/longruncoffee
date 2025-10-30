@@ -13,7 +13,7 @@
           style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:none;--pl-tablet:none;--pl-mobile:none;--pr:none;--pr-tablet:none;--pr-mobile:none"
         >
           
-    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color","preload":false}},"uid":"g17-WHGcs2"}' data-id="g17-WHGcs2" id="g17-WHGcs2" data-same-height-subgrid-container class="g17-WHGcs2 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--blockPadding:base;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:60px;--pl:0px;--pb:90px;--pr:0px;--pt-tablet:60px;--pl-tablet:0px;--pb-tablet:90px;--pr-tablet:0px;--pt-mobile:25px;--pb-mobile:15px;--cg:32px;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"transparent","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"repeat":"no-repeat","size":"cover","type":"color","preload":false}},"uid":"g17-WHGcs2"}' data-id="g17-WHGcs2" id="g17-WHGcs2" data-same-height-subgrid-container class="g17-WHGcs2 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--blockPadding:base;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:60px;--pl:0px;--pb:90px;--pr:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:90px;--pr-tablet:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:70px;--pr-mobile:0px;--cg:32px;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
       
 
       <div
@@ -34,13 +34,13 @@
     >
       <div class='gp-flex gp-w-full' style="--jc:center">
         <div
-          style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--op:100%;--pageType:GP_INDEX;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--w:80%;--bgi:none;--bgi-tablet:none;--bgi-mobile:none"
+          style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--op:100%;--pageType:GP_INDEX;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--w:80%;--w-tablet:90%;--w-mobile:90%;--bgi:none;--bgi-tablet:none;--bgi-mobile:none"
         >
           {%- assign gpBkProduct = product -%}
           {%- assign gpBkProducts = products -%}
           
       {%- liquid
-        assign productHandles = 'caffyne-energy-pouches-canyon-citrus,caffyne-energy-pouches-summit-mint,rest-recover-tea-mint-cookie,rest-recover-tea-lemon-loaf-cake-copy,out-n-back-medium-dark-blend,trail-mix'| split: ','
+        assign productHandles = 'caffyne-energy-pouches-canyon-citrus,caffyne-energy-pouches-summit-mint,trail-mix,ready-to-run,rest-recover-tea-mint-cookie,rest-recover-melatonin-tea-lemon-loaf-cake,the-post-race-banana,the-long-run,pistachio-cream,junk-miles'| split: ','
         assign products = null
         assign target_collection = null
         assign productSrc = 'PickProduct'
@@ -83,7 +83,7 @@
               endfor
               assign limit = products.length
             else
-              if 6 == 0
+              if 10 == 0
                 paginate collections.all.products by 100000
                   assign products = collections.all.products  | sort : "created_at"  | reverse
                 endpaginate
@@ -114,7 +114,7 @@
     
           
     {%- if products == null -%}
-    {%- if count == 0 and 6 == 0 -%}
+    {%- if count == 0 and 10 == 0 -%}
       {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ 'gempages.ProductList.no_related_products' | t }}</div>
         {% else %}
@@ -125,14 +125,14 @@
       
     <div
       items-repeat="true" data-id="gL_mkTIqrM"
-      style="--cg:40px;--cg-mobile:16px;--gtc:repeat(6, minmax(0, 1fr));--gtc-tablet:repeat(3, minmax(0, 1fr));--gtc-mobile:repeat(2, minmax(0, 1fr))"
+      style="--cg:40px;--cg-mobile:25px;--gtc:repeat(5, minmax(0, 1fr));--gtc-tablet:repeat(5, minmax(0, 1fr));--gtc-mobile:repeat(2, minmax(0, 1fr))"
       class="!gp-m-auto gp-grid gp-w-full gp-grid-flow-row"
     >
       
       <gp-same-height
         class="gp-contents"
         style="visibility: hidden"
-        gp-data='{"targetUid":"g_WeGLIDt4","slidesToShow":{"desktop":6,"mobile":2,"tablet":3},"rowGap":{"desktop":"20px","mobile":"16px"}}'>
+        gp-data='{"targetUid":"g_WeGLIDt4","slidesToShow":{"desktop":5,"mobile":2,"tablet":5},"rowGap":{"desktop":"20px","mobile":"30px"}}'>
         
       {%- assign count = 0 -%}
       {%- for product in products limit: limit -%}
@@ -457,7 +457,7 @@
     <div data-id="g61_0SzmxO"
         class="g61_0SzmxO"
         style="--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1761744474837"
+        data-test-force-publish="1761826172584"
       >
       <div  >
         <h2
@@ -482,7 +482,7 @@
     <div id="p-price-gntu093lbR" data-id
         
         style="--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1761744474837"
+        data-test-force-publish="1761826172585"
       >
       <div  >
         <div
@@ -543,7 +543,7 @@
           data-id="gXjMZisTYM" dataId="gXjMZisTYM" data-state="idle" aria-label="Subscribe"
           
           href="{{ product.url }}" target="_self"
-          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--bgi:;--bg:#FFF6EB;--c:#FDB153;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:15px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:180%;--lh-mobile:180%"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px;--bgi:;--bg:#FFF6EB;--c:#FDB153;--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:15px;--size-tablet:16px;--size-mobile:13px;--lh:150%;--lh-tablet:180%;--lh-mobile:140%"
           class="btn-view-more gXjMZisTYM gp-text-center gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
         >
         
@@ -552,7 +552,7 @@
           
     <span
       data-gp-text
-      style="--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:15px;--size-tablet:16px;--size-mobile:14px;--lh:150%;--lh-tablet:180%;--lh-mobile:180%;--ts:none;word-break:break-word"
+      style="--ff:var(--g-font-IntroRust, 'IntroRust'), var(--g-font-body, body);--weight:400;--size:15px;--size-tablet:16px;--size-mobile:13px;--lh:150%;--lh-tablet:180%;--lh-mobile:140%;--ts:none;word-break:break-word"
       class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
     >
       {{ section.settings.ggXjMZisTYM_label }}
@@ -581,7 +581,7 @@
   
       {%- endif -%}
       {% endfor %}
-      {%- if count == 0 and 6 == 0 -%}
+      {%- if count == 0 and 10 == 0 -%}
         {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ 'gempages.ProductList.no_related_products' | t }}</div>
         {% else %}
@@ -667,7 +667,7 @@
 {% schema %}
   {
     
-    "name": "Section 5",
+    "name": "Section 7",
     "tag": "section",
     "class": "gps-590914711055238090 gps gpsil",
     "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/longruncoffee/apps/gempages-cro/app/shopify/edit?pageType=GP_STATIC&editorId=590828359563346774&sectionId=590914711055238090)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"false"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggXjMZisTYM_label","label":"ggXjMZisTYM_label","default":"Subscribe"}],
