@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "gp_global_section_591509319564919464_aGJ4YF": {
+      "type": "gp-global-section-591509319564919464",
+      "name": "Banner - Santa - Pre",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggXyICsu1u4_dayLabel": "Days",
+        "ggXyICsu1u4_hourLabel": "Hours",
+        "ggXyICsu1u4_minuteLabel": "Minutes",
+        "ggXyICsu1u4_secondLabel": "Seconds",
+        "ggXyICsu1u4_weekLabel": "Weeks"
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -19,20 +32,6 @@
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "background-1"
-      }
-    },
-    "gp_global_section_583018061796213400_kUPmWx": {
-      "type": "gp-global-section-583018061796213400",
-      "disabled": true,
-      "name": "Banner - Pumpkin - Live",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggH5HUuPDYU_dayLabel": "Days",
-        "ggH5HUuPDYU_hourLabel": "Hours",
-        "ggH5HUuPDYU_minuteLabel": "Minutes",
-        "ggH5HUuPDYU_secondLabel": "Seconds",
-        "ggH5HUuPDYU_weekLabel": "Weeks"
       }
     },
     "product-grid": {
@@ -57,8 +56,8 @@
     }
   },
   "order": [
+    "gp_global_section_591509319564919464_aGJ4YF",
     "banner",
-    "gp_global_section_583018061796213400_kUPmWx",
     "product-grid"
   ]
 }
