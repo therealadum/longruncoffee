@@ -26,26 +26,6 @@
       ],
       "settings": {}
     },
-    "gp_global_section_575163681055179620_JQLGME": {
-      "type": "gp-global-section-575163681055179620",
-      "name": "PDP - TEA - Cross Sell",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggyBjC9ocKS_text": "Long Run Co.",
-        "ggTlNWpTBqW_text": "All Products",
-        "ggrCAOrRvIS_text": "Long Run Coffee",
-        "ggHvrwYeJgy_text": "Coffee + Electrolytes",
-        "ggjPG2BYlxP_text": "Long Run Powder",
-        "ggamV38Vef9_text": "Electrolyte Powder + Natural Caffeine",
-        "ggV1LitCFFk_text": "Long Run Pouches ",
-        "gg3P52AUq4O_text": "Coming soon",
-        "ggPPtPLNjy2_text": "Long Run Gear",
-        "ggzZajgEBe7_text": "For All Training Routines",
-        "ggoeoQPWbNu_text": "Long Run Tea",
-        "ggfbIHsZGJH_text": "Melatonin Tea"
-      }
-    },
     "image_with_text_PizpqR": {
       "type": "image-with-text",
       "blocks": {
@@ -214,6 +194,26 @@
         "background-color": "tan"
       }
     },
+    "17093999844598d023": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_iFiJeK": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_iFiJeK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "0e698922-8ed8-423d-886f-c78375d71373": {
       "type": "featured-collection",
       "settings": {
@@ -245,21 +245,6 @@
     "1693874745cc6bc7e5": {
       "type": "apps",
       "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "17093999844598d023": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_iFiJeK": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_iFiJeK"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -314,15 +299,35 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "gp_global_section_575163681055179620_JTpqcG": {
+      "type": "gp-global-section-575163681055179620",
+      "name": "PDP - TEA - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggyBjC9ocKS_text": "Long Run Co.",
+        "ggTlNWpTBqW_text": "All Products",
+        "ggrCAOrRvIS_text": "Long Run Coffee",
+        "ggHvrwYeJgy_text": "Coffee + Electrolytes",
+        "ggjPG2BYlxP_text": "Long Run Powder",
+        "ggamV38Vef9_text": "Electrolyte Powder + Natural Caffeine",
+        "ggV1LitCFFk_text": "Long Run Pouches ",
+        "gg3P52AUq4O_text": "Coming soon",
+        "ggPPtPLNjy2_text": "Long Run Gear",
+        "ggzZajgEBe7_text": "For All Training Routines",
+        "ggoeoQPWbNu_text": "Long Run Tea",
+        "ggfbIHsZGJH_text": "Melatonin Tea"
+      }
     }
   },
   "order": [
     "lrc-base-product",
     "lrc-accordion",
-    "gp_global_section_575163681055179620_JQLGME",
     "image_with_text_PizpqR",
     "lrc-coffee-benefits-short",
     "lrc-coffee-benefits",
+    "gp_global_section_575163681055179620_JTpqcG",
     "image_banner_f6FhGD",
     "one-click-upsell",
     "lrc-review-summary",
