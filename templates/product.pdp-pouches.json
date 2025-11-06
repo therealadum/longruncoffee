@@ -33,9 +33,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "max_width": 1200,
             "show_shop_reviews": false,
-            "empty_state": "empty_widget",
-            "max_width": 1200
+            "empty_state": "empty_widget"
           }
         }
       },
@@ -45,11 +45,32 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "gp_global_section_575296632438915658_yCfwRL": {
+      "type": "gp-global-section-575296632438915658",
+      "name": "PDP - TCF - Cross Sell",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggctUhQ68gO_text": "Long Run Co.",
+        "ggbqUqmk4_6_text": "All Products",
+        "gg37c4jo_ET_text": "Long Run Coffee",
+        "gg6k8fldKu4_text": "Electrolyte Infused Coffee",
+        "gginC9tkMJY_text": "Long Run Powder",
+        "gggLTzbA2R1_text": "Electrolyte Powder + Natural Caffeine",
+        "ggltS59Bpaj_text": "Long Run Tea ",
+        "gglzuR2WWY4_text": "Rest &amp; Recover Melatonin Tea",
+        "ggjF0OBZWKT_text": "Long Run Gear",
+        "ggm_xM7funq_text": "For All Training Routines",
+        "ggMmCDMz3xg_text": "Long Run Bundles",
+        "gg-3aGjg0bg_text": "Bundle &amp; Save"
+      }
     }
   },
   "order": [
     "lrc-base-product",
     "lrc-accordion",
+    "gp_global_section_575296632438915658_yCfwRL",
     "17093999844598d023"
   ]
 }
