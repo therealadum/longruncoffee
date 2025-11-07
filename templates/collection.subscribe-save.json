@@ -9,17 +9,17 @@
  */
 {
   "sections": {
-    "gp_global_section_591509319564919464_aGJ4YF": {
-      "type": "gp-global-section-591509319564919464",
-      "name": "Banner - Santa - Pre",
+    "gp_global_section_592158161851384569_XeYDh9": {
+      "type": "gp-global-section-592158161851384569",
+      "name": "Banner - Santa - Live",
       "settings": {
         "section_preload": "off_lazy_script",
         "checksum": "",
-        "ggXyICsu1u4_dayLabel": "Days",
-        "ggXyICsu1u4_hourLabel": "Hours",
-        "ggXyICsu1u4_minuteLabel": "Minutes",
-        "ggXyICsu1u4_secondLabel": "Seconds",
-        "ggXyICsu1u4_weekLabel": "Weeks"
+        "ggtCBboQbpi_dayLabel": "Days",
+        "ggtCBboQbpi_hourLabel": "Hours",
+        "ggtCBboQbpi_minuteLabel": "Minutes",
+        "ggtCBboQbpi_secondLabel": "Seconds",
+        "ggtCBboQbpi_weekLabel": "Weeks"
       }
     },
     "banner": {
@@ -56,7 +56,7 @@
     }
   },
   "order": [
-    "gp_global_section_591509319564919464_aGJ4YF",
+    "gp_global_section_592158161851384569_XeYDh9",
     "banner",
     "product-grid"
   ]
