@@ -41,7 +41,7 @@
     },
     "gp_section_578802996024968065": {
       "settings": {
-        "checksum": "5065bbb7379c6aff164c5334be8789855f71454f5d76483730e8f4e0aa35be75_1_1_1_0__1",
+        "checksum": "b76310b42b079b5a529c8f95ac54ab9340ccd2a00864fd3334c1933872f7053c_1_1_1_0__1",
         "ggcW_RJGpuE_text": "energy Pouches",
         "ggnAXg1FLDR_text": "Reduce training fatigue with a strong energy kick. Works in 5 minutes or less.",
         "ggn_ZTN-j9P_label": "Coming Soon",
@@ -170,11 +170,21 @@
         "ggZ1jWz_yAA_text": "Helps athletes fall asleep faster and recover fully, so you can train harder tomorrow."
       },
       "type": "gp-section-579099972058743577"
+    },
+    "gp_section_592160417850065438": {
+      "settings": {
+        "checksum": "e940840073ec6180e642ef819e820cb89318cb54f19c2b473fb1c7f7f246ff90_1_1_1_0__1",
+        "ggHO4KPSuit_text": "With Any New Subscription of 2+ Items",
+        "ggMqur3gC0d_label": "Subscribe",
+        "ggbFNKQro5L_text": "Free winter hat"
+      },
+      "type": "gp-section-592160417850065438"
     }
   },
   "order": [
     "gp_section_578805009794204553",
     "gp_section_578802996024967911",
+    "gp_section_592160417850065438",
     "gp_section_578809263741207425",
     "gp_section_578874802912100885",
     "gp_section_578802995890750075",
