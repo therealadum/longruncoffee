@@ -9,22 +9,8 @@
  */
 {
   "sections": {
-    "gp_global_section_592516424233124382_8LnYPb": {
-      "type": "gp-global-section-592516424233124382",
-      "name": "Banner - Santa - Last Day",
-      "settings": {
-        "section_preload": "off_lazy_script",
-        "checksum": "",
-        "ggCzxRv_XFA_dayLabel": "Days",
-        "ggCzxRv_XFA_hourLabel": "Hours",
-        "ggCzxRv_XFA_minuteLabel": "Minutes",
-        "ggCzxRv_XFA_secondLabel": "Seconds",
-        "ggCzxRv_XFA_weekLabel": "Weeks"
-      }
-    },
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "custom_css": [
         "h1 {font-size: 35px;}"
       ],
@@ -56,7 +42,6 @@
     }
   },
   "order": [
-    "gp_global_section_592516424233124382_8LnYPb",
     "banner",
     "product-grid"
   ]
