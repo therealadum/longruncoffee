@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "d38e1539-2c3d-4b7c-a09d-ea5ca38e288c": {
@@ -13,7 +22,7 @@
         "template--19876927439161__d38e1539-2c3d-4b7c-a09d-ea5ca38e288c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Limited Edition <strong>Brown Butter Pumpkin <\/strong>Electrolyte Infused Coffee is available while supplies last!<\/p>",
+            "text": "<p>Our Limited Edition <strong>Brown Butter Pumpkin </strong>Electrolyte Infused Coffee is available while supplies last!</p>",
             "text_style": "body"
           }
         },
@@ -21,7 +30,7 @@
           "type": "button",
           "settings": {
             "button_label": "YES PLEASE!",
-            "button_link": "shopify:\/\/products\/race-season-roast"
+            "button_link": "shopify://products/race-season-long-run-coffee"
           }
         }
       },
@@ -32,7 +41,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Race_Season_Roast_Long_Run_Coffee.jpg",
+        "image": "shopify://shop_images/Race_Season_Roast_Long_Run_Coffee.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
