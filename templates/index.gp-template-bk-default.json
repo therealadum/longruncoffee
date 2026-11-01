@@ -27,7 +27,7 @@
         "text_rxcXGK": {
           "type": "text",
           "settings": {
-            "text": "<p>Electrolyte infused and full of flavor, Sleighin' Miles is here to help you... well... sleigh miles.<\/p>",
+            "text": "<p>Electrolyte infused and full of flavor, Sleighin' Miles is here to help you... well... sleigh miles.</p>",
             "text_style": "body"
           }
         },
@@ -35,7 +35,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/products\/santa-sleighin-miles"
+            "button_link": "shopify://products/snowcap-series-sugar-cookie-long-run-coffee"
           }
         }
       },
@@ -48,7 +48,7 @@
         "p {font-size: 28px;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Santa_1.gif",
+        "image": "shopify://shop_images/Santa_1.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -70,7 +70,7 @@
           "settings": {
             "heading": "Easier Running",
             "icon": "shoe",
-            "row_content": "<h6>Our electrolyte coffee aids muscle contraction, making the run feel easier.<\/h6>",
+            "row_content": "<h6>Our electrolyte coffee aids muscle contraction, making the run feel easier.</h6>",
             "page": ""
           }
         },
@@ -79,7 +79,7 @@
           "settings": {
             "heading": "No Upset Stomach",
             "icon": "check_mark",
-            "row_content": "<h6>Our formula is pH basic, meaning it's easier on your stomach than other pre-workouts.<\/h6>",
+            "row_content": "<h6>Our formula is pH basic, meaning it's easier on your stomach than other pre-workouts.</h6>",
             "page": ""
           }
         },
@@ -88,7 +88,7 @@
           "settings": {
             "heading": "Reduce Sluggishness",
             "icon": "lightning_bolt",
-            "row_content": "<h6>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.<\/h6>",
+            "row_content": "<h6>The enhanced bioavailability of Long Run Coffee's caffeine helps you feel light on your feet.</h6>",
             "page": ""
           }
         },
@@ -97,7 +97,7 @@
           "settings": {
             "heading": "Effortless Routine",
             "icon": "stopwatch",
-            "row_content": "<h6>The most enjoyable electrolyte routine you can be consistent with.<\/h6>",
+            "row_content": "<h6>The most enjoyable electrolyte routine you can be consistent with.</h6>",
             "page": ""
           }
         }
@@ -121,7 +121,7 @@
         "color_scheme": "background-1",
         "container_color_scheme": "scheme-4195ea24-5d06-4290-9f03-c1b5b16a68f1",
         "open_first_collapsible_row": true,
-        "image": "shopify:\/\/shop_images\/Scratch_Work_2.png",
+        "image": "shopify://shop_images/Scratch_Work_2.png",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 16,
